@@ -10,8 +10,9 @@
   },
   {
     "id": 2,
-    "titre": "Mort de Philippe IV le Bel",
-    "date": 1314,
+    "titre": "Philippe IV le Bel",
+    "date": 1285,
+    "date_fin": 1314,
     "zone": "France",
     "description": "Philippe IV, roi de France, meurt après un règne qui a vu la suppression des Templiers (1307–1312) et des conflits majeurs avec la papauté. Sa mort ouvre la crise dynastique des Capétiens directs.",
     "image": "",
