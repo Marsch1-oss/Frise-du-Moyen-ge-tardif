@@ -34,9 +34,10 @@ const LEVELS = {
 };
 
 let currentLevel = 1;
-let currentCentury = null;  // siècle sélectionné au niveau 2 (ex: 1300)
-let currentDecade = null;   // décennie sélectionnée au niveau 3 (ex: 1340)
-let allEvents = [];
+let currentCentury = null;
+let currentDecade  = null;
+let allEvents      = [];
+let activeZones    = new Set(ZONES); // toutes actives par défaut
 
 // ─── Chargement des données ───────────────────────────────────────────────────
 
@@ -44,7 +45,11 @@ async function loadEvents() {
   try {
     const res = await fetch('events.json');
     allEvents = await res.json();
-    buildLegend();
+    // Normalise : si un événement a "zone" (string), le convertit en "zones" (array)
+    allEvents.forEach(e => {
+      if (!e.zones) e.zones = Array.isArray(e.zone) ? e.zone : [e.zone];
+    });
+    buildFilterBar();
     renderLevel(1);
   } catch (e) {
     document.getElementById('frise-container').innerHTML =
@@ -52,18 +57,66 @@ async function loadEvents() {
   }
 }
 
-function buildLegend() {
-  const legend = document.getElementById('legend');
-  if (!legend) return;
-  legend.innerHTML = '';
+function buildFilterBar() {
+  const container = document.getElementById('zone-filters');
+  if (!container) return;
+  container.style.display = 'flex';
+  container.style.flexWrap = 'wrap';
+  container.style.gap = '0.4rem';
+  container.innerHTML = '';
+
   ZONES.forEach(zone => {
     const col = COLORS[zone];
     if (!col) return;
-    const item = document.createElement('div');
-    item.className = 'leg-item';
-    item.innerHTML = `<span class="leg-dot" style="background:${col.bg}"></span>${zone}`;
-    legend.appendChild(item);
+
+    const label = document.createElement('label');
+    label.className = 'zone-checkbox checked';
+    label.title = `Afficher / masquer ${zone}`;
+    label.innerHTML = `
+      <input type="checkbox" checked onchange="toggleZone('${zone}', this.checked)">
+      <span class="zone-cb-dot" style="background:${col.bg}"></span>
+      ${zone}
+    `;
+    container.appendChild(label);
   });
+}
+
+function toggleZone(zone, checked) {
+  if (checked) {
+    activeZones.add(zone);
+  } else {
+    activeZones.delete(zone);
+  }
+  // Met à jour l'apparence de la case
+  document.querySelectorAll('.zone-checkbox').forEach(label => {
+    const input = label.querySelector('input');
+    label.classList.toggle('checked',   input.checked);
+    label.classList.toggle('unchecked', !input.checked);
+  });
+  refreshFrise();
+}
+
+function filterAll(checked) {
+  if (checked) {
+    activeZones = new Set(ZONES);
+  } else {
+    activeZones.clear();
+  }
+  document.querySelectorAll('.zone-checkbox input').forEach(input => {
+    input.checked = checked;
+  });
+  document.querySelectorAll('.zone-checkbox').forEach(label => {
+    label.classList.toggle('checked',   checked);
+    label.classList.toggle('unchecked', !checked);
+  });
+  refreshFrise();
+}
+
+function refreshFrise() {
+  // Relance le rendu du niveau courant sans changer l'état de navigation
+  if (currentLevel === 1) renderLevel(1);
+  else if (currentLevel === 2) renderLevel(2, currentCentury);
+  else if (currentLevel === 3) renderLevel(3, currentDecade);
 }
 
 // ─── Rendu principal ──────────────────────────────────────────────────────────
@@ -94,13 +147,13 @@ function renderLevel(level, rangeStart, rangeEnd) {
   // Axe temporel
   container.appendChild(buildAxis(start, end, tickStep, tickFormat, level));
 
-  // Piste par zone géographique
-  ZONES.forEach(zone => {
+  // Piste par zone géographique (uniquement les zones actives)
+  ZONES.filter(z => activeZones.has(z)).forEach(zone => {
     const evts = allEvents.filter(e => {
-  if (e.zone !== zone) return false;
-  const fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
-  return e.date <= end && fin >= start;
-});
+      if (!e.zones.includes(zone)) return false;
+      const fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+      return e.date <= end && fin >= start;
+    });
     container.appendChild(buildTrack(zone, evts, start, end, level));
   });
 
@@ -391,6 +444,16 @@ function goLevel(level) {
   }
 }
 
+function navigateDecade(direction) {
+  if (currentDecade === null) return;
+  const next = currentDecade + direction * 10;
+  // Bornes : ne pas sortir de 1290–1500
+  if (next < 1290 || next > 1500) return;
+  // Si on change de siècle, mettre à jour currentCentury
+  currentCentury = Math.floor(next / 100) * 100;
+  renderLevel(3, next);
+}
+
 function updateBreadcrumb() {
   const bc = document.getElementById('breadcrumb');
   let html = `<span class="bc-item bc-link" onclick="goLevel(1)">1300–1500</span>`;
@@ -408,6 +471,19 @@ function updateNavButtons() {
     btn.classList.toggle('active', i + 1 === currentLevel);
     btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade === null);
   });
+
+  // Flèches décennales : visibles seulement au niveau 3
+  const nav = document.getElementById('decade-nav');
+  if (!nav) return;
+  if (currentLevel === 3 && currentDecade !== null) {
+    nav.classList.add('visible');
+    document.getElementById('decade-label').textContent =
+      `${currentDecade} – ${currentDecade + 10}`;
+    document.getElementById('arrow-prev').disabled = currentDecade <= 1290;
+    document.getElementById('arrow-next').disabled = currentDecade >= 1500;
+  } else {
+    nav.classList.remove('visible');
+  }
 }
 
 // ─── Utilitaires ─────────────────────────────────────────────────────────────
@@ -419,12 +495,16 @@ function pct(year, start, end) {
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Fermeture modale
   document.getElementById('modal-overlay').addEventListener('click', function (e) {
     if (e.target === this) closeModal();
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
+    // Flèches clavier pour naviguer entre décennies (hors modale ouverte)
+    if (!document.getElementById('modal-overlay').classList.contains('open')) {
+      if (e.key === 'ArrowLeft')  navigateDecade(-1);
+      if (e.key === 'ArrowRight') navigateDecade(1);
+    }
   });
 
   loadEvents();
