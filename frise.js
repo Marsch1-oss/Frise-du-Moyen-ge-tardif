@@ -167,6 +167,56 @@ function makeBand(from, to, start, end, onClick) {
   return band;
 }
 
+// ─── Estimation de la largeur d'un chip en % de la piste ─────────────────────
+// Permet de détecter les collisions AVANT le rendu DOM.
+
+const TRACK_PX   = 820;  // largeur approximative de la zone de piste (px)
+const ROW_H      = 24;   // hauteur d'une rangée (px)
+const ROW_GAP    = 4;    // espace entre rangées (px)
+const CHIP_PAD   = 6;    // marge horizontale de sécurité entre chips (px)
+
+function chipWidthPct(evt, start, end, level) {
+  const isPeriod = evt.date_fin && evt.date_fin > evt.date;
+  if (isPeriod) {
+    const d0 = Math.max(evt.date, start);
+    const d1 = Math.min(evt.date_fin, end);
+    return (d1 - d0) / (end - start) * 100;
+  }
+  // Pour les ponctuels, on estime la largeur selon le niveau et la longueur du titre
+  if (level === 1) return 1.2;  // simple point, très étroit
+  const chars = level === 3
+    ? Math.min(evt.titre.length, 28)
+    : Math.min(evt.titre.length, 20);
+  const estimatedPx = chars * 7 + 16;
+  return estimatedPx / TRACK_PX * 100;
+}
+
+// ─── Algorithme d'anti-collision par rangées ──────────────────────────────────
+// Retourne pour chaque événement l'index de rangée (0, 1, 2…) où le placer.
+
+function assignRows(events, start, end, level) {
+  // rowEnds[r] = valeur en % de la fin du dernier chip placé sur la rangée r
+  const rowEnds = [];
+
+  return events.map(evt => {
+    const isPeriod = evt.date_fin && evt.date_fin > evt.date;
+    const leftPct = isPeriod
+      ? (Math.max(evt.date, start) - start) / (end - start) * 100
+      : (evt.date - start) / (end - start) * 100;
+    const widthPct = chipWidthPct(evt, start, end, level);
+    const rightPct = leftPct + widthPct;
+    const safeGapPct = CHIP_PAD / TRACK_PX * 100;
+
+    // Cherche la première rangée libre
+    let row = 0;
+    while (row < rowEnds.length && rowEnds[row] > leftPct - safeGapPct) {
+      row++;
+    }
+    rowEnds[row] = rightPct;
+    return row;
+  });
+}
+
 // ─── Construction d'une piste ────────────────────────────────────────────────
 
 function buildTrack(zone, events, start, end, level) {
@@ -182,16 +232,33 @@ function buildTrack(zone, events, start, end, level) {
   label.appendChild(document.createTextNode(zone));
   row.appendChild(label);
 
+  // Filtrer les événements visibles
+  const visible = events.filter(evt => {
+    if (evt.date_fin && evt.date_fin > evt.date) {
+      return Math.min(evt.date_fin, end) > Math.max(evt.date, start);
+    }
+    return evt.date >= start && evt.date <= end;
+  });
+
+  // Calculer les rangées anti-collision
+  const rows = assignRows(visible, start, end, level);
+  const numRows = visible.length > 0 ? Math.max(...rows) + 1 : 1;
+
+  // Hauteur dynamique : une rangée minimum, s'étend si besoin
+  const trackHeight = numRows * ROW_H + (numRows - 1) * ROW_GAP + 8;
+
   const track = document.createElement('div');
   track.className = 'track';
+  track.style.height = trackHeight + 'px';
 
-  // Ligne de fond
+  // Ligne de fond (centrée verticalement)
   const line = document.createElement('div');
   line.className = 'track-line';
+  line.style.top = (trackHeight / 2) + 'px';
   track.appendChild(line);
 
-  events.forEach(evt => {
-    const chip = buildChip(evt, start, end, level);
+  visible.forEach((evt, i) => {
+    const chip = buildChip(evt, start, end, level, rows[i], numRows, trackHeight);
     if (chip) track.appendChild(chip);
   });
 
@@ -199,59 +266,72 @@ function buildTrack(zone, events, start, end, level) {
   return row;
 }
 
-function buildChip(evt, start, end, level) {
+function buildChip(evt, start, end, level, rowIndex, numRows, trackHeight) {
   const zone = evt.zone;
   const col = COLORS[zone] || COLORS['France'];
   const isPeriod = evt.date_fin && evt.date_fin > evt.date;
   const chip = document.createElement('div');
   chip.className = 'evt-chip';
 
+  // Position verticale : répartit les rangées uniformément dans la hauteur de piste
+  const topOffset = 4 + rowIndex * (ROW_H + ROW_GAP);
+  chip.style.top = topOffset + 'px';
+  chip.style.transform = 'none';  // annule le translateY(-50%) par défaut
+
   if (isPeriod) {
-    // ── Événement-période : barre avec largeur proportionnelle ──────────────
     const dateDebut = Math.max(evt.date, start);
     const dateFin   = Math.min(evt.date_fin, end);
-    if (dateFin <= dateDebut) return null; // hors fenêtre visible
+    if (dateFin <= dateDebut) return null;
 
     chip.classList.add('chip-period');
-    chip.style.left  = pct(dateDebut, start, end);
-    chip.style.width = `calc(${pct(dateFin, start, end)} - ${pct(dateDebut, start, end)})`;
-    chip.style.background    = col.bg + 'CC'; // légère transparence
-    chip.style.borderColor   = col.bg;
-    chip.style.color         = '#fff';
+    chip.style.position = 'absolute';
+    chip.style.left    = pct(dateDebut, start, end);
+    chip.style.width   = `calc(${pct(dateFin, start, end)} - ${pct(dateDebut, start, end)})`;
+    chip.style.height  = ROW_H + 'px';
+    chip.style.background  = col.bg + 'CC';
+    chip.style.borderColor = col.bg;
+    chip.style.color       = '#fff';
 
-    // Label selon niveau de zoom
     if (level === 1) {
       chip.classList.add('chip-period-sm');
     } else {
       const maxChars = level === 3 ? 40 : 22;
-      const label = evt.titre.length > maxChars ? evt.titre.slice(0, maxChars - 1) + '…' : evt.titre;
-      chip.textContent = label;
+      const lbl = evt.titre.length > maxChars ? evt.titre.slice(0, maxChars - 1) + '…' : evt.titre;
+      chip.textContent = lbl;
     }
-
     chip.title = `${evt.titre} (${evt.date}–${evt.date_fin})`;
 
   } else {
-    // ── Événement ponctuel ──────────────────────────────────────────────────
-    chip.style.left = pct(evt.date, start, end);
+    chip.style.position = 'absolute';
+    chip.style.height   = ROW_H + 'px';
 
     if (level === 3) {
       chip.classList.add('chip-full');
       chip.style.background = col.bg;
-      chip.style.color = '#fff';
+      chip.style.color      = '#fff';
+      chip.style.transform  = 'translateX(-50%)';
+      chip.style.left       = pct(evt.date, start, end);
       const shortTitle = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '…' : evt.titre;
       chip.textContent = shortTitle;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
-      chip.style.background = col.light;
-      chip.style.color = col.text;
-      chip.style.borderColor = col.bg;
+      chip.style.background   = col.light;
+      chip.style.color        = col.text;
+      chip.style.borderColor  = col.bg;
+      chip.style.transform    = 'translateX(-50%)';
+      chip.style.left         = pct(evt.date, start, end);
       const shortTitle = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '…' : evt.titre;
       chip.textContent = shortTitle;
     } else {
       chip.classList.add('chip-dot');
       chip.style.background = col.bg;
+      chip.style.left       = pct(evt.date, start, end);
+      chip.style.transform  = 'translateX(-50%)';
+      chip.style.width      = '10px';
+      chip.style.height     = '10px';
+      chip.style.top        = (topOffset + ROW_H / 2 - 5) + 'px';
+      chip.style.borderRadius = '50%';
     }
-
     chip.title = `${evt.titre} (${evt.date})`;
   }
 
