@@ -192,7 +192,7 @@ function buildTrack(zone, events, start, end, level) {
 
   events.forEach(evt => {
     const chip = buildChip(evt, start, end, level);
-    track.appendChild(chip);
+    if (chip) track.appendChild(chip);
   });
 
   row.appendChild(track);
@@ -202,32 +202,59 @@ function buildTrack(zone, events, start, end, level) {
 function buildChip(evt, start, end, level) {
   const zone = evt.zone;
   const col = COLORS[zone] || COLORS['France'];
+  const isPeriod = evt.date_fin && evt.date_fin > evt.date;
   const chip = document.createElement('div');
   chip.className = 'evt-chip';
-  chip.style.left = pct(evt.date, start, end);
 
-  if (level === 3) {
-    // Étiquette complète
-    chip.classList.add('chip-full');
-    chip.style.background = col.bg;
-    chip.style.color = '#fff';
-    const shortTitle = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '…' : evt.titre;
-    chip.textContent = shortTitle;
-  } else if (level === 2) {
-    // Étiquette courte
-    chip.classList.add('chip-medium');
-    chip.style.background = col.light;
-    chip.style.color = col.text;
-    chip.style.borderColor = col.bg;
-    const shortTitle = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '…' : evt.titre;
-    chip.textContent = shortTitle;
+  if (isPeriod) {
+    // ── Événement-période : barre avec largeur proportionnelle ──────────────
+    const dateDebut = Math.max(evt.date, start);
+    const dateFin   = Math.min(evt.date_fin, end);
+    if (dateFin <= dateDebut) return null; // hors fenêtre visible
+
+    chip.classList.add('chip-period');
+    chip.style.left  = pct(dateDebut, start, end);
+    chip.style.width = `calc(${pct(dateFin, start, end)} - ${pct(dateDebut, start, end)})`;
+    chip.style.background    = col.bg + 'CC'; // légère transparence
+    chip.style.borderColor   = col.bg;
+    chip.style.color         = '#fff';
+
+    // Label selon niveau de zoom
+    if (level === 1) {
+      chip.classList.add('chip-period-sm');
+    } else {
+      const maxChars = level === 3 ? 40 : 22;
+      const label = evt.titre.length > maxChars ? evt.titre.slice(0, maxChars - 1) + '…' : evt.titre;
+      chip.textContent = label;
+    }
+
+    chip.title = `${evt.titre} (${evt.date}–${evt.date_fin})`;
+
   } else {
-    // Simple point
-    chip.classList.add('chip-dot');
-    chip.style.background = col.bg;
+    // ── Événement ponctuel ──────────────────────────────────────────────────
+    chip.style.left = pct(evt.date, start, end);
+
+    if (level === 3) {
+      chip.classList.add('chip-full');
+      chip.style.background = col.bg;
+      chip.style.color = '#fff';
+      const shortTitle = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '…' : evt.titre;
+      chip.textContent = shortTitle;
+    } else if (level === 2) {
+      chip.classList.add('chip-medium');
+      chip.style.background = col.light;
+      chip.style.color = col.text;
+      chip.style.borderColor = col.bg;
+      const shortTitle = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '…' : evt.titre;
+      chip.textContent = shortTitle;
+    } else {
+      chip.classList.add('chip-dot');
+      chip.style.background = col.bg;
+    }
+
+    chip.title = `${evt.titre} (${evt.date})`;
   }
 
-  chip.title = `${evt.titre} (${evt.date})`;
   chip.addEventListener('click', e => {
     e.stopPropagation();
     openModal(evt);
@@ -243,7 +270,10 @@ function openModal(evt) {
   document.getElementById('modal-zone').textContent = evt.zone;
   document.getElementById('modal-zone').style.background = col.light;
   document.getElementById('modal-zone').style.color = col.text;
-  document.getElementById('modal-date').textContent = evt.date + ' apr. J.-C.';
+  const dateLabel = evt.date_fin && evt.date_fin > evt.date
+    ? `${evt.date} – ${evt.date_fin} apr. J.-C.`
+    : `${evt.date} apr. J.-C.`;
+  document.getElementById('modal-date').textContent = dateLabel;
   document.getElementById('modal-title').textContent = evt.titre;
   document.getElementById('modal-desc').textContent = evt.description;
   document.getElementById('modal-sources').textContent = evt.sources ? '📖 ' + evt.sources : '';
