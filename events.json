@@ -138,7 +138,7 @@
     "id": 16,
     "titre": "Concile de Constance",
     "date": 1414,
-    "zone": "Empire",
+    "zone": "St Empire",
     "description": "Le concile met fin au Grand Schisme en élisant Martin V (1417), seul pape universel. Il condamne également Jan Hus, réformateur tchèque, au bûcher, déclenchant les guerres hussites en Bohême.",
     "image": "",
     "sources": "Actes du concile de Constance"
@@ -210,7 +210,7 @@
     "id": 24,
     "titre": "Guerres hussites",
     "date": 1419,
-    "zone": "Empire",
+    "zone": "St Empire",
     "description": "Après le martyre de Jan Hus, les Hussites tchèques se soulèvent contre l'Église et l'Empire. Malgré cinq croisades, ils résistent vingt ans grâce aux innovations tactiques de Jan Žižka. Premier grand mouvement de réforme religieuse.",
     "image": "",
     "sources": "Aeneas Silvius Piccolomini, Historia Bohemica"
@@ -219,7 +219,7 @@
     "id": 25,
     "titre": "Invention de l'imprimerie",
     "date": 1455,
-    "zone": "Empire",
+    "zone": "St Empire",
     "description": "Johannes Gutenberg achève la Bible à 42 lignes à Mayence, premier livre imprimé en Europe à caractères mobiles métalliques. Cette révolution technique transformera la diffusion du savoir et accélérera la Renaissance et la Réforme.",
     "image": "",
     "sources": "Bible de Gutenberg, 1455"
