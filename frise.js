@@ -96,7 +96,11 @@ function renderLevel(level, rangeStart, rangeEnd) {
 
   // Piste par zone géographique
   ZONES.forEach(zone => {
-    const evts = allEvents.filter(e => e.zone === zone && e.date >= start && e.date <= end);
+    const evts = allEvents.filter(e => {
+  if (e.zone !== zone) return false;
+  const fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+  return e.date <= end && fin >= start;
+});
     container.appendChild(buildTrack(zone, evts, start, end, level));
   });
 
