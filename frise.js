@@ -1,17 +1,10 @@
 /* =====================================================================
-   frise.js — Logique de la frise chronologique médiévale 1300–1500
+   frise.js — Frise chronologique médiévale 1300–1500
    ===================================================================== */
 
 const ZONES = [
-  'France',
-  'Angleterre',
-  'St Empire',
-  'Italie',
-  'Pén. ibérique',
-  'Europe C. & Or.',
-  'Monde islamique',
-  'Orient',
-  'Monde'
+  'France', 'Angleterre', 'St Empire', 'Italie',
+  'Pén. ibérique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde'
 ];
 
 const COLORS = {
@@ -26,188 +19,185 @@ const COLORS = {
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' }
 };
 
-// Niveaux de zoom
-const LEVELS = {
-  1: { start: 1290, end: 1510, label: 'Vue d\'ensemble (1300–1500)', step: 50 },
-  2: { start: null, end: null, label: null, step: 10 },
-  3: { start: null, end: null, label: null, step: 1 }
-};
+const ROW_H    = 24;
+const ROW_GAP  = 4;
+const CHIP_PAD = 6;
+const TRACK_PX = 820;
 
-let currentLevel = 1;
-let currentCentury = null;
-let currentDecade  = null;
-let allEvents      = [];
-let activeZones    = new Set(ZONES); // toutes actives par défaut
+var currentLevel   = 1;
+var currentCentury = null;
+var currentDecade  = null;
+var allEvents      = [];
+var activeZones    = new Set(ZONES);
 
-// ─── Chargement des données ───────────────────────────────────────────────────
+/* ── Chargement ─────────────────────────────────────────────────────── */
 
-async function loadEvents() {
-  try {
-    const res = await fetch('events.json');
-    allEvents = await res.json();
-    // Normalise : si un événement a "zone" (string), le convertit en "zones" (array)
-    allEvents.forEach(e => {
-      if (!e.zones) e.zones = Array.isArray(e.zone) ? e.zone : [e.zone];
+function loadEvents() {
+  fetch('events.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      allEvents = data;
+      allEvents.forEach(function(e) {
+        if (!e.zones) {
+          e.zones = Array.isArray(e.zone) ? e.zone : (e.zone ? [e.zone] : []);
+        }
+      });
+      buildFilterBar();
+      renderLevel(1);
+    })
+    .catch(function() {
+      document.getElementById('frise-container').innerHTML =
+        '<p class="error">Impossible de charger events.json.</p>';
     });
-    buildFilterBar();
-    renderLevel(1);
-  } catch (e) {
-    document.getElementById('frise-container').innerHTML =
-      '<p class="error">Impossible de charger events.json. Vérifiez que le fichier est présent.</p>';
-  }
 }
 
+/* ── Filtre zones ───────────────────────────────────────────────────── */
+
 function buildFilterBar() {
-  const container = document.getElementById('zone-filters');
+  var container = document.getElementById('zone-filters');
   if (!container) return;
-  container.style.display = 'flex';
-  container.style.flexWrap = 'wrap';
-  container.style.gap = '0.4rem';
   container.innerHTML = '';
 
-  ZONES.forEach(zone => {
-    const col = COLORS[zone];
+  ZONES.forEach(function(zone) {
+    var col = COLORS[zone];
     if (!col) return;
 
-    const label = document.createElement('label');
+    var label = document.createElement('label');
     label.className = 'zone-checkbox checked';
-    label.title = `Afficher / masquer ${zone}`;
-    label.innerHTML = `
-      <input type="checkbox" checked onchange="toggleZone('${zone}', this.checked)">
-      <span class="zone-cb-dot" style="background:${col.bg}"></span>
-      ${zone}
-    `;
+
+    var input = document.createElement('input');
+    input.type    = 'checkbox';
+    input.checked = true;
+    input.addEventListener('change', (function(z) {
+      return function() { toggleZone(z, this.checked); };
+    })(zone));
+
+    var dot = document.createElement('span');
+    dot.className        = 'zone-cb-dot';
+    dot.style.background = col.bg;
+
+    var txt = document.createTextNode('\u00a0' + zone);
+
+    label.appendChild(input);
+    label.appendChild(dot);
+    label.appendChild(txt);
     container.appendChild(label);
   });
 }
 
 function toggleZone(zone, checked) {
-  if (checked) {
-    activeZones.add(zone);
-  } else {
-    activeZones.delete(zone);
-  }
-  // Met à jour l'apparence de la case
-  document.querySelectorAll('.zone-checkbox').forEach(label => {
-    const input = label.querySelector('input');
-    label.classList.toggle('checked',   input.checked);
-    label.classList.toggle('unchecked', !input.checked);
+  if (checked) activeZones.add(zone);
+  else         activeZones.delete(zone);
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp = lbl.querySelector('input');
+    lbl.classList.toggle('checked',   inp.checked);
+    lbl.classList.toggle('unchecked', !inp.checked);
   });
   refreshFrise();
 }
 
 function filterAll(checked) {
-  if (checked) {
-    activeZones = new Set(ZONES);
-  } else {
-    activeZones.clear();
-  }
-  document.querySelectorAll('.zone-checkbox input').forEach(input => {
-    input.checked = checked;
-  });
-  document.querySelectorAll('.zone-checkbox').forEach(label => {
-    label.classList.toggle('checked',   checked);
-    label.classList.toggle('unchecked', !checked);
+  activeZones = checked ? new Set(ZONES) : new Set();
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp   = lbl.querySelector('input');
+    inp.checked = checked;
+    lbl.classList.toggle('checked',   checked);
+    lbl.classList.toggle('unchecked', !checked);
   });
   refreshFrise();
 }
 
 function refreshFrise() {
-  // Relance le rendu du niveau courant sans changer l'état de navigation
-  if (currentLevel === 1) renderLevel(1);
-  else if (currentLevel === 2) renderLevel(2, currentCentury);
-  else if (currentLevel === 3) renderLevel(3, currentDecade);
+  if      (currentLevel === 1) renderLevel(1);
+  else if (currentLevel === 2 && currentCentury !== null) renderLevel(2, currentCentury);
+  else if (currentLevel === 3 && currentDecade  !== null) renderLevel(3, currentDecade);
 }
 
-// ─── Rendu principal ──────────────────────────────────────────────────────────
+/* ── Rendu principal ────────────────────────────────────────────────── */
 
-function renderLevel(level, rangeStart, rangeEnd) {
+function renderLevel(level, rangeStart) {
   currentLevel = level;
+
+  var start, end, tickStep;
+  if (level === 1) {
+    start = 1290; end = 1510; tickStep = 25;
+  } else if (level === 2) {
+    currentCentury = rangeStart;
+    start = rangeStart; end = rangeStart + 100; tickStep = 10;
+  } else {
+    currentDecade = rangeStart;
+    start = rangeStart; end = rangeStart + 10; tickStep = 1;
+  }
+
   updateBreadcrumb();
   updateNavButtons();
 
-  let start, end, tickStep, tickFormat;
-
-  if (level === 1) {
-    start = 1290; end = 1510; tickStep = 25;
-    tickFormat = y => y;
-  } else if (level === 2) {
-    start = rangeStart; end = rangeStart + 100; tickStep = 10;
-    tickFormat = y => y;
-    currentCentury = rangeStart;
-  } else {
-    start = rangeStart; end = rangeStart + 10; tickStep = 1;
-    tickFormat = y => y;
-    currentDecade = rangeStart;
-  }
-
-  const container = document.getElementById('frise-container');
+  var container = document.getElementById('frise-container');
   container.innerHTML = '';
 
-  // Axe temporel
-  container.appendChild(buildAxis(start, end, tickStep, tickFormat, level));
+  container.appendChild(buildAxis(start, end, tickStep, level));
 
-  // Piste par zone géographique (uniquement les zones actives)
-  ZONES.filter(z => activeZones.has(z)).forEach(zone => {
-    const evts = allEvents.filter(e => {
-      if (!e.zones.includes(zone)) return false;
-      const fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+  ZONES.filter(function(z) { return activeZones.has(z); }).forEach(function(zone) {
+    var evts = allEvents.filter(function(e) {
+      if (!e.zones || e.zones.indexOf(zone) === -1) return false;
+      var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
       return e.date <= end && fin >= start;
     });
     container.appendChild(buildTrack(zone, evts, start, end, level));
   });
 
-  // Hint cliquable
-  const hint = document.createElement('div');
-  hint.className = 'frise-hint';
+  var hint = document.createElement('div');
+  hint.className   = 'frise-hint';
   hint.textContent = level === 1
-    ? 'Cliquez sur une période pour zoomer — cliquez sur un événement pour sa fiche'
+    ? 'Cliquez sur une période pour zoomer · cliquez sur un événement pour sa fiche'
     : level === 2
-    ? 'Cliquez sur une décennie pour zoomer — cliquez sur un événement pour sa fiche'
+    ? 'Cliquez sur une décennie pour zoomer · cliquez sur un événement pour sa fiche'
     : 'Cliquez sur un événement pour afficher sa fiche complète';
   container.appendChild(hint);
 }
 
-// ─── Construction de l'axe ───────────────────────────────────────────────────
+/* ── Axe ────────────────────────────────────────────────────────────── */
 
-function buildAxis(start, end, step, format, level) {
-  const axis = document.createElement('div');
+function buildAxis(start, end, step, level) {
+  var axis   = document.createElement('div');
   axis.className = 'axis-row';
+  var spacer = document.createElement('div');
+  spacer.className = 'zone-label axis-spacer';
+  axis.appendChild(spacer);
 
-  const label = document.createElement('div');
-  label.className = 'zone-label axis-spacer';
-  axis.appendChild(label);
-
-  const bar = document.createElement('div');
+  var bar = document.createElement('div');
   bar.className = 'axis-bar';
 
-  // Graduations
-  for (let y = Math.ceil(start / step) * step; y <= end; y += step) {
-    if (y < start || y > end) continue;
-    const tick = document.createElement('div');
-    tick.className = 'tick';
-    tick.style.left = pct(y, start, end);
-    tick.textContent = format(y);
+  for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
+    var tick = document.createElement('div');
+    tick.className   = 'tick';
+    tick.style.left  = pct(y, start, end);
+    tick.textContent = y;
     bar.appendChild(tick);
 
-    const tickLine = document.createElement('div');
-    tickLine.className = 'tick-line';
-    tickLine.style.left = pct(y, start, end);
-    bar.appendChild(tickLine);
+    var tl = document.createElement('div');
+    tl.className  = 'tick-line';
+    tl.style.left = pct(y, start, end);
+    bar.appendChild(tl);
   }
 
-  // Zones cliquables (niveau 1 → siècles, niveau 2 → décennies)
   if (level === 1) {
-    [1300, 1350, 1400, 1450].forEach(s => {
-      const band = makeBand(s, s + 50, start, end, () => renderLevel(2, Math.floor(s / 100) * 100, null));
-      band.title = `Zoomer sur ${s}–${s + 50}`;
+    [1300, 1350, 1400, 1450].forEach(function(s) {
+      var band = makeBand(s, s + 50, start, end, (function(sv) {
+        return function() { renderLevel(2, Math.floor(sv / 100) * 100); };
+      })(s));
+      band.title = 'Zoomer sur ' + s + '\u2013' + (s + 50);
       bar.appendChild(band);
     });
   } else if (level === 2) {
-    for (let d = currentCentury; d < currentCentury + 100; d += 10) {
-      const band = makeBand(d, d + 10, start, end, () => renderLevel(3, d, null));
-      band.title = `Zoomer sur ${d}–${d + 10}`;
-      bar.appendChild(band);
+    for (var d = currentCentury; d < currentCentury + 100; d += 10) {
+      (function(decade) {
+        var band = makeBand(decade, decade + 10, start, end, function() {
+          renderLevel(3, decade);
+        });
+        band.title = 'Zoomer sur ' + decade + '\u2013' + (decade + 10);
+        bar.appendChild(band);
+      })(d);
     }
   }
 
@@ -216,106 +206,79 @@ function buildAxis(start, end, step, format, level) {
 }
 
 function makeBand(from, to, start, end, onClick) {
-  const band = document.createElement('div');
-  band.className = 'axis-band';
-  band.style.left = pct(from, start, end);
-  band.style.width = `calc(${pct(to, start, end)} - ${pct(from, start, end)})`;
+  var band = document.createElement('div');
+  band.className   = 'axis-band';
+  band.style.left  = pct(from, start, end);
+  band.style.width = 'calc(' + pct(to, start, end) + ' - ' + pct(from, start, end) + ')';
   band.addEventListener('click', onClick);
   return band;
 }
 
-// ─── Estimation de la largeur d'un chip en % de la piste ─────────────────────
-// Permet de détecter les collisions AVANT le rendu DOM.
-
-const TRACK_PX   = 820;  // largeur approximative de la zone de piste (px)
-const ROW_H      = 24;   // hauteur d'une rangée (px)
-const ROW_GAP    = 4;    // espace entre rangées (px)
-const CHIP_PAD   = 6;    // marge horizontale de sécurité entre chips (px)
+/* ── Anti-collision ─────────────────────────────────────────────────── */
 
 function chipWidthPct(evt, start, end, level) {
-  const isPeriod = evt.date_fin && evt.date_fin > evt.date;
-  if (isPeriod) {
-    const d0 = Math.max(evt.date, start);
-    const d1 = Math.min(evt.date_fin, end);
-    return (d1 - d0) / (end - start) * 100;
+  if (evt.date_fin && evt.date_fin > evt.date) {
+    return (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start) * 100;
   }
-  // Pour les ponctuels, on estime la largeur selon le niveau et la longueur du titre
-  if (level === 1) return 1.2;  // simple point, très étroit
-  const chars = level === 3
-    ? Math.min(evt.titre.length, 28)
-    : Math.min(evt.titre.length, 20);
-  const estimatedPx = chars * 7 + 16;
-  return estimatedPx / TRACK_PX * 100;
+  if (level === 1) return 1.2;
+  var chars = Math.min(evt.titre.length, level === 3 ? 28 : 20);
+  return (chars * 7 + 16) / TRACK_PX * 100;
 }
 
-// ─── Algorithme d'anti-collision par rangées ──────────────────────────────────
-// Retourne pour chaque événement l'index de rangée (0, 1, 2…) où le placer.
-
 function assignRows(events, start, end, level) {
-  // rowEnds[r] = valeur en % de la fin du dernier chip placé sur la rangée r
-  const rowEnds = [];
-
-  return events.map(evt => {
-    const isPeriod = evt.date_fin && evt.date_fin > evt.date;
-    const leftPct = isPeriod
+  var rowEnds     = [];
+  var safeGapPct  = CHIP_PAD / TRACK_PX * 100;
+  return events.map(function(evt) {
+    var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+    var leftPct  = isPeriod
       ? (Math.max(evt.date, start) - start) / (end - start) * 100
       : (evt.date - start) / (end - start) * 100;
-    const widthPct = chipWidthPct(evt, start, end, level);
-    const rightPct = leftPct + widthPct;
-    const safeGapPct = CHIP_PAD / TRACK_PX * 100;
-
-    // Cherche la première rangée libre
-    let row = 0;
-    while (row < rowEnds.length && rowEnds[row] > leftPct - safeGapPct) {
-      row++;
-    }
+    var widthPct = chipWidthPct(evt, start, end, level);
+    var rightPct = leftPct + widthPct;
+    var row = 0;
+    while (row < rowEnds.length && rowEnds[row] > leftPct - safeGapPct) row++;
     rowEnds[row] = rightPct;
     return row;
   });
 }
 
-// ─── Construction d'une piste ────────────────────────────────────────────────
+/* ── Piste ──────────────────────────────────────────────────────────── */
 
 function buildTrack(zone, events, start, end, level) {
-  const row = document.createElement('div');
+  var row = document.createElement('div');
   row.className = 'track-row';
 
-  const label = document.createElement('div');
-  label.className = 'zone-label';
-  const dot = document.createElement('span');
-  dot.className = 'zone-dot';
+  var lbl = document.createElement('div');
+  lbl.className = 'zone-label';
+  var dot = document.createElement('span');
+  dot.className        = 'zone-dot';
   dot.style.background = COLORS[zone].bg;
-  label.appendChild(dot);
-  label.appendChild(document.createTextNode(zone));
-  row.appendChild(label);
+  lbl.appendChild(dot);
+  lbl.appendChild(document.createTextNode(zone));
+  row.appendChild(lbl);
 
-  // Filtrer les événements visibles
-  const visible = events.filter(evt => {
+  var visible = events.filter(function(evt) {
     if (evt.date_fin && evt.date_fin > evt.date) {
       return Math.min(evt.date_fin, end) > Math.max(evt.date, start);
     }
     return evt.date >= start && evt.date <= end;
   });
 
-  // Calculer les rangées anti-collision
-  const rows = assignRows(visible, start, end, level);
-  const numRows = visible.length > 0 ? Math.max(...rows) + 1 : 1;
+  var rows   = assignRows(visible, start, end, level);
+  var maxRow = visible.length > 0 ? Math.max.apply(null, rows) : 0;
+  var trackH = (maxRow + 1) * ROW_H + maxRow * ROW_GAP + 8;
 
-  // Hauteur dynamique : une rangée minimum, s'étend si besoin
-  const trackHeight = numRows * ROW_H + (numRows - 1) * ROW_GAP + 8;
+  var track = document.createElement('div');
+  track.className    = 'track';
+  track.style.height = trackH + 'px';
 
-  const track = document.createElement('div');
-  track.className = 'track';
-  track.style.height = trackHeight + 'px';
-
-  // Ligne de fond (centrée verticalement)
-  const line = document.createElement('div');
+  var line = document.createElement('div');
   line.className = 'track-line';
-  line.style.top = (trackHeight / 2) + 'px';
+  line.style.top = (trackH / 2) + 'px';
   track.appendChild(line);
 
-  visible.forEach((evt, i) => {
-    const chip = buildChip(evt, start, end, level, rows[i], numRows, trackHeight);
+  visible.forEach(function(evt, i) {
+    var chip = buildChip(evt, zone, start, end, level, rows[i]);
     if (chip) track.appendChild(chip);
   });
 
@@ -323,101 +286,92 @@ function buildTrack(zone, events, start, end, level) {
   return row;
 }
 
-function buildChip(evt, start, end, level, rowIndex, numRows, trackHeight) {
-  const zone = evt.zone;
-  const col = COLORS[zone] || COLORS['France'];
-  const isPeriod = evt.date_fin && evt.date_fin > evt.date;
-  const chip = document.createElement('div');
-  chip.className = 'evt-chip';
+/* ── Chip ───────────────────────────────────────────────────────────── */
 
-  // Position verticale : répartit les rangées uniformément dans la hauteur de piste
-  const topOffset = 4 + rowIndex * (ROW_H + ROW_GAP);
-  chip.style.top = topOffset + 'px';
-  chip.style.transform = 'none';  // annule le translateY(-50%) par défaut
+function buildChip(evt, zone, start, end, level, rowIndex) {
+  var col      = COLORS[zone] || COLORS['France'];
+  var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+  var chip     = document.createElement('div');
+  chip.className        = 'evt-chip';
+  chip.style.position   = 'absolute';
+  chip.style.transform  = 'none';
+  chip.style.top        = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
-    const dateDebut = Math.max(evt.date, start);
-    const dateFin   = Math.min(evt.date_fin, end);
-    if (dateFin <= dateDebut) return null;
-
+    var d0 = Math.max(evt.date, start);
+    var d1 = Math.min(evt.date_fin, end);
+    if (d1 <= d0) return null;
     chip.classList.add('chip-period');
-    chip.style.position = 'absolute';
-    chip.style.left    = pct(dateDebut, start, end);
-    chip.style.width   = `calc(${pct(dateFin, start, end)} - ${pct(dateDebut, start, end)})`;
-    chip.style.height  = ROW_H + 'px';
+    chip.style.left        = pct(d0, start, end);
+    chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
+    chip.style.height      = ROW_H + 'px';
     chip.style.background  = col.bg + 'CC';
     chip.style.borderColor = col.bg;
     chip.style.color       = '#fff';
-
     if (level === 1) {
       chip.classList.add('chip-period-sm');
     } else {
-      const maxChars = level === 3 ? 40 : 22;
-      const lbl = evt.titre.length > maxChars ? evt.titre.slice(0, maxChars - 1) + '…' : evt.titre;
-      chip.textContent = lbl;
+      var max = level === 3 ? 40 : 22;
+      chip.textContent = evt.titre.length > max ? evt.titre.slice(0, max - 1) + '\u2026' : evt.titre;
     }
-    chip.title = `${evt.titre} (${evt.date}–${evt.date_fin})`;
+    chip.title = evt.titre + ' (' + evt.date + '\u2013' + evt.date_fin + ')';
 
   } else {
-    chip.style.position = 'absolute';
-    chip.style.height   = ROW_H + 'px';
+    chip.style.height    = ROW_H + 'px';
+    chip.style.left      = pct(evt.date, start, end);
+    chip.style.transform = 'translateX(-50%)';
 
     if (level === 3) {
       chip.classList.add('chip-full');
       chip.style.background = col.bg;
       chip.style.color      = '#fff';
-      chip.style.transform  = 'translateX(-50%)';
-      chip.style.left       = pct(evt.date, start, end);
-      const shortTitle = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '…' : evt.titre;
-      chip.textContent = shortTitle;
+      chip.textContent = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '\u2026' : evt.titre;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
-      chip.style.background   = col.light;
-      chip.style.color        = col.text;
-      chip.style.borderColor  = col.bg;
-      chip.style.transform    = 'translateX(-50%)';
-      chip.style.left         = pct(evt.date, start, end);
-      const shortTitle = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '…' : evt.titre;
-      chip.textContent = shortTitle;
+      chip.style.background  = col.light;
+      chip.style.color       = col.text;
+      chip.style.borderColor = col.bg;
+      chip.textContent = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
     } else {
       chip.classList.add('chip-dot');
-      chip.style.background = col.bg;
-      chip.style.left       = pct(evt.date, start, end);
-      chip.style.transform  = 'translateX(-50%)';
-      chip.style.width      = '10px';
-      chip.style.height     = '10px';
-      chip.style.top        = (topOffset + ROW_H / 2 - 5) + 'px';
+      chip.style.background   = col.bg;
+      chip.style.width        = '10px';
+      chip.style.height       = '10px';
+      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - 5) + 'px';
       chip.style.borderRadius = '50%';
     }
-    chip.title = `${evt.titre} (${evt.date})`;
+    chip.title = evt.titre + ' (' + evt.date + ')';
   }
 
-  chip.addEventListener('click', e => {
-    e.stopPropagation();
-    openModal(evt);
-  });
-
+  chip.addEventListener('click', (function(e, z) {
+    return function(ev) { ev.stopPropagation(); openModal(e, z); };
+  })(evt, zone));
   return chip;
 }
 
-// ─── Fiche modale ─────────────────────────────────────────────────────────────
+/* ── Modale ─────────────────────────────────────────────────────────── */
 
-function openModal(evt) {
-  const col = COLORS[evt.zone] || COLORS['France'];
-  document.getElementById('modal-zone').textContent = evt.zone;
+function openModal(evt, zone) {
+  var z   = zone || (evt.zones && evt.zones[0]) || 'France';
+  var col = COLORS[z] || COLORS['France'];
+  document.getElementById('modal-zone').textContent      = z;
   document.getElementById('modal-zone').style.background = col.light;
-  document.getElementById('modal-zone').style.color = col.text;
-  const dateLabel = evt.date_fin && evt.date_fin > evt.date
-    ? `${evt.date} – ${evt.date_fin} apr. J.-C.`
-    : `${evt.date} apr. J.-C.`;
-  document.getElementById('modal-date').textContent = dateLabel;
-  document.getElementById('modal-title').textContent = evt.titre;
-  document.getElementById('modal-desc').textContent = evt.description;
-  document.getElementById('modal-sources').textContent = evt.sources ? '📖 ' + evt.sources : '';
+  document.getElementById('modal-zone').style.color      = col.text;
+  document.getElementById('modal-date').textContent =
+    (evt.date_fin && evt.date_fin > evt.date)
+      ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
+      : evt.date + ' apr. J.-C.';
+  document.getElementById('modal-title').textContent   = evt.titre;
+  document.getElementById('modal-desc').textContent    = evt.description;
+  document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
-  const imgEl = document.getElementById('modal-img');
+  var imgEl = document.getElementById('modal-img');
   if (evt.image && evt.image.trim() !== '') {
-    imgEl.innerHTML = `<img src="${evt.image}" alt="${evt.titre}">`;
+    imgEl.innerHTML     = '';
+    var img             = document.createElement('img');
+    img.src             = evt.image;
+    img.alt             = evt.titre;
+    imgEl.appendChild(img);
     imgEl.style.display = 'block';
   } else {
     imgEl.style.display = 'none';
@@ -432,80 +386,80 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// ─── Navigation ───────────────────────────────────────────────────────────────
+/* ── Navigation ─────────────────────────────────────────────────────── */
 
 function goLevel(level) {
-  if (level === 1) {
-    renderLevel(1);
-  } else if (level === 2 && currentCentury !== null) {
-    renderLevel(2, currentCentury);
-  } else if (level === 3 && currentDecade !== null) {
-    renderLevel(3, currentDecade);
-  }
+  if      (level === 1)                             renderLevel(1);
+  else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
+  else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
 }
 
 function navigateDecade(direction) {
   if (currentDecade === null) return;
-  const next = currentDecade + direction * 10;
-  // Bornes : ne pas sortir de 1290–1500
+  var next = currentDecade + direction * 10;
   if (next < 1290 || next > 1500) return;
-  // Si on change de siècle, mettre à jour currentCentury
   currentCentury = Math.floor(next / 100) * 100;
   renderLevel(3, next);
 }
 
 function updateBreadcrumb() {
-  const bc = document.getElementById('breadcrumb');
-  let html = `<span class="bc-item bc-link" onclick="goLevel(1)">1300–1500</span>`;
-  if (currentLevel >= 2 && currentCentury !== null) {
-    html += `<span class="bc-sep">›</span><span class="bc-item bc-link" onclick="goLevel(2)">${currentCentury}–${currentCentury + 100}</span>`;
-  }
-  if (currentLevel === 3 && currentDecade !== null) {
-    html += `<span class="bc-sep">›</span><span class="bc-item">${currentDecade}–${currentDecade + 10}</span>`;
-  }
+  var bc   = document.getElementById('breadcrumb');
+  var html = '<span class="bc-item bc-link" onclick="goLevel(1)">1300\u20131500</span>';
+  if (currentLevel >= 2 && currentCentury !== null)
+    html += '<span class="bc-sep"> \u203a </span>'
+          + '<span class="bc-item bc-link" onclick="goLevel(2)">'
+          + currentCentury + '\u2013' + (currentCentury + 100) + '</span>';
+  if (currentLevel === 3 && currentDecade !== null)
+    html += '<span class="bc-sep"> \u203a </span>'
+          + '<span class="bc-item">'
+          + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
   bc.innerHTML = html;
 }
 
 function updateNavButtons() {
-  document.querySelectorAll('.nav-btn').forEach((btn, i) => {
+  /* Boutons de niveau */
+  document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
     btn.classList.toggle('active', i + 1 === currentLevel);
-    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade === null);
+    btn.disabled = (i === 1 && currentCentury === null)
+                || (i === 2 && currentDecade  === null);
   });
 
-  // Flèches décennales : visibles seulement au niveau 3
-  const nav = document.getElementById('decade-nav');
-  if (!nav) return;
-  if (currentLevel === 3 && currentDecade !== null) {
-    nav.classList.add('visible');
-    document.getElementById('decade-label').textContent =
-      `${currentDecade} – ${currentDecade + 10}`;
-    document.getElementById('arrow-prev').disabled = currentDecade <= 1290;
-    document.getElementById('arrow-next').disabled = currentDecade >= 1500;
-  } else {
-    nav.classList.remove('visible');
+  /* Boutons Page précédente / Page suivante (id: btn-prev, btn-next) */
+  var prev  = document.getElementById('btn-prev');
+  var next  = document.getElementById('btn-next');
+  var lbl   = document.getElementById('decade-label');
+  if (!prev || !next) return;
+
+  var show = (currentLevel === 3 && currentDecade !== null);
+  prev.style.display = show ? 'inline-block' : 'none';
+  next.style.display = show ? 'inline-block' : 'none';
+  if (lbl) lbl.style.display = show ? 'inline-block' : 'none';
+
+  if (show) {
+    prev.disabled = (currentDecade <= 1290);
+    next.disabled = (currentDecade >= 1500);
+    if (lbl) lbl.textContent = currentDecade + ' \u2013 ' + (currentDecade + 10);
   }
 }
 
-// ─── Utilitaires ─────────────────────────────────────────────────────────────
+/* ── Utilitaires ────────────────────────────────────────────────────── */
 
 function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
 }
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
+/* ── Init ───────────────────────────────────────────────────────────── */
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('modal-overlay').addEventListener('click', function (e) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('modal-overlay').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
-    // Flèches clavier pour naviguer entre décennies (hors modale ouverte)
     if (!document.getElementById('modal-overlay').classList.contains('open')) {
       if (e.key === 'ArrowLeft')  navigateDecade(-1);
       if (e.key === 'ArrowRight') navigateDecade(1);
     }
   });
-
   loadEvents();
 });
