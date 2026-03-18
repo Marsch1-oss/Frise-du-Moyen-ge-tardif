@@ -25,7 +25,7 @@ const COLORS = {
    type 3 = décennie seulement  (niveau 3)
    si non renseigné → traité comme type 1 */
 function eventVisibleAtLevel(evt, level) {
-  var t = evt.type || 1;
+  var t = parseInt(evt.type, 10) || 1;
   if (t === 1) return true;
   if (t === 2) return level >= 2;
   if (t === 3) return level === 3;
