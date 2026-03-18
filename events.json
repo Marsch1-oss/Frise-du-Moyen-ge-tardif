@@ -54,6 +54,307 @@
     "zones": [
       "France"
     ],
+    "type": 1,
+    "description": "Des pluies incessantes de 1315 à 1322 provoquent de terribles famines en Europe du Nord. Des millions de personnes meurent de faim. Cette crise fragilise les populations avant la grande épidémie de peste qui suivra trente ans plus tard.",
+    "image": "",
+    "sources": "Chronique d'Aix-la-Chapelle"
+  },
+  {
+    "id": 6,
+    "titre": "Début de la guerre de Cent Ans",
+    "date": 1337,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Édouard III d'Angleterre revendique la couronne de France après l'extinction des Capétiens directs. Ce conflit dynastique, commercial et territorial durera jusqu'en 1453 et redéfinira les identités nationales françaises et anglaises.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 7,
+    "titre": "Bataille de Crécy",
+    "date": 1346,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise « Ich dien » (Je sers), adoptée depuis par les princes de Galles.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques, Livre I"
+  },
+  {
+    "id": 8,
+    "titre": "Peste noire en Europe",
+    "date": 1347,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "La peste bubonique débarque à Messine depuis des navires génois. En cinq ans, elle emporte entre un tiers et la moitié de la population européenne — soit 25 millions de morts. Aucune catastrophe comparable ne frappera l'Occident avant le XXe siècle.",
+    "image": "",
+    "sources": "Giovanni Boccaccio, Decameron (préface)"
+  },
+  {
+    "id": 9,
+    "titre": "Peste noire — vague orientale",
+    "date": 1347,
+    "zones": [
+      "Orient"
+    ],
+    "type": 3,
+    "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
+    "image": "",
+    "sources": "Ibn Battuta, Rihla"
+  },
+  {
+    "id": 10,
+    "titre": "Jacquerie",
+    "date": 1358,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Soulèvement paysan d'une rare violence en Île-de-France et Picardie, déclenché par les exactions fiscales après la défaite de Poitiers. La révolte est écrasée dans le sang par la noblesse. Premier grand mouvement social de la France médiévale.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 11,
+    "titre": "Bataille de Poitiers",
+    "date": 1356,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Le Prince Noir capture le roi Jean II de France à Poitiers. La France doit payer une rançon colossale de trois millions d'écus d'or. Cette défaite plonge le royaume dans une crise financière et politique profonde.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 12,
+    "titre": "Révolte de wat tyler en angleterre",
+    "date": 1381,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Les paysans anglais marchent sur Londres pour protester contre la poll tax et le servage. Wat Tyler, leur chef, est assassiné lors des négociations avec Richard II. La révolte est écrasée mais accélère la fin du servage en Angleterre.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 13,
+    "titre": "Grand Schisme d'Occident",
+    "date": 1378,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378–1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
+    "image": "",
+    "sources": "Chroniques de Saint-Denis"
+  },
+  {
+    "id": 14,
+    "titre": "Bataille de Nicopolis",
+    "date": 1396,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "La dernière grande croisade, menée par Sigismond de Luxembourg, est annihilée par les Ottomans de Bayézid Ier. Cette défaite scelle le destin de l'Empire byzantin et ouvre les Balkans à l'expansion ottomane.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 15,
+    "titre": "Avènement de la maison de Lancastre",
+    "date": 1399,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Henri Bolingbroke dépose Richard II et monte sur le trône sous le nom d'Henri IV, fondant la dynastie des Lancastre. Ce coup d'État dynastique annonce les futures guerres des Deux-Roses (1455–1485).",
+    "image": "",
+    "sources": "Thomas Walsingham, Historia Anglicana"
+  },
+  {
+    "id": 16,
+    "titre": "Concile de Constance",
+    "date": 1414,
+    "zones": [
+      "Empire"
+    ],
+    "type": 1,
+    "description": "Le concile met fin au Grand Schisme en élisant Martin V (1417), seul pape universel. Il condamne également Jan Hus, réformateur tchèque, au bûcher, déclenchant les guerres hussites en Bohême.",
+    "image": "",
+    "sources": "Actes du concile de Constance"
+  },
+  {
+    "id": 17,
+    "titre": "Bataille d'Azincourt",
+    "date": 1415,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Henri V d'Angleterre écrase une armée française dix fois supérieure en nombre. Les archers anglais déciment la chevalerie française. Cette victoire aboutit au traité de Troyes (1420) qui livre la régence de France à l'Angleterre.",
+    "image": "",
+    "sources": "Jean de Monstrelet, Chronique"
+  },
+  {
+    "id": 18,
+    "titre": "Traité de Troyes",
+    "date": 1420,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Charles VI, sous influence bourguignonne, reconnaît Henri V d'Angleterre comme héritier de France. Le Dauphin Charles est déclaré bâtard et exclu de la succession. La France est au bord de l'effacement en tant que royaume indépendant.",
+    "image": "",
+    "sources": "Enguerrand de Monstrelet, Chronique"
+  },
+  {
+    "id": 19,
+    "titre": "Jeanne d'Arc — siège d'Orléans",
+    "date": 1429,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Jeanne d'Arc lève le siège d'Orléans en neuf jours, renversant le cours de la guerre de Cent Ans. Elle fait ensuite sacrer Charles VII à Reims. Capturée en 1430, brûlée vive à Rouen en 1431, elle sera réhabilitée en 1456.",
+    "image": "",
+    "sources": "Procès de condamnation de Jeanne d'Arc (1431)"
+  },
+  {
+    "id": 20,
+    "titre": "Fin de la guerre de Cent Ans",
+    "date": 1453,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "La bataille de Castillon, dernière grande bataille de la guerre, est remportée par Charles VII. L'Angleterre perd toutes ses possessions françaises sauf Calais. La France sort renforcée et unifiée de ce conflit séculaire.",
+    "image": "",
+    "sources": "Thomas Basin, Histoire de Charles VII"
+  },
+  {
+    "id": 21,
+    "titre": "Chute de Constantinople",
+    "date": 1453,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Mehmed II prend Constantinople après 53 jours de siège. La ville millénaire devient Istanbul, capitale ottomane. Date souvent retenue comme fin du Moyen Âge : fin de l'Empire byzantin, dernier héritier de Rome.",
+    "image": "",
+    "sources": "Laonikos Chalkokondyles, Chronique"
+  },
+  {
+    "id": 22,
+    "titre": "Guerres de Roses — début",
+    "date": 1455,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Conflit dynastique entre les maisons d'York (rose blanche) et de Lancastre (rose rouge) pour le trône d'Angleterre. Ces guerres civiles intermittentes (1455–1485) affaiblissent la noblesse anglaise et préparent l'avènement des Tudors.",
+    "image": "",
+    "sources": "Philippe de Commynes, Mémoires"
+  },
+  {
+    "id": 23,
+    "titre": "Reconquista — chute de Grenade",
+    "date": 1492,
+    "zones": [
+      "Ibérique"
+    ],
+    "type": 1,
+    "description": "Les Rois Catholiques, Isabelle et Ferdinand, prennent Grenade, dernier royaume maure d'Espagne. La Reconquista achevée, ils expulsent également les Juifs d'Espagne (édit de l'Alhambra). Une nouvelle ère s'ouvre pour la péninsule ibérique.",
+    "image": "",
+    "sources": "Hernando del Pulgar, Crónica de los Reyes Católicos"
+  },
+  {
+    "id": 24,
+    "titre": "Guerres hussites",
+    "date": 1419,
+    "zones": [
+      "Empire"
+    ],
+    "type": 1,
+    "description": "Après le martyre de Jan Hus, les Hussites tchèques se soulèvent contre l'Église et l'Empire. Malgré cinq croisades, ils résistent vingt ans grâce aux innovations tactiques de Jan Žižka. Premier grand mouvement de réforme religieuse.",
+    "image": "",
+    "sources": "Aeneas Silvius Piccolomini, Historia Bohemica"
+  },
+  {
+    "id": 25,
+    "titre": "Invention de l'imprimerie",
+    "date": 1455,
+    "zones": [
+      "Empire"
+    ],
+    "type": 1,
+    "description": "Johannes Gutenberg achève la Bible à 42 lignes à Mayence, premier livre imprimé en Europe à caractères mobiles métalliques. Cette révolution technique transformera la diffusion du savoir et accélérera la Renaissance et la Réforme.",
+    "image": "",
+    "sources": "Bible de Gutenberg, 1455"
+  },
+  {
+    "id": 26,
+    "titre": "Lorenzo de Médicis — le Magnifique",
+    "date": 1469,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Lorenzo de Médicis prend la tête de Florence à 20 ans et en fait le centre de la Renaissance italienne. Mécène exceptionnel, il protège Botticelli, Léonard de Vinci et Pic de la Mirandole. Florence rayonne sur toute l'Europe cultivée.",
+    "image": "",
+    "sources": "Machiavel, Histoire de Florence"
+  },
+  {
+    "id": 27,
+    "titre": "Avènement des Rois Catholiques",
+    "date": 1479,
+    "zones": [
+      "Ibérique"
+    ],
+    "type": 1,
+    "description": "L'union des couronnes de Castille et d'Aragon sous Isabelle et Ferdinand unifie l'Espagne. Cette alliance dynastique fera de l'Espagne la première puissance mondiale dès le début du XVIe siècle.",
+    "image": "",
+    "sources": "Hernando del Pulgar, Crónica"
+  },
+  {
+    "id": 28,
+    "titre": "Avènement de Charles VIII — Italie",
+    "date": 1494,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Charles VIII envahit l'Italie, déclenchant les guerres d'Italie qui dureront soixante ans. Cette campagne introduit les idées et les arts de la Renaissance italienne en France, transformant profondément la culture française.",
+    "image": "",
+    "sources": "Philippe de Commynes, Mémoires"
+  }
+]  },
+  {
+    "id": 4,
+    "titre": "Début de la papauté d'Avignon",
+    "date": 1309,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309–1377), dite « captivité babylonienne » de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 5,
+    "titre": "Grande famine en Europe du Nord",
+    "date": 1315,
+    "zones": [
+      "France"
+    ],
     "type": 2,
     "description": "Des pluies incessantes de 1315 à 1322 provoquent de terribles famines en Europe du Nord. Des millions de personnes meurent de faim. Cette crise fragilise les populations avant la grande épidémie de peste qui suivra trente ans plus tard.",
     "image": "",
