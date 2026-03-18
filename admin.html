@@ -211,6 +211,9 @@
     <!-- ── Export JSON ── -->
     <div class="panel" style="margin-top:1.2rem;">
       <div class="panel-title">Export JSON</div>
+      <div id="import-warning" style="background:#FFF3CD;border:1px solid #FBBF24;border-radius:6px;padding:0.6rem 1rem;margin-bottom:0.8rem;font-size:0.83rem;color:#92400E;">
+        ⚠ Importez d'abord votre <code>events.json</code> existant avant d'ajouter des événements, sinon l'export écrasera votre base.
+      </div>
       <p style="font-size:0.85rem;color:var(--ink-muted);font-style:italic;margin-bottom:0.8rem;">
         Copiez ce JSON et collez-le dans votre fichier <code>events.json</code> sur GitHub.
       </p>
@@ -248,7 +251,8 @@
 <script>
 const ZONES = [
   'France', 'Angleterre', 'St Empire', 'Italie',
-  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde'
+  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde',
+  'Byzance', 'Art', 'Techniques et idees'
 ];
 const COLORS = {
   'France': '#8B1A1A', 'Angleterre': '#1A4A6B', 'St Empire': '#6B4A10',
@@ -261,6 +265,7 @@ const COLORS = {
 
 var events = [];
 var editingId = null;
+var hasImported = false;
 
 /* ── Init zones ── */
 function initZones() {
@@ -482,10 +487,17 @@ function updateJSON() {
 }
 
 function copyJSON() {
+  if (events.length === 0) {
+    toast('⚠ Aucun événement — importez d\'abord votre events.json !');
+    return;
+  }
+  if (!hasImported && events.length < 5) {
+    if (!confirm('Vous n\'avez pas importé de fichier existant. Exporter seulement ' + events.length + ' événement(s) écrasera votre base. Continuer ?')) return;
+  }
   var ta = document.getElementById('json-output');
   ta.select();
   document.execCommand('copy');
-  toast('JSON copié dans le presse-papiers ✓');
+  toast('JSON copié (' + events.length + ' événements) ✓');
 }
 
 /* ── Import ── */
@@ -501,7 +513,9 @@ function importJSON(input) {
         if (!ev.type) ev.type = 1;
         return ev;
       });
-      events.sort(function(a, b) { return a.date - b.date; });
+      hasImported = true;
+      var warn = document.getElementById('import-warning');
+      if (warn) warn.style.display = 'none';
       resetForm();
       updateJSON();
       toast(events.length + ' événements importés ✓');
