@@ -19,6 +19,19 @@ const COLORS = {
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' }
 };
 
+/* Visibilité par type :
+   type 1 = toutes les échelles (niveaux 1, 2, 3)
+   type 2 = siècle et décennie  (niveaux 2, 3)
+   type 3 = décennie seulement  (niveau 3)
+   si non renseigné → traité comme type 1 */
+function eventVisibleAtLevel(evt, level) {
+  var t = evt.type || 1;
+  if (t === 1) return true;
+  if (t === 2) return level >= 2;
+  if (t === 3) return level === 3;
+  return true;
+}
+
 const ROW_H    = 24;
 const ROW_GAP  = 4;
 const CHIP_PAD = 6;
@@ -41,6 +54,7 @@ function loadEvents() {
         if (!e.zones) {
           e.zones = Array.isArray(e.zone) ? e.zone : (e.zone ? [e.zone] : []);
         }
+        if (!e.type) e.type = 1;
       });
       buildFilterBar();
       renderLevel(1);
@@ -57,30 +71,23 @@ function buildFilterBar() {
   var container = document.getElementById('zone-filters');
   if (!container) return;
   container.innerHTML = '';
-
   ZONES.forEach(function(zone) {
     var col = COLORS[zone];
     if (!col) return;
-
     var label = document.createElement('label');
     label.className = 'zone-checkbox checked';
-
     var input = document.createElement('input');
-    input.type    = 'checkbox';
+    input.type = 'checkbox';
     input.checked = true;
     input.addEventListener('change', (function(z) {
       return function() { toggleZone(z, this.checked); };
     })(zone));
-
     var dot = document.createElement('span');
-    dot.className        = 'zone-cb-dot';
+    dot.className = 'zone-cb-dot';
     dot.style.background = col.bg;
-
-    var txt = document.createTextNode('\u00a0' + zone);
-
     label.appendChild(input);
     label.appendChild(dot);
-    label.appendChild(txt);
+    label.appendChild(document.createTextNode('\u00a0' + zone));
     container.appendChild(label);
   });
 }
@@ -99,7 +106,7 @@ function toggleZone(zone, checked) {
 function filterAll(checked) {
   activeZones = checked ? new Set(ZONES) : new Set();
   document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-    var inp   = lbl.querySelector('input');
+    var inp = lbl.querySelector('input');
     inp.checked = checked;
     lbl.classList.toggle('checked',   checked);
     lbl.classList.toggle('unchecked', !checked);
@@ -117,7 +124,6 @@ function refreshFrise() {
 
 function renderLevel(level, rangeStart) {
   currentLevel = level;
-
   var start, end, tickStep;
   if (level === 1) {
     start = 1290; end = 1510; tickStep = 25;
@@ -128,18 +134,17 @@ function renderLevel(level, rangeStart) {
     currentDecade = rangeStart;
     start = rangeStart; end = rangeStart + 10; tickStep = 1;
   }
-
   updateBreadcrumb();
   updateNavButtons();
 
   var container = document.getElementById('frise-container');
   container.innerHTML = '';
-
   container.appendChild(buildAxis(start, end, tickStep, level));
 
   ZONES.filter(function(z) { return activeZones.has(z); }).forEach(function(zone) {
     var evts = allEvents.filter(function(e) {
       if (!e.zones || e.zones.indexOf(zone) === -1) return false;
+      if (!eventVisibleAtLevel(e, level)) return false;
       var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
       return e.date <= end && fin >= start;
     });
@@ -147,11 +152,11 @@ function renderLevel(level, rangeStart) {
   });
 
   var hint = document.createElement('div');
-  hint.className   = 'frise-hint';
+  hint.className = 'frise-hint';
   hint.textContent = level === 1
-    ? 'Cliquez sur une période pour zoomer · cliquez sur un événement pour sa fiche'
+    ? 'Cliquez sur une période pour zoomer \u00b7 cliquez sur un événement pour sa fiche'
     : level === 2
-    ? 'Cliquez sur une décennie pour zoomer · cliquez sur un événement pour sa fiche'
+    ? 'Cliquez sur une décennie pour zoomer \u00b7 cliquez sur un événement pour sa fiche'
     : 'Cliquez sur un événement pour afficher sa fiche complète';
   container.appendChild(hint);
 }
@@ -159,24 +164,22 @@ function renderLevel(level, rangeStart) {
 /* ── Axe ────────────────────────────────────────────────────────────── */
 
 function buildAxis(start, end, step, level) {
-  var axis   = document.createElement('div');
+  var axis = document.createElement('div');
   axis.className = 'axis-row';
   var spacer = document.createElement('div');
   spacer.className = 'zone-label axis-spacer';
   axis.appendChild(spacer);
-
   var bar = document.createElement('div');
   bar.className = 'axis-bar';
 
   for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
     var tick = document.createElement('div');
-    tick.className   = 'tick';
-    tick.style.left  = pct(y, start, end);
+    tick.className = 'tick';
+    tick.style.left = pct(y, start, end);
     tick.textContent = y;
     bar.appendChild(tick);
-
     var tl = document.createElement('div');
-    tl.className  = 'tick-line';
+    tl.className = 'tick-line';
     tl.style.left = pct(y, start, end);
     bar.appendChild(tl);
   }
@@ -200,14 +203,13 @@ function buildAxis(start, end, step, level) {
       })(d);
     }
   }
-
   axis.appendChild(bar);
   return axis;
 }
 
 function makeBand(from, to, start, end, onClick) {
   var band = document.createElement('div');
-  band.className   = 'axis-band';
+  band.className = 'axis-band';
   band.style.left  = pct(from, start, end);
   band.style.width = 'calc(' + pct(to, start, end) + ' - ' + pct(from, start, end) + ')';
   band.addEventListener('click', onClick);
@@ -226,8 +228,8 @@ function chipWidthPct(evt, start, end, level) {
 }
 
 function assignRows(events, start, end, level) {
-  var rowEnds     = [];
-  var safeGapPct  = CHIP_PAD / TRACK_PX * 100;
+  var rowEnds = [];
+  var safeGapPct = CHIP_PAD / TRACK_PX * 100;
   return events.map(function(evt) {
     var isPeriod = evt.date_fin && evt.date_fin > evt.date;
     var leftPct  = isPeriod
@@ -247,11 +249,10 @@ function assignRows(events, start, end, level) {
 function buildTrack(zone, events, start, end, level) {
   var row = document.createElement('div');
   row.className = 'track-row';
-
   var lbl = document.createElement('div');
   lbl.className = 'zone-label';
   var dot = document.createElement('span');
-  dot.className        = 'zone-dot';
+  dot.className = 'zone-dot';
   dot.style.background = COLORS[zone].bg;
   lbl.appendChild(dot);
   lbl.appendChild(document.createTextNode(zone));
@@ -269,7 +270,7 @@ function buildTrack(zone, events, start, end, level) {
   var trackH = (maxRow + 1) * ROW_H + maxRow * ROW_GAP + 8;
 
   var track = document.createElement('div');
-  track.className    = 'track';
+  track.className = 'track';
   track.style.height = trackH + 'px';
 
   var line = document.createElement('div');
@@ -288,24 +289,36 @@ function buildTrack(zone, events, start, end, level) {
 
 /* ── Chip ───────────────────────────────────────────────────────────── */
 
+/* Taille du chip selon le type d'événement :
+   type 1 = grand + gras (événement majeur)
+   type 2 = taille normale
+   type 3 = petit + discret */
+function chipSizeClass(type) {
+  if (type === 1) return 'chip-type1';
+  if (type === 3) return 'chip-type3';
+  return '';
+}
+
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var col      = COLORS[zone] || COLORS['France'];
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+  var type     = evt.type || 1;
   var chip     = document.createElement('div');
-  chip.className        = 'evt-chip';
-  chip.style.position   = 'absolute';
-  chip.style.transform  = 'none';
-  chip.style.top        = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+  chip.className       = 'evt-chip';
+  chip.style.position  = 'absolute';
+  chip.style.transform = 'none';
+  chip.style.top       = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
     var d0 = Math.max(evt.date, start);
     var d1 = Math.min(evt.date_fin, end);
     if (d1 <= d0) return null;
     chip.classList.add('chip-period');
+    chip.classList.add(chipSizeClass(type));
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
     chip.style.height      = ROW_H + 'px';
-    chip.style.background  = col.bg + 'CC';
+    chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
     chip.style.borderColor = col.bg;
     chip.style.color       = '#fff';
     if (level === 1) {
@@ -323,21 +336,25 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
 
     if (level === 3) {
       chip.classList.add('chip-full');
-      chip.style.background = col.bg;
+      chip.classList.add(chipSizeClass(type));
+      chip.style.background = type === 3 ? col.bg + 'AA' : col.bg;
       chip.style.color      = '#fff';
       chip.textContent = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '\u2026' : evt.titre;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
+      chip.classList.add(chipSizeClass(type));
       chip.style.background  = col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
       chip.textContent = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
     } else {
       chip.classList.add('chip-dot');
+      chip.classList.add(chipSizeClass(type));
       chip.style.background   = col.bg;
-      chip.style.width        = '10px';
-      chip.style.height       = '10px';
-      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - 5) + 'px';
+      var dotSize = type === 1 ? 13 : type === 3 ? 7 : 10;
+      chip.style.width        = dotSize + 'px';
+      chip.style.height       = dotSize + 'px';
+      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - dotSize / 2) + 'px';
       chip.style.borderRadius = '50%';
     }
     chip.title = evt.titre + ' (' + evt.date + ')';
@@ -349,14 +366,26 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   return chip;
 }
 
-/* ── Modale ─────────────────────────────────────────────────────────── */
+/* ── Modale plein écran ─────────────────────────────────────────────── */
 
 function openModal(evt, zone) {
   var z   = zone || (evt.zones && evt.zones[0]) || 'France';
   var col = COLORS[z] || COLORS['France'];
+
   document.getElementById('modal-zone').textContent      = z;
   document.getElementById('modal-zone').style.background = col.light;
   document.getElementById('modal-zone').style.color      = col.text;
+
+  /* Badge type */
+  var typeEl = document.getElementById('modal-type');
+  if (typeEl) {
+    var t = evt.type || 1;
+    typeEl.textContent = t === 1 ? '\u2605\u2605\u2605 Événement majeur'
+                       : t === 2 ? '\u2605\u2605 Événement régional'
+                       :           '\u2605 Événement local';
+    typeEl.className = 'modal-type-badge type' + t;
+  }
+
   document.getElementById('modal-date').textContent =
     (evt.date_fin && evt.date_fin > evt.date)
       ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
@@ -367,10 +396,10 @@ function openModal(evt, zone) {
 
   var imgEl = document.getElementById('modal-img');
   if (evt.image && evt.image.trim() !== '') {
-    imgEl.innerHTML     = '';
-    var img             = document.createElement('img');
-    img.src             = evt.image;
-    img.alt             = evt.titre;
+    imgEl.innerHTML = '';
+    var img = document.createElement('img');
+    img.src = evt.image;
+    img.alt = evt.titre;
     imgEl.appendChild(img);
     imgEl.style.display = 'block';
   } else {
@@ -403,7 +432,6 @@ function navigateDecade(direction) {
 }
 
 function updateBreadcrumb() {
-  var bc   = document.getElementById('breadcrumb');
   var html = '<span class="bc-item bc-link" onclick="goLevel(1)">1300\u20131500</span>';
   if (currentLevel >= 2 && currentCentury !== null)
     html += '<span class="bc-sep"> \u203a </span>'
@@ -413,28 +441,23 @@ function updateBreadcrumb() {
     html += '<span class="bc-sep"> \u203a </span>'
           + '<span class="bc-item">'
           + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
-  bc.innerHTML = html;
+  document.getElementById('breadcrumb').innerHTML = html;
 }
 
 function updateNavButtons() {
-  /* Boutons de niveau */
   document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
     btn.classList.toggle('active', i + 1 === currentLevel);
     btn.disabled = (i === 1 && currentCentury === null)
                 || (i === 2 && currentDecade  === null);
   });
-
-  /* Boutons Page précédente / Page suivante (id: btn-prev, btn-next) */
   var prev  = document.getElementById('btn-prev');
   var next  = document.getElementById('btn-next');
   var lbl   = document.getElementById('decade-label');
   if (!prev || !next) return;
-
   var show = (currentLevel === 3 && currentDecade !== null);
   prev.style.display = show ? 'inline-block' : 'none';
   next.style.display = show ? 'inline-block' : 'none';
   if (lbl) lbl.style.display = show ? 'inline-block' : 'none';
-
   if (show) {
     prev.disabled = (currentDecade <= 1290);
     next.disabled = (currentDecade >= 1500);
