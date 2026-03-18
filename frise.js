@@ -1,60 +1,78 @@
-/* =====================================================================
-   frise.js — Frise chronologique médiévale 1300–1500
-   ===================================================================== */
+/* frise.js — Frise chronologique medievale 1300-1500 */
 
-const ZONES = [
+var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Italie',
-  'Pén. ibérique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde'
+  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde'
 ];
 
-const COLORS = {
+var COLORS = {
   'France':           { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
   'Angleterre':       { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
   'St Empire':        { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
   'Italie':           { bg: '#1A6B3C', light: '#E6F5ED', text: '#0F3D24' },
-  'Pén. ibérique':    { bg: '#5B3A8B', light: '#EDE6F5', text: '#3A245A' },
+  'Pen. iberique':    { bg: '#5B3A8B', light: '#EDE6F5', text: '#3A245A' },
   'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
   'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
   'Orient':           { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' }
 };
 
-/* Visibilité par type :
-   type 1 = toutes les échelles (niveaux 1, 2, 3)
-   type 2 = siècle et décennie  (niveaux 2, 3)
-   type 3 = décennie seulement  (niveau 3)
-   si non renseigné → traité comme type 1 */
-function eventVisibleAtLevel(evt, level) {
-  var t = parseInt(evt.type, 10) || 1;
-  if (t === 1) return true;
-  if (t === 2) return level >= 2;
-  if (t === 3) return level === 3;
-  return true;
-}
-
-const ROW_H    = 24;
-const ROW_GAP  = 4;
-const CHIP_PAD = 6;
-const TRACK_PX = 820;
+var ROW_H    = 24;
+var ROW_GAP  = 4;
+var CHIP_PAD = 6;
+var TRACK_PX = 820;
 
 var currentLevel   = 1;
 var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
-var activeZones    = new Set(ZONES);
+var activeZones    = null;
 
-/* ── Chargement ─────────────────────────────────────────────────────── */
+function initActiveZones() {
+  activeZones = {};
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = true;
+}
 
+/* ── Visibilite par type ─────────────────────────────────────────────
+   type 1 → niveaux 1, 2, 3
+   type 2 → niveaux 2, 3
+   type 3 → niveau 3 seulement                                        */
+function visibleAtLevel(evt, level) {
+  var t = Number(evt.type) || 1;
+  if (t <= 1) return true;
+  if (t === 2) return level >= 2;
+  return level >= 3;
+}
+
+/* ── Normalisation des zones ─────────────────────────────────────────
+   Accepte les anciens noms et les variantes avec accents             */
+var ZONE_ALIASES = {
+  'Empire':         'St Empire',
+  'St_Empire':      'St Empire',
+  'Iberique':       'Pen. iberique',
+  'Ibérique':       'Pen. iberique',
+  'Pen. ibérique':  'Pen. iberique',
+  'Pén. ibérique':  'Pen. iberique',
+  'Pen. Iberique':  'Pen. iberique',
+  'Péninsule ibérique': 'Pen. iberique'
+};
+
+function normalizeZone(z) {
+  return ZONE_ALIASES[z] || z;
+}
+
+/* ── Chargement ──────────────────────────────────────────────────────*/
 function loadEvents() {
   fetch('events.json')
     .then(function(res) { return res.json(); })
     .then(function(data) {
-      allEvents = data;
-      allEvents.forEach(function(e) {
-        if (!e.zones) {
-          e.zones = Array.isArray(e.zone) ? e.zone : (e.zone ? [e.zone] : []);
-        }
-        if (!e.type) e.type = 1;
+      allEvents = data.map(function(e) {
+        /* Normalise zones */
+        var rawZones = e.zones || (e.zone ? [e.zone] : []);
+        e.zones = rawZones.map(normalizeZone);
+        /* Normalise type en nombre */
+        e.type = Number(e.type) || 1;
+        return e;
       });
       buildFilterBar();
       renderLevel(1);
@@ -65,36 +83,34 @@ function loadEvents() {
     });
 }
 
-/* ── Filtre zones ───────────────────────────────────────────────────── */
-
+/* ── Filtre zones ────────────────────────────────────────────────────*/
 function buildFilterBar() {
   var container = document.getElementById('zone-filters');
   if (!container) return;
   container.innerHTML = '';
-  ZONES.forEach(function(zone) {
-    var col = COLORS[zone];
-    if (!col) return;
-    var label = document.createElement('label');
-    label.className = 'zone-checkbox checked';
-    var input = document.createElement('input');
-    input.type = 'checkbox';
-    input.checked = true;
-    input.addEventListener('change', (function(z) {
-      return function() { toggleZone(z, this.checked); };
-    })(zone));
-    var dot = document.createElement('span');
-    dot.className = 'zone-cb-dot';
-    dot.style.background = col.bg;
-    label.appendChild(input);
-    label.appendChild(dot);
-    label.appendChild(document.createTextNode('\u00a0' + zone));
-    container.appendChild(label);
-  });
+  for (var i = 0; i < ZONES.length; i++) {
+    (function(zone) {
+      var col = COLORS[zone];
+      if (!col) return;
+      var label = document.createElement('label');
+      label.className = 'zone-checkbox checked';
+      var input = document.createElement('input');
+      input.type = 'checkbox';
+      input.checked = true;
+      input.addEventListener('change', function() { toggleZone(zone, this.checked); });
+      var dot = document.createElement('span');
+      dot.className = 'zone-cb-dot';
+      dot.style.background = col.bg;
+      label.appendChild(input);
+      label.appendChild(dot);
+      label.appendChild(document.createTextNode('\u00a0' + zone));
+      container.appendChild(label);
+    })(ZONES[i]);
+  }
 }
 
 function toggleZone(zone, checked) {
-  if (checked) activeZones.add(zone);
-  else         activeZones.delete(zone);
+  activeZones[zone] = checked;
   document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
     var inp = lbl.querySelector('input');
     lbl.classList.toggle('checked',   inp.checked);
@@ -104,7 +120,7 @@ function toggleZone(zone, checked) {
 }
 
 function filterAll(checked) {
-  activeZones = checked ? new Set(ZONES) : new Set();
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = checked;
   document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
     var inp = lbl.querySelector('input');
     inp.checked = checked;
@@ -116,12 +132,11 @@ function filterAll(checked) {
 
 function refreshFrise() {
   if      (currentLevel === 1) renderLevel(1);
-  else if (currentLevel === 2 && currentCentury !== null) renderLevel(2, currentCentury);
-  else if (currentLevel === 3 && currentDecade  !== null) renderLevel(3, currentDecade);
+  else if (currentLevel === 2) renderLevel(2, currentCentury);
+  else                         renderLevel(3, currentDecade);
 }
 
-/* ── Rendu principal ────────────────────────────────────────────────── */
-
+/* ── Rendu principal ─────────────────────────────────────────────────*/
 function renderLevel(level, rangeStart) {
   currentLevel = level;
   var start, end, tickStep;
@@ -134,6 +149,7 @@ function renderLevel(level, rangeStart) {
     currentDecade = rangeStart;
     start = rangeStart; end = rangeStart + 10; tickStep = 1;
   }
+
   updateBreadcrumb();
   updateNavButtons();
 
@@ -141,28 +157,36 @@ function renderLevel(level, rangeStart) {
   container.innerHTML = '';
   container.appendChild(buildAxis(start, end, tickStep, level));
 
-  ZONES.filter(function(z) { return activeZones.has(z); }).forEach(function(zone) {
-    var evts = allEvents.filter(function(e) {
-      if (!e.zones || e.zones.indexOf(zone) === -1) return false;
-      if (!eventVisibleAtLevel(e, level)) return false;
+  for (var i = 0; i < ZONES.length; i++) {
+    var zone = ZONES[i];
+    if (!activeZones[zone]) continue;
+
+    var evts = [];
+    for (var j = 0; j < allEvents.length; j++) {
+      var e = allEvents[j];
+      /* Zone */
+      if (e.zones.indexOf(zone) === -1) continue;
+      /* Type / niveau */
+      if (!visibleAtLevel(e, level)) continue;
+      /* Fenetre temporelle */
       var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
-      return e.date <= end && fin >= start;
-    });
+      if (e.date > end || fin < start) continue;
+      evts.push(e);
+    }
     container.appendChild(buildTrack(zone, evts, start, end, level));
-  });
+  }
 
   var hint = document.createElement('div');
   hint.className = 'frise-hint';
   hint.textContent = level === 1
-    ? 'Cliquez sur une période pour zoomer \u00b7 cliquez sur un événement pour sa fiche'
+    ? 'Cliquez sur une periode pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
     : level === 2
-    ? 'Cliquez sur une décennie pour zoomer \u00b7 cliquez sur un événement pour sa fiche'
-    : 'Cliquez sur un événement pour afficher sa fiche complète';
+    ? 'Cliquez sur une decennie pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
+    : 'Cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
 }
 
-/* ── Axe ────────────────────────────────────────────────────────────── */
-
+/* ── Axe ─────────────────────────────────────────────────────────────*/
 function buildAxis(start, end, step, level) {
   var axis = document.createElement('div');
   axis.className = 'axis-row';
@@ -185,21 +209,21 @@ function buildAxis(start, end, step, level) {
   }
 
   if (level === 1) {
-    [1300, 1350, 1400, 1450].forEach(function(s) {
-      var band = makeBand(s, s + 50, start, end, (function(sv) {
-        return function() { renderLevel(2, Math.floor(sv / 100) * 100); };
-      })(s));
-      band.title = 'Zoomer sur ' + s + '\u2013' + (s + 50);
-      bar.appendChild(band);
-    });
+    var slices = [1300, 1350, 1400, 1450];
+    for (var s = 0; s < slices.length; s++) {
+      (function(sv) {
+        var band = makeBand(sv, sv + 50, start, end, function() {
+          renderLevel(2, Math.floor(sv / 100) * 100);
+        });
+        bar.appendChild(band);
+      })(slices[s]);
+    }
   } else if (level === 2) {
     for (var d = currentCentury; d < currentCentury + 100; d += 10) {
       (function(decade) {
-        var band = makeBand(decade, decade + 10, start, end, function() {
+        bar.appendChild(makeBand(decade, decade + 10, start, end, function() {
           renderLevel(3, decade);
-        });
-        band.title = 'Zoomer sur ' + decade + '\u2013' + (decade + 10);
-        bar.appendChild(band);
+        }));
       })(d);
     }
   }
@@ -216,58 +240,53 @@ function makeBand(from, to, start, end, onClick) {
   return band;
 }
 
-/* ── Anti-collision ─────────────────────────────────────────────────── */
-
-function chipWidthPct(evt, start, end, level) {
-  if (evt.date_fin && evt.date_fin > evt.date) {
+/* ── Anti-collision ──────────────────────────────────────────────────*/
+function chipW(evt, start, end, level) {
+  if (evt.date_fin && evt.date_fin > evt.date)
     return (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start) * 100;
-  }
-  if (level === 1) return 1.2;
-  var chars = Math.min(evt.titre.length, level === 3 ? 28 : 20);
-  return (chars * 7 + 16) / TRACK_PX * 100;
+  if (level === 1) return 1.5;
+  return (Math.min(evt.titre.length, level === 3 ? 28 : 20) * 7 + 16) / TRACK_PX * 100;
 }
 
-function assignRows(events, start, end, level) {
+function assignRows(evts, start, end, level) {
   var rowEnds = [];
-  var safeGapPct = CHIP_PAD / TRACK_PX * 100;
-  return events.map(function(evt) {
+  var gap = CHIP_PAD / TRACK_PX * 100;
+  return evts.map(function(evt) {
     var isPeriod = evt.date_fin && evt.date_fin > evt.date;
-    var leftPct  = isPeriod
+    var left = isPeriod
       ? (Math.max(evt.date, start) - start) / (end - start) * 100
       : (evt.date - start) / (end - start) * 100;
-    var widthPct = chipWidthPct(evt, start, end, level);
-    var rightPct = leftPct + widthPct;
+    var right = left + chipW(evt, start, end, level);
     var row = 0;
-    while (row < rowEnds.length && rowEnds[row] > leftPct - safeGapPct) row++;
-    rowEnds[row] = rightPct;
+    while (row < rowEnds.length && rowEnds[row] > left - gap) row++;
+    rowEnds[row] = right;
     return row;
   });
 }
 
-/* ── Piste ──────────────────────────────────────────────────────────── */
-
-function buildTrack(zone, events, start, end, level) {
+/* ── Piste ───────────────────────────────────────────────────────────*/
+function buildTrack(zone, evts, start, end, level) {
   var row = document.createElement('div');
   row.className = 'track-row';
+
   var lbl = document.createElement('div');
   lbl.className = 'zone-label';
   var dot = document.createElement('span');
   dot.className = 'zone-dot';
-  dot.style.background = COLORS[zone].bg;
+  dot.style.background = (COLORS[zone] || COLORS['France']).bg;
   lbl.appendChild(dot);
   lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
 
-  var visible = events.filter(function(evt) {
-    if (evt.date_fin && evt.date_fin > evt.date) {
-      return Math.min(evt.date_fin, end) > Math.max(evt.date, start);
-    }
-    return evt.date >= start && evt.date <= end;
+  /* Filtre : garde seulement les évenements dans la fenetre */
+  var visible = evts.filter(function(e) {
+    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+    return e.date <= end && fin >= start;
   });
 
-  var rows   = assignRows(visible, start, end, level);
-  var maxRow = visible.length > 0 ? Math.max.apply(null, rows) : 0;
-  var trackH = (maxRow + 1) * ROW_H + maxRow * ROW_GAP + 8;
+  var rows  = assignRows(visible, start, end, level);
+  var maxR  = visible.length > 0 ? Math.max.apply(null, rows) : 0;
+  var trackH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
 
   var track = document.createElement('div');
   track.className = 'track';
@@ -278,56 +297,42 @@ function buildTrack(zone, events, start, end, level) {
   line.style.top = (trackH / 2) + 'px';
   track.appendChild(line);
 
-  visible.forEach(function(evt, i) {
-    var chip = buildChip(evt, zone, start, end, level, rows[i]);
+  for (var i = 0; i < visible.length; i++) {
+    var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
     if (chip) track.appendChild(chip);
-  });
+  }
 
   row.appendChild(track);
   return row;
 }
 
-/* ── Chip ───────────────────────────────────────────────────────────── */
-
-/* Taille du chip selon le type d'événement :
-   type 1 = grand + gras (événement majeur)
-   type 2 = taille normale
-   type 3 = petit + discret */
-function chipSizeClass(type) {
-  if (type === 1) return 'chip-type1';
-  if (type === 3) return 'chip-type3';
-  return '';
-}
-
+/* ── Chip ────────────────────────────────────────────────────────────*/
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var col      = COLORS[zone] || COLORS['France'];
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
-  var type     = evt.type || 1;
+  var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
-  chip.className       = 'evt-chip';
-  chip.style.position  = 'absolute';
-  chip.style.transform = 'none';
-  chip.style.top       = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+  chip.className      = 'evt-chip';
+  chip.style.position = 'absolute';
+  chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
     var d0 = Math.max(evt.date, start);
     var d1 = Math.min(evt.date_fin, end);
     if (d1 <= d0) return null;
     chip.classList.add('chip-period');
-    chip.classList.add(chipSizeClass(type));
+    if (level === 1) chip.classList.add('chip-period-sm');
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
     chip.style.height      = ROW_H + 'px';
     chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
     chip.style.borderColor = col.bg;
     chip.style.color       = '#fff';
-    if (level === 1) {
-      chip.classList.add('chip-period-sm');
-    } else {
-      var max = level === 3 ? 40 : 22;
-      chip.textContent = evt.titre.length > max ? evt.titre.slice(0, max - 1) + '\u2026' : evt.titre;
+    if (level > 1) {
+      var mx = level === 3 ? 40 : 22;
+      chip.textContent = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
     }
-    chip.title = evt.titre + ' (' + evt.date + '\u2013' + evt.date_fin + ')';
+    chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
 
   } else {
     chip.style.height    = ROW_H + 'px';
@@ -336,25 +341,26 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
 
     if (level === 3) {
       chip.classList.add('chip-full');
-      chip.classList.add(chipSizeClass(type));
-      chip.style.background = type === 3 ? col.bg + 'AA' : col.bg;
+      if (type === 1) chip.classList.add('chip-type1');
+      if (type === 3) chip.classList.add('chip-type3');
+      chip.style.background = col.bg;
       chip.style.color      = '#fff';
       chip.textContent = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '\u2026' : evt.titre;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
-      chip.classList.add(chipSizeClass(type));
+      if (type === 1) chip.classList.add('chip-type1');
+      if (type === 3) chip.classList.add('chip-type3');
       chip.style.background  = col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
       chip.textContent = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
     } else {
       chip.classList.add('chip-dot');
-      chip.classList.add(chipSizeClass(type));
+      var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
       chip.style.background   = col.bg;
-      var dotSize = type === 1 ? 13 : type === 3 ? 7 : 10;
-      chip.style.width        = dotSize + 'px';
-      chip.style.height       = dotSize + 'px';
-      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - dotSize / 2) + 'px';
+      chip.style.width        = sz + 'px';
+      chip.style.height       = sz + 'px';
+      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - sz / 2) + 'px';
       chip.style.borderRadius = '50%';
     }
     chip.title = evt.titre + ' (' + evt.date + ')';
@@ -366,23 +372,19 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   return chip;
 }
 
-/* ── Modale plein écran ─────────────────────────────────────────────── */
-
+/* ── Modale ──────────────────────────────────────────────────────────*/
 function openModal(evt, zone) {
-  var z   = zone || (evt.zones && evt.zones[0]) || 'France';
-  var col = COLORS[z] || COLORS['France'];
-
-  document.getElementById('modal-zone').textContent      = z;
+  var col = COLORS[zone] || COLORS['France'];
+  document.getElementById('modal-zone').textContent      = zone;
   document.getElementById('modal-zone').style.background = col.light;
   document.getElementById('modal-zone').style.color      = col.text;
 
-  /* Badge type */
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
-    var t = evt.type || 1;
-    typeEl.textContent = t === 1 ? '\u2605\u2605\u2605 Événement majeur'
-                       : t === 2 ? '\u2605\u2605 Événement régional'
-                       :           '\u2605 Événement local';
+    var t = Number(evt.type) || 1;
+    typeEl.textContent = t === 1 ? '\u2605\u2605\u2605 Evenement majeur'
+                       : t === 2 ? '\u2605\u2605 Evenement regional'
+                       :           '\u2605 Evenement local';
     typeEl.className = 'modal-type-badge type' + t;
   }
 
@@ -391,19 +393,20 @@ function openModal(evt, zone) {
       ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
       : evt.date + ' apr. J.-C.';
   document.getElementById('modal-title').textContent   = evt.titre;
-  document.getElementById('modal-desc').textContent    = evt.description;
+  document.getElementById('modal-desc').textContent    = evt.description || '';
   document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
   var imgEl = document.getElementById('modal-img');
   if (evt.image && evt.image.trim() !== '') {
     imgEl.innerHTML = '';
     var img = document.createElement('img');
-    img.src = evt.image;
-    img.alt = evt.titre;
+    img.src = evt.image; img.alt = evt.titre;
     imgEl.appendChild(img);
     imgEl.style.display = 'block';
+    document.getElementById('modal-body').classList.remove('no-img');
   } else {
     imgEl.style.display = 'none';
+    document.getElementById('modal-body').classList.add('no-img');
   }
 
   document.getElementById('modal-overlay').classList.add('open');
@@ -415,8 +418,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-/* ── Navigation ─────────────────────────────────────────────────────── */
-
+/* ── Navigation ──────────────────────────────────────────────────────*/
 function goLevel(level) {
   if      (level === 1)                             renderLevel(1);
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
@@ -434,12 +436,10 @@ function navigateDecade(direction) {
 function updateBreadcrumb() {
   var html = '<span class="bc-item bc-link" onclick="goLevel(1)">1300\u20131500</span>';
   if (currentLevel >= 2 && currentCentury !== null)
-    html += '<span class="bc-sep"> \u203a </span>'
-          + '<span class="bc-item bc-link" onclick="goLevel(2)">'
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(2)">'
           + currentCentury + '\u2013' + (currentCentury + 100) + '</span>';
   if (currentLevel === 3 && currentDecade !== null)
-    html += '<span class="bc-sep"> \u203a </span>'
-          + '<span class="bc-item">'
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item">'
           + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
   document.getElementById('breadcrumb').innerHTML = html;
 }
@@ -447,33 +447,31 @@ function updateBreadcrumb() {
 function updateNavButtons() {
   document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
     btn.classList.toggle('active', i + 1 === currentLevel);
-    btn.disabled = (i === 1 && currentCentury === null)
-                || (i === 2 && currentDecade  === null);
+    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade === null);
   });
-  var prev  = document.getElementById('btn-prev');
-  var next  = document.getElementById('btn-next');
-  var lbl   = document.getElementById('decade-label');
+  var prev = document.getElementById('btn-prev');
+  var next = document.getElementById('btn-next');
+  var lbl  = document.getElementById('decade-label');
   if (!prev || !next) return;
   var show = (currentLevel === 3 && currentDecade !== null);
   prev.style.display = show ? 'inline-block' : 'none';
   next.style.display = show ? 'inline-block' : 'none';
   if (lbl) lbl.style.display = show ? 'inline-block' : 'none';
   if (show) {
-    prev.disabled = (currentDecade <= 1290);
-    next.disabled = (currentDecade >= 1500);
-    if (lbl) lbl.textContent = currentDecade + ' \u2013 ' + (currentDecade + 10);
+    prev.disabled = currentDecade <= 1290;
+    next.disabled = currentDecade >= 1500;
+    if (lbl) lbl.textContent = currentDecade + '\u2013' + (currentDecade + 10);
   }
 }
 
-/* ── Utilitaires ────────────────────────────────────────────────────── */
-
+/* ── Utilitaires ─────────────────────────────────────────────────────*/
 function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
 }
 
-/* ── Init ───────────────────────────────────────────────────────────── */
-
+/* ── Init ────────────────────────────────────────────────────────────*/
 document.addEventListener('DOMContentLoaded', function() {
+  initActiveZones();
   document.getElementById('modal-overlay').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
