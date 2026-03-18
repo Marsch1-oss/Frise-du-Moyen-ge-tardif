@@ -2,7 +2,8 @@
 
 var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Italie',
-  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde'
+  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde',
+  'Byzance', 'Art', 'Techniques et idees'
 ];
 
 var COLORS = {
@@ -14,7 +15,10 @@ var COLORS = {
   'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
   'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
   'Orient':           { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
-  'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' }
+  'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
+  'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
+  'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
+  'Techniques et idees': { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' }
 };
 
 var ROW_H    = 24;
