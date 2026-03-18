@@ -1,5 +1,17 @@
 [
   {
+    "id": 30,
+    "titre": "Frappe du Gros de Prague",
+    "date": 1300,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "Le denier d’argent de Bohême (Gros de Prague) est une unité monétaire d'argent, créée sur les conseils de banquiers et d'avocats lombards, en 1300, par le roi de Bohême Venceslas II. Elle est longtemps la monnaie de référence en Europe centrale. La frappe de cette monnaie est permise par la découverte, au milieu du XIIe siècle, de riches filons d'argent à Kutná Hora et permet, à son tour, le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
+    "image": "\"C:\\Users\\schum\\Pictures\\Mage\\gros de prague.jpg\"",
+    "sources": "Wikipedia"
+  },
+  {
     "id": 1,
     "titre": "Bataille de Courtrai (Éperons d'or)",
     "date": 1302,
