@@ -1,27 +1,39 @@
 [
   {
     "id": 1,
+    "titre": "Bataille de Courtrai (Éperons d'or)",
+    "date": 1302,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Les milices flamandes écrasent la chevalerie française à Courtrai. Cette défaite symbolique marque un tournant : pour la première fois, une armée de piétons bourgeois vainc la cavalerie noble, annonçant la crise du système féodal.",
+    "image": "",
+    "sources": "Giovanni Villani, Nuova Cronica"
+  },
+  {
+    "id": 29,
     "titre": "Paix de Caltabellotta",
     "date": 1302,
     "zones": [
       "Italie"
     ],
     "type": 2,
-    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282. Ce conflit  oppose la maison d'Aragon et la maison des Angevins de Naples pour le contrôle de la Sicile  .Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302.En 1301, Charles de Valois épouse Catherine de Courtenay, impératrice titulaire de Constantinople, et projette donc de mener une croisade pour récupérer l'Empire latin de Constantinople au nom de sa femme. Le pape Boniface VIII, qui a fourni les dispenses pour ce mariage, y est favorable mais soumet cette croisade à une expédition préalable en Italie, son objectif principal étant de reprendre là où Jacques II avait échoué : la reconquête de la Sicile.\n\nLors de cette expédition, Charles de Valois mate notamment les Gibelins et Guelfes blancs en Toscane à la demande du pape. Il poursuit ensuite son voyage plus au sud pour aller servir Charles II et tenter de reprendre le contrôle de l'île de Sicile que Frédéric n'a finalement jamais abandonnée. Charles de Valois arrive en mai 1302 à Naples. Il obtient le droit de traiter avec les rebelles au nom du roi de Naples. Les Angevins et les Français parviennent rapidement à prendre Termes et pillent les vallées de l'Ouest sicilien (Val de Polizzi et du Val de Mazzara). Cependant la campagne s'enlise rapidement Frédéric, qui a bien saisi son infériorité face à la troupe nombreuse du Capétien, préfère éviter les batailles rangées et privilégier la guérilla. La guerre est épuisante pour les deux côtés. Un événement amène Charles de Valois à mettre définitivement fin aux opérations : le 11 juillet 1302 a lieu en Flandre la bataille de Courtrai qui cause la mort d'une grande partie de la chevalerie française. En outre, la soudaine montée des tensions entre son frère Philippe le Bel et Boniface VIII rend sa position délicate. Le retour en France de Charles de Valois s'avère alors nécessaire. Celui-ci négocie donc à la hâte une paix avec Frédéric d'Aragon : le traité de Caltabellota.Le traité met fin aux combats entre l'armée franco-angevine et celle de Frédéric de Sicile, il tente en outre de trouver une nouvelle issue de jure au conflit sur la Sicile, irrésolu depuis 1282. Trois points essentiels sont mis en place par cette paix.Frédéric III garde la Sicile, mais à titre viager ; en outre, il est contraint de prendre le titre de roi de Trinacrie, afin de laisser aux Angevins la seule détention du titre de roi de Sicile. La possession de la Sicile étant viagère, l'île doit revenir à la dynastie angevine à la mort de Frédéric III.Pour affermir la paix, Frédéric III épouse Eléonore d'Anjou, fille du roi Charles II de Naples.Parallèlement, Charles de Valois conclut un second traité avec Frédéric III. Ce dernier s'engage notamment à mettre à disposition du prince français une flotte pour l'aider à la conquête de Constantinople, empire sur lequel son mariage avec Catherine de Courtenay lui donne des prétentions.\nLe chroniqueur italien Giovanni Villani conclut assez ironiquement l'expédition de Charles de Valois en Italie : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix ».Boniface VIII, furieux de ne pas voir les Aragonais mis hors de Sicile, refuse dans un premier temps de ratifier le traité.À la suite de cette paix, Roger de Flor et les Almogavres, qui avaient combattu avec le roi Frédéric, se retrouvèrent sans emploi et offrirent leurs services à Andronic II Paléologue. Ils forment ainsi la Compagnie catalane.",
+    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282. Ce conflit oppose la maison d'Aragon et la maison des Angevins de Naples pour le contrôle de la Sicile. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302. Frédéric III garde la Sicile, mais à titre viager ; il est contraint de prendre le titre de roi de Trinacrie, laissant aux Angevins la seule détention du titre de roi de Sicile. Pour affermir la paix, Frédéric III épouse Eléonore d'Anjou, fille du roi Charles II de Naples. Le chroniqueur Giovanni Villani conclut ironiquement : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix ».",
     "image": "",
     "sources": "Wikipedia"
-  }
+  },
   {
-    "id": 2,
-    "titre": "Mort de Philippe IV le Bel",
-    "date": 1314,
+    "id": 4,
+    "titre": "Début de la papauté d'Avignon",
+    "date": 1309,
     "zones": [
-      "France"
+      "Italie"
     ],
     "type": 1,
-    "description": "Philippe IV, roi de France, meurt après un règne qui a vu la suppression des Templiers (1307–1312) et des conflits majeurs avec la papauté. Sa mort ouvre la crise dynastique des Capétiens directs.",
+    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309–1377), dite « captivité babylonienne » de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
     "image": "",
-    "sources": "Grandes Chroniques de France"
+    "sources": "Jean Froissart, Chroniques"
   },
   {
     "id": 3,
@@ -36,16 +48,16 @@
     "sources": "Bulle pontificale Vox in excelso"
   },
   {
-    "id": 4,
-    "titre": "Début de la papauté d'Avignon",
-    "date": 1309,
+    "id": 2,
+    "titre": "Mort de Philippe IV le Bel",
+    "date": 1314,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 1,
-    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309–1377), dite « captivité babylonienne » de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
+    "description": "Philippe IV, roi de France, meurt après un règne qui a vu la suppression des Templiers (1307–1312) et des conflits majeurs avec la papauté. Sa mort ouvre la crise dynastique des Capétiens directs.",
     "image": "",
-    "sources": "Jean Froissart, Chroniques"
+    "sources": "Grandes Chroniques de France"
   },
   {
     "id": 5,
@@ -102,22 +114,10 @@
     "zones": [
       "Orient"
     ],
-    "type": 3,
+    "type": 1,
     "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
     "image": "",
     "sources": "Ibn Battuta, Rihla"
-  },
-  {
-    "id": 10,
-    "titre": "Jacquerie",
-    "date": 1358,
-    "zones": [
-      "France"
-    ],
-    "type": 1,
-    "description": "Soulèvement paysan d'une rare violence en Île-de-France et Picardie, déclenché par les exactions fiscales après la défaite de Poitiers. La révolte est écrasée dans le sang par la noblesse. Premier grand mouvement social de la France médiévale.",
-    "image": "",
-    "sources": "Jean Froissart, Chroniques"
   },
   {
     "id": 11,
@@ -132,14 +132,14 @@
     "sources": "Jean Froissart, Chroniques"
   },
   {
-    "id": 12,
-    "titre": "Révolte de wat tyler en angleterre",
-    "date": 1381,
+    "id": 10,
+    "titre": "Jacquerie",
+    "date": 1358,
     "zones": [
-      "Angleterre"
+      "France"
     ],
     "type": 1,
-    "description": "Les paysans anglais marchent sur Londres pour protester contre la poll tax et le servage. Wat Tyler, leur chef, est assassiné lors des négociations avec Richard II. La révolte est écrasée mais accélère la fin du servage en Angleterre.",
+    "description": "Soulèvement paysan d'une rare violence en Île-de-France et Picardie, déclenché par les exactions fiscales après la défaite de Poitiers. La révolte est écrasée dans le sang par la noblesse. Premier grand mouvement social de la France médiévale.",
     "image": "",
     "sources": "Jean Froissart, Chroniques"
   },
@@ -154,6 +154,18 @@
     "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378–1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
     "image": "",
     "sources": "Chroniques de Saint-Denis"
+  },
+  {
+    "id": 12,
+    "titre": "Révolte de wat tyler en angleterre",
+    "date": 1381,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Les paysans anglais marchent sur Londres pour protester contre la poll tax et le servage. Wat Tyler, leur chef, est assassiné lors des négociations avec Richard II. La révolte est écrasée mais accélère la fin du servage en Angleterre.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
   },
   {
     "id": 14,
@@ -202,6 +214,18 @@
     "description": "Henri V d'Angleterre écrase une armée française dix fois supérieure en nombre. Les archers anglais déciment la chevalerie française. Cette victoire aboutit au traité de Troyes (1420) qui livre la régence de France à l'Angleterre.",
     "image": "",
     "sources": "Jean de Monstrelet, Chronique"
+  },
+  {
+    "id": 24,
+    "titre": "Guerres hussites",
+    "date": 1419,
+    "zones": [
+      "Empire"
+    ],
+    "type": 1,
+    "description": "Après le martyre de Jan Hus, les Hussites tchèques se soulèvent contre l'Église et l'Empire. Malgré cinq croisades, ils résistent vingt ans grâce aux innovations tactiques de Jan Žižka. Premier grand mouvement de réforme religieuse.",
+    "image": "",
+    "sources": "Aeneas Silvius Piccolomini, Historia Bohemica"
   },
   {
     "id": 18,
@@ -264,30 +288,6 @@
     "sources": "Philippe de Commynes, Mémoires"
   },
   {
-    "id": 23,
-    "titre": "Reconquista — chute de Grenade",
-    "date": 1492,
-    "zones": [
-      "Ibérique"
-    ],
-    "type": 1,
-    "description": "Les Rois Catholiques, Isabelle et Ferdinand, prennent Grenade, dernier royaume maure d'Espagne. La Reconquista achevée, ils expulsent également les Juifs d'Espagne (édit de l'Alhambra). Une nouvelle ère s'ouvre pour la péninsule ibérique.",
-    "image": "",
-    "sources": "Hernando del Pulgar, Crónica de los Reyes Católicos"
-  },
-  {
-    "id": 24,
-    "titre": "Guerres hussites",
-    "date": 1419,
-    "zones": [
-      "Empire"
-    ],
-    "type": 1,
-    "description": "Après le martyre de Jan Hus, les Hussites tchèques se soulèvent contre l'Église et l'Empire. Malgré cinq croisades, ils résistent vingt ans grâce aux innovations tactiques de Jan Žižka. Premier grand mouvement de réforme religieuse.",
-    "image": "",
-    "sources": "Aeneas Silvius Piccolomini, Historia Bohemica"
-  },
-  {
     "id": 25,
     "titre": "Invention de l'imprimerie",
     "date": 1455,
@@ -324,6 +324,18 @@
     "sources": "Hernando del Pulgar, Crónica"
   },
   {
+    "id": 23,
+    "titre": "Reconquista — chute de Grenade",
+    "date": 1492,
+    "zones": [
+      "Ibérique"
+    ],
+    "type": 1,
+    "description": "Les Rois Catholiques, Isabelle et Ferdinand, prennent Grenade, dernier royaume maure d'Espagne. La Reconquista achevée, ils expulsent également les Juifs d'Espagne (édit de l'Alhambra). Une nouvelle ère s'ouvre pour la péninsule ibérique.",
+    "image": "",
+    "sources": "Hernando del Pulgar, Crónica de los Reyes Católicos"
+  },
+  {
     "id": 28,
     "titre": "Avènement de Charles VIII — Italie",
     "date": 1494,
@@ -334,5 +346,7 @@
     "description": "Charles VIII envahit l'Italie, déclenchant les guerres d'Italie qui dureront soixante ans. Cette campagne introduit les idées et les arts de la Renaissance italienne en France, transformant profondément la culture française.",
     "image": "",
     "sources": "Philippe de Commynes, Mémoires"
+  }
+]
   }
 ]
