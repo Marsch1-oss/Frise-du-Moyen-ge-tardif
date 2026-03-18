@@ -38,10 +38,12 @@ function initActiveZones() {
    type 2 → niveaux 2, 3
    type 3 → niveau 3 seulement                                        */
 function visibleAtLevel(evt, level) {
-  var t = Number(evt.type) || 1;
-  if (t <= 1) return true;
+  /* type 1 = toutes echelles, type 2 = siecle+decennie, type 3 = decennie seule */
+  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
+  if (isNaN(t) || t === 1) return true;
   if (t === 2) return level >= 2;
-  return level >= 3;
+  if (t === 3) return level >= 3;
+  return true;
 }
 
 /* ── Normalisation des zones ─────────────────────────────────────────
