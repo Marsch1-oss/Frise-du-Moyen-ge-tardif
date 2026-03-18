@@ -54,7 +54,7 @@
     "zones": [
       "France"
     ],
-    "type": 1,
+    "type": 2,
     "description": "Des pluies incessantes de 1315 à 1322 provoquent de terribles famines en Europe du Nord. Des millions de personnes meurent de faim. Cette crise fragilise les populations avant la grande épidémie de peste qui suivra trente ans plus tard.",
     "image": "",
     "sources": "Chronique d'Aix-la-Chapelle"
@@ -102,7 +102,7 @@
     "zones": [
       "Orient"
     ],
-    "type": 1,
+    "type": 3,
     "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
     "image": "",
     "sources": "Ibn Battuta, Rihla"
