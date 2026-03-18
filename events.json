@@ -19,7 +19,8 @@
       "Italie"
     ],
     "type": 2,
-    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282. Ce conflit oppose la maison d'Aragon et la maison des Angevins de Naples pour le contrôle de la Sicile. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302. Frédéric III garde la Sicile, mais à titre viager ; il est contraint de prendre le titre de roi de Trinacrie, laissant aux Angevins la seule détention du titre de roi de Sicile. Pour affermir la paix, Frédéric III épouse Eléonore d'Anjou, fille du roi Charles II de Naples. Le chroniqueur Giovanni Villani conclut ironiquement : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix ».Boniface VIII, furieux de ne pas voir les Aragonais mis hors de Sicile, refuse dans un premier temps de ratifier le traité. À la suite de cette paix, Roger de Flor et les Almogavres, qui avaient combattu avec le roi Frédéric, se retrouvèrent sans emploi et offrirent leurs services à Andronic II Paléologue. Ils forment ainsi la Compagnie catalane. ","image": "",
+    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282. Ce conflit oppose la maison d'Aragon et la maison des Angevins de Naples pour le contrôle de la Sicile. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302. Frédéric III garde la Sicile, mais à titre viager ; il est contraint de prendre le titre de roi de Trinacrie, laissant aux Angevins la seule détention du titre de roi de Sicile. Pour affermir la paix, Frédéric III épouse Eléonore d'Anjou, fille du roi Charles II de Naples. Le chroniqueur Giovanni Villani conclut ironiquement : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix ».",
+    "image": "",
     "sources": "Wikipedia"
   },
   {
@@ -48,9 +49,8 @@
   },
   {
     "id": 2,
-    "titre": "Philippe IV le Bel",
-    "date": 1285,
-     "date_fin": 1314,
+    "titre": "Mort de Philippe IV le Bel",
+    "date": 1314,
     "zones": [
       "France"
     ],
@@ -346,30 +346,5 @@
     "description": "Charles VIII envahit l'Italie, déclenchant les guerres d'Italie qui dureront soixante ans. Cette campagne introduit les idées et les arts de la Renaissance italienne en France, transformant profondément la culture française.",
     "image": "",
     "sources": "Philippe de Commynes, Mémoires"
-  }
-  [
-  {
-    "id": 30,
-    "titre": "Charles de Valois envahit la Flandre",
-    "date": 1300,
-    "zones": [
-      "France"
-    ],
-    "type": 2,
-    "description": "8 mai reddition de Gand à Charles de Valois. Le comte de Flandre Gui de Dampierre est capturé et mis en prison par le roi Philippe le Bel. Dès le début du règne de Gui de Dampierre, en 1280, éclatent des révoltes dans les villes flamandes : les communiers (petits artisans et ouvriers) ne supportent plus la mainmise de la grande bourgeoisie sur les échevinages des villes. Elles sont matées, mais il n’en reste pas moins que, pour conserver leur pouvoir et préserver leur indépendance face au comte, les oligarques urbains font désormais systématiquement appel au roi. Se dressent progressivement deux camps qui vont bientôt s’opposer : l’oligarchie urbaine et une grande partie de la noblesse constituent les partisans du roi de France ou léliaerts (en référence au lys, emblème de la royauté française) ; ils ont face à eux les klauwaerts (en référence à la griffe du lion arboré sur le blason des Dampierre), essentiellement les communiers fidèles au pouvoir comtal. Les incessantes vexations du roi, son intervention abusive dans l'administration de la Flandre semblaient calculées pour amener la rébellion d'un vassal plus jaloux de son indépendance qu'il n'était habile à la défendre. L'alliance de Gui avec Édouard Ier d'Angleterre eut pour conséquence l'invasion du pays (1297-1300).La grande lutte qui mettait en jeu l'existence même de la Flandre était entamée. L'empereur Adolphe ne pouvait plus désormais voir en Gui un adversaire ; il annula, le 1er juin 1297, la sentence qui l'avait dépouillé et il lui fit même espérer des secours qu'il ne put cependant lui donner.Philippe le Bel, en annexant la Flandre au domaine de la couronne, ne distingue pas la rive droite de l'Escaut de la rive gauche ; les droits de l'Allemagne, sans être formellement déniés, étaient frappés de nullité",
-    "image": "",
-    "sources": "Wikipedia"
-  },
-  {
-    "id": 31,
-    "titre": "Frappe du denier d’argent en Bohême (Gros de Prague)",
-    "date": 1300,
-    "zones": [
-      "St Empire"
-    ],
-    "type": 2,
-    "description": "Le gros de Prague devient pour longtemps la monnaie de référence en Europe centrale. La frappe de cette monnaie est permise par la découverte, au milieu du XIIe siècle, de riches filons d'argent à Kutná Hora et permet, à son tour, le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
-    "image": "\"C:\\Users\\schum\\Pictures\\Mage\\gros de prague.jpg\"",
-    "sources": "Wikipedia"
   }
 ]
