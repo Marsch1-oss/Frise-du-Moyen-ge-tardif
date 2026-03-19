@@ -142,15 +142,37 @@
     .modal-type-badge.type3 { background: #F0F0F0; color: #555; }
     #modal-date { font-size: 0.9rem; color: var(--ink-muted); font-style: italic; margin-bottom: 0.4rem; }
     #modal-title { font-family: 'IM Fell English', Georgia, serif; font-size: 2.2rem; color: var(--ink); margin-bottom: 1.2rem; line-height: 1.2; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; text-align: center; }
-    #modal-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
-    #modal-body.no-img { grid-template-columns: 1fr; }
-    #modal-body.no-img #modal-text-col { max-width: 720px; margin: 0 auto; width: 100%; }
+    /* Image flottante à droite, texte qui coule autour puis reprend pleine largeur */
+    #modal-body { display: block; }
+    #modal-img-wrap {
+      float: right;
+      clear: right;
+      margin: 0 0 1.2rem 2rem;
+      max-width: 280px;
+      width: 38%;
+    }
+    #modal-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.18);
+    }
+    #modal-img-caption {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+    #modal-text-col { display: block; }
     #modal-desc { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.95; }
     #modal-desc p { margin-bottom: 1rem; text-align: justify; text-justify: inter-word; hyphens: auto; }
     #modal-desc p:last-child { margin-bottom: 0; }
     #modal-desc p::first-letter { font-size: 1.4em; font-family: 'IM Fell English', serif; float: left; line-height: 1; margin-right: 4px; color: var(--red); }
-    #modal-sources { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 1.2rem; }
-    #modal-img img { width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 3px 16px rgba(0,0,0,0.18); }
+    /* Efface le float après le texte pour que sources soit en pleine largeur */
+    #modal-sources { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 1.2rem; clear: both; }
 
     /* ── Pied de page ── */
     footer { text-align: center; padding: 1.2rem; font-size: 0.8rem; color: var(--ink-muted); border-top: 1px solid var(--border); font-style: italic; }
@@ -159,8 +181,8 @@
       main { padding: 1rem 0.8rem 2rem; }
       :root { --label-w: 75px; }
       #modal-box { padding: 2rem 1.2rem 2.5rem; }
-      #modal-body { grid-template-columns: 1fr; }
       #modal-title { font-size: 1.6rem; }
+      #modal-img-wrap { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem 0; }
     }
   </style>
 </head>
@@ -210,7 +232,10 @@
 
 </main>
 
-<footer>Frise chronologique m&eacute;di&eacute;vale &middot; donn&eacute;es &eacute;ditables dans <code>events.json</code></footer>
+<footer>
+  Frise chronologique m&eacute;di&eacute;vale
+  <button onclick="openAdminLogin()" style="background:none;border:none;cursor:pointer;font-size:0.75rem;color:var(--border-dark);margin-left:1.2rem;font-family:inherit;opacity:0.5;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'" title="Acc&egrave;s &eacute;diteur">&#9998;</button>
+</footer>
 
 <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div id="modal-box">
@@ -222,16 +247,71 @@
     <div id="modal-date"></div>
     <h2 id="modal-title"></h2>
     <div id="modal-body">
+      <div id="modal-img-wrap" style="display:none;">
+        <img id="modal-img" src="" alt="">
+        <div id="modal-img-caption"></div>
+      </div>
       <div id="modal-text-col">
         <p id="modal-desc"></p>
         <p id="modal-sources"></p>
       </div>
-      <div id="modal-img"></div>
     </div>
   </div>
 </div>
 
 <script src="frise.js"></script>
 
+
+<!-- Modale login editeur -->
+<div id="login-overlay" style="display:none;position:fixed;inset:0;background:rgba(20,10,5,0.6);z-index:300;align-items:center;justify-content:center;">
+  <div style="background:var(--parchment);border:2px solid var(--border-dark);border-radius:10px;padding:2rem 2.5rem;max-width:340px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(30,15,5,0.3);">
+    <div style="font-family:'IM Fell English',serif;font-size:1.3rem;color:var(--ink);margin-bottom:0.4rem;">Acc&egrave;s &eacute;diteur</div>
+    <div style="font-size:0.85rem;color:var(--ink-muted);font-style:italic;margin-bottom:1.2rem;">Entrez le code d&apos;acc&egrave;s</div>
+    <input id="login-code" type="password" maxlength="10"
+      style="font-family:'Crimson Pro',serif;font-size:1.2rem;text-align:center;letter-spacing:0.3em;width:100%;padding:0.5rem;border:1.5px solid var(--border-dark);border-radius:6px;background:var(--parchment-lt);color:var(--ink);margin-bottom:1rem;"
+      onkeydown="if(event.key==='Enter') checkAdminCode()"
+      placeholder="&#183;&#183;&#183;&#183;">
+    <div style="display:flex;gap:0.6rem;justify-content:center;">
+      <button onclick="checkAdminCode()"
+        style="font-family:'Crimson Pro',serif;font-size:0.95rem;padding:0.4rem 1.4rem;background:var(--ink);color:var(--parchment);border:none;border-radius:20px;cursor:pointer;">
+        Valider
+      </button>
+      <button onclick="closeAdminLogin()"
+        style="font-family:'Crimson Pro',serif;font-size:0.95rem;padding:0.4rem 1.2rem;background:transparent;color:var(--ink-soft);border:1px solid var(--border-dark);border-radius:20px;cursor:pointer;">
+        Annuler
+      </button>
+    </div>
+    <div id="login-error" style="font-size:0.82rem;color:#8B1A1A;font-style:italic;margin-top:0.7rem;min-height:1.2em;"></div>
+  </div>
+</div>
+<script>
+function openAdminLogin() {
+  document.getElementById('login-overlay').style.display = 'flex';
+  document.getElementById('login-code').value = '';
+  document.getElementById('login-error').textContent = '';
+  setTimeout(function(){ document.getElementById('login-code').focus(); }, 100);
+}
+function closeAdminLogin() {
+  document.getElementById('login-overlay').style.display = 'none';
+}
+function checkAdminCode() {
+  var code = document.getElementById('login-code').value.trim();
+  if (code === '1402') {
+    closeAdminLogin();
+    window.location.href = 'admin.html';
+  } else {
+    document.getElementById('login-error').textContent = 'Code incorrect — réessayez.';
+    document.getElementById('login-code').value = '';
+    document.getElementById('login-code').focus();
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var ov = document.getElementById('login-overlay');
+  ov.addEventListener('click', function(e){ if(e.target===this) closeAdminLogin(); });
+  document.getElementById('login-code').addEventListener('keydown', function(e){
+    if(e.key==='Escape') closeAdminLogin();
+  });
+});
+</script>
 </body>
 </html>

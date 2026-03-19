@@ -192,8 +192,12 @@
 
       <div class="field-row">
         <div class="field">
-          <label>Image <small>(chemin relatif)</small></label>
-          <input type="text" id="f-image" placeholder="images/mon-image.jpg">
+          <label>Image <small>(chemin relatif ou URL)</small></label>
+          <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
+        </div>
+        <div class="field">
+          <label>L&eacute;gende de l&apos;image</label>
+          <input type="text" id="f-legende" placeholder="ex. Buste de Philippe le Bel, Saint-Denis">
         </div>
         <div class="field">
           <label>Sources</label>
@@ -336,6 +340,7 @@ function readForm() {
     if (!s) return '';
     return s.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').trim();
   }
+  var legende = cleanText(document.getElementById('f-legende').value);
   var evt = {
     id: editingId !== null ? editingId : nextId(),
     titre: cleanText(titre),
@@ -351,6 +356,7 @@ function readForm() {
       }
       return v;
     })(),
+    legende: legende,
     sources: cleanText(document.getElementById('f-sources').value)
   };
   if (dateFin && dateFin > date) evt.date_fin = dateFin;
@@ -371,6 +377,7 @@ function fillForm(evt) {
   document.getElementById('f-date-fin').value = evt.date_fin || '';
   document.getElementById('f-desc').value     = evt.description || '';
   document.getElementById('f-image').value    = evt.image || '';
+  document.getElementById('f-legende').value  = evt.legende || '';
   document.getElementById('f-sources').value  = evt.sources || '';
 
   // Zones
@@ -402,6 +409,7 @@ function resetForm() {
   document.getElementById('f-date-fin').value = '';
   document.getElementById('f-desc').value     = '';
   document.getElementById('f-image').value    = '';
+  document.getElementById('f-legende').value  = '';
   document.getElementById('f-sources').value  = '';
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     inp.checked = false;
@@ -503,6 +511,7 @@ function updateJSON() {
     o.type = e.type || 1;
     if (e.description) o.description = e.description;
     o.image = e.image || '';
+    if (e.legende) o.legende = e.legende;
     if (e.sources) o.sources = e.sources;
     return o;
   });

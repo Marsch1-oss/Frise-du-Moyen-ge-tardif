@@ -431,17 +431,19 @@ function openModal(evt, zone) {
   }
   document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
-  var imgEl = document.getElementById('modal-img');
+  var imgWrap   = document.getElementById('modal-img-wrap');
+  var imgEl     = document.getElementById('modal-img');
+  var captionEl = document.getElementById('modal-img-caption');
+
   if (evt.image && evt.image.trim() !== '') {
-    imgEl.innerHTML = '';
-    var img = document.createElement('img');
-    img.src = evt.image; img.alt = evt.titre;
-    imgEl.appendChild(img);
-    imgEl.style.display = 'block';
-    document.getElementById('modal-body').classList.remove('no-img');
+    imgEl.src = evt.image;
+    imgEl.alt = evt.legende || evt.titre;
+    captionEl.textContent = evt.legende || '';
+    captionEl.style.display = evt.legende ? 'block' : 'none';
+    imgWrap.style.display = 'block';
   } else {
-    imgEl.style.display = 'none';
-    document.getElementById('modal-body').classList.add('no-img');
+    imgWrap.style.display = 'none';
+    imgEl.src = '';
   }
 
   document.getElementById('modal-overlay').classList.add('open');
