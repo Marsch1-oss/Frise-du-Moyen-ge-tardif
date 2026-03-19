@@ -8,8 +8,8 @@
       "Angleterre"
     ],
     "type": 1,
-    "description": "Fils aîné du roi Henri III, Édouard s'implique très jeune dans les intrigues politiques du royaume. Il soutient brièvement le mouvement des barons réformateurs mené par Simon de Montfort avant de se réconcilier avec son père, auquel il reste fidèle durant toute la Seconde Guerre des barons (1264–1267). Otage des barons après la défaite de Lewes, il s'évade quelques mois plus tard et écrase l'armée de Montfort à la bataille d'Evesham. Une fois l'Angleterre pacifiée, il prend la croix et dirige la neuvième croisade (1271–1272), dont les résultats sont très limités. C'est sur le chemin du retour qu'il apprend la mort de son père. Il est couronné le 19 août 1274 à l'abbaye de Westminster.\n\nUne grande partie du règne d'Édouard Ier est consacrée à la réforme de l'administration royale et du droit commun. Il conquiert le pays de Galles au terme d'une brève guerre d'invasion (1282–1283) et l'intègre au royaume d'Angleterre. Son attention se tourne ensuite vers l'Écosse : après avoir arbitré la crise de succession au trône, il affirme sa suzeraineté sur le royaume. La guerre éclate entre les deux nations en 1296 et se poursuit durant le reste du règne d'Édouard.\n\nSa grande taille et son tempérament colérique font d'Édouard Ier un homme craint par nombre de ses contemporains, mais il gagne le respect de ses sujets par son comportement digne du roi idéal : soldat, administrateur, homme pieux. C'est lui qui expulse les Juifs du royaume d'Angleterre en 1290 ; l'édit d'Expulsion reste en vigueur jusqu'en 1656.",
-    "image": "images/Edouard 1er.jpg",
+    "description": "Fils aîné du roi Henri III, Édouard s'implique très jeune dans les intrigues politiques du royaume. Il soutient brièvement le mouvement des barons réformateurs mené par Simon de Montfort avant de se réconcilier avec son père, auquel il reste fidèle durant toute la Seconde Guerre des barons (1264-1267).\n\nUne grande partie du règne d'Édouard Ier est consacrée à la réforme de l'administration royale et du droit commun. Il conquiert le pays de Galles (1282-1283) et l'intègre au royaume d'Angleterre. La guerre éclate avec l'Écosse en 1296 et se poursuit durant le reste du règne.\n\nSa grande taille et son tempérament colérique font d'Édouard Ier un homme craint, mais il gagne le respect de ses sujets par son comportement digne du roi idéal. C'est lui qui expulse les Juifs du royaume d'Angleterre en 1290 ; l'édit d'Expulsion reste en vigueur jusqu'en 1656.",
+    "image": "images/Edouard-1er.jpg",
     "sources": "Wikipedia"
   },
   {
@@ -21,7 +21,7 @@
       "Byzance"
     ],
     "type": 1,
-    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople, menée par son père en 1261. Toutefois, malgré cet important succès, son père, Michel VIII, n'a pas eu les moyens de rétablir l'Empire dans ses anciennes frontières et Andronic érite d'un État épuisé par la politique extérieure de son père. En effet, Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières et Andronic doit affronter de nombreux défis, à la fois internes et externes. Souvent dénigré, car son règne marque le début d'un déclin inéluctable, Andronic n'a pas les moyens de surmonter tous les défis qui se présentent à lui. Le trésor de l'État est vide et ses forces armées sont considérablement diminuées, tandis que l'économie de l'Empire est asphyxiée par les guerres entre Venise et Gênes auxquelles il est souvent mêlé. Enfin, les diverses querelles religieuses qui émaillent le règne d'Andronic fragilisent l'Empire byzantin déclinant. Malgré tout, Andronic a contribué à réaliser une entreprise de renaissance culturelle, ainsi que des réformes financières et judiciaires durables.\nAu cours de son règne, Andronic II prend le contre-pied de la politique de son père. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à la politique d'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
+    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople menée par son père en 1261. Toutefois, l'Empire est épuisé par la politique extérieure de Michel VIII. Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières.\n\nMalgré un trésor vide et des forces armées diminuées, Andronic a contribué à une renaissance culturelle, ainsi qu'à des réformes financières et judiciaires durables. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à l'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -34,22 +34,22 @@
       "France"
     ],
     "type": 1,
-    "description": "Il devient roi de France en octobre 1285 à l'âge de 17 ans. Le royaume de France est alors à l'apogée de sa puissance. Son règne est notamment marqué par un renforcement important du pouvoir royal et une mise au pas du duc-roi de Guyenne ainsi que de la Flandre en révolte. Le renforcement du pouvoir royal ne va toutefois pas sans des contestations, à la fois du côté féodal (ligues de 1314) et face à l'Église, notamment lors du différend avec le pape Boniface VIII.\n\nPhilippe IV croit trouver une solution à ses difficultés financières et monétaires en abattant l'ordre du Temple, devenu une puissance financière internationale, et en expulsant les Juifs tout en confisquant leurs biens. Il rétablit une monnaie d'or qui va rester stable pendant plus d'un siècle.",
+    "description": "Il devient roi de France en octobre 1285 à l'âge de 17 ans. Son règne est notamment marqué par un renforcement important du pouvoir royal et une mise au pas du duc-roi de Guyenne ainsi que de la Flandre en révolte.\n\nPhilippe IV croit trouver une solution à ses difficultés financières en abattant l'ordre du Temple et en expulsant les Juifs tout en confisquant leurs biens. Il rétablit une monnaie d'or qui va rester stable pendant plus d'un siècle.",
     "image": "images/PHILIPPELBEL.jpg",
     "sources": "Grandes Chroniques de France"
   },
   {
     "id": 38,
-    "titre": "Charles II  d’Anjou dit le Boiteux lo Zoppo",
+    "titre": "Charles II d'Anjou dit le Boiteux",
     "date": 1285,
     "date_fin": 1309,
     "zones": [
       "Naples"
     ],
     "type": 1,
-    "description": "né vers 1254, mort le 6 mai 1309 à Naples, est le fils de Charles Ier d'Anjou et de Béatrice de Provence, et le neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré dès sa naissance prince de Salerne, puis, après la mort de ses parents en 1285, roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine (uniquement jusqu'en 1290 pour ces deux dernières provinces) et prince d'Achaïe ou de Morée jusqu'en 1289.",
+    "description": "Né vers 1254, mort le 6 mai 1309 à Naples, fils de Charles Ier d'Anjou et de Béatrice de Provence, neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré prince de Salerne, puis roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine, et prince d'Achaïe ou de Morée jusqu'en 1289.",
     "image": "",
-    "sources": "wikipedia"
+    "sources": "Wikipedia"
   },
   {
     "id": 41,
@@ -60,7 +60,7 @@
       "Hongrie"
     ],
     "type": 1,
-    "description": "André III, dernier des Árpád élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit de plus lutter pour conserver sa couronne contre l’empereur Albert de Habsbourg.\nDevant faire face aux prétentions au trône de Charles Martel d'Anjou-Naples et à l’opposition permanentes des magnats, il s’appuie sur la chevalerie pour régner. Ainsi, il est le premier roi à convoquer une diète en Hongrie. Il est enfin le dernier représentant mâle de sa dynastie, et le pays connaît une période anarchique après sa mort.",
+    "description": "André III, dernier des Árpád, élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit lutter pour conserver sa couronne contre l'empereur Albert de Habsbourg et les prétentions de Charles Martel d'Anjou-Naples.\n\nIl s'appuie sur la chevalerie pour régner et est le premier roi à convoquer une diète en Hongrie. Il est le dernier représentant mâle de sa dynastie ; le pays connaît une période anarchique après sa mort.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -73,20 +73,20 @@
       "Papaute"
     ],
     "type": 1,
-    "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que « toute créature humaine, par nécessité de salut, doit être soumise au pontife romain ». Cette intransigeance contribue en partie à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'« attentat d'Anagni » (7-8 septembre 1303).",
+    "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que toute créature humaine doit être soumise au pontife romain.\n\nCette intransigeance contribue à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'attentat d'Anagni (7-8 septembre 1303).",
     "image": "",
     "sources": "Wikipedia"
   },
   {
     "id": 45,
-    "titre": "Michel IX Paléologue co empereur",
+    "titre": "Michel IX Paléologue co-empereur",
     "date": 1294,
     "date_fin": 1320,
     "zones": [
       "Byzance"
     ],
     "type": 1,
-    "description": "fils ainé de l’empereur byzantin Andronic II Paléologue et de sa première épouse, Anne, fille du roi de Hongrie Étienne V. Il régna conjointement avec son père de 1294 à sa mort en 1320.Premier coempereur à exercer le pouvoir avec les mêmes prérogatives que son collègue, symbolisé par le fait qu’ils portaient tous deux le titre d’ « autokrator », il conduisit dans sa courte carrière quelques campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, lesquelles se terminèrent soit par des échecs sérieux, soit par des demi-succès, que soit en raison de mauvaise stratégie, de l’état pitoyable de l’armée byzantine, ou simplement par manque de chance.\nAprès une série de défaites, il fut nommé par son père gouverneur de Thessalonique. C’est là qu’il devait mourir de chagrin, selon les chroniqueurs de l’époque, après la perte de sa fille Anne et de son fils Manuel, ce dernier tué par les soldats de son fils ainé et également coempereur, Andronic III (r. 1328-1341).",
+    "description": "Fils aîné de l'empereur byzantin Andronic II Paléologue et d'Anne de Hongrie. Il régna conjointement avec son père de 1294 à sa mort en 1320, premier co-empereur à exercer le pouvoir avec les mêmes prérogatives que son collègue.\n\nIl conduisit plusieurs campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, qui se terminèrent par des échecs ou des demi-succès. Il fut nommé gouverneur de Thessalonique où il mourut de chagrin après la perte de sa fille et de son fils.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -99,7 +99,7 @@
       "St Empire"
     ],
     "type": 1,
-    "description": "Il fut duc d'Autriche et de Styrie à partir de 1282. Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308 à Windisch en Argovie.\n\nAlbert s'avère un souverain capable : par mariage, il se garantit la paix avec Philippe IV le Bel. Sur le trône de la Pologne fragmentée, il parvint à un accord avec le roi Venceslas II de Bohême. Mais la puissance montante des Habsbourg suscitait des mécontentements. Albert n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
+    "description": "Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308.\n\nAlbert s'avère un souverain capable : il se garantit la paix avec Philippe IV le Bel par mariage et parvint à un accord avec le roi Venceslas II de Bohême. Il n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -111,20 +111,20 @@
       "St Empire"
     ],
     "type": 2,
-    "description": "Le denier d'argent de Bohême (Gros de Prague) est une unité monétaire d'argent, créée sur les conseils de banquiers et d'avocats lombards, en 1300, par le roi de Bohême Venceslas II. Elle est longtemps la monnaie de référence en Europe centrale. La frappe de cette monnaie est permise par la découverte, au milieu du XIIe siècle, de riches filons d'argent à Kutná Hora et permet, à son tour, le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
+    "description": "Le denier d'argent de Bohême (Gros de Prague) est une unité monétaire créée en 1300 par le roi de Bohême Venceslas II, sur les conseils de banquiers et d'avocats lombards. Elle est longtemps la monnaie de référence en Europe centrale.\n\nLa frappe de cette monnaie est permise par la découverte de riches filons d'argent à Kutná Hora au milieu du XIIe siècle, et permet le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
     "image": "images/gros-de-prague.jpg",
     "sources": "Wikipedia"
   },
   {
     "id": 42,
-    "titre": "Ladislas V  (Venceslas III de Bohême)",
+    "titre": "Ladislas V (Venceslas III de Bohême)",
     "date": 1301,
     "date_fin": 1305,
     "zones": [
       "Hongrie"
     ],
     "type": 1,
-    "description": "Né le 6 octobre 1289 et décédé le 4 août 1306 à Olomouc, est un prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, ainsi que roi de Bohême et roi de Pologne de 1305 jusqu'à sa mort.\nSon assassinat en 1306 marque l'extinction de la lignée royale des Přemyslides en Bohême.",
+    "description": "Né le 6 octobre 1289, prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, puis roi de Bohême et de Pologne jusqu'à sa mort.\n\nSon assassinat en 1306 à Olomouc marque l'extinction de la lignée royale des Přemyslides en Bohême.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -148,7 +148,7 @@
       "Italie"
     ],
     "type": 2,
-    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282. Ce conflit oppose la maison d'Aragon et la maison des Angevins de Naples pour le contrôle de la Sicile. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302.\n\nLors de cette expédition, Charles de Valois mate les Gibelins et Guelfes blancs en Toscane, puis poursuit vers le sud. La campagne s'enlise : Frédéric préfère la guérilla aux batailles rangées. Deux événements forcent Charles de Valois à négocier : la bataille de Courtrai (11 juillet 1302) et la montée des tensions entre Philippe le Bel et Boniface VIII.\n\nLe traité établit que Frédéric III garde la Sicile à titre viager sous le titre de roi de Trinacrie. Pour affermir la paix, Frédéric III épouse Éléonore d'Anjou. Le chroniqueur Giovanni Villani conclut ironiquement : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix. »",
+    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282, opposant la maison d'Aragon et les Angevins de Naples pour le contrôle de la Sicile.\n\nLe traité établit que Frédéric III garde la Sicile à titre viager sous le titre de roi de Trinacrie. Pour affermir la paix, Frédéric III épouse Éléonore d'Anjou. Le chroniqueur Giovanni Villani conclut ironiquement : Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -161,7 +161,7 @@
       "Papaute"
     ],
     "type": 1,
-    "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique de 1303 à 1304. C'est le deuxième pape issu de l'ordre dominicain.\n\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel, mais en gardant dans sa mire quelques mandataires du roi, notamment Guillaume de Nogaret, qu'il avait cité à comparaître. Le pape s'apprêtait à le condamner par contumace au moment où il mourut.",
+    "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique. C'est le deuxième pape issu de l'ordre dominicain.\n\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel. Le pape s'apprêtait à condamner Guillaume de Nogaret par contumace au moment où il mourut.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -174,20 +174,20 @@
       "Papaute"
     ],
     "type": 1,
-    "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France tout au long de son pontificat.\n\nOn retient de lui l'image d'un pape de bonne foi, qui manquait toutefois d'audace et d'esprit de décision, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne, en se soumettant au roi Philippe le Bel.",
+    "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France.\n\nOn retient de lui l'image d'un pape de bonne foi qui manquait d'audace, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne en se soumettant au roi Philippe le Bel.",
     "image": "",
     "sources": "Wikipedia"
   },
   {
     "id": 43,
-    "titre": "Bela V (Othon III de Bavière )",
+    "titre": "Béla V (Othon III de Bavière)",
     "date": 1305,
     "date_fin": 1308,
     "zones": [
       "Hongrie"
     ],
     "type": 1,
-    "description": "Othon III de Bavière, né le 11 février 1261 et mort le 9 septembre 1312 à Landshut, est un prince issu de la maison de Wittelsbach, fils du duc Henri XIII de Bavière. Il fut, conjointement avec ses frères Louis III et Étienne Ier, duc de Basse-Bavière de 1290 à sa mort et également roi de Hongrie de 1305 à 1308.Après la renonciation de Venceslas III de Bohême au trône de Hongrie lors de l'été 1304, il adopte le nom dynastique Arpad de « Béla V », et tente de s'imposer sur le trône de Hongrie. Il est couronné le 6 décembre 1305 mais en tentant de lutter contre László II Kán, voïvode de Transylvanie l'un des princes territoriaux qui se partagent le pouvoir dans son royaume, il est capturé par ce dernier au cours de l'été 1307. Après des négociations il est livré aux fidèles de Charles Robert d'Anjou-Naples, autre prétendant à la couronne. Othon doit renoncer à la Hongrie et se retirer en Bavière où il règne jusqu'à sa mort. Son fils le duc Henri XV lui succède en Basse-Bavière.",
+    "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\n\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -200,7 +200,7 @@
       "Angleterre"
     ],
     "type": 1,
-    "description": "Édouard II, né le 25 avril 1284 au château de Caernarfon et mort le 21 septembre 1327 au château de Berkeley, est roi d'Angleterre et seigneur d'Irlande du 7 juillet 1307 jusqu'à sa déposition le 25 janvier 1327. Quatrième fils du roi Édouard Ier, il devient l'héritier apparent après la mort de son frère aîné Alphonse. En 1308, il épouse Isabelle de France, la fille du roi Philippe IV le Bel, afin de résorber les tensions entre les couronnes d'Angleterre et de France concernant le duché d'Aquitaine.",
+    "description": "Né le 25 avril 1284 au château de Caernarfon et mort le 21 septembre 1327 au château de Berkeley, il est roi d'Angleterre du 7 juillet 1307 jusqu'à sa déposition le 25 janvier 1327. En 1308, il épouse Isabelle de France, fille du roi Philippe IV le Bel, afin de résorber les tensions entre les couronnes d'Angleterre et de France.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -213,7 +213,7 @@
       "St Empire"
     ],
     "type": 1,
-    "description": "Henri VII de Luxembourg (né vers 1278/1279 à Valenciennes et mort le 24 août 1313 à Buonconvento) est un prince de la maison de Luxembourg. Élu roi des Romains en 1308 après l'assassinat d'Albert Ier de Habsbourg, il est sacré empereur le 29 juin 1312. Il est le premier roi germanique à recevoir la couronne impériale depuis l'époque de Frédéric II de Hohenstaufen.",
+    "description": "Né vers 1278-1279 à Valenciennes et mort le 24 août 1313 à Buonconvento. Élu roi des Romains en 1308 après l'assassinat d'Albert Ier, il est sacré empereur le 29 juin 1312, premier roi germanique à recevoir la couronne impériale depuis Frédéric II de Hohenstaufen.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -226,9 +226,9 @@
       "Hongrie"
     ],
     "type": 1,
-    "description": "Carobert, petit-fils de Charles d'Anjou, doit lutter contre ses compétiteurs Wenceslas de Bohême puis Othon de Bavière et brise la puissance de la haute noblesse magyare en s’appuyant sur la petite et moyenne noblesse.\nPendant la période de lutte pour la succession en Hongrie, un certain nombre de familles de barons ont constitué de véritables principautés autonomes, comme les Csak et les Aba, qui s’appuient sur leurs mines d’argent de Slovaquie (Haute-Hongrie). Carobert engage contre elles une lutte sans merci, leur enlevant successivement leurs forteresses de Komárom, de Nitra et de Trenčín.",
+    "description": "Petit-fils de Charles Ier d'Anjou, Carobert doit lutter contre ses compétiteurs Venceslas de Bohême puis Othon de Bavière avant de s'imposer sur le trône de Hongrie.\n\nIl brise la puissance de la haute noblesse magyare en s'appuyant sur la petite et moyenne noblesse. Il engage contre les familles de barons autonomes — comme les Csak et les Aba qui s'appuient sur leurs mines d'argent de Slovaquie — une lutte sans merci, leur enlevant successivement leurs forteresses.",
     "image": "",
-    "sources": "wikipedia"
+    "sources": "Wikipedia"
   },
   {
     "id": 4,
@@ -238,7 +238,7 @@
       "Papaute"
     ],
     "type": 1,
-    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309–1377), dite « captivité babylonienne » de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
+    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309-1377), dite captivité babylonienne de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
     "image": "",
     "sources": "Jean Froissart, Chroniques"
   },
@@ -251,7 +251,7 @@
       "Naples"
     ],
     "type": 1,
-    "description": "Il défend la papauté et devient le chef du parti guelfe contre les empereurs. Sous son règne, le royaume angevin s’épuise dans des luttes contre la Sicile aragonaise. Naples, grande cité d’affaires combat aux côtés des Guelfes et protège Florenceà l'origine Robert d'Anjou, né en 1277 à Santa Maria Capua Vetere (actuelle province de Caserte, en Campanie) et mort le 20 janvier 1343 à Naples (76) , fils du roi Charles II de Naples, de la maison d'Anjou-Sicile, est roi de Naples et comte de Provence de 1309 à 1343.\u000bArrivé sur le trône par usurpation au détriment de son neveu (Charobert futur roi de Hongrie fils de son frère aîné Charles Martel ) Son couronnement est possible grâce à l'abdication de ses deux frères ainés, Louis d'Anjou, entré dans l'ordre franciscain, Charles Martel mort en 1295., il a un règne considéré dans l'ensemble comme positif. Il ne réussit cependant pas à reprendre le contrôle du royaume de Sicile, que son grand-père Charles Ier d'Anjou détenait tout comme le royaume de Naples.\u000bSon père, Charles II d'Anjou (1254-1309), est roi de Naples de 1285 à 1309, succédant à son père Charles Ier d'Anjou (frère de Louis IX), premier roi de Naples (et roi de Sicile) de la maison d'Anjou-Sicile. Charles II n'a pas hérité de la Sicile, échue au roi d'Aragon Pierre III (Pierre Ier de Sicile).\nSa mère, Marie de Hongrie (1257-1323), est la fille du roi de Hongrie Étienne V (1237-1272).\nRobert, titré duc de Calabre, a plusieurs frères, dont deux sont nés avant lui :\nCharles Martel (1271-1295), qui meurt prématurément en laissant un fils Charles Robert (1288-1382), dit « Charobert » ;\nLouis (1274-1297), par la suite évêque de Toulouse et canonisé en 1317 (Saint Louis d'Anjou) ;\nPhilippe (1278-1331), prince de Tarente ;\u000bEn 1297, il épouse Yolande d'Aragon, qui meurt en 1302, lui ayant donné deux fils.\u000bIl est envoyé avec son frère en Sicile auprès de Jacques II, fils et successeur de Pierre III, afin de combattre contre Frédéric, autre fils de Pierre III, qui a usurpé le trône en 1295. Il remporte quelques succès, mais Philippe de Tarente ayant été battu, il renonce et négocie la paix (1302).\nEn 1304, il épouse Sancia de Majorque (1285-1345), fille du roi de Majorque Jacques II (1243-1311).\nIl soutient ensuite les guelfes de Florence contre les gibelins en 1306.\u000bRobert est le prince le plus puissant d'Italie[réf. nécessaire] et le pape le nomme vicaire pontifical.\nEn 1318, il libère Gênes assiégée par Marco Visconti, seigneurs de Milan, et d'autres seigneurs gibelins.En 1338, il lance une nouvelle expédition pour reconquérir le royaume de Sicile, sans succès. C'est sa dernière tentative.\u000bRéputé pour son amour des lettres, il attire à la cour de Naples des poètes, des lettrés et des artistes, tels que Pétrarque, Giotto, Judah ben \u000bMoses Romano et Simone Martini.\u000bIl est inhumé dans un monument funéraire commandé par sa femme et sculpté par les frères Bertini dans la basilique Santa Chiara de Naples. Il s'agit d'un tombeau grandiose de style gothique.",
+    "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\n\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -299,7 +299,7 @@
       "Angleterre"
     ],
     "type": 1,
-    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise « Ich dien » (Je sers), adoptée depuis par les princes de Galles.",
+    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.",
     "image": "",
     "sources": "Jean Froissart, Chroniques, Livre I"
   },
@@ -311,7 +311,7 @@
       "France"
     ],
     "type": 1,
-    "description": "La peste bubonique débarque à Messine depuis des navires génois. En cinq ans, elle emporte entre un tiers et la moitié de la population européenne — soit 25 millions de morts. Aucune catastrophe comparable ne frappera l'Occident avant le XXe siècle.",
+    "description": "La peste bubonique débarque à Messine depuis des navires génois. En cinq ans, elle emporte entre un tiers et la moitié de la population européenne, soit 25 millions de morts. Aucune catastrophe comparable ne frappera l'Occident avant le XXe siècle.",
     "image": "",
     "sources": "Giovanni Boccaccio, Decameron (préface)"
   },
@@ -359,13 +359,13 @@
       "Italie"
     ],
     "type": 1,
-    "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378–1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
+    "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378-1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
     "image": "",
     "sources": "Chroniques de Saint-Denis"
   },
   {
     "id": 12,
-    "titre": "Révolte de wat tyler en angleterre",
+    "titre": "Révolte de Wat Tyler en Angleterre",
     "date": 1381,
     "zones": [
       "Angleterre"
@@ -395,7 +395,7 @@
       "Angleterre"
     ],
     "type": 1,
-    "description": "Henri Bolingbroke dépose Richard II et monte sur le trône sous le nom d'Henri IV, fondant la dynastie des Lancastre. Ce coup d'État dynastique annonce les futures guerres des Deux-Roses (1455–1485).",
+    "description": "Henri Bolingbroke dépose Richard II et monte sur le trône sous le nom d'Henri IV, fondant la dynastie des Lancastre. Ce coup d'État dynastique annonce les futures guerres des Deux-Roses (1455-1485).",
     "image": "",
     "sources": "Thomas Walsingham, Historia Anglicana"
   },
@@ -491,7 +491,7 @@
       "Angleterre"
     ],
     "type": 1,
-    "description": "Conflit dynastique entre les maisons d'York (rose blanche) et de Lancastre (rose rouge) pour le trône d'Angleterre. Ces guerres civiles intermittentes (1455–1485) affaiblissent la noblesse anglaise et préparent l'avènement des Tudors.",
+    "description": "Conflit dynastique entre les maisons d'York (rose blanche) et de Lancastre (rose rouge) pour le trône d'Angleterre. Ces guerres civiles intermittentes (1455-1485) affaiblissent la noblesse anglaise et préparent l'avènement des Tudors.",
     "image": "",
     "sources": "Philippe de Commynes, Mémoires"
   },

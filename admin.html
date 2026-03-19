@@ -331,13 +331,18 @@ function readForm() {
   document.querySelectorAll('#zones-grid input:checked').forEach(function(inp) { zones.push(inp.value); });
   if (zones.length === 0) { toast('Sélectionnez au moins une zone géographique.'); return null; }
   var type = parseInt(document.querySelector('input[name="type"]:checked').value);
+  /* Nettoie les caracteres de controle invisibles (colles depuis Wikipedia etc.) */
+  function cleanText(s) {
+    if (!s) return '';
+    return s.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').trim();
+  }
   var evt = {
     id: editingId !== null ? editingId : nextId(),
-    titre: titre,
+    titre: cleanText(titre),
     date: date,
     zones: zones,
     type: type,
-    description: document.getElementById('f-desc').value.trim(),
+    description: cleanText(document.getElementById('f-desc').value),
     image: (function() {
       var v = document.getElementById('f-image').value.trim();
       if (/^[A-Za-z]:[\\\/]|^\/Users\/|^\/home\//.test(v)) {
@@ -346,7 +351,7 @@ function readForm() {
       }
       return v;
     })(),
-    sources: document.getElementById('f-sources').value.trim() || ''
+    sources: cleanText(document.getElementById('f-sources').value)
   };
   if (dateFin && dateFin > date) evt.date_fin = dateFin;
   return evt;
