@@ -116,6 +116,32 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 46,
+    "titre": "Apogée des foires de Champagne",
+    "date": 1300,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Limitée au marché régional , la production urbaine ne tarde pas à se scléroser dans l’étouffante réglementation corporative. Seule faisait exception l’industrie textile qui fournissait les matières principales des échanges internationaux. Concentrée en Flandre et en Toscane , elle ne pouvait , sauf pour la fabrication, accepter le carcan des limitations professionnelles . En dehors d’elles naquit une classe marchande qui procurant les matières premières  qu’ils allaient chercher parfois très loin, vendant la production , fournissant les capitaux nécessaires à l’équipement et à l’extension  des ateliers , finit par placer sous sa coupe les maîtres des métiers.  Dans ce capitalisme naissant , les Italiens héritiers du commerce méditerranéen antique, acquirent une place de premier plan et devinrent les maîtres du trafic de l'argent. C'est au 13e siècle que l'on voit apparaître à Florence, Sienne et Lucques, les premières banques qui établirent les règles de la comptabilité commerciale et s’élevèrent à un rôle politique en ouvrant des crédits aux plus puissants souverains d'Europe. Favorisées par leur situation à la rencontre des routes du Nord et du Midi, les foires de champagne devinrent le centre des échanges internationaux de produits et de finance. Le cycle des grandes foires de Champagne crée les conditions favorables d'un commerce international s'étendant sur toute l'année, et parallèlement favorise le report des dettes d'une foire à l'autre, par l'intermédiaire des changeurs souvent d'origine italienne ou des Flandres. Ce système de transfert des créances de foire en foire, la multiplicité des monnaies utilisées d'une région à l'autre et l'habitude de régler les dettes par compensation, entraîne l'émergence d'un secteur financier organisé au sein duquel les communautés juive et florentine (\"Lombards\") jouent très vite un rôle essentiel[ Si les pondéreux (sel des côtes atlantiques, vin et céréales) faisaient déjà l'objet d'un commerce par voie fluviale ou accessoirement maritime, seules des marchandises rares ou à haute valeur ajoutée et de faible poids, comme les draps et les épices, étaient acheminées sur de longues distances par voie terrestre\nElles se tenaient dans les villes de Lagny-sur-Marne (une fois par an), Provins (deux fois par an), Troyes (deux fois par an) et Bar-sur-Aube (une fois par an) Chaque foire durait de trois à six semaines, et ce calendrier changea à plusieurs reprises au fil des siècles. C'est ce que l'historien Fernand Braudel appelle le « système d'horlogerie à répétition », qui assure au comté une activité économique exceptionnelle de janvier à décembre. Actives presque toute l'année, elles connurent leur apogée à la fin du 13e siècle. Ensuite, les progrès de la navigation, l'ouverture de nouvelles voies terrestres et les transformations de la technique commerciale, sans compter les ravages de la guerre de 100 ans, amenèrent leur rapide déclin ,Les nouvelles routes des Alpes suisses par le col du Saint Gothard et du Simplon relient l'Italie du Nord au pays rhénan et surtout de nouvelles routes maritimes, permettent aux Italiens un accès plus sûr, plus rapide et moins cher à Bruges dès 1297. Enfin avec le mariage de Jeanne de Navarre (comtesse et héritière de Champagne) à Philippe IV « Le Bel » en 1284, qui scelle le rattachement du comté de Champagne à la France, les priorités politiques changent. La Champagne, jusque là de facto indépendante, perd son autonomie et le roi de France trouve dans les caisses bien remplies de cette riche province de nouvelles ressources fiscales et le moyen de financer ses guerres dynastiques à bon compte. Les guerres franco-flamandes puis la guerre de Cent Ans portent un coup fatal aux foires champenoises",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Sc%C3%A8ne_de_foire_-_ca_1400_-_BNF_Fr12559_f167.jpg",
+    "legende": "Scène de foire dans Le Chevalier errant de Thomas III de Saluces",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 47,
+    "titre": "Duccio Madone des Franciscains",
+    "date": 1300,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "La Madone des Franciscains fait probablement partie d'un diptyque ou d’un triptyque privés destinée à la piété privée, destinée peut-être à petit groupe de Frères Mineurs. Iconographiquement, elle est dans la ligne des « Madones de Miséricorde » ou « Eleousa » : tout en regardant vers le spectateur, la Vierge tient le bord de sa robe en un geste d’accueil et de protection des trois frères agenouillés, à qui est destinée la bénédiction de l'enfant.\n\nCette œuvre emprunte à la fois à Cimabue et à l'art byzantin, mais Duccio ajoute sa touche personnelle de douceur, éléments du nouveau langage pictural venat d'au-delà des Alpes. Les minuscules carrés de toile qui forment le fond sont une innovation qui remplace l'habituel fond or, provenant de l’art français. La largeur des contours de la vierge, la courbe sinueuse de l'ourlet de la robe et la large palette des couleurs élargissent l’espace, alors que la prédilection toute gothique pour les lignes atteint son maximum d'expression. La position des frères en supplique et le trône, simple siège, disposé en oblique, créent un effet de perspective et reflètent l'enseignement de Cimabue. La position inhabituelle des jambes de l'enfant appartient totalement à la manière de Duccio, alors que ses gestes imitent ceux de la Madone Buonconvento et de la Madone Rucellai.",
+    "image": "http://www.encyclopedie.bseditions.fr/article.php?pArticleId=165&pChapitreId=30750&pSousChapitreId=30752",
+    "legende": "Duccio : Madone des Franciscains. Vers 1300. Tempera sur bois, 23,5 x 16 cm. Sienne, Pinacothèque Nationale",
+    "sources": "encyclopedie.bseditions.fr"
+  },
+  {
     "id": 42,
     "titre": "Ladislas V (Venceslas III de Bohême)",
     "date": 1301,
