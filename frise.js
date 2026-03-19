@@ -4,6 +4,7 @@ var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Papaute',
   'Naples', 'Italie', 'Pen. iberique', 'Hongrie',
   'Europe C. & Or.', 'Byzance', 'Monde islamique', 'Orient', 'Monde',
+  'Alsace',
   'Art', 'Techniques', 'Idees'
 ];
 
@@ -21,6 +22,7 @@ var COLORS = {
   'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
   'Orient':           { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
+  'Alsace':           { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
   'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
   'Techniques':       { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
   'Idees':            { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
@@ -70,6 +72,7 @@ var ZONE_ALIASES = {
   'Papauté':             'Papaute',
   'Hongrie':             'Hongrie',
   'Naples':              'Naples',
+  'Alsace':              'Alsace',
   'Techniques et idees': 'Techniques',
   'Art':                 'Art',
   'Idees':               'Idees',
