@@ -1,6 +1,6 @@
 # Frise chronologique — Moyen Âge tardif (1300–1500)
 
-Frise interactive à 3 niveaux de zoom, avec pistes géographiques et fiches événements.
+Frise interactive à 3 niveaux de zoom (vue d'ensemble, siècle, décennie) , avec entrée géographiques et fiches événements.
 
 ## Structure des fichiers
 
