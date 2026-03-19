@@ -1,24 +1,29 @@
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
 var ZONES = [
-  'France', 'Angleterre', 'St Empire', 'Italie',
-  'Pen. iberique', 'Europe C. & Or.', 'Monde islamique', 'Orient', 'Monde',
-  'Byzance', 'Art', 'Techniques et idees'
+  'France', 'Angleterre', 'St Empire', 'Papaute',
+  'Naples', 'Italie', 'Pen. iberique', 'Hongrie',
+  'Europe C. & Or.', 'Byzance', 'Monde islamique', 'Orient', 'Monde',
+  'Art', 'Techniques', 'Idees'
 ];
 
 var COLORS = {
   'France':           { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
   'Angleterre':       { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
   'St Empire':        { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
+  'Papaute':          { bg: '#7A1A1A', light: '#F5E0E0', text: '#4A0808' },
+  'Naples':           { bg: '#1A5C4A', light: '#E0F5EE', text: '#0A3028' },
   'Italie':           { bg: '#1A6B3C', light: '#E6F5ED', text: '#0F3D24' },
   'Pen. iberique':    { bg: '#5B3A8B', light: '#EDE6F5', text: '#3A245A' },
+  'Hongrie':          { bg: '#8B3A1A', light: '#F5E8E0', text: '#5C2008' },
   'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
+  'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
   'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
   'Orient':           { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
-  'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
   'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
-  'Techniques et idees': { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' }
+  'Techniques':       { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
+  'Idees':            { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
 };
 
 var ROW_H    = 24;
@@ -53,14 +58,22 @@ function visibleAtLevel(evt, level) {
 /* ── Normalisation des zones ─────────────────────────────────────────
    Accepte les anciens noms et les variantes avec accents             */
 var ZONE_ALIASES = {
-  'Empire':         'St Empire',
-  'St_Empire':      'St Empire',
-  'Iberique':       'Pen. iberique',
-  'Ibérique':       'Pen. iberique',
-  'Pen. ibérique':  'Pen. iberique',
-  'Pén. ibérique':  'Pen. iberique',
-  'Pen. Iberique':  'Pen. iberique',
-  'Péninsule ibérique': 'Pen. iberique'
+  'Empire':              'St Empire',
+  'St_Empire':           'St Empire',
+  'Iberique':            'Pen. iberique',
+  'Ibérique':            'Pen. iberique',
+  'Pen. ibérique':       'Pen. iberique',
+  'Pén. ibérique':       'Pen. iberique',
+  'Pen. Iberique':       'Pen. iberique',
+  'Péninsule ibérique':  'Pen. iberique',
+  'Papaute':             'Papaute',
+  'Papauté':             'Papaute',
+  'Hongrie':             'Hongrie',
+  'Naples':              'Naples',
+  'Techniques et idees': 'Techniques',
+  'Art':                 'Art',
+  'Idees':               'Idees',
+  'Idées':               'Idees'
 };
 
 function normalizeZone(z) {
@@ -399,7 +412,23 @@ function openModal(evt, zone) {
       ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
       : evt.date + ' apr. J.-C.';
   document.getElementById('modal-title').textContent   = evt.titre;
-  document.getElementById('modal-desc').textContent    = evt.description || '';
+  /* Affiche la description avec paragraphes (\n\n = nouveau paragraphe, \n = saut de ligne) */
+  var descEl = document.getElementById('modal-desc');
+  descEl.innerHTML = '';
+  var rawDesc = evt.description || '';
+  var paragraphs = rawDesc.split(/\n\n+/);
+  for (var pi = 0; pi < paragraphs.length; pi++) {
+    var para = paragraphs[pi].trim();
+    if (!para) continue;
+    var p = document.createElement('p');
+    /* Gere les simples \n comme <br> dans un paragraphe */
+    var lines = para.split('\n');
+    for (var li = 0; li < lines.length; li++) {
+      if (li > 0) p.appendChild(document.createElement('br'));
+      p.appendChild(document.createTextNode(lines[li]));
+    }
+    descEl.appendChild(p);
+  }
   document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
   var imgEl = document.getElementById('modal-img');
