@@ -13,6 +13,19 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 40,
+    "titre": "Andronic II Paléologue",
+    "date": 1282,
+    "date_fin": 1328,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople, menée par son père en 1261. Toutefois, malgré cet important succès, son père, Michel VIII, n'a pas eu les moyens de rétablir l'Empire dans ses anciennes frontières et Andronic érite d'un État épuisé par la politique extérieure de son père. En effet, Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières et Andronic doit affronter de nombreux défis, à la fois internes et externes. Souvent dénigré, car son règne marque le début d'un déclin inéluctable, Andronic n'a pas les moyens de surmonter tous les défis qui se présentent à lui. Le trésor de l'État est vide et ses forces armées sont considérablement diminuées, tandis que l'économie de l'Empire est asphyxiée par les guerres entre Venise et Gênes auxquelles il est souvent mêlé. Enfin, les diverses querelles religieuses qui émaillent le règne d'Andronic fragilisent l'Empire byzantin déclinant. Malgré tout, Andronic a contribué à réaliser une entreprise de renaissance culturelle, ainsi que des réformes financières et judiciaires durables.\nAu cours de son règne, Andronic II prend le contre-pied de la politique de son père. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à la politique d'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
     "id": 2,
     "titre": "Philippe IV le Bel",
     "date": 1285,
@@ -26,15 +39,54 @@
     "sources": "Grandes Chroniques de France"
   },
   {
+    "id": 38,
+    "titre": "Charles II  d’Anjou dit le Boiteux lo Zoppo",
+    "date": 1285,
+    "date_fin": 1309,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "description": "né vers 1254, mort le 6 mai 1309 à Naples, est le fils de Charles Ier d'Anjou et de Béatrice de Provence, et le neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré dès sa naissance prince de Salerne, puis, après la mort de ses parents en 1285, roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine (uniquement jusqu'en 1290 pour ces deux dernières provinces) et prince d'Achaïe ou de Morée jusqu'en 1289.",
+    "image": "",
+    "sources": "wikipedia"
+  },
+  {
+    "id": 41,
+    "titre": "André III Arpade",
+    "date": 1290,
+    "date_fin": 1301,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "André III, dernier des Árpád élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit de plus lutter pour conserver sa couronne contre l’empereur Albert de Habsbourg.\nDevant faire face aux prétentions au trône de Charles Martel d'Anjou-Naples et à l’opposition permanentes des magnats, il s’appuie sur la chevalerie pour régner. Ainsi, il est le premier roi à convoquer une diète en Hongrie. Il est enfin le dernier représentant mâle de sa dynastie, et le pays connaît une période anarchique après sa mort.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
     "id": 33,
     "titre": "Boniface VIII",
     "date": 1294,
     "date_fin": 1303,
     "zones": [
-      "Italie"
+      "Papaute"
     ],
     "type": 1,
     "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que « toute créature humaine, par nécessité de salut, doit être soumise au pontife romain ». Cette intransigeance contribue en partie à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'« attentat d'Anagni » (7-8 septembre 1303).",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 45,
+    "titre": "Michel IX Paléologue co empereur",
+    "date": 1294,
+    "date_fin": 1320,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "fils ainé de l’empereur byzantin Andronic II Paléologue et de sa première épouse, Anne, fille du roi de Hongrie Étienne V. Il régna conjointement avec son père de 1294 à sa mort en 1320.Premier coempereur à exercer le pouvoir avec les mêmes prérogatives que son collègue, symbolisé par le fait qu’ils portaient tous deux le titre d’ « autokrator », il conduisit dans sa courte carrière quelques campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, lesquelles se terminèrent soit par des échecs sérieux, soit par des demi-succès, que soit en raison de mauvaise stratégie, de l’état pitoyable de l’armée byzantine, ou simplement par manque de chance.\nAprès une série de défaites, il fut nommé par son père gouverneur de Thessalonique. C’est là qu’il devait mourir de chagrin, selon les chroniqueurs de l’époque, après la perte de sa fille Anne et de son fils Manuel, ce dernier tué par les soldats de son fils ainé et également coempereur, Andronic III (r. 1328-1341).",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -61,6 +113,19 @@
     "type": 2,
     "description": "Le denier d'argent de Bohême (Gros de Prague) est une unité monétaire d'argent, créée sur les conseils de banquiers et d'avocats lombards, en 1300, par le roi de Bohême Venceslas II. Elle est longtemps la monnaie de référence en Europe centrale. La frappe de cette monnaie est permise par la découverte, au milieu du XIIe siècle, de riches filons d'argent à Kutná Hora et permet, à son tour, le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
     "image": "images/gros-de-prague.jpg",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 42,
+    "titre": "Ladislas V  (Venceslas III de Bohême)",
+    "date": 1301,
+    "date_fin": 1305,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Né le 6 octobre 1289 et décédé le 4 août 1306 à Olomouc, est un prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, ainsi que roi de Bohême et roi de Pologne de 1305 jusqu'à sa mort.\nSon assassinat en 1306 marque l'extinction de la lignée royale des Přemyslides en Bohême.",
+    "image": "",
     "sources": "Wikipedia"
   },
   {
@@ -93,7 +158,7 @@
     "date": 1303,
     "date_fin": 1304,
     "zones": [
-      "Italie"
+      "Papaute"
     ],
     "type": 1,
     "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique de 1303 à 1304. C'est le deuxième pape issu de l'ordre dominicain.\n\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel, mais en gardant dans sa mire quelques mandataires du roi, notamment Guillaume de Nogaret, qu'il avait cité à comparaître. Le pape s'apprêtait à le condamner par contumace au moment où il mourut.",
@@ -106,10 +171,23 @@
     "date": 1305,
     "date_fin": 1314,
     "zones": [
-      "Italie"
+      "Papaute"
     ],
     "type": 1,
     "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France tout au long de son pontificat.\n\nOn retient de lui l'image d'un pape de bonne foi, qui manquait toutefois d'audace et d'esprit de décision, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne, en se soumettant au roi Philippe le Bel.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 43,
+    "titre": "Bela V (Othon III de Bavière )",
+    "date": 1305,
+    "date_fin": 1308,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Othon III de Bavière, né le 11 février 1261 et mort le 9 septembre 1312 à Landshut, est un prince issu de la maison de Wittelsbach, fils du duc Henri XIII de Bavière. Il fut, conjointement avec ses frères Louis III et Étienne Ier, duc de Basse-Bavière de 1290 à sa mort et également roi de Hongrie de 1305 à 1308.Après la renonciation de Venceslas III de Bohême au trône de Hongrie lors de l'été 1304, il adopte le nom dynastique Arpad de « Béla V », et tente de s'imposer sur le trône de Hongrie. Il est couronné le 6 décembre 1305 mais en tentant de lutter contre László II Kán, voïvode de Transylvanie l'un des princes territoriaux qui se partagent le pouvoir dans son royaume, il est capturé par ce dernier au cours de l'été 1307. Après des négociations il est livré aux fidèles de Charles Robert d'Anjou-Naples, autre prétendant à la couronne. Othon doit renoncer à la Hongrie et se retirer en Bavière où il règne jusqu'à sa mort. Son fils le duc Henri XV lui succède en Basse-Bavière.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -140,16 +218,42 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 44,
+    "titre": "Carobert d'Anjou-Sicile",
+    "date": 1308,
+    "date_fin": 1342,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Carobert, petit-fils de Charles d'Anjou, doit lutter contre ses compétiteurs Wenceslas de Bohême puis Othon de Bavière et brise la puissance de la haute noblesse magyare en s’appuyant sur la petite et moyenne noblesse.\nPendant la période de lutte pour la succession en Hongrie, un certain nombre de familles de barons ont constitué de véritables principautés autonomes, comme les Csak et les Aba, qui s’appuient sur leurs mines d’argent de Slovaquie (Haute-Hongrie). Carobert engage contre elles une lutte sans merci, leur enlevant successivement leurs forteresses de Komárom, de Nitra et de Trenčín.",
+    "image": "",
+    "sources": "wikipedia"
+  },
+  {
     "id": 4,
     "titre": "Début de la papauté d'Avignon",
     "date": 1309,
     "zones": [
-      "Italie"
+      "Papaute"
     ],
     "type": 1,
     "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309–1377), dite « captivité babylonienne » de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
     "image": "",
     "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 39,
+    "titre": "Robert Ier le Sage",
+    "date": 1309,
+    "date_fin": 1343,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "description": "Il défend la papauté et devient le chef du parti guelfe contre les empereurs. Sous son règne, le royaume angevin s’épuise dans des luttes contre la Sicile aragonaise. Naples, grande cité d’affaires combat aux côtés des Guelfes et protège Florenceà l'origine Robert d'Anjou, né en 1277 à Santa Maria Capua Vetere (actuelle province de Caserte, en Campanie) et mort le 20 janvier 1343 à Naples (76) , fils du roi Charles II de Naples, de la maison d'Anjou-Sicile, est roi de Naples et comte de Provence de 1309 à 1343.\u000bArrivé sur le trône par usurpation au détriment de son neveu (Charobert futur roi de Hongrie fils de son frère aîné Charles Martel ) Son couronnement est possible grâce à l'abdication de ses deux frères ainés, Louis d'Anjou, entré dans l'ordre franciscain, Charles Martel mort en 1295., il a un règne considéré dans l'ensemble comme positif. Il ne réussit cependant pas à reprendre le contrôle du royaume de Sicile, que son grand-père Charles Ier d'Anjou détenait tout comme le royaume de Naples.\u000bSon père, Charles II d'Anjou (1254-1309), est roi de Naples de 1285 à 1309, succédant à son père Charles Ier d'Anjou (frère de Louis IX), premier roi de Naples (et roi de Sicile) de la maison d'Anjou-Sicile. Charles II n'a pas hérité de la Sicile, échue au roi d'Aragon Pierre III (Pierre Ier de Sicile).\nSa mère, Marie de Hongrie (1257-1323), est la fille du roi de Hongrie Étienne V (1237-1272).\nRobert, titré duc de Calabre, a plusieurs frères, dont deux sont nés avant lui :\nCharles Martel (1271-1295), qui meurt prématurément en laissant un fils Charles Robert (1288-1382), dit « Charobert » ;\nLouis (1274-1297), par la suite évêque de Toulouse et canonisé en 1317 (Saint Louis d'Anjou) ;\nPhilippe (1278-1331), prince de Tarente ;\u000bEn 1297, il épouse Yolande d'Aragon, qui meurt en 1302, lui ayant donné deux fils.\u000bIl est envoyé avec son frère en Sicile auprès de Jacques II, fils et successeur de Pierre III, afin de combattre contre Frédéric, autre fils de Pierre III, qui a usurpé le trône en 1295. Il remporte quelques succès, mais Philippe de Tarente ayant été battu, il renonce et négocie la paix (1302).\nEn 1304, il épouse Sancia de Majorque (1285-1345), fille du roi de Majorque Jacques II (1243-1311).\nIl soutient ensuite les guelfes de Florence contre les gibelins en 1306.\u000bRobert est le prince le plus puissant d'Italie[réf. nécessaire] et le pape le nomme vicaire pontifical.\nEn 1318, il libère Gênes assiégée par Marco Visconti, seigneurs de Milan, et d'autres seigneurs gibelins.En 1338, il lance une nouvelle expédition pour reconquérir le royaume de Sicile, sans succès. C'est sa dernière tentative.\u000bRéputé pour son amour des lettres, il attire à la cour de Naples des poètes, des lettrés et des artistes, tels que Pétrarque, Giotto, Judah ben \u000bMoses Romano et Simone Martini.\u000bIl est inhumé dans un monument funéraire commandé par sa femme et sculpté par les frères Bertini dans la basilique Santa Chiara de Naples. Il s'agit d'un tombeau grandiose de style gothique.",
+    "image": "",
+    "sources": "Wikipedia"
   },
   {
     "id": 3,
