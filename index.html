@@ -99,7 +99,7 @@
     .chip-full.chip-type1 { font-weight: 600; font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.28); }
     .chip-full.chip-type3 { opacity: 0.7; font-size: 0.68rem; }
 
-    .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.7rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 5px; display: flex; align-items: center; box-sizing: border-box; min-width: 4px; }
+    .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.7rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 8px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
     .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }
     .chip-period.chip-type3 { opacity: 0.65; }
     .chip-period:hover { z-index: 10; }
@@ -141,10 +141,14 @@
     .modal-type-badge.type2 { background: #E8EFF5; color: #2C4A6B; }
     .modal-type-badge.type3 { background: #F0F0F0; color: #555; }
     #modal-date { font-size: 0.9rem; color: var(--ink-muted); font-style: italic; margin-bottom: 0.4rem; }
-    #modal-title { font-family: 'IM Fell English', Georgia, serif; font-size: 2.2rem; color: var(--ink); margin-bottom: 1.2rem; line-height: 1.2; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; }
+    #modal-title { font-family: 'IM Fell English', Georgia, serif; font-size: 2.2rem; color: var(--ink); margin-bottom: 1.2rem; line-height: 1.2; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; text-align: center; }
     #modal-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
     #modal-body.no-img { grid-template-columns: 1fr; }
-    #modal-desc { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.85; }
+    #modal-body.no-img #modal-text-col { max-width: 720px; margin: 0 auto; width: 100%; }
+    #modal-desc { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.95; }
+    #modal-desc p { margin-bottom: 1rem; text-align: justify; text-justify: inter-word; hyphens: auto; }
+    #modal-desc p:last-child { margin-bottom: 0; }
+    #modal-desc p::first-letter { font-size: 1.4em; font-family: 'IM Fell English', serif; float: left; line-height: 1; margin-right: 4px; color: var(--red); }
     #modal-sources { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 1.2rem; }
     #modal-img img { width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 3px 16px rgba(0,0,0,0.18); }
 
@@ -218,7 +222,7 @@
     <div id="modal-date"></div>
     <h2 id="modal-title"></h2>
     <div id="modal-body">
-      <div>
+      <div id="modal-text-col">
         <p id="modal-desc"></p>
         <p id="modal-sources"></p>
       </div>
