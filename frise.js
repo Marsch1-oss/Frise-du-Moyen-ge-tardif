@@ -3,7 +3,7 @@
 var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Papaute',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
-  'Europe C. & Or.', 'Byzance', 'Monde islamique', 'Ottomans', 'Orient', 'Monde',
+  'Europe C. & Or.', 'Byzance', 'Ottomans', 'Monde islamique', 'Orient', 'Monde',
   'Alsace',
   'Art', 'Techniques', 'Idees'
 ];
