@@ -68,7 +68,8 @@ var activeZones    = null;
 
 function initActiveZones() {
   activeZones = {};
-  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = true;
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = false;
+  activeZones['France'] = true;  /* Seule la France active par défaut */
 }
 
 function normalizeZone(z) {
@@ -125,11 +126,11 @@ function buildFilterBar() {
       var col = COLORS[zone];
       if (!col) return;
       var label = document.createElement('label');
-      label.className   = 'zone-checkbox checked';
+      label.className   = (zone === 'France') ? 'zone-checkbox checked' : 'zone-checkbox unchecked';
       label.dataset.zone = zone;
       var input = document.createElement('input');
-      input.type = 'checkbox';
-      input.checked = true;
+      input.type    = 'checkbox';
+      input.checked = (zone === 'France');
       input.addEventListener('change', function() { toggleZone(zone, this.checked); });
       var dot = document.createElement('span');
       dot.className = 'zone-cb-dot';
