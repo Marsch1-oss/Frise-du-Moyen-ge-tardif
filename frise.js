@@ -253,16 +253,19 @@ function buildAxis(start, end, step, level) {
   var bar = document.createElement('div');
   bar.className = 'axis-bar';
 
-  for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
-    var tick = document.createElement('div');
-    tick.className = 'tick';
-    tick.style.left = pct(y, start, end);
-    tick.textContent = y;
-    bar.appendChild(tick);
-    var tl = document.createElement('div');
-    tl.className = 'tick-line';
-    tl.style.left = pct(y, start, end);
-    bar.appendChild(tl);
+  /* Au niveau 4, les ticks génériques sont supprimés — seuls les mois s'affichent */
+  if (level !== 4) {
+    for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
+      var tick = document.createElement('div');
+      tick.className = 'tick';
+      tick.style.left = pct(y, start, end);
+      tick.textContent = y;
+      bar.appendChild(tick);
+      var tl = document.createElement('div');
+      tl.className = 'tick-line';
+      tl.style.left = pct(y, start, end);
+      bar.appendChild(tl);
+    }
   }
 
   if (level === 1) {
