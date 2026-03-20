@@ -3,7 +3,7 @@
 var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Papaute',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
-  'Europe C. & Or.', 'Byzance', 'Monde islamique', 'Orient', 'Monde',
+  'Europe C. & Or.', 'Byzance', 'Monde islamique', 'Ottomans', 'Orient', 'Monde',
   'Alsace',
   'Art', 'Techniques', 'Idees'
 ];
@@ -22,7 +22,8 @@ var COLORS = {
   'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
   'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
   'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
-  'Orient':           { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
+  'Ottomans':          { bg: '#8B1A3A', light: '#F5E0E8', text: '#5C0A22' },
+  'Orient':            { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
   'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
   'Alsace':           { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
   'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
@@ -124,7 +125,8 @@ function buildFilterBar() {
       var col = COLORS[zone];
       if (!col) return;
       var label = document.createElement('label');
-      label.className = 'zone-checkbox checked';
+      label.className   = 'zone-checkbox checked';
+      label.dataset.zone = zone;
       var input = document.createElement('input');
       input.type = 'checkbox';
       input.checked = true;
@@ -550,9 +552,13 @@ function applySearch() {
 
   if (!searchTerm) {
     chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
-    /* Ré-affiche toutes les pistes */
+    /* Ré-affiche toutes les pistes et restaure les filtres */
     document.querySelectorAll('.track-row').forEach(function(r) {
       r.classList.remove('search-hidden');
+    });
+    document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+      lbl.style.opacity       = '1';
+      lbl.style.pointerEvents = '';
     });
     if (countEl) countEl.textContent = '';
     return;
@@ -576,12 +582,20 @@ function applySearch() {
     }
   });
 
-  /* Masque les pistes sans résultat */
+  /* Masque les pistes ET décoche les filtres des zones sans résultat */
   document.querySelectorAll('.track-row').forEach(function(row) {
     var zone = row.dataset.zone;
-    if (zone) {
-      row.classList.toggle('search-hidden', !matchByZone[zone]);
-    }
+    if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
+  });
+
+  /* Grise les cases à cocher des zones sans résultat */
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp  = lbl.querySelector('input');
+    var zone = lbl.dataset.zone;
+    if (!zone) return;
+    var hasMatch = !!matchByZone[zone];
+    lbl.style.opacity    = hasMatch ? '1' : '0.3';
+    lbl.style.pointerEvents = hasMatch ? '' : 'none';
   });
 
   if (countEl) {
