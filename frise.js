@@ -36,6 +36,7 @@ var CHIP_PAD = 6;
 var TRACK_PX = 820;
 
 var currentLevel   = 1;
+var searchTerm     = '';
 var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
@@ -211,6 +212,11 @@ function renderLevel(level, rangeStart) {
     ? 'Cliquez sur une decennie pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
     : 'Cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
+
+  /* Ré-applique la recherche après chaque re-rendu */
+  if (searchTerm) {
+    setTimeout(applySearch, 0);
+  }
 }
 
 /* ── Axe ─────────────────────────────────────────────────────────────*/
@@ -339,9 +345,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
-  chip.className      = 'evt-chip';
-  chip.style.position = 'absolute';
-  chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+  chip.className        = 'evt-chip';
+  chip.dataset.evtId    = evt.id;
+  chip.style.position   = 'absolute';
+  chip.style.top        = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
     var d0 = Math.max(evt.date, start);
@@ -514,6 +521,70 @@ function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
 }
 
+/* ── Recherche ─────────────────────────────────────────────────── */
+
+function onSearch(val) {
+  searchTerm = val.trim().toLowerCase();
+  var clearBtn   = document.getElementById('search-clear');
+  var countEl    = document.getElementById('search-count');
+  if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
+  applySearch();
+}
+
+function clearSearch() {
+  var input = document.getElementById('search-input');
+  if (input) input.value = '';
+  searchTerm = '';
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+  var countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = '';
+  applySearch();
+}
+
+function eventMatchesSearch(evt) {
+  if (!searchTerm) return true;
+  var haystack = [
+    evt.titre || '',
+    evt.description || '',
+    evt.sources || '',
+    (evt.zones || []).join(' ')
+  ].join(' ').toLowerCase();
+  /* Supporte plusieurs mots : tous doivent être présents */
+  var words = searchTerm.split(/\s+/).filter(Boolean);
+  return words.every(function(w) { return haystack.indexOf(w) !== -1; });
+}
+
+function applySearch() {
+  var chips = document.querySelectorAll('.evt-chip');
+  if (!searchTerm) {
+    chips.forEach(function(c) {
+      c.classList.remove('search-match', 'search-fade');
+    });
+    document.getElementById('search-count').textContent = '';
+    return;
+  }
+  var matched = 0;
+  chips.forEach(function(chip) {
+    var id = parseInt(chip.dataset.evtId, 10);
+    var evt = allEvents.find(function(e) { return e.id === id; });
+    if (evt && eventMatchesSearch(evt)) {
+      chip.classList.add('search-match');
+      chip.classList.remove('search-fade');
+      matched++;
+    } else {
+      chip.classList.add('search-fade');
+      chip.classList.remove('search-match');
+    }
+  });
+  var countEl = document.getElementById('search-count');
+  if (countEl) {
+    countEl.textContent = matched > 0
+      ? matched + ' résultat' + (matched > 1 ? 's' : '')
+      : 'Aucun résultat';
+  }
+}
+
 /* ── Init ────────────────────────────────────────────────────────────*/
 document.addEventListener('DOMContentLoaded', function() {
   initActiveZones();
@@ -521,7 +592,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target === this) closeModal();
   });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      closeModal();
+      if (searchTerm) clearSearch();
+    }
     if (!document.getElementById('modal-overlay').classList.contains('open')) {
       if (e.key === 'ArrowLeft')  navigateDecade(-1);
       if (e.key === 'ArrowRight') navigateDecade(1);
