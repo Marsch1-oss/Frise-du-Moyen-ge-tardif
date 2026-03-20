@@ -30,38 +30,6 @@ var COLORS = {
   'Idees':            { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
 };
 
-var ROW_H    = 24;
-var ROW_GAP  = 4;
-var CHIP_PAD = 6;
-var TRACK_PX = 820;
-
-var currentLevel   = 1;
-var searchTerm     = '';
-var currentCentury = null;
-var currentDecade  = null;
-var allEvents      = [];
-var activeZones    = null;
-
-function initActiveZones() {
-  activeZones = {};
-  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = true;
-}
-
-/* ── Visibilite par type ─────────────────────────────────────────────
-   type 1 → niveaux 1, 2, 3
-   type 2 → niveaux 2, 3
-   type 3 → niveau 3 seulement                                        */
-function visibleAtLevel(evt, level) {
-  /* type 1 = toutes echelles, type 2 = siecle+decennie, type 3 = decennie seule */
-  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  if (isNaN(t) || t === 1) return true;
-  if (t === 2) return level >= 2;
-  if (t === 3) return level >= 3;
-  return true;
-}
-
-/* ── Normalisation des zones ─────────────────────────────────────────
-   Accepte les anciens noms et les variantes avec accents             */
 var ZONE_ALIASES = {
   'Empire':              'St Empire',
   'St_Empire':           'St Empire',
@@ -85,30 +53,65 @@ var ZONE_ALIASES = {
   'Idées':               'Idees'
 };
 
+var ROW_H    = 24;
+var ROW_GAP  = 4;
+var CHIP_PAD = 6;
+var TRACK_PX = 820;
+
+var currentLevel   = 1;
+var searchTerm     = '';
+var currentCentury = null;
+var currentDecade  = null;
+var allEvents      = [];
+var activeZones    = null;
+
+function initActiveZones() {
+  activeZones = {};
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = true;
+}
+
 function normalizeZone(z) {
   return ZONE_ALIASES[z] || z;
 }
 
-/* ── Chargement ──────────────────────────────────────────────────────*/
+function visibleAtLevel(evt, level) {
+  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
+  if (isNaN(t) || t === 1) return true;
+  if (t === 2) return level >= 2;
+  if (t === 3) return level >= 3;
+  return true;
+}
+
+/* ── Chargement ─────────────────────────────────────────────────────── */
 function loadEvents() {
-  fetch('events.json')
-    .then(function(res) { return res.json(); })
-    .then(function(data) {
-      allEvents = data.map(function(e) {
-        /* Normalise zones */
-        var rawZones = e.zones || (e.zone ? [e.zone] : []);
-        e.zones = rawZones.map(normalizeZone);
-        /* Normalise type en nombre */
-        e.type = Number(e.type) || 1;
-        return e;
-      });
-      buildFilterBar();
-      renderLevel(1);
-    })
-    .catch(function() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'events.json', true);
+  xhr.onload = function() {
+    if (xhr.status === 200 || xhr.status === 0) {
+      try {
+        var data = JSON.parse(xhr.responseText);
+        allEvents = data.map(function(e) {
+          var rawZones = e.zones || (e.zone ? [e.zone] : []);
+          e.zones = rawZones.map(normalizeZone);
+          e.type  = Number(e.type) || 1;
+          return e;
+        });
+        buildFilterBar();
+        renderLevel(1);
+      } catch(err) {
+        document.getElementById('frise-container').innerHTML =
+          '<p class="error">Erreur JSON : ' + err.message + '</p>';
+      }
+    } else {
       document.getElementById('frise-container').innerHTML =
         '<p class="error">Impossible de charger events.json.</p>';
-    });
+    }
+  };
+  xhr.onerror = function() {
+    document.getElementById('frise-container').innerHTML =
+      '<p class="error">Impossible de charger events.json.</p>';
+  };
+  xhr.send();
 }
 
 /* ── Filtre zones ────────────────────────────────────────────────────*/
@@ -188,15 +191,11 @@ function renderLevel(level, rangeStart) {
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
     if (!activeZones[zone]) continue;
-
     var evts = [];
     for (var j = 0; j < allEvents.length; j++) {
       var e = allEvents[j];
-      /* Zone */
       if (e.zones.indexOf(zone) === -1) continue;
-      /* Type / niveau */
       if (!visibleAtLevel(e, level)) continue;
-      /* Fenetre temporelle */
       var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
       if (e.date > end || fin < start) continue;
       evts.push(e);
@@ -212,11 +211,8 @@ function renderLevel(level, rangeStart) {
     ? 'Cliquez sur une decennie pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
     : 'Cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
-
-  /* Ré-applique la recherche après chaque re-rendu */
-  if (searchTerm) {
-    setTimeout(applySearch, 0);
-  }
+  /* Ré-applique la recherche si active */
+  if (searchTerm) applySearch();
 }
 
 /* ── Axe ─────────────────────────────────────────────────────────────*/
@@ -242,15 +238,12 @@ function buildAxis(start, end, step, level) {
   }
 
   if (level === 1) {
-    var slices = [1300, 1350, 1400, 1450];
-    for (var s = 0; s < slices.length; s++) {
-      (function(sv) {
-        var band = makeBand(sv, sv + 50, start, end, function() {
-          renderLevel(2, Math.floor(sv / 100) * 100);
-        });
-        bar.appendChild(band);
-      })(slices[s]);
-    }
+    [1300, 1350, 1400, 1450].forEach(function(s) {
+      var band = makeBand(s, s + 50, start, end, (function(sv) {
+        return function() { renderLevel(2, Math.floor(sv / 100) * 100); };
+      })(s));
+      bar.appendChild(band);
+    });
   } else if (level === 2) {
     for (var d = currentCentury; d < currentCentury + 100; d += 10) {
       (function(decade) {
@@ -301,7 +294,7 @@ function assignRows(evts, start, end, level) {
 function buildTrack(zone, evts, start, end, level) {
   var row = document.createElement('div');
   row.className = 'track-row';
-
+  row.dataset.zone = zone;
   var lbl = document.createElement('div');
   lbl.className = 'zone-label';
   var dot = document.createElement('span');
@@ -311,10 +304,9 @@ function buildTrack(zone, evts, start, end, level) {
   lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
 
-  /* Filtre : garde seulement les évenements dans la fenetre */
-  var visible = evts.filter(function(e) {
-    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
-    return e.date <= end && fin >= start;
+  var visible = evts.filter(function(evt) {
+    var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
+    return evt.date <= end && fin >= start;
   });
 
   var rows  = assignRows(visible, start, end, level);
@@ -345,10 +337,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
-  chip.className        = 'evt-chip';
-  chip.dataset.evtId    = evt.id;
-  chip.style.position   = 'absolute';
-  chip.style.top        = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+  chip.className      = 'evt-chip';
+  chip.dataset.evtId  = evt.id;
+  chip.style.position = 'absolute';
+  chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
     var d0 = Math.max(evt.date, start);
@@ -426,25 +418,20 @@ function openModal(evt, zone) {
     (evt.date_fin && evt.date_fin > evt.date)
       ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
       : evt.date + ' apr. J.-C.';
-  document.getElementById('modal-title').textContent   = evt.titre;
-  /* Affiche la description avec paragraphes (\n\n = nouveau paragraphe, \n = saut de ligne) */
+  document.getElementById('modal-title').textContent = evt.titre;
+
   var descEl = document.getElementById('modal-desc');
   descEl.innerHTML = '';
-  var rawDesc = evt.description || '';
-  var paragraphs = rawDesc.split(/\n\n+/);
-  for (var pi = 0; pi < paragraphs.length; pi++) {
-    var para = paragraphs[pi].trim();
-    if (!para) continue;
+  var paras = (evt.description || '').split(/\n\n+/);
+  for (var pi = 0; pi < paras.length; pi++) {
+    if (!paras[pi].trim()) continue;
     var p = document.createElement('p');
-    /* Gere les simples \n comme <br> dans un paragraphe */
-    var lines = para.split('\n');
-    for (var li = 0; li < lines.length; li++) {
-      if (li > 0) p.appendChild(document.createElement('br'));
-      p.appendChild(document.createTextNode(lines[li]));
-    }
+    p.textContent = paras[pi].replace(/\n/g, ' ').trim();
     descEl.appendChild(p);
   }
-  document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
+
+  document.getElementById('modal-sources').textContent =
+    evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
   var imgWrap   = document.getElementById('modal-img-wrap');
   var imgEl     = document.getElementById('modal-img');
@@ -453,8 +440,10 @@ function openModal(evt, zone) {
   if (evt.image && evt.image.trim() !== '') {
     imgEl.src = evt.image;
     imgEl.alt = evt.legende || evt.titre;
-    captionEl.textContent = evt.legende || '';
-    captionEl.style.display = evt.legende ? 'block' : 'none';
+    if (captionEl) {
+      captionEl.textContent  = evt.legende || '';
+      captionEl.style.display = evt.legende ? 'block' : 'none';
+    }
     imgWrap.style.display = 'block';
   } else {
     imgWrap.style.display = 'none';
@@ -521,12 +510,11 @@ function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
 }
 
-/* ── Recherche ─────────────────────────────────────────────────── */
 
+/* ── Recherche ──────────────────────────────────────────────────────*/
 function onSearch(val) {
-  searchTerm = val.trim().toLowerCase();
-  var clearBtn   = document.getElementById('search-clear');
-  var countEl    = document.getElementById('search-count');
+  searchTerm = (val || '').trim().toLowerCase();
+  var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
   applySearch();
 }
@@ -550,37 +538,55 @@ function eventMatchesSearch(evt) {
     evt.sources || '',
     (evt.zones || []).join(' ')
   ].join(' ').toLowerCase();
-  /* Supporte plusieurs mots : tous doivent être présents */
-  var words = searchTerm.split(/\s+/).filter(Boolean);
-  return words.every(function(w) { return haystack.indexOf(w) !== -1; });
+  return searchTerm.split(/\s+/).filter(Boolean).every(function(w) {
+    return haystack.indexOf(w) !== -1;
+  });
 }
 
 function applySearch() {
-  var chips = document.querySelectorAll('.evt-chip');
+  /* Surligne les chips correspondants */
+  var chips   = document.querySelectorAll('.evt-chip');
+  var countEl = document.getElementById('search-count');
+
   if (!searchTerm) {
-    chips.forEach(function(c) {
-      c.classList.remove('search-match', 'search-fade');
+    chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
+    /* Ré-affiche toutes les pistes */
+    document.querySelectorAll('.track-row').forEach(function(r) {
+      r.classList.remove('search-hidden');
     });
-    document.getElementById('search-count').textContent = '';
+    if (countEl) countEl.textContent = '';
     return;
   }
-  var matched = 0;
+
+  /* Compte les correspondances par piste */
+  var matchByZone = {};
+  var totalMatch  = 0;
+
   chips.forEach(function(chip) {
-    var id = parseInt(chip.dataset.evtId, 10);
+    var id  = parseInt(chip.dataset.evtId, 10);
     var evt = allEvents.find(function(e) { return e.id === id; });
     if (evt && eventMatchesSearch(evt)) {
       chip.classList.add('search-match');
-      chip.classList.remove('search-fade');
-      matched++;
+      chip.classList.remove('search-dim');
+      totalMatch++;
+      (evt.zones || []).forEach(function(z) { matchByZone[z] = true; });
     } else {
-      chip.classList.add('search-fade');
+      chip.classList.add('search-dim');
       chip.classList.remove('search-match');
     }
   });
-  var countEl = document.getElementById('search-count');
+
+  /* Masque les pistes sans résultat */
+  document.querySelectorAll('.track-row').forEach(function(row) {
+    var zone = row.dataset.zone;
+    if (zone) {
+      row.classList.toggle('search-hidden', !matchByZone[zone]);
+    }
+  });
+
   if (countEl) {
-    countEl.textContent = matched > 0
-      ? matched + ' résultat' + (matched > 1 ? 's' : '')
+    countEl.textContent = totalMatch > 0
+      ? totalMatch + ' résultat' + (totalMatch > 1 ? 's' : '')
       : 'Aucun résultat';
   }
 }
