@@ -3,7 +3,9 @@
     "id": 31,
     "titre": "Edouard 1er Longues Jambes",
     "date": 1272,
+    "mois": 6,
     "date_fin": 1307,
+    "mois_fin": 7,
     "zones": [
       "Angleterre"
     ],
@@ -16,7 +18,9 @@
     "id": 40,
     "titre": "Andronic II Paléologue",
     "date": 1282,
+    "mois": 12,
     "date_fin": 1328,
+    "mois_fin": 5,
     "zones": [
       "Byzance"
     ],
@@ -29,7 +33,9 @@
     "id": 2,
     "titre": "Philippe IV le Bel",
     "date": 1285,
+    "mois": 10,
     "date_fin": 1314,
+    "mois_fin": 11,
     "zones": [
       "France"
     ],
@@ -42,7 +48,9 @@
     "id": 38,
     "titre": "Charles II d'Anjou dit le Boiteux",
     "date": 1285,
+    "mois": 1,
     "date_fin": 1309,
+    "mois_fin": 5,
     "zones": [
       "Naples"
     ],
@@ -55,7 +63,9 @@
     "id": 41,
     "titre": "André III Arpade",
     "date": 1290,
+    "mois": 7,
     "date_fin": 1301,
+    "mois_fin": 1,
     "zones": [
       "Hongrie"
     ],
@@ -68,7 +78,9 @@
     "id": 33,
     "titre": "Boniface VIII",
     "date": 1294,
+    "mois": 12,
     "date_fin": 1303,
+    "mois_fin": 10,
     "zones": [
       "Papaute"
     ],
@@ -82,6 +94,7 @@
     "titre": "Michel IX Paléologue co-empereur",
     "date": 1294,
     "date_fin": 1320,
+    "mois_fin": 10,
     "zones": [
       "Byzance"
     ],
@@ -108,7 +121,9 @@
     "id": 32,
     "titre": "Albert Ier (roi des Romains)",
     "date": 1298,
+    "mois": 6,
     "date_fin": 1308,
+    "mois_fin": 5,
     "zones": [
       "St Empire"
     ],
@@ -171,6 +186,7 @@
     "id": 49,
     "titre": "La colonie sarrasine de Lucera est anéantie",
     "date": 1300,
+    "mois": 8,
     "zones": [
       "Naples"
     ],
@@ -208,11 +224,12 @@
     "id": 52,
     "titre": "Bataille navale de Ponza",
     "date": 1300,
+    "mois": 6,
     "zones": [
       "Naples"
     ],
     "type": 2,
-    "description": "Victoire de la flotte angevine commandée par Roger de Lauria sur la flotte aragonaise d\"Alphonse V à la bataille de Ponza  au large de Naples,La guerre contre la Sicile reprend à partir de 1296. Frédéric III prend l'initiative contre les Angevins. Non seulement il conserve la Sicile, mais il parvient en outre à porter la guerre en Calabre et autour de Naples. Boniface VIII, début 1297, convoque à Rome Charles II et Jacques pour les encourager à reconquérir la Sicile, conformément au traité d'Anagni. Sur ordre de Jacques II, tant Giovanni da Procida que Ruggero di Lauria, devenu amiral de la flotte alliée anti-sicilienne et enfin la reine mère Constance de Sicile, durent abandonner la Sicile et le roi Frédéric pour rejoindre Jacques à Rome. En juillet 1299, à Capo d'Orlando, avec la flotte aragonaise complétée de celle de Naples, Jacques bat Frédéric, qui parvient à se sauver avec 17 galères. Toutefois, dès l'année suivante, Jacques doit revenir en Aragon face à la résistance opposée par Frédéric.\nLa guerre se déroule maintenant en Sicile, où les fils de Charles II, Robert et Philippe Ier de Tarente, ont conquis Catane et assiégé Messine. Mais Frédéric remporte une victoire importante à Falconara, près de Trapani, faisant prisonnier Philippe. Il résiste à Messine et en Calabre. Charles II préfèrerait la paix, mais le pape, après l'avoir accusé de lâcheté, appelle à la rescousse en 1300 les Templiers, les Hospitaliers et les Génois, qui se joignent aux combats à contrecœur. Mais à l'exception d'une nouvelle victoire brillante de Lauria sur la flotte sicilienne le 14 juin, la situation n'évolue pas.Le 14 juin 1300, une flotte de 59 galères (Angevines, aragonaises, apuliennes, et quelques génoises) commandée par Roger of Lauria affronte une flotte sicilienne de 32 galères sous le commandement de Conrad d'Oria. : victoire décidée de Lauria. Environ 26 galères siciliennes sont capturées. : s’inscrit dans les conflits liés à la guerre de succession et aux tensions autour du royaume de Sicile. \nRoger de Lauria, Ruggero di Lauria ou Roger de Llúria ou encore Roger de Lloria, dit le « Grand Capitaine » né en 1245 ou vers 1250 et décédé vers 1305), est un amiral qui vécut entre la seconde moitié du XIIIe siècle et le début du XIVe siècle. Il s'illustra notamment au cours de la guerre des Vêpres siciliennes, au service de différents partis. Roger de Lauria naît en 1245 ou vers 1250[1], selon les sources, à Lauria dans la région de Potenza (Basilicate), fils de Richard de Lauria, vraisemblablement issu de la noblesse normande d'Italie méridionale. En 1262, suivant sa mère, qui est une dame de compagnie de la reine Constance de Sicile, quand cette dernière épouse Pierre III d'Aragon, il rejoint la cour catalane à Barcelone[2], y est élevé et y séjourne durant plusieurs années. Son père ayant servi Manfred de Sicile, il est cependant à Naples en 1268 lors de la mort du roi Conradin. Après la chute des Hohenstaufen, il est alors contraint de fuir la ville en compagnie d'autres exilés Gibelins et de se réfugier auprès de sa mère à Barcelone, Il défend la Sicile etEn 1282, il est nommé amiral de la flotte catalane, qu'il commande brillamment, devenant le véritable artisan de la suprématie maritime de la Couronne d’Aragon en Méditerranée. Mais sa renommée est rapidement éclipsée par celle de Roger de Flor avec lequel on le confond parfois. Pierre III le Grand lui accorde le comté de Cocentaina, dans le royaume de Valence, dont il est le premier titulaire, pour services éminents rendus à la Couronne. les droits des rois aragonais contre les Angevins, après les Vêpres siciliennes, mettant en déroute une flotte française commandée par Barthélemy Bonvin et Guillaume Cornut, les amiraux de Charles d'Anjou[N 1] lors de la bataille de Malte, le 8 juin ou 8 juillet 1283Aux termes du Traité d'Anagni de 1295, le roi Jacques II d'Aragon devait céder le trône sicilien aux Angevins ; son frère puîné Frédéric accepte cependant la couronne que lui offrent les Siciliens et combat alors contre les Angevins et contre son frère. Roger de Lauria appuie d'abord Frédéric qui le nomme « amiral de Sicile » le 25 mars 1296. Il finit par revenir au service de Jacques le 2 avril 1297. Ses terres siciliennes lui sont confisquées car il est considéré par le nouveau roi comme un traître, mais il vainc les Siciliens au Capo d'Orlando en 1299. Lorsque la paix de Caltabellotta est signée entre les deux frères, en 1302, Roger se retire dans son comté de Cocentaina.\nLe « Grand Capitaine » meurt à Valence le 17 janvier 1305 et est inhumé à Santes Creus près de Barcelone, comme il l'avait lui-même établi le 10 septembre 1291.",
+    "description": "Victoire de la flotte angevine commandée par Roger de Lauria sur la flotte aragonaise d\"Alphonse V à la bataille de Ponza  au large de Naples,La guerre contre la Sicile reprend à partir de 1296. Frédéric III prend l'initiative contre les Angevins. Non seulement il conserve la Sicile, mais il parvient en outre à porter la guerre en Calabre et autour de Naples. Boniface VIII, début 1297, convoque à Rome Charles II et Jacques pour les encourager à reconquérir la Sicile, conformément au traité d'Anagni. Sur ordre de Jacques II, tant Giovanni da Procida que Ruggero di Lauria, devenu amiral de la flotte alliée anti-sicilienne et enfin la reine mère Constance de Sicile, durent abandonner la Sicile et le roi Frédéric pour rejoindre Jacques à Rome. En juillet 1299, à Capo d'Orlando, avec la flotte aragonaise complétée de celle de Naples, Jacques bat Frédéric, qui parvient à se sauver avec 17 galères. Toutefois, dès l'année suivante, Jacques doit revenir en Aragon face à la résistance opposée par Frédéric.\nLa guerre se déroule maintenant en Sicile, où les fils de Charles II, Robert et Philippe Ier de Tarente, ont conquis Catane et assiégé Messine. Mais Frédéric remporte une victoire importante à Falconara, près de Trapani, faisant prisonnier Philippe. Il résiste à Messine et en Calabre. Charles II préfèrerait la paix, mais le pape, après l'avoir accusé de lâcheté, appelle à la rescousse en 1300 les Templiers, les Hospitaliers et les Génois, qui se joignent aux combats à contrecœur. Mais à l'exception d'une nouvelle victoire brillante de Lauria sur la flotte sicilienne le 14 juin, la situation n'évolue pas.Le 14 juin 1300, une flotte de 59 galères (Angevines, aragonaises, apuliennes, et quelques génoises) commandée par Roger of Lauria affronte une flotte sicilienne de 32 galères sous le commandement de Conrad d'Oria. : victoire décidée de Lauria. Environ 26 galères siciliennes sont capturées. : s’inscrit dans les conflits liés à la guerre de succession et aux tensions autour du royaume de Sicile. \nRoger de Lauria, Ruggero di Lauria ou Roger de Llúria ou encore Roger de Lloria, dit le « Grand Capitaine » né en 1245 ou vers 1250 et décédé vers 1305), est un amiral qui vécut entre la seconde moitié du XIIIe siècle et le début du XIVe siècle. Il s'illustra notamment au cours de la guerre des Vêpres siciliennes, au service de différents partis. Roger de Lauria naît en 1245 ou vers 1250[1], selon les sources, à Lauria dans la région de Potenza (Basilicate), fils de Richard de Lauria, vraisemblablement issu de la noblesse normande d'Italie méridionale. En 1262, suivant sa mère, qui est une dame de compagnie de la reine Constance de Sicile, quand cette dernière épouse Pierre III d'Aragon, il rejoint la cour catalane à Barcelone[2], y est élevé et y séjourne durant plusieurs années. Son père ayant servi Manfred de Sicile, il est cependant à Naples en 1268 lors de la mort du roi Conradin. Après la chute des Hohenstaufen, il est alors contraint de fuir la ville en compagnie d'autres exilés Gibelins et de se réfugier auprès de sa mère à Barcelone, Il défend la Sicile etEn 1282, il est nommé amiral de la flotte catalane, qu'il commande brillamment, devenant le véritable artisan de la suprématie maritime de la Couronne d’Aragon en Méditerranée. Mais sa renommée est rapidement éclipsée par celle de Roger de Flor avec lequel on le confond parfois. Pierre III le Grand lui accorde le comté de Cocentaina, dans le royaume de Valence, dont il est le premier titulaire, pour services éminents rendus à la Couronne. les droits des rois aragonais contre les Angevins, après les Vêpres siciliennes, mettant en déroute une flotte française commandée par Barthélemy Bonvin et Guillaume Cornut, les amiraux de Charles d'Anjou[N 1] lors de la bataille de Malte, le 8 juin ou 8 juillet 1283. Aux termes du Traité d'Anagni de 1295, le roi Jacques II d'Aragon devait céder le trône sicilien aux Angevins ; son frère puîné Frédéric accepte cependant la couronne que lui offrent les Siciliens et combat alors contre les Angevins et contre son frère. Roger de Lauria appuie d'abord Frédéric qui le nomme « amiral de Sicile » le 25 mars 1296. Il finit par revenir au service de Jacques le 2 avril 1297. Ses terres siciliennes lui sont confisquées car il est considéré par le nouveau roi comme un traître, mais il vainc les Siciliens au Capo d'Orlando en 1299. Lorsque la paix de Caltabellotta est signée entre les deux frères, en 1302, Roger se retire dans son comté de Cocentaina.\nLe « Grand Capitaine » meurt à Valence le 17 janvier 1305 et est inhumé à Santes Creus près de Barcelone, comme il l'avait lui-même établi le 10 septembre 1291.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -220,6 +237,7 @@
     "id": 53,
     "titre": "Venceslas II roi de Bohême est couronné roi de Pologne",
     "date": 1300,
+    "mois": 6,
     "zones": [
       "Europe C. & Or."
     ],
@@ -233,7 +251,9 @@
     "id": 42,
     "titre": "Ladislas V (Venceslas III de Bohême)",
     "date": 1301,
+    "mois": 6,
     "date_fin": 1305,
+    "mois_fin": 8,
     "zones": [
       "Hongrie"
     ],
@@ -246,6 +266,7 @@
     "id": 54,
     "titre": "Les Guelfes noirs s'emparent de Florence",
     "date": 1301,
+    "mois": 11,
     "zones": [
       "Italie"
     ],
@@ -258,6 +279,7 @@
     "id": 55,
     "titre": "Charles de Valois Capitaine général de l’Eglise",
     "date": 1301,
+    "mois": 4,
     "zones": [
       "Papaute",
       "Italie"
@@ -285,12 +307,13 @@
     "id": 57,
     "titre": "Traité de Bruges",
     "date": 1301,
+    "mois": 6,
     "zones": [
       "France",
       "St Empire"
     ],
     "type": 2,
-    "description": "Le Barrois mouvant, également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France[1].\n\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique. Le Barrois mouvant relève par conséquent du Parlement de Paris (un « Parlement » était alors une cour de justice) tandis que le reste du duché relève de celui de Nancy. Cette situation se poursuit après l'intégration du duché de Lorraine dans le royaume de France en 1766, et ce jusqu'à la Révolution française. \nC'est le traité de Bruges confirme l'abandon par Albert de Habsbourg du Barrois mouvant à Philippe IV le Bel. \nLe 4 juin 1301, l'empereur Albert de Habsbourg abandonna à Philippe IV le Bel, par le traité de Bruges, à la suite de la célèbre entrevue des Quatre-Vaux, à l'été 1299, dans ce lieu-dit situé sur la commune de Rigny-Saint-Martin, toutes prétentions du Saint-Empire romain germanique sur le Barrois mouvant également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France,\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique.Sept ans plus tôt, la comtesse de Champagne Jeanne Ire a épousé le futur roi de France Philippe IV le Bel, faisant du Barrois le voisin immédiat du domaine royal. Voulant se ménager des alliances face à un voisin aussi puissant, Henri III de Bar épouse en 1293 Aliénor, fille du roi Édouard Ier d'Angleterre (1269-1297) Pressé d'envahir le comté de Champagne par son allié, le roi d'Angleterre, il est battu et fait prisonnier par le sire de Châtillon. En échange de sa libération avec quatre années de captivité dans les geôles du comté de Flandre, Henri doit céder quelques forteresses à son puissant voisin, mais surtout rendre hommage à Philippe le Bel pour une partie de son comté qui est alors nommé le Barrois mouvant, et s'engage à se rendre à Chypre pour aller combattre l'infidèle. il se fait ainsi homme lige du roi de France « pour tout ce qu'il possède et tient en franc-alleu, par deçà la Meuse vers le royaume de France »[4]. « Désormais [après le traité de Bruges], la frontière du royaume est marquée sur le sol ; elle se confond avec le cours de la Meuse »[\nIl se rend dans le royaume de Naples dans le but de s'embarquer pour l'Orient. À Naples, il prête main-forte au roi Charles II, qui doit repousser une invasion du roi Frédéric de Sicile. Il est grièvement blessé au cours d'un engagement et meurt peu après. Une partie du village de Domrémy — village natal de Jeanne d'Arc situé sur la rive gauche de la Meuse — dépendait de la châtellenie de Gondrecourt en Barrois non mouvant, tandis que l'autre partie était en Barrois mouvant et relevait à ce titre de la cour de justice royale de Chaumont (comté de Champagne).",
+    "description": "Le Barrois mouvant, également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France[1].\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique. Le Barrois mouvant relève par conséquent du Parlement de Paris (un « Parlement » était alors une cour de justice) tandis que le reste du duché relève de celui de Nancy. Cette situation se poursuit après l'intégration du duché de Lorraine dans le royaume de France en 1766, et ce jusqu'à la Révolution française. \nC'est le traité de Bruges confirme l'abandon par Albert de Habsbourg du Barrois mouvant à Philippe IV le Bel. \nLe 4 juin 1301, l'empereur Albert de Habsbourg abandonna à Philippe IV le Bel, par le traité de Bruges, à la suite de la célèbre entrevue des Quatre-Vaux, à l'été 1299, dans ce lieu-dit situé sur la commune de Rigny-Saint-Martin, toutes prétentions du Saint-Empire romain germanique sur le Barrois mouvant également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France,\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique.Sept ans plus tôt, la comtesse de Champagne Jeanne Ire a épousé le futur roi de France Philippe IV le Bel, faisant du Barrois le voisin immédiat du domaine royal. Voulant se ménager des alliances face à un voisin aussi puissant, Henri III de Bar épouse en 1293 Aliénor, fille du roi Édouard Ier d'Angleterre (1269-1297) Pressé d'envahir le comté de Champagne par son allié, le roi d'Angleterre, il est battu et fait prisonnier par le sire de Châtillon. En échange de sa libération avec quatre années de captivité dans les geôles du comté de Flandre, Henri doit céder quelques forteresses à son puissant voisin, mais surtout rendre hommage à Philippe le Bel pour une partie de son comté qui est alors nommé le Barrois mouvant, et s'engage à se rendre à Chypre pour aller combattre l'infidèle. il se fait ainsi homme lige du roi de France « pour tout ce qu'il possède et tient en franc-alleu, par deçà la Meuse vers le royaume de France »[4]. « Désormais [après le traité de Bruges], la frontière du royaume est marquée sur le sol ; elle se confond avec le cours de la Meuse »[\nIl se rend dans le royaume de Naples dans le but de s'embarquer pour l'Orient. À Naples, il prête main-forte au roi Charles II, qui doit repousser une invasion du roi Frédéric de Sicile. Il est grièvement blessé au cours d'un engagement et meurt peu après. Une partie du village de Domrémy — village natal de Jeanne d'Arc situé sur la rive gauche de la Meuse — dépendait de la châtellenie de Gondrecourt en Barrois non mouvant, tandis que l'autre partie était en Barrois mouvant et relevait à ce titre de la cour de justice royale de Chaumont (comté de Champagne).",
     "image": "images/Barrois mouvant.jpg",
     "legende": "Le duché de Bar et l’écheveau des limites entre royaume et Empire (carte Léonard Dauphant). https://books.openedition.org/edul/4285",
     "sources": "Wikipedia Article Barrois mouvant"
@@ -299,12 +322,13 @@
     "id": 58,
     "titre": "Arrestation de Bernard Saisset",
     "date": 1301,
+    "mois": 10,
     "zones": [
       "France",
       "Papaute"
     ],
     "type": 2,
-    "description": "L'arrestation de  Bernard Saisset évêque de Pamiers est le point de départ de la crise entre Philippe le Bel et Boniface VIII1. \n2 juillet : l'évêque Bernard Saisset, qui accuse Philippe IV le Bel d'être un faux-monnayeur, est arrêté par les arbalétriers du roi de France24 octobre : Bernard Saisset, évêque de Pamiers partisan des idées du pape Boniface VIII, comparait devant le Parlement à Senlis pour trahison[7]. Son procès déclenche une violente polémique entre légistes et théologiens des camps français et papal. Le pape réprimande Philippe le Bel, qui réplique en faisant proclamer l’indépendance de la monarchie au temporel par l’assemblée des États, auxquels le légiste Pierre Flote avait présenté une bulle falsifiée.La crise entre le roi de France et le pape trouve son origine dans un conflit de juridiction dans les régions du midi  dans les années 1290. au sujet des terres de la maison de St Gilles qui avaient été saisies suite à la croisade contre les albigeois, appartenant donc au domaine royal mais étant de facto administré par des prélats très enclins à instrumentaliser l’inquisition et à accuser d’hérésie tous leurs adversaires, dans cette région se développe un co-gouvernement symbiotique après les années 1270.  . . Un conflit éclate dans le diocèse de Pamiers opposant les proxis des deux camps : le néo évêque de Pamiers Bernard Sesset abbé de St Antonin soutenu par Boniface VIII   et le comte de Foix . Le pape nomme Sesset évêque sans en référer au roi et l'investit de pouvoir temporels. Ce type de conflit se multiplie à la fin du XIIIe . Nogaret fait arrêter l’évêque qu’il accuse d’hérésie (il aurait nié la sainteté de Louis IX et donc contesté la légitimité du pouvoir des Capétiens en Languedoc) Philippe le Bel ouvrit une enquête et mit les biens de l'évêque sous séquestre, au mépris de l'immunité ecclésiastique et sans doute par provocation envers Boniface VIII.Habilement Nogaret utilise l’arme même du pape ( l’accusation d’hérésie) contre l’église elle même Dans la nuit du 12 au 13 juillet 1301, alors qu'il est sur le point de s'échapper à Rome, Saisset est arrêté et transféré à Senlis, en Picardie (alors chasse royale). Il y comparaît devant le conseil royal le 24 octobre 1301.\nÀ l'accusation de haute trahison et d'injures contre la personne du roi sont alors ajoutées, à l'instigation de Guillaume de Nogaret, des accusations d'hérésie à son encontre. L'arrestation et la procédure royale contre Saisset, qui déboucha sur l'attentat d'Anagni en 1303. Boniface VIII ordonne au roi de libérer l'évêque afin que ce dernier puisse se rendre à Rome pour lui donner l'occasion de s'expliquer. Ce fait envenime à nouveau les relations entre le roi et le pape, prolongeant une querelle qui couvait depuis la bulle Clericis laicos de 1296. Aussi, pour le 1er novembre 1302, Boniface VIII convoque à Rome tous les prélats français afin d'examiner d'éventuelles sanctions.\nEn 1308, grâce à un pape plus conciliant (Clément V, premier pape d'Avignon), Saisset est gracié par le roi. Il reprend alors sa charge d'évêque de Pamiers. Il s'engagera même avec Philippe le Bel, en 1308, sur le paréage de la bastide de Villeneuve-du-Paréage, près de Pamiers. Il décède à Pamiers vers 1314.",
+    "description": "L'arrestation de  Bernard Saisset évêque de Pamiers est le point de départ de la crise entre Philippe le Bel et Boniface VIII1. \n2 juillet : l'évêque Bernard Saisset, qui accuse Philippe IV le Bel d'être un faux-monnayeur, est arrêté par les arbalétriers du roi de France le 24 octobre : Bernard Saisset, évêque de Pamiers partisan des idées du pape Boniface VIII, comparait devant le Parlement à Senlis pour trahison[7]. Son procès déclenche une violente polémique entre légistes et théologiens des camps français et papal. Le pape réprimande Philippe le Bel, qui réplique en faisant proclamer l’indépendance de la monarchie au temporel par l’assemblée des États, auxquels le légiste Pierre Flote avait présenté une bulle falsifiée.La crise entre le roi de France et le pape trouve son origine dans un conflit de juridiction dans les régions du midi  dans les années 1290. au sujet des terres de la maison de St Gilles qui avaient été saisies suite à la croisade contre les albigeois, appartenant donc au domaine royal mais étant de facto administré par des prélats très enclins à instrumentaliser l’inquisition et à accuser d’hérésie tous leurs adversaires, dans cette région se développe un co-gouvernement symbiotique après les années 1270.  . . Un conflit éclate dans le diocèse de Pamiers opposant les proxis des deux camps : le néo évêque de Pamiers Bernard Sesset abbé de St Antonin soutenu par Boniface VIII   et le comte de Foix . Le pape nomme Sesset évêque sans en référer au roi et l'investit de pouvoir temporels. Ce type de conflit se multiplie à la fin du XIIIe . Nogaret fait arrêter l’évêque qu’il accuse d’hérésie (il aurait nié la sainteté de Louis IX et donc contesté la légitimité du pouvoir des Capétiens en Languedoc) Philippe le Bel ouvrit une enquête et mit les biens de l'évêque sous séquestre, au mépris de l'immunité ecclésiastique et sans doute par provocation envers Boniface VIII.Habilement Nogaret utilise l’arme même du pape ( l’accusation d’hérésie) contre l’église elle même Dans la nuit du 12 au 13 juillet 1301, alors qu'il est sur le point de s'échapper à Rome, Saisset est arrêté et transféré à Senlis, en Picardie (alors chasse royale). Il y comparaît devant le conseil royal le 24 octobre 1301.\nÀ l'accusation de haute trahison et d'injures contre la personne du roi sont alors ajoutées, à l'instigation de Guillaume de Nogaret, des accusations d'hérésie à son encontre. L'arrestation et la procédure royale contre Saisset, qui déboucha sur l'attentat d'Anagni en 1303. Boniface VIII ordonne au roi de libérer l'évêque afin que ce dernier puisse se rendre à Rome pour lui donner l'occasion de s'expliquer. Ce fait envenime à nouveau les relations entre le roi et le pape, prolongeant une querelle qui couvait depuis la bulle Clericis laicos de 1296. Aussi, pour le 1er novembre 1302, Boniface VIII convoque à Rome tous les prélats français afin d'examiner d'éventuelles sanctions.\nEn 1308, grâce à un pape plus conciliant (Clément V, premier pape d'Avignon), Saisset est gracié par le roi. Il reprend alors sa charge d'évêque de Pamiers. Il s'engagera même avec Philippe le Bel, en 1308, sur le paréage de la bastide de Villeneuve-du-Paréage, près de Pamiers. Il décède à Pamiers vers 1314.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -312,6 +336,7 @@
     "id": 59,
     "titre": "Bulles Ausculta Fili et Unam Sanctam",
     "date": 1301,
+    "mois": 11,
     "date_fin": 1302,
     "zones": [
       "France",
@@ -363,6 +388,7 @@
     "id": 1,
     "titre": "Bataille de Courtrai (Éperons d'or)",
     "date": 1302,
+    "mois": 7,
     "zones": [
       "France"
     ],
@@ -376,6 +402,7 @@
     "id": 29,
     "titre": "Paix de Caltabellotta",
     "date": 1302,
+    "mois": 8,
     "zones": [
       "Italie"
     ],
@@ -413,7 +440,9 @@
     "id": 65,
     "titre": "Jacques II dit le Juste",
     "date": 1302,
+    "mois": 6,
     "date_fin": 1314,
+    "mois_fin": 11,
     "zones": [
       "Aragon"
     ],
@@ -440,6 +469,7 @@
     "id": 67,
     "titre": "Bataille de Bapheus",
     "date": 1302,
+    "mois": 7,
     "zones": [
       "Byzance",
       "Monde islamique"
@@ -467,11 +497,12 @@
     "id": 69,
     "titre": "États généraux du royaume de France",
     "date": 1302,
+    "mois": 5,
     "zones": [
       "France"
     ],
     "type": 1,
-    "description": "1ere  réunion des États généraux du royaume de France , convoqués par Philippe IV le Bel, à Notre-Dame de Paris. Les États approuvent le roi contre le pape Boniface VIII. \nDans le système politique du royaume de France, les états généraux du royaume (ou états généraux) étaient une assemblée réunissant les trois ordres (les états) de la société : la noblesse, le clergé et le Tiers état. Ils étaient convoqués, sur ordre du roi, dans des circonstances exceptionnelles (crise politique ou financière, guerre ou question diplomatique majeure). Cette assemblée était, entre autres, seule habilitée à réformer la fiscalité générale ou, dans une moindre mesure, à statuer sur des problèmes dynastiques, en vue de traiter la crise rencontrée.\n\nL'institution est créée en 1302 par le roi Philippe le Bel pour donner une apparente légitimité à ses décisions, en réaction à la bulle Ausculta fili du pape Boniface VIII. À l'origine, ils réunissaient le clergé, la noblesse et la bourgeoisie des bonnes villes (que l'on nommera rétrospectivement, à partir de la Révolution, troisième état puis tiers état).\n\nCette sorte d'assemblée « nationale » avant l'heure est fondée sur les lois fondamentales du royaume de France selon lesquelles :\n\nles peuples de France ne sont pas tributaires mais libres ; aucune contribution ne peut être exigée d'eux sans leur consentement ;\nle gouvernement du roi se fait toujours par conseils (les états généraux étant le conseil le plus large qu'un souverain puisse réunir autour de lui).\nCette assemblée n'avait en revanche aucun rôle réglementaire ou juridictionnel : ces compétences relevaient des parlements avec lesquels elle ne doit pas être confondue, et qui n'avaient pas non plus de pouvoir législatif, lequel appartenait au roi. Les députés des états généraux, quel que soit leur ordre respectif, étaient investis d'un mandat impératif et non représentatif : ils étaient porteurs des doléances des habitants de leurs circonscriptions (bailliages et sénéchaussées) et ne pouvaient nullement s'arroger le droit de parler en leur nom — règle que les députés des états généraux de 1789 n'ont pas respectée puisqu'ils se sont arrogés un mandat représentatif sans avoir été élus pour cela.",
+    "description": "1ere  réunion des États généraux du royaume de France , convoqués par Philippe IV le Bel, à Notre-Dame de Paris. Les États approuvent le roi contre le pape Boniface VIII. \nDans le système politique du royaume de France, les états généraux du royaume (ou états généraux) étaient une assemblée réunissant les trois ordres (les états) de la société : la noblesse, le clergé et le Tiers état. Ils étaient convoqués, sur ordre du roi, dans des circonstances exceptionnelles (crise politique ou financière, guerre ou question diplomatique majeure). Cette assemblée était, entre autres, seule habilitée à réformer la fiscalité générale ou, dans une moindre mesure, à statuer sur des problèmes dynastiques, en vue de traiter la crise rencontrée.\n\nL'institution est créée en 1302 par le roi Philippe le Bel pour donner une apparente légitimité à ses décisions, en réaction à la bulle Ausculta fili du pape Boniface VIII. À l'origine, ils réunissaient le clergé, la noblesse et la bourgeoisie des bonnes villes (que l'on nommera rétrospectivement, à partir de la Révolution, troisième état puis tiers état).\nCette sorte d'assemblée « nationale » avant l'heure est fondée sur les lois fondamentales du royaume de France selon lesquelles :\nles peuples de France ne sont pas tributaires mais libres ; aucune contribution ne peut être exigée d'eux sans leur consentement ;\nle gouvernement du roi se fait toujours par conseils (les états généraux étant le conseil le plus large qu'un souverain puisse réunir autour de lui).\nCette assemblée n'avait en revanche aucun rôle réglementaire ou juridictionnel : ces compétences relevaient des parlements avec lesquels elle ne doit pas être confondue, et qui n'avaient pas non plus de pouvoir législatif, lequel appartenait au roi. Les députés des états généraux, quel que soit leur ordre respectif, étaient investis d'un mandat impératif et non représentatif : ils étaient porteurs des doléances des habitants de leurs circonscriptions (bailliages et sénéchaussées) et ne pouvaient nullement s'arroger le droit de parler en leur nom — règle que les députés des états généraux de 1789 n'ont pas respectée puisqu'ils se sont arrogés un mandat représentatif sans avoir été élus pour cela.",
     "image": "",
     "sources": "https://fr.wikipedia.org/wiki/%C3%89tats_g%C3%A9n%C3%A9raux_(France)"
   },
@@ -479,6 +510,7 @@
     "id": 70,
     "titre": "Matines de Bruges",
     "date": 1302,
+    "mois": 5,
     "zones": [
       "France"
     ],
@@ -506,12 +538,14 @@
     "id": 34,
     "titre": "Benoit XI",
     "date": 1303,
+    "mois": 10,
     "date_fin": 1304,
+    "mois_fin": 7,
     "zones": [
       "Papaute"
     ],
     "type": 1,
-    "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique. C'est le deuxième pape issu de l'ordre dominicain.\n\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel. Le pape s'apprêtait à condamner Guillaume de Nogaret par contumace au moment où il mourut.",
+    "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique. C'est le deuxième pape issu de l'ordre dominicain.\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel. Le pape s'apprêtait à condamner Guillaume de Nogaret par contumace au moment où il mourut.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -519,12 +553,14 @@
     "id": 37,
     "titre": "Clément V",
     "date": 1305,
+    "mois": 6,
     "date_fin": 1314,
+    "mois_fin": 4,
     "zones": [
       "Papaute"
     ],
     "type": 1,
-    "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France.\n\nOn retient de lui l'image d'un pape de bonne foi qui manquait d'audace, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne en se soumettant au roi Philippe le Bel.",
+    "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France.\nOn retient de lui l'image d'un pape de bonne foi qui manquait d'audace, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne en se soumettant au roi Philippe le Bel.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -532,12 +568,14 @@
     "id": 43,
     "titre": "Béla V (Othon III de Bavière)",
     "date": 1305,
+    "mois": 8,
     "date_fin": 1308,
+    "mois_fin": 5,
     "zones": [
       "Hongrie"
     ],
     "type": 1,
-    "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\n\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
+    "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -545,7 +583,9 @@
     "id": 35,
     "titre": "Edouard II",
     "date": 1307,
+    "mois": 7,
     "date_fin": 1327,
+    "mois_fin": 1,
     "zones": [
       "Angleterre"
     ],
@@ -558,7 +598,9 @@
     "id": 36,
     "titre": "Henri VII de Luxembourg",
     "date": 1308,
+    "mois": 6,
     "date_fin": 1313,
+    "mois_fin": 8,
     "zones": [
       "St Empire"
     ],
@@ -571,12 +613,14 @@
     "id": 44,
     "titre": "Carobert d'Anjou-Sicile",
     "date": 1308,
+    "mois": 5,
     "date_fin": 1342,
+    "mois_fin": 7,
     "zones": [
       "Hongrie"
     ],
     "type": 1,
-    "description": "Petit-fils de Charles Ier d'Anjou, Carobert doit lutter contre ses compétiteurs Venceslas de Bohême puis Othon de Bavière avant de s'imposer sur le trône de Hongrie.\n\nIl brise la puissance de la haute noblesse magyare en s'appuyant sur la petite et moyenne noblesse. Il engage contre les familles de barons autonomes — comme les Csak et les Aba qui s'appuient sur leurs mines d'argent de Slovaquie — une lutte sans merci, leur enlevant successivement leurs forteresses.",
+    "description": "Petit-fils de Charles Ier d'Anjou, Carobert doit lutter contre ses compétiteurs Venceslas de Bohême puis Othon de Bavière avant de s'imposer sur le trône de Hongrie.\nIl brise la puissance de la haute noblesse magyare en s'appuyant sur la petite et moyenne noblesse. Il engage contre les familles de barons autonomes — comme les Csak et les Aba qui s'appuient sur leurs mines d'argent de Slovaquie — une lutte sans merci, leur enlevant successivement leurs forteresses.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -596,19 +640,24 @@
     "id": 39,
     "titre": "Robert Ier le Sage",
     "date": 1309,
+    "mois": 5,
     "date_fin": 1343,
+    "mois_fin": 1,
     "zones": [
       "Naples"
     ],
     "type": 1,
-    "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\n\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
+    "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
     "image": "",
     "sources": "Wikipedia"
   },
   {
     "id": 3,
-    "titre": "Suppression de l'ordre du Temple",
-    "date": 1312,
+    "titre": "Concile de Vienne : Suppression de l'ordre du Temple",
+    "date": 1311,
+    "mois": 10,
+    "date_fin": 1312,
+    "mois_fin": 5,
     "zones": [
       "France"
     ],
@@ -633,6 +682,7 @@
     "id": 6,
     "titre": "Début de la guerre de Cent Ans",
     "date": 1337,
+    "mois": 5,
     "zones": [
       "France"
     ],
@@ -645,6 +695,7 @@
     "id": 7,
     "titre": "Bataille de Crécy",
     "date": 1346,
+    "mois": 8,
     "zones": [
       "Angleterre"
     ],
