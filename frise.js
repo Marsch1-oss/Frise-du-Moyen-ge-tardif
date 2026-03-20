@@ -201,6 +201,7 @@ function renderLevel(level, rangeStart) {
 
   updateBreadcrumb();
   updateNavButtons();
+  updatePeriodBanner(level, rangeStart || 1300);
 
   var container = document.getElementById('frise-container');
   container.innerHTML = '';
@@ -680,6 +681,39 @@ function applySearch() {
     countEl.textContent = totalMatch > 0
       ? totalMatch + ' résultat' + (totalMatch > 1 ? 's' : '')
       : 'Aucun résultat';
+  }
+}
+
+
+/* ── Cartouche de période ────────────────────────────────────────────*/
+function updatePeriodBanner(level, rangeStart) {
+  var lbl = document.getElementById('pb-label');
+  var sub = document.getElementById('pb-sub');
+  if (!lbl || !sub) return;
+
+  var ROMAN = {
+    1000:'XIe', 1100:'XIIe', 1200:'XIIIe',
+    1300:'XIVe', 1400:'XVe', 1500:'XVIe'
+  };
+
+  if (level === 1) {
+    lbl.textContent = 'XIVe et XVe siècle';
+    sub.textContent = '1300 — 1500';
+  } else if (level === 2) {
+    var cent = Math.floor(rangeStart / 100) * 100;
+    var rom  = ROMAN[cent] || (cent + 1) + 'e';
+    lbl.textContent = rom + ' siècle';
+    sub.textContent = rangeStart + ' — ' + (rangeStart + 100);
+  } else if (level === 3) {
+    var cent2 = Math.floor(rangeStart / 100) * 100;
+    var rom2  = ROMAN[cent2] || (cent2 + 1) + 'e';
+    lbl.textContent = rom2 + ' siècle — décennie ' + rangeStart;
+    sub.textContent = rangeStart + ' — ' + (rangeStart + 10);
+  } else if (level === 4) {
+    var cent3 = Math.floor(rangeStart / 100) * 100;
+    var rom3  = ROMAN[cent3] || (cent3 + 1) + 'e';
+    lbl.textContent = 'Année ' + rangeStart;
+    sub.textContent = rom3 + ' siècle';
   }
 }
 
