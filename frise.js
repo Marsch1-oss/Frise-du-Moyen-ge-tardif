@@ -3,32 +3,40 @@
 var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Papaute',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
-  'Europe C. & Or.', 'Byzance', 'Ottomans', 'Monde islamique', 'Orient', 'Monde',
+  'Europe C. & Or.', 'Pologne', 'Russie',
+  'Byzance', 'Ottomans', 'Monde islamique', 'Orient',
+  'Japon', 'Chine', 'Inde', 'Monde',
   'Alsace',
-  'Art', 'Techniques', 'Idees'
+  'Art', 'Techniques', 'Sciences', 'Idees'
 ];
 
 var COLORS = {
-  'France':           { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
-  'Angleterre':       { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
-  'St Empire':        { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
-  'Papaute':          { bg: '#7A1A1A', light: '#F5E0E0', text: '#4A0808' },
-  'Naples':           { bg: '#1A5C4A', light: '#E0F5EE', text: '#0A3028' },
-  'Italie':           { bg: '#1A6B3C', light: '#E6F5ED', text: '#0F3D24' },
-  'Castille':         { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
-  'Aragon':           { bg: '#6B2A10', light: '#F5E8E0', text: '#3A1508' },
-  'Portugal':         { bg: '#3A6B10', light: '#EAF5E0', text: '#1E3A08' },
-  'Hongrie':          { bg: '#8B3A1A', light: '#F5E8E0', text: '#5C2008' },
-  'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
-  'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
-  'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
-  'Ottomans':          { bg: '#8B1A3A', light: '#F5E0E8', text: '#5C0A22' },
-  'Orient':            { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
-  'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
-  'Alsace':           { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
-  'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
-  'Techniques':       { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
-  'Idees':            { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
+  'France':              { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
+  'Angleterre':          { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
+  'St Empire':           { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
+  'Papaute':             { bg: '#7A1A1A', light: '#F5E0E0', text: '#4A0808' },
+  'Naples':              { bg: '#1A5C4A', light: '#E0F5EE', text: '#0A3028' },
+  'Italie':              { bg: '#1A6B3C', light: '#E6F5ED', text: '#0F3D24' },
+  'Castille':            { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
+  'Aragon':              { bg: '#6B2A10', light: '#F5E8E0', text: '#3A1508' },
+  'Portugal':            { bg: '#3A6B10', light: '#EAF5E0', text: '#1E3A08' },
+  'Hongrie':             { bg: '#8B3A1A', light: '#F5E8E0', text: '#5C2008' },
+  'Europe C. & Or.':     { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
+  'Pologne':             { bg: '#8B1A4A', light: '#F5E0EC', text: '#5C0A2E' },
+  'Russie':              { bg: '#5C1A1A', light: '#F0E0E0', text: '#3A0A0A' },
+  'Byzance':             { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
+  'Ottomans':            { bg: '#8B1A3A', light: '#F5E0E8', text: '#5C0A22' },
+  'Monde islamique':     { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
+  'Orient':              { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
+  'Japon':               { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
+  'Chine':               { bg: '#8B3A10', light: '#F5EAE0', text: '#5C2008' },
+  'Inde':                { bg: '#6B5A10', light: '#F5F0D8', text: '#3A3008' },
+  'Monde':               { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
+  'Alsace':              { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
+  'Art':                 { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
+  'Techniques':          { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
+  'Sciences':            { bg: '#1A4A5C', light: '#E0EEF5', text: '#0A2A3A' },
+  'Idees':               { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
 };
 
 var ZONE_ALIASES = {
@@ -60,6 +68,7 @@ var CHIP_PAD = 6;
 var TRACK_PX = 820;
 
 var currentLevel   = 1;
+var currentYear    = null;
 var searchTerm     = '';
 var currentCentury = null;
 var currentDecade  = null;
@@ -179,9 +188,14 @@ function renderLevel(level, rangeStart) {
   } else if (level === 2) {
     currentCentury = rangeStart;
     start = rangeStart; end = rangeStart + 100; tickStep = 10;
-  } else {
+  } else if (level === 3) {
     currentDecade = rangeStart;
     start = rangeStart; end = rangeStart + 10; tickStep = 1;
+  } else {
+    currentYear = rangeStart;
+    currentDecade = Math.floor(rangeStart / 10) * 10;
+    currentCentury = Math.floor(rangeStart / 100) * 100;
+    start = rangeStart; end = rangeStart + 1; tickStep = 0.0833; /* 1/12 */
   }
 
   updateBreadcrumb();
@@ -199,8 +213,15 @@ function renderLevel(level, rangeStart) {
       var e = allEvents[j];
       if (e.zones.indexOf(zone) === -1) continue;
       if (!visibleAtLevel(e, level)) continue;
-      var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
-      if (e.date > end || fin < start) continue;
+      var eDateF = e.date + (e.mois ? (e.mois - 1) / 12 : 0);
+      var fin = (e.date_fin && e.date_fin > e.date)
+        ? e.date_fin + (e.mois_fin ? (e.mois_fin - 1) / 12 : 0)
+        : eDateF;
+      if (level === 4) {
+        if (eDateF > end || fin < start) continue;
+      } else {
+        if (e.date > end || (e.date_fin ? e.date_fin : e.date) < start) continue;
+      }
       evts.push(e);
     }
     container.appendChild(buildTrack(zone, evts, start, end, level));
@@ -212,7 +233,9 @@ function renderLevel(level, rangeStart) {
     ? 'Cliquez sur une periode pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
     : level === 2
     ? 'Cliquez sur une decennie pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
-    : 'Cliquez sur un evenement pour afficher sa fiche complete';
+    : level === 3
+    ? 'Cliquez sur une annee pour voir le detail mensuel \u00b7 cliquez sur un evenement pour sa fiche'
+    : 'Vue mensuelle \u00b7 cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
   /* Ré-applique la recherche si active */
   if (searchTerm) applySearch();
@@ -255,6 +278,33 @@ function buildAxis(start, end, step, level) {
         }));
       })(d);
     }
+  } else if (level === 3) {
+    /* Bandes annuelles cliquables */
+    for (var y = currentDecade; y < currentDecade + 10; y++) {
+      (function(yr) {
+        var band = makeBand(yr, yr + 1, start, end, function() {
+          renderLevel(4, yr);
+        });
+        band.classList.add('axis-band-year');
+        bar.appendChild(band);
+      })(y);
+    }
+  } else if (level === 4) {
+    /* Bandes mensuelles */
+    var MOIS = ['Jan','év','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+    for (var m = 0; m < 12; m++) {
+      var mStart = currentYear + m / 12;
+      var mEnd   = currentYear + (m + 1) / 12;
+      var tick = document.createElement('div');
+      tick.className = 'tick tick-month';
+      tick.style.left = pct(mStart, start, end);
+      tick.textContent = MOIS[m];
+      bar.appendChild(tick);
+      var tl = document.createElement('div');
+      tl.className = 'tick-line';
+      tl.style.left = pct(mStart, start, end);
+      bar.appendChild(tl);
+    }
   }
   axis.appendChild(bar);
   return axis;
@@ -274,6 +324,7 @@ function chipW(evt, start, end, level) {
   if (evt.date_fin && evt.date_fin > evt.date)
     return (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start) * 100;
   if (level === 1) return 1.5;
+  if (level === 4) return (Math.min(evt.titre.length, 35) * 7 + 16) / TRACK_PX * 100;
   return (Math.min(evt.titre.length, level === 3 ? 28 : 20) * 7 + 16) / TRACK_PX * 100;
 }
 
@@ -365,16 +416,18 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
 
   } else {
     chip.style.height    = ROW_H + 'px';
-    chip.style.left      = pct(evt.date, start, end);
+    var evtDateF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
+    chip.style.left      = pct(evtDateF, start, end);
     chip.style.transform = 'translateX(-50%)';
 
-    if (level === 3) {
+    if (level === 4 || level === 3) {
       chip.classList.add('chip-full');
       if (type === 1) chip.classList.add('chip-type1');
       if (type === 3) chip.classList.add('chip-type3');
       chip.style.background = col.bg;
       chip.style.color      = '#fff';
-      chip.textContent = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '\u2026' : evt.titre;
+      var maxC = level === 4 ? 40 : 28;
+      chip.textContent = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
@@ -417,10 +470,14 @@ function openModal(evt, zone) {
     typeEl.className = 'modal-type-badge type' + t;
   }
 
-  document.getElementById('modal-date').textContent =
-    (evt.date_fin && evt.date_fin > evt.date)
-      ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
-      : evt.date + ' apr. J.-C.';
+  var MOIS_L = ['janvier','février','mars','avril','mai','juin',
+                'juillet','août','septembre','octobre','novembre','décembre'];
+  var dateStr = evt.mois ? MOIS_L[evt.mois - 1] + ' ' + evt.date : evt.date + ' apr. J.-C.';
+  if (evt.date_fin && evt.date_fin > evt.date) {
+    var finStr = evt.mois_fin ? MOIS_L[evt.mois_fin - 1] + ' ' + evt.date_fin : evt.date_fin + ' apr. J.-C.';
+    dateStr += ' \u2013 ' + finStr;
+  }
+  document.getElementById('modal-date').textContent = dateStr;
   document.getElementById('modal-title').textContent = evt.titre;
 
   var descEl = document.getElementById('modal-desc');
@@ -467,9 +524,16 @@ function goLevel(level) {
   if      (level === 1)                             renderLevel(1);
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
   else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
+  else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
 }
 
 function navigateDecade(direction) {
+  if (currentLevel === 4 && currentYear !== null) {
+    var nextY = currentYear + direction;
+    if (nextY < 1290 || nextY > 1509) return;
+    renderLevel(4, nextY);
+    return;
+  }
   if (currentDecade === null) return;
   var next = currentDecade + direction * 10;
   if (next < 1290 || next > 1500) return;
@@ -482,17 +546,27 @@ function updateBreadcrumb() {
   if (currentLevel >= 2 && currentCentury !== null)
     html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(2)">'
           + currentCentury + '\u2013' + (currentCentury + 100) + '</span>';
-  if (currentLevel === 3 && currentDecade !== null)
-    html += '<span class="bc-sep"> \u203a </span><span class="bc-item">'
+  if (currentLevel >= 3 && currentDecade !== null)
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(3)">'
           + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
+  if (currentLevel === 4 && currentYear !== null)
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item">' + currentYear + '</span>';
   document.getElementById('breadcrumb').innerHTML = html;
 }
 
 function updateNavButtons() {
   document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
     btn.classList.toggle('active', i + 1 === currentLevel);
-    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade === null);
+    btn.disabled = (i === 1 && currentCentury === null)
+                || (i === 2 && currentDecade  === null)
+                || (i === 3 && currentDecade  === null);
   });
+  /* Bouton vue annuelle */
+  var btn4 = document.getElementById('btn-level4');
+  if (btn4) {
+    btn4.disabled = (currentDecade === null);
+    btn4.classList.toggle('active', currentLevel === 4);
+  }
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
   var lbl  = document.getElementById('decade-label');

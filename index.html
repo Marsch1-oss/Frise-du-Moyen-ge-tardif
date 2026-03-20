@@ -252,6 +252,19 @@
       padding-top: 0.1rem;
     }
 
+    .tick-month {
+      font-size: 0.62rem;
+      color: var(--ink-muted);
+      transform: translateX(-50%);
+      top: -16px;
+      letter-spacing: 0;
+    }
+    .axis-band-year {
+      background: rgba(154,107,26,0.06);
+      border-left: 1px solid rgba(154,107,26,0.2);
+    }
+    .axis-band-year:hover { background: rgba(154,107,26,0.15); }
+
     /* ── Pied de page ── */
     footer { text-align: center; padding: 1.2rem; font-size: 0.8rem; color: var(--ink-muted); border-top: 1px solid var(--border); font-style: italic; }
 
@@ -268,7 +281,7 @@
 
 <header>
   <h1 class="site-title">Frise du Moyen &Acirc;ge tardif</h1>
-  <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. &amp; Or. &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Idees</p>
+  <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. & Or. &middot; Pologne &middot; Russie &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Japon &middot; Chine &middot; Inde &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Sciences &middot; Idees</p>
 </header>
 
 <main>
@@ -277,6 +290,7 @@
     <button class="nav-btn active" onclick="goLevel(1)">Vue d&rsquo;ensemble</button>
     <button class="nav-btn" id="btn-level2" onclick="goLevel(2)" disabled>Vue si&egrave;cle</button>
     <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
+    <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
   </div>
 
   <div id="breadcrumb"></div>
