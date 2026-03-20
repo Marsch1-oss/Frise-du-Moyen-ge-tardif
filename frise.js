@@ -87,9 +87,10 @@ function normalizeZone(z) {
 
 function visibleAtLevel(evt, level) {
   var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
+  var effectiveLevel = level >= 3 ? 3 : level; /* niveau 4 = niveau 3 pour la visibilité */
   if (isNaN(t) || t === 1) return true;
-  if (t === 2) return level >= 2;
-  if (t === 3) return level >= 3;
+  if (t === 2) return effectiveLevel >= 2;
+  if (t === 3) return effectiveLevel >= 3;
   return true;
 }
 
@@ -571,14 +572,16 @@ function updateNavButtons() {
   var next = document.getElementById('btn-next');
   var lbl  = document.getElementById('decade-label');
   if (!prev || !next) return;
-  var show = (currentLevel === 3 && currentDecade !== null);
+  var show = ((currentLevel === 3 || currentLevel === 4) && currentDecade !== null);
   prev.style.display = show ? 'inline-block' : 'none';
   next.style.display = show ? 'inline-block' : 'none';
   if (lbl) lbl.style.display = show ? 'inline-block' : 'none';
   if (show) {
-    prev.disabled = currentDecade <= 1290;
-    next.disabled = currentDecade >= 1500;
-    if (lbl) lbl.textContent = currentDecade + '\u2013' + (currentDecade + 10);
+    prev.disabled = currentLevel === 4 ? currentYear <= 1290 : currentDecade <= 1290;
+    next.disabled = currentLevel === 4 ? currentYear >= 1509 : currentDecade >= 1500;
+    if (lbl) lbl.textContent = currentLevel === 4
+      ? currentYear + ''
+      : currentDecade + '\u2013' + (currentDecade + 10);
   }
 }
 
