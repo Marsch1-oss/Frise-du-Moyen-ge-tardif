@@ -1,0 +1,908 @@
+[
+  {
+    "id": 31,
+    "titre": "Edouard 1er Longues Jambes",
+    "date": 1272,
+    "date_fin": 1307,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Fils aîné du roi Henri III, Édouard s'implique très jeune dans les intrigues politiques du royaume. Il soutient brièvement le mouvement des barons réformateurs mené par Simon de Montfort avant de se réconcilier avec son père, auquel il reste fidèle durant toute la Seconde Guerre des barons (1264-1267).\n\nUne grande partie du règne d'Édouard Ier est consacrée à la réforme de l'administration royale et du droit commun. Il conquiert le pays de Galles (1282-1283) et l'intègre au royaume d'Angleterre. La guerre éclate avec l'Écosse en 1296 et se poursuit durant le reste du règne.\n\nSa grande taille et son tempérament colérique font d'Édouard Ier un homme craint, mais il gagne le respect de ses sujets par son comportement digne du roi idéal. C'est lui qui expulse les Juifs du royaume d'Angleterre en 1290 ; l'édit d'Expulsion reste en vigueur jusqu'en 1656.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Edward_I_-_Westminster_Abbey_Sedilia.jpg/330px-Edward_I_-_Westminster_Abbey_Sedilia.jpg",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 40,
+    "titre": "Andronic II Paléologue",
+    "date": 1282,
+    "date_fin": 1328,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople menée par son père en 1261. Toutefois, l'Empire est épuisé par la politique extérieure de Michel VIII. Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières.\n\nMalgré un trésor vide et des forces armées diminuées, Andronic a contribué à une renaissance culturelle, ainsi qu'à des réformes financières et judiciaires durables. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à l'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 2,
+    "titre": "Philippe IV le Bel",
+    "date": 1285,
+    "date_fin": 1314,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Il devient roi de France en octobre 1285 à l'âge de 17 ans. Son règne est notamment marqué par un renforcement important du pouvoir royal et une mise au pas du duc-roi de Guyenne ainsi que de la Flandre en révolte.\n\nPhilippe IV croit trouver une solution à ses difficultés financières en abattant l'ordre du Temple et en expulsant les Juifs tout en confisquant leurs biens. Il rétablit une monnaie d'or qui va rester stable pendant plus d'un siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Philip_iv_and_family._2_%28detail_crop%29.jpg",
+    "sources": "Grandes Chroniques de France"
+  },
+  {
+    "id": 38,
+    "titre": "Charles II d'Anjou dit le Boiteux",
+    "date": 1285,
+    "date_fin": 1309,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "description": "Né vers 1254, mort le 6 mai 1309 à Naples, fils de Charles Ier d'Anjou et de Béatrice de Provence, neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré prince de Salerne, puis roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine, et prince d'Achaïe ou de Morée jusqu'en 1289.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Charles_2_of_Naples.jpg",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 41,
+    "titre": "André III Arpade",
+    "date": 1290,
+    "date_fin": 1301,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "André III, dernier des Árpád, élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit lutter pour conserver sa couronne contre l'empereur Albert de Habsbourg et les prétentions de Charles Martel d'Anjou-Naples.\n\nIl s'appuie sur la chevalerie pour régner et est le premier roi à convoquer une diète en Hongrie. Il est le dernier représentant mâle de sa dynastie ; le pays connaît une période anarchique après sa mort.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 33,
+    "titre": "Boniface VIII",
+    "date": 1294,
+    "date_fin": 1303,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que toute créature humaine doit être soumise au pontife romain.\n\nCette intransigeance contribue à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'attentat d'Anagni (7-8 septembre 1303).",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 45,
+    "titre": "Michel IX Paléologue co-empereur",
+    "date": 1294,
+    "date_fin": 1320,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Fils aîné de l'empereur byzantin Andronic II Paléologue et d'Anne de Hongrie. Il régna conjointement avec son père de 1294 à sa mort en 1320, premier co-empereur à exercer le pouvoir avec les mêmes prérogatives que son collègue.\n\nIl conduisit plusieurs campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, qui se terminèrent par des échecs ou des demi-succès. Il fut nommé gouverneur de Thessalonique où il mourut de chagrin après la perte de sa fille et de son fils.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 71,
+    "titre": "Guerre vénéto-byzantine",
+    "date": 1296,
+    "date_fin": 1302,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "Contexte : Depuis la prise de Constantinople en 1204, les républiques maritimes italiennes occupent une grande partie de l'ancien espace maritime byzantin. Que ce soit Gênes ou Venise, chacune des cités n'hésite pas à se confronter avec Constantinople et à lui faire concurrence en ce qui concerne les fruits du commerce régional. La chute de l'Empire latin de Constantinople soutenu par Venise entraîne un certain déclassement de celle-ci dont profite Gênes. Ainsi cette dernière ville assure-t-elle à la fois le ravitaillement de l'Empire de nombreuses denrées mais aussi la défense maritime de celui-ci. Toutefois, on note un certain retour en grâce de Venise à partir de 1285. Le traité de 1277 est en effet rétabli. Les Vénitiens bénéficient d'un quartier au sein de la cité impériale et voient leur souveraineté confirmée sur la Crète. La chute de Saint-Jean-d'Acre en 1291 et la fin des États latins d'Orient privent Venise de sa dernière place dans la région. Très vite, elle se tourne vers la mer Noire, monopolisée par les Génois qui se sont implantés dans les anciens territoires byzantins de Crimée\nLa guerre vénéto-byzantine de 1296-1302 est un conflit entre la république de Venise et l'Empire byzantin, venu se greffer sur une guerre opposant Venise et la république de Gênes entre 1294 et 1299. En juillet 1296, quelques jours après qu'un tremblement de terre eut sérieusement endommagé la capitale byzantine, les Vénitiens lancent une attaque contre Constantinople et Galata[39]. Andronic II fait arrêter tous les citoyens vénitiens à titre de représailles mais ne peut empêcher la flotte vénitienne de mettre à sac les habitations génoises et byzantines situées en dehors des murailles. Très vite, Andronic se retrouve pris au piège dans l'escalade des tensions entre Venise et Gênes. Cette dernière réagit en massacrant les nobles vénitiens de Constantinople[40]. En retour, et malgré les explications d'Andronic, Venise envoie 18 navires à Constantinople. Ces derniers exigent une indemnisation et, face au refus des Byzantins, ils brûlent certains bâtiments près des Blachernes, avant de piller les côtes de la mer de Marmara pour constituer des prisonniers et obtenir indirectement l'indemnisation attendue grâce aux rançons. Si la lutte entre Venise et Gênes s'achève en 1299, après la défaite de Venise l'année précédente, la guerre byzantino-vénitienne se prolonge encore jusqu'en 1302, date à laquelle Andronic refuse à nouveau de verser une quelconque indemnité. Les Vénitiens envoient alors une nouvelle flotte ravager les alentours de Constantinople et menacer de tuer tout un groupe de réfugiés en provenance d'Asie mineure pour obtenir une rançon de 4 000 hyperpérion. Dénué de flotte, Andronic doit renoncer à toute forme de résistance et, en septembre 1302, il s'engage dans un traité à verser la somme demandée. En 1310, ce même traité est prorogé pour une durée de douze ans. Paradoxalement, Gênes profite de ces événements pour accroître l'autonomie de sa colonie, Galata en y construisant une muraille. Andronic II reconnaît les droits de cette cité dans plusieurs chartes successives mais, à la différence de son prédécesseur, il n'a plus les moyens de faire reconnaître la suzeraineté byzantine sur Galata.\n\nOutre l'action néfaste des républiques maritimes, Andronic subit aussi les agissements de pirates italiens qui profitent de la disparition de marine byzantine pour se tailler des fiefs dans la région de la mer Égée. Les frères Zaccaria étendent leur domaine autour de Phocée et bâtissent une nouvelle ville (Nea Phokaia), tandis que Benedetto Zaccaria s'empare de l'île de Chios en 1304 au prétexte qu'elle est dénuée de tout moyen de défense contre les Turcs[41]. C'est le début d'une période de domination italienne sur l'île qui dure jusqu'en 1329. Domenico Cattaneo agit de la même façon à Lesbos. Enfin, dernier exemple de l'instabilité des alliés italiens de l'Empire : Andrea Morisco, alors au service d'Andronic II, s'empare de l'île de Ténédos après avoir combattu les Vénitiens et les Turcs.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 32,
+    "titre": "Albert Ier (roi des Romains)",
+    "date": 1298,
+    "date_fin": 1308,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308.\n\nAlbert s'avère un souverain capable : il se garantit la paix avec Philippe IV le Bel par mariage et parvint à un accord avec le roi Venceslas II de Bohême. Il n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 30,
+    "titre": "Frappe du Gros de Prague",
+    "date": 1300,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "Le denier d'argent de Bohême (Gros de Prague) est une unité monétaire créée en 1300 par le roi de Bohême Venceslas II, sur les conseils de banquiers et d'avocats lombards. Elle est longtemps la monnaie de référence en Europe centrale.\n\nLa frappe de cette monnaie est permise par la découverte de riches filons d'argent à Kutná Hora au milieu du XIIe siècle, et permet le développement économique de la Bohême et de la Moravie, alors parmi les plus riches provinces d'Europe.",
+    "image": "images/gros-de-prague.jpg",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 46,
+    "titre": "Apogée des foires de Champagne",
+    "date": 1300,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Limitée au marché régional , la production urbaine ne tarde pas à se scléroser dans l’étouffante réglementation corporative. Seule faisait exception l’industrie textile qui fournissait les matières principales des échanges internationaux. Concentrée en Flandre et en Toscane , elle ne pouvait , sauf pour la fabrication, accepter le carcan des limitations professionnelles . En dehors d’elles naquit une classe marchande qui procurant les matières premières  qu’ils allaient chercher parfois très loin, vendant la production , fournissant les capitaux nécessaires à l’équipement et à l’extension  des ateliers , finit par placer sous sa coupe les maîtres des métiers.  Dans ce capitalisme naissant , les Italiens héritiers du commerce méditerranéen antique, acquirent une place de premier plan et devinrent les maîtres du trafic de l'argent. C'est au 13e siècle que l'on voit apparaître à Florence, Sienne et Lucques, les premières banques qui établirent les règles de la comptabilité commerciale et s’élevèrent à un rôle politique en ouvrant des crédits aux plus puissants souverains d'Europe. Favorisées par leur situation à la rencontre des routes du Nord et du Midi, les foires de champagne devinrent le centre des échanges internationaux de produits et de finance. Le cycle des grandes foires de Champagne crée les conditions favorables d'un commerce international s'étendant sur toute l'année, et parallèlement favorise le report des dettes d'une foire à l'autre, par l'intermédiaire des changeurs souvent d'origine italienne ou des Flandres. Ce système de transfert des créances de foire en foire, la multiplicité des monnaies utilisées d'une région à l'autre et l'habitude de régler les dettes par compensation, entraîne l'émergence d'un secteur financier organisé au sein duquel les communautés juive et florentine (\"Lombards\") jouent très vite un rôle essentiel[ Si les pondéreux (sel des côtes atlantiques, vin et céréales) faisaient déjà l'objet d'un commerce par voie fluviale ou accessoirement maritime, seules des marchandises rares ou à haute valeur ajoutée et de faible poids, comme les draps et les épices, étaient acheminées sur de longues distances par voie terrestre\nElles se tenaient dans les villes de Lagny-sur-Marne (une fois par an), Provins (deux fois par an), Troyes (deux fois par an) et Bar-sur-Aube (une fois par an) Chaque foire durait de trois à six semaines, et ce calendrier changea à plusieurs reprises au fil des siècles. C'est ce que l'historien Fernand Braudel appelle le « système d'horlogerie à répétition », qui assure au comté une activité économique exceptionnelle de janvier à décembre. Actives presque toute l'année, elles connurent leur apogée à la fin du 13e siècle. Ensuite, les progrès de la navigation, l'ouverture de nouvelles voies terrestres et les transformations de la technique commerciale, sans compter les ravages de la guerre de 100 ans, amenèrent leur rapide déclin ,Les nouvelles routes des Alpes suisses par le col du Saint Gothard et du Simplon relient l'Italie du Nord au pays rhénan et surtout de nouvelles routes maritimes, permettent aux Italiens un accès plus sûr, plus rapide et moins cher à Bruges dès 1297. Enfin avec le mariage de Jeanne de Navarre (comtesse et héritière de Champagne) à Philippe IV « Le Bel » en 1284, qui scelle le rattachement du comté de Champagne à la France, les priorités politiques changent. La Champagne, jusque là de facto indépendante, perd son autonomie et le roi de France trouve dans les caisses bien remplies de cette riche province de nouvelles ressources fiscales et le moyen de financer ses guerres dynastiques à bon compte. Les guerres franco-flamandes puis la guerre de Cent Ans portent un coup fatal aux foires champenoises",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Sc%C3%A8ne_de_foire_-_ca_1400_-_BNF_Fr12559_f167.jpg",
+    "legende": "Scène de foire dans Le Chevalier errant de Thomas III de Saluces",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 47,
+    "titre": "Vierge d'Ognissanti de Giotto di Bondone",
+    "date": 1300,
+    "zones": [
+      "Art"
+    ],
+    "type": 1,
+    "description": "La Vierge d'Ognissanti ou de tous les saints. Elle a des dimensions monumentales : 325 × 204 cm. Elle est conservée à la Galerie des Offices de FlorenceCe retable a probablement été peint par le maître à son retour d'Assise La comparaison avec les œuvres précédentes donne la mesure de la façon dont l'art de Giotto évolue désormais vers un renouveau radical de la peinture, même si des éléments stylistiques archaïques ne manquent pas tels que le fond d'or et la perspective signifiante, cette dernière peut-être en raison du besoin de montrer le plus de fidèles possible autour de la Vierge. Le thème de la Maestà est réinterprété avec une grande originalité, centré sur la récupération de la spatialité tridimensionnelle de l'antiquité et sur le dépassement de la frontalité byzantine. Mais contrairement aux œuvres plus anciennes, les personnages latéraux ne sont pas placés les uns au-dessus des autres, ne sont pas aplatis, chacun possède une physionomie propre et, surtout, ils sont placés dans un dispositif perspectif que la construction précise du trône, avec son point de fuite central, ainsi que celle du baldaquin, accentuent et précisent. Les personnages sont encadrés par un trône à pinacle raffiné, créé selon une perspective intuitive mais efficace, qui accentue la profondeur spatiale malgré le fond d'orCe tableau annonce clairement le mouvement de la pré-Renaissance des primitifs italiens, qui, tout en validant les principes fondamentaux de la peinture byzantine (sujet, symbolisation des personnages sacrés, iconographie, symbolique des couleurs), commence à élaborer une autre peinture, en humanisant la représentation des personnages, leur individualisation, l'introduction d'une représentation cohérente et réaliste du décor (perspective formelle du trône, détails architecturaux, plans de placement des personnages).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Giotto%2C_1267_Around-1337_-_Maest%C3%A0_-_Google_Art_Project.jpg/960px-Giotto%2C_1267_Around-1337_-_Maest%C3%A0_-_Google_Art_Project.jpg",
+    "legende": "Vierge d'Ognissanti peinte à la tempera et à l'or sur bois ,325 × 204 cm. Conservée à la Galerie des Offices de Florence",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 48,
+    "titre": "Lunettes à verres correcteurs",
+    "date": 1300,
+    "zones": [
+      "Techniques"
+    ],
+    "type": 1,
+    "description": "Déjà utilisées en chine les lunettes à verres correcteurs se rependent en Italie. probablement importées de Chine via les marchands et voyageurs.  Le Moyen Âge voit se développer, dans les monastères en particulier, l'usage de la pierre de lecture, loupe grossissante posée sur le texte écrit, destinée à agrandir le module d'écriture, voire combattre les effets de la presbytie. Cette « pierre à lire » est attestée dès l'Antiquité à Suse[11]. Elle est aussi appelée « pierre de béricle » ; c'est un petit bloc convexe taillé dans une pierre polie, cristal de roche ou pierre lumineuse de béryl, dont le nom a donné celui de « béricle », puis « besicles », ainsi que « brille » en allemand.Les travaux d'Alhazen, fondateur de l'optique physiologique (mathématicien, philosophe, physiologiste et physicien arabo-musulman\nConsidéré comme un pionnier de la méthode scientifique et le fondateur de l'optique moderne autour de l'an mille, donnent un fondement scientifique à cette pratique. Son traité a été traduit en latin au XIIe siècle, peu avant l'invention des lunettes de correction de la vue en Italie, sans que le lien entre les deux événements soit cependant clairement attesté.les premières bésicles, lunettes sans branches qui se fixent sur le nez et capables de corriger la presbytie et l'hypermétropie, apparaissent à Venise à la fin du XIIIe siècle, à cette même époque la qualité du verre cesse d'être un problème, les verriers réussissant si bien à « fabriquer du verre aussi transparent que le cristal (...) que les cristalliers obtinrent en 1302 l'autorisation d'utiliser le verre optique pour la lecture",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 49,
+    "titre": "La colonie sarrasine de Lucera est anéantie",
+    "date": 1300,
+    "zones": [
+      "Naples"
+    ],
+    "type": 2,
+    "description": "Entre le 15 et le 24 août 1300, la colonie sarrasine de Lucera est anéantie par Charles II d'Anjou. A la mi-août 1300 , Charles II lance une croisade contre l'établissement musulman de Lucera, riche et fort peuplé. Les motivations de cette attaque sont doubles : satisfaire la requête de Boniface VIII, désireux d'éliminer la dernière place forte islamique du territoire, en l'année du premier Jubilée, et régler les dettes contractées envers les banquiers florentins grâce aux richesses de la ville. Lucera, après un long siège conduit par Giovanni Pipino de Barletta, est détruite entre le 15 et le 25 août 1300. Les murs et les mosquées sont abattus, la ville est rasée et de très nombreux musulmans, hommes, femmes et enfants, sont massacrés. 10 000 survivants sont enchaînés et vendus au marché des esclaves ou contraints à se convertir au christianisme. La victoire sur les Sarrasins entraînera le changement du nom de la ville, que Charles rebaptisera \"Civitas Sanctae Mariae\". En très peu de temps, le bourg est repeuplé de chrétiens venus de tout le royaume. Lorsque Charles II d'Anjou anéantit les Sarrasins de Lucera en 1300, la foi chrétienne fut restaurée dans cette ville des Pouilles : Luceria saracenorum devint Lucera civitas Sanctae Mariae. A la mi-août, Charles II lance une croisade contre l'établissement musulman de Lucera, riche et fort peuplé. Les motivations de cette attaque sont doubles : satisfaire la requête de Boniface VIII, désireux d'éliminer la dernière place forte islamique du territoire, en l'année du premier Jubilée, et régler les dettes contractées envers les banquiers florentins grâce aux richesses de la ville. Lucera, après un long siège conduit par Giovanni Pipino de Barletta, est détruite entre le 15 et le 25 août 1300. Les murs et les mosquées sont abattus, la ville est rasée et de très nombreux musulmans, hommes, femmes et enfants, sont massacrés. 10 000 survivants sont enchaînés et vendus au marché des esclaves ou contraints à se convertir au christianisme. La victoire sur les Sarrasins entraînera le changement du nom de la ville La nouvelle cathédrale fut construite dans le style gothique angevin, d'après les plans de l'architecte français Pierre d'Angicourt, probablement sur l'emplacement d'une mosquée démolie, entre 1302 et 1317.Lucera, dans les Pouilles (sud de l’Italie), avait été fondée comme colonie musulmane sous le règne de Frédéric II de Hohenstaufen (règne 1198-1250).Frédéric II avait déplacé des populations musulmanes de Sicile et du sud de l’Italie vers Lucera pour :créer une cité musulmane autonome, loyal au roi,fournir des troupes d’élite (garde et soldats) pour l’armée impériale,développer une économie productive basée sur l’agriculture et l’artisanat.À son apogée, Lucera comptait 15 000 à 20 000 habitants musulmans, avec mosquées, écoles et institutions islamiques.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Castellolucera.jpg/500px-Castellolucera.jpg",
+    "legende": "Forteresse souabo-angevine de Lucera 13e - 14e siècle",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 50,
+    "titre": "2e  invasion mongole en Birmanie",
+    "date": 1300,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "La seconde invasion mongole en Birmanie, est une expédition militaire organisée par la Dynastie Yuan sur ordre de Témur Khan, le second dirigeant de la dynastie. Elle est repoussée par les troupes birmanes du royaume de Myinsaing en 1301.\nKumarakassapa, en exil en Chine, est proclamé roi de Birmanie. À l'automne, les Mongols interviennent en Birmanie et dévastent le pays sous prétexte de « rétablir l’ordre » parmi les princes birmans se disputant le trône vacant.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 51,
+    "titre": "Année jubilaire",
+    "date": 1300,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Boniface VIII déclare cette année comme année jubilaire[4]. C'est un immense succès à l'échelle de l'Europe. Rome reçoit 200 000 pèlerins (selon le chroniqueur florentin Giovanni Villani). Rémission complète des péchés est accordée à ceux qui visiteront endéans quinze jours consécutifs les tombeaux des apôtres Pierre et Paul (endéans 30 jours pour les Romains).Quelques mois avant l’an 1300, une rumeur parcourt la chrétienté : « Tout chrétien qui visiterait le corps des apôtres Pierre et Paul pendant cette année centenaire sera délivré tant de ses fautes que de sa peine. », au grand étonnement du pape qui n’a rien annoncé. On lui amène même des témoins qui racontent que leur père ou leur grand-père était venu lors d’un jubilé en 1200 dont les archives du Vatican ne retrouvent aucune trace. Mais devant l’affluence des pèlerins – on parle de 200 000 personnes, ce qui serait considérable pour l’époque – et conscient du poids politique d’une telle démarche au moment où les monarques occidentaux cherchent à s’émanciper de la papauté, il se soumet à la volonté populaire. Dans une bulle solennellement déposée sur l’autel de Saint-Pierre de Rome, il accorde « l'indulgence » – c’est-à-dire la rémission des peines temporelles dues au péché – à tous les fidèles venus prier dans les basiliques Saint-Pierre et Saint-Paul-hors-les-Murs[3]. Il créa ainsi le premier jubilé, ou année sainte, dont le succès fut considérable. \nIl reçut la même année la délégation envoyée par le khan mongol Mahmud Ghazan et conduite par le Florentin Guiscardo de' Bastari. Les fastes furent tels que Dante situa le début de son poème au cours de la semaine sainte et n'hésita pas, dans la Divine Comédie, à placer Boniface VIII dans la troisième bolge du huitième cercle, la fosse des simoniaques.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 52,
+    "titre": "Bataille navale de Ponza",
+    "date": 1300,
+    "zones": [
+      "Naples"
+    ],
+    "type": 2,
+    "description": "Victoire de la flotte angevine commandée par Roger de Lauria sur la flotte aragonaise d\"Alphonse V à la bataille de Ponza  au large de Naples,La guerre contre la Sicile reprend à partir de 1296. Frédéric III prend l'initiative contre les Angevins. Non seulement il conserve la Sicile, mais il parvient en outre à porter la guerre en Calabre et autour de Naples. Boniface VIII, début 1297, convoque à Rome Charles II et Jacques pour les encourager à reconquérir la Sicile, conformément au traité d'Anagni. Sur ordre de Jacques II, tant Giovanni da Procida que Ruggero di Lauria, devenu amiral de la flotte alliée anti-sicilienne et enfin la reine mère Constance de Sicile, durent abandonner la Sicile et le roi Frédéric pour rejoindre Jacques à Rome. En juillet 1299, à Capo d'Orlando, avec la flotte aragonaise complétée de celle de Naples, Jacques bat Frédéric, qui parvient à se sauver avec 17 galères. Toutefois, dès l'année suivante, Jacques doit revenir en Aragon face à la résistance opposée par Frédéric.\nLa guerre se déroule maintenant en Sicile, où les fils de Charles II, Robert et Philippe Ier de Tarente, ont conquis Catane et assiégé Messine. Mais Frédéric remporte une victoire importante à Falconara, près de Trapani, faisant prisonnier Philippe. Il résiste à Messine et en Calabre. Charles II préfèrerait la paix, mais le pape, après l'avoir accusé de lâcheté, appelle à la rescousse en 1300 les Templiers, les Hospitaliers et les Génois, qui se joignent aux combats à contrecœur. Mais à l'exception d'une nouvelle victoire brillante de Lauria sur la flotte sicilienne le 14 juin, la situation n'évolue pas.Le 14 juin 1300, une flotte de 59 galères (Angevines, aragonaises, apuliennes, et quelques génoises) commandée par Roger of Lauria affronte une flotte sicilienne de 32 galères sous le commandement de Conrad d'Oria. : victoire décidée de Lauria. Environ 26 galères siciliennes sont capturées. : s’inscrit dans les conflits liés à la guerre de succession et aux tensions autour du royaume de Sicile. \nRoger de Lauria, Ruggero di Lauria ou Roger de Llúria ou encore Roger de Lloria, dit le « Grand Capitaine » né en 1245 ou vers 1250 et décédé vers 1305), est un amiral qui vécut entre la seconde moitié du XIIIe siècle et le début du XIVe siècle. Il s'illustra notamment au cours de la guerre des Vêpres siciliennes, au service de différents partis. Roger de Lauria naît en 1245 ou vers 1250[1], selon les sources, à Lauria dans la région de Potenza (Basilicate), fils de Richard de Lauria, vraisemblablement issu de la noblesse normande d'Italie méridionale. En 1262, suivant sa mère, qui est une dame de compagnie de la reine Constance de Sicile, quand cette dernière épouse Pierre III d'Aragon, il rejoint la cour catalane à Barcelone[2], y est élevé et y séjourne durant plusieurs années. Son père ayant servi Manfred de Sicile, il est cependant à Naples en 1268 lors de la mort du roi Conradin. Après la chute des Hohenstaufen, il est alors contraint de fuir la ville en compagnie d'autres exilés Gibelins et de se réfugier auprès de sa mère à Barcelone, Il défend la Sicile etEn 1282, il est nommé amiral de la flotte catalane, qu'il commande brillamment, devenant le véritable artisan de la suprématie maritime de la Couronne d’Aragon en Méditerranée. Mais sa renommée est rapidement éclipsée par celle de Roger de Flor avec lequel on le confond parfois. Pierre III le Grand lui accorde le comté de Cocentaina, dans le royaume de Valence, dont il est le premier titulaire, pour services éminents rendus à la Couronne. les droits des rois aragonais contre les Angevins, après les Vêpres siciliennes, mettant en déroute une flotte française commandée par Barthélemy Bonvin et Guillaume Cornut, les amiraux de Charles d'Anjou[N 1] lors de la bataille de Malte, le 8 juin ou 8 juillet 1283Aux termes du Traité d'Anagni de 1295, le roi Jacques II d'Aragon devait céder le trône sicilien aux Angevins ; son frère puîné Frédéric accepte cependant la couronne que lui offrent les Siciliens et combat alors contre les Angevins et contre son frère. Roger de Lauria appuie d'abord Frédéric qui le nomme « amiral de Sicile » le 25 mars 1296. Il finit par revenir au service de Jacques le 2 avril 1297. Ses terres siciliennes lui sont confisquées car il est considéré par le nouveau roi comme un traître, mais il vainc les Siciliens au Capo d'Orlando en 1299. Lorsque la paix de Caltabellotta est signée entre les deux frères, en 1302, Roger se retire dans son comté de Cocentaina.\nLe « Grand Capitaine » meurt à Valence le 17 janvier 1305 et est inhumé à Santes Creus près de Barcelone, comme il l'avait lui-même établi le 10 septembre 1291.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 53,
+    "titre": "Venceslas II roi de Bohême est couronné roi de Pologne",
+    "date": 1300,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 1,
+    "description": "Après avoir été couronné roi de Bohême en 1297, dans la cathédrale de Prague, Venceslas II est couronné roi de Pologne dans celle de Gniezno.Venceslas II (en tchèque Václav II., en polonais Wacław II Czeski ( audio), en allemand Wenzel II.), né le 27 septembre 1271 et décédé le 21 juin 1305 à Prague, est un prince de la dynastie des Přemyslides, le fils du roi Ottokar II de Bohême et de Cunégonde de Slavonie. L'avant-dernier souverain de la dynastie, il est roi de Bohême de 1278 et roi de Pologne de 1300 à sa mort.Ayant réunifié une grande partie des territoires polonais à l’exception de la Mazovie, Venceslas II est couronné roi de Pologne (sous le nom de Venceslas Ier de Pologne), à Gniezno le 25 juillet 1300, par l’archevêque Jakub Świnka.\n\nEn 1301, il offre à son fils Venceslas III, âgé de 11 ans, la couronne de Hongrie. Il renforce aussi son influence en Silésie en devenant le protecteur des jeunes ducs de Legnica et de Wrocław. Cette montée en puissance de Venceslas II est mal acceptée par les Hongrois, par le pape et par Albert de Habsbourg, ce qui provoque une foire d’empoigne pendant quelques années. Ainsi, en 1302, le pape Boniface VIII interdit à Venceslas II de porter le titre de roi de Pologne. En 1303, le duc Henri III de Głogów, dernier sérieux opposant à Venceslas en Pologne, reconnaît la suzeraineté de ce dernier.Venceslas II envisage d’envahir l’Autriche lorsqu’il décède des suites d’une tuberculose le 21 juin 1305. Dante Alighieri dans le Purgatorio de sa Divine Comédie laisse quelques vers peu flatteurs sur la « mollesse et la luxure du roi de Bohême »[1] qui influencèrent le jugement de ses contemporains à son égard.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg/960px-Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg",
+    "legende": "Venceslas II de Bohême - extrait du Codex Manesse (vers 1300).",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 42,
+    "titre": "Ladislas V (Venceslas III de Bohême)",
+    "date": 1301,
+    "date_fin": 1305,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Né le 6 octobre 1289, prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, puis roi de Bohême et de Pologne jusqu'à sa mort.\n\nSon assassinat en 1306 à Olomouc marque l'extinction de la lignée royale des Přemyslides en Bohême.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 54,
+    "titre": "Les Guelfes noirs s'emparent de Florence",
+    "date": 1301,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Après l'éclatement d'une rixe entre les Cerchi et les Donati sur la place Santa Trinita à Florence en 1300, le  parti guelfe à Florence se sépare en deux factions rivales, Noirs (ultras) et Blancs (modérés). Les Blancs sont menés par la famille de Cerchi, désireuse de répondre aux aspirations du popolo, et les Noirs, alliés du pape, dirigés par Corso Donati, refusant tout compromis avec le peuple. Afin de préserver la paix dans la cité, le Conseil décide d’exiler les dirigeants des deux partis. Mais, par l’entremise du pape Boniface VIII, les chefs des Noirs peuvent regagner Florence à la fin de 1301, et s’emparer du pouvoir\nChronologie : 5 novembre 1301  : conférence à Santa Maria Novella. Corso Donati, chef des guelfes noirs est rappelé à Florence et s’empare du pouvoir avec l'approbation du pape[12] (fin en 1308).\n8 novembre : les Guelfes noirs prennent le pouvoir à Florence et purgent la ville de leurs opposants Blancs",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 55,
+    "titre": "Charles de Valois Capitaine général de l’Eglise",
+    "date": 1301,
+    "zones": [
+      "Papaute",
+      "Italie"
+    ],
+    "type": 2,
+    "description": "En 1300, deux grandes opportunités s'offrent à Charles de Valois. Veuf depuis la mort de Marguerite d'Anjou l'année précédente, Charles se cherche une nouvelle épouse et trouve un excellent parti en la personne de Catherine de Courtenay, héritière en titre de l'Empire latin de Constantinople en tant que petite-fille du dernier empereur latin Baudouin II de Courtenay. Certes, les droits de Catherine sont faibles puisque l'empire est passé aux mains des Grecs depuis la prise de Constantinople par Michel VIII Paléologue en 1261, mais ces prétentions peuvent servir à justifier des expéditions en Méditerranée orientale. L'affaire se conclut rapidement entre Charles et Catherine, malgré le droit de regard du roi de Naples. Toutefois, le comte a besoin pour se remarier de dispenses pontificales que le pape Boniface VIII marchande[15].\nLe pape Boniface VIII\nLe souverain pontife cherche en effet à pacifier ses États ainsi qu'à chasser les Aragonais de l'île de Sicile. Boniface VIII propose au comte de Valois de reconquérir l'île au profit du roi de Naples Charles II d'Anjou, son cousin et ancien beau-père. Ce projet avait en fait été envisagé dès 1298. En échange d'une décime et d'autres garanties financières, Charles accepte de se rendre en Italie. Les négociations entre le pontife et Charles de Valois sur les conditions de l'expédition durent près d'un an. Le mariage avec Catherine de Courtenay est célébré le 28 janvier 1301. De plus, Philippe le Bel, peu enclin aux expéditions lointaines, est inquiet du départ de son frère et exige son retour immédiat au cas où le royaume de France serait en danger. Il n'est donc pas question pour Charles d'aller reconquérir Constantinople.\nLe nouvel empereur de Constantinople quitte Paris en avril 1301 et s'attarde en route, d'abord en Savoie[16], puis chez le marquis Azzo VIII d'Este[17]. Ce n'est que le 3 septembre qu'il rencontre le pape à Anagni. Boniface VIII le nomme capitaine général de l’Église et recteur dans les territoires du Saint-Siège. Il lui accorde en outre le titre paciarius, pour inviter le comte à régler les dissensions qui existent en Toscane. Passage à Florence Le comte de Valois n'est absolument pas au fait des subtilités et des imbroglios de la politique italienne. Mal conseillé et passablement cupide, il ne va cesser de se vendre au plus offrant. Florence est au début du XIVe siècle une ville guelfe, résolument hostile au pouvoir impérial mais aussi relativement méfiante envers la tutelle pontificale. Toutefois, les guelfes se divisent à partir de 1301 en deux partis : les Blancs, favorables à une entente avec les Gibelins et farouchement indépendantistes, et les Noirs partisans de relations étroites avec le Saint-Siège. Lorsque Charles de Valois arrive à Sienne dans le but de négocier avec les Florentins, la ville s'est dotée d'un gouvernement guelfe modéré.\nCharles commet une première erreur en se liant avec le chef des guelfes noirs Corso Donati, qui achète soixante-dix mille florins l'appui du prince français[19]. Déjà le comte de Valois apparaît aux yeux des Florentins comme l'instrument de la vengeance des guelfes noirs. Le jour de la Toussaint, après avoir juré de respecter les coutumes de la cité, il fait une entrée solennelle dans Florence.\nQuatre jours plus tard, Donati et les Noirs réalisent un véritable coup d'État en s'emparant du gouvernement de la cité. Ils massacrent les Gibelins et pillent la ville tandis que Charles de Valois se contente de cacher chez lui les chefs des Blancs. Le 8 novembre, un gouvernement guelfe noir s'installe avec la bénédiction du vicaire pontifical. Ce nouveau régime bannit de nombreux citoyens gibelins ou blancs et fait raser leurs maisons. Parmi ces exilés se trouve Dante Alighieri qui fait apparaître quelques années plus tard les princes capétiens dans sa Divine Comédie. Dépassé par les événements et corrompu par la plupart des clans florentins, Charles de Valois altère gravement par sa conduite la réputation française en Italie[20]. En vain, Boniface VIII lui enjoint-il d'intervenir pour modérer la tyrannie des extrêmes du parti guelfe.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Karelvalois_Bonifac8.jpg",
+    "legende": "Boniface VIII recevant le comte de Valois. Chronique de Giovanni Villani, milieu du XIVe s., Bibliothèque Apostolique Vaticane",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 56,
+    "titre": "Prince de Galles",
+    "date": 1301,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Édouard II reçut le premier en 1301 de son père Édouard Ier le titre de prince de Galles, pays que ce dernier venait de conquérir. Le titre est octroyé à la fin de la campagne qu'Édouard Ier mène contre les Gallois. Le roi fit édifier une forteresse à Caernarfon face aux monts Snowdon, où il installa sa femme, la reine Aliénor de Castille. Elle y mit au monde un fils (sur les seize enfants qu'elle eut du roi). La campagne terminée, le roi proposa aux Gallois la paix et un prince : ceux-ci réclamèrent un prince né dans la principauté, ne parlant ni français ni anglo-saxon, croyant ainsi mettre le roi dans l'embarras. Alors le roi leur présenta son nouveau-né, et les rudes Gallois vinrent baiser la main de la reine et de l'enfant, devenu prince de Galles. Le titre fut donc accepté car Aliénor le suivait sur les champs de bataille. Pour des raisons inconnues, Édouard II ne donna jamais le titre à son propre fils et successeur, Édouard III.\nEn 1346, Jean l'Aveugle tombe à la bataille de Crécy à laquelle il participait du côté du roi de France. Son cimier consistant d'un grand vol (deux grandes ailes d'oiseau) ayant été saisi par Édouard de Woodstock, il serait devenu le cimier, puis l'insigne de cette principauté, de même que sa devise Ich Dien (« Je sers »).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Prince_of_Wales%27s_feathers_Badge.svg/330px-Prince_of_Wales%27s_feathers_Badge.svg.png",
+    "legende": "L'emblème de trois plumes d'autruche utilisé par le futur prince de Galles anglais/britannique.",
+    "sources": "Wikipedia https://fr.wikipedia.org/wiki/Prince_de_Galles"
+  },
+  {
+    "id": 57,
+    "titre": "Traité de Bruges",
+    "date": 1301,
+    "zones": [
+      "France",
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "Le Barrois mouvant, également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France[1].\n\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique. Le Barrois mouvant relève par conséquent du Parlement de Paris (un « Parlement » était alors une cour de justice) tandis que le reste du duché relève de celui de Nancy. Cette situation se poursuit après l'intégration du duché de Lorraine dans le royaume de France en 1766, et ce jusqu'à la Révolution française. \nC'est le traité de Bruges confirme l'abandon par Albert de Habsbourg du Barrois mouvant à Philippe IV le Bel. \nLe 4 juin 1301, l'empereur Albert de Habsbourg abandonna à Philippe IV le Bel, par le traité de Bruges, à la suite de la célèbre entrevue des Quatre-Vaux, à l'été 1299, dans ce lieu-dit situé sur la commune de Rigny-Saint-Martin, toutes prétentions du Saint-Empire romain germanique sur le Barrois mouvant également appelé Barrois royal, est la partie occidentale du Barrois dans la mouvance du royaume de France,\nÀ partir de 1301, cette partie du duché de Bar située sur la rive gauche de la Meuse est sous suzeraineté du roi de France, dont le duc de Bar est par conséquent le vassal, tandis que la partie située sur la rive droite, dite Barrois non mouvant, reste sous la suzeraineté de l'empereur du Saint-Empire romain germanique.Sept ans plus tôt, la comtesse de Champagne Jeanne Ire a épousé le futur roi de France Philippe IV le Bel, faisant du Barrois le voisin immédiat du domaine royal. Voulant se ménager des alliances face à un voisin aussi puissant, Henri III de Bar épouse en 1293 Aliénor, fille du roi Édouard Ier d'Angleterre (1269-1297) Pressé d'envahir le comté de Champagne par son allié, le roi d'Angleterre, il est battu et fait prisonnier par le sire de Châtillon. En échange de sa libération avec quatre années de captivité dans les geôles du comté de Flandre, Henri doit céder quelques forteresses à son puissant voisin, mais surtout rendre hommage à Philippe le Bel pour une partie de son comté qui est alors nommé le Barrois mouvant, et s'engage à se rendre à Chypre pour aller combattre l'infidèle. il se fait ainsi homme lige du roi de France « pour tout ce qu'il possède et tient en franc-alleu, par deçà la Meuse vers le royaume de France »[4]. « Désormais [après le traité de Bruges], la frontière du royaume est marquée sur le sol ; elle se confond avec le cours de la Meuse »[\nIl se rend dans le royaume de Naples dans le but de s'embarquer pour l'Orient. À Naples, il prête main-forte au roi Charles II, qui doit repousser une invasion du roi Frédéric de Sicile. Il est grièvement blessé au cours d'un engagement et meurt peu après. Une partie du village de Domrémy — village natal de Jeanne d'Arc situé sur la rive gauche de la Meuse — dépendait de la châtellenie de Gondrecourt en Barrois non mouvant, tandis que l'autre partie était en Barrois mouvant et relevait à ce titre de la cour de justice royale de Chaumont (comté de Champagne).",
+    "image": "images/Barrois mouvant.jpg",
+    "legende": "Le duché de Bar et l’écheveau des limites entre royaume et Empire (carte Léonard Dauphant). https://books.openedition.org/edul/4285",
+    "sources": "Wikipedia Article Barrois mouvant"
+  },
+  {
+    "id": 58,
+    "titre": "Arrestation de Bernard Saisset",
+    "date": 1301,
+    "zones": [
+      "France",
+      "Papaute"
+    ],
+    "type": 2,
+    "description": "L'arrestation de  Bernard Saisset évêque de Pamiers est le point de départ de la crise entre Philippe le Bel et Boniface VIII1. \n2 juillet : l'évêque Bernard Saisset, qui accuse Philippe IV le Bel d'être un faux-monnayeur, est arrêté par les arbalétriers du roi de France24 octobre : Bernard Saisset, évêque de Pamiers partisan des idées du pape Boniface VIII, comparait devant le Parlement à Senlis pour trahison[7]. Son procès déclenche une violente polémique entre légistes et théologiens des camps français et papal. Le pape réprimande Philippe le Bel, qui réplique en faisant proclamer l’indépendance de la monarchie au temporel par l’assemblée des États, auxquels le légiste Pierre Flote avait présenté une bulle falsifiée.La crise entre le roi de France et le pape trouve son origine dans un conflit de juridiction dans les régions du midi  dans les années 1290. au sujet des terres de la maison de St Gilles qui avaient été saisies suite à la croisade contre les albigeois, appartenant donc au domaine royal mais étant de facto administré par des prélats très enclins à instrumentaliser l’inquisition et à accuser d’hérésie tous leurs adversaires, dans cette région se développe un co-gouvernement symbiotique après les années 1270.  . . Un conflit éclate dans le diocèse de Pamiers opposant les proxis des deux camps : le néo évêque de Pamiers Bernard Sesset abbé de St Antonin soutenu par Boniface VIII   et le comte de Foix . Le pape nomme Sesset évêque sans en référer au roi et l'investit de pouvoir temporels. Ce type de conflit se multiplie à la fin du XIIIe . Nogaret fait arrêter l’évêque qu’il accuse d’hérésie (il aurait nié la sainteté de Louis IX et donc contesté la légitimité du pouvoir des Capétiens en Languedoc) Philippe le Bel ouvrit une enquête et mit les biens de l'évêque sous séquestre, au mépris de l'immunité ecclésiastique et sans doute par provocation envers Boniface VIII.Habilement Nogaret utilise l’arme même du pape ( l’accusation d’hérésie) contre l’église elle même Dans la nuit du 12 au 13 juillet 1301, alors qu'il est sur le point de s'échapper à Rome, Saisset est arrêté et transféré à Senlis, en Picardie (alors chasse royale). Il y comparaît devant le conseil royal le 24 octobre 1301.\nÀ l'accusation de haute trahison et d'injures contre la personne du roi sont alors ajoutées, à l'instigation de Guillaume de Nogaret, des accusations d'hérésie à son encontre. L'arrestation et la procédure royale contre Saisset, qui déboucha sur l'attentat d'Anagni en 1303. Boniface VIII ordonne au roi de libérer l'évêque afin que ce dernier puisse se rendre à Rome pour lui donner l'occasion de s'expliquer. Ce fait envenime à nouveau les relations entre le roi et le pape, prolongeant une querelle qui couvait depuis la bulle Clericis laicos de 1296. Aussi, pour le 1er novembre 1302, Boniface VIII convoque à Rome tous les prélats français afin d'examiner d'éventuelles sanctions.\nEn 1308, grâce à un pape plus conciliant (Clément V, premier pape d'Avignon), Saisset est gracié par le roi. Il reprend alors sa charge d'évêque de Pamiers. Il s'engagera même avec Philippe le Bel, en 1308, sur le paréage de la bastide de Villeneuve-du-Paréage, près de Pamiers. Il décède à Pamiers vers 1314.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 59,
+    "titre": "Bulles Ausculta Fili et Unam Sanctam",
+    "date": 1301,
+    "date_fin": 1302,
+    "zones": [
+      "France",
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "La Bulle  Ausculta fili proclame la subordination du pouvoir temporel et convoque pour le mois de novembre 1302 un concile à Rome, où le roi de France peut se présenter., ???? On a affirmé qu'elle fut brûlée publiquement à Paris, le dimanche 11 février 1302, en sa présence, devant les nobles, et qu'il fit annoncer cette exécution à coup de trompe, mais Félix Rocquain (historien et archiviste français x 1925)  suggère que cet événement est selon toute vraisemblance une invention, un tel acte ne correspondant ni au caractère ni aux visées de Philippe. Le comte d'Artois lui-même aurait arraché cette bulle au légat du pape et l'aurait déchirée devant lui . \n\nLe roi fait approuvé par les 1eres Etats Généraux du royaume réunit dans la cathédrale Notre Dame de Paris  sa politique vis-à-vis du pape. À l'origine, ils réunissaient le clergé, la noblesse et la bourgeoisie des bonnes villesPhilippe 4 réunira 6 fois cette assemblée essentiellement pour faire approuver sa politique contre le pape et les templiers ou lever des impôts. \nCette sorte d'assemblée « nationale » avant l'heure est fondée sur les lois fondamentales du royaume de France selon lesquelles :\nles peuples de France ne sont pas tributaires mais libres ; aucune contribution ne peut être exigée d'eux sans leur consentement ;\nle gouvernement du roi se fait toujours par conseils (les états généraux étant le conseil le plus large qu'un souverain puisse réunir autour de lui).\nCette assemblée n'avait en revanche aucun rôle réglementaire ou juridictionnel : ces compétences relevaient des parlements avec lesquels elle ne doit pas être confondue, et qui n'avaient pas non plus de pouvoir législatif, lequel appartenait au roi. Les députés des états généraux, quel que soit leur ordre respectif, étaient investis d'un mandat impératif et non représentatif : ils étaient porteurs des doléances des habitants de leurs circonscriptions (bailliages et sénéchaussées) et ne pouvaient nullement s'arroger le droit de parler en leur nom — règle que les députés des états généraux de 1789 n'ont pas respectée puisqu'ils se sont arrogés un mandat représentatif sans avoir été élus pour cela.En 1301 également l’inquisition est placée sous l’autorité des évêques. \n\nBoniface VIII écrivit suite au concile une bulle d'excommunication contre Philippe le Bel , Super Petri Solio, mais celle-ci ne fut jamais publiée. Bulle pontificale sur l'unité de l'Église, datant du 18 novembre 1302 fulminée par Boniface VIII à l'occasion d'un concile de prélats français réunis à Rome, toute créature humaine doit par nécessité de salut se soumettre à l’autorité du pape.\nPhilippe le Bel réagit à cette bulle de manière vive : il envoie un commando s'emparer du pape à Anagni. Le pape fut arrêté en 1303 par Guillaume de Nogaret, nouveau conseiller du roi, sur les ordres de Philippe, qui voulait l'amener en France et le faire juger par un concile.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 60,
+    "titre": "Révolte des artisans de Magdebourg",
+    "date": 1301,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "L'aldermann des gens de métiers est brûlé vif sur la place du marché",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 61,
+    "titre": "Famine et épidémies en Castille",
+    "date": 1301,
+    "zones": [
+      "Castille"
+    ],
+    "type": 3,
+    "description": "cette famine provoque la mort du quart de la population.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 62,
+    "titre": "Domus Mercatorum de Vérone",
+    "date": 1301,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "1301 : début de la construction de la Domus Mercatorum (Maison des Marchands) à Vérone.\nLa Domus Mercatorum, ou Casa dei Mercanti (Maison des Marchands), est un édifice civil médiéval sur la Piazza delle Erbe à Vérone. Construite entre 1301 et 1304, elle abrita au Moyen Âge la Casa dei Mercanti, qui représentait les corporations des arts et métiers ; Les premiers témoignages relatifs à la Domus Mercatorum remontent au tout début du XIIIe siècle, lorsqu'une première structure en bois fut construite pour abriter la Guilde de la Laine. Au siècle suivant, Alberto I della Scala, peu avant sa mort, commanda la construction d'un bâtiment en maçonnerie dans le but d'en faire le lieu de commerce des marchands ; les travaux ont été réalisés entre 1301 et 1304.\nLes corporations des arts et métiers occupaient, dans la Vérone municipale, un rôle primordial dans la vie de la ville, non seulement économique mais aussi politique ; c'est grâce à leur influence que les Scaligeri réussirent à prendre le pouvoir et à établir la première seigneurie de la ville. Comme les Della Scalas centralisaient le pouvoir, leurs pouvoirs étaient principalement limités au commerce et à la fabrication, même si les statuts permettaient au podestat de la Casa dei Mercanti d'accomplir la tâche importante de juger les différends et les procès entre marchand",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Domus_Mercatorum.jpg",
+    "legende": "Fotografia della Domus Mercatorum a Verona",
+    "sources": "https://fr.wikipedia.org/wiki/Domus_Mercatorum"
+  },
+  {
+    "id": 1,
+    "titre": "Bataille de Courtrai (Éperons d'or)",
+    "date": 1302,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Les milices flamandes écrasent la chevalerie française à Courtrai. Cette défaite symbolique marque un tournant : pour la première fois, une armée de piétons bourgeois vainc la cavalerie noble, annonçant la crise du système féodal.\nla bataille opposa opposa, le 11 juillet 1302, près de Courtrai, l'armée du roi de France Philippe le Bel surnommée les leliaerts (en français : les hommes du lys) aux milices communales flamandes surnommées les klauwaerts (en français : les hommes de la griffe du lion)\nAprès un premier échange de flèches et une charge de fantassins, l’armée du roi du France prend l’avantage dans un premier temps, entraînant la retraite des Flamands. Certains de leur victoire, les chevaliers français s’élancent alors avec précipitation et chutent dans des fossés où étaient cachés une partie des troupes flamandes.\nEmbourbés et dans l’impossibilité de manœuvrer, les chevaliers français sont alors massacrés par les combattants flamands.\nAu cours du massacre, les milices flamandes enlèvent aux chevaliers leurs éperons d'or afin de les ramener comme trophée, ce qui donna son nom à la bataille.\nLes combattants flamands, peu au fait des us et coutumes de la guerre, massacrèrent les chevaliers à terre sans chercher à faire de prisonniers. Périrent ainsi dans la bataille un grand nombre de fantassins et chevaliers français dont le comte Robert d'Artois, Raoul de Nesle et son frère Guy de Nesle ; Jean de Burlats, les comtes d'Eu et d'Aumale et le chancelier Pierre Flote. Les pertes furent également très lourdes parmi leurs alliés : Jean Sans-Merci du Hainaut ; Godefroid de Brabant et son fils Jean, sire de Vierzon et châtelain de Tournai, ainsi que pratiquement tous les Brabançons, Au total, le nombre de pertes du côté français dut largement dépasser le millier de morts puisque,\nDeux ans plus tard, Philippe le Bel  prit néanmoins sa revanche sur mer à la bataille de Zierikzee (10 et 11 août 1304) et sur terre à Mons-en-Pévèle (18 août). La sagesse lui fit alors préférer une paix négociée, mais tout à son avantage, et la Flandre retourna, après cette revanche, sous l'autorité royale (effaçant ainsi, pour plusieurs décennies, la défaite de 1302).\nLors de la bataille de Roosebeke en 1382, les Français menés par le roi Charles VI récupérèrent les éperons perdus lors de la bataille de Courtrai",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bataille_de_Courtrai_%281302%29_-_Fran%C3%A7ais_2813.png/960px-Bataille_de_Courtrai_%281302%29_-_Fran%C3%A7ais_2813.png",
+    "legende": "iniature extraite des Grandes Chroniques de France de Charles V. Fin XIVe siècle. BnF.",
+    "sources": "Giovanni Villani, Nuova Cronica"
+  },
+  {
+    "id": 29,
+    "titre": "Paix de Caltabellotta",
+    "date": 1302,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282, opposant la maison d'Aragon et les Angevins de Naples pour le contrôle de la Sicile.\nLe traité établit que Frédéric III garde la Sicile à titre viager sous le titre de roi de Trinacrie. Pour affermir la paix, Frédéric III épouse Éléonore d'Anjou. Le chroniqueur Giovanni Villani conclut ironiquement : Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix.\nLa guerre des Vêpres Siciliennes se termine par le traité de paix de Caltabellotta, signé le 31 août 1302, probablement au château de Pizzo. Modifié par le pape le 12 mai 1303, ce texte prévoit que Frédéric III se maintienne au pouvoir en Sicile avec le titre de roi de Trinacrie jusqu'à sa mort, après laquelle l'île reviendra aux Anjou. Frédéric doit par ailleurs épouser Éléonore, la troisième fille de Charles II. En échange, les Aragonais récupèrent la Corse ou la Sardaigne, ou d'autres territoires, ou une forte somme d'argent. Charles II prend le titre de roi de Sicile (Rex Siciliae, ducatus Apuliae et principatus Capuae), tout en renonçant temporairement à l'île mais en conservant la Campanie, la Calabre, les Pouilles et la Basilicate, en obtenant la reconnaissance de facto du royaume de Naples.La paix de Caltabellotta, qui fut signée le 31 août 1302[1], est un traité intervenant dans la lutte opposant la maison d'Aragon à la maison d'Anjou, pour le contrôle de la Sicile insulaire. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302. Ce traité marque la fin de la Guerre des Vêpres commencée vingt ans plus tôt en 1282. Depuis 1282, Aragon et Angevins de Naples s'affrontent dans le cadre de guerre des Vêpres. Le 30 mars 1282 la population de Palerme s'est révoltée contre l'autorité de Charles d'Anjou, maître de l'Italie du Sud depuis 1266, en tant que roi de Sicile investi par le pape. Pierre III d'Aragon prend alors le contrôle de l'île de Sicile au nom de ses enfants, dont la mère est Constance de Hohenstaufen (dynastie impériale en possession du royaume de Sicile avant Charles d'Anjou. S'ouvre alors une guerre ouverte entre la royauté angevine et la couronne d'Aragon pour la maîtrise de l'île. Se sentant menacé par la présence aragonaise proche des Etats pontificaux, le pape Martin IV vient en aide à son vassal en excommuniant le roi Pierre III d'Aragon. Par l'intermédiaire du cardinal légat Jean Cholet, la papauté offre à Philippe III de France une croisade, pour placer Charles de Valois, fils cadet de Philippe, à la couronne d'Aragon, en lieu et place de Pierre III[2]. La campagne militaire, entreprise en 1285, s'avère cependant un cuisant échec et n'aboutit pas.En 1301, Charles de Valois épouse Catherine de Courtenay, impératrice titulaire de Constantinople, et projette donc de mener une croisade pour récupérer l'Empire byzantin au nom de sa femme. Le pape Boniface VIII, qui a fourni les dispenses pour ce mariage, y est favorable mais soumet cette croisade à une expédition préalable en Italie, son objectif principal est de reprendre là où Jacques II avait échoué : la reconquête de la Sicile. Lors de cette expédition, Charles de Valois mate notamment les Gibelins et Guelfes Blancs en Toscane à la demande du pape. Il poursuit ensuite son voyage plus au Sud pour aller servir Charles II et tenter de reprendre le contrôle de l'île de Sicile que Frédéric n'a finalement jamais abandonnée. Charles de Valois arrive en mai 1302 à Naples. Charles de Valois obtient le droit de traiter avec les rebelles au nom du roi de Naples. Un appel aux armes est formé dans le royaume pour constituer une armée de 3 000 cavaliers et 20 000 piétons sous les ordres de Charles de Valois et Robert de Calabre qui occupe également une place majeure dans l'expédition Charles de Valois qui avait pourtant fait ses preuves lors des guerres de Gascogne et de Flandre, ne parvient à aucun résultat en Sicile. Les Angevins et Français parviennent rapidement à prendre Termes et pillent les vallées de l'Ouest sicilien (Val de Polizzi et du Val de Mazzara). Cependant la campagne s'enlise rapidement : certaines villes comme Palerme ou Sciacca, pourtant indiquée comme la plus petite ville de l'île par le chroniqueur Muntaner, résistent. Charles de Valois, qui plus est, peine à s'imposer comme chef de l'armée, il y a d'ailleurs quelques tensions entre Italiens, Provençaux et Français. Frédéric qui a bien saisi son infériorité face aux nombreuses troupes du capétien, préfère éviter les batailles rangées et privilégier la guérilla (avec les Almogavres) . La guerre est épuisante pour les deux côtés[Un évènement amène Charles de Valois à mettre définitivement fin aux opérations : le 11 juillet 1302 a lieu en Flandre la bataille de Courtrai qui annihile une grande partie de la chevalerie française. En outre, la soudaine montée des tensions entre son frère Philippe le Bel et Boniface VIII rend sa position délicate. Le retour en France de Charles de Valois s'avère alors nécessaire. Il négocie donc à la hâte une paix avec Frédéric d'Aragon : le traité de Caltabellota. Frédéric III garde la Sicile, mais à titre viager ; en outre, il est contraint de prendre le titre de roi de Trinacrie, afin de laisser aux Angevins la seule prééminence du titre de roi de Sicile. La possession de la Sicile étant viagère, l'île doit revenir à la dynastie angevine à la mort de Frédéric III. En compensation, Frédéric se voit promettre le soutien à la conquête de Chypre pour y voir régner sa descendance[6].Charles II d’Ajou prend le titre de roi de Sicile (Rex Siciliae, ducatus Apuliae et principatus Capuae), tout en renonçant temporairement à l'île mais en conservant la Campanie, la Calabre, les Pouilles et la Basilicate, en obtenant la reconnaissance de facto du royaume de Naples.\nPour corroborer la paix, Frédéric III épouse Eleonore d'Anjou, fille du roi Charles II de Naples. Ce projet d'union des deux maisons avait déjà été envisagé par Jacques II d'Aragon quelques années plus tôt[7].Parallèlement, Charles de Valois conclue un second traité avec Frédéric III. Ce dernier s'engage notamment à mettre à disposition du prince français une flotte pour l'aider à la conquête de Constantinople, empire sur lequel son mariage avec Catherine de Courtenay lui-donne des prétentions.\nLe chroniqueur italien Giovanni Villani conclut assez ironiquement l'expédition de Charles de Valois en Italie : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix » À la suite de cette paix, Roger de Flor et les Almogavres, qui avaient combattu avec le roi Frédéric, se retrouvèrent sans emploi et offrirent leurs services à Andronic II Paléologue. Ils forment ainsi la Compagnie Catalane, un groupe de mercenaires assez autonome, actif dans la mer Egée.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 63,
+    "titre": "1eres dissections à l’université de Bologne par Bartolomeo da Varignana",
+    "date": 1302,
+    "zones": [
+      "Techniques"
+    ],
+    "type": 1,
+    "description": "La dissection du corps humain, brièvement pratiquée à la fin du IVe et au IIIe siècle avant notre ère, à l’École de Médecine d’Alexandrie, avait été interdite au Moyen âge, aussi bien dans l’Occident chrétien que dans le Monde arabo-musulman. Elle réapparut progressivement, à partir du XIIIe siècle, grâce aux privilèges accordés aux écoles de médecine pour effectuer des dissections sur les corps des condamnés à mort, par le Pape Innocent III et l’Empereur du Saint-Empire romain germanique, Frédéric II. L’orientation naturaliste des recherches anatomiques fut déterminante à partir du XIVe siècle, à Bologne et à Montpellier. En Italie, la première dissection du corps humain fut pratiquée à l’Université de Bologne en 1302 par Bartolomeo da Varignana, et les chefs de file des anatomistes humanistes furent Mondino de Luzzi, à Bologne, et Alessandro Benedetti à Padoue. Ce dernier brillait par sa connaissance du grec et son mépris des ouvrages arabo-latins. Il mit en lumière les contradictions entre les écrits de Galien et l’observation par la dissection. Il est à l’origine de la réputation de l’École anatomique de Padoue, où fut aménagé le premier amphithéâtre anatomique permanent. Montpellier fut le berceau des études anatomiques en France, grâce à Henri de Mondeville qui pratiqua la première dissection vers 1315. Élève de Mondino de Luzzi, Mondeville fut à son tour le maître de Gui de Chauliac. Ce dernier, grand chirurgien montpelliérain du XIVe siècle et auteur d’un ouvrage majeur, La grande chirurgie, donnait des leçons d’anatomie à l’occasion des nécropsies qu’il pratiquait sur ses patients. Si une bulle du Pape Sixte IV, de 1472, reconnaissait que l’anatomie était utile à la pratique médicale et concédait à chaque université le droit d’effectuer deux dissections annuelles de cadavres de condamnés, il fallut attendre quelques décennies pour que des livraisons régulières de corps des condamnés exécutés puissent permettre à la dissection d’être couramment pratiquée dans le cursus des études médicales.En 1543, le médecin André Vésale, premier véritable anatomiste, procède à une dissection publique du corps de Karrer Jakob von Gebweiler, un meurtrier célèbre de la ville de Bâle, en Suisse. Il remet en cause 200 erreurs de Galien. (Les médecins naturalistes de Montpellier  à la Renaissance par Jean-Pierre DEDET)Contrairement à l'idée la plus répandue, l’Église catholique n'a jamais interdit formellement la dissection humaine, seuls étaient réprimés les profanations de sépultures et les vols de cadavres[3] : le Pape Boniface VIII, avec sa décrétale (lettre réponse du pape) en 1299, interdit une pratique des Croisés qui, pour ramener les os de leurs compagnons morts, les découpaient et faisaient bouillir[4]. Toutefois pour des raisons morales[évasif], elle reste extrêmement peu pratiquée pendant plusieurs siècles. La dissection se démocratise au XIIIe siècle pour des raisons médico-légales (affaires juridiques, épidémies). Les premières dissections au sein de l'enseignement médical apparaissent en Italie, à Bologne, au XIIIe siècle, puis elles font leur arrivée en France, en 1340 à Montpellier et en 1407 à Paris. Toutefois, cette pratique ne devient courante en France qu'à partir des années 1470.",
+    "image": "",
+    "sources": "https://obscura.fr/faits-divers/les-premieres-autopsies-de-lhistoire-decryptees/"
+  },
+  {
+    "id": 64,
+    "titre": "Cimabue achève sa dernière œuvre à Pise",
+    "date": 1302,
+    "zones": [
+      "Art"
+    ],
+    "type": 1,
+    "description": "Cimabue achève la mosaïque représentant Le Christ en majesté, entouré par la Vierge et de saint Jean l’évangéliste dans l’abside de la cathédrale de Pise, sa dernière œuvre (il meurt la même année à Pise ) . Cimabue est le premier peintre de la Basilique Saint-François d'Assise et l’un des premiers peintres à chercher à représenter le monde, les objets et les corps tels qu’ils existent et les émotions humaines telles qu'elles se manifestent. Il assure ainsi le renouvellement de la peinture chrétienne en s’écartant des pratiques proches de l’art byzantin que ses prédécesseurs et la plupart de ses contemporains employaient en Italie. La manière de Cimabue a imprégné de nombreux artistes. Avec lui, quelques peintres, dont Duccio di Buoninsegna, cherchent aussi à susciter l’implication émotionnelle des fidèles par ces peintures d'un style nouveau. Ils le font en réponse à la demande de l'ordre des Frères mineurs, les franciscains, grands commanditaires de l'époque avec les dominicains, l'ordre des Prêcheurs.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Christ_in_Majesty_%28Cimabue%29_Duomo_of_Pisa_20100930.jpg/1280px-Christ_in_Majesty_%28Cimabue%29_Duomo_of_Pisa_20100930.jpg",
+    "legende": "Le Christ en majesté, entouré par la Vierge et de saint Jean l’évangéliste a été achevée par Cimabue en 1302  a miraculeusement survécu à l’incendie de 1595",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 65,
+    "titre": "Jacques II dit le Juste",
+    "date": 1302,
+    "date_fin": 1314,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 1,
+    "description": "Jacques II d'Aragon dit « le Juste » né le 10 août 1267 à Valence et mort le 2 novembre 1327 à Barcelone, est roi de Sicile, puis roi d'Aragon, comte de Barcelone et roi de Valence. C'est le second fils de Pierre III d'Aragon et de Constance de Hohenstaufen.À la mort d’Alphonse III, Jacques II hérite de la Couronne d’Aragon. Il règne alors sur un ensemble composite : Aragon, Catalogne, Valence, Majorque (théoriquement vassal) et Sicile. Cette construction dynastique est issue de la politique expansionniste de Pierre III, mais elle demeure instable.La Sicile, conquise lors des Vêpres siciliennes (1282), place Jacques II au cœur d’un conflit majeur opposant la maison d’Aragon à la papauté et aux Angevins.👉 Dès le début du règne, se pose la question de la viabilité d’un empire méditerranéen aragonais. 1293-1295 – La pression pontificale et angevineLe pape Boniface VIII exige la restitution de la Sicile aux Angevins.Jacques II subit la menace d’une excommunication et d’une croisade.Les ressources militaires et financières de la Couronne sont insuffisantes pour soutenir durablement le conflit.👉 Le roi est confronté à un choix stratégique fondamental.II. 1295-1302 : La réorientation diplomatique et l’abandon de la Sicile1295 – Le traité d’AnagniPar le traité d’Anagni, Jacques II renonce officiellement à la Sicile, qu’il cède à la papauté. En échange :il obtient la levée de l’excommunication,la reconnaissance pontificale de son autorité,la promesse d’une compensation territoriale future.Il confie la Sicile à son frère Frédéric, qui s’y maintient cependant comme roi (Frédéric III de Sicile).👉 Ce traité marque un tournant diplomatique majeur et une rupture avec la politique de conquête paternelle.1296-1302 – Vers une monarchie pragmatiqueJacques II privilégie désormais :la stabilisation interne,la reconnaissance internationale,l’équilibre entre pouvoirs laïcs et ecclésiastiques.Le traité de Caltabellotta (1302) entérine de facto la séparation entre la Sicile et la Couronne d’Aragon.👉 Le roi accepte une redéfinition réaliste de la puissance aragonaise.III. 1302-1314 : Hégémonie péninsulaire et construction institutionnelleIntervention dans les affaires castillanesJacques II joue un rôle déterminant dans les conflits internes de la Castille :occupation de la Murcie durant la minorité de Ferdinand IV,arbitrage diplomatique aboutissant aux traités de Torrellas (1304) et d’Elche (1305).Ces accords permettent à l’Aragon d’obtenir une partie méridionale du royaume de Murcie.👉 Jacques II apparaît comme un arbitre politique majeur de la péninsule Ibérique.Renforcement des structures du pouvoirLe règne se caractérise par :une consolidation des Cortes,un dialogue institutionnalisé avec les élites urbaines,un respect scrupuleux des fueros et privilèges locaux.Jacques II gouverne par le consensus, ce qui garantit la stabilité à long terme.IV. 1314-1327 : Expansion méditerranéenne tardive et stabilisation1314-1324 – La conquête de la SardaigneLe pape investit Jacques II du royaume de Sardaigne et de Corse.La conquête militaire de la Sardaigne débute en 1323.Elle permet à la Couronne d’Aragon de renforcer sa présence maritime.👉 Il s’agit de la principale expansion territoriale effective du règne. Jacques II meurt le 2 novembre 1327.Il laisse à son successeur Alphonse IV :une monarchie stabilisée,un État structuré institutionnellement,une politique extérieure cohérente et reconnue.\n\nLe règne de Jacques II d’Aragon illustre le passage :d’une monarchie de conquête à une monarchie de négociation,d’une ambition impériale à une hégémonie régionale maîtrisée.Souverain pragmatique, Jacques II est l’un des meilleurs exemples de construction étatique médiévale fondée sur le droit, la diplomatie et le compromis, annonçant les formes modernes de gouvernement monarchique en Méditerranée occidentale.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Jacques_2_d%27aragon.png",
+    "legende": "Enluminure (détail) issue des Usatici et Constitutiones Cataloniae vers 1315-1325 (BnF, Latin 4670 A).",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 66,
+    "titre": "Destruction du phare d'Alexandrie",
+    "date": 1302,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Le phare d'Alexandrie, sur l'île de Pharos, est détruit par un tremblement de terre. \nLe site choisi pour la construction du phare est probablement la pointe de l'île de Pharos, ou plus certainement un îlot non loin. Il se trouvait ainsi tout près[Réf. 2] de l'emplacement de l'actuel fort Qait Bay qui date de la fin du XVe siècle et qui fut construit en partie avec des blocs antiques. Les nombreux séismes qui ont eu lieu dans la région entre le IVe siècle et le XIVe siècle, ainsi que le tsunami de 365, ont peu à peu endommagé le célèbre monument qui a été presque entièrement détruit en 1303.\n\nEn effet, en 1349, Ibn Battûta, le célèbre voyageur marocain, raconte :\n\n« Étant allé au Phare […] je constatai que son état de délabrement était tel qu'il n'était plus possible d'y entrer ni d'arriver à la porte y donnant accès. »\nCe qui demeurait encore du phare a dû s'effondrer lentement par la suite, puis glisser sous les flots. À la fin du XVe siècle, le sultan Al-Achrâf Sayf ad-Dîn Qait Bay, un des derniers souverains mamelouks Burjites de l'Égypte, ordonna la construction d'une citadelle sur ce qui restait de l'esplanade, afin de protéger la ville contre la menace de l'Empire ottoman.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Phare-Alexandrie.jpg/500px-Phare-Alexandrie.jpg",
+    "legende": "Phare d'Alexandrie. Mosaïque Basilique Saint Marc (Venise, Italie) détail",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 67,
+    "titre": "Bataille de Bapheus",
+    "date": 1302,
+    "zones": [
+      "Byzance",
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "1ere mention d’Osman fondateur de la dynastie Ottomane. \nLes Ottomans sous Osman Ier remportent une victoire cruciale près de Nicomédie, ouvrant la voie à la conquête de l'Asie Mineure byzantine.La bataille de Bapheus s'est déroulée le 27 juillet 1302 entre l'armée ottomane dirigée par Osman Ier et l'armée byzantine (composée en partie de mercenaires alains) dirigée par le général Georges Muzalon et Michel IX Paléologue, le fils d'Andronic II Paléologue. L'offensive victorieuse du général Jean Tarchaniotès en 1298 contre les émirats turcs s'est révélée sans lendemain ; les émirs affaiblis par ces actions ont peu à peu reconquis les territoires qu'ils contrôlaient, profitant du remplacement de Jean par des chefs de guerre souvent moins compétents. De plus, les mercenaires, souvent non payés, désertent les rangs de l'armée byzantine. Pour défendre la Bythinie, Andronic II profite de l'arrivée d'Alains qui fuient les Mongols et demandent l'asile. Andronic les envoie en Anatolie où il les met sous le commandement de son fils Michel, En 1302, lorsque Michel IX prépare son offensive, il reste à Magnésie où ses officiers l'encouragent à la prudence, du fait de son absence d'expérience militaire[4]. Face à cet immobilisme, les Turcs ravagent les campagnes alentour. Les Alains ne comprenant pas cette stratégie demandent à quitter les rangs de l'armée tandis que les éléments byzantins de celle-ci abandonnent la campagne, écœurés de voir leurs biens détruits impunément[4]. Andronic réussit à rassembler l'argent nécessaire pour solder les Alains trois mois supplémentaires. Au terme des trois mois, les Alains commencent à déserter tandis que les Turcs resserrent leur pression autour de Magnésie. Face au danger, Michel IX décide de battre en retraite vers l'ouest entraînant le reste de son armée[5]. Celle-ci passe par Pergame alors que ses arrières sont constamment harcelés par les Turcs. Pendant ce temps, le corps d'Alains envoyés le long du Sangarios, fleuve marquant la frontière entre les territoires byzantins et turcs, fait aussi face à une offensive turque. Cette armée, commandée par le général Mouzalon, est composée de 2 000 hommes. Elle fait face à 5 000 Ottomans dirigés par Osman Ier, le fondateur de la dynastie ottomane. La bataille se déroule près de Nicomédie le 27 juillet 1302. Les Alains sont vaincus par les Ottomans et se replient dans Nicomédie, laissant les troupes d'Osman ravager les campagnes. Seules les grandes villes telles que Brousse, Nicée ou Nicomédie constituent des îlots de sécurité pour les Grecs. La plupart des paysans fuient en direction de l'Europe devant l'insécurité régnant sur leurs terres[7]. Peu de temps après, une armée dirigée par Progonos Sgouros est aussi vaincue par les Ottomans. Toutefois, Andronic parvient à gagner les services de la Compagnie catalane, un groupe de mercenaires catalans expérimentés, envoyé en Asie Mineure repousser les Turcs en 1304.\nCeux qui deviendront les Ottomans (ou fils d’Osmân) prennent de l’assurance et les heurts se multiplient entre ces groupes de pasteurs et les populations des villes. Bientôt, le fils d’Ertuğrul, Osmân, doté d’un caractère combatif, se transforme en ghâzi ou « combattant pour la foi »[3]. Le déclin du sultanat seldjoukide permet aux ghâzis de la frontière de s’enhardir et de constituer de véritables bandes armées attirant à la fois les soldats d’autres chefs moins belliqueux et les réfugiés fuyant l’avance des Mongols. Se joignent à eux des notables de centres urbains anatoliens. Ensemble ils édifient un nouvel État après la défaite du général byzantin Georges Mouzalon lors de la bataille de Bapheus, le 27 juillet 1302. C’est lors de cette bataille qu’Osmân, père d’Orkhan, apparait dans les sources. Ses troupes peuvent alors piller impunément les campagnes byzantines de Bithynie dont une grande partie des paysans fuit vers la portion européenne de l’empire. Seules les grandes villes telles que Bursa, Nicée ou Nicomédie constituent des îlots de sécurité pour les Grecs",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Beylicats_d%E2%80%99Anatolie_vers_1330-fr.svg/1920px-Beylicats_d%E2%80%99Anatolie_vers_1330-fr.svg.png",
+    "legende": "Carte des beylicats d’Anatolie vers 1330",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 68,
+    "titre": "Exil de Dante",
+    "date": 1302,
+    "zones": [
+      "Italie",
+      "Art"
+    ],
+    "type": 2,
+    "description": "1302 Les Guelfes prennent le pouvoir à Florence, les gibelins sont bannis , Dante part en exil.  \n1301 : Charles de Valois est chargé par le pape de pacifier la Toscane déchirée par les luttes entre les factions de Guelfes blancs et noirs[7].Les aspects politiques de la prise de pouvoir des Guelfes à Florence en 1302 révèlent une cité divisée, où l’ingérence des puissances ecclésiastiques et impériales se mêle aux rivalités internes. Les factions en lutte\nFlorence, comme d’autres cités italiennes au Moyen Âge, était dominée par deux grands partis :\nLes Guelfes, défenseurs du pouvoir du pape et opposés à la noblesse féodale.\nLes Gibelins, partisans de l’empereur du Saint-Empire, souvent rapprochés des vieilles familles aristocratiques.\nDivision des Guelfes : Blancs vs Noirs\nLa lutte entre Guelfes et Gibelins se transforme au fil du temps. À la fin du XIIIe siècle, les Guelfes florentins se scindent :\nLes Guelfes Noirs sont alliés au pape (Boniface VIII) et soutenus par Charles de Valois, frère du roi de France.\nLes Guelfes Blancs, hostiles à l’ingérence papale et proches d’une vision d’autonomie urbaine, regroupent aussi des milieux marchands et intellectuels dont Dante.\n\nIntervention étrangère et coup de force\nEn 1301, le pape Boniface VIII envoie Charles de Valois à Florence avec ses troupes pour “pacifier” la ville selon ses intérêts. Charles de Valois favorise l’accession au pouvoir des Guelfes Noirs. C’est la fin de toute tentative de compromis, et le basculement est rapide :\nLes Noirs prennent le pouvoir par la force.\nLes Blancs et alliés gibelins sont bannis, envoyés en exil et dépossédés de leurs biens.\n\nConséquences sur la vie politique\nLa vie florentine est marquée par un climat d’exclusion, de vengeance et de violence politique.\nLes expulsés, dont Dante, tentent dans les premières années de l’exil d’organiser des coalitions avec les Gibelins pour reprendre Florence, mais sans succès durable.\nCe contexte de divisions et d’interventions extérieures préfigure le déclin des anciens antagonismes et, à terme, l’émergence de nouvelles formes de pouvoir urbain au XVe siècle\nPourtant, paradoxalement, cette instabilité a aussi stimulé une réflexion politique intense. C'est dans ce contexte de crise que des penseurs ont commencé à théoriser sur la meilleure forme de gouvernement pour garantir la paix et la liberté. Un véritable laboratoire politique à ciel ouvert !",
+    "image": "",
+    "sources": "https://cosmovisions.com/hist-Florence-Guelfes-Gibelins.htm"
+  },
+  {
+    "id": 69,
+    "titre": "États généraux du royaume de France",
+    "date": 1302,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "1ere  réunion des États généraux du royaume de France , convoqués par Philippe IV le Bel, à Notre-Dame de Paris. Les États approuvent le roi contre le pape Boniface VIII. \nDans le système politique du royaume de France, les états généraux du royaume (ou états généraux) étaient une assemblée réunissant les trois ordres (les états) de la société : la noblesse, le clergé et le Tiers état. Ils étaient convoqués, sur ordre du roi, dans des circonstances exceptionnelles (crise politique ou financière, guerre ou question diplomatique majeure). Cette assemblée était, entre autres, seule habilitée à réformer la fiscalité générale ou, dans une moindre mesure, à statuer sur des problèmes dynastiques, en vue de traiter la crise rencontrée.\n\nL'institution est créée en 1302 par le roi Philippe le Bel pour donner une apparente légitimité à ses décisions, en réaction à la bulle Ausculta fili du pape Boniface VIII. À l'origine, ils réunissaient le clergé, la noblesse et la bourgeoisie des bonnes villes (que l'on nommera rétrospectivement, à partir de la Révolution, troisième état puis tiers état).\n\nCette sorte d'assemblée « nationale » avant l'heure est fondée sur les lois fondamentales du royaume de France selon lesquelles :\n\nles peuples de France ne sont pas tributaires mais libres ; aucune contribution ne peut être exigée d'eux sans leur consentement ;\nle gouvernement du roi se fait toujours par conseils (les états généraux étant le conseil le plus large qu'un souverain puisse réunir autour de lui).\nCette assemblée n'avait en revanche aucun rôle réglementaire ou juridictionnel : ces compétences relevaient des parlements avec lesquels elle ne doit pas être confondue, et qui n'avaient pas non plus de pouvoir législatif, lequel appartenait au roi. Les députés des états généraux, quel que soit leur ordre respectif, étaient investis d'un mandat impératif et non représentatif : ils étaient porteurs des doléances des habitants de leurs circonscriptions (bailliages et sénéchaussées) et ne pouvaient nullement s'arroger le droit de parler en leur nom — règle que les députés des états généraux de 1789 n'ont pas respectée puisqu'ils se sont arrogés un mandat représentatif sans avoir été élus pour cela.",
+    "image": "",
+    "sources": "https://fr.wikipedia.org/wiki/%C3%89tats_g%C3%A9n%C3%A9raux_(France)"
+  },
+  {
+    "id": 70,
+    "titre": "Matines de Bruges",
+    "date": 1302,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Contexte :  L'annexion à laquelle Philippe Lebel attachait le plus de prix était celle de la Flandre , foyer économique de l'Occident, mais très troublé par des rivalités perpétuelles entre le comte les communes et la noblesse . L'influence française s'y développait grâce aux appels à la justice royale mais quand le roi a voulu réunir le comté à ses États , ces agents furent massacrés aux matines de Bruges et son armée écrasée à Courtrai par les milices communales. Malgré la revanche qu'il en tira à Mons-en-Pévèle en 1304 il n'arrivera jamais à résoudre la question à son profit. L'industrie textile faisait la prospérité du comté de Flandre, principauté du nord du royaume de France. Elle utilisait la laine, essentiellement importée des royaumes britanniques. Les artisans tisserands et commerçants, puis à leur suite le comté entier, se retrouvèrent donc dans une situation délicate lorsque le roi de France Philippe le Bel déclara la guerre à l'Angleterre pour prendre le contrôle de l'Aquitaine, en mai 1294.\nGui de Dampierre, comte de Flandre et jusque là vassal dévoué de Philippe le Bel malgré une ingérence de plus en plus grande du parlement de Paris dans les affaires internes de la Flandre, continua des négociations avec Édouard Ier, roi d'Angleterre, en vue d'un mariage entre les deux dynasties, En 1297, ralliant les liébaerts, faction antifrançaise , le comte de Flandre se déclare dégagé de toute obligation féodale avec Philippe le Bel. C'est le début de la guerre de Flandre qui tourne rapidement à l’avantage du roi de France. (bataille de Furnes, siège de Lille) puis à l'occupation de la Flandre par Philippe le Bel (1300-1302)\nGui de Dampierre fut emprisonné. Mais la réaction patriotique du commun (celui de Bruges surtout, dirigé par Pieter de Coninck, appuyé par les nombreux fils de Gui, chassa les Français\nPhilippe le Bel, qui prend possession de la Flandre en s'emparant de son comte Gui de Dampierre, vient à Bruges en 1301 faire sa Joyeuse Entrée. Après son départ, comble de la provocation, le peuple de Bruges apprend qu'il devra en payer les frais. Pieter de Coninck figure symbolique de la résistance flamande apparaît lui-même à la porte Sainte-Croix en ralliant ses compatriotes au cri de « Vlaenderen den Leeuw ! » - « Flandre le Lion ! ») et déclenche le massacre des Français et des leliaerts (les fleurdelisés, partisans des Français) lors des « matines de Bruges »  dans la nuit du 18 mai 1302, un millier de partisans du roi de France— dont la garnison française logée chez l'habitant — surpris dans leur sommeil par les milices communales flamandes. La dénomination « matines » a été donnée par analogie avec les Vêpres siciliennes\n\nAnecdote : Les Flamands repèrent les Français grâce à un shibboleth : les Français ne pouvaient pas prononcer correctement « schild en vriend » (« bouclier et ami » en flamand)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Matines_bruges.jpg",
+    "legende": "Maître du Policratique de Charles V - Intitulé marginal : 'de ceulx de bruges qui tuerent en une nuit tous lez francois qui estoient en la ville'",
+    "sources": "https://fr.wikipedia.org/wiki/Matines_de_Bruges_(histoire)"
+  },
+  {
+    "id": 72,
+    "titre": "Les Génois obtiennent d’Andronic II le droit de clore de mur leur comptoir de Péra-Galata",
+    "date": 1302,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Beyoğlu est l'un des 39 districts de la ville d'Istanbul, en Turquie, situé sur la rive européenne du Bosphore et séparé de la vieille ville (péninsule historique de Constantinople) par la Corne d'Or.\nDurant le Moyen Âge, il est connu sous le nom de Pera (« l'autre côté », en grec), nom qui est resté en usage jusqu'au début du XXe siècle et la fondation de la République turque.n 1273, Pera a été donné à la république de Gênes par l'empereur byzantin Michel VIII Paléologue en remerciement de l'appui de Gênes à l'Empire après la Quatrième croisade et le pillage de Constantinople en 1204. Pera est devenu une colonie avec un commerce florissant, dirigée par un Podestà. Le Palais génois (Palazzo del Comune) a été construit en 1316 par Montano de Marinis, le podestat de Galata (Pera), et demeure aujourd'hui en ruines, près de la Bankalar Caddesi (rue des banques) à Karaköy, à côté de nombreux bâtiments et maisons génoises datant des années 1300. En 1348, les génois ont construit la fameuse tour de Galata, un des plus grands monuments d'Istanbul. Péra (Galata) est restée sous le contrôle génois jusqu'au 29 mai 1453, date à laquelle elle a été conquise par les Ottomans avec le reste de la ville, après le siège de Constantinople.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Map_of_Constantinople%2C_Buondelmonti.jpg/960px-Map_of_Constantinople%2C_Buondelmonti.jpg",
+    "legende": "Carte de Constantinople (1422) par le cartographe florentin Cristoforo Buondelmonti montrant Pera (Beyoğlu) au nord de la Corne d'Or et la péninsule de Constantinople au sud.",
+    "sources": "https://fr.wikipedia.org/wiki/Beyo%C4%9Flu"
+  },
+  {
+    "id": 34,
+    "titre": "Benoit XI",
+    "date": 1303,
+    "date_fin": 1304,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique. C'est le deuxième pape issu de l'ordre dominicain.\n\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel. Le pape s'apprêtait à condamner Guillaume de Nogaret par contumace au moment où il mourut.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 37,
+    "titre": "Clément V",
+    "date": 1305,
+    "date_fin": 1314,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France.\n\nOn retient de lui l'image d'un pape de bonne foi qui manquait d'audace, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne en se soumettant au roi Philippe le Bel.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 43,
+    "titre": "Béla V (Othon III de Bavière)",
+    "date": 1305,
+    "date_fin": 1308,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\n\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 35,
+    "titre": "Edouard II",
+    "date": 1307,
+    "date_fin": 1327,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Né le 25 avril 1284 au château de Caernarfon et mort le 21 septembre 1327 au château de Berkeley, il est roi d'Angleterre du 7 juillet 1307 jusqu'à sa déposition le 25 janvier 1327. En 1308, il épouse Isabelle de France, fille du roi Philippe IV le Bel, afin de résorber les tensions entre les couronnes d'Angleterre et de France.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 36,
+    "titre": "Henri VII de Luxembourg",
+    "date": 1308,
+    "date_fin": 1313,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Né vers 1278-1279 à Valenciennes et mort le 24 août 1313 à Buonconvento. Élu roi des Romains en 1308 après l'assassinat d'Albert Ier, il est sacré empereur le 29 juin 1312, premier roi germanique à recevoir la couronne impériale depuis Frédéric II de Hohenstaufen.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 44,
+    "titre": "Carobert d'Anjou-Sicile",
+    "date": 1308,
+    "date_fin": 1342,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Petit-fils de Charles Ier d'Anjou, Carobert doit lutter contre ses compétiteurs Venceslas de Bohême puis Othon de Bavière avant de s'imposer sur le trône de Hongrie.\n\nIl brise la puissance de la haute noblesse magyare en s'appuyant sur la petite et moyenne noblesse. Il engage contre les familles de barons autonomes — comme les Csak et les Aba qui s'appuient sur leurs mines d'argent de Slovaquie — une lutte sans merci, leur enlevant successivement leurs forteresses.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 4,
+    "titre": "Début de la papauté d'Avignon",
+    "date": 1309,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309-1377), dite captivité babylonienne de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 39,
+    "titre": "Robert Ier le Sage",
+    "date": 1309,
+    "date_fin": 1343,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\n\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 3,
+    "titre": "Suppression de l'ordre du Temple",
+    "date": 1312,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Le concile de Vienne dissout officiellement l'ordre des Templiers sous la pression de Philippe IV le Bel. Les derniers dirigeants, dont Jacques de Molay, sont brûlés vifs en 1314. Fin d'un ordre militaire fondé lors des croisades.",
+    "image": "",
+    "sources": "Bulle pontificale Vox in excelso"
+  },
+  {
+    "id": 5,
+    "titre": "Grande famine en Europe du Nord",
+    "date": 1315,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Des pluies incessantes de 1315 à 1322 provoquent de terribles famines en Europe du Nord. Des millions de personnes meurent de faim. Cette crise fragilise les populations avant la grande épidémie de peste qui suivra trente ans plus tard.",
+    "image": "",
+    "sources": "Chronique d'Aix-la-Chapelle"
+  },
+  {
+    "id": 6,
+    "titre": "Début de la guerre de Cent Ans",
+    "date": 1337,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Édouard III d'Angleterre revendique la couronne de France après l'extinction des Capétiens directs. Ce conflit dynastique, commercial et territorial durera jusqu'en 1453 et redéfinira les identités nationales françaises et anglaises.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 7,
+    "titre": "Bataille de Crécy",
+    "date": 1346,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques, Livre I"
+  },
+  {
+    "id": 8,
+    "titre": "Peste noire en Europe",
+    "date": 1347,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "La peste bubonique débarque à Messine depuis des navires génois. En cinq ans, elle emporte entre un tiers et la moitié de la population européenne, soit 25 millions de morts. Aucune catastrophe comparable ne frappera l'Occident avant le XXe siècle.",
+    "image": "",
+    "sources": "Giovanni Boccaccio, Decameron (préface)"
+  },
+  {
+    "id": 9,
+    "titre": "Peste noire — vague orientale",
+    "date": 1347,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
+    "image": "",
+    "sources": "Ibn Battuta, Rihla"
+  },
+  {
+    "id": 11,
+    "titre": "Bataille de Poitiers",
+    "date": 1356,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Le Prince Noir capture le roi Jean II de France à Poitiers. La France doit payer une rançon colossale de trois millions d'écus d'or. Cette défaite plonge le royaume dans une crise financière et politique profonde.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 10,
+    "titre": "Jacquerie",
+    "date": 1358,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Soulèvement paysan d'une rare violence en Île-de-France et Picardie, déclenché par les exactions fiscales après la défaite de Poitiers. La révolte est écrasée dans le sang par la noblesse. Premier grand mouvement social de la France médiévale.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 13,
+    "titre": "Grand Schisme d'Occident",
+    "date": 1378,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378-1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
+    "image": "",
+    "sources": "Chroniques de Saint-Denis"
+  },
+  {
+    "id": 12,
+    "titre": "Révolte de Wat Tyler en Angleterre",
+    "date": 1381,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Les paysans anglais marchent sur Londres pour protester contre la poll tax et le servage. Wat Tyler, leur chef, est assassiné lors des négociations avec Richard II. La révolte est écrasée mais accélère la fin du servage en Angleterre.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 14,
+    "titre": "Bataille de Nicopolis",
+    "date": 1396,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "La dernière grande croisade, menée par Sigismond de Luxembourg, est annihilée par les Ottomans de Bayézid Ier. Cette défaite scelle le destin de l'Empire byzantin et ouvre les Balkans à l'expansion ottomane.",
+    "image": "",
+    "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 15,
+    "titre": "Avènement de la maison de Lancastre",
+    "date": 1399,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Henri Bolingbroke dépose Richard II et monte sur le trône sous le nom d'Henri IV, fondant la dynastie des Lancastre. Ce coup d'État dynastique annonce les futures guerres des Deux-Roses (1455-1485).",
+    "image": "",
+    "sources": "Thomas Walsingham, Historia Anglicana"
+  },
+  {
+    "id": 16,
+    "titre": "Concile de Constance",
+    "date": 1414,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Le concile met fin au Grand Schisme en élisant Martin V (1417), seul pape universel. Il condamne également Jan Hus, réformateur tchèque, au bûcher, déclenchant les guerres hussites en Bohême.",
+    "image": "",
+    "sources": "Actes du concile de Constance"
+  },
+  {
+    "id": 17,
+    "titre": "Bataille d'Azincourt",
+    "date": 1415,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Henri V d'Angleterre écrase une armée française dix fois supérieure en nombre. Les archers anglais déciment la chevalerie française. Cette victoire aboutit au traité de Troyes (1420) qui livre la régence de France à l'Angleterre.",
+    "image": "",
+    "sources": "Jean de Monstrelet, Chronique"
+  },
+  {
+    "id": 24,
+    "titre": "Guerres hussites",
+    "date": 1419,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Après le martyre de Jan Hus, les Hussites tchèques se soulèvent contre l'Église et l'Empire. Malgré cinq croisades, ils résistent vingt ans grâce aux innovations tactiques de Jan Žižka. Premier grand mouvement de réforme religieuse.",
+    "image": "",
+    "sources": "Aeneas Silvius Piccolomini, Historia Bohemica"
+  },
+  {
+    "id": 18,
+    "titre": "Traité de Troyes",
+    "date": 1420,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Charles VI, sous influence bourguignonne, reconnaît Henri V d'Angleterre comme héritier de France. Le Dauphin Charles est déclaré bâtard et exclu de la succession. La France est au bord de l'effacement en tant que royaume indépendant.",
+    "image": "",
+    "sources": "Enguerrand de Monstrelet, Chronique"
+  },
+  {
+    "id": 19,
+    "titre": "Jeanne d'Arc — siège d'Orléans",
+    "date": 1429,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Jeanne d'Arc lève le siège d'Orléans en neuf jours, renversant le cours de la guerre de Cent Ans. Elle fait ensuite sacrer Charles VII à Reims. Capturée en 1430, brûlée vive à Rouen en 1431, elle sera réhabilitée en 1456.",
+    "image": "",
+    "sources": "Procès de condamnation de Jeanne d'Arc (1431)"
+  },
+  {
+    "id": 20,
+    "titre": "Fin de la guerre de Cent Ans",
+    "date": 1453,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "La bataille de Castillon, dernière grande bataille de la guerre, est remportée par Charles VII. L'Angleterre perd toutes ses possessions françaises sauf Calais. La France sort renforcée et unifiée de ce conflit séculaire.",
+    "image": "",
+    "sources": "Thomas Basin, Histoire de Charles VII"
+  },
+  {
+    "id": 21,
+    "titre": "Chute de Constantinople",
+    "date": 1453,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Mehmed II prend Constantinople après 53 jours de siège. La ville millénaire devient Istanbul, capitale ottomane. Date souvent retenue comme fin du Moyen Âge : fin de l'Empire byzantin, dernier héritier de Rome.",
+    "image": "",
+    "sources": "Laonikos Chalkokondyles, Chronique"
+  },
+  {
+    "id": 22,
+    "titre": "Guerres de Roses — début",
+    "date": 1455,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "Conflit dynastique entre les maisons d'York (rose blanche) et de Lancastre (rose rouge) pour le trône d'Angleterre. Ces guerres civiles intermittentes (1455-1485) affaiblissent la noblesse anglaise et préparent l'avènement des Tudors.",
+    "image": "",
+    "sources": "Philippe de Commynes, Mémoires"
+  },
+  {
+    "id": 25,
+    "titre": "Invention de l'imprimerie",
+    "date": 1455,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Johannes Gutenberg achève la Bible à 42 lignes à Mayence, premier livre imprimé en Europe à caractères mobiles métalliques. Cette révolution technique transformera la diffusion du savoir et accélérera la Renaissance et la Réforme.",
+    "image": "",
+    "sources": "Bible de Gutenberg, 1455"
+  },
+  {
+    "id": 26,
+    "titre": "Lorenzo de Médicis — le Magnifique",
+    "date": 1469,
+    "zones": [
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Lorenzo de Médicis prend la tête de Florence à 20 ans et en fait le centre de la Renaissance italienne. Mécène exceptionnel, il protège Botticelli, Léonard de Vinci et Pic de la Mirandole. Florence rayonne sur toute l'Europe cultivée.",
+    "image": "",
+    "sources": "Machiavel, Histoire de Florence"
+  },
+  {
+    "id": 27,
+    "titre": "Avènement des Rois Catholiques",
+    "date": 1479,
+    "zones": [
+      "Pen. iberique"
+    ],
+    "type": 1,
+    "description": "L'union des couronnes de Castille et d'Aragon sous Isabelle et Ferdinand unifie l'Espagne. Cette alliance dynastique fera de l'Espagne la première puissance mondiale dès le début du XVIe siècle.",
+    "image": "",
+    "sources": "Hernando del Pulgar, Crónica"
+  },
+  {
+    "id": 23,
+    "titre": "Reconquista — chute de Grenade",
+    "date": 1492,
+    "zones": [
+      "Pen. iberique"
+    ],
+    "type": 1,
+    "description": "Les Rois Catholiques, Isabelle et Ferdinand, prennent Grenade, dernier royaume maure d'Espagne. La Reconquista achevée, ils expulsent également les Juifs d'Espagne (édit de l'Alhambra). Une nouvelle ère s'ouvre pour la péninsule ibérique.",
+    "image": "",
+    "sources": "Hernando del Pulgar, Crónica de los Reyes Católicos"
+  },
+  {
+    "id": 28,
+    "titre": "Avènement de Charles VIII — Italie",
+    "date": 1494,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Charles VIII envahit l'Italie, déclenchant les guerres d'Italie qui dureront soixante ans. Cette campagne introduit les idées et les arts de la Renaissance italienne en France, transformant profondément la culture française.",
+    "image": "",
+    "sources": "Philippe de Commynes, Mémoires"
+  }
+]
