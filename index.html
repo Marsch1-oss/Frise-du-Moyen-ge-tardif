@@ -1,352 +1,625 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Frise chronologique interactive du Moyen Âge tardif (1300–1500). Événements par zones géographiques : France, Angleterre, Empire, Italie, Orient.">
-  <title>Frise chronologique — Moyen Âge tardif (1300–1500)</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --parchment: #F5EDD8; --parchment-dk: #E8D9BA; --ink: #1C140A;
-      --ink-soft: #4A3B28; --ink-muted: #7A6A52; --red: #8B1A1A; --gold: #9A6B1A;
-      --border: rgba(100,80,40,0.25); --border-dark: rgba(100,80,40,0.5);
-      --track-h: 36px; --label-w: 130px; --radius: 6px;
-      --shadow: 0 2px 12px rgba(50,30,10,0.12);
-    }
-    html { font-size: 15px; }
-    body { background: var(--parchment-dk); color: var(--ink); font-family: 'Crimson Pro', Georgia, serif; min-height: 100vh; line-height: 1.6; }
+/* frise.js — Frise chronologique medievale 1300-1500 */
 
-    /* ── En-tête ── */
-    header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); }
-    .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.9rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.2rem; }
-    .site-sub { font-size: 0.85rem; color: rgba(245,237,216,0.55); font-style: italic; }
+var ZONES = [
+  'France', 'Angleterre', 'St Empire', 'Papaute',
+  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
+  'Europe C. & Or.', 'Byzance', 'Ottomans', 'Monde islamique', 'Orient', 'Monde',
+  'Alsace',
+  'Art', 'Techniques', 'Idees'
+];
 
-    /* ── Mise en page pleine largeur ── */
-    main { padding: 1.4rem 1.8rem 3rem; }
+var COLORS = {
+  'France':           { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
+  'Angleterre':       { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
+  'St Empire':        { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
+  'Papaute':          { bg: '#7A1A1A', light: '#F5E0E0', text: '#4A0808' },
+  'Naples':           { bg: '#1A5C4A', light: '#E0F5EE', text: '#0A3028' },
+  'Italie':           { bg: '#1A6B3C', light: '#E6F5ED', text: '#0F3D24' },
+  'Castille':         { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
+  'Aragon':           { bg: '#6B2A10', light: '#F5E8E0', text: '#3A1508' },
+  'Portugal':         { bg: '#3A6B10', light: '#EAF5E0', text: '#1E3A08' },
+  'Hongrie':          { bg: '#8B3A1A', light: '#F5E8E0', text: '#5C2008' },
+  'Europe C. & Or.':  { bg: '#2A5C5C', light: '#E0F2F2', text: '#173A3A' },
+  'Byzance':          { bg: '#6B1A6B', light: '#F5E6F5', text: '#3A0A3A' },
+  'Monde islamique':  { bg: '#8B6B10', light: '#F5EDD8', text: '#5C4408' },
+  'Ottomans':          { bg: '#8B1A3A', light: '#F5E0E8', text: '#5C0A22' },
+  'Orient':            { bg: '#5C2A10', light: '#F5E8E0', text: '#3A1A08' },
+  'Monde':            { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
+  'Alsace':           { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
+  'Art':              { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
+  'Techniques':       { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
+  'Idees':            { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
+};
 
-    /* ── Nav niveaux ── */
-    .nav-bar { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
-    .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 0.3rem 1rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
-    .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-    .nav-btn.active { background: var(--ink); color: var(--parchment); border-color: var(--ink); font-weight: 600; }
-    .nav-btn:disabled { opacity: 0.35; cursor: default; }
+var ZONE_ALIASES = {
+  'Empire':              'St Empire',
+  'St_Empire':           'St Empire',
+  'Iberique':            'Castille',
+  'Ibérique':            'Castille',
+  'Pen. iberique':       'Castille',
+  'Pen. ibérique':       'Castille',
+  'Pén. ibérique':       'Castille',
+  'Péninsule ibérique':  'Castille',
+  'Papaute':             'Papaute',
+  'Papauté':             'Papaute',
+  'Hongrie':             'Hongrie',
+  'Naples':              'Naples',
+  'Alsace':              'Alsace',
+  'Castille':            'Castille',
+  'Aragon':              'Aragon',
+  'Portugal':            'Portugal',
+  'Techniques et idees': 'Techniques',
+  'Art':                 'Art',
+  'Idees':               'Idees',
+  'Idées':               'Idees'
+};
 
-    /* ── Fil d'Ariane ── */
-    #breadcrumb { font-size: 0.83rem; color: var(--ink-muted); margin-bottom: 0.8rem; min-height: 1.3em; }
-    .bc-link { color: var(--red); cursor: pointer; text-decoration: underline; }
-    .bc-link:hover { color: var(--ink); }
-    .bc-sep { color: var(--ink-muted); margin: 0 0.2rem; }
-    .bc-item { font-style: italic; }
+var ROW_H    = 24;
+var ROW_GAP  = 4;
+var CHIP_PAD = 6;
+var TRACK_PX = 820;
 
-    /* ── Légende types ── */
-    .type-legend { display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.8rem; color: var(--ink-muted); font-style: italic; flex-wrap: wrap; }
-    .type-legend span { display: flex; align-items: center; gap: 0.3rem; }
+var currentLevel   = 1;
+var searchTerm     = '';
+var currentCentury = null;
+var currentDecade  = null;
+var allEvents      = [];
+var activeZones    = null;
 
-    /* ── Filtre zones ── */
-    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.4rem 0.6rem; margin-bottom: 0.8rem; padding: 0.6rem 1rem; background: rgba(245,237,216,0.7); border: 1px solid var(--border); border-radius: var(--radius); align-items: center; }
-    .filter-title { font-size: 0.8rem; color: var(--ink-muted); font-style: italic; white-space: nowrap; }
-    .filter-actions { display: flex; gap: 0.4rem; margin-left: auto; }
-    .filter-action-btn { font-family: 'Crimson Pro', serif; font-size: 0.78rem; padding: 0.12rem 0.65rem; border: 1px solid var(--border-dark); border-radius: 12px; background: transparent; color: var(--ink-muted); cursor: pointer; }
-    .filter-action-btn:hover { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-    .zone-checkbox { display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer; font-size: 0.82rem; color: var(--ink-soft); font-style: italic; padding: 0.12rem 0.5rem 0.12rem 0.35rem; border-radius: 12px; border: 1.5px solid transparent; transition: all 0.15s; user-select: none; }
-    .zone-checkbox:hover { border-color: var(--border-dark); }
-    .zone-checkbox.checked { border-color: var(--border-dark); background: rgba(255,255,255,0.35); }
-    .zone-checkbox.unchecked { opacity: 0.4; }
-    .zone-checkbox input { display: none; }
-    .zone-cb-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
-
-    /* ── Navigation décennale ── */
-    .decade-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.7rem; min-height: 2rem; }
-    #btn-prev, #btn-next { font-family: 'Crimson Pro', serif; font-size: 0.88rem; font-style: italic; padding: 0.28rem 1rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; display: none; }
-    #btn-prev:hover:not(:disabled), #btn-next:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-    #btn-prev:disabled, #btn-next:disabled { opacity: 0.3; cursor: default; }
-    #decade-label { font-family: 'IM Fell English', Georgia, serif; font-size: 1rem; color: var(--ink-soft); display: none; }
-
-    /* ── Frise pleine largeur ── */
-    .frise-card { background: rgba(245,237,216,0.85); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem 1rem 0.8rem; box-shadow: var(--shadow); overflow-x: auto; width: 100%; }
-    #frise-container { min-width: 600px; }
-
-    /* Axe */
-    .axis-row { display: flex; align-items: flex-end; margin-bottom: 0.2rem; height: 30px; }
-    .axis-spacer { width: var(--label-w); flex-shrink: 0; }
-    .axis-bar { flex: 1; position: relative; height: 30px; border-bottom: 1.5px solid var(--border-dark); }
-    .tick { position: absolute; bottom: 5px; font-size: 0.72rem; color: var(--ink-muted); transform: translateX(-50%); white-space: nowrap; font-style: italic; pointer-events: none; }
-    .tick-line { position: absolute; bottom: 0; width: 1px; height: 7px; background: var(--border-dark); transform: translateX(-50%); pointer-events: none; }
-    .axis-band { position: absolute; top: 0; bottom: 0; cursor: pointer; border-left: 1px dashed var(--border); transition: background 0.15s; }
-    .axis-band:hover { background: rgba(100,60,20,0.07); }
-
-    /* Pistes */
-    .track-row { display: flex; align-items: flex-start; margin-bottom: 0.35rem; min-height: var(--track-h); }
-    .zone-label { width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
-    .zone-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .track { flex: 1; position: relative; min-height: var(--track-h); }
-    .track-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); pointer-events: none; }
-
-    /* Chips */
-    .evt-chip { position: absolute; cursor: pointer; transition: filter 0.15s; z-index: 1; }
-    .evt-chip:hover { z-index: 10; filter: brightness(1.15); }
-    .chip-dot { border-radius: 50%; border: 2px solid rgba(245,237,216,0.7); }
-    /* type 1 = plus grand, type 3 = plus petit — géré en JS via style.width/height */
-
-    .chip-medium { font-size: 0.7rem; padding: 1px 6px; border-radius: 12px; border: 1.5px solid; white-space: nowrap; line-height: 20px; font-style: italic; max-width: 150px; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
-    .chip-medium.chip-type1 { font-weight: 600; font-size: 0.75rem; border-width: 2px; }
-    .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
-
-    .chip-full { font-size: 0.76rem; padding: 2px 9px; border-radius: 14px; white-space: nowrap; font-style: italic; line-height: 20px; max-width: 210px; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 1px 4px rgba(0,0,0,0.18); box-sizing: border-box; }
-    .chip-full.chip-type1 { font-weight: 600; font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.28); }
-    .chip-full.chip-type3 { opacity: 0.7; font-size: 0.68rem; }
-
-    .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.7rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 8px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
-    .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }
-    .chip-period.chip-type3 { opacity: 0.65; }
-    .chip-period:hover { z-index: 10; }
-    .chip-period-sm { padding: 0; }
-
-    .frise-hint { margin-top: 0.8rem; font-size: 0.75rem; color: var(--ink-muted); font-style: italic; text-align: center; }
-    .error { padding: 1rem; color: var(--red); font-style: italic; }
-
-    /* ── Modale plein écran ── */
-    #modal-overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(15,8,3,0.72);
-      z-index: 200; align-items: flex-start; justify-content: center;
-      padding: 0; overflow-y: auto;
-    }
-    #modal-overlay.open { display: flex; }
-    #modal-box {
-      background: var(--parchment);
-      border-left: 4px solid var(--gold);
-      border-right: 4px solid var(--gold);
-      width: 100%; max-width: 960px;
-      min-height: 100vh;
-      padding: 3rem 4rem 4rem;
-      position: relative;
-      margin: 0 auto;
-    }
-    #modal-close {
-      position: fixed; top: 1.2rem; right: 1.5rem;
-      background: var(--ink); color: var(--parchment);
-      border: none; cursor: pointer;
-      font-size: 1rem; font-family: 'Crimson Pro', serif;
-      padding: 0.4rem 1rem; border-radius: 20px;
-      transition: background 0.15s; z-index: 10;
-    }
-    #modal-close:hover { background: var(--red); }
-    #modal-zone { display: inline-block; font-size: 0.78rem; padding: 2px 12px; border-radius: 12px; margin-bottom: 0.5rem; font-weight: 600; letter-spacing: 0.04em; }
-    .modal-type-badge { display: inline-block; font-size: 0.78rem; padding: 2px 12px; border-radius: 12px; margin-left: 0.5rem; margin-bottom: 0.5rem; font-style: italic; }
-    .modal-type-badge.type1 { background: #FFF3CD; color: #856404; }
-    .modal-type-badge.type2 { background: #E8EFF5; color: #2C4A6B; }
-    .modal-type-badge.type3 { background: #F0F0F0; color: #555; }
-    #modal-date { font-size: 0.9rem; color: var(--ink-muted); font-style: italic; margin-bottom: 0.4rem; }
-    #modal-title { font-family: 'IM Fell English', Georgia, serif; font-size: 2.2rem; color: var(--ink); margin-bottom: 1.2rem; line-height: 1.2; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; text-align: center; }
-    /* Image flottante à droite, texte qui coule autour puis reprend pleine largeur */
-    #modal-body { display: block; }
-    #modal-img-wrap {
-      float: right;
-      clear: right;
-      margin: 0 0 1.2rem 2rem;
-      max-width: 280px;
-      width: 38%;
-    }
-    #modal-img-wrap img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-      box-shadow: 0 3px 16px rgba(0,0,0,0.18);
-    }
-    #modal-img-caption {
-      font-size: 0.78rem;
-      color: var(--ink-muted);
-      font-style: italic;
-      text-align: center;
-      margin-top: 0.4rem;
-      line-height: 1.4;
-    }
-    #modal-text-col { display: block; }
-    #modal-desc { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.95; }
-    #modal-desc p { margin-bottom: 1rem; text-align: justify; text-justify: inter-word; hyphens: auto; }
-    #modal-desc p:last-child { margin-bottom: 0; }
-    #modal-desc p::first-letter { font-size: 1.4em; font-family: 'IM Fell English', serif; float: left; line-height: 1; margin-right: 4px; color: var(--red); }
-    /* Efface le float après le texte pour que sources soit en pleine largeur */
-    #modal-sources { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 1.2rem; clear: both; }
-
-    /* ── Recherche ── */
-    .search-bar {
-      display: flex; align-items: center; gap: 0.6rem;
-      margin-bottom: 0.8rem; padding: 0.5rem 1rem;
-      background: rgba(245,237,216,0.7);
-      border: 1px solid var(--border); border-radius: var(--radius);
-    }
-    .search-bar label { font-size:0.8rem; color:var(--ink-muted); font-style:italic; white-space:nowrap; }
-    #search-input {
-      flex:1; font-family:'Crimson Pro',Georgia,serif; font-size:0.95rem;
-      color:var(--ink); background:var(--parchment);
-      border:1px solid var(--border-dark); border-radius:5px; padding:0.28rem 0.7rem;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    #search-input:focus { outline:none; border-color:var(--gold); box-shadow:0 0 0 2px rgba(154,107,26,0.15); }
-    #search-clear {
-      font-family:'Crimson Pro',serif; font-size:0.82rem; padding:0.22rem 0.8rem;
-      border:1px solid var(--border-dark); border-radius:12px;
-      background:transparent; color:var(--ink-muted); cursor:pointer;
-      transition:all 0.15s; display:none;
-    }
-    #search-clear:hover { background:var(--ink); color:var(--parchment); border-color:var(--ink); }
-    #search-count { font-size:0.78rem; color:var(--gold); font-style:italic; white-space:nowrap; min-width:80px; }
-    .evt-chip.search-match { outline:2.5px solid var(--gold); outline-offset:1px; z-index:20; }
-    .evt-chip.search-dim   { opacity:0.12; }
-    .track-row.search-hidden { display:none; }
-
-    /* ── Pied de page ── */
-    footer { text-align: center; padding: 1.2rem; font-size: 0.8rem; color: var(--ink-muted); border-top: 1px solid var(--border); font-style: italic; }
-
-    @media (max-width: 700px) {
-      main { padding: 1rem 0.8rem 2rem; }
-      :root { --label-w: 75px; }
-      #modal-box { padding: 2rem 1.2rem 2.5rem; }
-      #modal-title { font-size: 1.6rem; }
-      #modal-img-wrap { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem 0; }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1 class="site-title">Frise du Moyen &Acirc;ge tardif</h1>
-  <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. &amp; Or. &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Idees</p>
-</header>
-
-<main>
-
-  <div class="nav-bar">
-    <button class="nav-btn active" onclick="goLevel(1)">Vue d&rsquo;ensemble</button>
-    <button class="nav-btn" id="btn-level2" onclick="goLevel(2)" disabled>Vue si&egrave;cle</button>
-    <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
-  </div>
-
-  <div id="breadcrumb"></div>
-
-  <div class="search-bar">
-    <label for="search-input">&#128269; Recherche&nbsp;:</label>
-    <input type="text" id="search-input" placeholder="ex. Giotto, Dante, peste, Florence…"
-           autocomplete="off" oninput="onSearch(this.value)">
-    <span id="search-count"></span>
-    <button id="search-clear" onclick="clearSearch()">&#10005; Effacer</button>
-  </div>
-
-  <div class="type-legend">
-    <span><strong>&starf;&starf;&starf;</strong>&nbsp;Type&nbsp;1 &mdash; &eacute;v&eacute;nements majeurs (toutes &eacute;chelles)</span>
-    <span><strong>&starf;&starf;</strong>&nbsp;Type&nbsp;2 &mdash; &eacute;v&eacute;nements r&eacute;gionaux (si&egrave;cle &amp; d&eacute;cennie)</span>
-    <span><strong>&starf;</strong>&nbsp;Type&nbsp;3 &mdash; &eacute;v&eacute;nements locaux (d&eacute;cennie uniquement)</span>
-  </div>
-
-  <div class="filter-bar">
-    <span class="filter-title">Afficher&nbsp;:</span>
-    <div id="zone-filters" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div>
-    <div class="filter-actions">
-      <button class="filter-action-btn" onclick="filterAll(true)">Tout</button>
-      <button class="filter-action-btn" onclick="filterAll(false)">Aucun</button>
-    </div>
-  </div>
-
-  <div class="decade-nav">
-    <button id="btn-prev" onclick="navigateDecade(-1)">&larr; Page pr&eacute;c&eacute;dente</button>
-    <span id="decade-label"></span>
-    <button id="btn-next" onclick="navigateDecade(1)">Page suivante &rarr;</button>
-  </div>
-
-  <div class="frise-card">
-    <div id="frise-container">
-      <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
-    </div>
-  </div>
-
-</main>
-
-<footer>
-  Frise chronologique m&eacute;di&eacute;vale
-  <button onclick="openAdminLogin()" style="background:none;border:none;cursor:pointer;font-size:0.75rem;color:var(--border-dark);margin-left:1.2rem;font-family:inherit;opacity:0.5;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'" title="Acc&egrave;s &eacute;diteur">&#9998;</button>
-</footer>
-
-<div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div id="modal-box">
-    <button id="modal-close" onclick="closeModal()">&times; Fermer</button>
-    <div>
-      <span id="modal-zone"></span>
-      <span id="modal-type"></span>
-    </div>
-    <div id="modal-date"></div>
-    <h2 id="modal-title"></h2>
-    <div id="modal-body">
-      <div id="modal-img-wrap" style="display:none;">
-        <img id="modal-img" src="" alt="">
-        <div id="modal-img-caption"></div>
-      </div>
-      <div id="modal-text-col">
-        <p id="modal-desc"></p>
-        <p id="modal-sources"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="frise.js"></script>
-
-
-<!-- Modale login editeur -->
-<div id="login-overlay" style="display:none;position:fixed;inset:0;background:rgba(20,10,5,0.6);z-index:300;align-items:center;justify-content:center;">
-  <div style="background:var(--parchment);border:2px solid var(--border-dark);border-radius:10px;padding:2rem 2.5rem;max-width:340px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(30,15,5,0.3);">
-    <div style="font-family:'IM Fell English',serif;font-size:1.3rem;color:var(--ink);margin-bottom:0.4rem;">Acc&egrave;s &eacute;diteur</div>
-    <div style="font-size:0.85rem;color:var(--ink-muted);font-style:italic;margin-bottom:1.2rem;">Entrez le code d&apos;acc&egrave;s</div>
-    <input id="login-code" type="password" maxlength="10"
-      style="font-family:'Crimson Pro',serif;font-size:1.2rem;text-align:center;letter-spacing:0.3em;width:100%;padding:0.5rem;border:1.5px solid var(--border-dark);border-radius:6px;background:var(--parchment-lt);color:var(--ink);margin-bottom:1rem;"
-      onkeydown="if(event.key==='Enter') checkAdminCode()"
-      placeholder="&#183;&#183;&#183;&#183;">
-    <div style="display:flex;gap:0.6rem;justify-content:center;">
-      <button onclick="checkAdminCode()"
-        style="font-family:'Crimson Pro',serif;font-size:0.95rem;padding:0.4rem 1.4rem;background:var(--ink);color:var(--parchment);border:none;border-radius:20px;cursor:pointer;">
-        Valider
-      </button>
-      <button onclick="closeAdminLogin()"
-        style="font-family:'Crimson Pro',serif;font-size:0.95rem;padding:0.4rem 1.2rem;background:transparent;color:var(--ink-soft);border:1px solid var(--border-dark);border-radius:20px;cursor:pointer;">
-        Annuler
-      </button>
-    </div>
-    <div id="login-error" style="font-size:0.82rem;color:#8B1A1A;font-style:italic;margin-top:0.7rem;min-height:1.2em;"></div>
-  </div>
-</div>
-<script>
-function openAdminLogin() {
-  document.getElementById('login-overlay').style.display = 'flex';
-  document.getElementById('login-code').value = '';
-  document.getElementById('login-error').textContent = '';
-  setTimeout(function(){ document.getElementById('login-code').focus(); }, 100);
+function initActiveZones() {
+  activeZones = {};
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = true;
 }
-function closeAdminLogin() {
-  document.getElementById('login-overlay').style.display = 'none';
+
+function normalizeZone(z) {
+  return ZONE_ALIASES[z] || z;
 }
-function checkAdminCode() {
-  var code = document.getElementById('login-code').value.trim();
-  if (code === '1402') {
-    closeAdminLogin();
-    window.location.href = 'admin.html';
-  } else {
-    document.getElementById('login-error').textContent = 'Code incorrect — réessayez.';
-    document.getElementById('login-code').value = '';
-    document.getElementById('login-code').focus();
+
+function visibleAtLevel(evt, level) {
+  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
+  if (isNaN(t) || t === 1) return true;
+  if (t === 2) return level >= 2;
+  if (t === 3) return level >= 3;
+  return true;
+}
+
+/* ── Chargement ─────────────────────────────────────────────────────── */
+function loadEvents() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'events.json', true);
+  xhr.onload = function() {
+    if (xhr.status === 200 || xhr.status === 0) {
+      try {
+        var data = JSON.parse(xhr.responseText);
+        allEvents = data.map(function(e) {
+          var rawZones = e.zones || (e.zone ? [e.zone] : []);
+          e.zones = rawZones.map(normalizeZone);
+          e.type  = Number(e.type) || 1;
+          return e;
+        });
+        buildFilterBar();
+        renderLevel(1);
+      } catch(err) {
+        document.getElementById('frise-container').innerHTML =
+          '<p class="error">Erreur JSON : ' + err.message + '</p>';
+      }
+    } else {
+      document.getElementById('frise-container').innerHTML =
+        '<p class="error">Impossible de charger events.json.</p>';
+    }
+  };
+  xhr.onerror = function() {
+    document.getElementById('frise-container').innerHTML =
+      '<p class="error">Impossible de charger events.json.</p>';
+  };
+  xhr.send();
+}
+
+/* ── Filtre zones ────────────────────────────────────────────────────*/
+function buildFilterBar() {
+  var container = document.getElementById('zone-filters');
+  if (!container) return;
+  container.innerHTML = '';
+  for (var i = 0; i < ZONES.length; i++) {
+    (function(zone) {
+      var col = COLORS[zone];
+      if (!col) return;
+      var label = document.createElement('label');
+      label.className   = 'zone-checkbox checked';
+      label.dataset.zone = zone;
+      var input = document.createElement('input');
+      input.type = 'checkbox';
+      input.checked = true;
+      input.addEventListener('change', function() { toggleZone(zone, this.checked); });
+      var dot = document.createElement('span');
+      dot.className = 'zone-cb-dot';
+      dot.style.background = col.bg;
+      label.appendChild(input);
+      label.appendChild(dot);
+      label.appendChild(document.createTextNode('\u00a0' + zone));
+      container.appendChild(label);
+    })(ZONES[i]);
   }
 }
-document.addEventListener('DOMContentLoaded', function() {
-  var ov = document.getElementById('login-overlay');
-  ov.addEventListener('click', function(e){ if(e.target===this) closeAdminLogin(); });
-  document.getElementById('login-code').addEventListener('keydown', function(e){
-    if(e.key==='Escape') closeAdminLogin();
+
+function toggleZone(zone, checked) {
+  activeZones[zone] = checked;
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp = lbl.querySelector('input');
+    lbl.classList.toggle('checked',   inp.checked);
+    lbl.classList.toggle('unchecked', !inp.checked);
   });
+  refreshFrise();
+}
+
+function filterAll(checked) {
+  for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = checked;
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp = lbl.querySelector('input');
+    inp.checked = checked;
+    lbl.classList.toggle('checked',   checked);
+    lbl.classList.toggle('unchecked', !checked);
+  });
+  refreshFrise();
+}
+
+function refreshFrise() {
+  if      (currentLevel === 1) renderLevel(1);
+  else if (currentLevel === 2) renderLevel(2, currentCentury);
+  else                         renderLevel(3, currentDecade);
+}
+
+/* ── Rendu principal ─────────────────────────────────────────────────*/
+function renderLevel(level, rangeStart) {
+  currentLevel = level;
+  var start, end, tickStep;
+  if (level === 1) {
+    start = 1290; end = 1510; tickStep = 25;
+  } else if (level === 2) {
+    currentCentury = rangeStart;
+    start = rangeStart; end = rangeStart + 100; tickStep = 10;
+  } else {
+    currentDecade = rangeStart;
+    start = rangeStart; end = rangeStart + 10; tickStep = 1;
+  }
+
+  updateBreadcrumb();
+  updateNavButtons();
+
+  var container = document.getElementById('frise-container');
+  container.innerHTML = '';
+  container.appendChild(buildAxis(start, end, tickStep, level));
+
+  for (var i = 0; i < ZONES.length; i++) {
+    var zone = ZONES[i];
+    if (!activeZones[zone]) continue;
+    var evts = [];
+    for (var j = 0; j < allEvents.length; j++) {
+      var e = allEvents[j];
+      if (e.zones.indexOf(zone) === -1) continue;
+      if (!visibleAtLevel(e, level)) continue;
+      var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+      if (e.date > end || fin < start) continue;
+      evts.push(e);
+    }
+    container.appendChild(buildTrack(zone, evts, start, end, level));
+  }
+
+  var hint = document.createElement('div');
+  hint.className = 'frise-hint';
+  hint.textContent = level === 1
+    ? 'Cliquez sur une periode pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
+    : level === 2
+    ? 'Cliquez sur une decennie pour zoomer \u00b7 cliquez sur un evenement pour sa fiche'
+    : 'Cliquez sur un evenement pour afficher sa fiche complete';
+  container.appendChild(hint);
+  /* Ré-applique la recherche si active */
+  if (searchTerm) applySearch();
+}
+
+/* ── Axe ─────────────────────────────────────────────────────────────*/
+function buildAxis(start, end, step, level) {
+  var axis = document.createElement('div');
+  axis.className = 'axis-row';
+  var spacer = document.createElement('div');
+  spacer.className = 'zone-label axis-spacer';
+  axis.appendChild(spacer);
+  var bar = document.createElement('div');
+  bar.className = 'axis-bar';
+
+  for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
+    var tick = document.createElement('div');
+    tick.className = 'tick';
+    tick.style.left = pct(y, start, end);
+    tick.textContent = y;
+    bar.appendChild(tick);
+    var tl = document.createElement('div');
+    tl.className = 'tick-line';
+    tl.style.left = pct(y, start, end);
+    bar.appendChild(tl);
+  }
+
+  if (level === 1) {
+    [1300, 1350, 1400, 1450].forEach(function(s) {
+      var band = makeBand(s, s + 50, start, end, (function(sv) {
+        return function() { renderLevel(2, Math.floor(sv / 100) * 100); };
+      })(s));
+      bar.appendChild(band);
+    });
+  } else if (level === 2) {
+    for (var d = currentCentury; d < currentCentury + 100; d += 10) {
+      (function(decade) {
+        bar.appendChild(makeBand(decade, decade + 10, start, end, function() {
+          renderLevel(3, decade);
+        }));
+      })(d);
+    }
+  }
+  axis.appendChild(bar);
+  return axis;
+}
+
+function makeBand(from, to, start, end, onClick) {
+  var band = document.createElement('div');
+  band.className = 'axis-band';
+  band.style.left  = pct(from, start, end);
+  band.style.width = 'calc(' + pct(to, start, end) + ' - ' + pct(from, start, end) + ')';
+  band.addEventListener('click', onClick);
+  return band;
+}
+
+/* ── Anti-collision ──────────────────────────────────────────────────*/
+function chipW(evt, start, end, level) {
+  if (evt.date_fin && evt.date_fin > evt.date)
+    return (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start) * 100;
+  if (level === 1) return 1.5;
+  return (Math.min(evt.titre.length, level === 3 ? 28 : 20) * 7 + 16) / TRACK_PX * 100;
+}
+
+function assignRows(evts, start, end, level) {
+  var rowEnds = [];
+  var gap = CHIP_PAD / TRACK_PX * 100;
+  return evts.map(function(evt) {
+    var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+    var left = isPeriod
+      ? (Math.max(evt.date, start) - start) / (end - start) * 100
+      : (evt.date - start) / (end - start) * 100;
+    var right = left + chipW(evt, start, end, level);
+    var row = 0;
+    while (row < rowEnds.length && rowEnds[row] > left - gap) row++;
+    rowEnds[row] = right;
+    return row;
+  });
+}
+
+/* ── Piste ───────────────────────────────────────────────────────────*/
+function buildTrack(zone, evts, start, end, level) {
+  var row = document.createElement('div');
+  row.className = 'track-row';
+  row.dataset.zone = zone;
+  var lbl = document.createElement('div');
+  lbl.className = 'zone-label';
+  var dot = document.createElement('span');
+  dot.className = 'zone-dot';
+  dot.style.background = (COLORS[zone] || COLORS['France']).bg;
+  lbl.appendChild(dot);
+  lbl.appendChild(document.createTextNode(zone));
+  row.appendChild(lbl);
+
+  var visible = evts.filter(function(evt) {
+    var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
+    return evt.date <= end && fin >= start;
+  });
+
+  var rows  = assignRows(visible, start, end, level);
+  var maxR  = visible.length > 0 ? Math.max.apply(null, rows) : 0;
+  var trackH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
+
+  var track = document.createElement('div');
+  track.className = 'track';
+  track.style.height = trackH + 'px';
+
+  var line = document.createElement('div');
+  line.className = 'track-line';
+  line.style.top = (trackH / 2) + 'px';
+  track.appendChild(line);
+
+  for (var i = 0; i < visible.length; i++) {
+    var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
+    if (chip) track.appendChild(chip);
+  }
+
+  row.appendChild(track);
+  return row;
+}
+
+/* ── Chip ────────────────────────────────────────────────────────────*/
+function buildChip(evt, zone, start, end, level, rowIndex) {
+  var col      = COLORS[zone] || COLORS['France'];
+  var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+  var type     = Number(evt.type) || 1;
+  var chip     = document.createElement('div');
+  chip.className      = 'evt-chip';
+  chip.dataset.evtId  = evt.id;
+  chip.style.position = 'absolute';
+  chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+
+  if (isPeriod) {
+    var d0 = Math.max(evt.date, start);
+    var d1 = Math.min(evt.date_fin, end);
+    if (d1 <= d0) return null;
+    chip.classList.add('chip-period');
+    if (level === 1) chip.classList.add('chip-period-sm');
+    chip.style.left        = pct(d0, start, end);
+    chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
+    chip.style.height      = ROW_H + 'px';
+    chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
+    chip.style.borderColor = col.bg;
+    chip.style.color       = '#fff';
+    if (level > 1) {
+      var mx = level === 3 ? 40 : 22;
+      chip.textContent = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
+    }
+    chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
+
+  } else {
+    chip.style.height    = ROW_H + 'px';
+    chip.style.left      = pct(evt.date, start, end);
+    chip.style.transform = 'translateX(-50%)';
+
+    if (level === 3) {
+      chip.classList.add('chip-full');
+      if (type === 1) chip.classList.add('chip-type1');
+      if (type === 3) chip.classList.add('chip-type3');
+      chip.style.background = col.bg;
+      chip.style.color      = '#fff';
+      chip.textContent = evt.titre.length > 28 ? evt.titre.slice(0, 26) + '\u2026' : evt.titre;
+    } else if (level === 2) {
+      chip.classList.add('chip-medium');
+      if (type === 1) chip.classList.add('chip-type1');
+      if (type === 3) chip.classList.add('chip-type3');
+      chip.style.background  = col.light;
+      chip.style.color       = col.text;
+      chip.style.borderColor = col.bg;
+      chip.textContent = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
+    } else {
+      chip.classList.add('chip-dot');
+      var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
+      chip.style.background   = col.bg;
+      chip.style.width        = sz + 'px';
+      chip.style.height       = sz + 'px';
+      chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - sz / 2) + 'px';
+      chip.style.borderRadius = '50%';
+    }
+    chip.title = evt.titre + ' (' + evt.date + ')';
+  }
+
+  chip.addEventListener('click', (function(e, z) {
+    return function(ev) { ev.stopPropagation(); openModal(e, z); };
+  })(evt, zone));
+  return chip;
+}
+
+/* ── Modale ──────────────────────────────────────────────────────────*/
+function openModal(evt, zone) {
+  var col = COLORS[zone] || COLORS['France'];
+  document.getElementById('modal-zone').textContent      = zone;
+  document.getElementById('modal-zone').style.background = col.light;
+  document.getElementById('modal-zone').style.color      = col.text;
+
+  var typeEl = document.getElementById('modal-type');
+  if (typeEl) {
+    var t = Number(evt.type) || 1;
+    typeEl.textContent = t === 1 ? '\u2605\u2605\u2605 Evenement majeur'
+                       : t === 2 ? '\u2605\u2605 Evenement regional'
+                       :           '\u2605 Evenement local';
+    typeEl.className = 'modal-type-badge type' + t;
+  }
+
+  document.getElementById('modal-date').textContent =
+    (evt.date_fin && evt.date_fin > evt.date)
+      ? evt.date + ' \u2013 ' + evt.date_fin + ' apr. J.-C.'
+      : evt.date + ' apr. J.-C.';
+  document.getElementById('modal-title').textContent = evt.titre;
+
+  var descEl = document.getElementById('modal-desc');
+  descEl.innerHTML = '';
+  var paras = (evt.description || '').split(/\n\n+/);
+  for (var pi = 0; pi < paras.length; pi++) {
+    if (!paras[pi].trim()) continue;
+    var p = document.createElement('p');
+    p.textContent = paras[pi].replace(/\n/g, ' ').trim();
+    descEl.appendChild(p);
+  }
+
+  document.getElementById('modal-sources').textContent =
+    evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
+
+  var imgWrap   = document.getElementById('modal-img-wrap');
+  var imgEl     = document.getElementById('modal-img');
+  var captionEl = document.getElementById('modal-img-caption');
+
+  if (evt.image && evt.image.trim() !== '') {
+    imgEl.src = evt.image;
+    imgEl.alt = evt.legende || evt.titre;
+    if (captionEl) {
+      captionEl.textContent  = evt.legende || '';
+      captionEl.style.display = evt.legende ? 'block' : 'none';
+    }
+    imgWrap.style.display = 'block';
+  } else {
+    imgWrap.style.display = 'none';
+    imgEl.src = '';
+  }
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ── Navigation ──────────────────────────────────────────────────────*/
+function goLevel(level) {
+  if      (level === 1)                             renderLevel(1);
+  else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
+  else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
+}
+
+function navigateDecade(direction) {
+  if (currentDecade === null) return;
+  var next = currentDecade + direction * 10;
+  if (next < 1290 || next > 1500) return;
+  currentCentury = Math.floor(next / 100) * 100;
+  renderLevel(3, next);
+}
+
+function updateBreadcrumb() {
+  var html = '<span class="bc-item bc-link" onclick="goLevel(1)">1300\u20131500</span>';
+  if (currentLevel >= 2 && currentCentury !== null)
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(2)">'
+          + currentCentury + '\u2013' + (currentCentury + 100) + '</span>';
+  if (currentLevel === 3 && currentDecade !== null)
+    html += '<span class="bc-sep"> \u203a </span><span class="bc-item">'
+          + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
+  document.getElementById('breadcrumb').innerHTML = html;
+}
+
+function updateNavButtons() {
+  document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
+    btn.classList.toggle('active', i + 1 === currentLevel);
+    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade === null);
+  });
+  var prev = document.getElementById('btn-prev');
+  var next = document.getElementById('btn-next');
+  var lbl  = document.getElementById('decade-label');
+  if (!prev || !next) return;
+  var show = (currentLevel === 3 && currentDecade !== null);
+  prev.style.display = show ? 'inline-block' : 'none';
+  next.style.display = show ? 'inline-block' : 'none';
+  if (lbl) lbl.style.display = show ? 'inline-block' : 'none';
+  if (show) {
+    prev.disabled = currentDecade <= 1290;
+    next.disabled = currentDecade >= 1500;
+    if (lbl) lbl.textContent = currentDecade + '\u2013' + (currentDecade + 10);
+  }
+}
+
+/* ── Utilitaires ─────────────────────────────────────────────────────*/
+function pct(year, start, end) {
+  return ((year - start) / (end - start) * 100).toFixed(3) + '%';
+}
+
+
+/* ── Recherche ──────────────────────────────────────────────────────*/
+function onSearch(val) {
+  searchTerm = (val || '').trim().toLowerCase();
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
+  applySearch();
+}
+
+function clearSearch() {
+  var input = document.getElementById('search-input');
+  if (input) input.value = '';
+  searchTerm = '';
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+  var countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = '';
+  applySearch();
+}
+
+function eventMatchesSearch(evt) {
+  if (!searchTerm) return true;
+  var haystack = [
+    evt.titre || '',
+    evt.description || '',
+    evt.sources || '',
+    (evt.zones || []).join(' ')
+  ].join(' ').toLowerCase();
+  return searchTerm.split(/\s+/).filter(Boolean).every(function(w) {
+    return haystack.indexOf(w) !== -1;
+  });
+}
+
+function applySearch() {
+  /* Surligne les chips correspondants */
+  var chips   = document.querySelectorAll('.evt-chip');
+  var countEl = document.getElementById('search-count');
+
+  if (!searchTerm) {
+    chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
+    /* Ré-affiche toutes les pistes et restaure les filtres */
+    document.querySelectorAll('.track-row').forEach(function(r) {
+      r.classList.remove('search-hidden');
+    });
+    document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+      lbl.style.opacity       = '1';
+      lbl.style.pointerEvents = '';
+    });
+    if (countEl) countEl.textContent = '';
+    return;
+  }
+
+  /* Compte les correspondances par piste */
+  var matchByZone = {};
+  var totalMatch  = 0;
+
+  chips.forEach(function(chip) {
+    var id  = parseInt(chip.dataset.evtId, 10);
+    var evt = allEvents.find(function(e) { return e.id === id; });
+    if (evt && eventMatchesSearch(evt)) {
+      chip.classList.add('search-match');
+      chip.classList.remove('search-dim');
+      totalMatch++;
+      (evt.zones || []).forEach(function(z) { matchByZone[z] = true; });
+    } else {
+      chip.classList.add('search-dim');
+      chip.classList.remove('search-match');
+    }
+  });
+
+  /* Masque les pistes ET décoche les filtres des zones sans résultat */
+  document.querySelectorAll('.track-row').forEach(function(row) {
+    var zone = row.dataset.zone;
+    if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
+  });
+
+  /* Grise les cases à cocher des zones sans résultat */
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp  = lbl.querySelector('input');
+    var zone = lbl.dataset.zone;
+    if (!zone) return;
+    var hasMatch = !!matchByZone[zone];
+    lbl.style.opacity    = hasMatch ? '1' : '0.3';
+    lbl.style.pointerEvents = hasMatch ? '' : 'none';
+  });
+
+  if (countEl) {
+    countEl.textContent = totalMatch > 0
+      ? totalMatch + ' résultat' + (totalMatch > 1 ? 's' : '')
+      : 'Aucun résultat';
+  }
+}
+
+/* ── Init ────────────────────────────────────────────────────────────*/
+document.addEventListener('DOMContentLoaded', function() {
+  initActiveZones();
+  document.getElementById('modal-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+      if (searchTerm) clearSearch();
+    }
+    if (!document.getElementById('modal-overlay').classList.contains('open')) {
+      if (e.key === 'ArrowLeft')  navigateDecade(-1);
+      if (e.key === 'ArrowRight') navigateDecade(1);
+    }
+  });
+  loadEvents();
 });
-</script>
-</body>
-</html>
