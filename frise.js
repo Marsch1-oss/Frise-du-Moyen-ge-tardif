@@ -483,7 +483,8 @@ function openModal(evt, zone) {
     dateStr += ' \u2013 ' + finStr;
   }
   document.getElementById('modal-date').textContent = dateStr;
-  document.getElementById('modal-title').textContent = evt.titre;
+  var titleEl = document.getElementById('modal-title');
+  titleEl.innerHTML = highlightText(evt.titre);
 
   var descEl = document.getElementById('modal-desc');
   descEl.innerHTML = '';
@@ -491,7 +492,8 @@ function openModal(evt, zone) {
   for (var pi = 0; pi < paras.length; pi++) {
     if (!paras[pi].trim()) continue;
     var p = document.createElement('p');
-    p.textContent = paras[pi].replace(/\n/g, ' ').trim();
+    var paraText = paras[pi].replace(/\n/g, ' ').trim();
+    p.innerHTML = highlightText(paraText);
     descEl.appendChild(p);
   }
 
@@ -770,6 +772,29 @@ function updateFilterCheckboxes() {
     lbl.style.opacity       = '';
     lbl.style.pointerEvents = '';
   });
+}
+
+/* ── Surlignage du terme recherché ──────────────────────────────────*/
+function highlightText(text) {
+  if (!text) return '';
+  /* Échappe les caractères HTML */
+  var escaped = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  if (!searchTerm) return escaped;
+  /* Surligne chaque mot du terme de recherche */
+  var words = searchTerm.split(/\s+/).filter(Boolean);
+  words.forEach(function(word) {
+    /* Échappe les caractères spéciaux regex */
+    var safe = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    try {
+      var re = new RegExp('(' + safe + ')', 'gi');
+      escaped = escaped.replace(re,
+        '<mark style="background:#FFE066;color:#1C140A;border-radius:2px;padding:0 2px;">$1</mark>');
+    } catch(e) {}
+  });
+  return escaped;
 }
 
 /* ── Init ────────────────────────────────────────────────────────────*/
