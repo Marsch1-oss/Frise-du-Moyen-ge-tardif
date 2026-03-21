@@ -596,10 +596,39 @@ function pct(year, start, end) {
 
 
 /* ── Recherche ──────────────────────────────────────────────────────*/
+/* Sauvegarde des zones actives avant toute recherche */
+var savedActiveZones = null;
+
 function onSearch(val) {
   searchTerm = (val || '').trim().toLowerCase();
   var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
+
+  if (searchTerm) {
+    /* Première recherche : sauvegarde l'état des zones */
+    if (!savedActiveZones) {
+      savedActiveZones = {};
+      for (var z in activeZones) savedActiveZones[z] = activeZones[z];
+    }
+    /* Active toutes les zones qui ont au moins un résultat */
+    ZONES.forEach(function(z) {
+      var hasMatch = allEvents.some(function(e) {
+        return e.zones.indexOf(z) !== -1 && eventMatchesSearch(e);
+      });
+      activeZones[z] = hasMatch;
+    });
+    /* Met à jour les cases à cocher */
+    updateFilterCheckboxes();
+    refreshFrise();
+  } else {
+    /* Efface : restaure les zones d'origine */
+    if (savedActiveZones) {
+      activeZones = savedActiveZones;
+      savedActiveZones = null;
+      updateFilterCheckboxes();
+      refreshFrise();
+    }
+  }
   applySearch();
 }
 
@@ -611,6 +640,13 @@ function clearSearch() {
   if (clearBtn) clearBtn.style.display = 'none';
   var countEl = document.getElementById('search-count');
   if (countEl) countEl.textContent = '';
+  /* Restaure les zones d'origine */
+  if (savedActiveZones) {
+    activeZones = savedActiveZones;
+    savedActiveZones = null;
+    updateFilterCheckboxes();
+    refreshFrise();
+  }
   applySearch();
 }
 
@@ -718,6 +754,22 @@ function updatePeriodBanner(level, rangeStart) {
     lbl.textContent = 'Année ' + rangeStart;
     sub.textContent = rom3 + ' siècle';
   }
+}
+
+/* ── Mise à jour des cases à cocher du filtre ───────────────────────*/
+function updateFilterCheckboxes() {
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var inp  = lbl.querySelector('input');
+    if (!inp) return;
+    var zone = inp.value || lbl.dataset.zone;
+    if (!zone) return;
+    inp.checked = !!activeZones[zone];
+    lbl.classList.toggle('checked',   !!activeZones[zone]);
+    lbl.classList.toggle('unchecked', !activeZones[zone]);
+    /* Restaure l'opacité (peut avoir été grisée par applySearch) */
+    lbl.style.opacity       = '';
+    lbl.style.pointerEvents = '';
+  });
 }
 
 /* ── Init ────────────────────────────────────────────────────────────*/
