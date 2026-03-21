@@ -87,10 +87,10 @@ function normalizeZone(z) {
 
 function visibleAtLevel(evt, level) {
   var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  var effectiveLevel = level >= 3 ? 3 : level; /* niveau 4 = niveau 3 pour la visibilité */
-  if (isNaN(t) || t === 1) return true;
-  if (t === 2) return effectiveLevel >= 2;
-  if (t === 3) return effectiveLevel >= 3;
+  if (isNaN(t) || t === 1) return true;   /* Majeur    : tous niveaux */
+  if (t === 2) return level >= 2;          /* Important : siècle, décennie, année */
+  if (t === 3) return level >= 3;          /* National  : décennie, année */
+  if (t === 4) return level >= 4;          /* Local     : année uniquement */
   return true;
 }
 
@@ -469,9 +469,10 @@ function openModal(evt, zone) {
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
     var t = Number(evt.type) || 1;
-    typeEl.textContent = t === 1 ? '\u2605\u2605\u2605 Evenement majeur'
-                       : t === 2 ? '\u2605\u2605 Evenement regional'
-                       :           '\u2605 Evenement local';
+    typeEl.textContent = t === 1 ? '★★★★ Événement majeur'
+                       : t === 2 ? '★★★ Événement important'
+                       : t === 3 ? '★★ Événement national'
+                       :           '★ Événement local';
     typeEl.className = 'modal-type-badge type' + t;
   }
 

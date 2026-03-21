@@ -178,14 +178,18 @@
         <div class="type-radios" id="type-radios">
           <label class="type-radio selected" data-val="1">
             <input type="radio" name="type" value="1" checked>
-            <span class="stars">★★★</span> Majeur
+            <span class="stars">★★★★</span> Majeur
           </label>
           <label class="type-radio" data-val="2">
             <input type="radio" name="type" value="2">
-            <span class="stars">★★</span> Régional
+            <span class="stars">★★★</span> Important
           </label>
           <label class="type-radio" data-val="3">
             <input type="radio" name="type" value="3">
+            <span class="stars">★★</span> National
+          </label>
+          <label class="type-radio" data-val="4">
+            <input type="radio" name="type" value="4">
             <span class="stars">★</span> Local
           </label>
         </div>
@@ -499,7 +503,7 @@ function renderList() {
   filtered.forEach(function(evt) {
     var card = document.createElement('div');
     card.className = 'event-card' + (editingId === evt.id ? ' active' : '');
-    var stars = evt.type === 1 ? '★★★' : evt.type === 2 ? '★★' : '★';
+    var stars = evt.type === 1 ? '★★★★' : evt.type === 2 ? '★★★' : evt.type === 3 ? '★★' : '★';
     var zonesHtml = (evt.zones || []).map(function(z) {
       return '<span class="ec-zone" style="background:' + (COLORS[z] || '#888') + '">' + z + '</span>';
     }).join('');
@@ -542,8 +546,17 @@ function updateJSON() {
   });
   var txt = JSON.stringify(clean, null, 2);
   document.getElementById('json-output').value = txt;
-  document.getElementById('json-count').textContent =
-    events.length + ' événement' + (events.length > 1 ? 's' : '');
+  var warnings = validateEvents();
+  var countEl = document.getElementById('json-count');
+  countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
+  if (warnings.length > 0) {
+    countEl.textContent += ' ⚠ ' + warnings.length + ' pb';
+    countEl.style.color = '#8B1A1A';
+    countEl.title = warnings.join('\n');
+  } else {
+    countEl.style.color = '';
+    countEl.title = '';
+  }
   renderList();
 }
 
@@ -558,10 +571,35 @@ function copyJSON() {
   toast('JSON copié (' + events.length + ' événements) ✓');
 }
 
+function validateEvents() {
+  var warnings = [];
+  events.forEach(function(e) {
+    (e.zones || []).forEach(function(z) {
+      if (ZONES.indexOf(z) === -1)
+        warnings.push('ID ' + e.id + ' «' + (e.titre||'').substring(0,22) + '» : zone inconnue «' + z + '»');
+    });
+  });
+  return warnings;
+}
+
 function downloadJSON() {
   if (events.length === 0) { toast('⚠ Aucun événement — importez d\'abord votre events.json !'); return; }
   if (!hasImported && events.length < 5) {
     if (!confirm('Vous n\'avez pas importé de fichier existant. Continuer ?')) return;
+  }
+  var warns = validateEvents();
+  if (warns.length > 0) {
+    var msg = warns.length + ' zone(s) inconnue(s) — ces événements n\'apparaîtront pas sur la frise :
+
+'
+            + warns.slice(0, 6).join('
+')
+            + (warns.length > 6 ? '
+... et ' + (warns.length - 6) + ' autre(s).' : '')
+            + '
+
+Télécharger quand même ?';
+    if (!confirm(msg)) return;
   }
   var json = document.getElementById('json-output').value;
   var blob = new Blob([json], { type: 'application/json' });
@@ -582,9 +620,17 @@ function importJSON(input) {
   reader.onload = function(e) {
     try {
       var data = JSON.parse(e.target.result);
+      var ALIASES = {
+        'Pen. iberique':'Castille','Pen. ibérique':'Castille',
+        'Pén. ibérique':'Castille','Ibérique':'Castille',
+        'Papauté':'Papaute','Techniques et idees':'Techniques',
+        'Idées':'Idees','Empire':'St Empire'
+      };
       events = data.map(function(ev) {
         if (!ev.zones) ev.zones = ev.zone ? [ev.zone] : [];
         if (!ev.type)  ev.type  = 1;
+        /* Normalise les zones obsolètes */
+        ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         return ev;
       });
       hasImported = true;
