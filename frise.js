@@ -603,8 +603,10 @@ function pct(year, start, end) {
 var savedActiveZones = null;
 
 /* Sauvegarde du niveau et de la date avant recherche */
-var savedLevel = null;
-var savedRangeStart = null;
+var savedCurrentLevel   = null;
+var savedCurrentCentury = null;
+var savedCurrentDecade  = null;
+var savedCurrentYear    = null;
 
 function onSearch(val) {
   searchTerm = (val || '').trim().toLowerCase();
@@ -612,19 +614,20 @@ function onSearch(val) {
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
 
   if (searchTerm) {
-    /* Sauvegarde l'état initial (zones + niveau + date) */
+    /* Sauvegarde l'état initial (zones + niveau + dates) */
     if (!savedActiveZones) {
-      savedActiveZones = {};
+      savedActiveZones    = {};
       for (var z in activeZones) savedActiveZones[z] = activeZones[z];
-      savedLevel      = level;
-      savedRangeStart = rangeStart;
+      savedCurrentLevel   = currentLevel;
+      savedCurrentCentury = currentCentury;
+      savedCurrentDecade  = currentDecade;
+      savedCurrentYear    = currentYear;
     }
 
     /* Trouve tous les événements correspondants (tous types, toutes zones) */
     var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
 
     if (matches.length === 0) {
-      /* Aucun résultat — on reste en place, applySearch affichera 0 */
       updateFilterCheckboxes();
       refreshFrise();
       applySearch();
@@ -639,49 +642,52 @@ function onSearch(val) {
     });
     updateFilterCheckboxes();
 
-    /* Détermine le niveau minimal nécessaire pour voir tous les résultats */
+    /* Niveau minimal nécessaire : type 1→niv1, type 2→niv2, type 3→niv3, type 4→niv4 */
     var maxType = 1;
-    matches.forEach(function(e) {
-      var t = e.type || 1;
-      if (t > maxType) maxType = t;
-    });
-    /* type 1 → niveau 1, type 2 → niveau 2, type 3 → niveau 3, type 4 → niveau 4 */
+    matches.forEach(function(e) { var t = e.type || 1; if (t > maxType) maxType = t; });
     var neededLevel = maxType;
 
     /* Date du résultat le plus ancien */
-    var earliestDate = matches.reduce(function(min, e) {
+    var earliest = matches.reduce(function(min, e) {
       return e.date < min ? e.date : min;
     }, matches[0].date);
 
-    /* Calcule le rangeStart adapté au niveau cible */
-    var newRangeStart;
+    /* Navigue au bon niveau avec les bonnes variables globales */
     if (neededLevel === 1) {
-      newRangeStart = 1290;
+      renderLevel(1);
     } else if (neededLevel === 2) {
-      newRangeStart = Math.floor(earliestDate / 100) * 100;
+      currentCentury = Math.floor(earliest / 100) * 100;
+      renderLevel(2, currentCentury);
     } else if (neededLevel === 3) {
-      newRangeStart = Math.floor(earliestDate / 10) * 10;
+      currentCentury = Math.floor(earliest / 100) * 100;
+      currentDecade  = Math.floor(earliest / 10) * 10;
+      renderLevel(3, currentDecade);
     } else {
-      newRangeStart = earliestDate;
+      currentCentury = Math.floor(earliest / 100) * 100;
+      currentDecade  = Math.floor(earliest / 10) * 10;
+      currentYear    = earliest;
+      renderLevel(4, earliest);
     }
-
-    /* Navigue vers ce niveau et cette date */
-    level      = neededLevel;
-    rangeStart = newRangeStart;
-    refreshFrise();
 
   } else {
     /* Efface : restaure l'état d'origine */
     if (savedActiveZones) {
       activeZones = savedActiveZones;
       savedActiveZones = null;
-      if (savedLevel !== null) {
-        level      = savedLevel;
-        rangeStart = savedRangeStart;
-        savedLevel = null; savedRangeStart = null;
+      if (savedCurrentLevel !== null) {
+        currentLevel   = savedCurrentLevel;
+        currentCentury = savedCurrentCentury;
+        currentDecade  = savedCurrentDecade;
+        currentYear    = savedCurrentYear;
+        savedCurrentLevel = null;
+        if      (currentLevel === 1) renderLevel(1);
+        else if (currentLevel === 2) renderLevel(2, currentCentury);
+        else if (currentLevel === 3) renderLevel(3, currentDecade);
+        else                         renderLevel(4, currentYear);
+      } else {
+        updateFilterCheckboxes();
+        refreshFrise();
       }
-      updateFilterCheckboxes();
-      refreshFrise();
     }
   }
   applySearch();
@@ -699,13 +705,20 @@ function clearSearch() {
   if (savedActiveZones) {
     activeZones = savedActiveZones;
     savedActiveZones = null;
-    if (savedLevel !== null) {
-      level      = savedLevel;
-      rangeStart = savedRangeStart;
-      savedLevel = null; savedRangeStart = null;
+    if (savedCurrentLevel !== null) {
+      currentLevel   = savedCurrentLevel;
+      currentCentury = savedCurrentCentury;
+      currentDecade  = savedCurrentDecade;
+      currentYear    = savedCurrentYear;
+      savedCurrentLevel = null;
+      if      (currentLevel === 1) renderLevel(1);
+      else if (currentLevel === 2) renderLevel(2, currentCentury);
+      else if (currentLevel === 3) renderLevel(3, currentDecade);
+      else                         renderLevel(4, currentYear);
+    } else {
+      updateFilterCheckboxes();
+      refreshFrise();
     }
-    updateFilterCheckboxes();
-    refreshFrise();
   }
   applySearch();
 }
