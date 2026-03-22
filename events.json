@@ -135,6 +135,19 @@
     "sources": "https://fr.wikipedia.org/wiki/T%C3%A9mur_Khan"
   },
   {
+    "id": 181,
+    "titre": "Ferdinand IV",
+    "date": 1295,
+    "mois": 4,
+    "date_fin": 1312,
+    "mois_fin": 9,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 71,
     "titre": "Guerre vénéto-byzantine",
     "date": 1296,
@@ -176,6 +189,18 @@
     "description": "Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308.\n\nAlbert s'avère un souverain capable : il se garantit la paix avec Philippe IV le Bel par mariage et parvint à un accord avec le roi Venceslas II de Bohême. Il n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
     "image": "",
     "sources": "Wikipedia"
+  },
+  {
+    "id": 187,
+    "titre": "Osman 1er",
+    "date": 1299,
+    "date_fin": 1326,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 1,
+    "description": "Le prénom Osman étant emprunté à l'arabe Uṯmān – initialement et pendant longtemps francisé en Ottoman Ier  forme qui est à l'origine de l'adjectif  \"ottoman\".\nIl profita de la faiblesse des empires seldjoukide et byzantin sur leurs frontières respectives pour établir et renforcer son émirat. Son État, à l’origine une petite principauté turkmène d'Anatolie occidentale[8] pendant la vie d'Osman, s'est transformé en un empire transcontinental dans les siècles qui suivirent sa mort[9], qui a existé jusqu'à peu de temps après la fin de la Première Guerre mondiale. En raison de la rareté des sources historiques datant de sa vie, très peu d'informations factuelles sur Osman ont survécu. Pas une seule source écrite ne survit du règne d'Osman[10]. Les Ottomans n'ont enregistré l'histoire de la vie d'Osman qu'au XVe siècle, plus de cent ans après sa mort[11]. Pour cette raison, les historiens trouvent qu'il est très difficile de faire la différence entre les faits et les mythes dans les nombreuses histoires racontées à son sujet[12]. Des historiens comme Colin Imber sont même allés jusqu'à qualifier la période de la vie d'Osman comme un « trou noir »",
+    "image": ""
   },
   {
     "id": 30,
@@ -291,6 +316,17 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg/960px-Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg",
     "legende": "Venceslas II de Bohême - extrait du Codex Manesse (vers 1300).",
     "sources": "Wikipedia"
+  },
+  {
+    "id": 204,
+    "titre": "Venceslas II",
+    "date": 1300,
+    "date_fin": 1305,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 42,
@@ -625,7 +661,7 @@
   },
   {
     "id": 75,
-    "titre": "Albert obtient  l'approbation papale non sans d'importantes concessions",
+    "titre": "Albert 1er de Habsbourg  obtient  l'approbation papale non sans d'importantes concessions",
     "date": 1303,
     "mois": 3,
     "zones": [
@@ -918,6 +954,19 @@
     "description": "23 septembre : Louis le Hutin, fils du roi de France Philippe IV le Bel et de la reine de Navarre Jeanne Ire, épouse à Vernon Marguerite de Bourgogne, fille du duc de Bourgogne Robert II et d'Agnès de France[",
     "image": "",
     "sources": "Wikipedia"
+  },
+  {
+    "id": 205,
+    "titre": "Venceslas III (Wacław III)",
+    "date": 1305,
+    "mois": 6,
+    "date_fin": 1306,
+    "mois_fin": 8,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 96,
@@ -1217,6 +1266,19 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 133,
+    "titre": "Conquêtes  de Rhodes par les Hospitaliers",
+    "date": 1307,
+    "date_fin": 1310,
+    "zones": [
+      "Papaute",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Après l'expulsion complète des croisés de Terre sainte en 1291, les Hospitaliers de l'ordre de Saint-Jean de Jérusalem s'installent d'abord à Chypre, puis conquièrent l'île de Rhodes entre 1307 et 1310. Rhodes, siège de l'Ordre, devient une puissance militaire et maritime au service de la Chrétienté contre les musulmans, notamment les Turcs ottomans.\n\nIls fortifient la ville, construisant les impressionnantes murailles encore existantes. Une section du rempart construite au début du XIVe siècle est appelée « muraille des Juifs »[30]. En effet, l'assignation des Juifs (appelés « Rhodiotes ») à un quartier particulier (un ghetto) est attestée dès l'époque hospitalière.\n\nDans la partie basse de la ville de Rhodes, le Collachium, les Hospitaliers construisent le palais des grands maîtres et les « auberges », résidences organisées par « langues » [31], situées sur l'actuelle rue des Chevaliers, qui servaient aux Hospitaliers arrivant d'Europe de l'Ouest. Leur architecture est remarquable par ses volumes, par la beauté de la pierre, par les éléments de modénature tels que les caissons[32]. L'auberge de France a été restaurée par Albert Gabriel à partir de 1910[33].\n\nL'île résiste à un premier siège mené en 1480 par le sultan ottoman Mehmed II, avant de tomber le 20 décembre 1522 aux mains des Turcs sous le règne de Soliman le Magnifique, après un siège de cinq mois.\n\nChassés de Rhodes, les Hospitaliers s'installent, au bout de sept ans d'itinérance, dans l'archipel de Malte, à l'invitation de l'empereur Charles Quint, aussi roi de Castille, d'Aragon, de Sicile et de Naples. 15 août 1310 : les Hospitaliers de l'ordre de Saint-Jean de Jérusalem détournent une croisade, prêchée par le pape, et s'empare de Rhodes[13]. De là, leur flotte lutte à partir de l'île contre la piraterie turque.",
+    "image": ""
+  },
+  {
     "id": 36,
     "titre": "Henri VII de Luxembourg",
     "date": 1308,
@@ -1379,6 +1441,19 @@
     "sources": "https://fr.wikipedia.org/wiki/Pont_Valentr%C3%A9"
   },
   {
+    "id": 147,
+    "titre": "Henri VII de Luxembourg",
+    "date": 1308,
+    "mois": 11,
+    "date_fin": 1313,
+    "mois_fin": 8,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 4,
     "titre": "Début de la papauté d'Avignon",
     "date": 1309,
@@ -1386,7 +1461,7 @@
       "Papaute"
     ],
     "type": 2,
-    "description": "Le pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309-1377), dite captivité babylonienne de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.",
+    "description": "Installation du pape Clément V à Avignon, Début de la papauté d'Avignon (jusqu'en 1378)\nLe pape Clément V transfère la cour pontificale à Avignon, sous influence française. Cette période (1309-1377), dite captivité babylonienne de l'Église, affaiblit durablement l'autorité morale de la papauté en Europe.\nLe concile de Vienne convoqué par Clément V pour juger l'ordre du Temple, nécessitait qu'il se rapprochât de cette ville. Il rejoignit donc le Comtat Venaissin, terre pontificale Si son choix se porta sur la ville d'Avignon, possession du comte de Provence (roi de Naples et à ce titre vassal du Saint-siège), c'était que sa situation sur la rive gauche du fleuve la mettait en relation avec le nord de l'Europe, par l'axe Rhône/Saône Par ailleurs dans cette vallée du Rhône, frontière commune entre la France et le Saint-Empire romain germanique, seules des villes desservies par un pont pouvaient postuler un rôle de capitales internationales C'était le cas d'Avignon avec le pont Saint-Bénézet, lieu de passage obligé entre l'Espagne et le Languedoc, la Provence et l'Italie\nLes sept papes qui siégèrent à Avignon de 1305 à 1377 sont tous français selon le territoire actuel. En réalité, ce sont des papes de langue d'oc dont la région d'origine dépendait, soit directement du roi de France, soit du roi d'Angleterre (pour ses terres relevant du roi de France), soit du comté de Provence (qui relevait du Saint-Empire romain germanique). Ce sont donc des Français qui nomment les légats et les gouverneurs[pas clair] des provinces ecclésiastiques d’Italie[17], au détriment des Italiens habitués à recevoir les bénéfices liés à ces charges.",
     "image": "",
     "sources": "Jean Froissart, Chroniques"
   },
@@ -1404,6 +1479,33 @@
     "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
     "image": "",
     "sources": "Wikipedia"
+  },
+  {
+    "id": 132,
+    "titre": "1er siège de Gibraltar",
+    "date": 1309,
+    "mois": 6,
+    "mois_fin": 9,
+    "zones": [
+      "Castille",
+      "Aragon",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Le premier siège de Gibraltar est une bataille de la Reconquista qui s'est déroulée en 1309. La bataille vit s'opposer les forces du royaume de Castille, sous le commandement de Juan Núñez II de Lara (en) et Alfonso Pérez de Guzmán contre l'armée du royaume de Grenade, commandée par le sultan Mohammed III al-Makhlu et par son frère Abu al-Juyuch Nasr.\nLa bataille tourne en la faveur du royaume de Castille, qui remporte la victoire. La prise de Gibraltar renforce sensiblement l'influence de Castille sur la péninsule Ibérique, jusqu'à ce que celle-ci soit reprise par les Musulmans au cours du troisième siège de Gibraltar en 1333. Le 19 décembre 1308, à Alcalá de Henares, le roi Ferdinand IV de Castille et les ambassadeurs de la couronne d'Aragon, Bernat de Sarrià (en) et Gonzalo García, signent ensemble le traité d'Alcalá de Henares. Ferdinand IV, soutenu par son frère, l’archevêque de Tolède, l’évêque de Zamora, et Diego López V de Haro s'engage à déclarer la guerre au Royaume de Grenade le 24 juin 1309. Ce traité est signé au même moment qu'expire le traité de paix entre Grenade et Castille. Après la mise en place du siège d'Algeciras (en), Ferdinand IV envoie une partie de son armée pour capturer la ville de Gibraltar, tout en conservant le plus gros de ses forces pour assiéger Algeciras, Les troupes envoyées pour assiéger et capturer Gibraltar sont menées par Juan Núñez II de Lara, Alonso Pérez de Guzmán, Fernando Gutiérrez Tello et l'archevêque de Séville, accompagnés d'un conseil de nobles. Le groupe fut par la suite renforcé par Garci López de Padilla, le grand maître de l'ordre de Calatrava, accompagné d'un contingent de ses chevaliers.\nLes chroniques de Ferdinand IV racontent que les assiégeants ont encerclé la ville, avant de tirer sur celle-ci à l'aide de deux machines de guerre. Les mêmes chroniques disent que les troupes de Núñez de Lara et celles d'Alonso Pérez de Guzmán ont si bien encerclé la ville que les forces musulmanes furent impuissantes et incapables de résister, forcées de remettre la ville aux mains des Castillans. Guzmán et Lara auraient permis à plus d'un millier de musulmans de quitter la ville indemnes[1].\nLe 12 septembre 1309, le siège prend officiellement fin et l'armée de Ferdinand IV s'empare de la ville de Gibraltar.\nLa victoire castillane met fin à 600 ans de présence musulmane dans la ville de Gibraltar. Après la conquête de Gibraltar, Ferdinand IV ordonne la reconstruction des défenses de la ville qui avaient été détruites au cours de l'assaut. Il demande aussi la construction de plusieurs tours pour défendre les murs de la ville, ainsi qu'un chantier naval pour réparer les navires de passage. Il retourne ensuite avec son armée à Algeciras, où les forces castillanes, incapables de faire tomber la ville fortifiée, ont été obligées de se retirer[5].\n\nAprès avoir signé un traité de paix avec le royaume de Castille, Mohammed III al-Makhlu, l'émir de Grenade, subit des attaques de ses propres vassaux, à cause des nombreuses concessions qu'il fit à Ferdinand IV. Après avoir échappé à un attentat, Mohammed III revient à Grenade, où la population s'est révoltée et où son frère Abu al-Juyuch Nasr s'est lui-même installé sur le trône. Mohammed III assiste au massacre d'un de ses ministres et au pillage de son palais, il abdiquera en faveur de son frère peu de temps après[5].\n\nFerdinand IV nomme un des officiers ayant participé au siège, Alfonzo Fernando de Mendoza, comme gouverneur de la ville capturée[6],[5]. En 1310, il met en place une politique afin de repeupler la ville de Gibraltar. Désormais tous les escrocs, voleurs, meurtriers et femmes voulant fuir leur mari pourront trouver refuge dans les murs de la cité, y compris les condamnés à mort. Seules les personnes considérées comme traîtres à la couronne ne sont pas concernées par ce traitement de faveur. En outre, il interdit toute taxe sur les marchandises transitant par la ville. Cependant, le nombre élevé de criminels et de voleurs dans la ville a quelque peu freiné les efforts de repopulation. Le roi de Castille récompensa les troupes de la ville de Séville, qui ont joué un rôle primordial dans la prise de Gibraltar. Il offrit donc à la ville un certain nombre de privilèges.",
+    "image": ""
+  },
+  {
+    "id": 135,
+    "titre": "1er Procès d’Artois",
+    "date": 1309,
+    "mois": 3,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Premier procès d'Artois devant la Cour des pairs du roi de France : Robert III d'Artois conteste à sa tante Mahaut d'Artois la possession du comté d'Artois. Philippe IV le Bel tranche en faveur de Mahaut. Par compensation, Robert reçoit le comté de Beaumont-le-Roger et la seigneurie de Conches-en-Ouche.",
+    "image": ""
   },
   {
     "id": 3,
@@ -1437,6 +1539,45 @@
     "sources": "https://fr.wikipedia.org/wiki/Ayurbarwada_Buyantu_Khan"
   },
   {
+    "id": 180,
+    "titre": "Alphonse XI",
+    "date": 1312,
+    "mois": 9,
+    "date_fin": 1350,
+    "mois_fin": 3,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 136,
+    "titre": "Louis X  dit « le Hutin »",
+    "date": 1314,
+    "mois": 11,
+    "date_fin": 1316,
+    "mois_fin": 6,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 148,
+    "titre": "Louis IV  de Bavière",
+    "date": 1314,
+    "mois": 10,
+    "date_fin": 1347,
+    "mois_fin": 10,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 5,
     "titre": "Grande famine en Europe du Nord",
     "date": 1315,
@@ -1447,6 +1588,199 @@
     "description": "Des pluies incessantes de 1315 à 1322 provoquent de terribles famines en Europe du Nord. Des millions de personnes meurent de faim. Cette crise fragilise les populations avant la grande épidémie de peste qui suivra trente ans plus tard.",
     "image": "",
     "sources": "Chronique d'Aix-la-Chapelle"
+  },
+  {
+    "id": 137,
+    "titre": "Jean Ier, dit « le Posthume »",
+    "date": 1316,
+    "mois": 11,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "Jean Ier, dit « le Posthume », roi de France et de Navarre, est le fils posthume de Louis X le Hutin et de Clémence de Hongrie. Né le 14 ou le 15 novembre 1316 , il ne vit que cinq jours et règne sous la régence de son oncle paternel Philippe de Poitiers. Il est le treizième et le dernier roi de la dynastie dite des Capétiens directs à avoir hérité du titre de roi par son père.Quand Louis X le Hutin, son père, meurt sans fils pour lui succéder, c'est la première fois depuis Hugues Capet que la succession de père en fils des rois de France est interrompue.\n\nLe principe de la loi salique n’étant pas encore établi (puisque le cas ne s'était jamais posé), la fille du roi, Jeanne, que ce dernier a eue avec Marguerite de Bourgogne, sa première épouse, alors morte, pourrait être proclamée reine. Tel n'est pas le cas car la reine Clémence, veuve du roi, est alors enceinte : il faut donc attendre de savoir si elle accouchera d’un garçon, qui aura alors priorité sur sa demi-sœur.\n\nDans l'attente de cette naissance, Philippe, frère du roi, est chargé de la régence des deux royaumes de France et de Navarre, au détriment de son oncle Charles de Valois.\nLa venue d'un enfant mâle est donc très attendue pour donner à la France son roi.\nC'est un garçon qui naît. Ce nourrisson, proclamé roi de France et de Navarre sous le nom de Jean Ier, meurt cinq jours après sa naissance, sort qui fait de lui « le seul roi de France à avoir régné de sa naissance à sa mort »[6]. La mort prématurée de Jean Ier amène la première difficulté de succession de la dynastie capétienne. Son oncle, après l'avoir fait sacrer roi au cours de la cérémonie d'enterrement à Saint-Denis[7], monte sur le trône, aux dépens de sa nièce de cinq ans, Jeanne, fille de Louis X et de Marguerite de Bourgogne.\nSon corps est déposé dans la crypte de la basilique Saint-Denis. Son cercueil est profané le 18 octobre 1793, lors de la Révolution française et ses restes sont jetés dans une fosse commune attenante à la basilique.\nUne imposture, survenue quelques dizaines d'années plus tard, vient lancer la rumeur que le petit roi Jean n'est pas mort. Pendant la captivité du roi Jean II le Bon, entre 1356 et 1360, un Siennois du nom de Giannino Baglioni prétend être Jean Ier et donc l'héritier de la couronne. Il essaie de faire valoir ses droits et est fait prisonnier en Provence. Une étude historique, L'uomo che si credeva re di Francia, publiée en Italie en 2005, fait le point sur ce fait. Selon l'auteur de l'ouvrage, c'est Cola di Rienzo ou bien Giannino lui-même, qui fait fabriquer les faux censés attester que Giannino Baglioni est Jean Ier le Posthume. Peu après leur rencontre en 1354, Cola di Rienzo est assassiné, et Giannino attend deux ans avant de faire état de ses prétentions. Il se rend à la cour de Hongrie, où le roi Louis Ier de Hongrie, neveu de Clémence de Hongrie, le reconnait comme le fils de Louis X et de Clémence, ce qui, d'ailleurs, ne lui sert en rien. En 1360, Giannino se rend à Avignon, où le pape Innocent VI refuse de le recevoir. Après plusieurs tentatives pour se faire reconnaître, il est arrêté et emprisonné à Aix-en-Provence. Transféré d'abord à Marseille et plus tard à Naples, il y meurt en 1362.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jean_Ier_Bier.jpg/330px-Jean_Ier_Bier.jpg",
+    "legende": "Le convoi funéraire de Jean le Posthume.",
+    "sources": "https://fr.wikipedia.org/wiki/Jean_Ier_le_Posthume"
+  },
+  {
+    "id": 138,
+    "titre": "Philippe V dit « le Long »",
+    "date": 1316,
+    "mois": 11,
+    "date_fin": 1322,
+    "mois_fin": 1,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 155,
+    "titre": "Jean XXII Jacques Duèze",
+    "date": 1316,
+    "mois": 8,
+    "date_fin": 1334,
+    "mois_fin": 12,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 206,
+    "titre": "Władysław I Łokietek Ladislas Petite-Coudée",
+    "date": 1320,
+    "date_fin": 1333,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 139,
+    "titre": "Charles IV dit « le Bel »",
+    "date": 1322,
+    "mois": 1,
+    "date_fin": 1328,
+    "mois_fin": 2,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 188,
+    "titre": "Orhan",
+    "date": 1324,
+    "date_fin": 1362,
+    "mois_fin": 3,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 195,
+    "titre": "Andronic III Paléologue",
+    "date": 1325,
+    "mois": 2,
+    "date_fin": 1341,
+    "mois_fin": 6,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 149,
+    "titre": "Frédéric le Bel",
+    "date": 1326,
+    "mois": 1,
+    "date_fin": 1330,
+    "mois_fin": 1,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 144,
+    "titre": "Édouard III",
+    "date": 1327,
+    "mois": 1,
+    "date_fin": 1377,
+    "mois_fin": 6,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 171,
+    "titre": "Alphonse IV dit le Bénin",
+    "date": 1327,
+    "mois": 11,
+    "date_fin": 1336,
+    "mois_fin": 1,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 140,
+    "titre": "Philippe VI de Valois",
+    "date": 1328,
+    "mois": 4,
+    "date_fin": 1350,
+    "mois_fin": 8,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 201,
+    "titre": "Jeanne de Savoie",
+    "date": 1328,
+    "mois": 5,
+    "date_fin": 1341,
+    "mois_fin": 6,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 207,
+    "titre": "Casimir III le Grand",
+    "date": 1333,
+    "mois": 3,
+    "date_fin": 1370,
+    "mois_fin": 11,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 156,
+    "titre": "Benoît XII Jacques Fournier",
+    "date": 1334,
+    "mois": 12,
+    "date_fin": 1342,
+    "mois_fin": 4,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 172,
+    "titre": "Pierre IV d'Aragon dit le Cérémonieux",
+    "date": 1336,
+    "mois": 1,
+    "date_fin": 1387,
+    "mois_fin": 1,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 6,
@@ -1462,6 +1796,58 @@
     "sources": "Jean Froissart, Chroniques"
   },
   {
+    "id": 193,
+    "titre": "Jean V Paléologue",
+    "date": 1341,
+    "mois": 6,
+    "date_fin": 1376,
+    "mois_fin": 8,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 157,
+    "titre": "Clément VI  Pierre Roger",
+    "date": 1342,
+    "mois": 5,
+    "date_fin": 1352,
+    "mois_fin": 12,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 182,
+    "titre": "Louis Ier le Grand",
+    "date": 1342,
+    "mois": 7,
+    "date_fin": 1382,
+    "mois_fin": 9,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 168,
+    "titre": "Jeanne Ire",
+    "date": 1343,
+    "mois": 1,
+    "date_fin": 1382,
+    "mois_fin": 5,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 7,
     "titre": "Bataille de Crécy",
     "date": 1346,
@@ -1473,6 +1859,19 @@
     "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.",
     "image": "",
     "sources": "Jean Froissart, Chroniques, Livre I"
+  },
+  {
+    "id": 150,
+    "titre": "Charles IV de Luxembourg",
+    "date": 1346,
+    "mois": 7,
+    "date_fin": 1378,
+    "mois_fin": 11,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 8,
@@ -1497,6 +1896,19 @@
     "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
     "image": "",
     "sources": "Ibn Battuta, Rihla"
+  },
+  {
+    "id": 202,
+    "titre": "Jean VI Cantacuzène",
+    "date": 1347,
+    "mois": 5,
+    "date_fin": 1354,
+    "mois_fin": 12,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 121,
@@ -1541,6 +1953,70 @@
     "sources": "Le Journal Historique de l'Alsace Tome 2"
   },
   {
+    "id": 134,
+    "titre": "Mort de Charles d’Anjou dit le Boiteux",
+    "date": 1349,
+    "mois": 5,
+    "zones": [
+      "Naples"
+    ],
+    "type": 3,
+    "description": "Mort de Charles d’Anjou dit le Boiteux roi de Naples, comte de Provence, d’Anjou et du Maine , son fils Robert dit le sage lui succède  \nCharles II d'Anjou, dit le Boiteux, né vers 1254, mort le 6 mai 1309 à Naples,  (55) est le fils de Charles Ier d'Anjou (fils de Louis VIII) et de Béatrice de Provence, et le neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré dès sa naissance prince de Salerne, puis, après la mort de ses parents en 1285, roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine (uniquement jusqu'en 1290 pour ces deux dernières provinces) et prince d'Achaïe ou de Morée jusqu'en 1289 . À la mort de sa mère, Charles devient comte de Provence et fait alors entreprendre des fouilles sous l'église de Saint-Maximin, qui permettent la découverte du tombeau de Marie-Madeleine en 1279. En 1257, Charles Ier d'Anjou acquiert de la Maison des Baux les droits au trône du royaume d'Arles. Et quand en 1280 l'empereur Rodolphe Ier de Habsbourg pense reconstituer ledit royaume, il est contraint de traiter avec lui. Un accord est trouvé entre les deux souverains, à la suite duquel le royaume sera attribué à Charles, prince de Salerne, qui à son tour devra le céder à son fils Charles Martel de Hongrie lors de ses noces avec Clémence, fille de Rodolphe. Mais cela n'aura pas lieu en raison des Vêpres siciliennes, en 1282. Après les Vêpres siciliennes, Charles rejoint son père à Naples et assume la régence pendant que ce dernier se rend en Provence pour armer une flotte grâce aux fonds fournis par le pape Martin IV pour lui permettre d'assumer la régence du royaume de Naples. La flotte ainsi constituée aurait dû rejoindre les bateaux qui l'attendaient dans le port de Naples, avant de s'unir à Ustica avec le reste de la force navale, composée de 30 galères, et avec l'armée italo-angevine en provenance de Brindisi. Mais le 5 juin 1284, Roger de Lauria, commandant de la flotte aragonaise se présente dans le port de Naples et le jeune prince, désobéissant à l'ordre de son père de ne pas bouger avant son retour de Provence, sort du port avec ses bateaux pour combattre Lauria. Il est battu et fait prisonnier au cours d'un engagement, en compagnie de nombreux autres nobles napolitains. Il restera captif à Barcelone pendant quatre ans. À la mort de son père, Charles est toujours en captivité, malgré l'intervention de nombreuses délégations en faveur de sa libération (France, Angleterre, Papauté...). Charles est remis en liberté le 8 novembre 1288 grâce au traité de Canfranc, et à la condition de laisser en Aragon trois de ses fils en otage (Louis, Robert et Raymond-Bérenger. Il se fait couronner roi de Naples le 29 mai 1289 en la cathédrale de Rieti par le pape Nicolas IV. Malgré les pressions belliqueuses de ce dernier et du comte Robert II d'Artois, il conclut une trêve avec l'Aragon en 1289. Charles II suit la politique de son père dans les Balkans en s'opposant aux empereurs de Byzance, de concert avec son cousin Charles de Valois, frère cadet du roi Philippe IV le Bel. Le 12 juin 1295, Charles II finit par signer un traité de paix avec Jacques II d'Aragon, connu sous le nom de Traité d'Anagni, sur la proposition du pape Célestin V et conclu par le pape Boniface VIII. Celui-ci prévoit que Charles II récupère la Sicile et que ses trois fils, toujours aux mains de Jacques II depuis 7 ans, soient remis en liberté. En échange, le pape suspend l'excommunication de ce dernier, qui doit par ailleurs recevoir le royaume de Sardaigne et Corse, créé ex novo et tout à conquérir, l'île étant déjà gouvernée par des entités étatiques autonomes. Le traité prévoit en outre l'union de Jacques II avec Blanche, la deuxième fille de Charles II, tandis que Frédéric, gouverneur de la Sicile, aurait été indemnisé par son mariage avec l'héritière de l'empire byzantin, Catherine de Courtenay. Frédéric (frère de Jacques II gouverneur de la Sicile) , fâché que le testament d'Alphonse III n'ait pas été respecté par Jacques II, refuse et se range aux côtés des Siciliens qui, se sentant trahis par le nouveau roi d'Aragon, déclarent la déchéance de Jacques et élisent Frédéric comme roi. Le 29 octobre 1295, conformément au traité d'Anagni, Blanche d'Anjou et de Naples épouse Jacques, roi d'Aragon, à Vilabertran (Haut-Emprudan), dans le nord de la Catalogne. Ce dernier n'accepte pas sa destitution et se retrouve ainsi aux côtés des Angevins contre son propre frère Frédéric et les Siciliens. En juillet 1299, à Capo d'Orlando, avec la flotte aragonaise complétée de celle de Naples, Jacques bat Frédéric, qui parvient à se sauver avec 17 galères. Toutefois, dès l'année suivante, Jacques doit revenir en Aragon face à la résistance opposée par Frédéric.La guerre des Vêpres Siciliennes se termine par le traité de paix de Caltabellotta, signé le 31 août 1302, En 1303, Charles II appuie l'élection de Niccolò Boccasini sous le nom de Benoît XI. Celui-ci, lorsqu'il était légat en Hongrie, avait appuyé l'élection au trône de Hongrie de Charobert, le petit-fils de Charles II. En 1306, Charles entre en conflit avec Philippe de Savoie, le troisième mari d'Isabelle de Villehardouin, princesse d'Achaïe, à laquelle il a cédé le titre en 1289. En 1307, il déclare le couple déchu du titre, qu'il réattribue à son fils Philippe de Ternte , auquel en 1301, il avait déjà cédé le titre de roi d'Albanie. En 1309, Charles propose de nouveau la reconstitution du royaume d'Arles, dont son père Charles Ier avait racheté les droits à Raymond des Baux, prince d'Orange. Ce projet n'aboutira pas. Il meurt à Naples le 5 mai 1309, laissant le trône à son fils Robert, dit le Sage. Son fils aîné, Charles Martel, a disputé le trône de Hongrie à André III jusqu'à sa mort due à la peste en 1295.",
+    "image": ""
+  },
+  {
+    "id": 141,
+    "titre": "Jean II le Bon",
+    "date": 1350,
+    "mois": 8,
+    "date_fin": 1364,
+    "mois_fin": 4,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 175,
+    "titre": "Pierre Ier dit le Cruel",
+    "date": 1350,
+    "mois": 3,
+    "date_fin": 1366,
+    "mois_fin": 3,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 158,
+    "titre": "Innocent VI  Étienne Aubert",
+    "date": 1352,
+    "mois": 12,
+    "date_fin": 1362,
+    "mois_fin": 9,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 203,
+    "titre": "Mathieu Cantacuzène",
+    "date": 1353,
+    "mois": 4,
+    "date_fin": 1357,
+    "mois_fin": 12,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 11,
     "titre": "Bataille de Poitiers",
     "date": 1356,
@@ -1565,6 +2041,136 @@
     "sources": "Jean Froissart, Chroniques"
   },
   {
+    "id": 159,
+    "titre": "Urbain V   Guillaume Grimoard",
+    "date": 1362,
+    "mois": 9,
+    "date_fin": 1370,
+    "mois_fin": 12,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 189,
+    "titre": "Mourad Ier",
+    "date": 1362,
+    "mois": 3,
+    "date_fin": 1389,
+    "mois_fin": 6,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 142,
+    "titre": "Charles V le Sage",
+    "date": 1364,
+    "mois": 4,
+    "date_fin": 1380,
+    "mois_fin": 9,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 176,
+    "titre": "Henri II de Trastamare",
+    "date": 1366,
+    "mois": 3,
+    "date_fin": 1367,
+    "mois_fin": 4,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 177,
+    "titre": "Henri II de Trastamare,  « le Fratricide »",
+    "date": 1369,
+    "mois": 3,
+    "date_fin": 1379,
+    "mois_fin": 5,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 160,
+    "titre": "Grégoire XI  Roger de Beaufort",
+    "date": 1370,
+    "mois": 12,
+    "date_fin": 1378,
+    "mois_fin": 3,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 208,
+    "titre": "Louis 1er de Hongrie",
+    "date": 1370,
+    "mois": 7,
+    "date_fin": 1382,
+    "mois_fin": 9,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 152,
+    "titre": "Venceslas de Luxembourg",
+    "date": 1376,
+    "mois": 6,
+    "date_fin": 1400,
+    "mois_fin": 8,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 196,
+    "titre": "Andronic IV Paléologue",
+    "date": 1376,
+    "mois": 8,
+    "date_fin": 1379,
+    "mois_fin": 7,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 145,
+    "titre": "Richard II",
+    "date": 1377,
+    "mois": 6,
+    "date_fin": 1399,
+    "mois_fin": 11,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 13,
     "titre": "Grand Schisme d'Occident",
     "date": 1378,
@@ -1575,6 +2181,71 @@
     "description": "Deux papes rivaux — l'un à Rome, l'autre à Avignon — déchirent l'Église catholique pendant quarante ans (1378-1417). Ce schisme ébranle profondément l'autorité ecclésiastique et prépare le terrain aux réformes du XVe siècle.",
     "image": "",
     "sources": "Chroniques de Saint-Denis"
+  },
+  {
+    "id": 161,
+    "titre": "Urbain VI  Bartolemeo Prignano",
+    "date": 1378,
+    "mois": 4,
+    "date_fin": 1389,
+    "mois_fin": 10,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 162,
+    "titre": "Clément VII (antipape)  Robert de Genève",
+    "date": 1378,
+    "mois": 9,
+    "date_fin": 1394,
+    "mois_fin": 9,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 178,
+    "titre": "Jean Ier",
+    "date": 1379,
+    "mois": 5,
+    "date_fin": 1390,
+    "mois_fin": 10,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 194,
+    "titre": "Jean V Paléologue",
+    "date": 1379,
+    "mois": 7,
+    "date_fin": 1391,
+    "mois_fin": 2,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 143,
+    "titre": "Charles VI, dit « le Bien-Aimé »",
+    "date": 1380,
+    "mois": 9,
+    "date_fin": 1422,
+    "mois_fin": 10,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 12,
@@ -1589,6 +2260,224 @@
     "sources": "Jean Froissart, Chroniques"
   },
   {
+    "id": 197,
+    "titre": "Andronic IV Paléologue",
+    "date": 1381,
+    "mois": 5,
+    "date_fin": 1385,
+    "mois_fin": 6,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 169,
+    "titre": "Charles III , duc de Duras",
+    "date": 1382,
+    "mois": 3,
+    "date_fin": 1386,
+    "mois_fin": 2,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 183,
+    "titre": "Marie Ire d'Anjou",
+    "date": 1382,
+    "mois": 9,
+    "date_fin": 1385,
+    "mois_fin": 12,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 209,
+    "titre": "Hedwige d'Anjou",
+    "date": 1382,
+    "mois": 9,
+    "date_fin": 1399,
+    "mois_fin": 7,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 184,
+    "titre": "Charles II Duras",
+    "date": 1385,
+    "mois": 12,
+    "date_fin": 1386,
+    "mois_fin": 2,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 198,
+    "titre": "Jean VII Paléologue  (à Selymbria)",
+    "date": 1385,
+    "date_fin": 1403,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 170,
+    "titre": "Ladislas Ier le Magnanime",
+    "date": 1386,
+    "mois": 2,
+    "date_fin": 1414,
+    "mois_fin": 8,
+    "zones": [
+      "Naples"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 185,
+    "titre": "Marie Ire d'Anjou",
+    "date": 1386,
+    "mois": 7,
+    "date_fin": 1387,
+    "mois_fin": 3,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 210,
+    "titre": "Ladislas II Jagellon",
+    "date": 1386,
+    "mois": 2,
+    "date_fin": 1434,
+    "mois_fin": 6,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 173,
+    "titre": "Jean Ier dit le Chasseur",
+    "date": 1387,
+    "mois": 1,
+    "date_fin": 1396,
+    "mois_fin": 5,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 186,
+    "titre": "Sigismond de Luxembourg",
+    "date": 1387,
+    "mois": 3,
+    "date_fin": 1437,
+    "mois_fin": 12,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 164,
+    "titre": "Boniface IX (Pietro Tomacelli)",
+    "date": 1389,
+    "mois": 11,
+    "date_fin": 1404,
+    "mois_fin": 10,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 190,
+    "titre": "Bayezid Ier",
+    "date": 1389,
+    "mois": 6,
+    "date_fin": 1402,
+    "mois_fin": 7,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 179,
+    "titre": "Henri III de Castille dit le Maladif",
+    "date": 1390,
+    "mois": 10,
+    "date_fin": 1406,
+    "mois_fin": 12,
+    "zones": [
+      "Castille"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 199,
+    "titre": "Jean VII Paléologue",
+    "date": 1390,
+    "mois": 4,
+    "mois_fin": 9,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 192,
+    "titre": "Manuel II Paléologue",
+    "date": 1391,
+    "mois": 2,
+    "date_fin": 1425,
+    "mois_fin": 7,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 163,
+    "titre": "Benoît XIII (antipape)  Pedro Martínez de Luna",
+    "date": 1394,
+    "mois": 9,
+    "date_fin": 1423,
+    "mois_fin": 5,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 14,
     "titre": "Bataille de Nicopolis",
     "date": 1396,
@@ -1601,6 +2490,19 @@
     "sources": "Jean Froissart, Chroniques"
   },
   {
+    "id": 174,
+    "titre": "Martin Ier dit l'Humain",
+    "date": 1396,
+    "mois": 5,
+    "date_fin": 1410,
+    "mois_fin": 5,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
     "id": 15,
     "titre": "Avènement de la maison de Lancastre",
     "date": 1399,
@@ -1611,6 +2513,109 @@
     "description": "Henri Bolingbroke dépose Richard II et monte sur le trône sous le nom d'Henri IV, fondant la dynastie des Lancastre. Ce coup d'État dynastique annonce les futures guerres des Deux-Roses (1455-1485).",
     "image": "",
     "sources": "Thomas Walsingham, Historia Anglicana"
+  },
+  {
+    "id": 146,
+    "titre": "Henri IV Lancastre",
+    "date": 1399,
+    "mois": 9,
+    "date_fin": 1413,
+    "mois_fin": 3,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 153,
+    "titre": "Robert Ier",
+    "date": 1400,
+    "mois": 8,
+    "date_fin": 1410,
+    "mois_fin": 5,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 200,
+    "titre": "Jean VII Paléologue  (à Thessalonique)",
+    "date": 1403,
+    "date_fin": 1408,
+    "mois_fin": 9,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 165,
+    "titre": "Innocent VII (Cosimo de' Migliorati )",
+    "date": 1404,
+    "mois": 10,
+    "date_fin": 1406,
+    "mois_fin": 11,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 166,
+    "titre": "Grégoire XII,   Angelo Correr",
+    "date": 1406,
+    "mois": 11,
+    "date_fin": 1415,
+    "mois_fin": 7,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 154,
+    "titre": "Jobst de Moravie",
+    "date": 1410,
+    "mois": 10,
+    "date_fin": 1411,
+    "mois_fin": 1,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 151,
+    "titre": "Sigismond de Luxembourg",
+    "date": 1411,
+    "mois": 7,
+    "date_fin": 1437,
+    "mois_fin": 12,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "image": ""
+  },
+  {
+    "id": 191,
+    "titre": "Mehmed Ier",
+    "date": 1413,
+    "mois": 7,
+    "date_fin": 1421,
+    "mois_fin": 5,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 16,
@@ -1637,6 +2642,19 @@
     "description": "Henri V d'Angleterre écrase une armée française dix fois supérieure en nombre. Les archers anglais déciment la chevalerie française. Cette victoire aboutit au traité de Troyes (1420) qui livre la régence de France à l'Angleterre.",
     "image": "",
     "sources": "Jean de Monstrelet, Chronique"
+  },
+  {
+    "id": 167,
+    "titre": "Martin V  Oddone Colonna",
+    "date": 1417,
+    "mois": 11,
+    "date_fin": 1431,
+    "mois_fin": 2,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 1,
+    "image": ""
   },
   {
     "id": 24,
