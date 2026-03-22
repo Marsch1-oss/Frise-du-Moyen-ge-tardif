@@ -167,6 +167,19 @@
       margin-top: 0.4rem;
       line-height: 1.4;
     }
+    #modal-video-wrap {
+      clear: both;
+      margin-top: 1.2rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    #modal-video-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
     #modal-text-col { display: block; }
     #modal-desc { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.95; }
     #modal-desc p { margin-bottom: 1rem; text-align: justify; text-justify: inter-word; hyphens: auto; }
@@ -400,6 +413,7 @@
         <p id="modal-desc"></p>
         <p id="modal-sources"></p>
       </div>
+      <div id="modal-video-wrap" style="display:none;clear:both;"></div>
     </div>
   </div>
 </div>

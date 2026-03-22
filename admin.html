@@ -26,7 +26,6 @@
     .panel { background: var(--parchment-lt); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
     .panel-title { font-family: 'IM Fell English', serif; font-size: 1.2rem; color: var(--ink); margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-    .field-row.triple { grid-template-columns: 1fr 1fr 1fr; }
     .field-row.single { grid-template-columns: 1fr; }
     .field { display: flex; flex-direction: column; gap: 0.3rem; }
     label { font-size: 0.8rem; color: var(--ink-muted); font-style: italic; letter-spacing: 0.03em; }
@@ -43,7 +42,7 @@
     .zone-tag input { display: none; }
     .zone-tag.selected { color: #fff; border-color: transparent; }
     .zone-dot-sm { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .type-radios { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.2rem; }
+    .type-radios { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.2rem; }
     .type-radio { display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.85rem; padding: 0.3rem 0.8rem; border-radius: 14px; border: 1.5px solid var(--border-dark); background: var(--parchment); color: var(--ink-soft); transition: all 0.15s; user-select: none; }
     .type-radio input { display: none; }
     .type-radio.selected { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
@@ -63,7 +62,6 @@
     #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     .list-search { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
     .list-search input { flex: 1; }
-    .event-count { font-size: 0.8rem; color: var(--ink-muted); font-style: italic; margin-bottom: 0.8rem; }
     .event-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: calc(100vh - 280px); overflow-y: auto; padding-right: 4px; }
     .event-list::-webkit-scrollbar { width: 5px; }
     .event-list::-webkit-scrollbar-track { background: var(--parchment-dk); border-radius: 3px; }
@@ -74,14 +72,13 @@
     .ec-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.2rem; }
     .ec-date { font-size: 0.78rem; color: var(--gold); font-weight: 600; white-space: nowrap; }
     .ec-title { font-size: 0.88rem; color: var(--ink); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+    .ec-id { font-size: 0.68rem; color: var(--ink-muted); font-style: italic; margin-left: auto; flex-shrink: 0; }
     .ec-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
     .ec-zone { font-size: 0.7rem; padding: 1px 6px; border-radius: 8px; color: #fff; }
     .ec-type { font-size: 0.7rem; color: var(--gold); }
-    .ec-id { font-size: 0.68rem; color: var(--ink-muted); font-style: italic; margin-left: auto; flex-shrink: 0; }
     .ec-del { position: absolute; top: 0.5rem; right: 0.5rem; background: none; border: none; color: var(--ink-muted); cursor: pointer; font-size: 1rem; opacity: 0; transition: opacity 0.15s; padding: 2px 5px; border-radius: 4px; }
     .event-card:hover .ec-del { opacity: 1; }
     .ec-del:hover { color: var(--red); background: #FEE; }
-    .json-panel { margin-top: 1rem; }
     .json-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
     .json-header span { font-size: 0.8rem; color: var(--ink-muted); font-style: italic; }
     #json-output { width: 100%; font-family: 'Courier New', monospace; font-size: 0.75rem; background: #1C140A; color: #E8D9BA; border: 1px solid var(--border-dark); border-radius: 6px; padding: 1rem; min-height: 180px; max-height: 340px; overflow-y: auto; resize: vertical; line-height: 1.5; }
@@ -102,13 +99,10 @@
 </header>
 
 <div class="layout">
-
-  <!-- ── Formulaire ── -->
   <div>
     <div class="panel">
       <div class="panel-title" id="form-title">Nouvel événement</div>
 
-      <!-- Dates et mois -->
       <div class="field-row">
         <div class="field">
           <label>Date de début <span class="req">*</span></label>
@@ -118,18 +112,12 @@
           <label>Mois de début <small>(optionnel)</small></label>
           <select id="f-mois">
             <option value="">— mois inconnu</option>
-            <option value="1">Janvier</option>
-            <option value="2">Février</option>
-            <option value="3">Mars</option>
-            <option value="4">Avril</option>
-            <option value="5">Mai</option>
-            <option value="6">Juin</option>
-            <option value="7">Juillet</option>
-            <option value="8">Août</option>
-            <option value="9">Septembre</option>
-            <option value="10">Octobre</option>
-            <option value="11">Novembre</option>
-            <option value="12">Décembre</option>
+            <option value="1">Janvier</option><option value="2">Février</option>
+            <option value="3">Mars</option><option value="4">Avril</option>
+            <option value="5">Mai</option><option value="6">Juin</option>
+            <option value="7">Juillet</option><option value="8">Août</option>
+            <option value="9">Septembre</option><option value="10">Octobre</option>
+            <option value="11">Novembre</option><option value="12">Décembre</option>
           </select>
         </div>
       </div>
@@ -142,23 +130,16 @@
           <label>Mois de fin <small>(optionnel)</small></label>
           <select id="f-mois-fin">
             <option value="">— mois inconnu</option>
-            <option value="1">Janvier</option>
-            <option value="2">Février</option>
-            <option value="3">Mars</option>
-            <option value="4">Avril</option>
-            <option value="5">Mai</option>
-            <option value="6">Juin</option>
-            <option value="7">Juillet</option>
-            <option value="8">Août</option>
-            <option value="9">Septembre</option>
-            <option value="10">Octobre</option>
-            <option value="11">Novembre</option>
-            <option value="12">Décembre</option>
+            <option value="1">Janvier</option><option value="2">Février</option>
+            <option value="3">Mars</option><option value="4">Avril</option>
+            <option value="5">Mai</option><option value="6">Juin</option>
+            <option value="7">Juillet</option><option value="8">Août</option>
+            <option value="9">Septembre</option><option value="10">Octobre</option>
+            <option value="11">Novembre</option><option value="12">Décembre</option>
           </select>
         </div>
       </div>
 
-      <!-- Titre -->
       <div class="field-row single">
         <div class="field">
           <label>Titre <span class="req">*</span></label>
@@ -166,13 +147,11 @@
         </div>
       </div>
 
-      <!-- Zones -->
       <div class="field" style="margin-bottom:1rem">
         <label>Zones géographiques <span class="req">*</span></label>
         <div class="zones-grid" id="zones-grid"></div>
       </div>
 
-      <!-- Importance -->
       <div class="field" style="margin-bottom:1rem">
         <label>Importance</label>
         <div class="type-radios" id="type-radios">
@@ -195,7 +174,6 @@
         </div>
       </div>
 
-      <!-- Description -->
       <div class="field-row single">
         <div class="field">
           <label>Description</label>
@@ -203,7 +181,6 @@
         </div>
       </div>
 
-      <!-- Image, légende, sources -->
       <div class="field-row">
         <div class="field">
           <label>Image <small>(chemin relatif ou URL)</small></label>
@@ -212,6 +189,12 @@
         <div class="field">
           <label>Légende de l'image</label>
           <input type="text" id="f-legende" placeholder="ex. Buste de Philippe le Bel">
+        </div>
+      </div>
+      <div class="field-row single">
+        <div class="field">
+          <label>Vidéo YouTube <small>(URL ou ID)</small></label>
+          <input type="text" id="f-video" placeholder="ex. https://www.youtube.com/watch?v=... ou dQw4w9WgXcQ">
         </div>
       </div>
       <div class="field-row single">
@@ -228,7 +211,6 @@
       </div>
     </div>
 
-    <!-- Export JSON -->
     <div class="panel" style="margin-top:1.2rem;">
       <div class="panel-title">Export JSON</div>
       <div id="import-warning" style="background:#FFF3CD;border:1px solid #FBBF24;border-radius:6px;padding:0.6rem 1rem;margin-bottom:0.8rem;font-size:0.83rem;color:#92400E;">
@@ -253,7 +235,6 @@
     </div>
   </div>
 
-  <!-- Liste des événements -->
   <div class="panel">
     <div class="panel-title">Événements <span id="list-count" style="font-size:0.8rem;color:var(--ink-muted);font-weight:normal;font-style:italic;"></span></div>
     <div class="list-search">
@@ -261,7 +242,6 @@
     </div>
     <div id="event-list" class="event-list"></div>
   </div>
-
 </div>
 
 <div id="toast"></div>
@@ -278,70 +258,67 @@ const ZONES = [
 ];
 
 const COLORS = {
-  'France':           '#8B1A1A',
-  'Angleterre':       '#1A4A6B',
-  'St Empire':        '#6B4A10',
-  'Papaute':          '#7A1A1A',
-  'Naples':           '#1A5C4A',
-  'Italie':           '#1A6B3C',
-  'Castille':         '#8B6B10',
-  'Aragon':           '#6B2A10',
-  'Portugal':         '#3A6B10',
-  'Hongrie':          '#8B3A1A',
-  'Europe C. & Or.':  '#2A5C5C',
-  'Pologne':          '#8B1A4A',
-  'Russie':           '#5C1A1A',
-  'Byzance':          '#6B1A6B',
-  'Ottomans':         '#8B1A3A',
-  'Monde islamique':  '#8B6B10',
-  'Orient':           '#5C2A10',
-  'Japon':            '#8B1A1A',
-  'Chine':            '#8B3A10',
-  'Inde':             '#6B5A10',
-  'Monde':            '#3A3A3A',
-  'Alsace':           '#7A3B69',
-  'Art':              '#A0522D',
-  'Techniques':       '#2F5233',
-  'Sciences':         '#1A4A5C',
-  'Idees':            '#1A3A6B'
+  'France':'#8B1A1A','Angleterre':'#1A4A6B','St Empire':'#6B4A10',
+  'Papaute':'#7A1A1A','Naples':'#1A5C4A','Italie':'#1A6B3C',
+  'Castille':'#8B6B10','Aragon':'#6B2A10','Portugal':'#3A6B10',
+  'Hongrie':'#8B3A1A','Europe C. & Or.':'#2A5C5C','Pologne':'#8B1A4A',
+  'Russie':'#5C1A1A','Byzance':'#6B1A6B','Ottomans':'#8B1A3A',
+  'Monde islamique':'#8B6B10','Orient':'#5C2A10','Japon':'#8B1A1A',
+  'Chine':'#8B3A10','Inde':'#6B5A10','Monde':'#3A3A3A',
+  'Alsace':'#7A3B69','Art':'#A0522D','Techniques':'#2F5233',
+  'Sciences':'#1A4A5C','Idees':'#1A3A6B'
+};
+
+const ALIASES = {
+  'Pen. iberique':'Castille','Pen. ibérique':'Castille',
+  'Pén. ibérique':'Castille','Ibérique':'Castille',
+  'Papauté':'Papaute','Techniques et idees':'Techniques',
+  'Idées':'Idees','Empire':'St Empire'
 };
 
 var events     = [];
 var editingId  = null;
 var hasImported = false;
 
-/* ── Init zones ── */
+function cleanText(s) {
+  if (!s) return '';
+  return s.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').trim();
+}
+
+function validateEvents() {
+  var warnings = [];
+  events.forEach(function(e) {
+    (e.zones || []).forEach(function(z) {
+      if (ZONES.indexOf(z) === -1)
+        warnings.push('ID ' + e.id + ' \u00ab' + (e.titre||'').substring(0,20) + '\u00bb : zone inconnue \u00ab' + z + '\u00bb');
+    });
+  });
+  return warnings;
+}
+
 function initZones() {
   var grid = document.getElementById('zones-grid');
   ZONES.forEach(function(z) {
     var lbl = document.createElement('label');
-    lbl.className  = 'zone-tag';
+    lbl.className = 'zone-tag';
     lbl.dataset.zone = z;
     var inp = document.createElement('input');
-    inp.type = 'checkbox';
-    inp.value = z;
+    inp.type = 'checkbox'; inp.value = z;
     inp.addEventListener('change', function() { updateZoneTag(lbl, this.checked, z); });
     var dot = document.createElement('span');
     dot.className = 'zone-dot-sm';
     dot.style.background = COLORS[z] || '#888';
-    lbl.appendChild(inp);
-    lbl.appendChild(dot);
+    lbl.appendChild(inp); lbl.appendChild(dot);
     lbl.appendChild(document.createTextNode('\u00a0' + z));
     grid.appendChild(lbl);
   });
 }
 
 function updateZoneTag(lbl, checked, z) {
-  if (checked) {
-    lbl.classList.add('selected');
-    lbl.style.background = COLORS[z] || '#888';
-  } else {
-    lbl.classList.remove('selected');
-    lbl.style.background = '';
-  }
+  lbl.classList.toggle('selected', checked);
+  lbl.style.background = checked ? (COLORS[z] || '#888') : '';
 }
 
-/* ── Init type radios ── */
 function initTypeRadios() {
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
     lbl.querySelector('input').addEventListener('change', function() {
@@ -351,13 +328,6 @@ function initTypeRadios() {
   });
 }
 
-/* ── Nettoyage texte ── */
-function cleanText(s) {
-  if (!s) return '';
-  return s.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').trim();
-}
-
-/* ── Lecture formulaire ── */
 function readForm() {
   var date  = parseInt(document.getElementById('f-date').value);
   var titre = document.getElementById('f-titre').value.trim();
@@ -368,9 +338,7 @@ function readForm() {
   var moisFin = parseInt(document.getElementById('f-mois-fin').value) || null;
 
   var zones = [];
-  document.querySelectorAll('#zones-grid input:checked').forEach(function(inp) {
-    zones.push(inp.value);
-  });
+  document.querySelectorAll('#zones-grid input:checked').forEach(function(inp) { zones.push(inp.value); });
   if (zones.length === 0) { toast('Sélectionnez au moins une zone géographique.'); return null; }
 
   var type = parseInt(document.querySelector('input[name="type"]:checked').value);
@@ -381,22 +349,18 @@ function readForm() {
     rawImg = '';
   }
 
-  var evt = {
-    id:    editingId !== null ? editingId : nextId(),
-    titre: cleanText(titre),
-    date:  date
-  };
-  if (mois)              evt.mois     = mois;
+  var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
+  if (mois)                    evt.mois     = mois;
   if (dateFin && dateFin > date) evt.date_fin = dateFin;
-  if (moisFin && dateFin)   evt.mois_fin = moisFin;
+  if (moisFin && dateFin)       evt.mois_fin = moisFin;
   evt.zones       = zones;
   evt.type        = type;
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
-  if (document.getElementById('f-legende').value.trim())
-    evt.legende = cleanText(document.getElementById('f-legende').value);
+  if (rawVideo) evt.video = rawVideo;
+  var leg = document.getElementById('f-legende').value.trim();
+  if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
-
   return evt;
 }
 
@@ -405,7 +369,6 @@ function nextId() {
   return Math.max.apply(null, events.map(function(e) { return e.id; })) + 1;
 }
 
-/* ── Remplissage formulaire ── */
 function fillForm(evt) {
   editingId = evt.id;
   document.getElementById('f-titre').value    = evt.titre    || '';
@@ -416,21 +379,19 @@ function fillForm(evt) {
   document.getElementById('f-desc').value     = evt.description || '';
   document.getElementById('f-image').value    = evt.image    || '';
   document.getElementById('f-legende').value  = evt.legende  || '';
+  document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-sources').value  = evt.sources  || '';
-
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     var checked = (evt.zones || []).indexOf(inp.value) !== -1;
     inp.checked = checked;
     updateZoneTag(inp.closest('.zone-tag'), checked, inp.value);
   });
-
   var t = evt.type || 1;
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
     var match = parseInt(lbl.dataset.val) === t;
     lbl.classList.toggle('selected', match);
     lbl.querySelector('input').checked = match;
   });
-
   document.getElementById('form-title').textContent = 'Modifier l\'événement #' + evt.id;
   document.getElementById('btn-delete').style.display = 'inline-block';
   document.getElementById('f-titre').focus();
@@ -440,7 +401,7 @@ function fillForm(evt) {
 function resetForm() {
   editingId = null;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
-   'f-desc','f-image','f-legende','f-sources'].forEach(function(id) {
+   'f-desc','f-image','f-legende','f-video','f-sources'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
@@ -452,23 +413,21 @@ function resetForm() {
     lbl.classList.toggle('selected', first);
     lbl.querySelector('input').checked = first;
   });
-  var nextIdVal = nextId();
-  document.getElementById('form-title').textContent = 'Nouvel événement — ID #' + nextIdVal;
+  document.getElementById('form-title').textContent = 'Nouvel événement';
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
 
-/* ── CRUD ── */
 function saveEvent() {
   var evt = readForm();
   if (!evt) return;
   if (editingId !== null) {
     var idx = events.findIndex(function(e) { return e.id === editingId; });
     if (idx !== -1) events[idx] = evt;
-    toast('Événement modifié ✓');
+    toast('Événement modifié \u2713');
   } else {
     events.push(evt);
-    toast('Événement ajouté ✓');
+    toast('Événement ajouté \u2713');
   }
   events.sort(function(a, b) { return a.date - b.date; });
   resetForm();
@@ -484,12 +443,10 @@ function deleteEvent() {
   toast('Événement supprimé');
 }
 
-/* ── Liste ── */
 function renderList() {
   var q = (document.getElementById('search-input').value || '').toLowerCase();
   var filtered = events.filter(function(e) {
-    return !q
-      || e.titre.toLowerCase().indexOf(q) !== -1
+    return !q || e.titre.toLowerCase().indexOf(q) !== -1
       || String(e.date).indexOf(q) !== -1
       || (e.zones && e.zones.join(' ').toLowerCase().indexOf(q) !== -1);
   });
@@ -503,7 +460,8 @@ function renderList() {
   filtered.forEach(function(evt) {
     var card = document.createElement('div');
     card.className = 'event-card' + (editingId === evt.id ? ' active' : '');
-    var stars = evt.type === 1 ? '★★★★' : evt.type === 2 ? '★★★' : evt.type === 3 ? '★★' : '★';
+    var t = evt.type || 1;
+    var stars = t === 1 ? '★★★★' : t === 2 ? '★★★' : t === 3 ? '★★' : '★';
     var zonesHtml = (evt.zones || []).map(function(z) {
       return '<span class="ec-zone" style="background:' + (COLORS[z] || '#888') + '">' + z + '</span>';
     }).join('');
@@ -529,30 +487,30 @@ function quickDelete(id, ev) {
   toast('Événement supprimé');
 }
 
-/* ── JSON ── */
 function updateJSON() {
   var clean = events.map(function(e) {
     var o = { id: e.id, titre: e.titre, date: e.date };
     if (e.mois)     o.mois     = e.mois;
     if (e.date_fin) o.date_fin = e.date_fin;
     if (e.mois_fin) o.mois_fin = e.mois_fin;
-    o.zones       = e.zones;
-    o.type        = e.type || 1;
+    o.zones = e.zones;
+    o.type  = e.type || 1;
     if (e.description) o.description = e.description;
-    o.image       = e.image || '';
+    o.image = e.image || '';
     if (e.legende) o.legende = e.legende;
+    if (e.video)   o.video   = e.video;
     if (e.sources) o.sources = e.sources;
     return o;
   });
   var txt = JSON.stringify(clean, null, 2);
   document.getElementById('json-output').value = txt;
-  var warnings = validateEvents();
+  var warns = validateEvents();
   var countEl = document.getElementById('json-count');
   countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
-  if (warnings.length > 0) {
-    countEl.textContent += ' ⚠ ' + warnings.length + ' pb';
+  if (warns.length > 0) {
+    countEl.textContent += ' \u26a0 ' + warns.length + ' pb';
     countEl.style.color = '#8B1A1A';
-    countEl.title = warnings.join('\n');
+    countEl.title = warns.join('\n');
   } else {
     countEl.style.color = '';
     countEl.title = '';
@@ -560,45 +518,20 @@ function updateJSON() {
   renderList();
 }
 
-function copyJSON() {
-  if (events.length === 0) { toast('⚠ Aucun événement — importez d\'abord votre events.json !'); return; }
-  if (!hasImported && events.length < 5) {
-    if (!confirm('Vous n\'avez pas importé de fichier existant. Continuer ?')) return;
-  }
-  var ta = document.getElementById('json-output');
-  ta.select();
-  document.execCommand('copy');
-  toast('JSON copié (' + events.length + ' événements) ✓');
-}
-
-function validateEvents() {
-  var warnings = [];
-  events.forEach(function(e) {
-    (e.zones || []).forEach(function(z) {
-      if (ZONES.indexOf(z) === -1)
-        warnings.push('ID ' + e.id + ' «' + (e.titre||'').substring(0,22) + '» : zone inconnue «' + z + '»');
-    });
-  });
-  return warnings;
-}
-
 function downloadJSON() {
-  if (events.length === 0) { toast('⚠ Aucun événement — importez d\'abord votre events.json !'); return; }
+  if (events.length === 0) {
+    toast('\u26a0 Aucun événement — importez d\'abord votre events.json !');
+    return;
+  }
   if (!hasImported && events.length < 5) {
     if (!confirm('Vous n\'avez pas importé de fichier existant. Continuer ?')) return;
   }
   var warns = validateEvents();
   if (warns.length > 0) {
-    var msg = warns.length + ' zone(s) inconnue(s) — ces événements n\'apparaîtront pas sur la frise :
-
-'
-            + warns.slice(0, 6).join('
-')
-            + (warns.length > 6 ? '
-... et ' + (warns.length - 6) + ' autre(s).' : '')
-            + '
-
-Télécharger quand même ?';
+    var msg = warns.length + ' zone(s) inconnue(s) — ces événements n\'apparaîtront pas sur la frise :\n\n'
+            + warns.slice(0, 6).join('\n')
+            + (warns.length > 6 ? '\n... et ' + (warns.length - 6) + ' autre(s).' : '')
+            + '\n\nTélécharger quand même ?';
     if (!confirm(msg)) return;
   }
   var json = document.getElementById('json-output').value;
@@ -609,10 +542,20 @@ Télécharger quand même ?';
   document.body.appendChild(a); a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  toast('events.json téléchargé (' + events.length + ' événements) ✓');
+  toast('events.json téléchargé (' + events.length + ' événements) \u2713');
 }
 
-/* ── Import ── */
+function copyJSON() {
+  if (events.length === 0) {
+    toast('\u26a0 Aucun événement — importez d\'abord votre events.json !');
+    return;
+  }
+  var ta = document.getElementById('json-output');
+  ta.select();
+  document.execCommand('copy');
+  toast('JSON copié (' + events.length + ' événements) \u2713');
+}
+
 function importJSON(input) {
   var file = input.files[0];
   if (!file) return;
@@ -620,16 +563,9 @@ function importJSON(input) {
   reader.onload = function(e) {
     try {
       var data = JSON.parse(e.target.result);
-      var ALIASES = {
-        'Pen. iberique':'Castille','Pen. ibérique':'Castille',
-        'Pén. ibérique':'Castille','Ibérique':'Castille',
-        'Papauté':'Papaute','Techniques et idees':'Techniques',
-        'Idées':'Idees','Empire':'St Empire'
-      };
       events = data.map(function(ev) {
         if (!ev.zones) ev.zones = ev.zone ? [ev.zone] : [];
         if (!ev.type)  ev.type  = 1;
-        /* Normalise les zones obsolètes */
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         return ev;
       });
@@ -638,7 +574,7 @@ function importJSON(input) {
       if (warn) warn.style.display = 'none';
       resetForm();
       updateJSON();
-      toast(events.length + ' événements importés ✓');
+      toast(events.length + ' événements importés \u2713');
     } catch(err) {
       toast('Erreur : fichier JSON invalide');
     }
@@ -647,7 +583,6 @@ function importJSON(input) {
   input.value = '';
 }
 
-/* ── Toast ── */
 function toast(msg) {
   var el = document.getElementById('toast');
   el.textContent = msg;
@@ -655,7 +590,6 @@ function toast(msg) {
   setTimeout(function() { el.classList.remove('show'); }, 2800);
 }
 
-/* ── Init ── */
 initZones();
 initTypeRadios();
 resetForm();

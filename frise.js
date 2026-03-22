@@ -518,6 +518,23 @@ function openModal(evt, zone) {
     imgEl.src = '';
   }
 
+  /* ── Vidéo YouTube ── */
+  var videoWrap = document.getElementById('modal-video-wrap');
+  if (videoWrap) {
+    var ytId = extractYouTubeId(evt.video || '');
+    if (ytId) {
+      videoWrap.innerHTML =
+        '<iframe src="https://www.youtube.com/embed/' + ytId + '?rel=0&modestbranding=1"'
+        + ' width="100%" height="260" frameborder="0"'
+        + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"'
+        + ' allowfullscreen style="border-radius:6px;display:block;margin-top:1rem;"></iframe>';
+      videoWrap.style.display = 'block';
+    } else {
+      videoWrap.innerHTML = '';
+      videoWrap.style.display = 'none';
+    }
+  }
+
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -525,6 +542,9 @@ function openModal(evt, zone) {
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow = '';
+  /* Arrête la vidéo YouTube en vidant l'iframe */
+  var vw = document.getElementById('modal-video-wrap');
+  if (vw) { vw.innerHTML = ''; vw.style.display = 'none'; }
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────*/
@@ -866,6 +886,25 @@ function highlightText(text) {
     } catch(e) {}
   });
   return escaped;
+}
+
+/* ── Extraction ID YouTube ─────────────────────────────────────────*/
+function extractYouTubeId(url) {
+  if (!url || !url.trim()) return '';
+  /* Formats acceptés :
+     https://www.youtube.com/watch?v=ID
+     https://youtu.be/ID
+     https://www.youtube.com/embed/ID
+     ID seul (11 caractères)                */
+  var m;
+  m = url.match(/[?&]v=([A-Za-z0-9_-]{11})/);
+  if (m) return m[1];
+  m = url.match(/youtu\.be\/([A-Za-z0-9_-]{11})/);
+  if (m) return m[1];
+  m = url.match(/embed\/([A-Za-z0-9_-]{11})/);
+  if (m) return m[1];
+  if (/^[A-Za-z0-9_-]{11}$/.test(url.trim())) return url.trim();
+  return '';
 }
 
 /* ── Init ────────────────────────────────────────────────────────────*/
