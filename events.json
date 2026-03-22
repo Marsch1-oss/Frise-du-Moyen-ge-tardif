@@ -119,6 +119,22 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 105,
+    "titre": "Témur Khan",
+    "date": 1294,
+    "mois": 5,
+    "date_fin": 1307,
+    "mois_fin": 2,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
+    "description": "Temur est le fils de Zhenjin, et donc le petit-fils de Kubilai. Ce dernier est lui même petit-fils de Gengis Khan via son père Tolui.\nTemur n'est pas le successeur choisi initialement par Kubilai Khan ; il le devient par suite de la mort des autres successeurs potentiels. Il porte dès lors le nom mongol de « Temur Khan » et le nom chinois d'« empereur Chengzong »\nTemur Khan reçoit l’envoyé du Pape, Jean de Montecorvino, avec une certaine solennité. Mais celui-ci s’aperçoit vite que les dispositions du Khan et de son entourage ne laissent présager aucune conversion possible. Néanmoins, il assume son rôle de légat du Pape et bénéficie d’une certaine faveur de la part du Khan qui l’autorise à s’établir dans la capitale, à annoncer l’Évangile et à y construire une église.\nEn 1296, Temur Khan envoie en ambassade au Cambodge Zhou Daguan, qui, à son retour, écrit le récit de sa mission, qui a été conservé.\nAprès le règne de Temur Khan, la dynastie Yuan connaît un déclin assez rapide.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/YuanEmperorAlbumTemurOljeituPortrait.jpg/960px-YuanEmperorAlbumTemurOljeituPortrait.jpg",
+    "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei 1350",
+    "sources": "https://fr.wikipedia.org/wiki/T%C3%A9mur_Khan"
+  },
+  {
     "id": 71,
     "titre": "Guerre vénéto-byzantine",
     "date": 1296,
@@ -916,6 +932,99 @@
     "sources": "https://en.wikipedia.org/wiki/Opicino_Spinola"
   },
   {
+    "id": 97,
+    "titre": "Giotto achève les fresques de la chapelle  Scrovegni de Padoue",
+    "date": 1306,
+    "zones": [
+      "Art"
+    ],
+    "type": 1,
+    "description": "La chapelle des Scrovegni est un édifice religieux, faisant partie d'un palais construit au XIVe siècle à l'emplacement de l'ancienne arène romaine de Padoue en Italie. De style gothique, la chapelle abrite le cycle de fresques de Giotto. Ce chef-d’œuvre de la peinture aux couleurs intenses a été commandé à l'artiste en 1303 par un riche mécène, Enrico Scrovegni, banquier et homme d'affaires padouan.\nPour décorer la chapelle qu'il faisait construire attenante à son nouveau palais, il fit appel aux plus grands artistes de l'époque : Giovanni Pisano reçut commande de trois statues de marbre et Giotto celle de la décoration picturale des murs.\nLa décoration de la chapelle des Scrovegni par Giotto est une des réalisations les plus magistrales de l’histoire de l’art occidental.\nCe cycle de peintures murales est considéré comme le cycle de fresques le plus complet réalisé par le maître toscan dans sa période de maturité\nDe 1303 à 1306, il est à Padoue, où il peint les cinquante-trois fresques de la chapelle Scrovegni, ou chapelle Santa Maria dell'Arena, qui sont considérées comme son chef-d'œuvre et l'un des tournants de l'histoire de la peinture européenne\nDante — exilé de Florence en 1302 — se trouvait probablement à Padoue en même temps que Giotto L'influence de Dante serait décelable dans la vaste composition du Jugement dernier et mieux encore dans les figures allégoriques en camaïeu, qui simulent à la base des fresques évangéliques deux rangées de bas-reliefs. Ces quatorze figures de Vertus et de Vices qui se font face, les Vertus à droite et les Vices à gauche, comptent parmi les créations les plus parfaites du génie de Giotto.\nSa peinture se distingue de ce qu’on appelle la « maniera graeca », c’est-à-dire le style byzantin, dans lequel les figures flottent dans un univers céleste où baigne une lumière dorée irréelle. Les personnages de Giotto s'inscrivent dans la réalité.\nLe peintre a cherché à camper ses scènes dans un environnement terrestre qui puisse, tant que possible, être crédible, même si la représentation des architectures semble trop petite par rapport aux personnages. Dans ces scènes, l'architecture joue un rôle de décor théâtral, comme la maison d’Anne, dans l'Annonciation, dont la paroi a été retirée pour en rendre l’intérieur visible.\nUne des scènes les plus expressives est sans doute le Baiser de Judas, dans laquelle Giotto s’est passé de décor architectural. \nLes séries des Vices et des Vertus sont peintes sur le soubassement des murs et constituent le complément moral du cycle narratif. Elles montrent le génie de Giotto dans sa capacité à utiliser les différentes traditions figuratives. L'écho entre les figures (Vertu/Vice)\n« renvoie à la tradition des imagines agentes, des images actives, c'est-à-dire frappantes et inhabituelles, dont les arts mnémoniques font grand usage à l'époque.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cappella_degli_Scrovegni.jpg/500px-Cappella_degli_Scrovegni.jpg",
+    "legende": "Fresque des parois.",
+    "sources": "https://fr.wikipedia.org/wiki/Chapelle_des_Scrovegni"
+  },
+  {
+    "id": 98,
+    "titre": "Expulsion des juifs par Philippe le Bel",
+    "date": 1306,
+    "mois": 6,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "En juin 1306, l'édit d'expulsion général du roi Philippe le Bel donne un mois aux 100 000 Juifs de France pour quitter le royaume[16],[17]. Entre 1292 et 1306, les biens juifs patrimoniaux, meubles et immeubles sont confisqués et vendus aux enchères, ou offerts[18],[17]. L'expulsion est ponctuée d’arrestations, de taxes spécifiques, de saisies et ventes de biens, avec obligation de rachats pour se voir ensuite signifier une nouvelle expulsion. Philippe le Bel recouvre à son profit les créances juives, il devient de la sorte le créancier de quasiment tous ses sujets[17]. Les livres de comptes des Juifs rédigés en hébreu s'avérant ainsi inexploitables par les agents royaux, Philippe le Bel autorise temporairement (en 1310 et 1311) les prêteurs juifs à revenir pour renseigner l’administration fiscale, avant d’imposer leur départ définitif en 1311[18],[17].\n\nGrâce à ces expédients lucratifs, en 1311, le roi rétablit la monnaie d'or en créant l'agnel, émis jusqu'au règne de Charles VII (1422–1451).\n\nBien que rappelés en 1315, pour un séjour limité dès le départ à douze années (fin en 1327), peu reviennent[19]. Ils se réfugient en Espagne, Bourgogne, Savoie, en Italie et en Allemagne, voire en Croatie et en Palestine[17],[19].\n\nLe chroniqueur Jean de Saint-Victor résume : « En cette même année, en août et en septembre, tous les juifs, sinon quelques-uns qui voulurent se faire baptiser, furent expulsés du royaume ; le roi s’appropria leurs biens et les fit collecter par ses officiers, à l’exception d’une somme d’argent laissée à chaque juif pour payer son départ du royaume ; nombre d’entre eux moururent en chemin d’épuisement et de détresse ».",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lettre_de_Philippe_IV_le_Bel_1_-_Archives_Nationales_-_J-427-15.jpg/960px-Lettre_de_Philippe_IV_le_Bel_1_-_Archives_Nationales_-_J-427-15.jpg",
+    "legende": "Lettres (reconnaissances de dette) de Philippe IV par lesquelles il reconnaît devoir à son frère Charles de Valois 20 000 l.t. pour les Juifs de tous ses comtés qu'il a vendus, 2 juin 1299.",
+    "sources": "https://fr.wikipedia.org/wiki/%C3%89dit_d%27Expulsion_(1306)"
+  },
+  {
+    "id": 99,
+    "titre": "Guillaume de Nogaret",
+    "date": 1306,
+    "mois": 7,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Guillaume de Nogaret devient à partir de 1306 le véritable maître d'œuvre de la politique royale avec Enguerrand de Marigny.\nNogaret ( ) peut être vu comme « le pionnier de la théocratie royale  associant toujours la hardiesse de l'action politique et la ferveur mystique des motivations (ou justifications) religieuses (Le grand-père de Guillaume de Nogaret aurait été Raymond de Nogaret, un toulousain cathare condamné pour hérésie)\noriginaire de Nogaret près de Revel en Haute Garonne, En 1293, Nogaret entre au service du roi de France Philippe IV le Bel et devient juge-mage de la sénéchaussée de Beaucaire-Nîmes pendant deux ans, fonction à responsabilité, qui est plus que celle d'un juge au sens strict, dans l'une des sénéchaussées les plus importantes du royaume. Engagé au service du roi à Paris à la fin de 1295, Nogaret agit jusque vers 1301-1302 en tant qu'enquêteur en Champagne et dans les provinces orientales du royaume. Il s'agrège dans le même temps à certaines institutions, le Parlement, où il siège à partir de 1298, et le Conseil du roi où sa présence est attestée dès 1300. Ses responsabilités s'accroissent à partir du tournant du siècle. En effet, il est désormais personnellement chargé de la conduite, d'un bout à l'autre, d'affaires d'importance (projet de paréage avec le roi de Majorque sur la ville de Montpellier C'est de cette époque également que date sa participation aux affaires religieuses, en coulisses tout d'abord lors des troubles religieux du Languedoc et du procès de l'évêque de Pamiers, Bernard Saisset, accusé d'hérésie afin de contrer la décision du pape Boniface VIII d'ériger ce nouveau diocèse. Le conflit éclate au grand jour quand, en mars 1303, il fait connaître par un célèbre discours les « crimes » de Boniface VIII. Le 21 juillet 1306, une ordonnance royale, préparée par ses soins, tenue secrète jusqu'au bout, déclenche l'arrestation, l'incarcération, puis la spoliation totale et l'expulsion des Juifs de France. Il veille en personne à la confiscation des biens juifs et recouvre contre leur débiteurs, à leur place et à son profit personnel, les créances qu'ils détenaient sur des tiers.\nEn septembre 1307, quelques jours après l'émission par la chancellerie royale de l'ordre d'arrestation des Templiers (qu'il a probablement rédigé en personne), Nogaret obtient le poste de garde du Sceau, où il succède à Pierre de Belleperche. Il prépare en secret l'arrestation des Templiers, la destruction du Temple et la confiscation des biens.\nIl orchestre l'annexion de Lyon en assiégeant l'archevêque Pierre de Savoie, qui détient alors la juridiction temporelle sur la ville. Le coup de force de 1310 est légalisé par le traité de Vienne signé deux ans plus tard.C'est son fils cadet Guillaume III qui hérite de la seigneurie de Manduel.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Parc_chateau.jpg",
+    "legende": "Le château Guillaume de Nogaret à Marsillargues",
+    "sources": "https://fr.wikipedia.org/wiki/Guillaume_de_Nogaret"
+  },
+  {
+    "id": 100,
+    "titre": "Exécutions de William Wallace",
+    "date": 1306,
+    "mois": 8,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "lors de  la défaite écossaise de Falkirk de 1298 , l'armée écossaise  est écrasée ,c'est la fin de l'épopée de Wallace.\nWilliam Wallace doit abandonner son titre de gardien du royaume entre juillet et décembre 1298. Il passe quelque temps en France avec d'autres chevaliers écossais à l'automne 1299 ; en novembre 1300, le roi de France Philippe IV envoie même pour lui une lettre de recommandation au pape. William Wallace réapparaît en Écosse aux alentours de 1303-1304 où il reprend sa vie de hors-la-loi. Sa dernière action militaire est une escarmouche en septembre 1304 à l'extrémité des Ochil Hills entre Abernethy et Lindores. Il est capturé près de Glasgow le 3 août 1305 par les hommes de sire John de Menteith, le gardien du château de Dumbarton qui, comme la plupart des nobles écossais, avait fait allégeance au roi d'Angleterre[4].\n\nWilliam Wallace est transféré à Londres le 22 août 1305 et condamné à mort pour haute trahison envers son souverain, crimes et sacrilège. Le lundi 23 août 1305, il est emmené en procession sur un cheval jusqu'à Westminster Hall et exécuté à l'âge de 35 ans. William Wallace est mis à mort dans les conditions atroces réservées aux traîtres (hanged, drawn and quartered) : traîné par des chevaux par les pieds sur plusieurs kilomètres de la tour de Londres à Smithfield, le lieu d'exécution proche de l'hôpital St Barthélémy, moitié pendu, émasculé, éventré et le feu mis à ses entrailles. Il est finalement décapité, puis découpé en morceaux. Pour que cela serve d'exemple, Edouard Ier fait exposer les différentes parties du corps de William Wallace aux quatre coins du royaume d'Angleterre. Sa tête est placée sur le pont de Londres et les parties de son corps réparties entre Newcastle-upon-Tyne, Berwick-upon-Tweed, Stirling et Perth[5].\nMais loin de saper l’esprit de liberté chez les Écossais, cette exécution va vivifier le sentiment nationaliste écossais, et d’autres chefs se sont dressés contre l’Angleterre, en particulier Robert Bruce. En 1314, les Écossais, sous le commandement de Robert Bruce qui s'était rallié les nobles et proclamé roi d'Écosse le 25 mars 1306, défont l'armée anglaise à la bataille de Bannockburn, et assurent, à la fin de la guerre, l'indépendance de l'Écosse en 1328.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Braveheart_edinburghcastle.jpg/330px-Braveheart_edinburghcastle.jpg",
+    "legende": "Statue de Wallace au château d'Édimbourg.",
+    "sources": "https://fr.wikipedia.org/wiki/William_Wallace"
+  },
+  {
+    "id": 101,
+    "titre": "Assassinat de Venceslas III roi de Bohême , de Hongrie et de Pologne",
+    "date": 1306,
+    "mois": 8,
+    "zones": [
+      "Hongrie",
+      "Europe C. & Or.",
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "Son assassinat en 1306 marque l'extinction de la lignée royale des Přemyslides en Bohême\nhttps://www.youtube.com/watch?v=F4b5C7SwyTA\nLorsque son père décède le 21 juin 1305 des suites d'une longue maladie, il hérite des trônes de Bohême et de Pologne. Impopulaire en Bohême, il doit aussi affronter une forte opposition en Pologne, menée par les ducs Ladislas Ier le Bref et Henri III de Głogów qui ont profité de l'implication des Přemyslides dans les conflits en Hongrie. \nLadislas le Bref, avec l’aide des magnats hongrois, prend le contrôle de Cracovie en Petite-Pologne tandis qu’Henri de Głogów s’empare de la Grande-Pologne. Le 8 août 1305, Venceslas III cède la Poméranie orientale aux margraves Valdemar et Hermann Ier de Brandebourg, pour s’assurer de leur soutien. En route vers la Pologne pour revendiquer la couronne, à la tête d’une armée, il est assassiné à Olomouc dans le palais épiscopal le 4 août 1306 dans des circonstances obscures.À la suite de la disparition des Přemyslides, Albert de Habsbourg insiste sur le fait que le royaume de Bohême n’est qu’un fief du Saint-Empire et proclame son fils Rodolphe III roi, ce qui déclenche une guerre de cinq ans entre les Habsbourg et Henri de Goritz, l'époux de la sœur de Venceslas III, Anne de Bohême. Ladislas Ier le Bref devient duc de Cracovie[12]. Il affronte l’armée du Brandebourg à la fin de l'année et s’empare de la Poméranie de Gdańsk qu’il confie à des gouverneurs.En Pologne, profitant de la situation confuse, Ladislas Ier le Bref accède au pouvoir, faisant plier les patriciens de Cracovie et l’évêque Jan Muskata.",
+    "image": "",
+    "sources": "wikipedia"
+  },
+  {
+    "id": 102,
+    "titre": "Grande dévaluation et révolte à Paris",
+    "date": 1306,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "1306 –Une dévaluation brutale ajoute à la colère populaire. À Paris, émeutes : le réformateur Enguerrand de Marigny réprime sévèrement.La confiance dans la monnaie royale s’effondre à nouveau.(C’est aussi l’année de l’expulsion des Juifs et des opérations contre les banquiers lombards, pour des raisons financières.)\n. Cette dévaluation s’ajoute à :l’expulsion des Juifs en juillet 1306 → le roi saisit leurs biens pour renflouer le Trésor, ce qui désorganise le crédit et le petit commerce ; Les émeutiers. Essentiellement :artisans, petites gens, commerçants affectés par la perte de valeur de la monnaie et la hausse des prix. Ils accusent le pouvoir royal de les ruiner.\nLes sources racontent :pillages, attaques contre les agents du roi, troubles dans plusieurs rues commerçantes de la capitale, agitation autour du Châtelet et des halles. La révolte prend une ampleur telle que le pouvoir craint un soulèvement généralisé.\nPhilippe le Bel charge son fidèle ministre Enguerrand de Marigny, chef de la haute administration financière, de rétablir l’ordre.\n5 janvier 1307  : les meneurs de l'émeute contre la hausse des loyers du 30 décembre 1306 (28 personnes) sont pendus à Paris.\nLa ville de Paris est remise sous contrôle royal.La révolte confirme cependant :la vulnérabilité sociale causée par la politique monétaire,l’impopularité d’une monarchie qui manipule le cours de la monnaie.b) Perte durable de confiance dans la monnaie royale. Même si la répression est efficace, la crise de 1306 provoque :un effondrement de la crédibilité monétaire du roi,la nécessité, dès 1307–1308, d’aller vers une stabilisation progressive, qui culminera avec l’agnel d’or de 1311.La révolte montre les limites de la pression fiscale et monétaire. Elle renforce la volonté du roi de resserrer le contrôle administratif sur la capitale. Elle contribue à la mauvaise réputation de Marigny, exécuté en 1315 sous Louis X.",
+    "image": ""
+  },
+  {
+    "id": 112,
+    "titre": "Fin du règne de Masud II, dernier sultan saljûqide de Rum.",
+    "date": 1306,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 3,
+    "description": "En 1242, Baïdju, nouvellement nommé commandant des armées mongoles par le grand khan Ögedeï, se met immédiatement en mouvement vers le sultanat seldjoukide de Roum sur lequel règne le sultan Kay Khusraw II et qui semble à son apogée. Baïdju, après avoir pris et pillé Erzurum (1242), assure la domination mongole à la bataille de Köse Dağ en juin 1243[3]. Après cette bataille, Kay Khusraw II recherche l’aide de son ennemi l’empereur de Nicée Jean Vatatzès avec lequel il signe un traité d’alliance[4]. Baïdju occupe ensuite Sivas qui se rend à temps et est seulement pillée. Les villes de Tokat et de Kayseri qui tentent de résister sont dévastées. Cette campagne étend l’Empire mongol jusqu’aux portes de l’empire de Nicée[5]. Dès les premiers revers, son allié et vassal, l’empereur de Trébizonde, préfère se déclarer vassal des Mongols et leur payer un tribut. Kay Khusraw est alors contraint d’en faire autant[4]. Le roi de Petite-Arménie Héthoum Ier se soumet lui aussi à l’Ilkhanat, assurant ainsi la sécurité des Arméniens vivant hors de Cilicie. Cette politique est poursuivie par ses successeurs ce qui protège la Cilicie aussi bien des Seldjoukides que des Mamelouks[5]. Les beys en profitent pour se déclarer indépendants des Seldjoukides. Néanmoins, le sultanat de Roum survit sous la tutelle mongole jusqu'en 1307.Le pays est divisé en une vingtaine de principautés turkmènes sous protectorat mongol. Son règne est entièrement sous le signe de la rivalité avec un de ses neveux `Ala' ad-Dîn Kay Qubâdh jusqu'à la disparition du sultanat de Roum en 1307. Les deux rivaux, privés de pouvoir réel, ne sont que des vassaux des Mongols Houlagides (Ilkhâns) dont ils subissent l'instabilité. Vers 1307, Ghiyâth ad-Dîn Mas`ûd II meurt sans enfant ; son neveu, Ghiyâth ad-Dîn Mas`ûd III, fils aîné de Kay Qubâdh, prétend à sa succession, sans succès[6]. Sa mort marque la fin symbolique du sultanat de Roum, alors simple fiction juridique. L'Anatolie est ensuite partagée entre des États éphémères aux frontières fluctuantes, les beylicats. L’époque des beylicats[1] (en turc : beylik désigne le territoire sous la juridiction d’un bey), ou des principautés d’Anatolie, fait référence à deux périodes de l'histoire de la Turquie. La première période se situe au XIe siècle lorsque de petits émirats turcs dirigés par un bey s’installent en Anatolie, jusqu’à la domination de la région par le sultanat seldjoukide de Roum. La seconde période débute pendant la deuxième moitié du XIIIe siècle lors du déclin du sultanat de Roum. Les beylicats les plus puissants ne disparaissent qu’à la fin du XVe siècle avec l’avènement de l’Empire ottoman.",
+    "image": ""
+  },
+  {
     "id": 35,
     "titre": "Edouard II",
     "date": 1307,
@@ -927,6 +1036,181 @@
     ],
     "type": 1,
     "description": "Né le 25 avril 1284 au château de Caernarfon et mort le 21 septembre 1327 au château de Berkeley, il est roi d'Angleterre du 7 juillet 1307 jusqu'à sa déposition le 25 janvier 1327. En 1308, il épouse Isabelle de France, fille du roi Philippe IV le Bel, afin de résorber les tensions entre les couronnes d'Angleterre et de France.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 103,
+    "titre": "La province de la Thrace n'est plus qu'un « désert scythe »",
+    "date": 1307,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "Le passage des Catalans laisse l'Empire byzantin ruiné. Il n'a pas permis la reconquête de l'Asie mineure car les Turcs reprennent leurs conquêtes dès le départ des Catalans, tandis que les Byzantins se résignent, en 1307, à céder les villes prises par les Bulgares (Mesembria, Anchialos, etc.). La province de la Thrace n'est plus qu'un « désert scythe » pour reprendre l'expression des historiens byzantins, tandis que les finances sont à sec. On estime qu'Andronic a donné près d'un million d'hyperpérion aux Catalans, soit bien plus que le revenu annuel de l'Empire byzantin[68]. Face à de telles dépenses, la monnaie byzantine est de nouveau dévaluée en 1304. Andronic renforce le poids des taxes sur les propriétaires terriens de la Thrace mais aussi sur les monastères. Un nouvel impôt nommé sitokrithon est créé ; il correspond à une taxe sur le blé et l'orge. Chaque propriétaire doit céder une part de sa production qui est ensuite vendue sur les marchés en échange d'or et d'argent utilisés pour financer les Catalans. À Constantinople, l'arrivée massive de réfugiés couplée aux récoltes détruites par les Catalans entraîne une pénurie de biens alimentaires qui alimente un marché noir fructueux. Le patriarche Athanase Ier de Constantinople soutient fortement l'empereur dans sa lutte contre ce commerce illégal. Enfin, les Turcs, qui avaient rejoint les Catalans en Europe, continuent de répandre la terreur en Thrace et Michel IX échoue à les vaincre[69]. Finalement, grâce au soutien des Serbes, la troupe turque dirigée par Halil est défaite dans la péninsule de Gallipoli en 1312[À la suite de l'épisode catalan, les Byzantins sont de plus en plus conscients de la situation désastreuse des possessions impériales en Asie mineure.",
+    "image": ""
+  },
+  {
+    "id": 104,
+    "titre": "Mort de Témur Khan",
+    "date": 1307,
+    "mois": 2,
+    "zones": [
+      "Chine"
+    ],
+    "type": 3,
+    "description": "Temur est le fils de Zhenjin, et donc le petit-fils de Kubilai. Ce dernier est lui même petit-fils de Gengis Khan via son père Tolui.\nTemur n'est pas le successeur choisi initialement par Kubilai Khan ; il le devient par suite de la mort des autres successeurs potentiels. Il porte dès lors le nom mongol de « Temur Khan » et le nom chinois d'« empereur Chengzong »(成宗).10 février 1307: Témur Khan meurt à l’âge de 42 ans sans laisser de fils[1]. Les prétendants engagent une lutte acharnée pour le pouvoir, qui brise l’unité de l’empire de la dynastie Yuan. Ananda, petit-fils de Kubilai Khan, gouverneur du Gansu (et/ou vice-roi du Tangout), converti à l'Islam, s’oppose au bouddhiste Qaïchan, arrière-petit-fils de Kubilai Khan, qui règne en Mongolie. Qaïchan, soutenu par les seigneurs de la steppe, triomphe et fait exécuter Ananda.21 juin : début du règne de Qaïchan sous le nom de Külüg Khan, grand khan des Mongols (fin en 1311",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/YuanEmperorAlbumTemurOljeituPortrait.jpg/500px-YuanEmperorAlbumTemurOljeituPortrait.jpg",
+    "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei",
+    "sources": "https://fr.wikipedia.org/wiki/T%C3%A9mur_Khan"
+  },
+  {
+    "id": 106,
+    "titre": "Külüg Khan",
+    "date": 1307,
+    "mois": 6,
+    "date_fin": 1311,
+    "mois_fin": 1,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
+    "description": "En 1299, il est envoyé en Mongolie à la tête de l'armée Yuan contre Qaïdu et ses alliés d'Asie centrale, et le vainc en 1301. En 1306 il soumet Melig Temur, un fils d'Ariq Boqa (petit-fils de Gengis Khan), allié de Qaïdu, dans les montagnes de l'Altaï.\n\nSon oncle Témur Khan, sans héritier direct, meurt le 10 février 1307. Les prétendants engagent une lutte acharnée pour le pouvoir, qui brise l’unité de l’empire Mongol. Ananda, petit-fils de Kubilai Khan (lui-même petit-fils de Gengis Khan et frère d'Ariq Boqa), gouverneur du Gansu (et/ou vice-roi du Tangout) s’oppose à Qaïchan, arrière-petit-fils de Kubilai Khan, qui règne en Mongolie. Qaïchan, soutenu par les seigneurs de la steppe, triomphe et fait exécuter Ananda.\n\nPendant les querelles dynastiques, la situation économique de l’Empire mongol s’aggrave, et l’exploitation des paysans chinois prend des proportions énormes, le pouvoir central étant incapable d’empêcher les excès des seigneurs féodaux. Les révoltes de paysans se succèdent sans interruption. Elles présentent un aspect nationaliste et sont exploitées par les seigneurs féodaux locaux.\nQaïchan est un bouddhiste dévot. Il fait traduire les principaux canons du bouddhisme en mongol et favorise les lamas, ce qui provoque l'hostilité des lettrés confucianistes chinois. Victime de son goût pour l'alcool, il meurt le 21 janvier 1311 à l’âge de 29 ans. Son frère, Ayurbarwada Buyantu Khan, lui succède. Son fils, Qutugku Khan assurera brièvement le trône de l'Empire.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/YuanEmperorAlbumQaishanKulugPortrait.jpg/960px-YuanEmperorAlbumQaishanKulugPortrait.jpg",
+    "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei 1350",
+    "sources": "https://fr.wikipedia.org/wiki/K%C3%BCl%C3%BCg_Khan"
+  },
+  {
+    "id": 108,
+    "titre": "Gaddo Gaddi  mosaïque du Couronnement de la Vierge Santa Maria del Fiore.",
+    "date": 1307,
+    "mois": 3,
+    "zones": [
+      "Art"
+    ],
+    "type": 1,
+    "description": "Gaddo Gaddi (vers 1239, Florence – vers 1312, Florence) était un peintre et mosaïste florentin de style gothique . Presque aucune de ses œuvres ne nous est parvenue. Gaddo Gaddi a beaucoup œuvré sur la mosaïque de la voûte du baptistère Saint-Jean de Florence et sur le médaillon central de la façade de Santa Maria del Fiore, en particulier sur le Couronnement de la Vierge, selon Vasari était peintre et mosaïste, aurait exécuté la grande mosaïque à l'intérieur du portail de la cathédrale de Florence, représentant le couronnement de la Vierge , et peut être plus certainement crédité des mosaïques à l'intérieur du portique de la basilique Santa Maria Maggiore, à Rome, relatives à la légende de la fondation de cette église ; leur date est probablement 1308. [ 1 ]\n\nDans l'ancienne basilique Saint-Pierre de Rome, il réalisa également les mosaïques du chœur et celles du fronton représentant Dieu le Père, à une échelle colossale, entouré de nombreuses autres figures ; il exécuta aussi un retable dans l'église Santa Maria Novella de Florence ; ces œuvres ont aujourd'hui disparu. On considère généralement qu'aucune peinture (à l'exception des mosaïques) de Gaddo Gaddi ne subsiste. [ 1 ]\n\nCrowe et Cavalcaselle estiment que les mosaïques de Santa Maria Maggiore présentent une ressemblance stylistique si frappante avec quatre des fresques de la basilique supérieure d'Assise , représentant des épisodes de la vie de saint François (fresques 2, 3, 4 et surtout 5, qui montre François se dévêtant, protégé par l'évêque), que ces fresques peuvent également, avec une quasi-certitude, être attribuées à Gaddi. D'autres mosaïques conservées lui sont attribuées, mais sans authentification complète. Cet artiste a bâti une fortune considérable, qui n'a cessé de croître, et a placé sa descendance dans une position sociale très éminente.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Gaddo_gaddi_%28attr.%29%2C_incoronazione_della_Vergine.JPG/1280px-Gaddo_gaddi_%28attr.%29%2C_incoronazione_della_Vergine.JPG",
+    "legende": "Couronnement de la Vierge (attribué à Gaddo Gaddi), Santa Maria del Fiore, Florence",
+    "sources": "https://it.wikipedia.org/wiki/Gaddo_Gaddi"
+  },
+  {
+    "id": 109,
+    "titre": "Conquête du Deccan par le sultanat de Dehli",
+    "date": 1307,
+    "mois": 3,
+    "zones": [
+      "Inde"
+    ],
+    "type": 2,
+    "description": "Prise de Devagiri (Daulatabad)[2]. Début des raids de Malik Kafur, général du sultanat de Delhi, dans le Deccan (fin en 1311), qu’il conquiert et pille. Il détruit de nombreux royaumes hindous.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 110,
+    "titre": "Clément V crée un archevêché à Pékin",
+    "date": 1307,
+    "mois": 4,
+    "zones": [
+      "Papaute",
+      "Chine"
+    ],
+    "type": 3,
+    "description": "1307  le pape Clément V crée un archevêché à Pékin à la tête duquel il installe le franciscain Jean de Montecorvino\nJean de Montecorvino (ou de Montecorvin), né en 1247 à Montecorvino Rovella dans le sud de l'Italie et mort à Pékin en 1328 est un franciscain, fondateur de la mission catholique de Chine. Des nestoriens étaient disséminés dans toute l'Asie et en particulier en Chine, alors connue sous le nom de Cathay.\nIls n'étaient pas forcément des disciples de Nestorius, mais des chrétiens descendants de l'Église de Perse et complètement coupés de Rome depuis des siècles.\nOn trouvait plus particulièrement des nestoriens chez les öngüt, une ethnie turque bien représentée à la cour du khagan, Kubilai Khan.\nAu XIIIe siècle, à partir d'Innocent IV, la papauté fit plusieurs tentatives pour s'implanter dans les nations contrôlées par la Horde d'or, c'est-à-dire par les descendants de Gengis Khan.\nD'une façon générale, celle-ci représentait une terrible menace pour l'Occident, mais d'un autre côté, ses dirigeants, les Khans, étaient plutôt bien disposés vis-à-vis du christianisme. D'abord, au printemps 1269, les deux marchands vénitiens Nicolo et Matteo Polo, arrivèrent à Saint-Jean-d'Acre (Syrie). Ils disaient qu'ils venaient de Xanadou, le palais d'été de Kubilaï Khan situé dans les steppes de la Mongolie avant de rentrer à Rome chargés d'une ambassade pour le pape.\nEnsuite, en 1286, le gouverneur de la Perse, Arghoun envoya par l'intermédiaire de l'évêque nestorien Bar Sauma une requête semblable : le khagan Kubilai était bien disposé à l'égard des chrétiens et souhaitait que le pape envoie des missionnaires à Khanbaliq, c'est-à-dire à Pékin. Pour répondre aux demandes de Kubilaï, le pape Nicolas IV envoya en mission d'abord deux dominicains qui ne dépassèrent pas l'Arménie, puis Jean de Montecorvino.\nCe dernier quitta Rome en 1289. Il avait le dominicain Nicolas de Pistoia et le marchand Pierre de Lucalongo pour compagnons. Ils naviguèrent du golfe Persique jusqu'en Inde où ils débarquèrent en 1289. Montecorvino y prêcha pendant 13 mois et y baptisa une centaine de personnes. Après avoir traversé une immense étendue de pays inconnus, ils arrivèrent à Méliapour près de Madras en Indoustan, sans Nicolas de Pistoia, qui était mort.\nC'est en 1294 qu'il arriva en Chine, au port de Zaïton (Quanzhou, Tsiuan-Tchéou) dans le Fujian (Fo-kien). De là, il gagna Khanbalik (capitale de la dynastie Yuan sino-mongole, actuelle Pékin) où on lui annonça que Kubilaï venait de mourir. Chengzong, son fils, qui lui succède, ne fit aucun obstacle à l'apostolat missionnaire. Pierre de Lucalongo offrit à l'envoyé du pape un terrain pour bâtir une nouvelle église. Les relations avec les nestoriens n'étaient pas excellentes, mais l'apostolat de Jean s'avèra fructueux: Il réalisa six mille baptêmes, organisa une école dans son presbytère et traduisit en langue mongole quelques textes de base. Il semble bien qu'une partie des convertis aient été des nobles öngüt en rupture de nestorianisme, mais proches de Kubilaï. En plus de la première église construite à Pékin en 1299, Jean de Montecorvino en construisit une deuxième en 1305, en face du palais impérialCe n'est qu'en 1305 donc, plus de dix ans après son départ, que le pape, Clément V établi à Avignon, reçut de ses nouvelles, par une lettre retransmise par les missionnaires établis en Perse, En 1307, Clément V prend la décision de le nommer archevêque et de lui envoyer sept nouveaux missionnaires. Trois seulement parviennent à Khanbaliq : Gérard d'Albuino, Pérégrin de Città di Castello et André de Pérouse ; trois autres meurent en chemin[4], et le dernier regagne l'Italie.\nEn 1311, Clément V sacra encore 3 évêques franciscains pour Khanbaliq. Un seul survécut au voyage, Pierre de Florence.\nPendant cinq ans, l'ensemble des missionnaires reçurent une pension annuelle pour huit personnes de la part de l'Empereur ; Montecorvino érigea un évêché à Siventcheu, ville qui pourrait être Nankin ou Canton, nommée en persan Zeytou. Selon Henri Cordier, Zaïtoun, aujourd'hui Quanzhou dans le Fujian.\nEn 1326, André de Pérouse, évêque de Zaïton depuis 1322, écrivit à Rome[5] qu'il était le seul survivant de tous les évêques envoyés en soutien à Jean de Montecorvino[6].\nEn 1328, Odoric de Pordenone visita la mission de Khanbaliq.\nJean de Montecorvino mourut en 1330 à Pékin après quarante et un ans passées sur le sol chinois.",
+    "image": "",
+    "sources": "wikipedia"
+  },
+  {
+    "id": 111,
+    "titre": "Prise de Hué par le Đại Việt",
+    "date": 1307,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Le Đại Việt (chữ nho: 大越, [ɗâjˀ vjə̀t],« le Grand Việt ») était un État féodal d'Extrême-Orient et d'Indochine, recouvre deux périodes la première de 1054 à 1400 à partir de la Dynastie Lý et encore de 1428 à 1804. En 1407, le Vietnam tomba sous le joug de la Dynastie Ming, qui dura jusqu'en 1427, ils rebaptisèrent le pays Jiaozhi. En 1428, Lê Lợi, le fondateur de la Dynastie Lê, libéra Jiaozhi et une fois que la souveraineté de l'Empire vietnamien fut restaurée, le pays reprit le nom de Đại Việt.La dynastie Trần (Nhà Trần en vietnamien, chữ Hán: Trần Triều) fut une dynastie vietnamienne qui dirigea le pays (connu à l'époque sous le nom de Đại Việt) de 1225 à 1400.\nLes Trần connurent trois victoires contre les Mongols, la plus importante étant celle de la bataille du Bạch Đằng, remportée par le prince Trần Hưng Đạo en 1288. Les Trần ont conclu une alliance stratégique avec les Cham malgré leur antagonisme, ceci afin de lutter contre les Mongols. En 1307, ils parviennent à se faire céder Hué. Le conflit avec les Cham se poursuivra cependant pendant tout le XIVe siècle",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Temple_comm%C3%A9moratif_au_roi_Dinh_Tien_Hoang_%28Hoa_Lu%29.jpg/1280px-Temple_comm%C3%A9moratif_au_roi_Dinh_Tien_Hoang_%28Hoa_Lu%29.jpg",
+    "legende": "Hoa Lư - Capitale Impériale du Đại Cồ Việt"
+  },
+  {
+    "id": 113,
+    "titre": "Les Angevins de Naples s’emparent de la principauté d’Achaïe  ou Morée (Péloponnèse)",
+    "date": 1307,
+    "mois": 6,
+    "zones": [
+      "Naples",
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Le Principauté d’Achaïe (ou de Morée) fut fondée par les croisés francs, principalement sous la domination de la maison de Villehardouin.Guillaume II de Villehardouin, sans héritier mâle, l’avait cédée à Charles d’Anjou en échange d’une aide militaire dans ses guerres contre les Byzantins , (il est en effet constamment menacé par le despote de Mistra) , il se plaça sous la protection de Charles d'Anjou,.Les Angevins de Naples, c’est-à-dire la maison capétienne d’Anjou-Sicile fondée par Charles Ier d’Anjou, reçurent donc la principauté d’Achaïe (Morée) par héritage et mariage, selon le traité de Viterbe signé en 1267.​(Guillaume II  fiança sa fille avec Philippe d'Anjou (1256 † 1277), un fils cadet de Charles. Ils s'épousèrent le 28 mai 1271, mais Philippe mourut en 1277, avant son beau-père. Ce mariage est un épisode central du transfert dynastique : il garantit la suzeraineté angevine par voie matrimoniale plutôt que par conquête militaire, et scelle l'intégration de la principauté d'Achaïe au réseau des possessions détenues par les souverains angevins.\nMais la maison d’Anjou est affaiblie et Chassé de Sicile après les Vêpres siciliennes en 1282, et ne peut plus consacrer des moyens suffisants pour la Morée,. Pour continuer à être soutenu par les Moréotes, Charles II d'Anjou rendit la Morée à Isabelle de Villehardouin.\nCelle-ci, veuve de Philippe, se remaria le 16 septembre 1289 avec Florent de Hainaut, qui assura par le traité de Klarentza en 1290 la paix avec les Grecs. Il mourut le 23 janvier 1297. Veuve à nouveau, elle se remaria le 12 février 1301 avec Philippe de Savoie (1278 † 1334). Mais Philippe entra rapidement en conflit avec les barons du pays.\n\nEn 1307, Charles II d'Anjou, suzerain de l'Achaïe, leur reprit la principauté pour la confier à son fils Philippe Ier de Tarente. Philippe et Isabelle se séparèrent alors, Philippe regagnant son comté de Piémont et Isabelle se réfugiant en Hainaut (le pays de son second mari) auprès de sa fille Mathilde. Cette date marque donc la mainmise directe et incontestée des Angevins sur la Morée, alors que jusque-là leur domination était indirecte, exercée à travers des héritages et des princes-consorts. Philippe de Savoie, mari d’Isabelle de Villehardouin, rencontre l’hostilité des barons locaux et des représentants angevins : il est accusé de ne pas respecter les coutumes locales et se heurte à l’opposition du baronnage et à la méfiance des Angevins. Charles II d'Anjou, roi de Naples et suzerain de la principauté, profite de cette situation de crise pour révoquer Philippe de Savoie et Isabelle de leur titre en 1307. Il transfère alors la principauté à son propre fils, Philippe Ier de Tarente, assurant ainsi le contrôle direct de la Morée par la maison d’Anjou. Cette mainmise résulte donc d’une combinaison de contestation interne, d’antagonisme entre “latins indigènes” et administration angevine, et de la volonté politique des rois de Naples de centraliser leur autorité sur cette possession stratégique.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Filippo-dangio.jpg",
+    "legende": "Philippe de Tarente à la bataille de Montecatini (1315)",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 114,
+    "titre": "Arrestation des Templiers",
+    "date": 1307,
+    "mois": 10,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "En 1307, Philippe le Bel, inquiet du pouvoir des Templiers devenus très riches (ils pratiquaient l'usure pourtant interdite) et à qui il devait de l'argent et de l'état des finances royales (une nouvelle fois les caisses étaient vides), prend la décision de détruire l'ordre du Temple. Pour cela, le 13 octobre 1307, il décide de lancer ses chevaucheurs (les courriers royaux) aux quatre coins du royaume pour faire arrêter lors d'un vaste coup de filet tous les Templiers du royaume. Il s'est passé un mois entre l'envoi des courriers ordonnant l'arrêt des Templiers et les arrestations, et il ne s'est trouvé personne pour les prévenir, ce qui permet de mesurer leur impopularité.\nA la même heure et dans toute la France a lieu l’arrestation massive et systématique des Templiers ordonnée par le roi Philippe le Bel. Au matin du 13 octobre 1307, Guillaume de Nogaret Garde des Sceaux, porteur d'une ordonnance royale qui commandait l'arrestation des Templiers, pénètre avec des hommes d'armes dans l'enceinte du Temple de Paris où résidait le maître de l'Ordre Jacques de Molay. À la vue de l'ordonnance royale, les 139 Templiers résidant à Paris se laissèrent emmener sans aucune résistance.\nUn scénario identique se déroula au même moment dans toute la France. La plupart des Templiers présents dans les commanderies furent arrêtés. Ils n'opposèrent aucune résistance. Quelques-uns réussirent à s'échapper avant ou pendant les arrestations. Les prisonniers furent enfermés pour la plupart à Paris, Caen, Rouen et au château de Gisors. Tous leurs biens furent inventoriés et confiés à la garde du Trésor royal. Leurs biens furent saisis et les Templiers livrés aux mains des inquisiteurs qui procédèrent à la torture. \nLe procès dure sept ans, sept années durant lesquelles les Templiers, abandonnés par l’Eglise, soumis aux tortures de l’Inquisition confessent les crimes dont ils sont accusés, même les plus fantaisistes. Jacques de Molay lui-même aurait confessé sous la torture avant de revenir sur ses aveux et clamer son innocence.\n Lors des premiers interrogatoires, ils avouent sous la torture tout ce qu'on veut leur faire avouer : reniement du Christ, crachat sur la croix, idolâtrie, sodomie, simonie, prévarication, etc.Tout cela se fait sans en référer au pape de qui, pourtant, ils dépendent. Clément V, ancien archevêque de Bordeaux, qui résidait entre Guyenne et Poitou, surpris par ces arrestations mais ébranlé par la multitude d'aveux, obtenus sous la torture, décrète la bulle Pastoralis præminentiæ qui ordonne l'arrestation de tous les Templiers de la Chrétienté, rappelant ainsi que seul le pape a le pouvoir de décider de leur sort.\nPar la bulle Faciens misericordiam du 12 août 1308, il crée des commissions diocésaines, chargées d'enquêter sur les agissements des Templiers, et des commissions pontificales, chargées de juger l'Ordre du Temple comme tel. Ces dernières livrent leurs rapports lors d'un concile œcuménique convoqué à Vienne (sur le Rhône) en 1310, qui discute de son sort.\nLa position du pape a été fluctuante et peu ferme. Le pape Clément V, qui, dans un premier temps, a soutenu les Templiers, s’est rapidement rangé aux cotés du roi de France. Clément V décrète l’arrestation des templiers dans toute la chrétienté en novembre 1307, puis décide de stopper l’action des inquisiteurs en février 1308. Il émet néanmoins la bulle Faciens Misericordiam le 12 août 1208 qui ouvre le procès de l’Ordre du Temple, puis finalement, sous la pression du roi de France, lors du concile de Vienne le 22 mars 1312, l’ordre du Temple est dissout par décret irrévocable et valable à perpétuité. Malgré son sentiment personnel, Clément V avait dû accorder à Philippe Le bel la convocation d'un concile à Vienne  pour juger la mémoire de Boniface VIII il parvint à éviter le procès en concédant au roi la condamnation des Templiers privé de son véritable objet le concile ne fit à peu près rien.  Le Pape émet le 3 avril 1312 la bulle Ad providam annonçant la suppression de l’Ordre. Une autre bulle papale de mai 1312 transfère les biens des templiers à un autre ordre religieux militaire : l’Hôpital de Saint-Jean-de-Jérusalem. Clément V a cédé face à Philippe le Bel, et choisi de sacrifier les Templiers pour mettre fin à sa querelle avec le roi de France. Pour expliquer l’attitude du Pape, certains affirment que Philippe le Bel aurait procuré à Clément V sa tiare en échange notamment de l’abolition de l’ordre.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 115,
+    "titre": "Bataille de Lucka",
+    "date": 1307,
+    "mois": 5,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "La bataille de Lucka est un épisode du conflit opposant l'empereur Albert de Habsbourg au margrave de Misnie Frédéric Ier le Mordu et au margrave Thierry IV de Lusace. Elle a eu lieu le 31 mai 1307 près du village de Lucka, dans l'est de la Thuringe. L'empereur du Saint-Empire Adolphe de Nassau avait fait de la Marche de Misnie un fief impérial après la mort sans héritier de Frédéric Tuta, de la maison de Wettin, en 1291. Adolphe de Nassau et son successeur Albert de Habsbourg revendiquent ce territoire malgré l'opposition des héritiers de la maison de Wettin, Frédéric Ier le Mordu, margrave de la Marche de Misnie depuis 1292, et son frère Thierry IV de Lusace. \nEn 1304, Albert et son fils Rodolphe III ont commencé une campagne contre Venceslas II de Bohême qui avait placé son fils Venceslas III sur le trône de Hongrie à la suite de la mort du roi André III en 1301. Le pape a favorisé son adversaire Charles Robert d'Anjou et a demandé de l'aide. Albert a infligé au roi Venceslas la mise au ban de l'Empire et assiégea les mines d'argent à Kutná Hora ; ses forces auxiliaires coumanes ont commis de nombreux actes de cruauté. Après la mort de Venceslas III en 1306, dépourvu d'héritier, une unification politique de l'Europe centrale sous la couronne des Habsbourg paraissait plausible, d'autant plus qu'Albert était parvenu à imposer son fils Rodolphe III comme roi de Bohême. Comme les corps constitués de Bohême se rebellaient et décidèrent de chasser le prétendant, Albert dut les réduire à l'obéissance.\n\nMais l'année suivante réservait de sérieux revers pour les ambitions hégémoniques des Habsbourg. La mort prématurée de Rodolphe III porta le comte Henri de Goritz, fils du duc Meinhard de Carinthie, sur le trône de Bohême. De plus, la bataille de Lucka le 31 mai 1307, conséquence d'une contestation sur les fiefs de Thuringe et de Misnie, se solda par la défaite du roi Albert contre les fils du margrave Albert II le Dégénéré, prince de la maison de Wettin. Lorsque Albert Ier déboucha de l'Osterland avec toute son armée, le landgrave Thierry de Thuringe et le margrave Frédéric Ier de Misnie, à la tête de la chevalerie du Brunswick, des milices urbaines et de paysans en armes, lui infligèrent une défaite décisive. \n\nLe 31 mai 1307, l'armée de Wettin attaque l'armée d'Albert commandée par Frédéric IV de Nuremberg et la vainc. Cette victoire est une garantie pour la survie de la maison régnante de Wettin. Les troupes de Souabe semblent avoir constitué la plus grande partie de l'armée impériale et l'armée impériale est souvent assimilée aux Souabes.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Lucka-1307.jpg",
+    "legende": "Monument de la bataille à Lucka.",
+    "sources": "https://fr.wikipedia.org/wiki/Bataille_de_Lucka"
+  },
+  {
+    "id": 116,
+    "titre": "Bulle papale Pastoralis preeminentie",
+    "date": 1307,
+    "mois": 11,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "La bulle papale Pastoralis preeminentie, publiée par le pape Clément V le 22 novembre 1307, ordonnait à tous les rois chrétiens d'arrêter tous les membres de l'ordre du Temple, et de mettre sous séquestre toutes leurs terres et leurs biens, au nom de la papauté, à l'exception des possessions de l'ordre dans la péninsule Ibérique.\nPubliée pendant le procès des Templiers par le roi de France Philippe IV le Bel, cette bulle a eu un impact considérable sur le sort des Templiers et, plus important encore, sur la position du Saint-Siège à propos de cette affaire.\n\nClément V entendait de cette manière garder le contrôle sur la procédure lancée par Philippe le Bel en l'empêchant de clore trop prématurément le procès. Si le pape s'était abstenu de faire une telle démarche, cautionnant du même coup par son silence l'action entamée par le roi de France contre l'ordre le 13 octobre de la même année (1307), on aurait probablement abouti à un arrangement entre Carpentras et Paris, en faveur du roi.\nBien au contraire, la bulle Pastoralis præeminentiæ garantissait que le procès serait public, et mené conjointement par les légats du pape et les légistes royaux.Cette année ouvre une crise judiciaire et morale sans précédent pour l’Église\n1308 – Le pape sous contrainte politiqueClément V rencontre Philippe IV à Poitiers.Il accepte l’ouverture d’un procès pontifical contre les Templiers.Il suspend officiellement l’ordre du Temple dans l’attente du jugement définitif.Il annonce la convocation d’un concile œcuménique destiné à trancher l’affaire.👉 Le pontificat s’inscrit désormais dans une logique de soumission aux impératifs politiques.",
+    "image": "",
+    "sources": "Wikipedia"
+  },
+  {
+    "id": 117,
+    "titre": "Fra Dolcino  brûlé sur le bûcher à Verceil",
+    "date": 1307,
+    "mois": 6,
+    "zones": [
+      "Papaute",
+      "Italie"
+    ],
+    "type": 1,
+    "description": "Le prédicateur Fra Dolcino Chef de la secte des « apostolici » (ou frères apôtres) ; né dans le diocèse de Novara est brûlé sur le bûcher à Verceil (Piémont) .\nFra Dolcino devient en 1300 le chef du mouvement apostolique et, influencé par les idées d'Éon de l'Étoile et les théories millénaristes de Joachim de Flore, il donne naissance au mouvement dolcinien qui dure de 1300 à 1307. Au nombre de ses idées on compte :\nLe refus de la hiérarchie ecclésiastique et le retour aux idéaux originaux de pauvreté et d’humilité.\nLe refus du système féodal\nLa libération de toute contrainte et de tout assujettissement.\nL’organisation d’une société égalitaire d’aide et de respect mutuel, mettant en commun les biens et respectant l’égalité des sexes.\nIl connaît une fin tragique dans les vallées montagneuses de Sesia et dans la région de Biella, dans le Piémont, en Italie, le 23 mars 1307, quand de nombreux croisés achèvent de conquérir les fortifications construites sur le mont Rubello par les Dolciniens.\nOn le considérait comme un orateur intelligent, érudit et charismatique. Il a exprimé ses idées dans une série de lettres adressées aux apostoliques dans les années 1300-1307.\nÉtendant son activité surtout à la Lombardie, Dolcino accentue les tendances anti-ecclésiastiques du mouvement des apostolici. Il se considère comme élu de Dieu, avec la mission de dévoiler les secrets de l'avenir et d'interpréter les prophéties bibliques. Marqué par les idées eschatologiques de Joachim de Flore, il divise l'histoire de l'humanité en quatre périodes, celle de la décadence de l'Église ayant commencé, d'après lui, par le pontificat de Sylvestre Ier, époque où celle-ci abandonnait le principe de la pauvreté. Dolcino annonce l'avènement du IVe âge, celui de la disparition du clergé, pour l'année 1305. Dans sa dernière lettre (1303), il déclare que Frédéric II de Sicile doit prendre l'offensive contre le mauvais pape\nSon mouvement reste isolé à l'époque. Les attentes eschatologiques et les prédictions apocalyptiques sont restées pendant tout le siècle circonscrites aux milieux des lettrés et des hommes d'Église. On trouve des révoltes analogues après la diffusion de l'imprimerie avec le mouvement des Taborites en Bohême au XIVe siècle et avec le mouvement de Thomas Müntzer au XVe siècle en Allemagne du sud[2].\nExécution En 1305, le pape Clément V proclame une croisade contre les apostolici en Valsesia. En 1307, ceux-ci sont vaincus par l'armée de l'évêque de Vercelli. Dolcino est conduit devant le tribunal de l'Inquisition et condamné à périr sous la torture.\nAprès leur capture par l'Église, Fra Dolcino et sa compagne Margherita Boninsegna sont conduits devant un tribunal de l'Inquisition les ayant condamnés à la torture[3]. Fra Dolcino aurait subi une castration, puis le corps aurait été démembré et ses parties ensuite mises au bûcher par le bourreau[4]. En 1322, soit quinze ans plus tard, une trentaine de disciples de Dolcino seront brûlés vifs sur la place du marché de Padoue[réf. nécessaire].\n\nLes sources principales sur la vie et les idées de Dolcino sont la Practica Inquisitionis de Bernard Gui et une biographie anonyme intitulée Historia fratris Dulcini haeresiarchae.Selon l’Église de Rome et la plupart des historiens de la période, lui et ses partisans, en réaction aux attaques des troupes catholiques, n’hésitèrent pas, pour leur survie, à piller et à dévaster des villages, tuant ceux qui s’opposaient à eux et brûlant leurs maisons. Pour justifier les méfaits de ses partisans il citait volontiers saint Paul :\n\n« Tout est pur pour les purs.\nMais pour ceux qui sont souillés et qui n’ont pas la foi, rien n’est pur.\nLeur esprit même et leur conscience sont souillés. »\n— Paul de Tarse, Épître à Tite 1,15.",
+    "image": "",
+    "sources": "https://fr.wikipedia.org/wiki/Fra_Dolcino"
+  },
+  {
+    "id": 118,
+    "titre": "Déclin et chute de la Gran Tavola de Sienne",
+    "date": 1307,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Au XIIe siècle, la ville devient une république urbaine, en se dotant de systèmes communaux de type consulaire Constituée en Cité-État en 1125, Sienne va connaître une expansion sur le plan financier à la fin du XIIe siècle avec de puissances familles commerçantes, comme les Piccolomini dès 1193 et les Buonsignori dès 1209. Leur fortune provient de liens d'affaires privilégiés, suivant les routes commerciales à l'intérieur des terres (et non maritimes), avec les foires de Champagne, établis vers 1220-1230 Sienne était une commune gibeline Hoenstaufen, ce qui créait des tensions dans la commune pour les Buonsignori qui travaillaient pour la papauté  fondèrent la Gran Tavola ou Magna Tavola (une institution financière, fondée en 1255 par Orlando di Buonsignori à Sienne  une des plus influentes en Europe jusqu'à sa disparition, en 1298. L’expansion du commerce textile de Florence faisait qu’il n’était plus profitable d’importer des produits finis du nord de l’Europe vers le sud. Ainsi, vers la fin du XIIIe siècle , les foires de Champagne sont devenues moins populaires étant donné les déplacements de la fabrication et des trafics commerciaux. Le florin en or de Florence avait aussi été créé en 1255 et la place de l’argent diminuait. Les conflits continuels entre la France et l’Angleterre rendaient les relations d’affaires très difficiles pour les banques de Sienne et les princes devenaient de plus en plus capricieux et ne voulaient plus honorer leurs prêts. La papauté était aussi en conflit avec le roi de France. Florence trafiquait beaucoup maintenant avec les Angevins dans le sud grâce à son industrie textile. Ainsi, une perte de confiance s’installa chez les déposants envers les banques siennoises et des retraits massifs eurent lieu. Les actifs des banques n’étaient pas suffisamment monnayables devant cette masse de retraits. Les associés étaient aussi souvent en conflit entre eux. Ceci fit en sorte que la Gran Tavola entra dans une phase de restructuration et de changement d’associés. Son activité peut être comparée à celle d'une banque. Le coup de grâce pour la banque advint lorsque le roi français Philippe IV le Bel emprisonna et gela tous les actifs des marchands siennois en France en 1307 Devant cette crise de confiance, les autres banques siennoises se mirent toutes à tomber dont la Tolomei en 1313La république est administrée par le gouvernement des neuf de 1287 à 1355 période qui correspond à l’apogée de la cité.",
     "image": "",
     "sources": "Wikipedia"
   },
@@ -1001,6 +1285,22 @@
     "description": "Le concile de Vienne dissout officiellement l'ordre des Templiers sous la pression de Philippe IV le Bel. Les derniers dirigeants, dont Jacques de Molay, sont brûlés vifs en 1314. Fin d'un ordre militaire fondé lors des croisades.",
     "image": "",
     "sources": "Bulle pontificale Vox in excelso"
+  },
+  {
+    "id": 107,
+    "titre": "Buyantu Khan",
+    "date": 1311,
+    "mois": 4,
+    "date_fin": 1320,
+    "mois_fin": 3,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
+    "description": "Il est le premier mongol de la dynastie Yuan à supporter l'apport du confucianisme dans le système administratif. Li Meng (zh) (李孟), son enseignant et étudiant du confucianisme sera très influent sur ce point.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/YuanEmperorAlbumAyurbarvadaBuyantuPortrait.jpg/960px-YuanEmperorAlbumAyurbarvadaBuyantuPortrait.jpg",
+    "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei",
+    "sources": "https://fr.wikipedia.org/wiki/Ayurbarwada_Buyantu_Khan"
   },
   {
     "id": 5,
