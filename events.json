@@ -1279,21 +1279,6 @@
     "image": ""
   },
   {
-    "id": 36,
-    "titre": "Henri VII de Luxembourg",
-    "date": 1308,
-    "mois": 6,
-    "date_fin": 1313,
-    "mois_fin": 8,
-    "zones": [
-      "St Empire"
-    ],
-    "type": 1,
-    "description": "Né vers 1278-1279 à Valenciennes et mort le 24 août 1313 à Buonconvento. Élu roi des Romains en 1308 après l'assassinat d'Albert Ier, il est sacré empereur le 29 juin 1312, premier roi germanique à recevoir la couronne impériale depuis Frédéric II de Hohenstaufen.",
-    "image": "",
-    "sources": "Wikipedia"
-  },
-  {
     "id": 44,
     "titre": "Carobert d'Anjou-Sicile",
     "date": 1308,
@@ -1439,19 +1424,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cahors_-_Pont_Valentr%C3%A9_-_11.jpg/1280px-Cahors_-_Pont_Valentr%C3%A9_-_11.jpg",
     "legende": "Cahors (Lot, France) - Pont Valentré - Le pont vu depuis le sud-ouest",
     "sources": "https://fr.wikipedia.org/wiki/Pont_Valentr%C3%A9"
-  },
-  {
-    "id": 147,
-    "titre": "Henri VII de Luxembourg",
-    "date": 1308,
-    "mois": 11,
-    "date_fin": 1313,
-    "mois_fin": 8,
-    "zones": [
-      "St Empire"
-    ],
-    "type": 1,
-    "image": ""
   },
   {
     "id": 4,
