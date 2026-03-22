@@ -602,32 +602,84 @@ function pct(year, start, end) {
 /* Sauvegarde des zones actives avant toute recherche */
 var savedActiveZones = null;
 
+/* Sauvegarde du niveau et de la date avant recherche */
+var savedLevel = null;
+var savedRangeStart = null;
+
 function onSearch(val) {
   searchTerm = (val || '').trim().toLowerCase();
   var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
 
   if (searchTerm) {
-    /* Première recherche : sauvegarde l'état des zones */
+    /* Sauvegarde l'état initial (zones + niveau + date) */
     if (!savedActiveZones) {
       savedActiveZones = {};
       for (var z in activeZones) savedActiveZones[z] = activeZones[z];
+      savedLevel      = level;
+      savedRangeStart = rangeStart;
     }
-    /* Active toutes les zones qui ont au moins un résultat */
+
+    /* Trouve tous les événements correspondants (tous types, toutes zones) */
+    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
+
+    if (matches.length === 0) {
+      /* Aucun résultat — on reste en place, applySearch affichera 0 */
+      updateFilterCheckboxes();
+      refreshFrise();
+      applySearch();
+      return;
+    }
+
+    /* Active les zones qui ont des résultats */
     ZONES.forEach(function(z) {
-      var hasMatch = allEvents.some(function(e) {
-        return e.zones.indexOf(z) !== -1 && eventMatchesSearch(e);
+      activeZones[z] = matches.some(function(e) {
+        return e.zones.indexOf(z) !== -1;
       });
-      activeZones[z] = hasMatch;
     });
-    /* Met à jour les cases à cocher */
     updateFilterCheckboxes();
+
+    /* Détermine le niveau minimal nécessaire pour voir tous les résultats */
+    var maxType = 1;
+    matches.forEach(function(e) {
+      var t = e.type || 1;
+      if (t > maxType) maxType = t;
+    });
+    /* type 1 → niveau 1, type 2 → niveau 2, type 3 → niveau 3, type 4 → niveau 4 */
+    var neededLevel = maxType;
+
+    /* Date du résultat le plus ancien */
+    var earliestDate = matches.reduce(function(min, e) {
+      return e.date < min ? e.date : min;
+    }, matches[0].date);
+
+    /* Calcule le rangeStart adapté au niveau cible */
+    var newRangeStart;
+    if (neededLevel === 1) {
+      newRangeStart = 1290;
+    } else if (neededLevel === 2) {
+      newRangeStart = Math.floor(earliestDate / 100) * 100;
+    } else if (neededLevel === 3) {
+      newRangeStart = Math.floor(earliestDate / 10) * 10;
+    } else {
+      newRangeStart = earliestDate;
+    }
+
+    /* Navigue vers ce niveau et cette date */
+    level      = neededLevel;
+    rangeStart = newRangeStart;
     refreshFrise();
+
   } else {
-    /* Efface : restaure les zones d'origine */
+    /* Efface : restaure l'état d'origine */
     if (savedActiveZones) {
       activeZones = savedActiveZones;
       savedActiveZones = null;
+      if (savedLevel !== null) {
+        level      = savedLevel;
+        rangeStart = savedRangeStart;
+        savedLevel = null; savedRangeStart = null;
+      }
       updateFilterCheckboxes();
       refreshFrise();
     }
@@ -643,10 +695,15 @@ function clearSearch() {
   if (clearBtn) clearBtn.style.display = 'none';
   var countEl = document.getElementById('search-count');
   if (countEl) countEl.textContent = '';
-  /* Restaure les zones d'origine */
+  /* Restaure les zones et le niveau d'origine */
   if (savedActiveZones) {
     activeZones = savedActiveZones;
     savedActiveZones = null;
+    if (savedLevel !== null) {
+      level      = savedLevel;
+      rangeStart = savedRangeStart;
+      savedLevel = null; savedRangeStart = null;
+    }
     updateFilterCheckboxes();
     refreshFrise();
   }
