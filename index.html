@@ -13,7 +13,7 @@
       --parchment: #F5EDD8; --parchment-dk: #E8D9BA; --ink: #1C140A;
       --ink-soft: #4A3B28; --ink-muted: #7A6A52; --red: #8B1A1A; --gold: #9A6B1A;
       --border: rgba(100,80,40,0.25); --border-dark: rgba(100,80,40,0.5);
-      --track-h: 36px; --label-w: 130px; --radius: 6px;
+      --track-h: 42px; --ruler-h: 24px; --label-w: 130px; --radius: 6px;
       --shadow: 0 2px 12px rgba(50,30,10,0.12);
     }
     html { font-size: 15px; }
@@ -80,7 +80,7 @@
 
     /* Pistes */
     .track-row { display: flex; align-items: stretch; margin-bottom: 0.35rem; }
-    .zone-label { align-self: stretch; display: flex; align-items: flex-start; padding-top: 4px; width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
+    .zone-label { align-self: stretch; display: flex; align-items: flex-start; padding-top: 4px; width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
     .zone-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .track { flex: 1; position: relative; overflow: visible; min-width: 0; }
     .track-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); pointer-events: none; }
@@ -91,12 +91,12 @@
     .chip-dot { border-radius: 50%; border: 2px solid rgba(245,237,216,0.7); }
     /* type 1 = plus grand, type 3 = plus petit — géré en JS via style.width/height */
 
-    .chip-medium { font-size: 0.7rem; padding: 1px 6px; border-radius: 12px; border: 1.5px solid; white-space: nowrap; line-height: 20px; font-style: italic; max-width: 150px; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
+    .chip-medium { font-size: 0.76rem; padding: 2px 8px; border-radius: 12px; border: 1.5px solid; white-space: nowrap; line-height: 22px; font-style: italic; max-width: 170px; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
     .chip-medium.chip-type1 { font-weight: 600; font-size: 0.75rem; border-width: 2px; }
     .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
 
-    .chip-full { font-size: 0.76rem; padding: 2px 9px; border-radius: 14px; white-space: nowrap; font-style: italic; line-height: 20px; max-width: 210px; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 1px 4px rgba(0,0,0,0.18); box-sizing: border-box; }
-    .chip-full.chip-type3 { opacity: 0.7; font-size: 0.68rem; }
+    .chip-full { font-size: 0.83rem; padding: 3px 11px; border-radius: 14px; white-space: nowrap; font-style: italic; line-height: 22px; max-width: 240px; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 1px 5px rgba(0,0,0,0.20); box-sizing: border-box; }
+    .chip-full.chip-type3 { opacity: 0.72; font-size: 0.72rem; }
 
     /* ── Rulers row (ligne souverains) ── */
     .track-wrap { display: flex; flex-direction: column; flex: 1; min-width: 0; }
@@ -105,18 +105,19 @@
       display: flex;
       align-items: stretch;
       border-bottom: 1px solid var(--parch-border);
-      background: rgba(0,0,0,0.03);
+      background: rgba(0,0,0,0.05);
+      min-height: var(--ruler-h);
     }
     .rulers-label {
       flex: 0 0 28px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.75rem;
-      color: var(--ink-muted);
-      border-right: 1px solid var(--parch-border);
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      border-right: 1px solid var(--border);
       user-select: none;
-      opacity: 0.7;
+      font-weight: 600;
     }
     .rulers-track {
       flex: 1;
@@ -136,10 +137,10 @@
     .events-row { overflow: visible; }
 
     /* ── Étoile type 1 ── */
-    .chip-full.chip-type1 { font-weight: 600; font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.28); }
-    .chip-medium.chip-type1 { font-weight: 600; }
+    .chip-full.chip-type1 { font-weight: 700; font-size: 0.88rem; box-shadow: 0 2px 10px rgba(0,0,0,0.30); letter-spacing: 0.01em; }
+    .chip-medium.chip-type1 { font-weight: 700; font-size: 0.8rem; }
 
-    .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.7rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 8px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
+    .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.78rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 10px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
     .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }
     .chip-period.chip-type3 { opacity: 0.65; }
     .chip-period:hover { z-index: 10; }

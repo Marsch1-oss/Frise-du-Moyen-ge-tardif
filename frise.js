@@ -62,8 +62,8 @@ var ZONE_ALIASES = {
   'Idées':               'Idees'
 };
 
-var ROW_H    = 24;
-var ROW_GAP  = 4;
+var ROW_H    = 28;
+var ROW_GAP  = 5;
 var CHIP_PAD = 6;
 var TRACK_PX = 820;
 
@@ -413,8 +413,8 @@ function buildTrack(zone, evts, start, end, level) {
     /* Anti-collision sur plusieurs lignes si chevauchement */
     var rRows = assignRows(reigns, start, end, level);
     var maxRR = reigns.length > 0 ? Math.max.apply(null, rRows) : 0;
-    var RULER_H = 18;
-    var RULER_GAP = 3;
+    var RULER_H = 24;
+    var RULER_GAP = 4;
     var rulersH = (maxRR + 1) * (RULER_H + RULER_GAP);
     rulerTrack.style.height = rulersH + 'px';
 
@@ -470,27 +470,33 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.style.top    = (rowIndex * (RULER_H + RULER_GAP)) + 'px';
   chip.style.height = RULER_H + 'px';
 
-  /* Couleur de fond = couleur de zone, opacité différenciée par type */
-  chip.style.background    = col.bg;
-  chip.style.opacity       = '0.82';
-  chip.style.borderRadius  = '3px';
+  /* Dégradé diagonal : couleur bg → couleur light pour différencier des events */
+  chip.style.background    = 'linear-gradient(135deg, ' + col.bg + 'EE 0%, ' + col.bg + 'AA 100%)';
+  chip.style.borderLeft    = '4px solid ' + col.bg;
+  chip.style.borderTop     = '1px solid ' + col.bg + '66';
+  chip.style.borderBottom  = '1px solid ' + col.bg + '33';
+  chip.style.borderRight   = 'none';
+  chip.style.borderRadius  = '0 4px 4px 0';
   chip.style.color         = '#fff';
-  chip.style.fontSize      = '0.63rem';
-  chip.style.fontWeight    = '600';
+  chip.style.fontSize      = '0.72rem';
+  chip.style.fontWeight    = '700';
   chip.style.fontStyle     = 'normal';
-  chip.style.letterSpacing = '0.01em';
-  chip.style.padding       = '0 6px';
+  chip.style.letterSpacing = '0.02em';
+  chip.style.textShadow    = '0 1px 2px rgba(0,0,0,0.35)';
+  chip.style.boxShadow     = '0 2px 6px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.15)';
   chip.style.display       = 'flex';
   chip.style.alignItems    = 'center';
+  chip.style.justifyContent= 'center';   /* centrage horizontal */
+  chip.style.textAlign     = 'center';
   chip.style.overflow      = 'hidden';
   chip.style.whiteSpace    = 'nowrap';
   chip.style.boxSizing     = 'border-box';
   chip.style.minWidth      = '4px';
   chip.style.cursor        = 'pointer';
 
-  /* Texte selon niveau de zoom */
+  /* Texte selon niveau de zoom — centré */
   if (level > 1) {
-    var maxC = level === 4 ? 36 : level === 3 ? 24 : 16;
+    var maxC = level === 4 ? 36 : level === 3 ? 26 : 18;
     var titre = evt.titre.length > maxC
       ? evt.titre.slice(0, maxC - 1) + '\u2026'
       : evt.titre;
@@ -548,7 +554,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       if (type === 3) chip.classList.add('chip-type3');
       chip.style.background = col.bg;
       chip.style.color      = '#fff';
-      var maxC = level === 4 ? 40 : 28;
+      var maxC = level === 4 ? 38 : 26;
       var titreF = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
       chip.textContent = (type === 1 ? '\u2605 ' : '') + titreF;
     } else if (level === 2) {
