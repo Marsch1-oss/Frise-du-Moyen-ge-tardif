@@ -79,10 +79,10 @@
     .axis-band:hover { background: rgba(100,60,20,0.07); }
 
     /* Pistes */
-    .track-row { display: flex; align-items: flex-start; margin-bottom: 0.35rem; min-height: var(--track-h); }
-    .zone-label { width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
+    .track-row { display: flex; align-items: stretch; margin-bottom: 0.35rem; }
+    .zone-label { align-self: stretch; display: flex; align-items: flex-start; padding-top: 4px; width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
     .zone-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .track { flex: 1; position: relative; min-height: var(--track-h); }
+    .track { flex: 1; position: relative; overflow: visible; min-width: 0; }
     .track-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); pointer-events: none; }
 
     /* Chips */
@@ -96,8 +96,48 @@
     .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
 
     .chip-full { font-size: 0.76rem; padding: 2px 9px; border-radius: 14px; white-space: nowrap; font-style: italic; line-height: 20px; max-width: 210px; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 1px 4px rgba(0,0,0,0.18); box-sizing: border-box; }
-    .chip-full.chip-type1 { font-weight: 600; font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.28); }
     .chip-full.chip-type3 { opacity: 0.7; font-size: 0.68rem; }
+
+    /* ── Rulers row (ligne souverains) ── */
+    .track-wrap { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+
+    .rulers-row {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid var(--parch-border);
+      background: rgba(0,0,0,0.03);
+    }
+    .rulers-label {
+      flex: 0 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      border-right: 1px solid var(--parch-border);
+      user-select: none;
+      opacity: 0.7;
+    }
+    .rulers-track {
+      flex: 1;
+      position: relative;
+      overflow: visible;
+    }
+    .ruler-chip {
+      position: absolute;
+      transition: opacity 0.15s, filter 0.15s;
+    }
+    .ruler-chip:hover {
+      opacity: 1 !important;
+      filter: brightness(1.12);
+      z-index: 10;
+    }
+
+    .events-row { overflow: visible; }
+
+    /* ── Étoile type 1 ── */
+    .chip-full.chip-type1 { font-weight: 600; font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.28); }
+    .chip-medium.chip-type1 { font-weight: 600; }
 
     .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.7rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 8px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
     .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }

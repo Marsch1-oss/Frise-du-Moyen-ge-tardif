@@ -335,8 +335,22 @@ function chipW(evt, start, end, level) {
 
 function assignRows(evts, start, end, level) {
   var rowEnds = [];
+  var reignEnds = [];          /* file dédiée aux règnes */
   var gap = CHIP_PAD / TRACK_PX * 100;
   return evts.map(function(evt) {
+    /* Les règnes ont leur propre file (rowIndex 0) sans collision */
+    if (evt.regne) {
+      var d0r = evt.date, d1r = evt.date_fin || evt.date;
+      var placed = false;
+      for (var ri = 0; ri < reignEnds.length; ri++) {
+        if (d0r >= reignEnds[ri]) {
+          reignEnds[ri] = d1r + gap;
+          return ri;           /* rowIndex dans la zone règne */
+        }
+      }
+      reignEnds.push(d1r + gap);
+      return reignEnds.length - 1;
+    }
     var isPeriod = evt.date_fin && evt.date_fin > evt.date;
     var left = isPeriod
       ? (Math.max(evt.date, start) - start) / (end - start) * 100
@@ -351,43 +365,145 @@ function assignRows(evts, start, end, level) {
 
 /* ── Piste ───────────────────────────────────────────────────────────*/
 function buildTrack(zone, evts, start, end, level) {
+  var col = COLORS[zone] || COLORS['France'];
   var row = document.createElement('div');
   row.className = 'track-row';
   row.dataset.zone = zone;
+
+  /* Label zone */
   var lbl = document.createElement('div');
   lbl.className = 'zone-label';
   var dot = document.createElement('span');
   dot.className = 'zone-dot';
-  dot.style.background = (COLORS[zone] || COLORS['France']).bg;
+  dot.style.background = col.bg;
   lbl.appendChild(dot);
   lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
 
+  /* Sépare règnes et événements */
   var visible = evts.filter(function(evt) {
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
     return evt.date <= end && fin >= start;
   });
+  var reigns  = visible.filter(function(e) { return !!e.regne; });
+  var regular = visible.filter(function(e) { return !e.regne; });
 
-  var rows  = assignRows(visible, start, end, level);
-  var maxR  = visible.length > 0 ? Math.max.apply(null, rows) : 0;
-  var trackH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
+  /* Conteneur principal de la track */
+  var trackWrap = document.createElement('div');
+  trackWrap.className = 'track-wrap';
+  trackWrap.style.position = 'relative';
 
-  var track = document.createElement('div');
-  track.className = 'track';
-  track.style.height = trackH + 'px';
+  /* ── Ligne Rulers ── */
+  if (reigns.length > 0) {
+    var rulersRow = document.createElement('div');
+    rulersRow.className = 'rulers-row';
+
+    /* Label "♛" à gauche */
+    var rulerLbl = document.createElement('div');
+    rulerLbl.className = 'rulers-label';
+    rulerLbl.textContent = '\u265b';
+    rulerLbl.title = 'Souverains';
+    rulersRow.appendChild(rulerLbl);
+
+    /* Zone de placement des ruler-chips */
+    var rulerTrack = document.createElement('div');
+    rulerTrack.className = 'rulers-track';
+    rulerTrack.style.position = 'relative';
+
+    /* Anti-collision sur plusieurs lignes si chevauchement */
+    var rRows = assignRows(reigns, start, end, level);
+    var maxRR = reigns.length > 0 ? Math.max.apply(null, rRows) : 0;
+    var RULER_H = 18;
+    var RULER_GAP = 3;
+    var rulersH = (maxRR + 1) * (RULER_H + RULER_GAP);
+    rulerTrack.style.height = rulersH + 'px';
+
+    for (var ri = 0; ri < reigns.length; ri++) {
+      var rc = buildRulerChip(reigns[ri], zone, start, end, level, rRows[ri], RULER_H, RULER_GAP);
+      if (rc) rulerTrack.appendChild(rc);
+    }
+    rulersRow.appendChild(rulerTrack);
+    trackWrap.appendChild(rulersRow);
+  }
+
+  /* ── Ligne Events ── */
+  var rows = assignRows(regular, start, end, level);
+  var maxR = regular.length > 0 ? Math.max.apply(null, rows) : -1;
+  var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
+
+  var evtRow = document.createElement('div');
+  evtRow.className = 'events-row';
+  evtRow.style.position = 'relative';
+  evtRow.style.height = evtH + 'px';
 
   var line = document.createElement('div');
   line.className = 'track-line';
-  line.style.top = (trackH / 2) + 'px';
-  track.appendChild(line);
+  line.style.top = (evtH / 2) + 'px';
+  evtRow.appendChild(line);
 
-  for (var i = 0; i < visible.length; i++) {
-    var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
-    if (chip) track.appendChild(chip);
+  for (var i = 0; i < regular.length; i++) {
+    var chip = buildChip(regular[i], zone, start, end, level, rows[i]);
+    if (chip) evtRow.appendChild(chip);
   }
+  trackWrap.appendChild(evtRow);
 
-  row.appendChild(track);
+  row.appendChild(trackWrap);
   return row;
+}
+
+
+/* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
+function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {
+  var col  = COLORS[zone] || COLORS['France'];
+  var chip = document.createElement('div');
+  chip.className     = 'ruler-chip';
+  chip.dataset.evtId = evt.id;
+
+  var d0 = Math.max(evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0), start);
+  var d1 = evt.date_fin
+    ? Math.min(evt.date_fin + (evt.mois_fin ? (evt.mois_fin - 1) / 12 : 0), end)
+    : Math.min(evt.date + 1, end);
+  if (d1 <= d0) return null;
+
+  chip.style.left   = pct(d0, start, end);
+  chip.style.width  = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
+  chip.style.top    = (rowIndex * (RULER_H + RULER_GAP)) + 'px';
+  chip.style.height = RULER_H + 'px';
+
+  /* Couleur de fond = couleur de zone, opacité différenciée par type */
+  chip.style.background    = col.bg;
+  chip.style.opacity       = '0.82';
+  chip.style.borderRadius  = '3px';
+  chip.style.color         = '#fff';
+  chip.style.fontSize      = '0.63rem';
+  chip.style.fontWeight    = '600';
+  chip.style.fontStyle     = 'normal';
+  chip.style.letterSpacing = '0.01em';
+  chip.style.padding       = '0 6px';
+  chip.style.display       = 'flex';
+  chip.style.alignItems    = 'center';
+  chip.style.overflow      = 'hidden';
+  chip.style.whiteSpace    = 'nowrap';
+  chip.style.boxSizing     = 'border-box';
+  chip.style.minWidth      = '4px';
+  chip.style.cursor        = 'pointer';
+
+  /* Texte selon niveau de zoom */
+  if (level > 1) {
+    var maxC = level === 4 ? 36 : level === 3 ? 24 : 16;
+    var titre = evt.titre.length > maxC
+      ? evt.titre.slice(0, maxC - 1) + '\u2026'
+      : evt.titre;
+    chip.textContent = titre;
+  }
+  chip.title = '\u265b ' + evt.titre
+    + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
+
+  chip.addEventListener('click', (function(e, z) {
+    return function(ev) { ev.stopPropagation(); openModal(e, z); };
+  })(evt, zone));
+
+  return chip;
 }
 
 /* ── Chip ────────────────────────────────────────────────────────────*/
@@ -415,7 +531,8 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     chip.style.color       = '#fff';
     if (level > 1) {
       var mx = level === 3 ? 40 : 22;
-      chip.textContent = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
+      var titreP = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
+      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreP;
     }
     chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
 
@@ -432,7 +549,8 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background = col.bg;
       chip.style.color      = '#fff';
       var maxC = level === 4 ? 40 : 28;
-      chip.textContent = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
+      var titreF = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
+      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreF;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
@@ -440,7 +558,8 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background  = col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
-      chip.textContent = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
+      var titreM = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
+      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreM;
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;

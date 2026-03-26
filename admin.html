@@ -193,6 +193,14 @@
       </div>
       <div class="field-row single">
         <div class="field">
+          <label>
+            <input type="checkbox" id="f-regne" style="margin-right:6px;vertical-align:middle;">
+            ♛ Règne / Dynastie <small>(bande colorée dédiée sur la frise)</small>
+          </label>
+        </div>
+      </div>
+      <div class="field-row single">
+        <div class="field">
           <label>Vidéo YouTube <small>(URL ou ID)</small></label>
           <input type="text" id="f-video" placeholder="ex. https://www.youtube.com/watch?v=... ou dQw4w9WgXcQ">
         </div>
@@ -348,6 +356,9 @@ function readForm() {
     toast('Image : chemin local détecté — utilisez images/nom-fichier.jpg');
     rawImg = '';
   }
+  var fVideoEl = document.getElementById('f-video');
+  var rawVideo = fVideoEl ? fVideoEl.value.trim() : '';
+  var isRegne  = !!(document.getElementById('f-regne') && document.getElementById('f-regne').checked);
 
   var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
   if (mois)                    evt.mois     = mois;
@@ -357,7 +368,8 @@ function readForm() {
   evt.type        = type;
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
-  if (rawVideo) evt.video = rawVideo;
+  if (rawVideo)  evt.video = rawVideo;
+  if (isRegne)   evt.regne = true;
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
@@ -380,6 +392,7 @@ function fillForm(evt) {
   document.getElementById('f-image').value    = evt.image    || '';
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
+  document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     var checked = (evt.zones || []).indexOf(inp.value) !== -1;
@@ -400,6 +413,7 @@ function fillForm(evt) {
 
 function resetForm() {
   editingId = null;
+  document.getElementById('f-regne').checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
    'f-desc','f-image','f-legende','f-video','f-sources'].forEach(function(id) {
     document.getElementById(id).value = '';
@@ -499,6 +513,7 @@ function updateJSON() {
     o.image = e.image || '';
     if (e.legende) o.legende = e.legende;
     if (e.video)   o.video   = e.video;
+    if (e.regne)   o.regne   = true;
     if (e.sources) o.sources = e.sources;
     return o;
   });
