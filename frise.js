@@ -207,6 +207,11 @@ function renderLevel(level, rangeStart) {
   container.innerHTML = '';
   container.appendChild(buildAxis(start, end, tickStep, level));
 
+  /* ── Section Rulers globale en haut ── */
+  var rulersSection = buildRulersSection(start, end, level);
+  if (rulersSection) container.appendChild(rulersSection);
+
+  /* ── Zones événements ── */
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
     if (!activeZones[zone]) continue;
@@ -215,6 +220,7 @@ function renderLevel(level, rangeStart) {
       var e = allEvents[j];
       if (e.zones.indexOf(zone) === -1) continue;
       if (!visibleAtLevel(e, level)) continue;
+      if (e.regne) continue;  /* règnes déjà affichés dans rulersSection */
       var eDateF = e.date + (e.mois ? (e.mois - 1) / 12 : 0);
       var fin = (e.date_fin && e.date_fin > e.date)
         ? e.date_fin + (e.mois_fin ? (e.mois_fin - 1) / 12 : 0)
@@ -364,6 +370,89 @@ function assignRows(evts, start, end, level) {
 }
 
 /* ── Piste ───────────────────────────────────────────────────────────*/
+/* ── Section Rulers globale ─────────────────────────────────────────*/
+function buildRulersSection(start, end, level) {
+  /* Collecte les règnes visibles par zone */
+  var byZone = {};
+  for (var zi = 0; zi < ZONES.length; zi++) {
+    var zone = ZONES[zi];
+    if (!activeZones[zone]) continue;
+    var zoneReigns = [];
+    for (var j = 0; j < allEvents.length; j++) {
+      var e = allEvents[j];
+      if (!e.regne) continue;
+      if (e.zones.indexOf(zone) === -1) continue;
+      var d0 = e.date, d1 = e.date_fin || e.date;
+      if (level === 4) {
+        var eF = e.date + (e.mois ? (e.mois-1)/12 : 0);
+        var eL = e.date_fin ? e.date_fin + (e.mois_fin ? (e.mois_fin-1)/12 : 0) : eF;
+        if (eF > end || eL < start) continue;
+      } else {
+        if (d0 > end || d1 < start) continue;
+      }
+      zoneReigns.push(e);
+    }
+    if (zoneReigns.length > 0) byZone[zone] = zoneReigns;
+  }
+
+  var zonesWithReigns = ZONES.filter(function(z) { return byZone[z]; });
+  if (zonesWithReigns.length === 0) return null;
+
+  /* Conteneur global */
+  var section = document.createElement('div');
+  section.className = 'rulers-section';
+
+  /* Titre de section */
+  var sectionTitle = document.createElement('div');
+  sectionTitle.className = 'rulers-section-title';
+  sectionTitle.textContent = '♛ Souverains';
+  section.appendChild(sectionTitle);
+
+  /* Une ligne par zone */
+  var RULER_H = 22;
+  var RULER_GAP = 3;
+
+  for (var zi = 0; zi < zonesWithReigns.length; zi++) {
+    var z = zonesWithReigns[zi];
+    var col = COLORS[z] || COLORS['France'];
+    var zReigns = byZone[z];
+
+    var row = document.createElement('div');
+    row.className = 'rulers-zone-row';
+
+    /* Label zone */
+    var lbl = document.createElement('div');
+    lbl.className = 'rulers-zone-label';
+    lbl.style.borderLeft = '3px solid ' + col.bg;
+    lbl.style.color = col.bg;
+    var dotSpan = document.createElement('span');
+    dotSpan.className = 'zone-dot';
+    dotSpan.style.background = col.bg;
+    lbl.appendChild(dotSpan);
+    lbl.appendChild(document.createTextNode(z));
+    row.appendChild(lbl);
+
+    /* Track des rulers */
+    var rRows = assignRows(zReigns, start, end, level);
+    var maxRR = zReigns.length > 0 ? Math.max.apply(null, rRows) : 0;
+    var trackH = (maxRR + 1) * (RULER_H + RULER_GAP);
+
+    var track = document.createElement('div');
+    track.className = 'rulers-zone-track';
+    track.style.position = 'relative';
+    track.style.height = trackH + 'px';
+
+    for (var ri = 0; ri < zReigns.length; ri++) {
+      var rc = buildRulerChip(zReigns[ri], z, start, end, level, rRows[ri], RULER_H, RULER_GAP);
+      if (rc) track.appendChild(rc);
+    }
+    row.appendChild(track);
+    section.appendChild(row);
+  }
+
+  return section;
+}
+
 function buildTrack(zone, evts, start, end, level) {
   var col = COLORS[zone] || COLORS['France'];
   var row = document.createElement('div');
@@ -380,74 +469,31 @@ function buildTrack(zone, evts, start, end, level) {
   lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
 
-  /* Sépare règnes et événements */
+  /* Filtre les événements dans la plage (règnes déjà exclus par renderLevel) */
   var visible = evts.filter(function(evt) {
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
     return evt.date <= end && fin >= start;
   });
-  var reigns  = visible.filter(function(e) { return !!e.regne; });
-  var regular = visible.filter(function(e) { return !e.regne; });
 
-  /* Conteneur principal de la track */
-  var trackWrap = document.createElement('div');
-  trackWrap.className = 'track-wrap';
-  trackWrap.style.position = 'relative';
-
-  /* ── Ligne Rulers ── */
-  if (reigns.length > 0) {
-    var rulersRow = document.createElement('div');
-    rulersRow.className = 'rulers-row';
-
-    /* Label "♛" à gauche */
-    var rulerLbl = document.createElement('div');
-    rulerLbl.className = 'rulers-label';
-    rulerLbl.textContent = '\u265b';
-    rulerLbl.title = 'Souverains';
-    rulersRow.appendChild(rulerLbl);
-
-    /* Zone de placement des ruler-chips */
-    var rulerTrack = document.createElement('div');
-    rulerTrack.className = 'rulers-track';
-    rulerTrack.style.position = 'relative';
-
-    /* Anti-collision sur plusieurs lignes si chevauchement */
-    var rRows = assignRows(reigns, start, end, level);
-    var maxRR = reigns.length > 0 ? Math.max.apply(null, rRows) : 0;
-    var RULER_H = 24;
-    var RULER_GAP = 4;
-    var rulersH = (maxRR + 1) * (RULER_H + RULER_GAP);
-    rulerTrack.style.height = rulersH + 'px';
-
-    for (var ri = 0; ri < reigns.length; ri++) {
-      var rc = buildRulerChip(reigns[ri], zone, start, end, level, rRows[ri], RULER_H, RULER_GAP);
-      if (rc) rulerTrack.appendChild(rc);
-    }
-    rulersRow.appendChild(rulerTrack);
-    trackWrap.appendChild(rulersRow);
-  }
-
-  /* ── Ligne Events ── */
-  var rows = assignRows(regular, start, end, level);
-  var maxR = regular.length > 0 ? Math.max.apply(null, rows) : -1;
+  var rows = assignRows(visible, start, end, level);
+  var maxR = visible.length > 0 ? Math.max.apply(null, rows) : -1;
   var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
 
-  var evtRow = document.createElement('div');
-  evtRow.className = 'events-row';
-  evtRow.style.position = 'relative';
-  evtRow.style.height = evtH + 'px';
+  var track = document.createElement('div');
+  track.className = 'track';
+  track.style.height = evtH + 'px';
 
   var line = document.createElement('div');
   line.className = 'track-line';
   line.style.top = (evtH / 2) + 'px';
-  evtRow.appendChild(line);
+  track.appendChild(line);
 
-  for (var i = 0; i < regular.length; i++) {
-    var chip = buildChip(regular[i], zone, start, end, level, rows[i]);
-    if (chip) evtRow.appendChild(chip);
+  for (var i = 0; i < visible.length; i++) {
+    var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
+    if (chip) track.appendChild(chip);
   }
-  trackWrap.appendChild(evtRow);
 
-  row.appendChild(trackWrap);
+  row.appendChild(track);
   return row;
 }
 
@@ -538,7 +584,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     if (level > 1) {
       var mx = level === 3 ? 40 : 22;
       var titreP = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
-      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreP;
+      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
     }
     chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
 
@@ -556,7 +602,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.color      = '#fff';
       var maxC = level === 4 ? 38 : 26;
       var titreF = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
-      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreF;
+      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreF;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
@@ -565,7 +611,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
       var titreM = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
-      chip.textContent = (type === 1 ? '\u2605 ' : '') + titreM;
+      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreM;
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
