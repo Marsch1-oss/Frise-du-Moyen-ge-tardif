@@ -12,7 +12,8 @@
     "type": 1,
     "description": "Fils aîné du roi Henri III, Édouard s'implique très jeune dans les intrigues politiques du royaume. Il soutient brièvement le mouvement des barons réformateurs mené par Simon de Montfort avant de se réconcilier avec son père, auquel il reste fidèle durant toute la Seconde Guerre des barons (1264-1267).\n\nUne grande partie du règne d'Édouard Ier est consacrée à la réforme de l'administration royale et du droit commun. Il conquiert le pays de Galles (1282-1283) et l'intègre au royaume d'Angleterre. La guerre éclate avec l'Écosse en 1296 et se poursuit durant le reste du règne.\n\nSa grande taille et son tempérament colérique font d'Édouard Ier un homme craint, mais il gagne le respect de ses sujets par son comportement digne du roi idéal. C'est lui qui expulse les Juifs du royaume d'Angleterre en 1290 ; l'édit d'Expulsion reste en vigueur jusqu'en 1656.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Edward_I_-_Westminster_Abbey_Sedilia.jpg/330px-Edward_I_-_Westminster_Abbey_Sedilia.jpg",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 84,
@@ -27,7 +28,8 @@
     "type": 1,
     "description": "Pierre III d’Aragon, dit Pierre le Grand (1240–1285), est roi d’Aragon, de Valence, comte de Barcelone et roi de Sicile. Fils de Jacques Ier et de Yolande de Hongrie, il reçoit progressivement plusieurs territoires (Roussillon, Cerdagne, Catalogne) et une éducation noble. À la mort de son père en 1276, il accède au trône et réprime rapidement des révoltes en Valence et en Catalogne.\nEn 1279, il signe le traité de Perpignan avec son frère Jacques de Majorque. Héritier des droits des Hohenstaufen par son épouse Constance, il profite de l’insurrection des Vêpres siciliennes (1282) pour s’emparer de la Sicile, où il est couronné roi après avoir chassé les Angevins. Cette action lui vaut l’excommunication et une croisade menée contre lui par le roi de France.\nMalgré des révoltes internes, Pierre maintient son autorité, tandis que son amiral Roger de Lauria remporte plusieurs victoires navales importantes. La croisade d’Aragon (1285) échoue, affaiblissant la France. Pierre meurt la même année, après avoir tenté de se réconcilier avec le pape.\nÀ sa mort, ses territoires sont partagés : son fils Alphonse reçoit l’Aragon, Valence et Barcelone, et son autre fils Jacques la Sicile, avant de réunifier plus tard les possessions.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Royal_arms_of_Aragon_%28Crowned%29.svg/langfr-960px-Royal_arms_of_Aragon_%28Crowned%29.svg.png",
-    "sources": "https://fr.wikipedia.org/wiki/Pierre_III_(roi_d%27Aragon)"
+    "sources": "https://fr.wikipedia.org/wiki/Pierre_III_(roi_d%27Aragon)",
+    "regne": true
   },
   {
     "id": 284,
@@ -43,22 +45,8 @@
     "description": "né à Lisbonne le 9 octobre 1261 et mort à Santarém le 7 janvier 1325, est le sixième roi de Portugal de 1279 à 1325. Il est considéré comme l'un des plus importants poètes troubadours portugais des XIIIe et XIVe siècles. Il est le deuxième fils du roi Alphonse III et de son épouse l'infante Béatrice de Castille (1242-1303) et devient le sixième roi de Portugal en 1279 à la place de son aîné Robert de Portugal qui a été déclaré bâtard de Mahaut de Dammartin. Comme héritier du trône, Denis est très tôt formé par son père pour diriger le Portugal. Il est considéré comme le premier monarque portugais véritablement lettré, ayant toujours signé de son nom complet . Lorsqu'il monte sur le trône, le Portugal est de nouveau en conflit avec l'Église catholique. Denis Ier tente de résoudre le problème en signant un traité avec le pape Nicolas III où il promet de protéger les intérêts de Rome au Portugal [6],[7]. En 1289, le roi signe le Concordat des Quarante Articles avec le pape Nicolas IV, jurant également de protéger les intérêts de l'Église dans son royaume [8].\n\nEn 1319, Denis Ier concède l'asile aux Templiers, accusés d'hérésie et condamnés à l'anéantissement par le pape Clément V, en créant un ordre militaire portugais sous le nom d'ordre du Christ [9],[10]. Ce nouvel ordre est conçu pour être une continuation de l'ordre du Temple [11]. Sa reconnaissance et son droit à hériter des biens ainsi que des propriétés des Templiers sont négociés par Denis Ier avec le pape Jean XXII [12].\n\nLa Reconquista portugaise étant terminée, Denis Ier est surtout un roi administrateur, malgré quelques tensions avec la Castille dont il obtient la possession des bourgades de Serpa ainsi que de Moura, des territoires au-delà du Guadiana et la rectification des frontières de Ribacoa. Il signe pour cela le traité d'Alcañices avec Ferdinand IV de Castille le 12 septembre 1297, dont l'accord est toujours en vigueur [13]. Une fois ce conflit résolu, aucune autre guerre n'a lieu durant son règne, justifiant ainsi le souvenir qu'il a laissé d'un roi très pacifique pour son époque [14].\n\nPolitique intérieure et économique\n\nDenis Ier et la reine Élisabeth de Portugal, portrait à l'Université de Coimbra–Sala dos Capelos\nLes priorités de son gouvernement sont l'organisation du pays et la continuation des actions de son père. Denis Ier publie le noyau du Code civil et criminel se concentrant sur la protection des classes les moins favorisées contre les abus de pouvoir. Ces lois ont survécu dans le cadre du « Livre des lois et des règlements »[15],[16] et dans les « Ordonnances alphonsines », rédigées sous le règne d'Alphonse V de Portugal [17],[18]. Ces « codes législatifs » sont des compilations de lois et de droits coutumiers municipaux, amendés et reformulés par la Couronne [19]. Denis Ier encadre le droit commun en imposant des restrictions aux actions des « alvazis » (fonctionnaires des conseils locaux), son contrôle des procédures aux juristes (juges, procureurs et avocats), marque le début de la juridiction territoriale et l'importance croissante de Lisbonne comme capitale du pays [20]. De vastes terres étendent le domaine royal dans les régions du nord au sud et une partie du territoire méridional passe sous le contrôle des ordres militaires [21].\n\nDurant son règne, il voyage dans le pays, visitant les bourgs et apportant des solutions aux problèmes rencontrés. Avec l'aide de son épouse, la reine Elisabeth d'Aragon dite sainte Elisabeth (1271-1336), Denis Ier essaye d'améliorer la vie des pauvres [22],[23] et fonde diverses institutions de charité [24]. Préoccupé par les infrastructures du pays, le roi ordonne l'exploitation des mines de cuivre, d'argent, d'étain ainsi que de fer et organise les exportations de ces produits vers les autres pays européens [25].\n\nDenis Ier institue la première réforme agraire du Portugal qui redistribue des terres en morcelant les propriétés féodales et ecclésiastiques [26],[27]. Ses décrets interdisent à l'Église ainsi qu'aux ordres religieux d'acheter des terres, exigent des ventes, des confiscations et empêchent l'héritage des biens des recrues des ordres [28]. Sous son règne, il favorise le développement de la médecine vétérinaire [29], des infrastructures rurales et fonde des écoles pour améliorer les techniques agricoles [30]. Le Portugal produit plus de céréales, dépassant ses propres besoins et exporte l'excédent, ce qui vaut au roi le surnom de « l'Agriculteur » (« o Lavrador ») [31]. L'une de ses principales réalisations est la plantation d'une forêt de pins, pour protéger les terres arables de l'avancée des sables côtiers, près de Leiria [32]. Cette forêt, connue sous le nom de « Pinhal de Leiria » (Pinède de Leiria), existe toujours et constitue une importante zone de conservation [33],[34]. Sa politique encourage le développement économique avec la fondation de diverses communautés rurales, de marchés et de foires commerciales, permettant la création de nombreuses villes [25].\n\nDenis Ier défend les intérêts des marchands portugais et crée un fonds appelé la « Bolsa de Comércio », la première forme documentée d'assurance maritime en Europe, approuvée le 10 mai 1293 [35],[36]. Cela permet la formation d'une marine marchande pour le commerce avec la Catalogne, la Bretagne, les pays nordiques et l'Angleterre, avec qui il signe un traité commercial en 1308. Il obtient un contrat en 1317 pour les services du marin et marchand génois Manuel Pessanha (forme portugaise de l'italien « Pezagno ») comme amiral de sa flotte [37]. Pessanha et ses successeurs fournissent vingt capitaines génois pour commander les galères du roi à Lisbonne. Denis Ier est le promoteur des grands navigateurs et fait venir des pays voisins des techniciens en navigation [38], fondant ainsi la Marine portugaise[39].\n\nArts et politique culturelle\n\nLe Parchemin Sharrer avec des cantigas de Denis Ier de Portugal.\nLa culture est un autre de ses foyers d'intérêt. Denis Ier aime la littérature et écrit lui-même quelques livres sur des thèmes comme l'administration, la chasse et des ouvrages de poésie [40]. Il a été un des plus grands troubadours de son temps avec 137 cantigas qui lui sont attribuées et qui appartiennent aux trois principaux genres du Lyrisme Galaïco-portugais [41]: 73 cantigas de amor, 51 cantigas de amigo et 10 cantigas de escarnio y maldecir. Ces œuvres sont conservées dans deux manuscrits du début du XVIe siècle, le « Cancioneiro Colocci-Brancuti » et le « Cancioneiro da Vaticana » [42]. En 1990, l'érudit américain Harvey L. Sharrer a découvert la musique originale de sept cantigas de amor du roi Denis Ier sur un parchemin fragmenté qui a servi de couverture à un livre de minutes notariales du XVIe siècle [43],[44]. Ce document porte aujourd'hui le nom de « Parchemin Sharrer » à l'Institut des archives nationales[45].\n\nEn 1290, Denis Ier poursuit la centralisation systématique du pouvoir royal en décrétant le portugais « langue officielle de l'État » [46],[47]. Il remplace désormais le latin comme langue des tribunaux [48] et « des procédures juridiques ainsi que judiciaires » de son royaume [49],[50],[51].\n\nSous son règne, Lisbonne devient un centre de culture et d'apprentissage [52],[53]. La première université du Portugal, appelée « Estudo Geral », est fondée avec la signature du document « Scientiae thesaurus mirabilis » à Leiria le 3 mars 1290 [54]. Des cours sur les arts, le droit civil, le droit canonique et la médecine sont donnés et, le 15 février 1309, le roi accorde à l'université une charte, la « Magna Charta Privilegiorum » [55]. L'université est déplacée plusieurs fois entre Lisbonne et Coimbra, pour finalement s'installer définitivement à Coimbra en 1537 par ordre du roi Jean III",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/D._Dinis_-_Compendio_de_cr%C3%B3nicas_de_reyes_%28Biblioteca_Nacional_de_Espa%C3%B1a%29.png/500px-D._Dinis_-_Compendio_de_cr%C3%B3nicas_de_reyes_%28Biblioteca_Nacional_de_Espa%C3%B1a%29.png",
     "legende": "Le roi Denis Ier de Portugal dans le manuscrit castillan Semblanzas de reyes (1312–1325).",
-    "sources": "https://fr.wikipedia.org/wiki/Denis_Ier"
-  },
-  {
-    "id": 40,
-    "titre": "Andronic II Paléologue",
-    "date": 1282,
-    "mois": 12,
-    "date_fin": 1328,
-    "mois_fin": 5,
-    "zones": [
-      "Byzance"
-    ],
-    "type": 1,
-    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople menée par son père en 1261. Toutefois, l'Empire est épuisé par la politique extérieure de Michel VIII. Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières.\n\nMalgré un trésor vide et des forces armées diminuées, Andronic a contribué à une renaissance culturelle, ainsi qu'à des réformes financières et judiciaires durables. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à l'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
-    "image": "",
-    "sources": "Wikipedia"
+    "sources": "https://fr.wikipedia.org/wiki/Denis_Ier",
+    "regne": true
   },
   {
     "id": 345,
@@ -75,6 +63,22 @@
     "legende": "La fresque du roi Stefan Milutin, église du roi à Studenica, Serbie"
   },
   {
+    "id": 40,
+    "titre": "Andronic II Paléologue",
+    "date": 1282,
+    "mois": 12,
+    "date_fin": 1328,
+    "mois_fin": 5,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 1,
+    "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople menée par son père en 1261. Toutefois, l'Empire est épuisé par la politique extérieure de Michel VIII. Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières.\n\nMalgré un trésor vide et des forces armées diminuées, Andronic a contribué à une renaissance culturelle, ainsi qu'à des réformes financières et judiciaires durables. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à l'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
+    "image": "",
+    "sources": "Wikipedia",
+    "regne": true
+  },
+  {
     "id": 38,
     "titre": "Charles II d'Anjou dit le Boiteux",
     "date": 1285,
@@ -87,7 +91,8 @@
     "type": 1,
     "description": "Né vers 1254, mort le 6 mai 1309 à Naples, fils de Charles Ier d'Anjou et de Béatrice de Provence, neveu de saint Louis. De la dynastie d'Anjou-Sicile, il est titré prince de Salerne, puis roi de Naples (ou Sicile péninsulaire), comte de Provence et de Forcalquier, d'Anjou et du Maine, et prince d'Achaïe ou de Morée jusqu'en 1289.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Charles_2_of_Naples.jpg",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 2,
@@ -102,7 +107,8 @@
     "type": 1,
     "description": "Il devient roi de France en octobre 1285 à l'âge de 17 ans. Son règne est notamment marqué par un renforcement important du pouvoir royal et une mise au pas du duc-roi de Guyenne ainsi que de la Flandre en révolte.\n\nPhilippe IV croit trouver une solution à ses difficultés financières en abattant l'ordre du Temple et en expulsant les Juifs tout en confisquant leurs biens. Il rétablit une monnaie d'or qui va rester stable pendant plus d'un siècle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Philip_iv_and_family._2_%28detail_crop%29.jpg",
-    "sources": "Grandes Chroniques de France"
+    "sources": "Grandes Chroniques de France",
+    "regne": true
   },
   {
     "id": 41,
@@ -117,7 +123,8 @@
     "type": 1,
     "description": "André III, dernier des Árpád, élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit lutter pour conserver sa couronne contre l'empereur Albert de Habsbourg et les prétentions de Charles Martel d'Anjou-Naples.\n\nIl s'appuie sur la chevalerie pour régner et est le premier roi à convoquer une diète en Hongrie. Il est le dernier représentant mâle de sa dynastie ; le pays connaît une période anarchique après sa mort.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 45,
@@ -131,7 +138,8 @@
     "type": 1,
     "description": "Fils aîné de l'empereur byzantin Andronic II Paléologue et d'Anne de Hongrie. Il régna conjointement avec son père de 1294 à sa mort en 1320, premier co-empereur à exercer le pouvoir avec les mêmes prérogatives que son collègue.\n\nIl conduisit plusieurs campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, qui se terminèrent par des échecs ou des demi-succès. Il fut nommé gouverneur de Thessalonique où il mourut de chagrin après la perte de sa fille et de son fils.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 105,
@@ -147,7 +155,8 @@
     "description": "Temur est le fils de Zhenjin, et donc le petit-fils de Kubilai. Ce dernier est lui même petit-fils de Gengis Khan via son père Tolui.\nTemur n'est pas le successeur choisi initialement par Kubilai Khan ; il le devient par suite de la mort des autres successeurs potentiels. Il porte dès lors le nom mongol de « Temur Khan » et le nom chinois d'« empereur Chengzong »\nTemur Khan reçoit l’envoyé du Pape, Jean de Montecorvino, avec une certaine solennité. Mais celui-ci s’aperçoit vite que les dispositions du Khan et de son entourage ne laissent présager aucune conversion possible. Néanmoins, il assume son rôle de légat du Pape et bénéficie d’une certaine faveur de la part du Khan qui l’autorise à s’établir dans la capitale, à annoncer l’Évangile et à y construire une église.\nEn 1296, Temur Khan envoie en ambassade au Cambodge Zhou Daguan, qui, à son retour, écrit le récit de sa mission, qui a été conservé.\nAprès le règne de Temur Khan, la dynastie Yuan connaît un déclin assez rapide.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/YuanEmperorAlbumTemurOljeituPortrait.jpg/960px-YuanEmperorAlbumTemurOljeituPortrait.jpg",
     "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei 1350",
-    "sources": "https://fr.wikipedia.org/wiki/T%C3%A9mur_Khan"
+    "sources": "https://fr.wikipedia.org/wiki/T%C3%A9mur_Khan",
+    "regne": true
   },
   {
     "id": 33,
@@ -162,7 +171,8 @@
     "type": 1,
     "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que toute créature humaine doit être soumise au pontife romain.\n\nCette intransigeance contribue à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'attentat d'Anagni (7-8 septembre 1303).",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 181,
@@ -175,7 +185,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 334,
@@ -233,7 +244,8 @@
     "type": 1,
     "description": "Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308.\n\nAlbert s'avère un souverain capable : il se garantit la paix avec Philippe IV le Bel par mariage et parvint à un accord avec le roi Venceslas II de Bohême. Il n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 187,
@@ -245,7 +257,8 @@
     ],
     "type": 1,
     "description": "Le prénom Osman étant emprunté à l'arabe Uṯmān – initialement et pendant longtemps francisé en Ottoman Ier  forme qui est à l'origine de l'adjectif  \"ottoman\".\nIl profita de la faiblesse des empires seldjoukide et byzantin sur leurs frontières respectives pour établir et renforcer son émirat. Son État, à l’origine une petite principauté turkmène d'Anatolie occidentale[8] pendant la vie d'Osman, s'est transformé en un empire transcontinental dans les siècles qui suivirent sa mort[9], qui a existé jusqu'à peu de temps après la fin de la Première Guerre mondiale. En raison de la rareté des sources historiques datant de sa vie, très peu d'informations factuelles sur Osman ont survécu. Pas une seule source écrite ne survit du règne d'Osman[10]. Les Ottomans n'ont enregistré l'histoire de la vie d'Osman qu'au XVe siècle, plus de cent ans après sa mort[11]. Pour cette raison, les historiens trouvent qu'il est très difficile de faire la différence entre les faits et les mythes dans les nombreuses histoires racontées à son sujet[12]. Des historiens comme Colin Imber sont même allés jusqu'à qualifier la période de la vie d'Osman comme un « trou noir »",
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 30,
@@ -330,7 +343,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 52,
@@ -451,7 +465,8 @@
     "type": 1,
     "description": "Né le 6 octobre 1289, prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, puis roi de Bohême et de Pologne jusqu'à sa mort.\n\nSon assassinat en 1306 à Olomouc marque l'extinction de la lignée royale des Přemyslides en Bohême.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 57,
@@ -615,7 +630,8 @@
     "description": "Jacques II d'Aragon dit « le Juste » né le 10 août 1267 à Valence et mort le 2 novembre 1327 à Barcelone, est roi de Sicile, puis roi d'Aragon, comte de Barcelone et roi de Valence. C'est le second fils de Pierre III d'Aragon et de Constance de Hohenstaufen.À la mort d’Alphonse III, Jacques II hérite de la Couronne d’Aragon. Il règne alors sur un ensemble composite : Aragon, Catalogne, Valence, Majorque (théoriquement vassal) et Sicile. Cette construction dynastique est issue de la politique expansionniste de Pierre III, mais elle demeure instable.La Sicile, conquise lors des Vêpres siciliennes (1282), place Jacques II au cœur d’un conflit majeur opposant la maison d’Aragon à la papauté et aux Angevins.👉 Dès le début du règne, se pose la question de la viabilité d’un empire méditerranéen aragonais. 1293-1295 – La pression pontificale et angevineLe pape Boniface VIII exige la restitution de la Sicile aux Angevins.Jacques II subit la menace d’une excommunication et d’une croisade.Les ressources militaires et financières de la Couronne sont insuffisantes pour soutenir durablement le conflit.👉 Le roi est confronté à un choix stratégique fondamental.II. 1295-1302 : La réorientation diplomatique et l’abandon de la Sicile1295 – Le traité d’AnagniPar le traité d’Anagni, Jacques II renonce officiellement à la Sicile, qu’il cède à la papauté. En échange :il obtient la levée de l’excommunication,la reconnaissance pontificale de son autorité,la promesse d’une compensation territoriale future.Il confie la Sicile à son frère Frédéric, qui s’y maintient cependant comme roi (Frédéric III de Sicile).👉 Ce traité marque un tournant diplomatique majeur et une rupture avec la politique de conquête paternelle.1296-1302 – Vers une monarchie pragmatiqueJacques II privilégie désormais :la stabilisation interne,la reconnaissance internationale,l’équilibre entre pouvoirs laïcs et ecclésiastiques.Le traité de Caltabellotta (1302) entérine de facto la séparation entre la Sicile et la Couronne d’Aragon.👉 Le roi accepte une redéfinition réaliste de la puissance aragonaise.III. 1302-1314 : Hégémonie péninsulaire et construction institutionnelleIntervention dans les affaires castillanesJacques II joue un rôle déterminant dans les conflits internes de la Castille :occupation de la Murcie durant la minorité de Ferdinand IV,arbitrage diplomatique aboutissant aux traités de Torrellas (1304) et d’Elche (1305).Ces accords permettent à l’Aragon d’obtenir une partie méridionale du royaume de Murcie.👉 Jacques II apparaît comme un arbitre politique majeur de la péninsule Ibérique.Renforcement des structures du pouvoirLe règne se caractérise par :une consolidation des Cortes,un dialogue institutionnalisé avec les élites urbaines,un respect scrupuleux des fueros et privilèges locaux.Jacques II gouverne par le consensus, ce qui garantit la stabilité à long terme.IV. 1314-1327 : Expansion méditerranéenne tardive et stabilisation1314-1324 – La conquête de la SardaigneLe pape investit Jacques II du royaume de Sardaigne et de Corse.La conquête militaire de la Sardaigne débute en 1323.Elle permet à la Couronne d’Aragon de renforcer sa présence maritime.👉 Il s’agit de la principale expansion territoriale effective du règne. Jacques II meurt le 2 novembre 1327.Il laisse à son successeur Alphonse IV :une monarchie stabilisée,un État structuré institutionnellement,une politique extérieure cohérente et reconnue.\n\nLe règne de Jacques II d’Aragon illustre le passage :d’une monarchie de conquête à une monarchie de négociation,d’une ambition impériale à une hégémonie régionale maîtrisée.Souverain pragmatique, Jacques II est l’un des meilleurs exemples de construction étatique médiévale fondée sur le droit, la diplomatie et le compromis, annonçant les formes modernes de gouvernement monarchique en Méditerranée occidentale.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Jacques_2_d%27aragon.png",
     "legende": "Enluminure (détail) issue des Usatici et Constitutiones Cataloniae vers 1315-1325 (BnF, Latin 4670 A).",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 1,
@@ -754,7 +770,8 @@
     ],
     "type": 1,
     "description": "Iouri Ier de Moscou (1281 - 21 novembre 1325), est prince de Moscou de 1303 à 1325 et grand-prince de Vladimir Iouri III de 1318 à 1322. Il est le fils de Daniel de Moscou.",
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 74,
@@ -801,7 +818,8 @@
     "description": "Nicolas Boccasini, élu pape sous le nom de Benoît XI, né en 1240 à Trévise et mort le 7 juillet 1304 à Pérouse, est le 194e pape de l'Église catholique. C'est le deuxième pape issu de l'ordre dominicain.\n1304  13 avril : le pape Benoît XI quitte Rome aux mains des Colonna pour Pérouse où il meurt le 7 juillet (empoisonné ?)\nPeu avant sa mort, Benoît XI avait annulé presque toutes les mesures prises par son prédécesseur Boniface VIII contre Philippe le Bel. Le pape s'apprêtait à condamner Guillaume de Nogaret par contumace au moment où il mourut.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lorenzo_maitani_%28attr.%29%2C_monumento_di_benedetto_XI%2C_1305_circa%2C_01.jpg/960px-Lorenzo_maitani_%28attr.%29%2C_monumento_di_benedetto_XI%2C_1305_circa%2C_01.jpg",
     "legende": "Monument funéraire du pape Benoît XI Basilique San Domenico de Pérouse",
-    "sources": "https://fr.wikipedia.org/wiki/Beno%C3%AEt_XI"
+    "sources": "https://fr.wikipedia.org/wiki/Beno%C3%AEt_XI",
+    "regne": true
   },
   {
     "id": 87,
@@ -958,7 +976,8 @@
     "description": "Bertrand de Got, né vers 1264 en Guyenne. Évêque de Comminges puis archevêque de Bordeaux, il est couronné à Lyon en 1305 sous le nom de Clément V, devenant le 195e pape. Il ne siège jamais à Avignon, restant itinérant dans le sud de la France.\nOn retient de lui l'image d'un pape de bonne foi qui manquait d'audace, et qui permit l'abrogation de l'ordre du Temple lors du Concile de Vienne en se soumettant au roi Philippe le Bel.\n1305  5 juin : l'archevêque de Bordeaux, Bertrand de Got est élu pape à Pérouse sous la pression de Philippe le Bel alors qu’il n’est pas cardinal , sous le nom de Clément V, la papauté va s'installer à Avignon jusqu'en 1376. Il est le premier d'une série de papes français, jusqu'à Grégoire XI (Pierre-Roger de Beaufort), qui mourra en 1378. \n14 novembre :Il est couronné le 14 novembre 1305 à Lyon, en présence de Philippe IV le Bel.  lors du couronnement de Clément V à Lyon, un balcon surchargé de curieux s’écroule devant le passage du pape, faisant 12 morts et de nombreux blessés. Le duc Jean II de Bretagne et le frère du pape, Gaillard de Got, sont mortellement blessés. \n1306 – Un pape itinérant et prudentClément V réside principalement à Bordeaux et à Poitiers.Il refuse de se rendre à Rome, en raison des luttes entre grandes familles romaines (Colonna, Orsini).Il annule officiellement plusieurs décisions disciplinaires prises par Boniface VIII contre la France.Il crée neuf cardinaux, majoritairement français, modifiant durablement l’équilibre du Sacré Collège. \nLe pape mène une politique de conciliation, privilégiant la stabilité au détriment de l’indépendance pontificale.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Clemente_V_cappellone_degli_Spagnoli.JPG/960px-Clemente_V_cappellone_degli_Spagnoli.JPG",
     "legende": "Détail d'une fresque par Andrea di Bonaiuto dans la chapelle des Espagnols du couvent des dominicains de Santa Maria Novella. Florence. XIVe siècle.",
-    "sources": "https://fr.wikipedia.org/wiki/Cl%C3%A9ment_V"
+    "sources": "https://fr.wikipedia.org/wiki/Cl%C3%A9ment_V",
+    "regne": true
   },
   {
     "id": 92,
@@ -985,7 +1004,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 43,
@@ -1000,7 +1020,8 @@
     "type": 1,
     "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 93,
@@ -1265,7 +1286,8 @@
     "description": "En 1299, il est envoyé en Mongolie à la tête de l'armée Yuan contre Qaïdu et ses alliés d'Asie centrale, et le vainc en 1301. En 1306 il soumet Melig Temur, un fils d'Ariq Boqa (petit-fils de Gengis Khan), allié de Qaïdu, dans les montagnes de l'Altaï.\n\nSon oncle Témur Khan, sans héritier direct, meurt le 10 février 1307. Les prétendants engagent une lutte acharnée pour le pouvoir, qui brise l’unité de l’empire Mongol. Ananda, petit-fils de Kubilai Khan (lui-même petit-fils de Gengis Khan et frère d'Ariq Boqa), gouverneur du Gansu (et/ou vice-roi du Tangout) s’oppose à Qaïchan, arrière-petit-fils de Kubilai Khan, qui règne en Mongolie. Qaïchan, soutenu par les seigneurs de la steppe, triomphe et fait exécuter Ananda.\n\nPendant les querelles dynastiques, la situation économique de l’Empire mongol s’aggrave, et l’exploitation des paysans chinois prend des proportions énormes, le pouvoir central étant incapable d’empêcher les excès des seigneurs féodaux. Les révoltes de paysans se succèdent sans interruption. Elles présentent un aspect nationaliste et sont exploitées par les seigneurs féodaux locaux.\nQaïchan est un bouddhiste dévot. Il fait traduire les principaux canons du bouddhisme en mongol et favorise les lamas, ce qui provoque l'hostilité des lettrés confucianistes chinois. Victime de son goût pour l'alcool, il meurt le 21 janvier 1311 à l’âge de 29 ans. Son frère, Ayurbarwada Buyantu Khan, lui succède. Son fils, Qutugku Khan assurera brièvement le trône de l'Empire.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/YuanEmperorAlbumQaishanKulugPortrait.jpg/960px-YuanEmperorAlbumQaishanKulugPortrait.jpg",
     "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei 1350",
-    "sources": "https://fr.wikipedia.org/wiki/K%C3%BCl%C3%BCg_Khan"
+    "sources": "https://fr.wikipedia.org/wiki/K%C3%BCl%C3%BCg_Khan",
+    "regne": true
   },
   {
     "id": 113,
@@ -1309,7 +1331,8 @@
     "type": 1,
     "description": "Né le 25 avril 1284 au château de Caernarfon et mort le 21 septembre 1327 au château de Berkeley, il est roi d'Angleterre du 7 juillet 1307 jusqu'à sa déposition le 25 janvier 1327. En 1308, il épouse Isabelle de France, fille du roi Philippe IV le Bel, afin de résorber les tensions entre les couronnes d'Angleterre et de France.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 114,
@@ -1375,7 +1398,8 @@
     "type": 1,
     "description": "Petit-fils de Charles Ier d'Anjou, Carobert doit lutter contre ses compétiteurs Venceslas de Bohême puis Othon de Bavière avant de s'imposer sur le trône de Hongrie.\nIl brise la puissance de la haute noblesse magyare en s'appuyant sur la petite et moyenne noblesse. Il engage contre les familles de barons autonomes — comme les Csak et les Aba qui s'appuient sur leurs mines d'argent de Slovaquie — une lutte sans merci, leur enlevant successivement leurs forteresses.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 128,
@@ -1428,7 +1452,8 @@
     "type": 1,
     "description": "Henri VII de Luxembourg (né vers 1278/1279 à Valenciennes et mort le 24 août 1313 à Buonconvento, aux environs de Sienne) est un prince de la maison de Luxembourg, fils du comte Henri VI. Il succède à son père en tant que comte de Luxembourg en 1288.il  est issu d’une dynastie princière de second rang du Saint-Empire Élu roi des Romains en 1308 sous le nom d'Henri VIII après l'assassinat d'Albert Ier de Habsbourg, il est sacré empereur le 29 juin 1312. Pendant la courte période de son règne, une première étape de l'accession des Luxembourg au pouvoir est franchie avec l'acquisition du royaume de Bohême. Henri est le premier roi germanique à recevoir la couronne impériale depuis l'époque de Frédéric II de Hohenstaufen et le premier des trois souverains du Saint-Empire issus de la dynastie des Luxembourg. Néanmoins, l'approche de rétablissement de l'Empire (renovatio imperii) qu'il a adoptée l'entraînait dans un conflit avec les guelfes en Italie, le roi Robert d'Anjou et le pape Clément V. Sur la frontière occidentale, ses politiques provoquent l'opposition du roi Philippe IV de France.Henri est le fils aîné du comte Henri VI de Luxembourg (1240-1288) et de son épouse Béatrice († 1321), fille de Baudoin d'Avesnes de la dynastie des comtes de Hainaut. La date exacte de sa naissance n'est pas connue. Il était encore mineur au moment où son père fut protagoniste dans la guerre de Succession du Limbourg et tomba sur le champ de bataille de Worringen le 5 juin 1288. Henri VII est éduqué dans la tradition de la chevalerie à la cour de France. Sa langue maternelle est le français. Le chroniqueur Albertino Mussato (1261-1329) l'a décrit comme un homme frêle, de grandeur moyenne, aux cheveux roux et à la peau claire Ayant succédé à son père encore mineur, le jeune comte règne personnellement dès l'an 1294 sur le Luxembourg. Par un serment général de fidélité, Henri VII se place sous la protection du roi de France Philippe IV le Bel. Son comté, bien qu'il fût un État du Saint-Empire, borde au royaume de France à l'ouest. Pendant la guerre de Guyenne qui, de 1294 à 1297, oppose la France au royaume d'Angleterre, il ne participe guère aux combats mais profite de ce conflit pour attaquer les domaines de son voisin le comte Henri III de Bar. En 1305, il est aux côtés du roi Philippe IV lors du couronnement du pape Clément V à Lyon. Son frère cadet, Baudouin de Luxembourg est élu en 1307 archevêque de Trèves. L'archevêché de Trêves est voisin du Luxembourg et couvre la vallée de la Moselle jusqu'au Rhin ce qui renforce localement la puissance de la maison de Luxembourg. Le 1er mai 1308, l'empereur Albert Ier de Habsbourg est assassiné par son neveu Jean de Souabe. Plusieurs prétendants à la couronne impériale se font connaître, notamment Frédéric le Bel, fils et héritier d'Albert, mais aussi Charles de Valois, frère de Philippe le Bel. Face à ses deux princes issues de lignée puissantes, le choix du collège électoral se porte sur le comte Henri VII souverain d'un petit pays qui ne semble pas devoir représenter une menace pour les intérêts des princes souverains de l'Empire : une succession dynastique au sein de la maison de Habsbourg ne servait pas leurs intérêts et le pape Clément, sous la pression accrue du roi de France en raison du procès de l'ordre du Temple, a exprimé des réserves quant à la candidature d'un Capétien. Le soutien de son frère Baudouin, membre du collège électoral en sa qualité d'archevêque de Trèves, est déterminant pour l'élection du comte de Luxembourg au titre de roi des Romains. L'autorité impériale a considérablement souffert sous le règne de ses prédécesseurs Adolphe de Nassau et Albert de Habsbourg en conflit permanent avec les princes. Henri tenta de s'entendre avec les Habsbourg récemment désavoués par l'élection de 1308 ; en même temps, il a reconnu les droits de la Confédération suisse des III cantons (Uri, Schwytz et Unterwald) pour augmenter son influence sur la région, notamment sur la route importante qui mène au col du Saint-Gothard. Avec le soutien de l'aristocratie, son fils Jean est élu roi de Bohême en 1310 après avoir épousé Élisabeth, une sœur de l'ancien roi Venceslas III, dernier rejeton de la dynastie des Přemyslides éteinte en 1306 ; les Habsbourg de leur côté ayant renoncé au trône à Prague[1]. Henri opère également un rapprochement avec les souverains de la maison de Wittelsbach et a pu recouvrer en accord avec les princes de vastes domaines impériaux détachés pendant le Grand Interrègne, notamment sur le Rhin supérieur ; en Souabe, il est intervenu en raison de la politique agressive du comte Eberhard de Wurtemberg. Il est resté prudent sur les affaires du nord de la Germanie, comme dans la marche de Misnie et dans le landgraviat de Thuringe sous la domination de Frédéric le Mordu et la maison de Wettin. Henri VII est sacré par trois cardinaux, dont Arnaud de Pellegrue, le 29 juin 1312 au palais du Latran, après de longues négociations infructueuses, faute de pouvoir être couronné dans la basilique Saint Pierre, aux mains de ses adversaires ligués contre lui[2]. Robert étant nominalement son vassal, Henri cherche à le punir en s'alliant à Frédéric de Sicile, mais il meurt de la malaria en allant à sa rencontre.Après sa mort, le pouvoir impérial se délite en Italie, tandis que le titre d'empereur, disputé par plusieurs prétendants dont Frédéric de Habsbourg et Louis IV de Wittelsbach, demeure vacant pendant la plus grande partie de la décennie suivante.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Henry_Lux.jpg",
-    "sources": "Le sacre de l'empereur Henri, Grandes Chroniques de France, XIVe siècle"
+    "sources": "Le sacre de l'empereur Henri, Grandes Chroniques de France, XIVe siècle",
+    "regne": true
   },
   {
     "id": 123,
@@ -1521,7 +1546,8 @@
     "type": 1,
     "description": "Robert d'Anjou, né en 1277 et mort le 20 janvier 1343 à Naples, fils du roi Charles II de Naples, est roi de Naples et comte de Provence de 1309 à 1343. Il défend la papauté et devient le chef du parti guelfe contre les empereurs.\nArrivé sur le trône après l'abdication de ses deux frères aînés, il a un règne considéré comme positif mais ne réussit pas à reprendre le contrôle du royaume de Sicile. Réputé pour son amour des lettres, il attire à la cour de Naples des poètes et des artistes, tels que Pétrarque, Giotto et Simone Martini.",
     "image": "",
-    "sources": "Wikipedia"
+    "sources": "Wikipedia",
+    "regne": true
   },
   {
     "id": 132,
@@ -1832,7 +1858,8 @@
     "description": "Il est le premier mongol de la dynastie Yuan à supporter l'apport du confucianisme dans le système administratif. Li Meng (zh) (李孟), son enseignant et étudiant du confucianisme sera très influent sur ce point.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/YuanEmperorAlbumAyurbarvadaBuyantuPortrait.jpg/960px-YuanEmperorAlbumAyurbarvadaBuyantuPortrait.jpg",
     "legende": "Portrait recadré d'une page d'un album représentant plusieurs empereurs Yuan (Yuandai di banshenxiang), aujourd'hui conservé au Musée du Palais National à Taipei",
-    "sources": "https://fr.wikipedia.org/wiki/Ayurbarwada_Buyantu_Khan"
+    "sources": "https://fr.wikipedia.org/wiki/Ayurbarwada_Buyantu_Khan",
+    "regne": true
   },
   {
     "id": 233,
@@ -2025,7 +2052,8 @@
     "type": 1,
     "description": "7 septembre : mort de Ferdinand IV de Castille. son fils Alphonse XI le Vengeur, né en 1311, est proclamé roi de León et de Castille à Jaén[14]. Régence en Castille pendant la minorité d’Alphonse XI (fin en 1325). María de Molina, épouse du roi Sanche IV de Castille, l'exerce jusqu'à sa mort en 1321C'est un des monarques les plus remarquable de la péninsule Ibérique[1] au Moyen Âge, en raison de la guerre menée contre les Maures dans la région du détroit de Gibraltar et de ses décisions sur l'organisation du royaume : la réforme des conseils municipaux (1345) et l'ordonnance d'Alcalá (1348).\nIl meurt (de la peste) au cours d'un siège de Gibraltar. Sa succession est marquée par une longue guerre civile entre son fils légitime, Pierre Ier le Cruel, et un fils illégitime, Henri de Trastamare, qui l'emporte en 1369, devenant le roi Henri II. Alphonse XI appartient à la dynastie castillane dite « de Bourgogne », branche cadette de la maison d'Ivrée; Une branche cadette de la famille accéda aux trônes de Castille au XIe siècle avec Raymond de Bourgogne (1059-1107), comte de Galice par mariage avec Urraque Ire de Léon (fille du roi de Léon Alphonse VI de Léon). Son fils, Alphonse VII, fut proclamé empereur par les Espagnols. La Maison de Trastamare est issue d'un bâtard de la Maison d'Ivrée en la personne du roi Henri II de Castille. Par la suite, la maison de Trastamare accéda au trône d'Aragon.Période de la régence (1311-1325)Son père tombé malade meurt le 7 septembre 1312 à l'issue d'un règne court et peu brillant ; sa mère meurt en novembre de la même année.\nAlphonse est proclamé roi à Jaén à l'âge de trois mois. La régence est confiée à son grand-oncle Jean de Castille, fils d'Alphonse X, à son oncle Pierre de Castille et de Molina, fils de Sanche IV, et à sa grand-mère María de Molina, veuve de Sanche IV. Les deux premiers meurent en 1319 à Pinos Puente, près de Grenade, victimes d'une attaque musulmane. María de Molina assume seule la régence jusqu'à sa mort en 1321.\nLa régence passe alors à Jean de Haro, fils de Jean de Castille et petit-fils d'Alphonse X, et à don Juan Manuel, neveu d'Alphonse X. Jusqu'à la majorité d'Alphonse XI en 1325, les régents et la noblesse se livrent à des luttes pour le pouvoir continuelles et on frôle le démembrement du royaumeEn 1325, Alphonse XI atteint sa majorité.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Libro_de_la_Coronaci%C3%B3n_de_los_Reyes_de_Castilla--2_%28cropped%29.jpg",
-    "legende": "Alphonse XI et ses nobles. Miniature du Livre du Couronnement des Rois de Castille, réalisé au XIVe siècle et actuellement conservé à la Bibliothèque royale de San Lorenzo de El Escorial (Espagne)."
+    "legende": "Alphonse XI et ses nobles. Miniature du Livre du Couronnement des Rois de Castille, réalisé au XIVe siècle et actuellement conservé à la Bibliothèque royale de San Lorenzo de El Escorial (Espagne).",
+    "regne": true
   },
   {
     "id": 245,
@@ -2230,7 +2258,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 259,
@@ -2260,7 +2289,8 @@
     "description": "## 1. La mort de Philippe IV le Bel (1314)\nLe roi de France Philippe IV le Bel meurt en 1314 à l’âge de 46 ans, après 29 années de règne.\nSa mort fait suite à une chute de cheval lors d’une partie de chasse en forêt d’Halatte, près de Pont-Sainte-Maxence. Il est alors victime d’un malaise brutal, probablement un accident vasculaire cérébral, qui l’empêche de parler, avant de mourir quelques semaines plus tard.\nPhilippe IV est également le premier roi de France à demander la **division de son corps (dilaceratio corporis)** :\n* cœur\n* entrailles\n* ossements\nCette pratique, malgré l’interdiction du pape Boniface VIII en 1299, devient un privilège des Capétiens et permet de multiplier les cérémonies funéraires.\n\n## 2. L’avènement de Louis X le Hutin (1314)\nÀ la mort du roi, son fils Louis X le Hutin monte sur le trône.\n* Il est déjà roi de Navarre depuis 1305\n* Son règne est bref (1314–1316)\n* La Champagne, issue de la dot de la reine-mère, est définitivement rattachée au royaume de France\n\n## 3. Un début de règne marqué par les tensions\n\nDès son arrivée au pouvoir, Louis X doit faire face à une double contestation :\n* **Les nobles**, opposés à la politique centralisatrice de son père\n* **Le peuple**, révolté contre la pression fiscale\nPour apaiser ces tensions, il rend responsables les anciens conseillers de Philippe IV :\n* Enguerrand de Marigny → pendu\n* Pierre de Latilly → torturé\n* Raoul de Presles → torturé\n\n## 4. Le recul du pouvoir royal\nAfin de calmer les révoltes, Louis X accorde des **chartes aux nobles** :\n* Elles restaurent une partie de leurs anciens privilèges\n* Elles redonnent du pouvoir à l’aristocratie\n* Elles affaiblissent l’autorité royale\n---\n## 5. Le cas particulier de la Normandie\nPour apaiser les révoltes normandes, le roi reconnaît les spécificités de la région :\n* Il accorde une **charte aux Normands**\n* Cette charte, confirmée en 1339, devient un symbole du particularisme normand\n* Elle est souvent comparée à la Magna Carta\nElle restera une référence jusqu’à la Révolution française (1789).\n## 6. Les enjeux dynastiques : la succession de Bourgogne\nPour obtenir le soutien de son frère Philippe de Poitiers, Louis X négocie la succession du comté de Bourgogne.\n\nSelon le testament de Philippe IV :\n* Le comté doit revenir à la couronne en l’absence d’héritier mâle\nMais Philippe de Poitiers impose une condition :\n* Sa femme, Jeanne de Bourgogne, pourra transmettre le comté à sa fille\nCette décision a des conséquences importantes à long terme :\n* Elle favorise la formation de grands ensembles territoriaux\n* Elle contribue plus tard aux conflits sous :\n  * Louis XI\n  * Louis XIV (guerre de Dévolution)\n## 7. Les réformes de Louis X\n### a) L’abolition du servage (1315)\nLouis X proclame que **« tous les hommes sont nés libres »** :\n* Les serfs du domaine royal peuvent être affranchis\n* Mais ils doivent payer leur liberté (peculium)\n* Les sommes sont :\n  * entièrement versées à la couronne pour les serfs royaux\n  * partagées avec les seigneurs pour les autres\n\n### b) Le retour des Juifs dans le royaume (1315)\n\nLe 28 juillet 1315, Louis X autorise le retour des Juifs en France, sous conditions :\n\n* Autorisation limitée à 12 ans\n* Obligation de porter un signe distinctif (brassard)\n* Résidence limitée aux anciennes zones de peuplement\n* Restrictions économiques (notamment sur l’usure)\n\n## 8. Un règne court mais révélateur\nLe règne de Louis X, bien que bref, marque :\n* un **affaiblissement du pouvoir royal**\n* un retour en force de la noblesse",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Jean_de_Joinville_Louis_X_%28cropped%29.jpeg",
     "legende": "Jean de Joinville présente son ouvrage Vie de Saint Louis au roi Louis le Hutin (enluminure, vers 1330-1340).",
-    "video": "https://www.youtube.com/watch?v=Wy33M-YqwtI"
+    "video": "https://www.youtube.com/watch?v=Wy33M-YqwtI",
+    "regne": true
   },
   {
     "id": 260,
@@ -2462,7 +2492,8 @@
     "type": 1,
     "description": "Andronic III  co-empereur avec son père Michel IX et son grand père Andronic II. \nLa question de sa succession préoccupe très tôt Andronic II, qui associe son fils Michel IX Paléologue au trône dès 1294. Ce dernier devait initialement se marier avec Catherine de Courtenay, l'héritière du titre d'empereur latin de Constantinople, mais l'opposition du Saint-Siège fait échouer le projet et Michel doit se marier avec une fille du roi Léon III d'Arménie[73]. Michel a deux fils de cette femme : Andronic et Manuel. Le premier, le futur Andronic III, obtient le titre de despote et, très tôt, Andronic II envisage de l'associer au trône pour consolider la dynastie des Paléologue, ce qu'il fait dès 1316. Mais, dans le même temps, il doit faire face aux exigences de sa deuxième femme, Yolande de Montferrat, avec laquelle il a trois fils. Yolande souhaite le partage de l'Empire entre ses trois fils et Michel IX, ce qui est inimaginable pour l'Empire byzantin. En désespoir de cause, elle finit par s'exiler à Thessalonique. Malgré ce renoncement, Andronic doit faire avec ses deux co-empereurs. Andronic III se révèle très vite être un personnage ambitieux et il craint de ne pas avoir le temps de monter sur le trône ou du moins, d'y arriver trop tard. Il est à l'origine d'un tragique accident lors duquel lui et ses hommes tuent par mégarde son frère Manuel[Note 4]. Ce choc précipite la mort de Michel IX, qui vient d'éprouver la mort de sa fille Anne, peu de temps auparavant. Le fils d'Andronic meurt en 1320, laissant Andronic III comme seul co-empereur. Déçu par l'attitude de son petit-fils, Andronic II décide de le déshériter au profit de son fils cadet Constantin, ce qui ouvre la voie à la première des guerres civiles sous l'ère Paléologue[",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%BD%D0%B8%D0%BA_III_%D0%9F%D0%B0%D0%BB%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3.jpg/330px-%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%BD%D0%B8%D0%BA_III_%D0%9F%D0%B0%D0%BB%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3.jpg",
-    "legende": "Andronic III Paléologue, miniature du XIVe siècle."
+    "legende": "Andronic III Paléologue, miniature du XIVe siècle.",
+    "regne": true
   },
   {
     "id": 278,
@@ -2528,7 +2559,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 275,
@@ -2580,7 +2612,8 @@
       "France"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 283,
@@ -2902,20 +2935,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
-  },
-  {
-    "id": 312,
-    "titre": "Władysław I Łokietek Ladislas Petite-Coudée",
-    "date": 1320,
-    "date_fin": 1333,
-    "zones": [
-      "Pologne"
-    ],
-    "type": 1,
-    "description": "Ladislas le Bref ou Ladislas Petite-Coudée (en polonais Władysław I Łokietek), né vers 1261 et mort le 2 mars 1333, est un duc de la dynastie Piast dont les efforts de trente ans aboutirent à la réunification des provinces polonaises et la restauration de l'État polonais. Couronné roi de Pologne en janvier 1320, il ne réussit cependant pas à rassembler l'ensemble des territoires polonais. La Silésie restait divisée en principautés dont les souverains Piast avaient en majorité fait allégeance au roi de Bohême, la Poméranie avait été conquise par les chevaliers Teutoniques et la Mazovie avait conservé sa souveraineté.\nIl se fait couronner à Cracovie par l’archevêque de Gniezno avec l’accord de la curie romaine moyennant une augmentation du denier. Il réunit les principaux duchés, sauf la Silésie, la Poméranie et la Mazovie. Cracovie devient capitale de la Pologne jusqu’en 1595. Ladislas Ier s’appuie sur la Hongrie, les monarchies scandinaves et les Lituaniens contre la Bohême, l'ordre Teutonique et les Askaniens du Brandebourg. Il marie sa fille Élisabeth Lokietek au roi angevin de Hongrie Carobert (1320) et fait épouser la fille du prince de Lituanie récemment converti Gediminas, Aldona, à son héritier Casimir. Cela l’entraîne dans les luttes de succession des principautés russes et le met en rapport avec Byzance. le futur Casimir III épouse Aldona, la fille de Gediminasen 1325 pour sceller le traité de paix et d'alliance signé à Cracovie entre la Pologne et la Lituanie contre l'Ordre Teutonique. Cet accord est suivi d'une alliance entre la Pologne et la Poméranie contre le Brandebourg.Jusqu’au début du XIIe siècle, le royaume de Pologne s’affirmait comme un État de plus en plus puissant sous l’autorité centralisée de la dynastie des Piast. En 1138, suivant la dernière volonté du roi Boleslas III, qui voulait éviter à ses enfants les guerres fratricides qu'il avait connues lui-même, le pays est divisé entre ses quatre fils, chacun recevant un duché héréditaire. L'autorité suprême revient à l'aîné de la maison Piast qui porte le titre de Princeps Senior et siège à Cracovie. Ce fut le début d'une période de près de deux cent ans de division du Royaume.\n\nChronologie : \n\n1138 : Testament de Boleslas III Bouche-Torse → division de la Pologne entre ses fils.\nXIIᵉ–XIIIᵉ siècles : période de morcellement territorial (duchés rivaux), affaiblissement du pouvoir royal.\n1296–1300 : Début de la lutte pour le pouvoir1296 : Assassinat du roi Przemysl II.Ladislas Ier (duc de Cujavie) commence à s’imposer comme prétendant au pouvoir.1300 : Le roi de Bohême Venceslas II est couronné roi de Pologne → échec temporaire de Ladislas.1305–1306 : Changement décisif1305 : Mort de Venceslas II.1306 : Assassinat de Venceslas III.Ladislas Ier profite du vide politique pour reprendre Cracovie et s’imposer comme chef principal des territoires polonais.1306–1314 : Consolidation du pouvoirLadislas étend progressivement son autorité sur :la Petite-Pologne (Cracovie),la Grande-Pologne (1314).Il élimine ou soumet plusieurs ducs rivaux.1314–1320 : Affirmation de l’unité politique1318 : Les nobles polonais demandent au pape l’autorisation du couronnement de Ladislas.1320 : Couronnement de Ladislas Ier à Cracovie.➡️ Fin symbolique du morcellement et renaissance du royaume de Pologne.1320–1333 : Défense du royaume réunifié Conflits avec :l’Ordre Teutonique (perte de la Poméranie),le royaume de Bohême.Ladislas consolide l’autorité royale malgré des frontières encore fragiles. Son fils Casimir III le Grand poursuivra l’œuvre de consolidation.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Polska_WladLokietka_%281275-1300%29.png/960px-Polska_WladLokietka_%281275-1300%29.png",
-    "legende": "Pologne 1275-1300"
+    "image": "",
+    "regne": true
   },
   {
     "id": 313,
@@ -2974,21 +2995,6 @@
     "type": 3,
     "description": "En 1320, Andronic III, alors âgé de 20 ans et petit-fils de l’empereur fut déshérité par son grand-père. Il se révolta et, promettant des diminutions d’impôts supérieures encore à celles mises en place par Andronic II, réussit à s’assurer de nombreux appuis. Incapable d’arrêter le jeune usurpateur, Andronic II l’éloigna de Constantinople, lui donnant en 1321 la Thrace en apanage ainsi que le titre de coempereur en 1322.\n\nMais après une courte guerre durant laquelle Bulgares et Serbes jouèrent les deux camps l’un contre l’autre, Andronic II faisant appel aux Serbes tandis que son petit-fils s’appuyait sur les Bulgares.Andronic II fut forcé d’abdiquer et de se faire moine dans un monastère où il mourut dix ans plus tard[Andronic III Soutenu par son cousin Jean Cantacuzène, lutte longtemps contre son grand-père Andronic II Paléologue, qu'il force à abdiquer en 1328. Devenu seul empereur, il tente de relever l'empire avec l'aide de Jean VI Cantacuzène, mais, occupé à défendre ses positions européennes contre les Bulgares et le roi Serbe Stefan Uroš III Dečanski, il ne peut s'opposer aux Turcs en Asie mineure.\n1322\tTrêve et partage du pouvoir\tUne trêve est signée. Andronic II est contraint de reconnaître son petit-fils comme co-empereur et de lui céder la Thrace et des territoires en Macédoine.1325\tCouronnement officiel d'Andronic III\tAndronic III est officiellement couronné co-empereur, mais la tension entre les deux empereurs persiste.1327-1328\tReprise de la Guerre Civile\tLa guerre reprend entre Andronic II et Andronic III. Le petit-fils obtient le soutien populaire et celui de la noblesse, notamment Jean Cantacuzène. 1328 (Mai)\tAbdication d'Andronic II\tAndronic III entre dans Constantinople. Andronic II est forcé d'abdiquer et se retire dans un monastère, mettant fin à son long règne. Andronic III Paléologue devient l'unique empereur.",
     "image": ""
-  },
-  {
-    "id": 318,
-    "titre": "Castruccio Castracani  dictateur à vie de Lucques",
-    "date": 1320,
-    "mois": 4,
-    "date_fin": 1328,
-    "zones": [
-      "Italie"
-    ],
-    "type": 3,
-    "description": "26 avril : en Toscane, le seigneur de Lucques Castruccio Castracani est proclamé dictateur à vie[12]. Il rompt la paix avec Florence et ravage le Valdarno Castruccio Castracani, né en 1281 à Lucques, mort le 3 septembre 1328 à Lucques, est un condottiere, qui fut duc de Lucques.Né dans une famille inféodée aux Gibelins, les Antelminelli, il est contraint à l’exil avec son père par le clan des Guelfes vers l’an 1300 lorsque sa famille est bannie de Lucques. Se trouvant orphelin, il se voua aux armes, et il erra longtemps de pays en pays pour chercher du service. Il fit la guerre en France et en Angleterre, mais surtout en Lombardie, où le parti auquel il était attaché avait le dessus, et où sa liaison personnelle avec les Visconti de Milan, les Della Scala de Vérone et les Bonacossi de Mantoue, pouvait lui être utile pour le rétablir dans sa patrie[Pendant qu’il était en Lombardie, les Lucquois, attaqués vivement par les Pisans, consentirent, pour acheter la paix, à rappeler leurs exilés. Les émigrés gibelins, en rentrant à Lucques, choisirent Castruccio pour leur chef ; ses succès militaires lui méritèrent cet honneur. A peine rentré dans sa patrie, il voulut se venger de ceux qui l’en avaient longtemps exilé ; il les attaqua le 14 juin 1314 ; mais tandis qu’il combattait contre eux, Uguccione della Faggiola, seigneur de Pise, dont il avait demandé les secours, entra dans Lucques sans rencontrer de résistance : il livra cette ville au pillage, et s’en attribua la souveraineté, courbant sous le même joug les Guelfes, ses ennemis, et les Gibelins qui l’avaient appelé. L’esprit de parti semblait, à cette époque, plus fort que l’amour de la patrie, ou que l’ambition même. Castruccio seconda vaillamment Uguccione, le premier capitaine du parti Gibelin, dans ses guerres contre les Guelfes ; il contribua surtout à la victoire que ce général remporta sur les Florentins à Montecatini, le 29 août 1315, et il augmenta ainsi le crédit qu’il avait déjà dans son parti. Neri, fils d’Uguccione, qui commandait pour son père à Lucques, conçut de la défiance d’une si grande popularité, et il fit arrêter Castruccio en 1316.Les Lucquois prirent les armes avant qu’Uguccione fût entré dans leur ville ; en même temps les Pisans se révoltèrent dès qu’ils le virent sortir de la leur. Les premiers forcèrent Néri à leur rendre Castruccio. Il avait encore les fers aux pieds et aux mains : ces fers servirent d’étendard aux insurgés ; ils les portèrent devant eux à l’attaque de toutes les forteresses, et ils chassèrent de la ville Neri della Faggiuola avec ses satellites, avant qu’il pût recevoir de secours.\n\nAprès avoir expulsé le maître étranger auquel ils avaient obéi, les Lucquois nommèrent Castruccio capitaine annuel de leurs soldats, et ils le confirmèrent trois ans de suite dans cette dignité. Castruccio, en 1320, chassa de Lucques les restes du parti guelfe, et il se fit attribuer par le sénat un pouvoir absolu, que le peuple confirma presque à l’unanimité.1325  22 - 23 septembre : victoire de Castruccio Castracani sur Florence à la bataille d'Altopascio La Bataille de Altopascio est une bataille survenue le 23 septembre 1325 entre les troupes gibelines lucquoises de Castruccio Castracani degli Antelminelli et les alliés milanais d'Azzone Visconti d'une part, et les forces guelfes florentines et siennoises menées par Ramon de Cardona, capitaine de la garde pontificale sous Jean XXII. Elle s'inscrit dans le cadre plus général de la guerre entre guelfes et gibelins. les troupes florentines et alliées sont composées d'environ 20 000 fantassins et 3 000 cavaliers\n\nDevenu seigneur de Lucques, il entreprit de diriger tous les Gibelins de Toscane, et de les faire agir de concert avec ceux de Lombardie. Il réunissait la ruse et la dissimulation à la valeur la plus brillante et aux plus rares talents , il avait l’art de se faire craindre du peuple et chérir des soldats. Sous ses ordres, il avait rassemblé un grand nombre d’aventuriers qu’il savait plier à l’obéissance, et qui communiquaient à ses armées leur intrépidité et leur esprit d’entreprise. Assez cruel pour faire trembler ses ennemis, assez égoïste pour n’être lié à ses amis qu’aussi longtemps qu’il avait besoin d’eux, il condamna plusieurs des premiers et quelques-uns des seconds à des supplices horribles sans perdre pour cela une certaine apparence de générosité chevaleresque qui faisait illusion à ses serviteurs.\n\n1. Origines et formation (1281-1313)Castruccio Castracani degli Antelminelli naît en 1281 à Lucques, dans une famille noble du camp gibelin (partisans de l’Empereur), opposée aux Guelfes, favorables au pape. À cette époque, Lucques est dominée par les Guelfes, ce qui contraint les familles gibelines, dont les Antelminelli, à l’exil.Encore jeune, Castruccio quitte la Toscane et mène une vie errante de condottiere (chef mercenaire). Il sert plusieurs seigneurs italiens, notamment à Vérone auprès des della Scala, grande dynastie gibeline. Cette expérience militaire et politique forge son autorité et sa connaissance des luttes entre cités italiennes.2. Retour à Lucques et prise de pouvoir (1314-1320)La situation politique change au début du XIVᵉ siècle avec la descente en Italie de l’empereur Henri VII de Luxembourg, chef du parti gibelin.1314 : Castruccio revient à Lucques en profitant de l’affaiblissement du parti guelfe local.Il se présente comme le défenseur de l’ordre et des intérêts gibelines face aux factions rivales.Peu à peu, il élimine ou exile les chefs guelfes de la cité.En 1320, il devient officiellement seigneur de Lucques, mettant fin au régime communal traditionnel. 3. Conflits toscans et affrontement avec Florence (1321-1325)À cette époque, la Toscane est divisée :Florence est le principal bastion guelfe,Lucques, Pise et plusieurs seigneuries du nord soutiennent les Gibelins.Castruccio mène une politique offensive contre Florence et ses alliés guelfes.1324-1325 : guerre ouverte entre Lucques et Florence.23 septembre 1325 : bataille d’AltopascioCastruccio inflige une défaite écrasante aux Florentins (guelfes), affirmant sa supériorité militaire. Cette victoire marque l’apogée de sa renommée.À la suite de ce succès, il étend son influence sur Pistoia et plusieurs territoires voisins, consolidant un véritable État gibelin en Toscane.Alliance impériale et apogée du pouvoir (1326-1327)  Castruccio s’allie étroitement à l’empereur Louis IV de Bavière, chef du parti gibelin, en lutte contre le pape et les villes guelfes.1327 : Louis IV descend en Italie.Castruccio l’accueille et le soutient militairement.En récompense, l’empereur le nomme :duc de Lucques,duc de Pistoia et de Luni,et le fait vicaire impérial en Toscane.Cette reconnaissance impériale place Castruccio au sommet de la hiérarchie politique italienne, face aux cités guelfes dominées par l’influence papale, notamment Florence. En 1328, alors qu’il prépare une nouvelle campagne contre Florence, symbole du parti guelfe, Castruccio meurt subitement à Lucques, probablement de maladie, à l’âge de 47 ans.Sa mort provoque l’effondrement rapide de son œuvre politique : sans lui, Lucques retombe dans les luttes de factions. Toutefois, sa figure reste célèbre.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coa_fam_ITA_castracani_degli_antelminelli.jpg",
-    "video": "https://www.youtube.com/watch?v=PFZhORPwdJk",
-    "sources": "https://fr.wikipedia.org/wiki/Castruccio_Castracani"
   },
   {
     "id": 319,
@@ -3058,6 +3064,21 @@
     "sources": "https://fr.wikipedia.org/wiki/Croisade_des_pastoureaux_de_1320"
   },
   {
+    "id": 318,
+    "titre": "Castruccio Castracani  dictateur à vie de Lucques",
+    "date": 1320,
+    "mois": 4,
+    "date_fin": 1328,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "26 avril : en Toscane, le seigneur de Lucques Castruccio Castracani est proclamé dictateur à vie[12]. Il rompt la paix avec Florence et ravage le Valdarno Castruccio Castracani, né en 1281 à Lucques, mort le 3 septembre 1328 à Lucques, est un condottiere, qui fut duc de Lucques.Né dans une famille inféodée aux Gibelins, les Antelminelli, il est contraint à l’exil avec son père par le clan des Guelfes vers l’an 1300 lorsque sa famille est bannie de Lucques. Se trouvant orphelin, il se voua aux armes, et il erra longtemps de pays en pays pour chercher du service. Il fit la guerre en France et en Angleterre, mais surtout en Lombardie, où le parti auquel il était attaché avait le dessus, et où sa liaison personnelle avec les Visconti de Milan, les Della Scala de Vérone et les Bonacossi de Mantoue, pouvait lui être utile pour le rétablir dans sa patrie[Pendant qu’il était en Lombardie, les Lucquois, attaqués vivement par les Pisans, consentirent, pour acheter la paix, à rappeler leurs exilés. Les émigrés gibelins, en rentrant à Lucques, choisirent Castruccio pour leur chef ; ses succès militaires lui méritèrent cet honneur. A peine rentré dans sa patrie, il voulut se venger de ceux qui l’en avaient longtemps exilé ; il les attaqua le 14 juin 1314 ; mais tandis qu’il combattait contre eux, Uguccione della Faggiola, seigneur de Pise, dont il avait demandé les secours, entra dans Lucques sans rencontrer de résistance : il livra cette ville au pillage, et s’en attribua la souveraineté, courbant sous le même joug les Guelfes, ses ennemis, et les Gibelins qui l’avaient appelé. L’esprit de parti semblait, à cette époque, plus fort que l’amour de la patrie, ou que l’ambition même. Castruccio seconda vaillamment Uguccione, le premier capitaine du parti Gibelin, dans ses guerres contre les Guelfes ; il contribua surtout à la victoire que ce général remporta sur les Florentins à Montecatini, le 29 août 1315, et il augmenta ainsi le crédit qu’il avait déjà dans son parti. Neri, fils d’Uguccione, qui commandait pour son père à Lucques, conçut de la défiance d’une si grande popularité, et il fit arrêter Castruccio en 1316.Les Lucquois prirent les armes avant qu’Uguccione fût entré dans leur ville ; en même temps les Pisans se révoltèrent dès qu’ils le virent sortir de la leur. Les premiers forcèrent Néri à leur rendre Castruccio. Il avait encore les fers aux pieds et aux mains : ces fers servirent d’étendard aux insurgés ; ils les portèrent devant eux à l’attaque de toutes les forteresses, et ils chassèrent de la ville Neri della Faggiuola avec ses satellites, avant qu’il pût recevoir de secours.\n\nAprès avoir expulsé le maître étranger auquel ils avaient obéi, les Lucquois nommèrent Castruccio capitaine annuel de leurs soldats, et ils le confirmèrent trois ans de suite dans cette dignité. Castruccio, en 1320, chassa de Lucques les restes du parti guelfe, et il se fit attribuer par le sénat un pouvoir absolu, que le peuple confirma presque à l’unanimité.1325  22 - 23 septembre : victoire de Castruccio Castracani sur Florence à la bataille d'Altopascio La Bataille de Altopascio est une bataille survenue le 23 septembre 1325 entre les troupes gibelines lucquoises de Castruccio Castracani degli Antelminelli et les alliés milanais d'Azzone Visconti d'une part, et les forces guelfes florentines et siennoises menées par Ramon de Cardona, capitaine de la garde pontificale sous Jean XXII. Elle s'inscrit dans le cadre plus général de la guerre entre guelfes et gibelins. les troupes florentines et alliées sont composées d'environ 20 000 fantassins et 3 000 cavaliers\n\nDevenu seigneur de Lucques, il entreprit de diriger tous les Gibelins de Toscane, et de les faire agir de concert avec ceux de Lombardie. Il réunissait la ruse et la dissimulation à la valeur la plus brillante et aux plus rares talents , il avait l’art de se faire craindre du peuple et chérir des soldats. Sous ses ordres, il avait rassemblé un grand nombre d’aventuriers qu’il savait plier à l’obéissance, et qui communiquaient à ses armées leur intrépidité et leur esprit d’entreprise. Assez cruel pour faire trembler ses ennemis, assez égoïste pour n’être lié à ses amis qu’aussi longtemps qu’il avait besoin d’eux, il condamna plusieurs des premiers et quelques-uns des seconds à des supplices horribles sans perdre pour cela une certaine apparence de générosité chevaleresque qui faisait illusion à ses serviteurs.\n\n1. Origines et formation (1281-1313)Castruccio Castracani degli Antelminelli naît en 1281 à Lucques, dans une famille noble du camp gibelin (partisans de l’Empereur), opposée aux Guelfes, favorables au pape. À cette époque, Lucques est dominée par les Guelfes, ce qui contraint les familles gibelines, dont les Antelminelli, à l’exil.Encore jeune, Castruccio quitte la Toscane et mène une vie errante de condottiere (chef mercenaire). Il sert plusieurs seigneurs italiens, notamment à Vérone auprès des della Scala, grande dynastie gibeline. Cette expérience militaire et politique forge son autorité et sa connaissance des luttes entre cités italiennes.2. Retour à Lucques et prise de pouvoir (1314-1320)La situation politique change au début du XIVᵉ siècle avec la descente en Italie de l’empereur Henri VII de Luxembourg, chef du parti gibelin.1314 : Castruccio revient à Lucques en profitant de l’affaiblissement du parti guelfe local.Il se présente comme le défenseur de l’ordre et des intérêts gibelines face aux factions rivales.Peu à peu, il élimine ou exile les chefs guelfes de la cité.En 1320, il devient officiellement seigneur de Lucques, mettant fin au régime communal traditionnel. 3. Conflits toscans et affrontement avec Florence (1321-1325)À cette époque, la Toscane est divisée :Florence est le principal bastion guelfe,Lucques, Pise et plusieurs seigneuries du nord soutiennent les Gibelins.Castruccio mène une politique offensive contre Florence et ses alliés guelfes.1324-1325 : guerre ouverte entre Lucques et Florence.23 septembre 1325 : bataille d’AltopascioCastruccio inflige une défaite écrasante aux Florentins (guelfes), affirmant sa supériorité militaire. Cette victoire marque l’apogée de sa renommée.À la suite de ce succès, il étend son influence sur Pistoia et plusieurs territoires voisins, consolidant un véritable État gibelin en Toscane.Alliance impériale et apogée du pouvoir (1326-1327)  Castruccio s’allie étroitement à l’empereur Louis IV de Bavière, chef du parti gibelin, en lutte contre le pape et les villes guelfes.1327 : Louis IV descend en Italie.Castruccio l’accueille et le soutient militairement.En récompense, l’empereur le nomme :duc de Lucques,duc de Pistoia et de Luni,et le fait vicaire impérial en Toscane.Cette reconnaissance impériale place Castruccio au sommet de la hiérarchie politique italienne, face aux cités guelfes dominées par l’influence papale, notamment Florence. En 1328, alors qu’il prépare une nouvelle campagne contre Florence, symbole du parti guelfe, Castruccio meurt subitement à Lucques, probablement de maladie, à l’âge de 47 ans.Sa mort provoque l’effondrement rapide de son œuvre politique : sans lui, Lucques retombe dans les luttes de factions. Toutefois, sa figure reste célèbre.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coa_fam_ITA_castracani_degli_antelminelli.jpg",
+    "video": "https://www.youtube.com/watch?v=PFZhORPwdJk",
+    "sources": "https://fr.wikipedia.org/wiki/Castruccio_Castracani"
+  },
+  {
     "id": 325,
     "titre": "Déclaration d'Arbroath réaffirmant l'indépendance écossaise",
     "date": 1320,
@@ -3095,18 +3116,6 @@
     "image": ""
   },
   {
-    "id": 329,
-    "titre": "Mort de Matthieu Csák",
-    "date": 1321,
-    "mois": 3,
-    "zones": [
-      "Hongrie"
-    ],
-    "type": 3,
-    "description": "18 mars: à la mort du magnat hongrois Matthieu Csák à Trenčín, Carobert de Hongrie réintègre l’ensemble de ses possessions dans le domaine royal. Il agit de même avec les Aba et les autres familles de barons, leur laissant l’administration des comitats, mais veillant à ce qu’ils n’en dominent pas plusieurs dans la même région.",
-    "image": ""
-  },
-  {
     "id": 328,
     "titre": "La « peur des lépreux »",
     "date": 1321,
@@ -3115,18 +3124,6 @@
     ],
     "type": 3,
     "description": "En 1321, une conspiration supposée — la « peur des lépreux » — est découverte en France.\nL'accusation contre les lépreux, apparemment infondée, est qu'ils auraient empoisonné les puits de nombreuses villes et que cette activité aurait été orchestrée par la communauté juive , secrètement missionnée par les Musulmans\nLa peur s'inscrit dans l'atmosphère fébrile qu'a créée la croisade des Pastoureaux l'année précédente ainsi que la famine incessante depuis l'hiver 1314. en Aquitaine, les lépreux sont accusés d'avoir reçu de l'argent des juifs pour empoisonner les sources et fontaines[11]. Lépreux et Juifs sont persécutés en Aquitaine et en Languedoc.\nPhilippe publie un édit ordonnant que tout lépreux coupable d'empoisonnement soit brûlé et que ses biens soient confisqués par la couronne[38]. Le tour du sud du royaume et les plans de réformes, bien que loués par les historiens modernes, créent une opposition locale importante. Cette impopularité du roi coïncide selon les historiens avec l'éclatement de la violence[39]. Le déchainement de la violence à l'encontre des lépreux met le roi dans une situation difficile, car il ne peut ni cautionner ni condamner la persécution. En effet, la première option pourrait conduire à davantage de violence tandis que la seconde porterait atteinte à l'autorité royale",
-    "image": ""
-  },
-  {
-    "id": 330,
-    "titre": "Gédymin de Lituanie reçoit le baptême",
-    "date": 1321,
-    "mois": 4,
-    "zones": [
-      "Pologne"
-    ],
-    "type": 3,
-    "description": "Gédymin de Lituanie reçoit le baptême (1321/1322) mais sa conversion est incertaine . \nIl promet peu après sa fille Aldona au prince héritier de Pologne Casimir (Kazimierz). Protégé au nord et à l’ouest, il peut s’étendre vers l’est au détriment des pays rus : c'est ainsi qu'après avoir conquis la Podlachie (région de Brest) et la Volhynie, il marche sur Kiev et remporte une victoire éclatante sur les Rus' coalisés à la bataille de la rivière Irpine ; il arbitre aussi les conflits opposant les princes russes de Pskov à Novgorod. Il est en relation avec les l’archevêque de Rīga comme avec Byzance, dont dépendent ses populations russes.\nGhédimin, ou Gediminas (latin : Gedeminne[1], Gedeminnus[2]) est né vers 1275[3] et décédé en 1341. Il devient grand-duc de Lituanie[4],[5] en 1316 et en fait un État très puissant.Il promet peu après sa fille Aldona au prince héritier de Pologne Casimir (Kazimierz). Protégé au nord et à l’ouest, il peut s’étendre vers l’est au détriment des pays rus : c'est ainsi qu'après avoir conquis la Podlachie (région de Brest) et la Volhynie, il marche sur Kiev et remporte une victoire éclatante sur les Rus' coalisés à la bataille de la rivière Irpine ; il arbitre aussi les conflits opposant les princes russes de Pskov à Novgorod. Il est en relation avec les l’archevêque de Rīga comme avec Byzance, dont dépendent ses populations russes. Gediminas monte sur le trône de Lituanie après la mort de son frère Vytenis. En 1320, il annexe le duché de Loutsk, fonde la ville de Białystok et obtient une première victoire sur les Chevaliers teutoniques. En 1321, il emporte une victoire décisive à la bataille de la rivière Irpine, face à une coalition de princes ruthènes, victoire qui lui ouvre les portes de nombreuses principautés et de villes ruthènes (dont la ville de Kiev et les cités de Pereïaslav, Poutyvl, Véchorod, Kaniv et Bilhorod). La même année, il commence des négociations avec la papauté d’Avignon sur une éventuelle conversion de la Lituanie au christianisme. En 1323, il fait de la ville de Vilnius, qu’il a fondée[6], la capitale de la Lituanie.\n\nIl écrit au pape pour lui annoncer sa volonté d’adopter le catholicisme. Il invite des moines, des artisans, des commerçants et des agriculteurs à venir s’établir en Lituanie. Pour les Teutoniques, cette apparente volonté de conversion n’est qu’une ruse de Gediminas pour accroître sa suprématie et se débarrasser d’eux. En 1324, Gediminas renonce à se faire baptiser à la suite de rumeurs propagées en Europe par les Teutoniques sur son soutien aux païens et aux orthodoxes. En guerre contre l’Ordre teutonique, il conclut une alliance avec Ladislas Ier le Bref en 1325 et sa fille Aldona épouse Casimir, le fils de Ladislas. Cette alliance amène la paix sur la frontière entre la Pologne et la Lituanie. Le 10 février 1326, les armées polonaise et lituanienne lancent une offensive contre le Brandebourg (Nouvelle Marche) et s’emparent de la place forte de Międzyrzecz. En 1327, les Teutoniques saccagent la Cujavie (Pologne) et la Samogitie (Lituanie).",
     "image": ""
   },
   {
@@ -3142,22 +3139,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pedro_II_da_Sic%C3%ADlia.jpg"
   },
   {
-    "id": 338,
-    "titre": "Guerre des Despenser",
-    "date": 1321,
-    "mois": 10,
-    "date_fin": 1322,
-    "mois_fin": 3,
-    "zones": [
-      "Angleterre"
-    ],
-    "type": 3,
-    "description": "Révolte de Roger de Mortimer, baron de Wigmore, contre Édouard II (fin en janvier 1322)Réconcilié avec le roi en 1318 grâce aux barons modérés, Lancastre ne tarde pas à se quereller avec les nouveaux favoris royaux, les Despenser. \nLa guerre des Despenser est une révolte baronniale contre Édouard II d'Angleterre conduite en 1321 et 1322 par les seigneurs anglais Thomas de Lancastre principal chef de l'opposition baronniale ) , Roger Mortimer et Humphrey de Bohun. La rébellion est provoquée par les faveurs démesurées dont bénéficie Hugues le Despenser le Jeune, le favori d'Édouard\nInitialement conduit par les barons des Marches galloises, le soulèvement est rapidement rejoint par le reste de l'opposition baronniale et la campagne des rebelles à l'été 1321 aboutit à l'exil de Despenser. Toutefois, Édouard II profite d'une trêve temporaire pour rallier davantage de soutiens et remporter la victoire finale au cours d'une campagne hivernale éclair en Galles et dans le nord de l'Angleterre, qui culmine avec la bataille de Boroughbridge en mars 1322. Janvier 1322 : Thomas de Lancastre et Roger Mortimer prennent la tête d'une révolte baronniale contre Édouard II d'Angleterre[Le  22 janvier 1322 : reddition de Mortimer, battu par les troupes royales à Shrewsbury[3]. Il est emprisonné à la Tour de Londres. Il s'évade en 13223 et se réfugie en France\n16 mars : écrasé à la bataille de Boroughbridge, dans le Yorkshire, Lancastre est capturé et exécuté le 22 mars, Première mention du héros populaire anglais Robin des Bois (Robin Hood) qui aurait participé à la rébellion du comte de LancastreEn réponse à sa victoire, Édouard durcit son règne jusqu'à sa chute du pouvoir en 1326\n En 1321, Thomas se trouve à la tête d'une rébellion et impose le bannissement des Despenser. Toutefois, Édouard part en campagne contre son cousin et le défait. Capturé, le comte de Lancastre est condamné à mort pour haute trahison et exécuté en 1322.\n\nSymbole de la résistance des barons au règne tyrannique et inefficace d'Édouard II, Thomas de Lancastre a été dès sa mort considéré comme un personnage saint et un martyr de la cause des Ordonnances, qu'il a largement contribué à édicter et à défendre jusqu'à sa mort. Rapidement vénéré par les opposants au roi, des miracles se seraient produits près du lieu de son exécution l'année même de sa mise à mort. À la suite de la déchéance d'Édouard II en 1327, Thomas est innocenté de manière posthume \nCette guerre est concomitante d’une période de famine Mauvaises récoltes en Grande-Bretagne (1321-1322. Famine et épidémies (typhoïde).",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Edward_II_-_British_Library_Royal_20_A_ii_f10_%28detail%29.jpg",
-    "legende": "Les abus des favoris du roi Édouard II, représenté ici lors de son couronnement, sont directement à l'origine du conflit.",
-    "sources": "https://fr.wikipedia.org/wiki/Guerre_des_Despenser"
-  },
-  {
     "id": 340,
     "titre": "Mauvaises récoltes en Grande-Bretagne (1321-1322).",
     "date": 1321,
@@ -3167,6 +3148,30 @@
     ],
     "type": 3,
     "description": "Famine et épidémies (typhoïde)",
+    "image": ""
+  },
+  {
+    "id": 329,
+    "titre": "Mort de Matthieu Csák",
+    "date": 1321,
+    "mois": 3,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 3,
+    "description": "18 mars: à la mort du magnat hongrois Matthieu Csák à Trenčín, Carobert de Hongrie réintègre l’ensemble de ses possessions dans le domaine royal. Il agit de même avec les Aba et les autres familles de barons, leur laissant l’administration des comitats, mais veillant à ce qu’ils n’en dominent pas plusieurs dans la même région.",
+    "image": ""
+  },
+  {
+    "id": 330,
+    "titre": "Gédymin de Lituanie reçoit le baptême",
+    "date": 1321,
+    "mois": 4,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "Gédymin de Lituanie reçoit le baptême (1321/1322) mais sa conversion est incertaine . \nIl promet peu après sa fille Aldona au prince héritier de Pologne Casimir (Kazimierz). Protégé au nord et à l’ouest, il peut s’étendre vers l’est au détriment des pays rus : c'est ainsi qu'après avoir conquis la Podlachie (région de Brest) et la Volhynie, il marche sur Kiev et remporte une victoire éclatante sur les Rus' coalisés à la bataille de la rivière Irpine ; il arbitre aussi les conflits opposant les princes russes de Pskov à Novgorod. Il est en relation avec les l’archevêque de Rīga comme avec Byzance, dont dépendent ses populations russes.\nGhédimin, ou Gediminas (latin : Gedeminne[1], Gedeminnus[2]) est né vers 1275[3] et décédé en 1341. Il devient grand-duc de Lituanie[4],[5] en 1316 et en fait un État très puissant.Il promet peu après sa fille Aldona au prince héritier de Pologne Casimir (Kazimierz). Protégé au nord et à l’ouest, il peut s’étendre vers l’est au détriment des pays rus : c'est ainsi qu'après avoir conquis la Podlachie (région de Brest) et la Volhynie, il marche sur Kiev et remporte une victoire éclatante sur les Rus' coalisés à la bataille de la rivière Irpine ; il arbitre aussi les conflits opposant les princes russes de Pskov à Novgorod. Il est en relation avec les l’archevêque de Rīga comme avec Byzance, dont dépendent ses populations russes. Gediminas monte sur le trône de Lituanie après la mort de son frère Vytenis. En 1320, il annexe le duché de Loutsk, fonde la ville de Białystok et obtient une première victoire sur les Chevaliers teutoniques. En 1321, il emporte une victoire décisive à la bataille de la rivière Irpine, face à une coalition de princes ruthènes, victoire qui lui ouvre les portes de nombreuses principautés et de villes ruthènes (dont la ville de Kiev et les cités de Pereïaslav, Poutyvl, Véchorod, Kaniv et Bilhorod). La même année, il commence des négociations avec la papauté d’Avignon sur une éventuelle conversion de la Lituanie au christianisme. En 1323, il fait de la ville de Vilnius, qu’il a fondée[6], la capitale de la Lituanie.\n\nIl écrit au pape pour lui annoncer sa volonté d’adopter le catholicisme. Il invite des moines, des artisans, des commerçants et des agriculteurs à venir s’établir en Lituanie. Pour les Teutoniques, cette apparente volonté de conversion n’est qu’une ruse de Gediminas pour accroître sa suprématie et se débarrasser d’eux. En 1324, Gediminas renonce à se faire baptiser à la suite de rumeurs propagées en Europe par les Teutoniques sur son soutien aux païens et aux orthodoxes. En guerre contre l’Ordre teutonique, il conclut une alliance avec Ladislas Ier le Bref en 1325 et sa fille Aldona épouse Casimir, le fils de Ladislas. Cette alliance amène la paix sur la frontière entre la Pologne et la Lituanie. Le 10 février 1326, les armées polonaise et lituanienne lancent une offensive contre le Brandebourg (Nouvelle Marche) et s’emparent de la place forte de Międzyrzecz. En 1327, les Teutoniques saccagent la Cujavie (Pologne) et la Samogitie (Lituanie).",
     "image": ""
   },
   {
@@ -3194,45 +3199,20 @@
     "image": ""
   },
   {
-    "id": 139,
-    "titre": "Charles IV dit « le Bel »",
-    "date": 1322,
-    "mois": 1,
-    "date_fin": 1328,
-    "mois_fin": 2,
-    "zones": [
-      "France"
-    ],
-    "type": 1,
-    "image": ""
-  },
-  {
-    "id": 339,
-    "titre": "Exécution du comte de Lancastre",
-    "date": 1322,
-    "mois": 3,
+    "id": 338,
+    "titre": "Guerre des Despenser",
+    "date": 1321,
+    "mois": 10,
+    "date_fin": 1322,
+    "mois_fin": 3,
     "zones": [
       "Angleterre"
     ],
     "type": 3,
-    "description": "Après avoir brisé la résistance des Marches, Édouard II convoque ses troupes à Coventry pour le 5 mars. Le 18 février, Édouard quitte Gloucester pour Coventry, qu'il atteint le 27. Au début du mois de mars, une partie de l'armée royale commandée par les comtes de Kent et de Surrey part à la poursuite des partisans de Lancastre. Pendant ce temps, le roi s'empare sans grande opposition le 1er mars du château de Kenilworth, qui appartient au comte de Lancastre. Le 2 mars, le roi retrouve à Lichfield les Despenser[16]. Au même moment, Lancastre rassemble son armée à Doncaster et se dirige contre le roi. À Burton-upon-Trent, il essaie de freiner les troupes royales et verrouille les ponts de la Trent. Le 10 mars, l'armée royale parvient enfin à franchir la rivière après un long combat. Le lendemain, elle s'empare de Tutbury, où Roger Damory est capturé et succombe peu après à ses blessures, et est rejointe par 500 hommes levés par Robert de Holland, un allié du comte de Lancastre qui a fait défection à Burton Bridge. À Tutbury, Édouard proclame son cousin traître et offre une forte récompense pour sa capture.\n\nLancastre, craignant d'être pris au piège, se retire en précipitation à Pontefract, où il souhaite initialement se retrancher. Les autres rebelles, dont le comte de Hereford et Roger de Clifford, le persuadent de s'enfuir plus au nord encore. Ils décident finalement de rejoindre le château de Dunstanburgh. Informé de cette situation, Édouard II ordonne à Andrew Harclay, connétable de Carlisle, de couper la route de l'Écosse à Lancastre, qui cherche à obtenir le soutien militaire de Robert Bruce afin de renforcer ses maigres effectifs[17]. Harclay intercepte le 16 mars à Boroughbridge Lancastre et ses alliés. Durant la bataille qui s'ensuit, les forces rebelles sont écrasées par Harclay. Le comte de Hereford est tué, tandis que Lancastre et ses alliés sont capturés le lendemain de la bataille. Lancastre est emmené à Pontefract où il est exécuté pour haute trahison le 22 mars après un simulacre de procès : lui sont notamment reprochées sa correspondance secrète avec l'Écosse et l'exécution illégale de Gaveston en 1312[18]. La vengeance du roi ne se limite pas qu'à lui : Roger de Clifford et John de Mowbray sont pendus à York le 23 mars[19]. De son côté, Badlesmere tente de s'enfuir mais est capturé par Donald de Mar et exécuté à Canterbury le 14 avril. Enfin, John Giffard est transféré à Gloucester où il est exécuté le 6 mai suivant. Quant à Hugh Audley le Jeune, il n'échappe à l'exécution que grâce à l'intercession de son épouse Marguerite de Clare, qui est la nièce d'Édouard, et est envoyé rejoindre son père et un grand nombre de seigneurs des Marches galloises en prison à Wallingford.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ex%C3%A9cution_de_Thomas_Plantagen%C3%AAt.jpg"
-  },
-  {
-    "id": 343,
-    "titre": "Stefan Uroš III Dečanski, roi de Serbie",
-    "date": 1322,
-    "mois": 1,
-    "date_fin": 1331,
-    "zones": [
-      "Europe C. & Or.",
-      "Byzance"
-    ],
-    "type": 3,
-    "description": "Stefan Uroš III Dečanski Nemanjic, en  français : Étienne Decanski, roi de Serbie de 1321 à 1331, souverain serbe de la dynastie des Nemanjić, fils du roi Milutin, et saint de l’Église orthodoxe.Stefan (Étienne) est le fils du roi Stefan Milutin et Anne Terter. Il a postérieurement reçu le surnom de Dečanski, en raison de sa fondation du monastère de Visoki Dečani (les hauts Decani) en 1327. \nPeut-être dès 1299, et avec certitude à partir de 1309, il reçoit le gouvernement de la Zeta[2].\n\nIl se révolte cependant contre son père en 1314, avec l'aide d'une partie de la noblesse serbe. Il est cependant défait et capturé[2].\n\nMilutin fait enchainer son fils et l'emmene à Skopje. Là-bas, selon le rite hérité de Byzance, il lui fait crever les yeux. En effet, un aveugle n'a pas le droit au trône. Stefan est alors exilé à Constantinople avec sa femme et ses fils, à la cour d'Andronic II. L'un des enfants de Stefan est le futur empereur Dusan.\nLe futur roi est enfermé au monastère du Pantocrator de Constantinople où sa douceur et sa patience lui attirent la bonté des moines, en dépit des terribles épreuves subies. C'est dans ce monastère que saint Nicolas lui apparaîtra un jour et lui rendra la vue. À la mort de son père Milutin en 1321, Stefan revient en Serbie. Vladislav le fils de Dragutin a récupéré les terres de son père. Son demi-frère Stefan Konstantin est déjà en Serbie prêt à se battre pour récupérer le trône de Serbie. Mais très vite, Stefan réussit à s'allier avec l'Église serbe et plus important encore, la noblesse. Sa vue normale étant revenue, Stefan devient roi de toutes les terres serbes et du littoral, le 6 janvier 1322, sous le nom de Stefan (Étienne) Uros III.\n\nIl est donc roi des Serbes, mais il n'a pas encore autorité sur toutes les terres serbes. En effet, son cousin Vladislav est encore à la tête du royaume de son père. En 1323, Stefan saisit l'occasion de déclarer la guerre à son cousin lorsque celui-ci ne respecte pas l'accord passé entre les deux rois au sujet de la mine d'argent de Rudnik. Jusqu'en 1326, la guerre se poursuit entre les deux cousins jusqu'à la victoire de Stefan. Vladislav s'enfuit en Hongrie. La république de Dubrovnik, elle, choisit de soutenir Vladislav. Stefan fait intervenir les chevaliers serbes contre la cité marchande. Très vite, ne pouvant résister aux chevaliers serbes sur les champs de bataille, les soldats dalmates se retranchent derrière les murs de la ville. Les Serbes, eux, ne peuvent prendre d'assaut les murs de la ville. La situation reste bloquée jusqu'au 26 mars 1326 où la paix est signée. En 1327, Stefan se met au service de l'empereur byzantin Andronic II, alors en conflit avec son petit-fils Andronic III. Andronic III a le soutien de l'empereur Bulgare Michel Sismanivic. En 1330, Andronic III et Sismanivic décident d'attaquer la Serbie. Stefan Decanski rassemble une armée composée de soldats serbes d'expérience qui ont déjà combattu à plusieurs reprises contre son cousin, avec en plus des mercenaires catalans, saxons et surtout une troupe d'élite de cavalerie serbe préparée et dirigée par Dusan. La bataille de Velbazhd, près de Kyoustendil, le 28 juillet 1330, est un tournant dans l'histoire de l'Europe du Sud-Est, les Bulgares et l'armée d'Andronic III sont sévèrement battus. Michel Sismanivic trouve la mort pendant la bataille. Cette bataille victorieuse marque le début de la domination serbe en Europe du Sud-Est, jusqu'à la bataille de Kosovo Polje de 1389.\n\nPour faire définitivement disparaître la « menace » bulgare, Stefan installe sur le trône de Bulgarie le fils de sa sœur Anne, Ivan Stefan. Puis, il rassemble son armée pour occuper les villes byzantines de Vélès, Chtip, Prosek et Dobrun.\n\nStefan Decanski se consacre ensuite à la construction de son monastère, le monastère Decanski. Sa construction a débuté en 1327, mais Stefan ne verra jamais son monastère terminé. Son fils Dusan qu'il a eu avec sa première femme Théodora et qui a vécu avec lui son exil à Constantinople, organise le désordre en Serbie et profite d'une trêve avec son père pour lui prendre la couronne. Il enferme son père à Zvečan où celui-ci meurt en prison, sûrement empoisonné. Stefan qui a organisé la rébellion contre son père Milutin subit la même loi de la part de sa progéniture.\nMalgré un règne court, Stefan donne à la Serbie une puissance militaire et le monastère de Decanski, achevé quatre ans après sa mort, en 1335. Il a aussi un second fils, Siméon (en serbe : Siniša), avec la princesse María Paléologue, qui comme Dusan est empereur. Stefan est canonisé par l’Église en raison de sa vie sainte, et ses reliques sont encore aujourd'hui incorrompues.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Coins_of_Stefan_Uro%C5%A1_III.jpg",
-    "legende": "Monnaie de Stefan Uroš III",
-    "sources": "https://fr.wikipedia.org/wiki/Stefan_Uro%C5%A1_III_De%C4%8Danski"
+    "description": "Révolte de Roger de Mortimer, baron de Wigmore, contre Édouard II (fin en janvier 1322)Réconcilié avec le roi en 1318 grâce aux barons modérés, Lancastre ne tarde pas à se quereller avec les nouveaux favoris royaux, les Despenser. \nLa guerre des Despenser est une révolte baronniale contre Édouard II d'Angleterre conduite en 1321 et 1322 par les seigneurs anglais Thomas de Lancastre principal chef de l'opposition baronniale ) , Roger Mortimer et Humphrey de Bohun. La rébellion est provoquée par les faveurs démesurées dont bénéficie Hugues le Despenser le Jeune, le favori d'Édouard\nInitialement conduit par les barons des Marches galloises, le soulèvement est rapidement rejoint par le reste de l'opposition baronniale et la campagne des rebelles à l'été 1321 aboutit à l'exil de Despenser. Toutefois, Édouard II profite d'une trêve temporaire pour rallier davantage de soutiens et remporter la victoire finale au cours d'une campagne hivernale éclair en Galles et dans le nord de l'Angleterre, qui culmine avec la bataille de Boroughbridge en mars 1322. Janvier 1322 : Thomas de Lancastre et Roger Mortimer prennent la tête d'une révolte baronniale contre Édouard II d'Angleterre[Le  22 janvier 1322 : reddition de Mortimer, battu par les troupes royales à Shrewsbury[3]. Il est emprisonné à la Tour de Londres. Il s'évade en 13223 et se réfugie en France\n16 mars : écrasé à la bataille de Boroughbridge, dans le Yorkshire, Lancastre est capturé et exécuté le 22 mars, Première mention du héros populaire anglais Robin des Bois (Robin Hood) qui aurait participé à la rébellion du comte de LancastreEn réponse à sa victoire, Édouard durcit son règne jusqu'à sa chute du pouvoir en 1326\n En 1321, Thomas se trouve à la tête d'une rébellion et impose le bannissement des Despenser. Toutefois, Édouard part en campagne contre son cousin et le défait. Capturé, le comte de Lancastre est condamné à mort pour haute trahison et exécuté en 1322.\n\nSymbole de la résistance des barons au règne tyrannique et inefficace d'Édouard II, Thomas de Lancastre a été dès sa mort considéré comme un personnage saint et un martyr de la cause des Ordonnances, qu'il a largement contribué à édicter et à défendre jusqu'à sa mort. Rapidement vénéré par les opposants au roi, des miracles se seraient produits près du lieu de son exécution l'année même de sa mise à mort. À la suite de la déchéance d'Édouard II en 1327, Thomas est innocenté de manière posthume \nCette guerre est concomitante d’une période de famine Mauvaises récoltes en Grande-Bretagne (1321-1322. Famine et épidémies (typhoïde).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Edward_II_-_British_Library_Royal_20_A_ii_f10_%28detail%29.jpg",
+    "legende": "Les abus des favoris du roi Édouard II, représenté ici lors de son couronnement, sont directement à l'origine du conflit.",
+    "sources": "https://fr.wikipedia.org/wiki/Guerre_des_Despenser"
   },
   {
     "id": 344,
@@ -3260,16 +3240,97 @@
     "image": ""
   },
   {
-    "id": 347,
-    "titre": "Mariage de Charles IV le Bel  avec Marie de Luxembourg",
+    "id": 351,
+    "titre": "Galéas Visconti",
     "date": 1322,
-    "mois": 9,
+    "date_fin": 1327,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": "En 1321, Galéas assiège Crema et Crémone en septembre puis, en novembre, défait les troupes gibelines de Plaisance et de Lodi à Borgo Val di Taro.\nMathieu, âgé de 70 ans et las, appelle Galéas pour le remplacer au gouvernement de Milan en juin 1322 et se retirer. Galéas laisse le gouvernement de Plaisance à son épouse Béatrice et à son fils Azzon.Mathieu meurt un mois après, le 24 juin 1322, dans sa retraite de Crescenzago, près de Milan, et Galéas est nommé capitaine du peuple pour une année.\nEn novembre, il est contraint de quitter Milan en raison d'un soulèvement organisé par son cousin Lodrisio Visconti. Galéas se réfugie à Lodi, pendant que le gouvernement de la cité est confié au capitaine bourguignon Jean de Chatillon.\nCraignant un retour des Torriani, le même Lodrisio se décide à rappeler à Milan Galéas en décembre. La ville est sujette aux pillages et au désordre pendant trois jours, mais, le 29 décembre 1322, Galéas réussit à se faire proclamer seigneur de Milan par l'assemblée populaire.Les rivalités familiales surgissent : son frère Marco[6] l'accusa, en 1327, auprès de l'empereur Louis IV de Bavière, de trahison au profit du pape.\nLe 5 juillet 1327, l'empereur destitue Galéas et le fait incarcérer dans la prison des Fours (I Forni) de Monza avec ses deux autres frères Jean et Lucien, sous l'accusation de l'assassinat du frère Étienne.\nGaléas est libéré le 25 mars 1328 et part à Lucques auprès de Castruccio Castracani.\nIl meurt à Pescia le 6 août 1328. Sa veuve Béatrice lui survivra jusqu'au 15 septembre 1334.\nSa succession sera assurée par son fils Azzon qui sera nommé vicaire impérial le 15 janvier 1329.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Blason_famille_it_Visconti.svg/330px-Blason_famille_it_Visconti.svg.png",
+    "legende": "Blason familial : d'argent au serpent d'azur ondoyant en pal engloutissant un enfant de carnation"
+  },
+  {
+    "id": 360,
+    "titre": "Conquête de La Sardaigne par Jacques II d’Aragon",
+    "date": 1322,
+    "date_fin": 1324,
+    "zones": [
+      "Naples",
+      "Italie",
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "En 1295, par le traité d'Anagni, supervisé par le pape Boniface VIII, le roi Jacques II d'Aragon, fils de Pierre III, abandonne le pouvoir en Sicile ; en échange, le pape lui accorde le royaume de Sardaigne et de Corse. Mais les Siciliens refusent ce traité et proclament roi le dernier fils de Pierre III, Frédéric II, ce qui amène une reprise des hostilités.\n\nRapidement, Gênes et Pise, s'appuyant sur quelques familles sardes, rejettent l’acte de donation promulgué par le pape. Le roi Jacques II d'Aragon comprend qu'avant de mettre la main sur la Sardaigne, il doit s’assurer une paix solide et durable avec ses voisins : le royaume de Castille, le royaume de France, le royaume musulman de Grenade, le sultanat hafside de Tunis et les petits émirats d’Afrique du Nord. En 1321, Jacques II convoque les Cortes d'Aragon à Gérone. Dans son discours d’ouverture face aux députés, il roi expose le projet. Son cousin et allié temporaire, le roi Sanche de Majorque, offre vingt galères armées à ses frais, deux cents hommes à cheval et des fantassins, pour quatre mois, plus un prêt de 25 000 livres. La flotte de Sanche de Majorque est fin prête, commandée par Hugues de Tatzó, elle est concentrée à Mahon, le port de Minorque. Celle de Valence et celle de Barcelone ont jeté l’ancre au port de Fangòs, le port de Tortosa situé sur l'Èbre. La flotte se rassemble le 31 mai 1323, sous le commandement de l'infant primogènit Alfonse, fils aîné de Jacques II, alors âgé de vingt-quatre ans. La flotte repart de Mahon ; les vaisseaux du royaume de Majorque se joignent à eux : 300 vaisseaux divers (63 galères et des bateaux de transports), 15 000 hommes (infanterie et almogavares), et 3 000 cavaliers de la couronne font cap sur la Sardaigne. Le 14 juin 1323, Alphonse et ses hommes posent le pied sur la côte sud de la Sardaigne. Peu de temps après, sur la plage du golfe de Palmas, un grand nombre de nobles et de seigneurs de Sardaigne lui prêtent serment de fidélité. Le siège d’Isglesias n’est pas facile. Le premier assaut de la cité est lancé le 1er juillet 1323, mais la dureté de la lutte et les maladies diminuent les forces catalanes. L'état-major catalan craint alors que le siège se prolonge. le 7 février 1324. victoire de l'Aragon sur les Pisans à Luco-Cisterna dans le golfe de Cagliari en Sardaigne. Début du siège de Cagliari   19 juillet : traité de paix entre Pise et l'Aragon. L’Aragon prend possession du château de Cagliari. Finalement, la ville capitule [De son côté, Pise n’abandonne pas la partie. Elle envoie, elle aussi, une puissante flotte commandée par le comte de Donartico : 40 galères et 6 000 soldats pisans et mercenaires allemands. L’épreuve s’annonce dure tant sur terre que sur mer. Le face à face s’engage le 29 février 1324, dans un lieu dit Lucocisterna, proche de Cagliari. Alfonse est à la tête de 500 cavaliers et de 2 000 almogavares ; Pise a 1 200 cavaliers et 2 000 arbalétriers. Les Pisans sont mis en fuite, et embarquent en désordre[Où ?], mais, un grand nombre se noie dans les marais qui environnent le champ de bataille[réf. nécessaire]; le comte de Donartico, le chef de l’expédition, quoique blessé, parvient avec 500 soldats à se réfugier dans le château de Cagliari ; le reste de son armée est écrasé. Le même jour 29 février 1324, l’amiral Carròs anéantit la flotte militaire de Pise ; elle est prise, brûlée ou en fuite. Le 19 juin 1324, le traité de paix est signé dans la tente du jeune Alphonse. Pise cède au roi d'Aragon tous les droits qu’elle a sur la Sardaigne et la Corse :",
+    "image": ""
+  },
+  {
+    "id": 139,
+    "titre": "Charles IV dit « le Bel »",
+    "date": 1322,
+    "mois": 1,
+    "date_fin": 1328,
+    "mois_fin": 2,
     "zones": [
       "France"
     ],
+    "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 343,
+    "titre": "Stefan Uroš III Dečanski, roi de Serbie",
+    "date": 1322,
+    "mois": 1,
+    "date_fin": 1331,
+    "zones": [
+      "Europe C. & Or.",
+      "Byzance"
+    ],
     "type": 3,
-    "description": "Atteint de dysenterie et de fièvre quarte à partir d'août 1321, Philippe V le Long  est soigné à l'aide de bois et d'un clou de la Vraie Croix, ainsi que d'un bras de Saint Simon. Après un bref répit, il meurt à l'âge de 29 ans , sans héritier mâle pour lui succéder. C'est donc son frère, Charles IV, bénéficiant du précédent créé par Philippe en 1316, qui lui succède sur le trône.\n21 février : Charles IV le Bel est sacré roi de France à Reims et devient également roi de Navarre (fin du règne en 1328). \n19 mai : le mariage du roi de France Charles IV le Bel et de Blanche de Bourgogne, compromise dans l'affaire de la tour de Nesle en 1314, est annulé par le pape Jean XXII. \n21 septembre : le roi de France Charles IV le Bel épouse en secondes noces à Provins Marie de Luxembourg, fille de l'empereur germanique Henri VII de Luxembourg et de Marguerite de Brabant.",
+    "description": "Stefan Uroš III Dečanski Nemanjic, en  français : Étienne Decanski, roi de Serbie de 1321 à 1331, souverain serbe de la dynastie des Nemanjić, fils du roi Milutin, et saint de l’Église orthodoxe.Stefan (Étienne) est le fils du roi Stefan Milutin et Anne Terter. Il a postérieurement reçu le surnom de Dečanski, en raison de sa fondation du monastère de Visoki Dečani (les hauts Decani) en 1327. \nPeut-être dès 1299, et avec certitude à partir de 1309, il reçoit le gouvernement de la Zeta[2].\n\nIl se révolte cependant contre son père en 1314, avec l'aide d'une partie de la noblesse serbe. Il est cependant défait et capturé[2].\n\nMilutin fait enchainer son fils et l'emmene à Skopje. Là-bas, selon le rite hérité de Byzance, il lui fait crever les yeux. En effet, un aveugle n'a pas le droit au trône. Stefan est alors exilé à Constantinople avec sa femme et ses fils, à la cour d'Andronic II. L'un des enfants de Stefan est le futur empereur Dusan.\nLe futur roi est enfermé au monastère du Pantocrator de Constantinople où sa douceur et sa patience lui attirent la bonté des moines, en dépit des terribles épreuves subies. C'est dans ce monastère que saint Nicolas lui apparaîtra un jour et lui rendra la vue. À la mort de son père Milutin en 1321, Stefan revient en Serbie. Vladislav le fils de Dragutin a récupéré les terres de son père. Son demi-frère Stefan Konstantin est déjà en Serbie prêt à se battre pour récupérer le trône de Serbie. Mais très vite, Stefan réussit à s'allier avec l'Église serbe et plus important encore, la noblesse. Sa vue normale étant revenue, Stefan devient roi de toutes les terres serbes et du littoral, le 6 janvier 1322, sous le nom de Stefan (Étienne) Uros III.\n\nIl est donc roi des Serbes, mais il n'a pas encore autorité sur toutes les terres serbes. En effet, son cousin Vladislav est encore à la tête du royaume de son père. En 1323, Stefan saisit l'occasion de déclarer la guerre à son cousin lorsque celui-ci ne respecte pas l'accord passé entre les deux rois au sujet de la mine d'argent de Rudnik. Jusqu'en 1326, la guerre se poursuit entre les deux cousins jusqu'à la victoire de Stefan. Vladislav s'enfuit en Hongrie. La république de Dubrovnik, elle, choisit de soutenir Vladislav. Stefan fait intervenir les chevaliers serbes contre la cité marchande. Très vite, ne pouvant résister aux chevaliers serbes sur les champs de bataille, les soldats dalmates se retranchent derrière les murs de la ville. Les Serbes, eux, ne peuvent prendre d'assaut les murs de la ville. La situation reste bloquée jusqu'au 26 mars 1326 où la paix est signée. En 1327, Stefan se met au service de l'empereur byzantin Andronic II, alors en conflit avec son petit-fils Andronic III. Andronic III a le soutien de l'empereur Bulgare Michel Sismanivic. En 1330, Andronic III et Sismanivic décident d'attaquer la Serbie. Stefan Decanski rassemble une armée composée de soldats serbes d'expérience qui ont déjà combattu à plusieurs reprises contre son cousin, avec en plus des mercenaires catalans, saxons et surtout une troupe d'élite de cavalerie serbe préparée et dirigée par Dusan. La bataille de Velbazhd, près de Kyoustendil, le 28 juillet 1330, est un tournant dans l'histoire de l'Europe du Sud-Est, les Bulgares et l'armée d'Andronic III sont sévèrement battus. Michel Sismanivic trouve la mort pendant la bataille. Cette bataille victorieuse marque le début de la domination serbe en Europe du Sud-Est, jusqu'à la bataille de Kosovo Polje de 1389.\n\nPour faire définitivement disparaître la « menace » bulgare, Stefan installe sur le trône de Bulgarie le fils de sa sœur Anne, Ivan Stefan. Puis, il rassemble son armée pour occuper les villes byzantines de Vélès, Chtip, Prosek et Dobrun.\n\nStefan Decanski se consacre ensuite à la construction de son monastère, le monastère Decanski. Sa construction a débuté en 1327, mais Stefan ne verra jamais son monastère terminé. Son fils Dusan qu'il a eu avec sa première femme Théodora et qui a vécu avec lui son exil à Constantinople, organise le désordre en Serbie et profite d'une trêve avec son père pour lui prendre la couronne. Il enferme son père à Zvečan où celui-ci meurt en prison, sûrement empoisonné. Stefan qui a organisé la rébellion contre son père Milutin subit la même loi de la part de sa progéniture.\nMalgré un règne court, Stefan donne à la Serbie une puissance militaire et le monastère de Decanski, achevé quatre ans après sa mort, en 1335. Il a aussi un second fils, Siméon (en serbe : Siniša), avec la princesse María Paléologue, qui comme Dusan est empereur. Stefan est canonisé par l’Église en raison de sa vie sainte, et ses reliques sont encore aujourd'hui incorrompues.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Coins_of_Stefan_Uro%C5%A1_III.jpg",
+    "legende": "Monnaie de Stefan Uroš III",
+    "sources": "https://fr.wikipedia.org/wiki/Stefan_Uro%C5%A1_III_De%C4%8Danski"
+  },
+  {
+    "id": 361,
+    "titre": "Expulsion des Juifs du Comtat Venaissin",
+    "date": 1322,
+    "mois": 2,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "Le pape Jean XXII aurait ordonné l'expulsion des Juifs du Comtat Venaissin. Les synagogues de Carpentras et de Bédarrides sont détruites et remplacées par des chapelles.",
     "image": ""
+  },
+  {
+    "id": 339,
+    "titre": "Exécution du comte de Lancastre",
+    "date": 1322,
+    "mois": 3,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Après avoir brisé la résistance des Marches, Édouard II convoque ses troupes à Coventry pour le 5 mars. Le 18 février, Édouard quitte Gloucester pour Coventry, qu'il atteint le 27. Au début du mois de mars, une partie de l'armée royale commandée par les comtes de Kent et de Surrey part à la poursuite des partisans de Lancastre. Pendant ce temps, le roi s'empare sans grande opposition le 1er mars du château de Kenilworth, qui appartient au comte de Lancastre. Le 2 mars, le roi retrouve à Lichfield les Despenser[16]. Au même moment, Lancastre rassemble son armée à Doncaster et se dirige contre le roi. À Burton-upon-Trent, il essaie de freiner les troupes royales et verrouille les ponts de la Trent. Le 10 mars, l'armée royale parvient enfin à franchir la rivière après un long combat. Le lendemain, elle s'empare de Tutbury, où Roger Damory est capturé et succombe peu après à ses blessures, et est rejointe par 500 hommes levés par Robert de Holland, un allié du comte de Lancastre qui a fait défection à Burton Bridge. À Tutbury, Édouard proclame son cousin traître et offre une forte récompense pour sa capture.\n\nLancastre, craignant d'être pris au piège, se retire en précipitation à Pontefract, où il souhaite initialement se retrancher. Les autres rebelles, dont le comte de Hereford et Roger de Clifford, le persuadent de s'enfuir plus au nord encore. Ils décident finalement de rejoindre le château de Dunstanburgh. Informé de cette situation, Édouard II ordonne à Andrew Harclay, connétable de Carlisle, de couper la route de l'Écosse à Lancastre, qui cherche à obtenir le soutien militaire de Robert Bruce afin de renforcer ses maigres effectifs[17]. Harclay intercepte le 16 mars à Boroughbridge Lancastre et ses alliés. Durant la bataille qui s'ensuit, les forces rebelles sont écrasées par Harclay. Le comte de Hereford est tué, tandis que Lancastre et ses alliés sont capturés le lendemain de la bataille. Lancastre est emmené à Pontefract où il est exécuté pour haute trahison le 22 mars après un simulacre de procès : lui sont notamment reprochées sa correspondance secrète avec l'Écosse et l'exécution illégale de Gaveston en 1312[18]. La vengeance du roi ne se limite pas qu'à lui : Roger de Clifford et John de Mowbray sont pendus à York le 23 mars[19]. De son côté, Badlesmere tente de s'enfuir mais est capturé par Donald de Mar et exécuté à Canterbury le 14 avril. Enfin, John Giffard est transféré à Gloucester où il est exécuté le 6 mai suivant. Quant à Hugh Audley le Jeune, il n'échappe à l'exécution que grâce à l'intercession de son épouse Marguerite de Clare, qui est la nièce d'Édouard, et est envoyé rejoindre son père et un grand nombre de seigneurs des Marches galloises en prison à Wallingford.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ex%C3%A9cution_de_Thomas_Plantagen%C3%AAt.jpg"
+  },
+  {
+    "id": 363,
+    "titre": "Bataille de Boroughbridge capture de Lancastre",
+    "date": 1322,
+    "mois": 3,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "La bataille de Boroughbridge a opposé le 16 mars 1322 les barons rebelles au roi Édouard II d'Angleterre, près de Boroughbridge, au nord-ouest de York. Point culminant de l'antagonisme opposant le souverain anglais à son vassal le plus puissant, le comte de Lancastre, elle se solda par la défaite du rebelle et son exécution. Le roi Édouard put ainsi réaffirmer son autorité, et conserver le pouvoir pour cinq années encore.\n\nSans vraiment s'inscrire dans les Guerres d'indépendance de l'Écosse, cette bataille est marquante dans l'histoire militaire par l'emploi dans une guerre civile anglaise des tactiques apprises dans les guerres avec l'Écosse : emploi à grande échelle des fantassins plutôt que de la cavalerie, mais aussi utilisation massive de l'arc long anglais ; elle préfigure les victoires anglaises de la guerre de Cent Ans.\n lorsque Lancastre arriva à Boroughbridge, Harclay avait déjà pris possession du pont franchissant la rivière. Les troupes rebelles ne comptaient sans doute pas plus de 700 chevaliers et hommes d'arme, opposés aux 4 000 fantassins de l'armée royale[12],[13]. Lancastre essaya d'abord de parlementer, mais Harclay resta inflexible[12]. Faute de pouvoir passer la rivière à un autre endroit, et compte tenu de l'arrivée inéluctable de l'armée du roi venant du sud, les rebelles durent se résoudre au combat, qui d'ailleurs fut de courte durée et dépourvu de suspense[14].\nDéroulement : \nHarclay avait déployé ses hommes à l'extrémité nord du pont[15]. Quelques contingents étaient commis à la garde d'un gué voisin, dont les sources d'époque ne spécifient pas clairement l'emplacement[15]. Les piquiers étaient déployés en formation schiltron, une tactique apprise des combattants écossais[16], qui montra toute son efficacité contre la cavalerie. Les rebelles se divisèrent en deux colonnes : la première, commandée par Hereford et Roger de Clifford, marcha vers le pont ; l'autre, commandée par Lancastre, essaya de forcer le passage du gué[11]. Selon la description donnée par la chronique de Brut, Hereford mourut empalé par un piquier caché sous le pont[14],[17]. Clifford fut lui aussi blessé à mort, et la première colonne prit la fuite. Le corps du comte de Lancastre ne fit guère mieux ; sa cavalerie fut décimée par une volée de flèches avant même d'avoir pu atteindre le gué, et dut se replier[17] : il s'agit là d'un des premiers succès (si ce n'est le premier succès) de l’arc long anglais face à la cavalerie ; cette tactique jouera un rôle essentiel dans les futurs succès militaires anglais Outre-Manche[16].\nLancastre négocia une trève avec le comte de Harclay, et se retira en ville. Dans la nuit, une bonne partie de ses partisans désertèrent. Le lendemain, le shérif de York avait rallié Harclay avec l'armée du Sud. Le comte de Lancastre, encerclé et écrasé numériquement, se rendit à Harclay. \nConséquences : \nThomas de Lancastre fut mené au château de Pontefract, qui était tombé aux mains du roi. Là, il subit une parodie de procès, et (devant un parterre de comtes et de barons) condamné à mort[19]. Le 22 mars 1322, il fut extrait du château et décapité devant une foule moqueuse[20]. Dans les années qui suivirent, il se développa un culte autour de la personne du défunt comte, adoré comme un martyr, et peut-être même comme un saint[21]. De son vivant, Lancastre n'avait fait preuve ni de piété, ni de dons particuliers, de sorte qu'on a interprété ce culte comme une réaction au gouvernement inepte et tyrannique d'Édouard II[14],[22].\n\nOn exécuta aussi quelque trente partisans de Lancastre[23], dont Clifford et le baron John Mowbray[24],[25]. Quant à Robert Holland, sa défection le sauva de la hache, mais son alliance passée avec Lancastre le rendait suspect aux yeux du roi, et il fut jeté dans un cachot, où il resta jusqu'en 1327. L'année suivante, il fut assassiné, peut-être sur ordre d'Henri de Lancastre, le frère et héritier de Thomas[26].\n\nAndrew Harclay fut généreusement récompensé pour ses prouesses et sa loyauté à Boroughbridge. Le 25 mars il fut élevé au rang de comte de Carlisle, et se vit promettre des terres d'une rente annuelle de 1000 marks. Pourtant Harclay, qui avait repoussé l'offre de Lancastre de se joindre à la rébellion, n'était pas un chaud partisan du roi. Gardien des Marches d'Écosse, il était de plus en plus dépité de l'indolence du roi Édouard, et finit par négocier une paix avec les Écossais. Il se rendait par là coupable de trahison, et au début de 1323, la garde royale vint l'arrêter, et selon la coutume, il fut pendu et écartelé[27].\nLa dépendance d'Édouard II vis-à-vis des Despensers n'en fut que plus grande, et leurs frasques se multiplièrent[28]. En 1327, la reine Isabelle, aidée par son amant Roger Mortimer, monta un complot contre le monarque ; Édouard II fut déposé et son fils, Édouard III, monta sur le trône. \nPremière mention du héros populaire anglais Robin des Bois (Robin Hood) qui aurait participé à la rébellion du comte de Lancastre",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Battle-of-Boroughbridge-en.jpg/1280px-Battle-of-Boroughbridge-en.jpg"
   },
   {
     "id": 348,
@@ -3281,6 +3342,31 @@
     ],
     "type": 3,
     "description": "seconde expulsion des Juifs de France après celle décidée par Philippe IV le Bel en 1306",
+    "image": ""
+  },
+  {
+    "id": 362,
+    "titre": "Excommunication de marchands vénitiens",
+    "date": 1322,
+    "mois": 6,
+    "zones": [
+      "Papaute",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Un légat pontifical excommunie d’importants citoyens de Venise coupables d’avoir fait affaire avec l’Égypte mamelouke",
+    "image": ""
+  },
+  {
+    "id": 347,
+    "titre": "Mariage de Charles IV le Bel  avec Marie de Luxembourg",
+    "date": 1322,
+    "mois": 9,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Atteint de dysenterie et de fièvre quarte à partir d'août 1321, Philippe V le Long  est soigné à l'aide de bois et d'un clou de la Vraie Croix, ainsi que d'un bras de Saint Simon. Après un bref répit, il meurt à l'âge de 29 ans , sans héritier mâle pour lui succéder. C'est donc son frère, Charles IV, bénéficiant du précédent créé par Philippe en 1316, qui lui succède sur le trône.\n21 février : Charles IV le Bel est sacré roi de France à Reims et devient également roi de Navarre (fin du règne en 1328). \n19 mai : le mariage du roi de France Charles IV le Bel et de Blanche de Bourgogne, compromise dans l'affaire de la tour de Nesle en 1314, est annulé par le pape Jean XXII. \n21 septembre : le roi de France Charles IV le Bel épouse en secondes noces à Provins Marie de Luxembourg, fille de l'empereur germanique Henri VII de Luxembourg et de Marguerite de Brabant.",
     "image": ""
   },
   {
@@ -3310,20 +3396,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg/960px-K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg"
   },
   {
-    "id": 351,
-    "titre": "Galéas Visconti",
-    "date": 1322,
-    "date_fin": 1327,
-    "zones": [
-      "Italie"
-    ],
-    "type": 2,
-    "description": "En 1321, Galéas assiège Crema et Crémone en septembre puis, en novembre, défait les troupes gibelines de Plaisance et de Lodi à Borgo Val di Taro.\nMathieu, âgé de 70 ans et las, appelle Galéas pour le remplacer au gouvernement de Milan en juin 1322 et se retirer. Galéas laisse le gouvernement de Plaisance à son épouse Béatrice et à son fils Azzon.Mathieu meurt un mois après, le 24 juin 1322, dans sa retraite de Crescenzago, près de Milan, et Galéas est nommé capitaine du peuple pour une année.\nEn novembre, il est contraint de quitter Milan en raison d'un soulèvement organisé par son cousin Lodrisio Visconti. Galéas se réfugie à Lodi, pendant que le gouvernement de la cité est confié au capitaine bourguignon Jean de Chatillon.\nCraignant un retour des Torriani, le même Lodrisio se décide à rappeler à Milan Galéas en décembre. La ville est sujette aux pillages et au désordre pendant trois jours, mais, le 29 décembre 1322, Galéas réussit à se faire proclamer seigneur de Milan par l'assemblée populaire.Les rivalités familiales surgissent : son frère Marco[6] l'accusa, en 1327, auprès de l'empereur Louis IV de Bavière, de trahison au profit du pape.\nLe 5 juillet 1327, l'empereur destitue Galéas et le fait incarcérer dans la prison des Fours (I Forni) de Monza avec ses deux autres frères Jean et Lucien, sous l'accusation de l'assassinat du frère Étienne.\nGaléas est libéré le 25 mars 1328 et part à Lucques auprès de Castruccio Castracani.\nIl meurt à Pescia le 6 août 1328. Sa veuve Béatrice lui survivra jusqu'au 15 septembre 1334.\nSa succession sera assurée par son fils Azzon qui sera nommé vicaire impérial le 15 janvier 1329.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Blason_famille_it_Visconti.svg/330px-Blason_famille_it_Visconti.svg.png",
-    "legende": "Blason familial : d'argent au serpent d'azur ondoyant en pal engloutissant un enfant de carnation",
-    "regne": true
-  },
-  {
     "id": 359,
     "titre": "Bataille d'Old Byland",
     "date": 1322,
@@ -3334,57 +3406,6 @@
     "type": 3,
     "description": "14 octobre 1322  : Édouard II d'Angleterre, qui a envahi l'Écosse en juillet, est repoussé par Robert Bruce à la bataille d'Old Byland.\n\nDepuis leur grande victoire à la bataille de Bannockburn en 1314, les Écossais mènent des raids dans le Nord de l'Angleterre. La ville de Berwick-upon-Tweed est prise en 1318 et les Écossais arrivent aux portes d'York en septembre 1319. Édouard II d'Angleterre n'arrive pas à mettre fin à ses attaques d'une part car il refuse de reconnaître Robert Bruce comme roi d'Écosse et d'autre part car il est en permanence en conflit avec la fronde des barons menée par son cousin Thomas de Lancastre.\n\nLa trêve négociée à la Noël 1319 expire en janvier 1322 et les raids écossais recommencent. Les Écossais pillent Hartlepool, Richmond et Darlington. Lancastre, qui est en rébellion contre le roi, ne réagit pas et s'enferme au château de Pontefract. Édouard II ordonne à son lieutenant dans le Nord, Andrew Harclay, de concentrer ses efforts à battre les barons avant de se consacrer à repousser les Écossais. Harclay bat Lancastre à la bataille de Boroughbridge le 16 mars 1322. Lancastre et ses alliés sont capturés et exécutés sans procès sur ordre du roi.\n\nÉdouard a désormais pris sa revanche sur les barons qui avaient fait exécuter son favori Piers Gaveston en 1312. L'opposition abattue, le roi devient le maître incontesté du royaume : au Parlement de York, en mai 1322, Édouard publie une loi qui abroge les Ordonnances de 1311 qui limitaient son pouvoir. Le roi n'est plus soumis à la volonté du Parlement, et les hauts seigneurs, les prélats et les Communes doivent endurer la loi royale en silence. Débarrassé des problèmes internes, Édouard tourne son attention vers l'Écosse. Mais au moment où il commence à faire avancer son armée en août 1322, Robert Bruce est plus que prêt. Il retire son armée au-delà de la rivière Forth et emporte avec lui tous les vivres. Dans le Lothian les Anglais n'auraient trouvé qu'une vache boiteuse, ce qui fait dire au comte de Surrey :\n\n« Il s'agit sans doute du bœuf le plus cher que j'ai jamais vu. Il a sûrement coûté mille livres et plus ! »\n\nLa campagne militaire d'Édouard est décrite ainsi dans Scalacronica :\n« Le roi marcha sur Édimbourg, mais à Leith sont survenues une telle maladie et une telle famine sur les fantassins de cette grande armée, qu'ils furent obligés de battre en retraite pour trouver de la nourriture ; c'est à ce moment-là que le cheval léger du roi fut abattu par James de Douglas. Aucun soldat n'osa quitter le corps principal de l'armée pour chercher de la nourriture dans les fourrages, les Anglais étaient si harcelés et si usés par le combat qu'avant qu'ils n'arrivent à Newcastle, il y avait une telle peste dans l'armée faute de nourriture, qu'ils furent obligés de se disperser. » Bruce, qui poursuit les Anglais, traverse le Solway Firth, rassemble des troupes supplémentaires en Argyll et pénètre dans le Yorkshire. Après son retour d'Écosse, Édouard s'établit avec son épouse Isabelle de France à l'abbaye de Rievaulx. À sa grande surprise, les Écossais s'en approchent dangereusement à la mi-octobre. Édouard ordonne à son cousin le comte de Richmond de repousser cette attaque. Ce dernier s'établit près de l'abbaye de Byland.\n\nPour le déloger de sa position stratégique, Bruce lance une charge sur l'armée anglaise afin qu'elle le poursuive en dehors de la colline. Cela permet à une petite force écossaise qui s'était cachée d'enfoncer l'arrière de l'armée de Richmond. Ce dernier est fait prisonnier tandis que ceux qui tentent de s'enfuir sont tués dans la mêlée. Édouard se retire en toute hâte à Londres en abandonnant ses effets personnels. Bruce se retire quant à lui en Écosse.\nCette débâcle convainc Andrew Harclay que l'Angleterre ne peut remporter cette guerre, du moins pas avec Édouard II comme roi[1][réf. incomplète]. Il décide donc d'entrer en pourparlers avec les Écossais à l'insu de son suzerain[2][réf. incomplète]. Le 3 janvier 1323, il signe un traité de paix avec Robert Bruce à Lochmaben. Harclay est arrêté le 25 février sur ordre du roi, dépouillé de ses titres et charges et exécuté quelques jours plus tard.\nÉdouard négocie cependant une nouvelle trêve de treize ans avec Bruce le 30 mai 1323. La paix entre l'Angleterre et l'Écosse ne sera signée qu'en 1328 lors du traité d'Édimbourg-Northampton.",
     "image": ""
-  },
-  {
-    "id": 360,
-    "titre": "Conquête de La Sardaigne par Jacques II d’Aragon",
-    "date": 1322,
-    "date_fin": 1324,
-    "zones": [
-      "Naples",
-      "Italie",
-      "Aragon"
-    ],
-    "type": 3,
-    "description": "En 1295, par le traité d'Anagni, supervisé par le pape Boniface VIII, le roi Jacques II d'Aragon, fils de Pierre III, abandonne le pouvoir en Sicile ; en échange, le pape lui accorde le royaume de Sardaigne et de Corse. Mais les Siciliens refusent ce traité et proclament roi le dernier fils de Pierre III, Frédéric II, ce qui amène une reprise des hostilités.\n\nRapidement, Gênes et Pise, s'appuyant sur quelques familles sardes, rejettent l’acte de donation promulgué par le pape. Le roi Jacques II d'Aragon comprend qu'avant de mettre la main sur la Sardaigne, il doit s’assurer une paix solide et durable avec ses voisins : le royaume de Castille, le royaume de France, le royaume musulman de Grenade, le sultanat hafside de Tunis et les petits émirats d’Afrique du Nord. En 1321, Jacques II convoque les Cortes d'Aragon à Gérone. Dans son discours d’ouverture face aux députés, il roi expose le projet. Son cousin et allié temporaire, le roi Sanche de Majorque, offre vingt galères armées à ses frais, deux cents hommes à cheval et des fantassins, pour quatre mois, plus un prêt de 25 000 livres. La flotte de Sanche de Majorque est fin prête, commandée par Hugues de Tatzó, elle est concentrée à Mahon, le port de Minorque. Celle de Valence et celle de Barcelone ont jeté l’ancre au port de Fangòs, le port de Tortosa situé sur l'Èbre. La flotte se rassemble le 31 mai 1323, sous le commandement de l'infant primogènit Alfonse, fils aîné de Jacques II, alors âgé de vingt-quatre ans. La flotte repart de Mahon ; les vaisseaux du royaume de Majorque se joignent à eux : 300 vaisseaux divers (63 galères et des bateaux de transports), 15 000 hommes (infanterie et almogavares), et 3 000 cavaliers de la couronne font cap sur la Sardaigne. Le 14 juin 1323, Alphonse et ses hommes posent le pied sur la côte sud de la Sardaigne. Peu de temps après, sur la plage du golfe de Palmas, un grand nombre de nobles et de seigneurs de Sardaigne lui prêtent serment de fidélité. Le siège d’Isglesias n’est pas facile. Le premier assaut de la cité est lancé le 1er juillet 1323, mais la dureté de la lutte et les maladies diminuent les forces catalanes. L'état-major catalan craint alors que le siège se prolonge. le 7 février 1324. victoire de l'Aragon sur les Pisans à Luco-Cisterna dans le golfe de Cagliari en Sardaigne. Début du siège de Cagliari   19 juillet : traité de paix entre Pise et l'Aragon. L’Aragon prend possession du château de Cagliari. Finalement, la ville capitule [De son côté, Pise n’abandonne pas la partie. Elle envoie, elle aussi, une puissante flotte commandée par le comte de Donartico : 40 galères et 6 000 soldats pisans et mercenaires allemands. L’épreuve s’annonce dure tant sur terre que sur mer. Le face à face s’engage le 29 février 1324, dans un lieu dit Lucocisterna, proche de Cagliari. Alfonse est à la tête de 500 cavaliers et de 2 000 almogavares ; Pise a 1 200 cavaliers et 2 000 arbalétriers. Les Pisans sont mis en fuite, et embarquent en désordre[Où ?], mais, un grand nombre se noie dans les marais qui environnent le champ de bataille[réf. nécessaire]; le comte de Donartico, le chef de l’expédition, quoique blessé, parvient avec 500 soldats à se réfugier dans le château de Cagliari ; le reste de son armée est écrasé. Le même jour 29 février 1324, l’amiral Carròs anéantit la flotte militaire de Pise ; elle est prise, brûlée ou en fuite. Le 19 juin 1324, le traité de paix est signé dans la tente du jeune Alphonse. Pise cède au roi d'Aragon tous les droits qu’elle a sur la Sardaigne et la Corse :",
-    "image": ""
-  },
-  {
-    "id": 361,
-    "titre": "Expulsion des Juifs du Comtat Venaissin",
-    "date": 1322,
-    "mois": 2,
-    "zones": [
-      "Papaute"
-    ],
-    "type": 3,
-    "description": "Le pape Jean XXII aurait ordonné l'expulsion des Juifs du Comtat Venaissin. Les synagogues de Carpentras et de Bédarrides sont détruites et remplacées par des chapelles.",
-    "image": ""
-  },
-  {
-    "id": 362,
-    "titre": "Excommunication de marchands vénitiens",
-    "date": 1322,
-    "mois": 6,
-    "zones": [
-      "Papaute",
-      "Italie"
-    ],
-    "type": 3,
-    "description": "Un légat pontifical excommunie d’importants citoyens de Venise coupables d’avoir fait affaire avec l’Égypte mamelouke",
-    "image": ""
-  },
-  {
-    "id": 363,
-    "titre": "Bataille de Boroughbridge capture de Lancastre",
-    "date": 1322,
-    "mois": 3,
-    "zones": [
-      "Angleterre"
-    ],
-    "type": 3,
-    "description": "La bataille de Boroughbridge a opposé le 16 mars 1322 les barons rebelles au roi Édouard II d'Angleterre, près de Boroughbridge, au nord-ouest de York. Point culminant de l'antagonisme opposant le souverain anglais à son vassal le plus puissant, le comte de Lancastre, elle se solda par la défaite du rebelle et son exécution. Le roi Édouard put ainsi réaffirmer son autorité, et conserver le pouvoir pour cinq années encore.\n\nSans vraiment s'inscrire dans les Guerres d'indépendance de l'Écosse, cette bataille est marquante dans l'histoire militaire par l'emploi dans une guerre civile anglaise des tactiques apprises dans les guerres avec l'Écosse : emploi à grande échelle des fantassins plutôt que de la cavalerie, mais aussi utilisation massive de l'arc long anglais ; elle préfigure les victoires anglaises de la guerre de Cent Ans.\n lorsque Lancastre arriva à Boroughbridge, Harclay avait déjà pris possession du pont franchissant la rivière. Les troupes rebelles ne comptaient sans doute pas plus de 700 chevaliers et hommes d'arme, opposés aux 4 000 fantassins de l'armée royale[12],[13]. Lancastre essaya d'abord de parlementer, mais Harclay resta inflexible[12]. Faute de pouvoir passer la rivière à un autre endroit, et compte tenu de l'arrivée inéluctable de l'armée du roi venant du sud, les rebelles durent se résoudre au combat, qui d'ailleurs fut de courte durée et dépourvu de suspense[14].\nDéroulement : \nHarclay avait déployé ses hommes à l'extrémité nord du pont[15]. Quelques contingents étaient commis à la garde d'un gué voisin, dont les sources d'époque ne spécifient pas clairement l'emplacement[15]. Les piquiers étaient déployés en formation schiltron, une tactique apprise des combattants écossais[16], qui montra toute son efficacité contre la cavalerie. Les rebelles se divisèrent en deux colonnes : la première, commandée par Hereford et Roger de Clifford, marcha vers le pont ; l'autre, commandée par Lancastre, essaya de forcer le passage du gué[11]. Selon la description donnée par la chronique de Brut, Hereford mourut empalé par un piquier caché sous le pont[14],[17]. Clifford fut lui aussi blessé à mort, et la première colonne prit la fuite. Le corps du comte de Lancastre ne fit guère mieux ; sa cavalerie fut décimée par une volée de flèches avant même d'avoir pu atteindre le gué, et dut se replier[17] : il s'agit là d'un des premiers succès (si ce n'est le premier succès) de l’arc long anglais face à la cavalerie ; cette tactique jouera un rôle essentiel dans les futurs succès militaires anglais Outre-Manche[16].\nLancastre négocia une trève avec le comte de Harclay, et se retira en ville. Dans la nuit, une bonne partie de ses partisans désertèrent. Le lendemain, le shérif de York avait rallié Harclay avec l'armée du Sud. Le comte de Lancastre, encerclé et écrasé numériquement, se rendit à Harclay. \nConséquences : \nThomas de Lancastre fut mené au château de Pontefract, qui était tombé aux mains du roi. Là, il subit une parodie de procès, et (devant un parterre de comtes et de barons) condamné à mort[19]. Le 22 mars 1322, il fut extrait du château et décapité devant une foule moqueuse[20]. Dans les années qui suivirent, il se développa un culte autour de la personne du défunt comte, adoré comme un martyr, et peut-être même comme un saint[21]. De son vivant, Lancastre n'avait fait preuve ni de piété, ni de dons particuliers, de sorte qu'on a interprété ce culte comme une réaction au gouvernement inepte et tyrannique d'Édouard II[14],[22].\n\nOn exécuta aussi quelque trente partisans de Lancastre[23], dont Clifford et le baron John Mowbray[24],[25]. Quant à Robert Holland, sa défection le sauva de la hache, mais son alliance passée avec Lancastre le rendait suspect aux yeux du roi, et il fut jeté dans un cachot, où il resta jusqu'en 1327. L'année suivante, il fut assassiné, peut-être sur ordre d'Henri de Lancastre, le frère et héritier de Thomas[26].\n\nAndrew Harclay fut généreusement récompensé pour ses prouesses et sa loyauté à Boroughbridge. Le 25 mars il fut élevé au rang de comte de Carlisle, et se vit promettre des terres d'une rente annuelle de 1000 marks. Pourtant Harclay, qui avait repoussé l'offre de Lancastre de se joindre à la rébellion, n'était pas un chaud partisan du roi. Gardien des Marches d'Écosse, il était de plus en plus dépité de l'indolence du roi Édouard, et finit par négocier une paix avec les Écossais. Il se rendait par là coupable de trahison, et au début de 1323, la garde royale vint l'arrêter, et selon la coutume, il fut pendu et écartelé[27].\nLa dépendance d'Édouard II vis-à-vis des Despensers n'en fut que plus grande, et leurs frasques se multiplièrent[28]. En 1327, la reine Isabelle, aidée par son amant Roger Mortimer, monta un complot contre le monarque ; Édouard II fut déposé et son fils, Édouard III, monta sur le trône. \nPremière mention du héros populaire anglais Robin des Bois (Robin Hood) qui aurait participé à la rébellion du comte de Lancastre",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Battle-of-Boroughbridge-en.jpg/1280px-Battle-of-Boroughbridge-en.jpg"
   },
   {
     "id": 331,
@@ -3408,7 +3429,8 @@
       "Ottomans"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 320,
@@ -3435,7 +3457,8 @@
     ],
     "type": 1,
     "description": "Alphonse IV est fils du roi Denis Ier (1261-1325) et d'Élisabeth d'Aragon dite sainte Élisabeth (1271-1336). Bien qu'il soit l'unique fils légitime de son père, Alphonse n'est pas, selon certaines sources, le favori du roi Denis Ier qui préfère la compagnie d'Alphonse Sanche, un de ses fils illégitimes[1]. Cette préférence provoque une rivalité entre les deux frères ce qui donne lieu à une lutte armée. En 1323, une bataille rangée est planifiée à Alvalade entre les troupes du roi Denis Ier et celles de l'infant Alphonse de Portugal. Le combat entre père et fils est finalement empêché grâce à l'intervention de la reine Élisabeth. \nEn 1325, Alphonse devient roi et, comme première décision, exile Alphonse Sanche en Castille, lui retirant toutes les terres, titres et vassaux reçus de leur père. L'exilé n'accepte pas et, depuis l'autre côté de la frontière, orchestre une série de manœuvres politiques et militaires dans le but de devenir lui-même roi. Après diverses tentatives de réconciliation, les frères signent un traité de paix sous les auspices de la reine sainte Élisabeth d'Aragon. \nSa fille aînée, la princesse Marie, épouse Alphonse XI de Castille en 1328 mais le mariage est malheureux, le roi de Castille traitant mal sa femme en public[5]. Alphonse IV, en représailles, attaque le territoire de la Castille mais son armée est défaite à Villanueva de Barcarrota en 1336[5]. La paix vient trois ans plus tard et, avec l'intervention de Marie de Portugal, un traité est signé à Séville en 1339 [6].\n\nEn octobre 1340, des troupes portugaises, avec celles du royaume de Castille, participent victorieusement à la bataille du Río Salado contre les Maures [7],[8].\n\n\nPortulan d'Angelino Dulcert (1339) montrant l'île de Lanzarote\nLe navigateur Lancelot Maloisel se rend au Portugal pour entreprendre, entre 1325 et 1339, une expédition qui atteint une île, appelée par les indigènes « Titeroygatra », qui prend ensuite le nom de Lanzarote. Sur cette île, il érige un fort dont les ruines se trouvent probablement à proximité du volcan Guanapay[9].\n\nEn 1341, Niccolò de Recco navigue également jusqu'aux Îles Canaries, pour le compte d'Alphonse IV de Portugal[10].\n\nLe 12 février 1345, le roi Alphonse IV envoie une lettre de protestation diplomatique au pape Clément VI qui, malgré les revendications portugaises, attribue la possession de ces îles au royaume de Castille",
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 149,
@@ -3448,7 +3471,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 144,
@@ -3461,7 +3485,8 @@
       "Angleterre"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 171,
@@ -3474,7 +3499,8 @@
       "Aragon"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 140,
@@ -3487,7 +3513,8 @@
       "France"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 201,
@@ -3500,7 +3527,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 352,
@@ -3514,8 +3542,7 @@
     ],
     "type": 2,
     "description": "Azzon Visconti était le fils de Galéas Ier et de Béatrice d'Este[1] (1268-1334).\nAu mois de mai 1322, son père lui confie le gouvernement, avec l'aide de sa mère Béatrice, de la cité de Plaisance dont il avait été nommé vicaire impérial en 1313 ; en octobre, Azzon et sa mère doivent s'enfuir de la cité en rébellion et se réfugier à Crémone.\nLe 23 septembre 1325, il participe à la bataille d'Altopascio où son père Galéas Ier défait les troupes florentines guelfes du général aragonais Raymond Ier de Cardone. Azzon est alors considéré comme un valeureux guerrier et devient le héros de la cause gibeline.\nSon père fut démis de ses fonctions à la tête de Milan le 5 juillet 1327. Azzon fit alors son possible pour reconquérir la cité.\nLe 7 janvier 1328, il est présent au couronnement de l'empereur Louis de Bavière et l'année suivante, le 15 janvier 1329, celui-ci le nomme vicaire impérial de Milan en échange d'une forte somme (selon les sources, il s'agirait de 60 000 ou 125 000 florins) qu'il ne régla qu'en partie.\n\nLorsque l’empereur vint à Milan pour réclamer son dû, Azzon s'allia alors avec le pape.\n\nLe 21 mai 1329, Louis mit le siège devant Milan. Azzon lui envoya alors des mets raffinés pendant que les milanais, du haut des murs de la ville, raillaient l'empereur en le traitant d'ivrogne (ubriacone). Après un mois de cette farce, Louis leva le siège en se contentant de la somme de 12 000 florins et d'une indemnité journalière pour ses soldats. Azzon obtint confirmation de son vicariat de la part de l'empereur, ainsi que l'approbation du pape pour sa résistance à l'empereur.\n\nEn 1332, il associa ses oncles Jean et Luchino à son gouvernement, ce qui lui permit de mener une guerre victorieuse contre le roi Jean de Bohême, que le pape Jean XXII et son légat en Lombardie, le cardinal Bertrand du Pouget, escomptaient placer à la tête d'un vaste royaume d'Italie du Nord inféodé au Saint-Siège — sur le modèle du royaume angevin de Naples en somme.\n\nÀ son retour en Lombardie, il découvrit que des intrigues avait été tramées en son absence. Le 23 novembre 1333, il fit arrêter et enfermer dans les prisons de Monza (dites les Fours), les principaux auteurs de ces conjurations ; seul échappa à cette purge son oncle par alliance, Lodrisio Visconti, le principal organisateur.\n\nIl épousa, le 1er octobre 1333, Catherine de Savoie-Vaud († 1388), fille de Louis II de Savoie, baron de Vaud, mais ils n'eurent pas de descendance.\n\nCependant, Lodrisio commença à nouer une série d'alliances, pour détrôner son neveu.\n\nLe 21 février 1339, eut lieu la bataille de Parabiago[2] : Azzon, malade de la goutte, resta à Milan avec son oncle Jean et envoya Luchino, à la tête de l'armée milanaise, contre la Compagnie de San Georgio de Lodrisio, composée de mercenaires helvétiques. On raconte que Lucien vainquit grâce à une miraculeuse apparition de saint Ambroise à cheval qui effraya l'armée ennemie. Azzon fit enfermer Lodrisio dans les prisons de San Colombano du Lambro et put se consacrer au gouvernement de Milan, à la tête du triumvirat formé avec ses deux oncles.\n\nIl réussit à rallier à Milan toutes les cités de la région.\n\nSelon une légende, on lui doit les armes des Visconti, le serpent avalant un homme. On raconte qu'il réussit à chasser sans peur une vipère qui s'était introduite dans son heaume. Le fait qu'il ne fut pas mordu fut considéré comme un prodige. Il exploita l'évènement en le rappelant dans ses armes.\nAu sommet de sa puissance, Azzon meurt, le 16 août 1339, sans héritier mâle.",
-    "image": "",
-    "regne": true
+    "image": ""
   },
   {
     "id": 207,
@@ -3528,7 +3555,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 156,
@@ -3541,7 +3569,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 172,
@@ -3554,7 +3583,8 @@
       "Aragon"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 6,
@@ -3595,7 +3625,6 @@
     "type": 2,
     "description": "Luchino fut co-seigneur de Milan de 1339 à 1349 avec son frère Jean. \nQuatrième fils du seigneur de Milan, Mathieu Ier et de Bonacossa Borri, il se consacre à la guerre et devient condottiere avec son frère, le second, Marco. Il est nommé seigneur de Pavie en 1315 à l'âge de 23 ans.\nEn 1315, il participe à la bataille de Montecatini, où il est blessé.\nEn janvier 1339, Luchino Visconti défait son neveu Lodrisio Visconti à la bataille de Parabiago.\nCe sera avec le mariage[4], en 1339, avec sa troisième épouse, Isabelle Fieschi dite Fosca (« Ténébreuse »), fille de Carlo Fieschi, un capitaine génois, seigneur de Savignone et neveu du pape Adrien V (1205-1276), qu'il aura une postérité légitime.\nLe 16 août 1339, Azzon, seigneur de Milan, décède sans postérité et la lignée de Galéas Ier, le premier fils de Mathieu Ier, s'éteint. Le second, Marco, est mort sans postérité, en 1329. Indépendamment de la lignée du cinquième fils de Mathieu Ier, Étienne, mort en 1337, les seuls héritiers mâles du fief de Milan sont le troisième et le quatrième fils, Jean et Luchino qui deviennent donc seigneurs de Milan.\n\nJean laissera cependant à Luchino toute latitude quant au gouvernement de l'État milanais.\n\nVers la fin de l'année 1339, Luchino s'empare de Pise et de Parme.\nEn juillet 1340, Mathieu, Galéas et Barnabé, neveux de Jean et de Luchino, fils de leur frère benjamin Étienne, participent à la conjuration menée par Francesco Pusterla et quelques autres nobles. Cette conjuration ayant été dénoncée, Luchino sévit contre les conjurés[5] mais ne punit pas ses neveux.\nGrand homme de guerre, en 1342, il prend Bellinzone à la famille Rusca, annexe Locarno, Asti, Tortona, Alexandrie, Alba ainsi que Cherasco à la suite de combats contre les Angevins et la Savoie[6].\n\nEn 1344, il entreprend une guerre contre Pise qui se termine, en 1346, par la cession de Parme par Obizzo III d'Este, seigneur de Ferrare et Modène.\n\nEn 1346, les neveux conspirent à nouveau contre leurs oncles. Cette fois, Luchino décide de les éloigner de Milan et les condamne à l'exil. Mathieu part pour le duché de Montferrat, Galéas voyage en Palestine et dans les Flandres et Barnabé fait un périple en Savoie, dans les Flandres et en France, à la cour de Philippe VI.\n\nLuchino a cependant des rapports problématiques avec sa femme Isabelle bien qu'elle lui donne, cette même année, deux jumeaux dont l'un, nommé Luchino Novello, survit. Les prétendues escapades amoureuses d'Isabelle serviront de motif aux neveux pour exclure Luchino Novello de sa propre succession et de celle de Jean en 1354.\n\nSa dernière entreprise est une guerre contre le marquisat de Montferrat de Jean II Paléologue et la seigneurie de Mantoue de Louis Ier Gonzague, guerre qui avorte en raison de sa mort.\nLuchino meurt le 24 janvier 1349 et son frère Jean lui succède.",
     "image": "",
-    "regne": true,
     "sources": "https://fr.wikipedia.org/wiki/Luchino_Visconti_(condottiere)"
   },
   {
@@ -3609,7 +3638,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 157,
@@ -3622,7 +3652,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 182,
@@ -3635,7 +3666,8 @@
       "Hongrie"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 335,
@@ -3664,7 +3696,8 @@
       "Naples"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 150,
@@ -3677,7 +3710,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 7,
@@ -3727,7 +3761,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 125,
@@ -3772,6 +3807,19 @@
     "sources": "https://fr.wikipedia.org/wiki/Corso_Donati"
   },
   {
+    "id": 354,
+    "titre": "Jean Visconti",
+    "date": 1349,
+    "date_fin": 1354,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": ",3e fils de Mathieu Ier Visconti, se destine d’abord à une carrière ecclésiastique. Élu archevêque de Milan en 1317, il se heurte à l’opposition du pape Jean XXII, qui refuse sa nomination.\nAprès la condamnation de sa famille pour hérésie, il s’appuie sur l’empereur Louis IV de Bavière et l’antipape Nicolas V, qui le nomme cardinal. Il devient ensuite évêque et seigneur de Novare, avant de s’imposer finalement comme archevêque de Milan en 1339, après la mort de son rival.\n\nÀ la disparition d’Azzon Visconti la même année, Jean et son frère Lucien héritent du pouvoir à Milan. En 1341, le pape Clément VI confirme leur autorité, puis lève les accusations d’hérésie en 1342, légitimant définitivement Jean.\n\nAprès la mort de Lucien en 1349, Jean gouverne en associant ses neveux. Il étend son influence en devenant doge de Gênes en 1353 et seigneur de plusieurs villes, dont Bologne et Novare.\nÀ sa mort en 1354, ses neveux se partagent le pouvoir, assurant la continuité de la domination des Visconti sur Milan.",
+    "image": "Tombeau d'Otton Visconti et de Jean Visconti dans la cathédrale de Milan",
+    "legende": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg/960px-IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg"
+  },
+  {
     "id": 134,
     "titre": "Mort de Charles d’Anjou dit le Boiteux",
     "date": 1349,
@@ -3784,20 +3832,6 @@
     "image": ""
   },
   {
-    "id": 354,
-    "titre": "Jean Visconti",
-    "date": 1349,
-    "date_fin": 1354,
-    "zones": [
-      "Italie"
-    ],
-    "type": 2,
-    "description": ",3e fils de Mathieu Ier Visconti, se destine d’abord à une carrière ecclésiastique. Élu archevêque de Milan en 1317, il se heurte à l’opposition du pape Jean XXII, qui refuse sa nomination.\nAprès la condamnation de sa famille pour hérésie, il s’appuie sur l’empereur Louis IV de Bavière et l’antipape Nicolas V, qui le nomme cardinal. Il devient ensuite évêque et seigneur de Novare, avant de s’imposer finalement comme archevêque de Milan en 1339, après la mort de son rival.\n\nÀ la disparition d’Azzon Visconti la même année, Jean et son frère Lucien héritent du pouvoir à Milan. En 1341, le pape Clément VI confirme leur autorité, puis lève les accusations d’hérésie en 1342, légitimant définitivement Jean.\n\nAprès la mort de Lucien en 1349, Jean gouverne en associant ses neveux. Il étend son influence en devenant doge de Gênes en 1353 et seigneur de plusieurs villes, dont Bologne et Novare.\nÀ sa mort en 1354, ses neveux se partagent le pouvoir, assurant la continuité de la domination des Visconti sur Milan.",
-    "image": "Tombeau d'Otton Visconti et de Jean Visconti dans la cathédrale de Milan",
-    "legende": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg/960px-IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg",
-    "regne": true
-  },
-  {
     "id": 175,
     "titre": "Pierre Ier dit le Cruel",
     "date": 1350,
@@ -3808,7 +3842,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 141,
@@ -3821,7 +3856,8 @@
       "France"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 158,
@@ -3834,7 +3870,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 203,
@@ -3847,7 +3884,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 355,
@@ -3861,8 +3899,20 @@
     ],
     "type": 2,
     "description": "Mathieu II, Galéas II et Barnabé",
-    "image": "",
-    "regne": true
+    "image": ""
+  },
+  {
+    "id": 356,
+    "titre": "Galéas II et Barnabo  Visconti",
+    "date": 1355,
+    "mois": 9,
+    "date_fin": 1378,
+    "mois_fin": 8,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "image": ""
   },
   {
     "id": 336,
@@ -3877,20 +3927,6 @@
     "type": 3,
     "description": "Frédéric III ou IV dit Le Simple (né le 1er septembre 1341 à Catane, et mort à Messine, 27 janvier 1377) fut roi de Sicile (formellement roi de Trinacrie) et duc d'Athènes et de Neopatras, de 1355 à sa mort. Frédéric eût dû porter le chiffre III derrière son prénom mais il prit le IV pour se conformer au choix effectué par son grand-père, Frédéric III de Sicile, qui prit le III en hommage à l'empereur Frédéric II qui a été roi de Sicile mais ne se désigna jamais sous le nom de Frédéric Ier de Sicile. Il arrive toutefois qu'il soit désigné comme Frédéric III dans certaines listes des rois de Sicile.\n, fils de Pierre II de Sicile, accède au trône en 1355 à seulement 13 ans, après la mort de son frère Louis Ier de Sicile. Son jeune âge favorise les ambitions des grands féodaux, notamment la puissante famille Alagona.\n\nTout au long de son règne, Frédéric tente de renforcer l’autorité royale face à ces barons influents, mais se heurte à de fortes résistances et à une instabilité politique chronique. Le royaume est marqué par des rivalités internes, notamment entre les factions « latine » et « catalane », ainsi que par des conflits militaires, comme l’épisode d’Ognina en 1356.\n\nDevenu majeur en 1357, il peine à s’imposer pleinement et cherche des soutiens extérieurs, notamment auprès de Pierre IV d'Aragon. Son règne reste également inscrit dans le prolongement des tensions issues des Vêpres siciliennes.\n\nUn tournant majeur survient en 1372 avec la signature d’un traité de paix avec Jeanne d'Anjou, mettant fin à près de 90 ans de guerre. Frédéric est reconnu roi de Trinacrie, mais devient vassal de la reine de Sicile.\nAffaibli politiquement, confronté aux ambitions de ses alliés et à l’absence d’héritier masculin, il laisse à sa mort une situation successorale délicate autour de sa fille Marie. Surnommé « le Simple », il est décrit comme un souverain manquant d’habileté, malgré un certain goût pour les arts.",
     "image": ""
-  },
-  {
-    "id": 356,
-    "titre": "Galéas II et Barnabo  Visconti",
-    "date": 1355,
-    "mois": 9,
-    "date_fin": 1378,
-    "mois_fin": 8,
-    "zones": [
-      "Italie"
-    ],
-    "type": 2,
-    "image": "",
-    "regne": true
   },
   {
     "id": 11,
@@ -3917,7 +3953,8 @@
     "type": 1,
     "description": "Pierre est le fils du roi Alphonse IV de Portugal (1291-1357), dit Alphonse le Brave, et de Béatrice de Castille (1293-1359).\nEn octobre 1327, des contrats de mariage sont négociés pour Pierre avec Blanche de Castille (1319-1375), petite-fille du roi Sanche IV, et pour sa sœur, Marie de Portugal, avec le futur Alphonse XI de Castille [6],[7]. Blanche est emmenée au Portugal pour y être élevée jusqu'à ce qu'elle soit en âge de se marier, où elle reste huit ans. Selon la « Chronique du roi Pierre Ier » de Fernão Lopes, pendant son séjour, elle commence à montrer des signes de maladie qui la rendent inapte au mariage et à la procréation. Elle est examinée par des médecins, dont ceux envoyés par Alphonse XI, qui confirment sa santé mentale fragile ainsi que son incapacité. En raison du refus de l'infant Pierre et du trouble mental évident de l'infante Blanche, le mariage proposé n'a pas lieu [8],[9],[10],[11].\n\nAlphonse IV de Portugal décide de marier son fils et héritier, Pierre, avec Constance de Castille, la fille de Don Juan Manuel, afin de forger une alliance avec lui [12]. Lorsque Constance arrive au Portugal en 1340, Inés de Castro, la belle et aristocratique fille d'une importante famille galicienne, l'accompagne comme dame de compagnie . \nAlors qu’il ne règne pas encore, Pierre est connu pour sa relation adultère avec Inés de Castro, la dame de compagnie de son épouse Constance de Castille, qui a d'importantes répercussions sur la vie politique du Portugal sous le règne d’Alphonse IV. Inés finit par être assassinée, supposément sur ordre du souverain en 1355 sans que cela n'entraîne d’amélioration dans les rapports entre père et fils. Au contraire, entre 1355 et son accès à la couronne, Pierre se révolte contre son père au moins deux fois [14].\nL'histoire d'amour et le conflit père-fils ont inspiré plus de vingt opéras et de nombreux écrivains, notamment : l'épopée nationale portugaise « Les Lusiades » de Luís de Camões, les œuvres espagnoles « Nise lastimosa » et « Nise laureada » (1577) de Jerónimo Bermúdez et « Reinar despues de morir » de Luis Vélez de Guevara, ainsi que « Inez de Castro » de Mary Russell Mitford et le drame français « La Reine morte » de Henry de Montherlant .\nAprès son couronnement en 1357, Pierre Ier annonce son mariage secret avec Inés de Castro peu avant sa mort et sa volonté qu'on la considère comme reine de Portugal [20]. Ce mariage n'est prouvé par aucun document. Deux des assassins d'Inés de Castro sont pris et exécutés avec une grande brutalité [21]. La tradition dit aussi que Pierre Ier aurait exhumé le cadavre d'Inés de Castro, l'aurait couronné comme reine de Portugal et aurait obligé la noblesse à lui faire le baise-main [20]. Il fait construire deux tombeaux dans les nefs latérales du monastère d'Alcobaça afin que, le jour du jugement final, les éternels amants, ressuscités, puissent se voir immédiatement.\n\nComme roi, Pierre Ier est un bon administrateur, courageux dans la défense de son pays contre le pouvoir pontifical et défendant les moins favorisés [22].\n\nIl mène la justice de manière brutale, afin de ne pas retarder l'application des peines, en punissant de mort la pratique d'avocat, ce qui provoque des protestations dans les tribunaux en 1361 [23].\n\nIl ne fait pas grand-chose pour freiner le pouvoir de la noblesse, mais celle-ci craint le roi [24].\n\nEn politique extérieure, il soutient son neveu, le roi Pierre Ier de Castille, dans la guerre civile qui l'oppose à son demi-frère [25].\n\nLe roi Pierre Ier a une santé fragile du fait des mariages consanguins entre les Maisons de Portugal et de Castille qui aboutissent à une véritable dégénérescence des familles royales des deux pays. Son règne marque le début de la grave crise par laquelle la première dynastie portugaise s’achève [26].\nÀ sa mort en 1367, son fils Ferdinand Ier de Portugal lui succède sur le trône",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Jacente_do_t%C3%BAmulo_de_D._Pedro_I_de_Portugal.png",
-    "legende": "Gisant de Pierre Ier de Portugal à l'abbaye d'Alcobaça, vers 1360."
+    "legende": "Gisant de Pierre Ier de Portugal à l'abbaye d'Alcobaça, vers 1360.",
+    "regne": true
   },
   {
     "id": 10,
@@ -3942,7 +3979,8 @@
       "Ottomans"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 159,
@@ -3955,7 +3993,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 142,
@@ -3968,7 +4007,8 @@
       "France"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 176,
@@ -3981,7 +4021,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 287,
@@ -3995,7 +4036,8 @@
     ],
     "type": 1,
     "description": "Ferdinand est le second enfant du roi Pierre Ier (1320-1367), dit Pierre le Justicier, roi de Portugal (1357-1367), et de Constance de Castille, morte trois semaines après sa naissance. \nIl devient roi en 1367, à l'âge de 21 ans, après la mort de son père, Pierre Ier. Il hérite d'un royaume en paix et avec un trésor public bien fourni [3].\n\nLe règne de Ferdinand Ier est marqué par la politique étrangère. Quand Pierre Ier de Castille, dit Pierre le Cruel meurt en 1369 sans héritier mâle direct, Ferdinand Ier, en tant qu'arrière-petit–fils de Sanche IV par la ligne féminine, se déclare héritier du trône de Castille. Les autres candidats à la succession sont les rois d'Aragon et de Navarre ainsi que Jean de Gand, duc de Lancastre marié avec Constance, la fille aînée de Pierre le Cruel. Entretemps, Henri de Trastamare, frère bâtard de Pierre, s'est déclaré roi. Après deux campagnes militaires sans succès, les parties acceptent l'intervention du pape Grégoire XI.",
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 177,
@@ -4008,7 +4050,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 208,
@@ -4021,7 +4064,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 160,
@@ -4034,7 +4078,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 152,
@@ -4047,7 +4092,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 196,
@@ -4060,20 +4106,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
-  },
-  {
-    "id": 145,
-    "titre": "Richard II",
-    "date": 1377,
-    "mois": 6,
-    "date_fin": 1399,
-    "mois_fin": 11,
-    "zones": [
-      "Angleterre"
-    ],
-    "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 337,
@@ -4089,6 +4123,20 @@
     "description": "Marie Ire, reine de Sicile, est née le 2 juillet 1363 à Catane et décédée le 25 mai 1401 à Lentini. De la maison de Barcelone à la fois du côté paternel et du côté maternel, elle est la fille et héritière du roi Frédéric III de Sicile (1342-1377) et de son épouse l'infante Constance (1344-1363), fille de Pierre IV d'Aragon.\n\nBiographie\nQuand elle accéda au trône en 1377, Marie n'avait que quatorze ans et le gouvernement est assuré par le vicaire Artál d'Alagón, assisté de Manfred Chiaromonte, de Guillaume de Peralta et de François Ventimiglia. Marie a succédé à son père selon les dernières volontés de ce dernier, en contradiction avec les dispositions du testament de Frédéric II qui exclut les femmes de la succession, et elle doit faire face à la contestation de son oncle et grand-père le roi Pierre IV d'Aragon[1].\n\nPour éviter un mariage projeté avec Jean Galéas Visconti, Pierre IV la fit enlever à Catane le 23 janvier 1379 par le comte Guglielmo Raimondo III Moncada, qui la séquestra dans le château d'Augusta. De là elle fut conduite en Sardaigne, puis à Barcelone à la cour du roi.\n\nEn 1380, Pierre IV donna la vicairerie de l'île à son fils l'infant Martin d'Aragon, dont Marie épousa en 1390 le fils, un autre Martin d'Aragon (1375-1409), dit « le Jeune ». Le couple royal, flanqué de Martin « le Vieux » débarqua en Sicile mais eut de grandes difficultés à se faire reconnaître. Entre 1393 et 1398 une révolte aristocratique fait rage, matée grâce à l'aide du roi Jean Ier d'Aragon, frère de Martin « le Vieux ». À la mort du roi Jean Ier en 1396, Martin « le Vieux » accède à la couronne d'Aragon, dont Martin « le Jeune » devient alors l'héritier. Lui et Marie ont un fils, Pierre, qui meurt en bas âge en 1400, avant sa mère. À la mort de Marie, Martin « le Jeune » devint roi de Sicile et reçut de son père la procurerie du royaume de Sardaigne.\n\nVeuf, Martin d'Aragon se remarie avec l'infante Blanche de Navarre qui, à sa mort, reçoit la vicairerie de l'île.\nMarie Ire est inhumée à Cagliari aux côtés de son époux. En 1389, elle a fait édifier une église sur la tombe du cardinal Pierre de Luxembourg.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Maria_I_regina_di_sicilia.jpg",
     "sources": "https://fr.wikipedia.org/wiki/Marie_Ire_(reine_de_Sicile)"
+  },
+  {
+    "id": 145,
+    "titre": "Richard II",
+    "date": 1377,
+    "mois": 6,
+    "date_fin": 1399,
+    "mois_fin": 11,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 1,
+    "image": "",
+    "regne": true
   },
   {
     "id": 13,
@@ -4113,6 +4161,20 @@
       "Papaute"
     ],
     "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 357,
+    "titre": "Barnabo  Visconti",
+    "date": 1378,
+    "mois": 8,
+    "date_fin": 1385,
+    "mois_fin": 5,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
     "image": ""
   },
   {
@@ -4126,19 +4188,6 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
-  },
-  {
-    "id": 357,
-    "titre": "Barnabo  Visconti",
-    "date": 1378,
-    "mois": 8,
-    "date_fin": 1385,
-    "mois_fin": 5,
-    "zones": [
-      "Italie"
-    ],
-    "type": 2,
     "image": "",
     "regne": true
   },
@@ -4153,7 +4202,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 194,
@@ -4166,7 +4216,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 143,
@@ -4179,7 +4230,8 @@
       "France"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 12,
@@ -4204,7 +4256,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 169,
@@ -4217,7 +4270,8 @@
       "Naples"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 183,
@@ -4230,7 +4284,8 @@
       "Hongrie"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 209,
@@ -4243,7 +4298,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 198,
@@ -4254,7 +4310,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 288,
@@ -4268,7 +4325,8 @@
     ],
     "type": 1,
     "description": "Premier souverain portugais issu de la maison d'Aviz, après la crise de 1383-1385. L'excellente image laissée par son règne dans l'esprit des Portugais lui vaut le surnom de « le Prince de Bon Souvenir ».\nIl est le fils illégitime du roi Pierre Ier et de Thérèse Lourenço, une dame galicienne [2] ou une fille de Vasco Lourenço da Praça, un marchand de Lisbonne [3]. Il a grandi avec son grand-père maternel. En 1364, il est investi grand maître de l'ordre d'Aviz puis est placé sous la garde du commandant en chef Fernão Rodrigues de Sequeira. Il visite la cour de temps en temps, développant une amitié avec son demi-frère, Jean de Portugal, duc de Valência de Campos et fils d'Inés de Castro [4].\nSous le règne du roi Ferdinand Ier de Portugal, son demi-frère, Jean est arrêté en 1382 à Évora et condamné à être exécuté, en raison des intrigues de la reine Éléonore Teles de Menezes. Il demande l'aide d'Edmond de Langley, oncle de Philippa de Lancastre, et est libéré. Cet épisode rend Jean prudent .\nÀ la mort du roi Ferdinand Ier de Portugal, sans héritier mâle direct, le Portugal risque de perdre son indépendance parce que l’héritière légitime, la princesse Béatrice, est mariée au roi Jean Ier de Castille, avec un contrat de mariage[6] qui prévoit qu'au cas où Béatrice mourrait sans héritier, l'annexion du royaume par la Castille, avec la condition qu'« alors les peuples du Royaume reçussent le roi de Castille par son roi et seigneur »[7]. Cette même condition est d'ailleurs nécessaire pour que Béatrice devienne reine (l'expression « recevoir comme roi » a une signification semblable à celui de l'expression « recevoir comme mari ou épouse »).\n\nLa régence est donc confiée à la reine veuve Éléonore Teles de Menezes, qui reconnaît sa fille Béatrice comme reine de Portugal, mais qui n'organise son acclamation que le 22 novembre 1383, trente jours après la mort du roi Ferdinand[8],[9], et ce uniquement dans certaines villes[10]. À Lisbonne, à Santarém et en d'autres villes, le peuple empêche l'acclamation. De plus, la classe moyenne et une partie de la noblesse rejoint le peuple dans son opposition à la reine Béatrice et son mari, le roi de Castille, par peur de la transformation du Portugal en une province de Castille. À ce rejet s'ajoute un profond dégoût pour la reine veuve dont le prétendu amant, João Fernandes Andeiro, comte d'Ourém, est assassiné par le grand-maître d'Aviz le 6 décembre (un crime politique qui, commis par d’autres, aurait soulevé l'indignation générale mais qui est ici considéré, par les âmes plus poétiques, comme un « crime shakespearien qui soulève les émotions tragiques », et, par les âmes plus prosaïques, comme une réaction aux tentatives d'acclamation de Béatrice).\n\nDeux prétendants s'opposent à Béatrice : Jean, duc de Valencia de Campos, fils illégitime de Pierre Ier de Portugal et d'Inés de Castro (qui se prévaut d'une légitimité issue d'un prétendu mariage secret de ses parents), puis, en second rang, Jean, le grand maître d'Aviz.\n\nCette situation débouche sur ce qu'il est convenu d'appeler la crise de 1383-1385, une période d’anarchie et d’instabilité politique pendant laquelle le Portugal n’est gouverné par personne.\n\nFinalement, le 6 avril 1385, les Cortes de Portugal, réunies à Coimbra, proclament le grand maître d'Aviz, Jean Ier, roi de Portugal. Il s'agit, en pratique, d'une véritable déclaration de guerre à la Castille. Peu après, le souverain castillan envahit le Portugal avec la participation d’un détachement de cavalerie française. En face, les Anglais sont alliés à Jean d’Aviz. Jean Ier nomme Nuno Álvares Pereira, connétable de Portugal et l’invasion est repoussée durant l’été après la victoire portugaise d'Aljubarrota le 14 août 1385. La Castille se retire et la couronne de Jean Ier lui est définitivement acquise.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/960px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/960px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg",
+    "regne": true
   },
   {
     "id": 184,
@@ -4281,7 +4339,8 @@
       "Hongrie"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 358,
@@ -4295,8 +4354,7 @@
     ],
     "type": 2,
     "description": "Il était le fils de Galéas II Visconti et de Blanche de Savoie. En juin 1360, l'année de ses neuf ans, son père lui fait épouser Isabelle de Valois, âgée de douze ans, fille du roi de France Jean II le Bon, mariage[1] qui consacre l'union entre Galéas II et la famille royale française[2]. Jean Galéas devient ainsi comte de Vertus (de la cité de Vertus en Champagne), titre créé par Jean II et apporté en dot par son épouse.\n\nL'union, assurément ultérieure, est prolifique mais ne dure guère :\n\nleur premier enfant Jean Galéas naît le 4 mars 1366 et meurt en 1373, âgé de sept ans ;\nle second Azzone naît en 1368 et meurt le 2 octobre 1380, âgé de 12 ans ;\nValentine naît en 1370 ou 1371 ;\nle dernier, Carlo naît en septembre 1372 et meurt bébé tandis que la mère, Isabelle, meurt des suites de l'accouchement le 11 septembre 1372, âgée de seulement 24 ans.\nLe père de Jean Galéas était co-seigneur de Milan avec son frère Barnabé. À la mort de son père, le 4 août 1378, son oncle Barnabé lui concède le gouvernement de la partie occidentale de la Lombardie mais, se considérant seul seigneur de Milan, il désigne ses deux fils Ludovico et Rodolfo comme ses héritiers en mars 1379.\n\nJean Galéas demande à l'empereur Venceslas Ier la charge de vicaire impérial à la suite de son père, charge qui lui est concédée en janvier 1380. Barnabé néglige cette formalité et reste seul au pouvoir.\n\nLe 2 octobre 1380, pour satisfaire les projets de son oncle, Jean Galéas épouse sa cousine Catherine, fille de Barnabé. En 1385, aidé par sa mère Blanche, Jean Galéas met au point un coup d'État au détriment de son oncle beau-père.\n\nLe 6 mai 1385, avec Jacopo dal Verme, Ottone di Mandello et Giovanni Malaspina et à la tête d'une troupe de 500 lances, il fait prisonnier Barnabé et ses deux fils Ludovico et Rodolfo et les enferme dans le château de Porta Giovia et prend le pouvoir. Barnabé meurt en prison, le 19 décembre 1385, empoisonné par les soins de Jean Galéas. Jean Galéas a attendu plus de six ans pour se venger des brimades de son oncle.\n\nLe 7 mai, Jean Galéas se rend à la forteresse de la porte Romaine (it) (Porta Romana). Le Conseil général lui confère le pouvoir sur la cité et du 8 au 14 mai, il occupe toutes les villes du fief. Seules les forteresses résistent plus longtemps.\n\nDès lors, ses ambitions n'ont plus de limites : en 1387, il soumet Vicence et Vérone ; en 1390, c'est Padoue qui est annexée ; le 11 mai 1395 il obtient de l'empereur Venceslas Ier l'élévation au titre de duc contre 100 000 florins d'or  ; ses prétentions de soumettre tout le nord de la péninsule italienne le lancent ensuite à la conquête de Pise, Pérouse, Assise et Sienne.\n\nFlorence, qui se sent directement menacée par les Visconti, arme une ligue qui met un terme à ses projets pan-italiens.\n\nJean Galéas est resté dans l'histoire pour sa folie des grandeurs. Il dépensa, par exemple, 300 000 florins d'or dans de gigantesques travaux d'endiguements pour dévier à son profit le Mincio de Mantoue et la Brenta de Padoue et enlever ainsi tous leurs moyens de défense à ces deux villes. C'est aussi à Jean Galéas que l'on doit l'église et le monastère de la Certosa à Pavie[3], le début des travaux d'édification de la cathédrale (il Duomo), faisant appel aux meilleurs artistes disponibles en Europe, ainsi que le château de Pavie commencé sous son père Galéas II et achevé par ses soins. Ce palais était alors, de loin, la plus splendide résidence princière d'Europe[réf. nécessaire]. Il y transféra sa célèbre bibliothèque et sa grande collection de reliques sacrées en lesquelles il avait une foi tout à fait particulière.\n\nAvant de mourir, Jean Galéas partagea l'État entre ses fils, laissant à Jean Marie le duché, à Philippe Marie le comté de Pavie et à Gabriel Marie, un enfant naturel, la seigneurie de Pise.\n\nIl succomba à l'épidémie de peste de 1402, dans le château de Melegnano, laissant les caisses de l'État exsangues et une veuve en sérieuses difficultés financières. Après sa mort, l'état autoritaire qu'il avait maintenu avec toutes sortes de violences partit rapidement en pièces.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/GiovAmbrogiodePredisattribGianGaleazzoVisconti.jpg",
-    "regne": true
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/GiovAmbrogiodePredisattribGianGaleazzoVisconti.jpg"
   },
   {
     "id": 170,
@@ -4309,7 +4367,8 @@
       "Naples"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 210,
@@ -4322,7 +4381,8 @@
       "Pologne"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 185,
@@ -4335,7 +4395,8 @@
       "Hongrie"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 173,
@@ -4348,7 +4409,8 @@
       "Aragon"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 186,
@@ -4361,7 +4423,8 @@
       "Hongrie"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 190,
@@ -4374,7 +4437,8 @@
       "Ottomans"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 164,
@@ -4387,7 +4451,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 199,
@@ -4412,7 +4477,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 192,
@@ -4425,7 +4491,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 163,
@@ -4438,7 +4505,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 14,
@@ -4463,7 +4531,8 @@
       "Aragon"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 15,
@@ -4488,7 +4557,8 @@
       "Angleterre"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 153,
@@ -4501,7 +4571,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 200,
@@ -4513,7 +4584,8 @@
       "Byzance"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 165,
@@ -4526,7 +4598,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 166,
@@ -4539,7 +4612,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 154,
@@ -4552,7 +4626,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 151,
@@ -4565,7 +4640,8 @@
       "St Empire"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 191,
@@ -4578,7 +4654,8 @@
       "Ottomans"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 16,
@@ -4617,7 +4694,8 @@
       "Papaute"
     ],
     "type": 1,
-    "image": ""
+    "image": "",
+    "regne": true
   },
   {
     "id": 24,

@@ -640,10 +640,10 @@ function openModal(evt, zone) {
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
     var t = Number(evt.type) || 1;
-    typeEl.textContent = t === 1 ? '★★★★ Événement majeur'
-                       : t === 2 ? '★★★ Événement important'
-                       : t === 3 ? '★★ Événement national'
-                       :           '★ Événement local';
+    typeEl.textContent = t === 1 ? '⬛ Niveau 1 — toutes échelles'
+                       : t === 2 ? '🔲 Niveau 2 — siècle, décennie, année'
+                       : t === 3 ? '▪ Niveau 3 — décennie & année'
+                       :           '· Niveau 4 — année uniquement';
     typeEl.className = 'modal-type-badge type' + t;
   }
 
