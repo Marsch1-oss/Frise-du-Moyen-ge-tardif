@@ -3,11 +3,11 @@
 var ZONES = [
   'France', 'Angleterre', 'St Empire', 'Papaute',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
-  'Europe C. & Or.', 'Pologne', 'Russie',
+  'Europe C. & Or.', 'Pologne', 'Russie', 'Scandinavie',
   'Byzance', 'Ottomans', 'Monde islamique', 'Orient',
   'Japon', 'Chine', 'Inde', 'Monde',
   'Alsace',
-  'Art', 'Techniques', 'Sciences', 'Idees'
+  'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'
 ];
 
 var COLORS = {
@@ -36,7 +36,9 @@ var COLORS = {
   'Art':                 { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
   'Techniques':          { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
   'Sciences':            { bg: '#1A4A5C', light: '#E0EEF5', text: '#0A2A3A' },
-  'Idees':               { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' }
+  'Idees':               { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' },
+  'Litterature':         { bg: '#2A5C2A', light: '#E0F0E0', text: '#163316' },
+  'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' }
 };
 
 var ZONE_ALIASES = {
@@ -59,7 +61,9 @@ var ZONE_ALIASES = {
   'Techniques et idees': 'Techniques',
   'Art':                 'Art',
   'Idees':               'Idees',
-  'Idées':               'Idees'
+  'Idées':               'Idees',
+  'Littérature':         'Litterature',
+  'Literature':          'Litterature'
 };
 
 var ROW_H    = 28;
@@ -719,6 +723,33 @@ function closeModal() {
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────*/
+/* ── Zoom + / Zoom - ────────────────────────────────────────────────*/
+function zoomIn() {
+  /* Descend d'un niveau (vue plus détaillée) */
+  if (currentLevel === 1) {
+    /* Depuis vue ensemble → vue siècle : centre sur 1400 par défaut */
+    var century = currentCentury !== null ? currentCentury : 1400;
+    renderLevel(2, century);
+  } else if (currentLevel === 2 && currentCentury !== null) {
+    var decade = currentDecade !== null ? currentDecade : currentCentury + 50;
+    renderLevel(3, decade);
+  } else if (currentLevel === 3 && currentDecade !== null) {
+    var year = currentYear !== null ? currentYear : currentDecade + 5;
+    renderLevel(4, year);
+  }
+}
+
+function zoomOut() {
+  /* Monte d'un niveau (vue plus large) */
+  if (currentLevel === 4) {
+    renderLevel(3, currentDecade);
+  } else if (currentLevel === 3) {
+    renderLevel(2, currentCentury);
+  } else if (currentLevel === 2) {
+    renderLevel(1);
+  }
+}
+
 function goLevel(level) {
   if      (level === 1)                             renderLevel(1);
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
@@ -781,6 +812,11 @@ function updateNavButtons() {
       ? currentYear + ''
       : currentDecade + '\u2013' + (currentDecade + 10);
   }
+  /* Boutons zoom */
+  var btnZoomIn  = document.getElementById('btn-zoom-in');
+  var btnZoomOut = document.getElementById('btn-zoom-out');
+  if (btnZoomIn)  btnZoomIn.disabled  = (currentLevel === 4);
+  if (btnZoomOut) btnZoomOut.disabled = (currentLevel === 1);
 }
 
 /* ── Utilitaires ─────────────────────────────────────────────────────*/

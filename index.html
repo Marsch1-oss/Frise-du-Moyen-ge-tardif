@@ -32,7 +32,23 @@
     .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 0.3rem 1rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
     .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     .nav-btn.active { background: var(--ink); color: var(--parchment); border-color: var(--ink); font-weight: 600; }
-    .nav-btn:disabled { opacity: 0.35; cursor: default; }
+    /* ── Boutons zoom ── */
+    .nav-sep { flex: 0 0 1px; height: 1.4rem; background: var(--border-dark); margin: 0 0.2rem; align-self: center; }
+    .zoom-btn {
+      font-size: 1.05rem; line-height: 1;
+      padding: 0.28rem 0.65rem;
+      border: 1.5px solid var(--border-dark);
+      border-radius: 50%;
+      background: rgba(245,237,216,0.7);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+    }
+    .zoom-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
+    .zoom-btn:disabled { opacity: 0.35; cursor: default; }
+
+        .nav-btn:disabled { opacity: 0.35; cursor: default; }
 
     /* ── Fil d'Ariane ── */
     #breadcrumb { font-size: 0.83rem; color: var(--ink-muted); margin-bottom: 0.8rem; min-height: 1.3em; }
@@ -389,6 +405,9 @@
     <button class="nav-btn" id="btn-level2" onclick="goLevel(2)" disabled>Vue si&egrave;cle</button>
     <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
     <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
+    <span class="nav-sep"></span>
+    <button class="zoom-btn" id="btn-zoom-in"  onclick="zoomIn()"  title="Zoomer (vue plus d&#233;taill&#233;e)">&#128269;+</button>
+    <button class="zoom-btn" id="btn-zoom-out" onclick="zoomOut()" title="D&#233;zoomer (vue plus large)">&#128269;−</button>
   </div>
 
   <div id="breadcrumb"></div>
