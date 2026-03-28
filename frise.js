@@ -757,18 +757,28 @@ function goLevel(level) {
   else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
 }
 
-function navigateDecade(direction) {
+function navigateDecade(direction) { navigatePeriod(direction); }
+
+function navigatePeriod(direction) {
   if (currentLevel === 4 && currentYear !== null) {
     var nextY = currentYear + direction;
     if (nextY < 1290 || nextY > 1509) return;
     renderLevel(4, nextY);
     return;
   }
-  if (currentDecade === null) return;
-  var next = currentDecade + direction * 10;
-  if (next < 1290 || next > 1500) return;
-  currentCentury = Math.floor(next / 100) * 100;
-  renderLevel(3, next);
+  if (currentLevel === 3 && currentDecade !== null) {
+    var nextD = currentDecade + direction * 10;
+    if (nextD < 1290 || nextD > 1500) return;
+    currentCentury = Math.floor(nextD / 100) * 100;
+    renderLevel(3, nextD);
+    return;
+  }
+  if (currentLevel === 2 && currentCentury !== null) {
+    var nextC = currentCentury + direction * 100;
+    if (nextC < 1200 || nextC > 1500) return;
+    renderLevel(2, nextC);
+    return;
+  }
 }
 
 function updateBreadcrumb() {
@@ -817,6 +827,33 @@ function updateNavButtons() {
   var btnZoomOut = document.getElementById('btn-zoom-out');
   if (btnZoomIn)  btnZoomIn.disabled  = (currentLevel === 4);
   if (btnZoomOut) btnZoomOut.disabled = (currentLevel === 1);
+
+  /* Boutons période précédente / suivante : visibles dès le niveau 2 */
+  var prev = document.getElementById('btn-prev');
+  var next = document.getElementById('btn-next');
+  var lbl  = document.getElementById('decade-label');
+  var showNav = currentLevel >= 2;
+  if (prev) prev.style.display = showNav ? '' : 'none';
+  if (next) next.style.display = showNav ? '' : 'none';
+  if (lbl)  lbl.style.display  = showNav ? '' : 'none';
+  if (showNav) {
+    var atStart, atEnd;
+    if (currentLevel === 2) {
+      atStart = currentCentury <= 1300;
+      atEnd   = currentCentury >= 1400;
+      if (lbl) lbl.textContent = currentCentury + '–' + (currentCentury + 100);
+    } else if (currentLevel === 3) {
+      atStart = currentDecade <= 1290;
+      atEnd   = currentDecade >= 1490;
+      if (lbl) lbl.textContent = currentDecade + '–' + (currentDecade + 10);
+    } else {
+      atStart = currentYear <= 1290;
+      atEnd   = currentYear >= 1509;
+      if (lbl) lbl.textContent = currentYear + '';
+    }
+    if (prev) prev.disabled = atStart;
+    if (next) next.disabled = atEnd;
+  }
 }
 
 /* ── Utilitaires ─────────────────────────────────────────────────────*/

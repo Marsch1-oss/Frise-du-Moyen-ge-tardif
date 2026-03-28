@@ -27,9 +27,10 @@
     /* ── Mise en page pleine largeur ── */
     main { padding: 1.4rem 1.8rem 3rem; }
 
-    /* ── Nav niveaux ── */
-    .nav-bar { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
-    .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.9rem; padding: 0.3rem 1rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
+    /* ── Barre supérieure (recherche + niveaux) ── */
+    .top-bar { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.55rem; flex-wrap: wrap; }
+    .nav-bar { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+    .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.28rem 0.9rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
     .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     .nav-btn.active { background: var(--ink); color: var(--parchment); border-color: var(--ink); font-weight: 600; }
     /* ── Boutons zoom ── */
@@ -58,11 +59,11 @@
     .bc-item { font-style: italic; }
 
     /* ── Légende types ── */
-    .type-legend { display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.8rem; color: var(--ink-muted); font-style: italic; flex-wrap: wrap; }
+    /* .type-legend supprimée (usage éditeur uniquement) */
     .type-legend span { display: flex; align-items: center; gap: 0.3rem; }
 
     /* ── Filtre zones ── */
-    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.4rem 0.6rem; margin-bottom: 0.8rem; padding: 0.6rem 1rem; background: rgba(245,237,216,0.7); border: 1px solid var(--border); border-radius: var(--radius); align-items: center; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.4rem 0.6rem; margin-top: 0.8rem; margin-bottom: 0.5rem; padding: 0.6rem 1rem; background: rgba(245,237,216,0.7); border: 1px solid var(--border); border-radius: var(--radius); align-items: center; }
     .filter-title { font-size: 0.8rem; color: var(--ink-muted); font-style: italic; white-space: nowrap; }
     .filter-actions { display: flex; gap: 0.4rem; margin-left: auto; }
     .filter-action-btn { font-family: 'Crimson Pro', serif; font-size: 0.78rem; padding: 0.12rem 0.65rem; border: 1px solid var(--border-dark); border-radius: 12px; background: transparent; color: var(--ink-muted); cursor: pointer; }
@@ -75,8 +76,26 @@
     .zone-cb-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
 
     /* ── Navigation décennale ── */
-    .decade-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.7rem; min-height: 2rem; }
-    #btn-prev, #btn-next { font-family: 'Crimson Pro', serif; font-size: 0.88rem; font-style: italic; padding: 0.28rem 1rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; display: none; }
+    /* ── Barre de contrôle (zoom + navigation période) ── */
+    .control-bar {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.7rem; margin-bottom: 0.55rem;
+      padding: 0.35rem 0.8rem;
+      background: rgba(245,237,216,0.5);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+    .ctrl-nav-btn {
+      font-family: 'Crimson Pro', serif; font-size: 0.88rem; font-style: italic;
+      padding: 0.22rem 0.9rem;
+      border: 1px solid var(--border-dark); border-radius: 20px;
+      background: transparent; color: var(--ink-soft); cursor: pointer;
+      transition: all 0.18s; white-space: nowrap;
+    }
+    .ctrl-nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
+    .ctrl-nav-btn:disabled { opacity: 0.3; cursor: default; }
+    .period-label { font-family: 'Crimson Pro', serif; font-size: 0.88rem; color: var(--ink-muted); font-style: italic; min-width: 8rem; text-align: center; }
+    /* btn-prev/next remplacés par ctrl-nav-btn */
     #btn-prev:hover:not(:disabled), #btn-next:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     #btn-prev:disabled, #btn-next:disabled { opacity: 0.3; cursor: default; }
     #decade-label { font-family: 'IM Fell English', Georgia, serif; font-size: 1rem; color: var(--ink-soft); display: none; }
@@ -263,12 +282,7 @@
     #modal-sources { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 1.2rem; clear: both; }
 
     /* ── Recherche ── */
-    .search-bar {
-      display: flex; align-items: center; gap: 0.6rem;
-      margin-bottom: 0.8rem; padding: 0.5rem 1rem;
-      background: rgba(245,237,216,0.7);
-      border: 1px solid var(--border); border-radius: var(--radius);
-    }
+    .search-bar { display: flex; align-items: center; gap: 0.4rem; flex: 1; min-width: 180px; max-width: 420px; padding: 0; background: none; border: none; }
     .search-bar label { font-size:0.8rem; color:var(--ink-muted); font-style:italic; white-space:nowrap; }
     #search-input {
       flex:1; font-family:'Crimson Pro',Georgia,serif; font-size:0.95rem;
@@ -400,59 +414,31 @@
 
 <main>
 
-  <div class="nav-bar">
-    <button class="nav-btn active" onclick="goLevel(1)">Vue d&rsquo;ensemble</button>
-    <button class="nav-btn" id="btn-level2" onclick="goLevel(2)" disabled>Vue si&egrave;cle</button>
-    <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
-    <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
-    <span class="nav-sep"></span>
-    <button class="zoom-btn" id="btn-zoom-in"  onclick="zoomIn()"  title="Zoomer (vue plus d&#233;taill&#233;e)">&#128269;+</button>
-    <button class="zoom-btn" id="btn-zoom-out" onclick="zoomOut()" title="D&#233;zoomer (vue plus large)">&#128269;−</button>
+  <div class="top-bar">
+    <div class="search-bar">
+      <label for="search-input">&#128269;</label>
+      <input type="text" id="search-input" placeholder="Rechercher&nbsp;: Giotto, Dante, peste…"
+             autocomplete="off" oninput="onSearch(this.value)">
+      <span id="search-count"></span>
+      <button id="search-clear" onclick="clearSearch()">&#10005;</button>
+    </div>
+    <div class="nav-bar">
+      <button class="nav-btn active" onclick="goLevel(1)">Vue d&rsquo;ensemble</button>
+      <button class="nav-btn" id="btn-level2" onclick="goLevel(2)" disabled>Vue si&egrave;cle</button>
+      <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
+      <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
+    </div>
+  </div>
+
+  <div class="control-bar">
+    <button class="zoom-btn" id="btn-zoom-out" onclick="zoomOut()" title="D&#233;zoomer" disabled>&#8722;&#128269;</button>
+    <button class="ctrl-nav-btn" id="btn-prev" onclick="navigatePeriod(-1)" style="display:none;">&larr; P&eacute;riode pr&eacute;c&eacute;dente</button>
+    <span id="decade-label" class="period-label"></span>
+    <button class="ctrl-nav-btn" id="btn-next" onclick="navigatePeriod(1)" style="display:none;">P&eacute;riode suivante &rarr;</button>
+    <button class="zoom-btn" id="btn-zoom-in"  onclick="zoomIn()"  title="Zoomer">+&#128269;</button>
   </div>
 
   <div id="breadcrumb"></div>
-
-  <div class="help-banner">
-    <span class="help-title">&#128218; Navigation</span>
-    <div class="help-steps">
-      <span class="help-step"><span class="help-icon">&#128269;</span> Zoomez en cliquant sur l&rsquo;axe des dates</span>
-      <span class="help-sep">+</span>
-      <span class="help-step"><span class="help-icon">&#128205;</span> Ajoutez ou retirez des zones g&eacute;ographiques</span>
-      <span class="help-sep">+</span>
-      <span class="help-step"><span class="help-icon">&#128269;</span> Recherchez par mot-cl&eacute;</span>
-      <span class="help-note">Ces trois modes sont cumulables &mdash; cliquez sur un &eacute;v&eacute;nement pour ouvrir sa fiche compl&egrave;te.</span>
-    </div>
-  </div>
-
-  <div class="search-bar">
-    <label for="search-input">&#128269; Recherche&nbsp;:</label>
-    <input type="text" id="search-input" placeholder="ex. Giotto, Dante, peste, Florence…"
-           autocomplete="off" oninput="onSearch(this.value)">
-    <span id="search-count"></span>
-    <button id="search-clear" onclick="clearSearch()">&#10005; Effacer</button>
-  </div>
-
-  <div class="type-legend">
-    <span><strong>&#9733;&#9733;&#9733;&#9733;</strong>&nbsp;Majeur &mdash; toutes &eacute;chelles</span>
-    <span><strong>&#9733;&#9733;&#9733;</strong>&nbsp;Important &mdash; si&egrave;cle, d&eacute;cennie, ann&eacute;e</span>
-    <span><strong>&#9733;&#9733;</strong>&nbsp;National &mdash; d&eacute;cennie &amp; ann&eacute;e</span>
-    <span><strong>&#9733;</strong>&nbsp;Local &mdash; ann&eacute;e uniquement</span>
-  </div>
-
-  <div class="filter-bar">
-    <span class="filter-title">Afficher&nbsp;:</span>
-    <div id="zone-filters" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div>
-    <div class="filter-actions">
-      <button class="filter-action-btn" onclick="filterAll(true)">Tout</button>
-      <button class="filter-action-btn" onclick="filterAll(false)">Aucun</button>
-    </div>
-  </div>
-
-  <div class="decade-nav">
-    <button id="btn-prev" onclick="navigateDecade(-1)">&larr; Page pr&eacute;c&eacute;dente</button>
-    <span id="decade-label"></span>
-    <button id="btn-next" onclick="navigateDecade(1)">Page suivante &rarr;</button>
-  </div>
 
   <div id="period-banner">
     <span class="pb-label" id="pb-label">XIVe et XVe si&egrave;cle</span>
@@ -462,6 +448,27 @@
   <div class="frise-card">
     <div id="frise-container">
       <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-title">Zones &amp; th&egrave;mes&nbsp;:</span>
+    <div id="zone-filters" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div>
+    <div class="filter-actions">
+      <button class="filter-action-btn" onclick="filterAll(true)">Tout</button>
+      <button class="filter-action-btn" onclick="filterAll(false)">Aucun</button>
+    </div>
+  </div>
+
+  <div class="help-banner">
+    <span class="help-title">&#128218; Navigation</span>
+    <div class="help-steps">
+      <span class="help-step"><span class="help-icon">&#128269;</span> Cliquez sur l&rsquo;axe pour zoomer &bull; utilisez &#8722;&#128269; / +&#128269; pour changer d&rsquo;&eacute;chelle</span>
+      <span class="help-sep">&bull;</span>
+      <span class="help-step"><span class="help-icon">&larr;&rarr;</span> Naviguez entre les p&eacute;riodes avec les fl&egrave;ches</span>
+      <span class="help-sep">&bull;</span>
+      <span class="help-step"><span class="help-icon">&#128269;</span> Recherchez par mot-cl&eacute;</span>
+      <span class="help-note">Cliquez sur un &eacute;v&eacute;nement pour ouvrir sa fiche compl&egrave;te.</span>
     </div>
   </div>
 
