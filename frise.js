@@ -78,6 +78,7 @@ var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
 var activeZones    = null;
+var detailLevel    = 1;  /* 1=Essentiel, 2=Détaillé, 3=Complet */
 
 function initActiveZones() {
   activeZones = {};
@@ -91,10 +92,10 @@ function normalizeZone(z) {
 
 function visibleAtLevel(evt, level) {
   var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  if (isNaN(t) || t === 1) return true;   /* Majeur    : tous niveaux */
-  if (t === 2) return level >= 2;          /* Important : siècle, décennie, année */
-  if (t === 3) return level >= 3;          /* National  : décennie, année */
-  if (t === 4) return level >= 4;          /* Local     : année uniquement */
+  if (isNaN(t) || t === 1) return true;   /* Niveau 1 : toutes échelles */
+  if (t === 2) return level >= 3;          /* Niveau 2 : décennie & année seulement */
+  if (t === 3) return level >= 3 && detailLevel >= 2; /* Niveau 3 : décennie si détail ≥ Détaillé */
+  if (t === 4) return level >= 3 && detailLevel >= 3; /* Niveau 4 : décennie si Complet */
   return true;
 }
 
@@ -113,7 +114,8 @@ function loadEvents() {
           return e;
         });
         buildFilterBar();
-        renderLevel(1);
+        currentCentury = 1300;
+        renderLevel(2, 1300);  /* Démarrage vue siècle XIVe */
       } catch(err) {
         document.getElementById('frise-container').innerHTML =
           '<p class="error">Erreur JSON : ' + err.message + '</p>';
@@ -740,13 +742,13 @@ function zoomIn() {
 }
 
 function zoomOut() {
-  /* Monte d'un niveau (vue plus large) */
+  /* Monte d'un niveau — le niveau minimum est le siècle (2) */
   if (currentLevel === 4) {
     renderLevel(3, currentDecade);
   } else if (currentLevel === 3) {
-    renderLevel(2, currentCentury);
+    renderLevel(2, currentCentury !== null ? currentCentury : 1300);
   } else if (currentLevel === 2) {
-    renderLevel(1);
+    renderLevel(1);  /* Vue d'ensemble si on insiste */
   }
 }
 
@@ -755,6 +757,32 @@ function goLevel(level) {
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
   else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
   else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
+}
+
+/* ── Niveau de détail (vue décennale) ───────────────────────────────*/
+function setDetailLevel(n) {
+  detailLevel = n;
+  /* Met à jour les boutons */
+  var btns = document.querySelectorAll('.detail-btn');
+  btns.forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.level) === n);
+  });
+  /* Rafraîchit la frise */
+  refreshFrise();
+}
+
+function updateDetailBar() {
+  var bar  = document.getElementById('detail-bar');
+  var hint = document.getElementById('detail-hint');
+  if (!bar) return;
+  bar.style.display = (currentLevel >= 3) ? 'flex' : 'none';
+  if (hint) {
+    hint.textContent = detailLevel === 1
+      ? '— niveaux 1 & 2'
+      : detailLevel === 2
+      ? '— niveaux 1, 2 & 3'
+      : '— tous les niveaux';
+  }
 }
 
 function navigateDecade(direction) { navigatePeriod(direction); }
@@ -826,7 +854,10 @@ function updateNavButtons() {
   var btnZoomIn  = document.getElementById('btn-zoom-in');
   var btnZoomOut = document.getElementById('btn-zoom-out');
   if (btnZoomIn)  btnZoomIn.disabled  = (currentLevel === 4);
-  if (btnZoomOut) btnZoomOut.disabled = (currentLevel === 1);
+  if (btnZoomOut) btnZoomOut.disabled = false; /* jamais désactivé — on peut toujours remonter */
+
+  /* Barre de détail */
+  updateDetailBar();
 
   /* Boutons période précédente / suivante : visibles dès le niveau 2 */
   var prev = document.getElementById('btn-prev');
