@@ -92,10 +92,20 @@ function normalizeZone(z) {
 
 function visibleAtLevel(evt, level) {
   var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  if (isNaN(t) || t === 1) return true;   /* Niveau 1 : toutes échelles */
-  if (t === 2) return level >= 3;          /* Niveau 2 : décennie & année seulement */
-  if (t === 3) return level >= 3 && detailLevel >= 2; /* Niveau 3 : décennie si détail ≥ Détaillé */
-  if (t === 4) return level >= 3 && detailLevel >= 3; /* Niveau 4 : décennie si Complet */
+  if (isNaN(t)) t = 1;
+
+  /* Vue annuelle : tout visible */
+  if (level === 4) return true;
+
+  /* Vue siècle : niveau 1 uniquement */
+  if (level === 2) return t === 1;
+
+  /* Vue décennale : selon le filtre Affichage */
+  /* level === 3 */
+  if (t === 1) return true;                      /* Essentiel, Détaillé, Complet */
+  if (t === 2) return detailLevel >= 1;           /* Essentiel+ */
+  if (t === 3) return detailLevel >= 2;           /* Détaillé+ */
+  if (t === 4) return detailLevel >= 3;           /* Complet uniquement */
   return true;
 }
 
@@ -636,6 +646,25 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   return chip;
 }
 
+/* ── Lightbox image ─────────────────────────────────────────────────*/
+function openLightbox(src, caption) {
+  var lb  = document.getElementById('img-lightbox');
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-caption');
+  if (!lb || !img) return;
+  img.src = src;
+  img.alt = caption || '';
+  if (cap) cap.textContent = caption || '';
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  var lb = document.getElementById('img-lightbox');
+  if (lb) lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 /* ── Modale ──────────────────────────────────────────────────────────*/
 function openModal(evt, zone) {
   var col = COLORS[zone] || COLORS['France'];
@@ -646,10 +675,10 @@ function openModal(evt, zone) {
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
     var t = Number(evt.type) || 1;
-    typeEl.textContent = t === 1 ? '⬛ Niveau 1 — toutes échelles'
-                       : t === 2 ? '🔲 Niveau 2 — siècle, décennie, année'
-                       : t === 3 ? '▪ Niveau 3 — décennie & année'
-                       :           '· Niveau 4 — année uniquement';
+    typeEl.textContent = t === 1 ? '⬛ Niveau 1 — visible dès la vue siècle'
+                       : t === 2 ? '🔲 Niveau 2 — vue décennale Essentiel'
+                       : t === 3 ? '▪ Niveau 3 — vue décennale Détaillé'
+                       :           '· Niveau 4 — vue décennale Complet';
     typeEl.className = 'modal-type-badge type' + t;
   }
 
@@ -689,10 +718,29 @@ function openModal(evt, zone) {
       captionEl.textContent  = evt.legende || '';
       captionEl.style.display = evt.legende ? 'block' : 'none';
     }
+    /* Bouton loupe */
+    var zoomBtn = imgWrap.querySelector('.img-zoom-btn');
+    if (!zoomBtn) {
+      zoomBtn = document.createElement('button');
+      zoomBtn.className = 'img-zoom-btn';
+      zoomBtn.title = 'Agrandir l\u2019image';
+      zoomBtn.textContent = '\uD83D\uDD0D';
+      imgWrap.appendChild(zoomBtn);
+    }
+    zoomBtn.onclick = (function(src, cap) {
+      return function(e) { e.stopPropagation(); openLightbox(src, cap); };
+    })(evt.image, evt.legende || evt.titre);
+    /* Clic sur l'image aussi */
+    imgEl.style.cursor = 'zoom-in';
+    imgEl.onclick = (function(src, cap) {
+      return function() { openLightbox(src, cap); };
+    })(evt.image, evt.legende || evt.titre);
     imgWrap.style.display = 'block';
   } else {
     imgWrap.style.display = 'none';
     imgEl.src = '';
+    imgEl.onclick = null;
+    imgEl.style.cursor = '';
   }
 
   /* ── Vidéo YouTube ── */
@@ -1189,6 +1237,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target === this) closeModal();
   });
   document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeLightbox(); }
     if (e.key === 'Escape') {
       closeModal();
       if (searchTerm) clearSearch();

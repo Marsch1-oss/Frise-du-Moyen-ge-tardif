@@ -261,6 +261,57 @@
     #modal-title { font-family: 'IM Fell English', Georgia, serif; font-size: 2.2rem; color: var(--ink); margin-bottom: 1.2rem; line-height: 1.2; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; text-align: center; }
     /* Image flottante à droite, texte qui coule autour puis reprend pleine largeur */
     #modal-body { display: block; }
+    /* ── Lightbox image ── */
+    #img-lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(10,6,2,0.88);
+      z-index: 500;
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    #img-lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 92vw; max-height: 92vh;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    #lightbox-img {
+      max-width: 100%; max-height: 82vh;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      object-fit: contain;
+    }
+    #lightbox-caption {
+      color: rgba(245,237,216,0.8);
+      font-size: 0.82rem; font-style: italic;
+      text-align: center; margin-top: 0.7rem;
+      max-width: 600px;
+    }
+    .lightbox-close {
+      position: absolute; top: -2rem; right: 0;
+      background: none; border: none;
+      color: rgba(245,237,216,0.7); font-size: 1.4rem;
+      cursor: pointer; line-height: 1;
+      transition: color 0.15s;
+    }
+    .lightbox-close:hover { color: #fff; }
+
+    /* ── Bouton loupe sur image modale ── */
+    #modal-img-wrap { position: relative; }
+    .img-zoom-btn {
+      position: absolute; bottom: 6px; right: 6px;
+      background: rgba(10,6,2,0.55);
+      border: none; border-radius: 50%;
+      color: #fff; font-size: 0.85rem;
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 5;
+    }
+    #modal-img-wrap:hover .img-zoom-btn { opacity: 1; }
+
     #modal-img-wrap {
       float: right;
       clear: right;
@@ -424,7 +475,58 @@
       :root { --label-w: 75px; }
       #modal-box { padding: 2rem 1.2rem 2.5rem; }
       #modal-title { font-size: 1.6rem; }
-      #modal-img-wrap { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem 0; }
+      /* ── Lightbox image ── */
+    #img-lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(10,6,2,0.88);
+      z-index: 500;
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    #img-lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 92vw; max-height: 92vh;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    #lightbox-img {
+      max-width: 100%; max-height: 82vh;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      object-fit: contain;
+    }
+    #lightbox-caption {
+      color: rgba(245,237,216,0.8);
+      font-size: 0.82rem; font-style: italic;
+      text-align: center; margin-top: 0.7rem;
+      max-width: 600px;
+    }
+    .lightbox-close {
+      position: absolute; top: -2rem; right: 0;
+      background: none; border: none;
+      color: rgba(245,237,216,0.7); font-size: 1.4rem;
+      cursor: pointer; line-height: 1;
+      transition: color 0.15s;
+    }
+    .lightbox-close:hover { color: #fff; }
+
+    /* ── Bouton loupe sur image modale ── */
+    #modal-img-wrap { position: relative; }
+    .img-zoom-btn {
+      position: absolute; bottom: 6px; right: 6px;
+      background: rgba(10,6,2,0.55);
+      border: none; border-radius: 50%;
+      color: #fff; font-size: 0.85rem;
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 5;
+    }
+    #modal-img-wrap:hover .img-zoom-btn { opacity: 1; }
+
+    #modal-img-wrap { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem 0; }
     }
   </style>
 </head>
@@ -501,6 +603,15 @@
       <span class="help-note">Cliquez sur un &eacute;v&eacute;nement pour ouvrir sa fiche compl&egrave;te.</span>
     </div>
   </div>
+
+<!-- Lightbox image -->
+<div id="img-lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+</div>
 
 </main>
 
