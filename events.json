@@ -122,6 +122,20 @@
     "sources": "Grandes Chroniques de France"
   },
   {
+    "id": 473,
+    "titre": "Abu Yaqub Yusuf an-Nasr roi du Maroc",
+    "date": 1286,
+    "mois": 3,
+    "date_fin": 1307,
+    "mois_fin": 5,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Fils d'Abû Yûsuf Ya`qûb, il lui succéda sans difficulté en 1286 comme sultan mérinide.\nAbû Ya`qûb Yûsuf an-Nasr dut faire face à de nombreuses révoltes qui montrent que l'état mérinide était encore fragile. Ayant confié à l'un de ses frères une troupe pour mater une rébellion, celui-ci au lieu de le combattre s'allia aux rebelles pour renverser le sultan. Puis ce fut un autre parent qui s'insurgea, puis ce fut un des fils d'Abû Ya`qûb Yûsuf (1288). Quatre années plus tard c'est la tribu des Benî Wattas qui se révolte. Le fils rebelle qui s'était réfugié à Tlemcen réitèra vainement sa tentative.\n\nIl laissa de côté l'Espagne, n'intervenant que contraint par les évènements. En 1291, Don Sanche de Castille rompit le traité de paix signé en 1285. Le Castillan s'allia aux Nasrides de Grenade contre les Mérinides. Les Castillans fournissaient les hommes et les Nasrides le financement. Tarifa qui appartenait aux Mérinides est assiégée pendant quatre mois par Don Sanche. La ville capitule en septembre 1291. Don Sanche garde la place malgré son accord avec les Nasrides. Mohammed al-Faqîh menait un jeu de bascule entre ses deux ennemis potentiels, les Mérinides et les Castillans. Il renverse ses alliances et se met du côté des Mérinides contre les Castillans. Abû Ya`qûb Yûsuf lassé des revirements de Mohammed al-Faqîh l'oblige à y mettre le prix. Comme prix de cette alliance, Abû Ya`qûb Yûsuf reçut un des quatre exemplaires du Coran que le calife Uthman avait fait rédiger et que les Omeyyades avaient amené de Damas à Grenade. Abû Ya`qûb Yûsuf mit le siège devant Tarifa mais ce fut un échec.\n\nLes Abdalwadides de Tlemcen sont un plus gros problème car ils représentent une menace directe. Ils avaient accueilli le fils de félon d'Abû Ya`qûb Yûsuf. Tlemcen fut menacée à plusieurs reprises jusqu'en 1299 où il mit le siège devant la ville avec l'intention de la prendre à tout prix. Le siège dura, pendant ce temps un Mérinide rival prenait Ceuta. Finalement Abû Ya`qûb Yûsuf mourut assassiné par un eunuque pour une obscure affaire de harem (1307).",
+    "image": ""
+  },
+  {
     "id": 405,
     "titre": "Matteo Visconti il Grande capitaine du peuple de Milan",
     "date": 1287,
@@ -1415,6 +1429,20 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 472,
+    "titre": "Abu Thabit Amir roi Mérénide",
+    "date": 1307,
+    "mois": 5,
+    "date_fin": 1308,
+    "mois_fin": 7,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Il succéda à son grand-père Abû Yûsuf Ya`qûb ben `Abd al-Haqq comme sultan mérinide en 1307 et mourut de maladie en 1308.. \nDès le début de son règne en 1307, ce petit-fils d'Abû Ya`qûb Yûsuf se voit contesté par trois puis quatre prétendants. Les trois premiers furent vite éliminés et ce fut au cours de la campagne contre le quatrième où il fonda Tétouan qu'Abû Thâbit mourut de maladie (1308)..",
+    "image": ""
+  },
+  {
     "id": 119,
     "titre": "Édouard II d'Angleterre épouse à Boulogne Isabelle de France",
     "date": 1308,
@@ -1562,6 +1590,20 @@
     "description": "Signature du traité d’Alcala de Henares (es) entre le roi Ferdinand IV de Castille et les ambassadeurs du roi Jacques II d’Aragon  .\nLe traité représente un accord militaire et politique important entre les puissances chrétiennes de la péninsule ibérique (Castille et Aragon), coordonnant leurs efforts pour la ReconquistaLe 19 décembre 1308, dans le palais archiépiscopal de Alcalá de Henares (Espagne), le traité est signé entre Ferdinand IV et les représentants aragonais. Wiki34+1Les principaux objectifs du traité : relancer la guerre de la Reconquista contre le royaume musulman de Granada, et organiser le partage des territoires conquis entre Castille et Aragon. Wiki34+2elretohistorico.com+2Les modalités : la guerre doit commencer le 24 juin 1309. Les forces castillanes attaqueraient les places de Algeciras et Gibraltar ; tandis que les troupes aragonaises se chargeront de conquérir la ville d Almería. En échange, Aragon se voit garantir une part importante des territoires reconquis : notamment le royaume d’Almería (à l’exception de quelques places restituées à la Castille selon l’accord). Wiki34+1Le traité prévoyait en outre que Castille et Aragon ne signeraient pas une paix séparée avec le royaume de Granada — afin d’assurer une alliance commune et éviter les trahisons.",
     "image": "",
     "sources": "https://es.wikipedia.org/wiki/Tratado_de_Alcal%C3%A1_de_Henares"
+  },
+  {
+    "id": 471,
+    "titre": "Abu al-Rabi Sulayman",
+    "date": 1308,
+    "mois": 7,
+    "date_fin": 1310,
+    "mois_fin": 11,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "En allant réprimer une révolte à Taza il mourut emporté par la maladie (1310).",
+    "image": ""
   },
   {
     "id": 4,
@@ -1808,6 +1850,20 @@
     ],
     "type": 2,
     "description": "21 octobre : un synode réuni à Salamanque déclare les Templiers innocents. Des synodes ont fait de même et à Ravenne le 17 juin à Mayence le 1er juillet. Le roi Denis Ier de Portugal prend leur défense et restaurera l'ordre en 1318 sous le nom d’ordre du Christ",
+    "image": ""
+  },
+  {
+    "id": 470,
+    "titre": "Abu Saïd Uthman II roi du Maroc",
+    "date": 1310,
+    "mois": 11,
+    "date_fin": 1331,
+    "mois_fin": 8,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Il succéda à son petit-neveu Abu al-Rabi Sulayman comme sultan mérinide en 1310[3]. Il mourut en 1331.\nPacifiste et pieux il préféra la construction de mosquées et de madrasas à la guerre. Mais son fils Abû `Ali 'Omar désigné comme successeur se révolta contre son père. Abû Sa`id dans un premier temps fut démis par ce fils (1315), mais il put reprendre le pouvoir et désigner comme héritier son autre fils Abû al-Hasan.",
     "image": ""
   },
   {
@@ -2964,6 +3020,21 @@
     "type": 3,
     "description": "Cortes de Tarragone. Le roi d'Aragon Jacques le Juste scelle par une union personnelle indissoluble les liens de Valence et de la Catalogne avec l’Aragon et confirme les privilèges des Aragonais",
     "image": ""
+  },
+  {
+    "id": 481,
+    "titre": "Magnus IV roi de Suède",
+    "date": 1319,
+    "mois": 7,
+    "date_fin": 1363,
+    "mois_fin": 11,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 1,
+    "description": "Magnus Eriksson, né en 1316 et mort le 1er décembre 1374 à Bergen (Norvège), est roi de Suède de 1319 à 1363 (Magnus IV) et roi de Norvège de 1319 à 1343 (Magnus VII).\nMagnus est le fils d'Erik Magnusson, duc de Södermanland et de son épouse, la princesse norvégienne Ingeborg Hakonsdatter de Norvège. Par son père, il est le neveu du roi de Suède Birger Magnusson, tandis que par sa mère, il est le petit-fils du roi de Norvège Håkon V.\nMagnus est élu roi de Norvège le 28 juin 1319, comme successeur de son grand-père maternel, puis roi de Suède le 8 juillet suivant par les partisans de son père, après la déposition de son oncle. Il est placé jusqu'en 1332, lorsque débute son règne effectif, sous la régence d'un Conseil constitué auquel participent, au début du moins, le « Drots » Mats Kättilmundson et la mère du roi Ingeborg Hakonsdatter dont l'action personnelle se heurte aux intérêts de l'aristocratie et qui est écartée en 1326/1327. Le roi devient majeur en 1331. Il doit effectuer son « eriksgata » (visite aux assemblées régionales afin de faire confirmer son élection) au début de l'année 1335 et prêter serment la même année devant l'Assemblée du royaume sur l'ordonnance régissant l'élection royale.\n\nLes premières années de règne du jeune roi sont bénéfiques. Il profite de l'effondrement de la puissance danoise pour acquérir en 1333 les provinces côtières méridionales détachées du royaume de Danemark : Scanie, Blekinge, et plus tard, Halland. En 1350, il fait réaliser la compilation d'un code applicable dans toutes les campagnes, et d'une loi municipale générale. Ces deux mesures devaient contribuer grandement à l'unification administrative du pays. Peu après, le royaume est touché par la peste noire et sa population décimée.\n\nLe roi Magnus négligeant la Norvège au profit de la Suède, les nobles norvégiens mécontents l'obligent, dès 1343, à renoncer au trône en faveur de son fils cadet qui règne sous le nom de Håkon VI. Un conseil nobiliaire gouverne alors la Norvège au nom du jeune roi, et l'union personnelle entre les deux royaumes est brisée, car il doit nommer l'année suivante son fils aîné Érik héritier de la Suède.\n\nAu cours des années suivantes, les besoins d'argent du roi l'incitent à mettre en œuvre une politique fiscale anti-aristocratique et anticléricale. En Suède, la rébellion de son fils aîné Érik XII l'oblige à partager le pouvoir en l'associant au trône 1356. Ce dernier meurt trois ans plus tard de la peste, permettant à Magnus de recouvrer seul la couronne de Suède, mais il doit accepter d'associer son fils cadet Håkon II (roi de Norvège Håkon VI depuis 1319) au trône suédois en 1362. En 1360, le roi Valdemar IV de Danemark met à profit ces troubles pour récupérer la Scanie, le Halland et le Blekinge.\nL'alliance entre Håkon et le roi danois Valdemar IV, dont il épouse la fille Marguerite, provoque la déposition du père et du fils (1363 et 1364), puis l'accession au trône de Suède d'Albert de Mecklembourg, le neveu de Magnus IV. Ce dernier, capturé dans les combats qui suivent, reste emprisonné de 1365 à 1371 avant d'être libéré par son fils.\nLe 1er décembre 1374, l'ancien roi meurt noyé près de Bergen, en Norvège, où il s'est retiré.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Armoiries_de_Su%C3%A8de_%28Gelre_modernise%29.svg/langfr-250px-Armoiries_de_Su%C3%A8de_%28Gelre_modernise%29.svg.png",
+    "regne": true
   },
   {
     "id": 206,
@@ -4662,6 +4733,297 @@
     "image": ""
   },
   {
+    "id": 457,
+    "titre": "Traité de Haguenau",
+    "date": 1329,
+    "mois": 8,
+    "zones": [
+      "Alsace"
+    ],
+    "type": 4,
+    "description": "6 août : traité de Haguenau entre Louis IV de Bavière et Albert le Sage. \nLes deux frères héritiers de la dynastie des Habsbourg, Frédéric le Bel et Albert le Sage  par le traité de Haguenau, renoncent à toute prétention au royaume de Germanie et reconnaissent Louis IV de Wittelsbach comme empereur. En échange, ce dernier leur reconnaît des droits sur l'héritage à venir sur la maison de Goritz : l'État de Carinthie avec la marche de Carniole. Leur patrimoine s'accroît donc en 1335 après la mort d'Henri de Goritz[1]. L'héritière d'Henri, Marguerite de Goritz, n'a pu garder que le comté de Tyrol.\nÀ la suite de son élection au trône du Saint-Empire en 1273, Rodolphe Ier accorde à Haguenau une charte de franchises le 8 décembre 1275[1. Le statut de « ville d'Empire » est définitivement reconnu à la cité qui dispose ainsi de l'immédiateté impériale avec droit de siéger à la Diète d'Empire : elle n'est désormais plus un bien personnel du souverain mais un état du Saint-Empire à part entière comme le confirme à nouveau Albert Ier en 1299. Elle intègre le Grand-Bailliage d'Alsace (Reichslandvogtei im Elsass) qui administre les biens impériaux de la région, notamment la forêt de Haguenau (Hagenauer Reichswald) et les villages d'Empire avoisinants. Les institutions municipales sont définitivement établies au milieu du XIVe siècle avec l'adoption de la Lettre des Vingt-Quatre comme constitution le 26 octobre 1331. Celle-ci permet à vingt-quatre représentants des corporations d'intégrer le conseil aux côtés des douze échevins afin d'associer la bourgeoisie au gouvernement de la ville. Le texte est approuvé par Louis IV le 6 mars 1332, et à nouveau confirmé par Venceslas Ier en 1379. Avec les autres villes impériales de la plaine d'Alsace, Haguenau forme en 1354 une alliance connue sous le nom de Décapole qui doit garantir une assistance réciproque entre ses dix membres face aux menaces extérieures. Accueillant le siège administratif du Grand-Bailliage d'Alsace, la cité devient par conséquent la capitale de l'alliance. Lorsque la ville est assiégée en 1359 par le prince-évêque de Strasbourg, Jean II de Lichtenberg, ses alliées viennent à son secours et lui permettent de régler la situation sans dommage pour elle[. La cité devient un foyer artistique important grâce au talent des copistes et des enlumineurs qu'elle accueille, notamment Diebold Lauber",
+    "image": ""
+  },
+  {
+    "id": 455,
+    "titre": "1eres  horloges mécaniques",
+    "date": 1330,
+    "zones": [
+      "Techniques"
+    ],
+    "type": 1,
+    "description": "Vers 1330- 1336  Apparition des premières horloge mécaniques. \nLe passage à l'heure mécanique ne s'est pas traduit dans le langage »[8], il n'a pas provoqué de changement de terminologie : on a simplement conservé le terme d’horologium, le même que pour les horloges à eau.\n\nSi les mentions de plus en plus fréquentes d'« horologia » dans les registres paroissiaux incitent à penser qu'une nouvelle technologie est apparue à cette époque[e], la difficulté d'interprétation est récurrente : s'agit-il d'« horologia » hydrauliques ou mécaniques ?\n\nOn trouve plus de trente témoignages pour toute l'Europe référencés pour cette période. Dans ces textes, on constate l'achat de fer et de poids ainsi que l'acquisition d'horloges de prix dans les monastères, les cathédrales et les demeures princières. Ces prix sont souvent considérables : six marks pour l'horloge du couvent de Colmar en 1278, trente livres pour celle de Canterbury en 1292, cinquante livres pour une simple réparation [ou transformation ?] de l'horloge de la cathédrale de Sens en 1319[f],[9].\nPetit à petit, l'horloge mécanique, dont le mouvement est constamment entretenu par un poids moteur, va se substituer à la fastidieuse horloge à eau qu'il faut sans cesse nettoyer et remplir ou vider. Il semble que ces premières horloges - comme les horloges à eau - aient eu pour première fonction de sonner une heure particulière (réveil par exemple) et un peu plus tard sonner plusieurs heures de la journée[10] ; ces horloges étaient « aveugles » : elles ne possédaient pas de cadran ! Le déclenchement de la sonnerie devait s'effectuer à partir de cheville(s) situées sur une roue du mécanisme.\nC'est à Milan, en 1336, qu'une horloge particulière est installée sur un clocher de la ville. Sa particularité, sonner les vingt-quatre heures du jour avec un nombre de coups correspondant à l'heure du moment :\n« une note à la première, deux coups à la deuxième, trois à la troisième et quatre à la quatrième… »\nCette façon admirable de sonner automatiquement les heures, utile pour toutes les catégories de la population, est une véritable innovation. C'est ce nouveau principe de sonnerie, fascinant, qui sera le déclencheur de la diffusion des horloges « sonnantes ».Fortes de leur succès auprès des populations, les horloges sonnantes vont rapidement se propager ; les villes italiennes seront leur seul berceau dans la première moitié du XIVe siècle[12], puis elles essaimeront dans toute l'Europe au cours des cinquante années suivantes.\nAvec le temps, les nouveaux besoins et le progrès technique elles vont aussi s'exposer, se complexifier, se miniaturiser[13] :\nainsi, pour visualiser les heures, l'horloge sera-t-elle munie d'un cadran divisé en vingt-quatre heures. Celui-ci tournait à l'origine devant un index fixe[h], puis, il deviendra statique avec une unique aiguille des heures. Sa division - en vingt-quatre heures - n'étant pas pratique pour lire et surtout compter les heures sonnantes, le cadran se simplifiera avec une chiffraison de douze heures[10]. L'horloge prendra alors place en haut des tours, clochers et beffrois où elle sera visible et entendue de tous, ceci dès avant les années 1400 ;",
+    "image": ""
+  },
+  {
+    "id": 456,
+    "titre": "Jean de Luxembourg chevauchée en Lombardie",
+    "date": 1330,
+    "date_fin": 1333,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "En 1330, le conflit entre le pape Jean XXII et l'empereur Louis IV tourne à l'avantage du premier. Louis IV, excommunié, tente de nommer un antipape mais, se retrouvant discrédité, est obligé de quitter l'Italie où il n'a plus de soutien. Jean XXII souhaite profiter de l'affaiblissement de l'empereur et de la dissolution de la ligue gibeline, qui n'a plus de chef, ni de raison d'être, pour prendre le contrôle de toute l'Italie. Jean de Luxembourg a des vues sur la Lombardie. L'Italie du Nord est en proie à de nombreux conflits. La ville de Brescia est l'objet de l'un d'eux. Cette ville guelfe, assiégée par les gibelins favorables à l'empereur Louis IV, fait appel à Jean de Bohême. Il y répond en décembre 1330 et, les ayant libérés, il est accueilli par les Brescians, qui lui donnent la souveraineté de la ville. Continuant sa lutte contre les gibelins, il met la main en 1331 sur plusieurs villes dont Bergame, Pavie, Verceil et Novare qui lui ouvrent leurs portes[7]. Il continue son offensive et s'empare de villes aux confins des États pontificaux : Parme, Reggio et Modène. Il prend aussi Luques ce qui inquiète les Florentins. Des négociations s'engagent avec les autorités pontificales, et le 17 avril 1331 Jean de Luxembourg restitue Parme, Reggio et Modène, mais les récupère comme fiefs tenus du Saint-Siège[8]. À ce moment, il semble possible de créer un royaume guelfe en Italie du Nord subordonné à l'autorité pontificale équivalent au royaume de Naples, pour l'Italie du Sud. Cela permettrait aussi de limiter les possibilités pour Robert d'Anjou, roi de Naples, de soumettre la papauté à un véritable protectorat. Louis IV, voyant que Jean de Luxembourg s'est entendu avec le pape, et qu'il devient trop puissant, soulève la Bohême contre lui. Mais Jean de Luxembourg recouvre rapidement son autorité et agrandit même ses États en Lusace et Moravie.\nIl fréquente de longue date la cour de Philippe VI[6] et il vient y chercher un soutien français dans les affaires lombardes. Il négocie à Fontainebleau un traité d'alliance, qui serait cimenté par le mariage d'une de ses filles avec le futur Jean le Bon, fils du roi Philippe VI. Les clauses militaires du traité de Fontainebleau stipulent qu'en cas de guerre, le roi de Bohême devra se joindre à l'armée du roi de France avec quatre cents hommes d'armes, si le conflit se déroule en Champagne ou dans l'Amiénois ; avec trois cents hommes, si le théâtre des opérations est plus éloigné. Les clauses politiques prévoient que la Couronne lombarde ne serait pas contestée au roi de Bohême, s'il parvient à la conquérir ; et que s'il peut disposer du royaume d'Arles, celui-ci reviendrait à la France. Enfin la ville de Lucques est cédée au roi de France. Le 24 décembre 1332, Jean de Luxembourg et sa troupe prennent congé du roi Philippe VI de Valois pour entreprendre une expédition en Italie, afin d'établir, avec l'accord du pape Jean XXII, qu'il est allé rencontrer à Avignon, un royaume ami en Lombardie. Jean de Marigny, évêque de Beauvais, principal conseiller du roi, partant en pèlerinage en Terre sainte, les accompagne. L'armée du roi de Bohême est complétée en route par de nombreux seigneurs de la vallée du Rhône. Le chroniqueur, Giovanni Villani, écrit que le roi Jean de Bohême avait avec lui plus de huit cents chevaliers originaires de France et de Bourgogne. Mais Robert d'Anjou, roi de Naples et comte de Provence, ne peut qu'être hostile à ce projet, soutenu par le pape Jean XXII d'autant plus que les villes italiennes, ayant depuis longtemps gouté à leur indépendance, il n'est plus possible dans les faits de leur imposer leur soumission à un royaume guelfe, comme c'est le cas en Italie du Sud. Guelfes et gibelins s'allient et créent une ligue à Ferrare, qui met à mal les forces de Jean de Luxembourg et de Bertrand du Pouget[9]. Brescia, Bergame, Modène et Pavie retombent à l'automne 1332 aux mains des Visconti. Jean de Luxembourg retourne en Bohême en 1333 et Bertrand du Pouget est chassé de Bologne par une insurrection en 1334",
+    "image": ""
+  },
+  {
+    "id": 458,
+    "titre": "Exécution du comte de Kent",
+    "date": 1330,
+    "mois": 3,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Contexte : Edmond de Woodstock (5 août 1301 – 19 mars 1330), 1er comte de Kent, est le sixième fils d'Édouard Ier, roi d'Angleterre, et l'un des demi-frères d'Édouard II. Édouard Ier a initialement prévu d'accorder des terres à Edmond, mais lorsqu'il meurt en 1307, Édouard II ne suit pas les intentions de son père, en partie à cause des faveurs qu'il accorde à Pierre Gaveston. Edmond reste néanmoins fidèle à son frère et est créé comte de Kent en 1321. Il participe activement à l'administration du roi, tant dans les domaines militaire que diplomatique, et en 1322, aide son frère à écraser la rébellion des barons. Le mécontentement vis-à-vis du roi ne cesse pourtant de croître, et Edmond en est peu à peu affecté. Les divergences entre le roi et son frère sont principalement dues à la préférence qu'accorde Édouard II à ses nouveaux favoris, Hugues le Despenser père et fils.\nEn 1326, Edmond rejoint la rébellion conduite par la reine Isabelle et Roger Mortimer, qui aboutit à la déposition d'Édouard II. Néanmoins, Edmond ne s'entend pas avec le nouveau régime, et en 1330, il est arrêté alors qu'il projette une autre rébellion et exécuté. Une fois que le nouveau roi, Édouard III, atteint l'âge de gouverner et assume personnellement le contrôle du gouvernement, il annule les charges de trahison à l'encontre de son oncle. Le titre et les terres du comte de Kent sont rendus au fils aîné d'Edmond, Edmond de Kent. Bien qu'il soit officiellement exonéré des crimes qu'on lui a jadis reprochés, Edmond de Woodstock ne bénéficie pas d'une bonne réputation, ni de son vivant, ni après sa mort, à cause de ses tribulations politiques incertaines.Le comte de Kent ne tarde pas à entrer en dissension avec la reine-mère et Mortimer, qui officient tous deux en tant que régents du jeune Édouard III[44]. Dès juillet 1327, Kent s'absente à une séance du conseil de régence à York[45]. La brouille entre Edmond et Roger Mortimer émerge véritablement peu après décembre 1327, date à laquelle est inhumé à Gloucester l'ancien roi Édouard II, mort dans de mystérieuses circonstances trois mois auparavant au château de Berkeley alors qu'il était entre les mains de sbires de Mortimer[46]. En octobre 1328, l'Angleterre est de nouveau aux bords de la guerre civile. Lancastre refuse d'assister au Parlement et réunit à Winchester ses troupes contre Isabelle et Mortimer[47]. Il est rejoint par Kent ainsi que Thomas de Brotherton en décembre. En janvier 1329, les forces d'Isabelle, sous le commandement de Mortimer, s'emparent des forteresses de Lancaster, de Leicester et de Bedford : Isabelle et Édouard III marchent rapidement vers le nord. Lancastre se livre finalement à la merci du roi lorsqu'il apprend que les comtes de Kent et de Norfolk l'ont abandonné[48],[49]. Après sa participation à la rébellion de Lancastre, Edmond devient moins populaire à la cour et se rend en Avignon auprès du pape en juin 1329[50]. Il n'est pourtant pas en disgrâce, puisqu'il est chargé en février 1330 d'escorter la reine Philippa de Hainaut, la jeune épouse d'Édouard III, à son couronnement. Ses apparitions à la cour se font ensuite de moins en moins fréquentes[2].\n\nLe comte de Kent est peu après démasqué dans un complot visant prétendument à restaurer Édouard II sur le trône, que la rumeur dit toujours vivant et emprisonné sur ordre des régents au château de Corfe[51],[52]. Il a été plus tard révélé que Mortimer avait délibérément mis en place ce piège pour faire croire à Kent que le roi déchu était toujours vivant[53], afin de se débarrasser de lui. De nombreux prélats et barons, dont son beau-frère Thomas Wake, se retrouvent impliqués dans la conspiration du comte. Edmond est promptement arrêté et jugé par le Parlement, convoqué à Winchester au milieu du mois de mars 1330[51]. Condamné à mort pour haute trahison, il fait appel à la clémence du roi en proposant de marcher de Winchester à Londres avec une corde nouée autour du cou en signe de soumission. Pressé par les régents et craignant sans doute pour sa propre vie, Édouard III semble avoir accepté avec une très grande réticence l'exécution de son oncle. Il y a une telle opposition à son exécution, fixée à l'aube du 19 mars, qu'elle est reportée de cinq heures, car personne ne veut l'exécuter — tout d'abord en raison de son rang de membre de la famille royale et, par ailleurs, parce que l'accusation, prononcée si vite, semble fort douteuse. Un meurtrier accepte finalement de décapiter l'oncle du roi en échange de sa propre grâce. Kent est inhumé le 31 mars 1330 dans l'église des frères dominicains de Winchester[",
+    "image": ""
+  },
+  {
+    "id": 459,
+    "titre": "Bataille de Kustendil",
+    "date": 1330,
+    "mois": 7,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 2,
+    "description": "Bataille de Kustendil (ou Velbajd)  Stefan Dusan roi des Serbes (1331)  . \n Bataille de Kustendil ou de Velbajd[4] dans laquelle la Bulgarie et la Serbie de Stefan Uroš III Dečanski, candidates à la succession de Byzance, s’affrontent. Le tsar bulgare Michel III trouve la mort et son pays est réduit en vassalité.opposa les armées serbe et bulgare le 28 juillet 1330, près de la ville de Velbăžd (l'actuelle Kyoustendil), en Bulgarie. La victoire serbe lors de cette bataille a fait de la Serbie la première puissance de la région, devançant pour un demi-siècle l'Empire byzantin et la Bulgarie.  Le roi serbe Stefan Uroš III Dečanski avait gagné des territoires en Macédoine pendant la guerre de succession dans l'Empire Byzantin, qui opposait Andronic III Paléologue à son grand-père Andronic II Paléologue (que Stefan Uros III Decanski soutenait). Ce soutien se retourna cependant contre le roi serbe lorsque Andronic III obtient la victoire sur son aïeul.\n\nDe plus, le tsar Michel III de Bulgarie était hostile à Stefan depuis qu'il avait divorcé de sa sœur Ana en 1324, et avait épousé Théodora, la sœur d'Andronic III.\n\nAinsi les deux empires, bulgare et byzantin, avaient tous les deux intérêt à attaquer la Serbie, ce qu'ils firent la même année 1330.Michel III de Bulgarie  fit appel à son allié Basarab de Valachie, qui lui envoya des troupes valaques, ainsi que des détachements de cavaliers ossètes et tatars. L'armée de Michel fut estimée par des contemporains à 12 000 hommes.\nStefan a renforcé son armée avec des mercenaires, des fantassins lourds catalans et surtout saxons. Il disposait également de soldats serbes très expérimentés qui avaient déjà participé à plusieurs campagnes contre les Byzantins. Mais la pièce maîtresse de l'armée serbe était sa puissante cavalerie lourde, dirigée par Dusan le fils du roi en personne.Le lendemain vers midi, les mercenaires saxons chargèrent l'armée bulgare plus tôt que l'accord entre les deux souverains ne l'avait stipulé. Voyant cela, Dusan décida d'envoyer les Catalans soutenir les Saxons et décida de charger lui-même avec la cavalerie lourde serbe la position de l'empereur bulgare, qu'il avait pris soin de repérer la veille. Surprise par la violente attaque sur son aile d'une partie de l'armée serbe, ne recevant pas d'ordre de l'empereur Michel trop occupé à se défendre contre la charge de cavalerie lourde de Dusan, et voyant le gros de l'armée serbe toujours stationner en face d'eux, l'armée bulgare ne se réorganisa pas. Elle prit peur, se dispersa et fut poursuivie par la cavalerie serbe. Dans sa fuite, l'empereur Michel tomba de son cheval et fut tué par les mercenaires.En 1331, Dušan se rebella contre son père à la tête de la noblesse serbe. Dušan était plus jeune, plus agressif et moins pieux que son père. Il désirait exploiter au maximum la victoire de Velbăžd. Voyant en lui le véritable vainqueur de la bataille, la noblesse espérait de nouvelles conquêtes avec un souverain aussi glorieux et s'allia à lui.8 septembre : couronnement de Stefan Uroš IV Dušan (Étienne Douchan, 1308-1355), tsar des Serbes et des Grecs (fin de règne en 1355)[12]. Il fonde un grand empire Serbe de Corfou jusqu’à Salonique. Il contrôle tout l’arrière pays Bulgare, organise l’État Serbe et développe sa prospérité.\nLa Bataille de Velbăžd a ouvert le temps de la domination des Serbes sur l'Europe du Sud-Est. Une fois au pouvoir, Dušan prit en effet le contrôle de tout le territoire byzantin en Europe, se préparant même à prendre la plus grande ville de la chrétienté, Constantinople.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Balkansin1354.png",
+    "legende": "Les Balkans en 1354"
+  },
+  {
+    "id": 460,
+    "titre": "Édouard III d'Angleterre évince Isabelle et Roger Mortimer",
+    "date": 1330,
+    "mois": 10,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "1330 officiellement roi depuis 1327 ( à 14 ans, il doit alors en tant que duc de Guyenne(dénomination populaire de l’Aquitaine apparue fin  XIIIe)  prêter allégeance au roi de France), il débute son règne personnel à 18 ans après un coup d’état mené au château de Nottingham contre le régent Roger Mortimer, commanditaire présumé de  l'assassinat de son père et concubin de sa mère. Mortimer est pendu et Isabelle de France exilée au château de Castle Rising dans le Norfolk.\nDurant son long règne de 50 ans, Il redresse l’autorité royale en soumettant les barons et en constituant une armée moderne et permanente tout en  enclenchant la transformation de l'Angleterre  en puissance manufacturière maîtrisant toute la chaîne textile.",
+    "image": ""
+  },
+  {
+    "id": 461,
+    "titre": "Roger Mortimer est exécuté",
+    "date": 1330,
+    "mois": 11,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Enfermé pendant plus d'un mois à la tour de Londres, le comte de March est inculpé le 26 novembre 1330 de quatorze chefs d'accusation. Il est entre autres accusé d'avoir alimenté la discorde entre le roi Édouard II et la reine Isabelle lors du séjour de celle-ci en France et ce, dans le seul but d'exercer illégalement les tâches du gouvernement du royaume. Il lui est ensuite imputé l'assassinat d'Édouard II au château de Berkeley après sa déposition[59]. Il est par ailleurs dénoncé par ses détracteurs pour avoir dilapidé les nombreux biens de la couronne et usurpé l'autorité royale du jeune Édouard III. Enfin, il est incriminé dans la condamnation injuste du comte de Lancastre après sa rébellion ainsi que dans le verdict illégal prononcé à l'encontre du comte de Kent pour un forfait que celui-ci n'avait même pas commis. Au cours de son procès, Mortimer n'est pas autorisé à parler pour se défendre contre ces allégations et est en fin de compte condamné à mort. Il semble avoir cependant confessé que la sentence à l'encontre de Kent était injuste. Trois jours plus tard, le 29 novembre[1], il est pendu à Tyburn, où sont exécutés la plupart des condamnés de droit commun. Son corps reste suspendu au gibet deux jours et deux nuits entiers à la vue de tous[1],[60], avant d'être amené à l'église franciscaine de Coventry puis restitué à sa veuve Jeanne de Geneville, qui l'inhume finalement dans le prieuré familial de Wigmore[1]. À la mort de Roger Mortimer, ses vastes possessions sont confisquées par la couronne[1], mais son épouse parvient à obtenir pour lui un pardon royal en 1336 et est finalement enterrée à ses côtés en 1356. Leur fils aîné et héritier Edmond bénéficie de la clémence d'Édouard III et reprend le contrôle de l'essentiel des biens paternels au cours de l'année 1331. Le comté de March sera finalement recréé en faveur du petit-fils de Roger, également prénommé Roger, en 1354. À travers son fils aîné, Roger Mortimer de Wigmore est l'ancêtre des derniers rois Plantagenêts, d'Édouard IV à Richard III. Par la fille d'Édouard IV, Élisabeth d'York, il est aussi l'ascendant de tous les monarques anglais depuis Henri VIII, de tous les rois écossais depuis Jacques V, et de tous les souverains britanniques depuis Jacques VI d'Écosse et Ier d'Angleterre[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Tyburn_tree.jpg",
+    "legende": "Mortimer est condamné à subir le châtiment d'un simple criminel et est pendu au gibet de Tyburn."
+  },
+  {
+    "id": 462,
+    "titre": "Bataille de Posada",
+    "date": 1330,
+    "mois": 11,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 3,
+    "description": "La Hongrie perd sa suzeraineté sur la Valachie. Cette défaite priva le royaume de Hongrie du contrôle des routes commerciales vers la mer Noire et ses comptoirs génois.\nBasarab Ier de Valachie se heurte à Charles Ier d’Anjou qui veut rétablir l’autorité de la Hongrie sur la plaine du bas Danube. Basarab est vainqueur à la bataille de Posada et Charles se résigne à l’indépendance de la Valachie. \nLa Bataille de Posada constitue un tournant stratégique dans les histoires de la Roumanie et de la Hongrie. La bataille a lieu en novembre 1330, entre l'armée valaque du voïvode Basarab Ier le Fondateur (Basarab Întemeitorul) et l'armée d'invasion hongroise du roi Charles Robert de Hongrie (ou Charles Ier Robert d'Anjou). L'endroit exact de la bataille n'est pas connu avec certitude, mais se trouve probablement soit dans la passe de Posada, au sud de Brașov, dans l'actuelle commune de Comăna, soit dans le défilé de l'Olt, là où cette rivière traverse les Carpates. Posada signifie en roumain \"passe dans les montagnes\", \"oppidum\" ou \"clairière ouverte par des bûcherons« .En 1324, Basarab I-er est vassal du roi de Hongrie, en tant que Ban d'Argeș et de Severin. En 1328, sa victoire contre les Tatars au nord des bouches du Danube le rend maître du delta du Danube et des rivages de la mer Noire au nord du Delta, là où les Génois ont des comptoirs. Cette région prend à cette occasion le nom de \"Bessarabie\". Il en tire prospérité et puissance, et son souverain Charles Robert d'Anjou lui en réclame comptes. Ne recevant pas satisfaction (ou pas assez) le suzerain s'empare en 1330 de la cité portuaire valaque de Severin, sur le Danube. En dépit des efforts diplomatiques de conciliation faits par Basarab, Charles Robert décide de continuer sa campagne en Valachie, dans le but de renverser son vassal. Il ne rencontre tout d'abord pas de résistance. Basarab connait l'état de faiblesse de ses troupes, et ne peut pas se permettre de s'opposer en champ ouvert à la grande ost royale de son exigeant suzerain. Il choisit de se retirer quelque part dans les Carpates de Transylvanie. Charles entre dans Curtea de Argeș, la capitale de la Valachie, où il apprend que Basarab a fui dans les montagnes. Il décide de suivre ses traces. Selon la chronique enluminée de Vienne, un témoignage contemporain, Charles aurait dit à propos de Basarab : \"Il est le berger de mes moutons, et je vais le tirer de ses montagnes par la barbe\". L'armée de Charles, forte de 30 000 hommes entre alors dans un défilé étroit, et tombe dans une embuscade. L'armée valaque, conduite par Basarab en personne, et qui compte certainement moins de 10 000 hommes, comprend en majorité, selon la chronique, des bergers recrutés sur place. Ils commencent à bombarder l'armée hongroise depuis les hauteurs, avec des rochers, des pierres, des billes de bois et des flèches. Ne pouvant ni s'échapper ni combattre, les soldats de Charles subissent une défaite sévère, et beaucoup périssent, du fait des projectiles mais surtout piétinés dans la panique. D'après la chronique, Charles parvient à fuir en se déguisant en palfrenier. Le voïvode hongrois de Transylvanie, vassal de Charles, périt lui aussi dans la bataille, ainsi que plusieurs nobles hongrois. D'autres sont faits prisonniers et doivent racheter leur liberté, selon la coutume médiévale. Du côté valaque, les pertes sont minces. Quelques historiens comme Florin Constantiniu pensent que les Coumans aidèrent Basarab à obtenir la victoire en bloquant les arrières de l'armée hongroise. Ils affirment aussi que ce fut une bataille entre roumains, car beaucoup de soldats de Charles recrutés en Transylvanie parmi les hommes des boyards qui lui étaient fidèles, étaient eux aussi des valaques. La seule chose sûre, est que Basarab garda sa barbe et ses moutons, comme en conclut Nicolae Iorga. La principale conséquence de la bataille fut que la Hongrie dut renoncer à toutes ses prétentions sur la Valachie, qui obtint ainsi son indépendance. Bien que les Hongrois lançassent plus tard d'autres expéditions, toutes furent des échecs et la Hongrie ne recouvra jamais sa suzeraineté sur la Valachie. Cette défaite priva le royaume de Hongrie du contrôle des routes commerciales vers la mer Noire et ses comptoirs génois.\nUne conséquence secondaire fut que les banats vassaux de la Hongrie à l'est des Carpates suivirent, trois décennies plus tard, l'exemple valaque et obtinrent en 1359 leur indépendance, formant alors la Moldavie.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Battle1330.jpg/960px-Battle1330.jpg",
+    "legende": "La bataille de Posada (1330) à la suite de laquelle la Hongrie dut reconnaître l'indépendance de la Valachie (Chronique enluminée de Vienne). bataille de Posada. La belle image. L'armée du roi de Hongrie Charles d'Anjou prise dans une embuscade tendue par Basarab Ier de Valachie. Enluminure du Chronicon Pictum."
+  },
+  {
+    "id": 463,
+    "titre": "Jan van Ruysbroeck L’Ornement des noces spirituelles",
+    "date": 1330,
+    "mois": 5,
+    "zones": [
+      "Idees",
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "Jean de Ruysbroeck, est un clerc brabançon né en 1293, peut-être dans le village de Ruysbroeck (duché de Brabant) non loin de Bruxelles. chapelain de Sainte-Gudule à Bruxelles , il restera simple prêtre jusqu’à l’âge de cinquante ans en 1343, où il change de vie et fonde le prieuré de Groenendael, dans la forêt de Soignes. Considéré parfois comme un disciple de Maître Eckhart, il tient une grande place dans le courant de la mystique rhéno-flamande.\nSes ouvrages, inspirés par les doctrines du Pseudo-Denys l'Aréopagite, sont écrits en moyen néerlandais et ont été rapidement traduits en latin\nEckart venait d'être condamné (27 mars 1329), et l'agitation produite par cette condamnation, ainsi que la défiance qu'elle avait soulevée à l'égard des écrivains mystiques, étaient loin d'être calmées (2). Ruysbroeck craignit-il qu'on n'interprétât mal certaines de ses expressions, ou que la fausse mystique n'en abusât pour accréditer ses erreurs ? Toujours est-il qu'il ne voulut pas livrer à la publicité ce livre du Royaume des Amants de Dieu et qu'il défendit à son secrétaire d'en communiquer la copie.     Il ne pouvait néanmoins laisser l'hérésie se propager impunément, à une époque surtout où les Frères du libre esprit faisaient preuve d'une audace toujours croissante.     La fameuse Bloemardinne était à leur tête, et cette femme, dont on perd les traces après 1316, reparaît à Bruxelles entre 1330 et 1335. Elle abusait le peuple par de faux dehors de sainteté, il devenait indispensable de démasquer son hypocrisie et celle de ses adeptes. Ruysbroeck se remit donc au travail et reprenant le sujet traité dans son premier ouvrage, il le développa suivant un plan tout nouveau, à la fois plus simple et plus méthodique. Puis il s'attacha à marquer nettement la distinction entre les vrais et les faux mystiques, montrant partout les écueils à éviter et prodiguant les conseils que lui inspiraient sa prudence et son expérience. Tout porte à croire, en effet, que la composition des Noces spirituelles était dirigée principalement contre Bloemardinne et ses adeptesobjectif de l’œuvre :Décrire le chemin intérieur de l’âme vers Dieu à travers une triple transformation. Montrer comment l’union mystique s’accomplit dans une « noce spirituelle » entre Dieu et l’âme, union de l’amour divin et humain. Exposer une doctrine de la vie mystique active et contemplative unie en une synthèse Ruysbroeck s’appuie sur la parabole des dix vierges (Matthieu 25, 1-13).L’ouvrage est organisé en trois livres, correspondant à trois degrés de vie spirituelle :Vie active\tPurification morale, imitation du Christ  \tVie intérieure (ou affective)\tIllumination, intériorisation de la grâce Vie contemplative (ou unitive)\tUnion mystique avec Dieu dans l’amour purChez Ruysbroeck, action et contemplation ne s’opposent pas : la contemplation nourrit l’action. L’union divine engendre un retour au monde pour rayonner la charité. Contre certaines dérives panthéistes, Ruysbroeck maintient la distinction entre Dieu et la créature. L’union est participative : l’âme partage la vie divine sans devenir Dieu. Les Noces spirituelles influencent profondément la mystique flamande et rhéno-allemande (notamment Tauler et les Béguines).L’ouvrage sera lu et commenté jusqu’au XVIIᵉ siècle, notamment par les carmes et les auteurs mystiques français. Ruysbroeck est souvent vu comme un pont entre Eckhart et Jean de la Croix, par son équilibre entre transcendance et charité incarnée.\nDurant la vie de Ruysbroeck on ne remarque aucune note discordante dans le concert unanime d'admiration qui entoura les Noces L’Ornement des noces spirituelles, mais son œuvre a  été suspectée de panthéisme après son décès  – donc d’hérésie –, notamment par le chancelier de l’Université de Paris Jean de Gerson",
+    "image": ""
+  },
+  {
+    "id": 464,
+    "titre": "Andrea Pisano  Porte de bronze du baptistère San Giovanni",
+    "date": 1330,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Première porte (sud) de bronze du baptistère San Giovanni de Florence par Andrea Pisano orfèvre recommandé par Giotto. \nDébutée en 1329, elle nécessite 6 ans de travail , certains dessins ont été réalisés par Giotto",
+    "image": ""
+  },
+  {
+    "id": 465,
+    "titre": "Giotto à Naples invité par Robert d’Anjou",
+    "date": 1330,
+    "date_fin": 1333,
+    "zones": [
+      "Naples",
+      "Art"
+    ],
+    "type": 3,
+    "image": ""
+  },
+  {
+    "id": 467,
+    "titre": "Quartier juif à Pampelune",
+    "date": 1330,
+    "mois": 5,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "création d’un quartier juif à Pampelune (pour les protéger des pillages)[",
+    "image": ""
+  },
+  {
+    "id": 468,
+    "titre": "Abû al-Hasan ben `Uthmân, roi mérinide du Maroc",
+    "date": 1331,
+    "mois": 8,
+    "date_fin": 1348,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Il doit compter avec son frère, Abou Ali, rebelle qui tient le versant saharien de l'Atlas dans la vallée du Dra` avec comme capitale Sijilmâsa. Abou Ali s'étant notamment allié avec le sultan zianide Abû Tâshfîn, ennemi des Mérinides. Abu al-Hasan attaque alors Sijilmâsa en 1332 et capture son frère qu'il fait assassiner. \nDans le but de chasser les chrétiens d'Espagne et d'unir les pays musulmans d'Afrique du Nord, il attaque et capture Algésiras et Gibraltar en 1333. À cet effet il signe une alliance économique et militaire avec le roi Jacques III de Majorque en 1339.\nAbou Ali éliminé, Abu al-Hasan peut envisager la conquête de territoires plus à l'est. Après le siège de Tlemcen de 1335 à 1337, Abu al-Hasan prend aux Abdalwadides la ville de Tlemcen pendant 11 ans de 1337 à 1348.\nIl gagne le 5 avril 1340 une bataille navale dans le détroit de Gibraltar, mais subit une défaite six mois plus tard, le 30 octobre 1340, à la bataille du rio Salado. Le roi Alphonse XI de Castille prend Algésiras en 1344. Abu al-Hasan abandonne alors son projet de reconquête musulmane de l'Espagne.\nSouhaitant faire renaître l'empire almohade, Abu al-Hasan veut dominer le Maghreb. Il s'attaque alors aux Hafsides qui règnent à Tunis. Bien que marié à la fille du sultan hafside Abû Yahyâ Abû Bakr, il prend Tunis le 15 septembre 1347, mais se heurte aux Arabes à Kairouan qui le battent le 10 avril 1348 l'union de son Maghreb n'aura duré que quelques mois.\n\nFuyant Tunis par la mer, Abu al-Hasan débarque à Alger après avoir tenté de rallier Béjaïa puis Dellys[6]. Il marche sur Tlemcen pour reconquérir la ville que son fils, Abu Inan Faris, régent de l'État mérinide, avait fui pour se faire proclamer souverain en l'absence de son père. Mais il est vaincu dans la plaine de l'oued Chelif par les Abdalwadides qui restaurent le royaume zianide de Tlemcen. Abu al-Hasan se replie alors sur Sijilmâsa où est il confronté à une rébellion conduite par son fils Abu Inan Faris. Abandonné par ses troupes, il abdique et se replie jusqu'au sud de l'actuelle Maroc dans l'Atlas où il meurt d'une blessure infectée le 24 mai 1351.\n\nLe règne d'Abu al-Hasan marque un certain apogée de la dynastie des Mérinides[1] mais aussi son impuissance à réussir l'union par les armes. La personnalité de ce monarque fut parfois trop impulsive (cf. l'attaque non conventionnelle du souverain de Tunis, pourtant son beau-frère). Elle le précipita à l'isolement de la population locale et au désaveu de son propre clan. Ceci a fortement limité « son » unité du Maghreb et de l'Espagne qui n'aura finalement duré qu'une poignée de mois.",
+    "image": ""
+  },
+  {
+    "id": 474,
+    "titre": "Abu al-Hasan ben Uthman apogée Mérinide",
+    "date": 1331,
+    "mois": 8,
+    "date_fin": 1348,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Il succède à son père Abû Sa`îd `Uthmân en 1331. Selon les sources, Abu al-Hasan est né en 1288 ou en 1299[1]. Son père est Abu Said Uthman II et sa mère serait une esclave d'origine abbyssine, Abu al-Hasan avait une couleur de peau très brune, ce qui lui valut le surnom de « sultan noir »[2],[1]. Sa belle-mère est Mariam al-Mariniya[3], elle remplace sa mère qui est décédée[3] avant de pouvoir occuper la position d’ambassadrice du sultant mérinide auprès des pays du Moyen-Orient[3] et d’effectuer le Hajj en même temps[3].\n\nLes Mérinides sont des berbères zénètes, issus de la tribu des Wassin selon Ibn Khaldoun, ils nomadisaient durant tout l'hiver dans le Tafilalet entre Figuig et Sijilmassa, puis remontaient vers le Nord chaque été, jusqu'à la vallée de la Moulouya, afin d'y trouver des pâturages et acheter des réserves de grains pour l'hiver.\nSon père Abû Saïd Uthmân, fils de Abu Yusuf Yaqub, est le 6e sultan mérinide. Son épouse fut Lalla Chella.\nIl doit compter avec son frère, Abou Ali, rebelle qui tient le versant saharien de l'Atlas dans la vallée du Dra` avec comme capitale Sijilmâsa. Abou Ali s'étant notamment allié avec le sultan zianide Abû Tâshfîn, ennemi des Mérinides. Abu al-Hasan attaque alors Sijilmâsa en 1332 et capture son frère qu'il fait assassiner.\nDans le but de chasser les chrétiens d'Espagne et d'unir les pays musulmans d'Afrique du Nord, il attaque et capture Algésiras et Gibraltar en 1333. À cet effet il signe une alliance économique et militaire avec le roi Jacques III de Majorque en 1339. \nAbou Ali éliminé, Abu al-Hasan peut envisager la conquête de territoires plus à l'est. Après le siège de Tlemcen de 1335 à 1337, Abu al-Hasan prend aux Abdalwadides la ville de Tlemcen pendant 11 ans de 1337 à 1348.\nIl gagne le 5 avril 1340 une bataille navale dans le détroit de Gibraltar, mais subit une défaite six mois plus tard, le 30 octobre 1340, à la bataille du rio Salado. Le roi Alphonse XI de Castille prend Algésiras en 1344. Abu al-Hasan abandonne alors son projet de reconquête musulmane de l'Espagne.\nSouhaitant faire renaître l'empire almohade, Abu al-Hasan veut dominer le Maghreb. Il s'attaque alors aux Hafsides qui règnent à Tunis. Bien que marié à la fille du sultan hafside Abû Yahyâ Abû Bakr, il prend Tunis le 15 septembre 1347, mais se heurte aux Arabes à Kairouan qui le battent le 10 avril 1348 l'union de son Maghreb n'aura duré que quelques mois.\n\nFuyant Tunis par la mer, Abu al-Hasan débarque à Alger après avoir tenté de rallier Béjaïa puis Dellys[6]. Il marche sur Tlemcen pour reconquérir la ville que son fils, Abu Inan Faris, régent de l'État mérinide, avait fui pour se faire proclamer souverain en l'absence de son père. Mais il est vaincu dans la plaine de l'oued Chelif par les Abdalwadides qui restaurent le royaume zianide de Tlemcen. Abu al-Hasan se replie alors sur Sijilmâsa où est il confronté à une rébellion conduite par son fils Abu Inan Faris. Abandonné par ses troupes, il abdique et se replie jusqu'au sud de l'actuelle Maroc dans l'Atlas où il meurt d'une blessure infectée le 24 mai 1351.\n\nLe règne d'Abu al-Hasan marque un certain apogée de la dynastie des Mérinides[1] mais aussi son impuissance à réussir l'union par les armes. La personnalité de ce monarque fut parfois trop impulsive (cf. l'attaque non conventionnelle du souverain de Tunis, pourtant son beau-frère). Elle le précipita à l'isolement de la population locale et au désaveu de son propre clan. Ceci a fortement limité « son » unité du Maghreb et de l'Espagne qui n'aura finalement duré qu'une poignée de mois.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Carte_Zianides_au_Maghreb.png/1280px-Carte_Zianides_au_Maghreb.png",
+    "legende": "Carte du royaume zianide et son environnement méditerranéen basé sur : Sluglett, Peter; Currie, Andrew. Atlas of Islamic History (p. 49).",
+    "sources": "https://fr.wikipedia.org/wiki/Abu_al-Hasan_ben_Uthman"
+  },
+  {
+    "id": 475,
+    "titre": "Guerre de Genkō",
+    "date": 1331,
+    "date_fin": 1333,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "Guerre civile du Japon qui marque la chute du shogunat de Kamakura et la fin de la puissance du clan Hōjō. La guerre précède ainsi la période Nanboku-chō et l'apparition du shogunat Ashikaga. Genkō est le nom de l'ère du Japon correspondant à la période 1331-1334.Genkō no Ran: L’empereur du Japon Go-Daigo Tenno, qui conspirait à nouveau contre le shogun de Kamakura doit fuir Kyôto. Capturé, il est déposé et exilé dans les îles Oki. Kusunoki Masashige (1294-1336) et ses partisans continuent à défendre sa cause.\nPendant presque toute l'époque de Kamakura, le shogunat est contrôlé par le clan Hōjō, dont les membres portent le titre de shikken (régent pour le shogun) qu'ils se transmettent de génération en génération à l'intérieur du clan. L'empereur n'est guère plus qu'une personne de représentation, ne détenant aucun véritable pouvoir administratif.\n\nEn 1331, l'empereur Go-Daigo tente de prendre le pouvoir et de renverser le shogunat. Avec une armée de ses fidèles partisans, il attaque le shikken dans la capitale shogunale de Kamakura. Il est cependant défait à la suite de la trahison d'un proche associé nommé Yoshida Sadafusa (吉田定房?). L'empereur cache les trésors sacrés dans un château isolé à Kasagiyama (dans le bourg moderne de Kasagi du district de Sōraku dans la préfecture de Kyoto) et lève une armée, mais le château passe sous le contrôle de l'armée shogunale l'année suivante. Le shogunat couronne l'empereur Kōgon et exile Go-Daigo dans l'une des îles Oki, dans laquelle avait également été exilé l'empereur Go-Toba après la révolte de Jōkyū de 1221.\n\nLe prince Morinaga fils de l'empereur, continue à se battre, conduisant l'armée de son père aux côtés de Kusunoki Masashige.\n\nL'empereur Go-Daigo s'échappe d'Oki en 1333, deux ans après s'y être trouvé exilé, avec l'aide de Nawa Nagatoshi (名和長年?) et de sa famille, lève une armée dans la montagne de Funagami dans la province de Hōki (ville moderne de Kotoura du district de Tōhaku dans la préfecture de Tottori).\n\nPendant ce temps, Ashikaga Takauji, général en chef de la famille Hōjō, se retourne contre ceux-ci et se bat pour l'empereur dans l'espoir d'être nommé shogun. Simultanément, Nitta Yoshisada mène son armée dans la campagne des provinces de Kōzuke Musashi qui culmine avec le siège de Kamakura de 1333, met le feu à la ville et détruit le shogunat de Kamakura.\n\nLa ville à feu et à sang, le shogunat s'effondre et la puissance des Hōjō avec. L'empereur Go-Daigo retourne à Kyoto et saisit le pouvoir dans ce qui va être connu sous le nom de restauration de Kenmu. Cette situation ne dure que quelques années cependant. En 1336, Ashikaga Takauji s'autoproclame shogun et s'empare du pouvoir de Go-Daigo, ce qui commence les guerres Nanboku-chō et le shogunat Ashikaga.",
+    "image": ""
+  },
+  {
+    "id": 476,
+    "titre": "Soumission de Gênes à Robert d’Anjou",
+    "date": 1331,
+    "mois": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "2 septembre : paix définitive entre les deux partis Guelfes et Gibelins de la république de Gênes par la médiation du roi Robert Ier de Naples. \nEn 1331, le conflit entre guelfes et gibelins à Gênes s’achève provisoirement par la soumission de la ville à Robert d’Anjou, solution extérieure destinée à rétablir l’ordre après des décennies de luttes factionnelles.paix définitive entre les deux partis Guelfes et Gibelins de la république de Gênes par la médiation du roi Robert Ier de Naples[10]. À Gênes, le conflit entre guelfes et gibelins ne se termine pas par la victoire nette d’un camp, mais par une solution politique imposée de l’extérieur.En 1331, la conclusion du conflitAprès des décennies de luttes violentes entre grandes familles guelfes et gibelines (Doria, Spinola, Fieschi, Grimaldi…), la ville est profondément instable. Incapables de rétablir durablement l’ordre, les factions génoises acceptent en 1331 de se placer sous l’autorité de Robert d’Anjou, roi de Naples et chef du parti guelfe.👉 Gênes se soumet donc volontairement à une seigneurie étrangère, ce qui met fin provisoirement aux affrontements internes.Ce que cela signifie concrètementLes luttes entre guelfes et gibelins sont suspendues, non résolues idéologiquementLe pouvoir communal est affaibli au profit d’un arbitrage extérieurLa paix est surtout pragmatique, fondée sur la fatigue des élites et de la populationLimite de cette “fin”Cette pacification reste fragile :Elle ne règle pas les tensions sociales et politiques profondesMoins de dix ans plus tard, en 1339, Gênes adopte un nouveau régime avec l’élection de Simone Boccanegra, premier doge populaire",
+    "image": ""
+  },
+  {
+    "id": 478,
+    "titre": "Charles Grimaldi occupe Monaco.",
+    "date": 1331,
+    "mois": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "À la suite de guerres civiles à Gênes, de nombreuses familles guelfes sont exilées parmi lesquelles celle des Grimaldi. Cette puissante famille de patriciens génois s'établit sur la Riviera occidentale et dans la région de Nice, assiégeant et occupant occasionnellement Monaco, une forteresse génoise à l'époque (Voir François Grimaldi dit « Malizia »). Charles Grimaldi, un chef guelfe influent, occupe le Rocher le 12 septembre 1331 et se voit reconnaître « Seigneur de Monaco » en 1342. Charles et son cousin Antoine Grimaldi se lancent dans l'acquisition de terres et domaines dans la région. En 1346 et en 1355, les Grimaldi font l'acquisition des seigneuries et fiefs de Menton et Roquebrune. Ce sont ces seigneuries, avec celle de Monaco, qui constitueront le territoire de la Principauté de 1633 à 1861 (de jure, 1848 de facto après la déclaration d'indépendance de Roquebrune et de Menton).",
+    "image": ""
+  },
+  {
+    "id": 479,
+    "titre": "Bataille de Płowce",
+    "date": 1331,
+    "mois": 9,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "Bataille de Płowce, victoire de l’armée de Ladislas Ier le Bref, roi de Pologne, sur celle de l’Ordre Teutonique.\nLe 27 septembre 1331, près de ce village, a eu lieu une bataille qui a vu la victoire de l’armée de Ladislas Ier le Bref sur celle de l’Ordre Teutonique.\n\nEn 1931, pour célébrer le 600e anniversaire de la bataille, un tertre de 20 m de haut a été élevé. Détruit par les Allemands pendant la Seconde Guerre mondiale, il a été reconstruit en 1961. Un monument a été érigé à son sommet. En 1981, une croix a été placée à côté du monument. L'armée polonaise, commandée par le roi Ladislas Ier et son fils Casimir, surprend l'arrière-garde des chevaliers teutoniques mais une partie de ses troupes se retire pour mettre à l'abri Casimir, unique héritier du trône. Profitant de la confusion qui s'ensuit, les Teutoniques, commandés par Dietrich von Altenburg, échappent à l'anéantissement et se replient après trois heures de combat.\n\nAprès l'arrivée de renforts, les chevaliers teutoniques reprennent le combat, qui ne s'achève qu'à la tombée de la nuit, laissant les Polonais maîtres du champ de bataille après une sanglante mêlée. Les chevaliers teutoniques se retirent sur Toruń et les Polonais, ayant eux aussi subi de lourdes pertes, ne les poursuivent pas.Bien que la victoire polonaise soit incomplète, elle prouve aux Polonais que les chevaliers teutoniques ne sont pas invincibles. Néanmoins, cette victoire n'a pas de conséquence à long terme, car les chevaliers teutoniques reprennent l'offensive en 1332 et s'emparent de Brześć Kujawski. Un armistice est signé peu après, laissant leurs récentes conquêtes aux chevaliers teutoniques. Le traité de Kalisz, signé par Casimir III, désormais roi, scelle une paix fragile, mais d'autres guerres vont suivre entre les deux puissances.",
+    "image": ""
+  },
+  {
+    "id": 480,
+    "titre": "Majorité de Magnus IV de Suède",
+    "date": 1331,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 2,
+    "description": "En 1335 il visite l’ensemble de son royaume (Norvège, Suède, Finlande, Scanie, Blekinge, Nord du Halland) selon le rite de l’Eriksgata et commence son règne personnel [Magnus Eriksson, né en 1316 et mort le 1er décembre 1374 à Bergen (Norvège), est roi de Suède de 1319 à 1363 (Magnus IV) et roi de Norvège de 1319 à 1343 (Magnus VII)Magnus est élu roi de Norvège le 28 juin 1319, comme successeur de son grand-père maternel, puis roi de Suède le 8 juillet suivant par les partisans de son père, après la déposition de son oncle. Il est placé jusqu'en 1332, lorsque débute son règne effectif, sous la régence d'un Conseil .Le roi devient majeur en 1331. Il doit effectuer son « eriksgata » (visite aux assemblées régionales afin de faire confirmer son élection) au début de l'année 1335 et prêter serment la même année devant l'Assemblée du royaume sur l'ordonnance régissant l'élection royale.\n\nLes premières années de règne du jeune roi sont bénéfiques. Il profite de l'effondrement de la puissance danoise pour acquérir en 1333 les provinces côtières méridionales détachées du royaume de Danemark : Scanie, Blekinge, et plus tard, Halland. En 1350, il fait réaliser la compilation d'un code applicable dans toutes les campagnes, et d'une loi municipale générale. Ces deux mesures devaient contribuer grandement à l'unification administrative du pays. Peu après, le royaume est touché par la peste noire et sa population décimée. Le roi Magnus négligeant la Norvège au profit de la Suède, les nobles norvégiens mécontents l'obligent, dès 1343, à renoncer au trône en faveur de son fils cadet qui règne sous le nom de Håkon VI. Un conseil nobiliaire gouverne alors la Norvège au nom du jeune roi, et l'union personnelle entre les deux royaumes est brisée, car il doit nommer l'année suivante son fils aîné Érik héritier de la Suède.\n\nAu cours des années suivantes, les besoins d'argent du roi l'incitent à mettre en œuvre une politique fiscale anti-aristocratique et anticléricale. En Suède, la rébellion de son fils aîné Érik XII l'oblige à partager le pouvoir en l'associant au trône 1356. Ce dernier meurt trois ans plus tard de la peste, permettant à Magnus de recouvrer seul la couronne de Suède, mais il doit accepter d'associer son fils cadet Håkon II (roi de Norvège Håkon VI depuis 1319) au trône suédois en 1362. En 1360, le roi Valdemar IV de Danemark met à profit ces troubles pour récupérer la Scanie, le Halland et le Blekinge. L'alliance entre Håkon et le roi danois Valdemar IV, dont il épouse la fille Marguerite, provoque la déposition du père et du fils (1363 et 1364), puis l'accession au trône de Suède d'Albert de Mecklembourg, le neveu de Magnus IV. Ce dernier, capturé dans les combats qui suivent, reste emprisonné de 1365 à 1371 avant d'être libéré par son fils.",
+    "image": ""
+  },
+  {
+    "id": 482,
+    "titre": "Fondation de l’université de Cahors",
+    "date": 1331,
+    "zones": [
+      "France",
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "fondation de l’université de Cahors par le pape Jean XXII (le Cadurcien Jacques Duèze). Elle dépasse longtemps celle de Toulouse avant d’être intégrée à celle-ci au XVIIIe siècle[Elle est fondée en 1331 sous la forme d'un Studium generale par une bulle pontificale de Jean XXII, et dissoute en 1751 en fusionnant avec l'université de Toulouse[1] sur décision du chancelier de La Moignon. Elle comptait alors 1 600 étudiants.\nElle est composée des quatre facultés de théologie, droit, médecine, arts ou belles-lettres",
+    "image": ""
+  },
+  {
+    "id": 483,
+    "titre": "Ivan Stefan de Bulgarie est renversé",
+    "date": 1331,
+    "mois": 4,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 3,
+    "description": "Printemps 1331 : Ivan Stefan de Bulgarie est renversé par les boyards. Début du règne de Jean-Alexandre, tsar de Bulgarie (fin en 1371)[1]. La Bulgarie devient tributaire de la Serbie (fin en 1335) qui est à son apogée.\nJuin - juillet : intervention d'Andronic III Paléologue en Bulgarie\n17-19 juillet : Traité de paix entre Ivan Alexandre de Bulgarie et Andronic III Paléologue[17-19 juillet : Traité de paix entre Ivan Alexandre de Bulgarie et Andronic III Paléologue[",
+    "image": ""
+  },
+  {
+    "id": 484,
+    "titre": "Couronnement de Stefan Uroš IV Dušan",
+    "date": 1331,
+    "mois": 9,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 2,
+    "description": "Couronnement de Stefan Uroš IV Dušan (Étienne Douchan, 1308-1355), tsar des Serbes et des Grecs (fin de règne en 1355)[12]. Il fonde un grand empire Serbe de Corfou jusqu’à Salonique. Il contrôle tout l’arrière pays Bulgare, organise l’État Serbe et développe sa prospérité.",
+    "image": ""
+  },
+  {
+    "id": 485,
+    "titre": "Ligue de Souabe",
+    "date": 1331,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Ligue de Souabe. La maison de Souabe disparue (1268), les villes souabes s’unissent, rassemblant vingt-deux cités qui luttent pour leur indépendance contre la noblesse souabe puis contre Charles IV, souverain du Saint Empire romain germanique[",
+    "image": ""
+  },
+  {
+    "id": 486,
+    "titre": "1ere mention du Kremlin de Moscou",
+    "date": 1331,
+    "zones": [
+      "Russie"
+    ],
+    "type": 2,
+    "description": "La forteresse duComme l'ont montré des recherches archéologiques, les premiers établissements humains de Moscou, remontant à la Préhistoire, furent fondés sur une éminence dominant la rivière Neglinnaïa à l'endroit où celle-ci rejoint la Moskova, et que l'on nomme colline Borovitskaïa. On n'y a pas trouvé, cependant, de traces de fortifications antérieures au XIe siècle ; la cité naissante fut agrandie sous le prince Iouri Dolgorouki, grand-duc de Kiev, au XIIe siècle. La forteresse, constituée d'un talus de terre de huit mètres de haut surmonté d'une palissade de trois mètres est signalée comme kremlin pour la première fois en 1331, lorsque le prince Ivan Kalita (1325-1340) la fait donc entourer d'une enceinte de pieux de chêne[1].\n\nAprès plusieurs sièges et destructions, une nouvelle palissade fut construite de 1339 à 1340 et incendiée en 1365. Entre 1366 et 1368, sous le règne de Dimitri Donskoï on construisit une forteresse en pierre blanche, ce qui permit de repousser, en 1368 et 1370, les attaques des princes Michel de Tver et Olgierd grand-duc de Lituanie. La forteresse comportait cinq portes monumentales, trois d'entre elles étant situées sur le côté nord-est (vers l'actuelle place Rouge). Les murailles reprirent le plan de l'ancienne forteresse en bois[ Kremlin de Moscou est mentionnée pour la première fois",
+    "image": ""
+  },
+  {
     "id": 386,
     "titre": "2e voyage d'Ibn Battuta",
     "date": 1332,
@@ -4690,6 +5052,19 @@
     "regne": true
   },
   {
+    "id": 466,
+    "titre": "Giotto Magnus magister de la cathédrale de Florence",
+    "date": 1333,
+    "date_fin": 1337,
+    "zones": [
+      "Italie",
+      "Art"
+    ],
+    "type": 3,
+    "description": "1334, la commune de Florence honore Giotto du titre de Magnus magister (Grand maître), le nomme architecte en chef (capomaestro) de Santa Maria del Fiore, son œuvre majeur est le campanile . 1334 : Giotto rentre à Florence où il est nommé architecte en chef de la ville à la suite d’une inondation. Il réalise le projet de campanile pour la cathédrale Santa Maria del Fiore. Son assistant Andrea Pisano, lui succède à sa mort en 1337 comme maître d’œuvre de la cathédrale",
+    "image": ""
+  },
+  {
     "id": 156,
     "titre": "Benoît XII Jacques Fournier",
     "date": 1334,
@@ -4702,6 +5077,17 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 477,
+    "titre": "Révolte des Gibelins à Gênes",
+    "date": 1335,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Les Gibelins  chassent le vicaire du roi Robert de Naples et la plupart des Guelfes. Deux capitaines du peuple sont nommés (fin en 1339)",
+    "image": ""
   },
   {
     "id": 172,
@@ -4949,6 +5335,19 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Corso_Donati.jpg",
     "legende": "La fin de Corso Donati, miniature de la Nuova Cronica de Giovanni Villani",
     "sources": "https://fr.wikipedia.org/wiki/Corso_Donati"
+  },
+  {
+    "id": 469,
+    "titre": "Abu Inan Faris roi du Maroc",
+    "date": 1348,
+    "date_fin": 1358,
+    "mois_fin": 1,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Abu Inan Faris (en arabe: أبو عنان فارس بن علي est né en 1329. Il succéda à son père Abû al-Hasan ben `Utman comme sultan mérinide en 1348. Il mourut étranglé par son vizir alors qu'il était agonisant, le 27 novembre 1358[1],[2]. Ibn Khaldoun donne aussi cette date, dans Le voyage d'Occident et d'Orient[3], mais il affirme que Abû `Inân mourut des suites d'une longue maladie (contractée deux ans plus tôt) qui s'était aggravée cinq jours après son retour de Tlemcen à Fès, et il ne mentionne pas de meurtre.\nPeu après être arrivé au pouvoir, il contraint Ibn Marzouk à l'exil dans le Royaume maure de Grenade[4]. Il se qualifie de « commandeur des croyants » (amir al-mûminin). Il doit éliminer un de ses neveux qui avait pris le pouvoir à Fès.\nAprès cela il reprend l'œuvre de son père et fait construire la médersa qui porte son nom à Fès, la médersa Bou 'Inania. Il reprend Tlemcen, puis Béjaïa (Bougie) en 1352 et Tunis, mais les révoltes continuèrent et l’État mérinide ne cessa de s'affaiblir.",
+    "image": ""
   },
   {
     "id": 354,
