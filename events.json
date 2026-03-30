@@ -1,5 +1,72 @@
 [
   {
+    "id": 525,
+    "titre": "Rébellion Nakasendai",
+    "date": 135,
+    "mois": 10,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "Octobre 1335  début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
+    "legende": "Représentation d'Ashikaga Takauji"
+  },
+  {
+    "id": 517,
+    "titre": "Disette en Languedoc",
+    "date": 1134,
+    "date_fin": 1337,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
+    "id": 518,
+    "titre": "Construction du Palais Vieux à Avignon",
+    "date": 1135,
+    "date_fin": 1340,
+    "zones": [
+      "Papaute",
+      "Art"
+    ],
+    "type": 2,
+    "description": "La construction du Palais-Vieux du Palais des Papes s’inscrit dans le contexte de l’installation durable de la papauté à Avignon au début du XIVe siècle. Après l’arrivée des papes sous Clément V puis l’installation définitive décidée par Jean XXII, les bâtiments épiscopaux existants sont progressivement agrandis pour répondre aux besoins du pouvoir pontifical.\\n\\nCependant, c’est sous le pontificat de Benoît XII (1335-1342) que débute la véritable construction du Palais-Vieux. Jugeant les aménagements précédents insuffisants, il fait démolir une grande partie des constructions antérieures afin d’édifier un palais entièrement nouveau. Ce projet est confié notamment à l’architecte Pierre Poisson (ou Peysson), chargé de réaliser un édifice à la fois fonctionnel et défensif.\\n\\nLe choix du rocher des Doms est déterminant : cette position élevée permet de protéger le palais des inondations, tout en affirmant la puissance pontificale grâce à sa visibilité sur toute la région. Le Palais-Vieux est conçu comme une véritable forteresse, avec des murs massifs, des tours imposantes comme celle du Trouillas, et une organisation rigoureuse des espaces. Il répond à la volonté de Benoît XII de créer un lieu sûr, capable d’abriter durablement la cour pontificale.\\nLes travaux, menés entre 1335 et 1340, aboutissent à un ensemble austère et solide, contrastant avec le futur Palais-Neuf plus décoratif. Ce premier noyau constitue la base du Palais des Papes et marque une étape essentielle dans l’affirmation d’Avignon comme centre de la chrétienté occidentale au XIVe siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg/500px-Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg",
+    "legende": "Le cloître, œuvre de l'architecte Pierre Poisson.",
+    "sources": "https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon"
+  },
+  {
+    "id": 522,
+    "titre": "Polyptyque Orsini  Simone Martini à Avignon",
+    "date": 1135,
+    "date_fin": 1336,
+    "zones": [
+      "Papaute",
+      "Art"
+    ],
+    "type": 3,
+    "description": "Entre 1335 et 1336, Simone Martini  part pour Avignon, à la cour de Benoît XII. L'une des premières œuvres de la période avignonnaise est le polyptyque Orsini appelé aussi Polyptyque de la Passion du Christ peint pour un cardinal , Le commanditaire est représenté en habit de cardinal au pied de la descente de croix. Certains historiens de l'art y ont vu le portrait du cardinal romain Napoléon Orsini. Il avait en effet en sa possession un clou de la vraie croix, ce qui pourrait expliquer sa prédilection pour ce thème. \\nLe retable est présent en Bourgogne à une époque où Jean Malouel et ses neveux, les frères de Limbourg, travaillent dans la région au service de Philippe II de Bourgogne, fondateur de la chartreuse de Champmol dont il a fortement influencé la composition.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Polyptique_Simone_Martini_Antwerp.jpg/1280px-Polyptique_Simone_Martini_Antwerp.jpg",
+    "legende": "Polyptyque (Annonciation, Crucifixion, Déposition) conservé au Musée des Beaux-arts d'Anvers (Belgique)",
+    "sources": "https://fr.wikipedia.org/wiki/Polyptyque_Orsini"
+  },
+  {
+    "id": 540,
+    "titre": "Shogunat de Kamakura",
+    "date": 1185,
+    "date_fin": 1333,
+    "zones": [
+      "Japon"
+    ],
+    "type": 1,
+    "description": "L'époque de Kamakura (鎌倉時代, Kamakura jidai?, 1185–1333) est l'une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période, qui commence en 1185 et s'achève en 1333, est placée sous l'autorité politique du shogunat de Kamakura. Elle constitue la première partie du « Moyen Âge » de l'histoire japonaise, qui va jusqu'à la fin du XVIe siècle.\n\nLe XIIe siècle vit le pouvoir impérial et l'aristocratie civile laisser les premiers rôles aux familles de l'élite guerrière, d'abord les Taira, puis, à l'issue de la guerre de Genpei (1180-1185), aux Minamoto de la lignée Seiwa-Genji, dont le chef de clan, Yoritomo, devint alors le personnage le plus puissant du Japon. Installé à Kamakura, il reçut de l'empereur le titre de shōgun, qui donna son nom au régime qu'il fonda, le shogunat (ou Bakufu), qui voyait les guerriers exercer les premiers rôles. Après la mort de Yoritomo en 1199, sa veuve Hōjō Masako prit en main la direction du shogunat, qui passa sous la coupe de son clan, les Hōjō, dont les chefs devinrent les « régents » (shikken) du shogun, exerçant de fait le pouvoir suprême, leur triomphe étant confirmé après qu'une nouvelle réaction de la cour impériale eut échoué en 1221.\n\nL'époque de Kamakura vit donc l'élite guerrière s'élever au rang de catégorie dominante, les hommes-liges du régime shogunal recevant en récompense de leurs services des charges importantes et le contrôle de domaines dans tout le pays. Les empereurs retirés et la noblesse de Kyoto continuèrent cependant à jouer un rôle politique, administratif et culturel notable, de même que les grands temples du Kinai. Cette période vit donc une forme de partage de pouvoir entre ces différents groupes pour l'administration du pays, même si les chefs des principaux clans guerriers installés à Kamakura et dans le Kantō, dirigés par les Hōjō, gardaient la direction du pays. Les provinces étaient organisées suivant un modèle domanial, les domaines publics et privés étant dirigés par les membres de la haute élite, et gérés par des administrateurs locaux, encadrant la vie des communautés de paysans, pêcheurs, forestiers, artisans et autres professions. Les élites locales, avant tout d'extraction guerrière, augmentèrent progressivement leur emprise sur les domaines, au détriment de l'aristocratie civile et des temples. Les échanges avec l'extérieur connurent un essor à cette période, ce qui se voit dans le fait que les monnaies en circulation à partir du XIIIe siècle avaient toutes été importées depuis la Chine.",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 454,
     "titre": "Insurrection à Chio contre Martino Zaccaria",
     "date": 1229,
@@ -4207,7 +4274,8 @@
       "Aragon"
     ],
     "type": 1,
-    "image": "",
+    "description": "Alphonse IV d'Aragon dit le Bénin ou le Débonnaire (en catalan Alfons el Benigne, en castillan Alfonso el Benigno), né en janvier 1299 à Naples[1],[2] et mort le 24 janvier 1336 à Barcelone, est roi d'Aragon sous le nom d’Alphonse IV, comte de Barcelone sous le nom d’Alphonse III, roi de Valence sous le nom d’Alphonse II, roi de Sardaigne et de Corse sous le nom d’Alphonse Ier de 1327 à 1336. Auparavant, par son mariage avec Thérèse d'Entença, il avait été comte d'Urgell, vicomte d'Àger baron d'Entença, d'Antillón et d'Alcolea de Cinca sous le nom d’Alphonse Ier de 1314 à 1327.\nAlphonse est le second fils de Jacques II d'Aragon et de Blanche d'Anjou. Le 10 septembre 1314 il épouse Thérèse d'Entença, héritière du comté d'Urgell. Ce mariage était le fruit d'un arrangement entre le comte Armengol X et le roi Jacques II. Le comte, sans descendant, convint de transmettre son comté à sa petite-nièce Thérèse d'Entença en échange d'une rente de 10 000 sous. L'accord prévoyait aussi que Thérèse épouserait l'infant Alphonse, permettant ainsi à la couronne de contrôler l'Urgell, dernier comté autonome de Catalogne. Il devint en 1319 l'héritier présomptif après la renonciation de son frère aîné Jacques. Son père l’associa au pouvoir en lui confiant la charge de procureur général de la couronne d'Aragon. En 1323-1324 il commande l'expédition catalane lancée en Sardaigne, royaume qui avait été attribué à Jacques II d'Aragon par le pape en 1297 mais restait de fait indépendant.\n\nAprès son accession au trône en 1327, Alphonse IV continua la politique de soumission de la Sardaigne entreprise par son père. Il mena une guerre contre Gênes entre 1329 et 1336 qui lui permit de prendre Sassari, position-clé pour le contrôle de la Sardaigne. Sa première femme étant morte peu avant son couronnement, il épousa en 1329 Éléonore de Castille, fille du roi Ferdinand IV. Il tenta à cette période de conquérir le royaume de Grenade et celui d'Almeria mais ces tentatives se soldèrent par un échec.\n\nAu royaume de Valence, il publia en 1329 la Juridiction alphonsine qui renforçait les droits des seigneurs locaux, ce qui ne les empêcha pas de s'opposer au roi dans les années 1330 lorsqu'il voulut constituer un apanage important en pays valencien pour ses plus jeunes fils. En 1333, la peste noire fit sa première apparition en Catalogne et au royaume de Valence. En quelques années Barcelone perdit 10 000 habitants.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Rotlle-genealogic-poblet-alfons-IV-darago.jpg",
     "regne": true
   },
   {
@@ -5266,18 +5334,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg/960px-Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg"
   },
   {
-    "id": 499,
-    "titre": "Restauration de Kenmu chute de Kamakura",
-    "date": 1333,
-    "date_fin": 1336,
-    "zones": [
-      "Japon"
-    ],
-    "type": 2,
-    "description": "1333 chute de Kamakura, prise par Nitta Yoshisada Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (ère Kenmu)\nAprès la victoire des loyalistes soutenus par le général Ashikaga Takauji sur les Hôjô, Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (Restauration de l’ère Kenmu)[1].\n17 juillet : Go-Daigo, empereur du Japon, entre à Kyōto après s'être échappé des îles Oki. Début de son règne sans shôgun (jusqu'en 1336)\nOctobre 1335 : début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392).",
-    "image": ""
-  },
-  {
     "id": 500,
     "titre": "Kapellbrücke de Lucerne",
     "date": 1333,
@@ -5321,8 +5377,9 @@
       "Chine"
     ],
     "type": 1,
-    "description": "Neuvième et dernier empereur de Chine de la dynastie Yuan et le 14e khagan de l'Empire mongol. Décrit comme épris de débauche, il ne voit pas venir l'insurrection nationale chinoise venant du sud et qui entraîne sa chute. \nLe 19 juillet 1333, à l'âge de 13 ans, il monte sur le trône de Pékin (alors appelée Dadu ou Khanbalik) en succèdant à son frère cadet, Richinbal), mort le 14 décembre 1332 après deux mois de règne. Les seigneurs se battent pour l'autorité de la cour en raison de son jeune âge. Elle appartint d’abord à un seigneur d’origine märkit, nommé Bayan des Merkits qui entre en disgrâce et meurt en 1340. \nJean de Marignol, un franciscain florentin, envoyé en légat par le pape Benoît XII, rend visite à l'empereur et demeure à Pékin à partir de 1342 et dans l'Empire chinois jusqu'en 1347.\nL'historien René Grousset dit de lui que « Toghan Temür mou, indécis, ne se plaisant que dans la compagnie de mignons et de lamas tibétains, abruti par la débauche, se désintéressait des affaires, Il ne prêta aucune attention à la révolte nationale chinoise qui grondait dans le Sud ». Le spectacle de cette débauche pousse les patriotes chinois à se liguer contre cette domination étrangère. La révolte commence dans la bas Yangtsé et dans la province du Guangdong, comme pour la révolution de 1912, dirigé par de nombreux chefs à moitié bandits, qui se querellent autant entre eux qu'ils font la guerre contre les Mongols.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Toghon_Temur.png/500px-Toghon_Temur.png"
+    "description": "Neuvième et dernier empereur de Chine de la dynastie Yuan et le 14e khagan de l'Empire mongol. Décrit comme épris de débauche, il ne voit pas venir l'insurrection nationale chinoise venant du sud et qui entraîne sa chute. \nLe 19 juillet 1333, à l'âge de 13 ans, il monte sur le trône de Pékin (alors appelée Dadu ou Khanbalik) en succèdant à son frère cadet, Richinbal), mort le 14 décembre 1332 après deux mois de règne. Les seigneurs se battent pour l'autorité de la cour en raison de son jeune âge. Elle appartint d’abord à un seigneur d’origine märkit, nommé Bayan des Merkits qui entre en disgrâce et meurt en 1340. \nJean de Marignol, un franciscain florentin, envoyé en légat par le pape Benoît XII, rend visite à l'empereur et demeure à Pékin à partir de 1342 et dans l'Empire chinois jusqu'en 1347.\nTogoontomor (mongol ) également retranscrit en Toghan Temour, Toghan Témür, également appelé de son titre d'empereur chinois de la dynastie Yuan, Shundi, ou Yuan Shundi, neuvième et dernier empereur de Chine de la dynastie Yuan et le 14e khagan de l'Empire mongol. Décrit comme épris de débauche, il ne voit pas venir l'insurrection nationale chinoise venant du sud et qui entraîne sa chute. \\n\\nAprès la mort de Tugh Temür en 1332 et la mort subséquente de Rinchinbal (empereur Ningzong) la même année, Togoontomor (empereur Huizong), alors âgé de 13 ans, est rappelé du Guangxi et monte sur le trône. Il est le neuvième et dernier successeur de Kubilai Khan sur le trône de Chine. Après la mort d'El Temür, Bayan devient un fonctionnaire aussi puissant qu'El Temür l'avait été au début de son long règne. En grandissant, Togoontomor fini par désapprouver le régime autocratique du Bayan. En 1340, il s'allie avec Toqto'a, un neveu de Bayan en désaccord avec son oncle, et bannit le trop puissant fonctionnaire après un coup d'État. Avec la destitution de Bayan, les Toqto'a prennent le pouvoir au sein de la Cour. Sa première administration fait clairement souffler un vent de nouveauté au sein de la Cour Yuan et donne les premiers signes d'une orientation nouvelle et positive au sein du gouvernement central. L'un de ses projets réussis est d'achever les histoires officielles des dynasties Liao, Jin et Song, qui sont achevées en 1345. Pourtant, Toqto'a démissionne de son poste, avec l'approbation de Togoontomor, marquant ainsi la fin de sa première administration. Il n'est pas rappelé au gouvernement avant 1349",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Toghon_Temur.png/500px-Toghon_Temur.png",
+    "regne": true
   },
   {
     "id": 508,
@@ -5399,6 +5456,19 @@
     "image": ""
   },
   {
+    "id": 539,
+    "titre": "Restauration de Kenmu",
+    "date": 1333,
+    "date_fin": 1336,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "La restauration de Kenmu (建武の新政, Kenmu no shinsei?) ou l'ère Kenmu désigne une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période dure de 1333 à 1336. Elle couvre les trois années séparant la chute du shogunat de Kamakura de l'arrivée au pouvoir du shogunat Ashikaga, quand l'empereur Go-Daigo se lance dans la tentative avortée de rétablir le contrôle impérial sur le Japon.\n1333 chute de Kamakura, prise par Nitta Yoshisada Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (ère Kenmu)\nAprès la victoire des loyalistes soutenus par le général Ashikaga Takauji sur les Hôjô, Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (Restauration de l’ère Kenmu)[1].\n17 juillet : Go-Daigo, empereur du Japon, entre à Kyōto après s'être échappé des îles Oki. Début de son règne sans shôgun (jusqu'en 1336)\nOctobre 1335 : début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392).",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 156,
     "titre": "Benoît XII Jacques Fournier",
     "date": 1334,
@@ -5447,6 +5517,134 @@
     "image": ""
   },
   {
+    "id": 519,
+    "titre": "Carinthie et la Carniole passent aux Habsbourg",
+    "date": 1335,
+    "mois": 4,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Mort d'Henri de Goritz. La Carinthie et la Carniole passent aux Habsbourg. \\nHenri de Goritz, également appelé Henri de Carinthie. né vers l'an 1270 et mort le 2 avril 1335 au château de Tirol, fut duc de Carinthie, margrave de Carniole et comte de Tyrol de 1295 à sa mort. Par son premier mariage avec Anne Přemyslide, il est élu roi de Bohême et roi titulaire de Pologne en 1306, s'asseyant sur le trône de 1307 jusqu'à sa destitution par Jean de Luxembourg en 1310. En 1306, Henri épouse Anne de Bohême, une fille du roi défunt Venceslas II de Bohême et de Judith de Habsbourg, une sœur du roi Albert. En conséquence, il était le plus proche héritier du roi Venceslas III et après l'assassinat de ce dernier il est élu roi de Bohême par la noblesse fin août 1306. Toutefois, Albert tente de prendre le contrôle de la Bohême et soutient la candidature de son fils Rodolphe de Habsbourg qui, le 16 octobre 1306, épouse Élizabeth Ryksa, la veuve du roi Venceslas II et s'empare du pouvoir. Anne et Henri s'enfuient vers la Carinthie, mais Rodolphe ne profite que quelques mois de sa nouvelle situation et décède un an plus tard, le 3 juillet 1307. Anne et Henri remontent sur le trône de Bohême. Une longue lutte commence alors contre le nouveau prétendant des Habsbourg, Frédéric le Bel, frère de Rodolphe, provoquant de vives réactions des aristocrates. Finalement, Frédéric est dédommagé par Henri avec une grosse somme. Ce n'est qu'en 1526 que les Habsbourg obtiennent le trône à Prague. Le 1er mai 1308, le roi Albert est assassiné par son neveu Jean de Souabe. Finalement, après son élection au trône, le nouveau roi Henri VII de Luxembourg a pris une part à la chose en Bohême : il fait épouser en 1310 à son propre fils Jean la princesse Élisabeth de Bohême, sœur d'Anne, une autre fille et héritière de Venceslas II. Henri de Carinthie a finalement perdu le fief et, tourmenté par les troupes des Luxembourg, doit quitter la Bohême le 9 décembre. Jean de Luxembourg occupa la ville de Prague et est couronné roi de Bohême le 11 février 1311 par Pierre d'Aspelt, l'archevêque de Mayence.Néanmoins, la même année Henri hérita de son frère ainé Othon de Goritz et devient seul duc de Carinthie et comte de Tyrol. Au cours de l'année suivante, il fit la paix avec les Habsbourg. À la fin de ces années-là, Henri a assumé un rôle d'intermédiaire dans le conflit sur la couronne entre Frédéric le Bel et Louis de Bavière, culminant à la bataille de Mühldorf. En 1325, il a obtenu une approche équilibrée entre les maisons de Habsbourg et de Wittelsbach. Louis lui a assuré que sa fille Marguerite succèdera en Carinthie et Tyrol ; il a cependant promis secrètement de céder la Carinthie aux Habsbourg. Après le décès d'Henri, Marguerite vient au moins de prendre possession du comté de Tyrol avec le soutien de la noblesse locale.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Arms_of_the_house_of_Gorizia.svg/langfr-960px-Arms_of_the_house_of_Gorizia.svg.png",
+    "legende": "Armoiries des de Goritz"
+  },
+  {
+    "id": 520,
+    "titre": "1er Congrès de Visegrád alliance anti-Habsbourg",
+    "date": 1335,
+    "mois": 11,
+    "zones": [
+      "St Empire",
+      "Europe C. & Or.",
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "Le premier congrès de Visegrád fut un sommet qui se tint en 1335 à Visegrád , au cours duquel les rois Jean Ier de Bohême , Charles Ier de Hongrie et de Croatie , et Casimir III de Pologne formèrent une alliance anti- Habsbourg . Les trois souverains convinrent de créer de nouvelles routes commerciales pour contourner le port stratégique de Vienne [ 1 ] [ 2 ] , qui obligeait les marchands à y proposer leurs marchandises avant de pouvoir les vendre ailleurs, et d'obtenir un accès plus facile aux autres marchés européens .\\n\\nLe sommet fut déclenché par l'expansion soudaine du pouvoir des Habsbourg dans la région, qui s'étaient emparés de la Carinthie et de la Carniole après la mort du duc Henri de Gorizia-Tyrol , qui avait revendiqué sans succès les couronnes de Bohême et de Pologne.\\n\\nElle reconnaissait également la souveraineté tchèque sur le duché de Silésie [ 3 ], que les rois tchèques contrôlaient de jure avec la couronne de Pologne. Jean Ier céda la couronne polonaise à Casimir III [ 4 ] en échange de 1 200 000 groschen de Prague . Le duché de Silésie fit ainsi partie de la couronne tchèque jusqu’en 1742, date à laquelle la majeure partie fut cédée à la Prusse et rattachée à la Pologne après la Seconde Guerre mondiale, en 1945. Une petite portion se trouve aujourd’hui en République tchèque .\\nLe congrès dura environ 21 jours. Les participants reçurent divers présents, notamment des échiquiers , des ceintures et des selles de grande valeur, ainsi que des huîtres. Environ 4 000 miches de pain furent distribuées aux représentants des États. Une seconde réunion eut lieu en 1339 et élut le nouveau roi de Pologne",
+    "image": ""
+  },
+  {
+    "id": 521,
+    "titre": "Mort de la mystique flamande Bloemardinne",
+    "date": 1335,
+    "mois": 8,
+    "zones": [
+      "Papaute",
+      "Idees"
+    ],
+    "type": 3,
+    "description": "Heilwege Blommaert mystique adepte du Libre-Esprit (même si les liens avérés avec ce mouvement sont discutables et semble essentiellement uitilisé par ses adversaires et l’inquisition) . Sa popularité dans la région est telle que l'Inquisition semble avoir craint de s'attaquer à elle de son vivant, sa famille faisant partie d'un puissant clan bruxellois des Lignages de Bruxelles. Fille de Wilhelmus Bloemart, bourgmestre de Bruxelles en 1282 et échevin, Elle s'inscrit dans la lignée de la religieuse bruxelloise Hadewijch d'Anvers et de Marguerite Porète dont les poèmes expriment une piété sensuelle empreinte de panthéisme gnostique. Parfois vénérée comme une sainte dans sa région, Bloemardine aurait fait cependant l'objet des attaques virulentes de son contemporain Jean de Ruisbroeck . « Libre-Esprit » est une expression qui se réfère à la notion d'un esprit libéré du superflu au point de laisser la place tout entière à Dieu. Les adeptes furent souvent affublés du sobriquet de « Turlupins » Le seul texte actuellement connu qui est attribué à cette mouvance, le Mirouer des simples âmes anienties, est dû à Marguerite Porete, brûlée vive à la place de Grève, à Paris, le 1er juin 1310 avec son livre. C'est paradoxalement surtout par les sources inquisitoriales que la doctrine des tenants du Libre-Esprit peut être représentée, Comme de nombreux autres mouvements de l'époque (cathares, vaudois, templiers, franciscains et autres), le Libre-Esprit (les « Turlupins »), prône un idéal de pauvreté. Cette pauvreté laverait cependant l'homme de tout péché et ressusciterait le Christ en lui. Il ne pourrait dès lors mal agir et c'est en écoutant ses désirs qu'il entrerait dans l'ère de « l'Esprit libre » où il pourrait connaître la béatitude dès la vie terrestre. La charité se confond avec l'amour charnel qui se consomme sans restriction au sein de la communauté. Le Béguines et le Libre-Esprit ont influencé la mystique rhénane et Maître Eckhart [3]. Ce dernier, qui a probablement connu l'œuvre de Marguerite Porete. \\n\\nSon prestige est illustré par le fait qu'à sa mort, la chaise d'argent sur laquelle elle s'asseyait pour instruire ses disciples fut offerte à la duchesse de Brabant . On attribuait à cette chaise des pouvoirs miraculeux liés à son association avec elle. Selon le professeur Cohn, elle était vénérée comme une sainte vivante",
+    "image": ""
+  },
+  {
+    "id": 523,
+    "titre": "Monastère royal de Santa María de Guadalupe",
+    "date": 1335,
+    "zones": [
+      "Castille",
+      "Art"
+    ],
+    "type": 3,
+    "description": "Le monastère royal de Santa María de Guadalupe (en espagnol : Real Monasterio de Santa María de Guadalupe) est un édifice monastique du XIVe siècle situé à Guadalupe, dans la province de Cáceres de la communauté autonome d'Estrémadure en Espagne. Il fut le plus important monastère du pays pendant plus de quatre siècles, les pèlerins y vénérant la Vierge de Guadalupe. Il est inscrit sur la liste de l’UNESCO du patrimoine mondial.\\nL’origine du monastère date du XIIIe siècle, lorsqu’un berger de Cáceres appelé Gil Cordero, découvrit sur la berge de la rivière Guadalupe une statue de la Vierge qui avait apparemment été cachée par les habitants de la région pour la préserver des envahisseurs Maures en 714. Une chapelle fut d’abord édifiée à l’endroit de cette découverte. Le roi Alphonse XI qui visitait fréquemment la chapelle, était venu y invoquer Santa Maria de Guadalupe à la veille de la bataille de Tarifa (ou « bataille de Rio Salado »), lors de la Reconquista.\\nAprès avoir gagné cette bataille, dont il attribua la victoire à l’intervention de la Vierge, il fit de la chapelle un sanctuaire royal et fit commencer un important programme de construction.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Real_Monasterio_de_Santa_Mar%C3%ADa_de_Guadalupe_-_panoramio.jpg/1280px-Real_Monasterio_de_Santa_Mar%C3%ADa_de_Guadalupe_-_panoramio.jpg"
+  },
+  {
+    "id": 524,
+    "titre": "2e siège  de Tlemcen",
+    "date": 1335,
+    "mois": 8,
+    "date_fin": 1337,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Août : le roi mérinide Abu al-Hasan ben Uthman, en guerre contre les Abdalwadites prend Nedroma dont il massacre la garnison, puis commence le deuxième siège de Tlemcen.",
+    "image": ""
+  },
+  {
+    "id": 526,
+    "titre": "Les Gibelins à Gênes  chassent le vicaire du roi Robert de Naples",
+    "date": 1335,
+    "mois": 2,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "4 février[8] : révolte des Gibelins à Gênes qui chassent le vicaire du roi Robert de Naples et la plupart des Guelfes. Deux capitaines du peuple sont nommés (fin en 1339).",
+    "image": ""
+  },
+  {
+    "id": 527,
+    "titre": "Traité de Trenčín",
+    "date": 1335,
+    "mois": 8,
+    "zones": [
+      "Europe C. & Or.",
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "24 août : Jean Ier de Bohême renonce au trône de Pologne à la conférence de Trenčín. \\nLe traité de Trenčín est un accord de paix signé le 24 août 1335 entre le roi Casimir III de Pologne et le roi Jean Ier de Bohême, ainsi que son fils le margrave Charles de Moravie. Il a été conclu par l'agence du beau-frère de Casimir, le roi Charles Robert de Hongrie, et signé au château de Trenčín (Trencsén), à cette époque dans le royaume de Hongrie (aujourd'hui en Slovaquie).\\n\\nLe traité de Trenčín met fin à un long conflit entre la Pologne et la Bohême au sujet de la Silésie, disputée depuis le Xe siècle. Initialement contrôlée par les premiers souverains polonais, cette région s’est progressivement fragmentée et détachée de la Pologne à partir du XIIIe siècle, notamment après la division du royaume des Piast et la montée en puissance des rois de Bohême.\\n\\nAu début du XIVe siècle, malgré les efforts de réunification du roi Ladislas Ier le Bref, la majorité des ducs silésiens se placent sous la suzeraineté de Jean Ier de Bohême. Face à cette situation, son successeur Casimir III le Grand choisit une solution diplomatique.\\n\\nEn 1335, par le traité de Trenčín, Casimir III renonce officiellement à ses droits sur la Silésie au profit de la Bohême. En échange, il met fin aux revendications du roi de Bohême sur la couronne de Pologne, ce qui stabilise les relations entre les deux royaumes.\\nCe traité consacre donc l’intégration durable de la Silésie dans l’orbite bohémienne et marque une étape importante dans la consolidation de l’État polonais, désormais libéré de ce conflit territorial.",
+    "image": "",
+    "sources": "https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Tren%C4%8D%C3%ADn"
+  },
+  {
+    "id": 528,
+    "titre": "Mastino della Scala entre dans Lucques",
+    "date": 1335,
+    "mois": 12,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "20 décembre : Mastino della Scala entre dans Lucques que lui ont vendu les Rossi",
+    "image": ""
+  },
+  {
+    "id": 529,
+    "titre": "Serge de Radonège fonde un monastère au Nord de Moscou",
+    "date": 1335,
+    "zones": [
+      "Russie"
+    ],
+    "type": 2,
+    "description": "Serge de Radonège fonde un monastère à 70 km au nord de Moscou, future laure de la Sainte-Trinité. Il  fut un grand spirituel et réformateur monastique, thaumaturge et protecteur de la Russie médiévale, l’un des saints les plus populaires de la Russie..\\nAprès le décès de ses parents en 1334, son frère aîné, veuf, devint moine au monastère de Khotov. Barthélémy, qui souhaitait une profonde solitude, convainquit Étienne de rechercher un endroit qui conviendrait à la vie ascétique[3]. Ils cheminèrent dans les forêts, puis trouvèrent un endroit approvisionné en eau et éloigné des chemins battus, à dix verstes de Radonège et de Kotov. Là, ils bâtirent une cabane, avec une chapelle qu’ils dédièrent, en se rappelant les paroles du starets, à la Sainte Trinité, ce qui était une innovation[note 2]. C’est là qu’il reçut la tonsure monastique avec le nom de « Serge ». Il avait alors vingt-quatre ans (1337)[3]. Son frère Étienne quant à lui, partit peu de temps après au monastère de la Théophanie de Moscou.\\nSerge demeura ermite dans cette solitude durant trois ans, avec pour seuls livres le psautier et les Évangiles, et pour seul voisinage les animaux sauvages de cette forêt, au nombre desquels les loups et ours n’étaient pas rares. Un de ces ours devint d’ailleurs un habitué de l’ermitage, Serge lui donnant un peu de son pain de temps à autre.\\nAu bout de ces trois ans, d’autres personnes se mirent à le rejoindre, attirés par sa réputation naissante de père spirituel expérimenté[2]. Les offices des heures étaient quotidiennement célébrés dans la chapelle, mais comme aucun des moines n’était prêtre, ils devaient en faire venir un pour la célébration de la Divine Liturgie.\\nEn 1354, Serge fut ordonné prêtre, et devint officiellement higoumène de la petite communauté. Quoique leur niveau de vie frôlât souvent la misère, Serge ne permettait pas que les moines fassent de collectes pour leurs besoins, les frères devant en tout se confier à Dieu.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mikhail_Nesterov_001.jpg/1280px-Mikhail_Nesterov_001.jpg",
+    "legende": "Rencontre de Barthélémy avec le moine, par Mikhaïl Nesterov (1890)"
+  },
+  {
+    "id": 537,
+    "titre": "Bataille de Minatogawa",
+    "date": 1336,
+    "mois": 7,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "Masashige Kusunoki et d’autres loyalistes sont écrasés à la bataille de Minatogawa[7], parce que l'empereur Go-Daigo refusait de quitter Kyōto. Obligé d’abdiquer en faveur d’un membre de la branche aînée, Go-Daigo s’enfuit à Yoshino, au sud de Nara, et y établit une cour rivale, la Cour du Nord, qui se maintient jusqu’en 1392. Takauji Ashikaga rétablit par un nouveau code les pleins pouvoirs du shogun. C'est le début de la période de Muromachi (jusqu'en 1582) et d'une guerre entre les deux cours (Nanboku-chō) (fin en 1392). \nLa bataille de la Minato-gawa (湊川の戦い, Minatogawa no tatakai), ou bataille de la rivière Minato, a eu lieu en 1336 entre les troupes loyales à l'empereur Go-Daigo et le clan Ashikaga. Les forces impériales étaient conduites par Masashige Kusunoki et Nitta Yoshisada, alors que leurs adversaires étaient commandés par Takauji Ashikaga. Les Ashikaga remportèrent la victoire, ce qui leur permit d'entrer dans Kyōto.\nKusunoki et Nitta Yoshisada défendent une position située au bord de la rivière Minato, près de Kobe, contre des troupes Ashikaga arrivant à la fois par la terre (troupes commandées par Tadayoshi Ashikaga), et par la mer (troupes commandées par Takauji Ashikaga). Des renforts du Shikoku, dirigés par le clan Hosokawa, arrivent également, mais ne parviennent pas à accoster sur le lieu de la bataille.\n\nLes troupes commandées par Nitta sont repoussées par l'avant-garde de Tadayoshi, commandée par Yorihisa Shōni, pendant que le reste des troupes Ashikaga encercle la position de Masashige, qui se fait seppuku. L'armée de Nitta est vaincue également, mais ce dernier survit et reste une épine dans le pied d'Ashikaga jusqu'au siège de Kuromaru.\nAprès cette victoire, Takauji Ashikaga est libre d'entrer dans Kyōto et d'installer sur le trône l'empereur Kōmyō, pendant que Go-Daigo s'enfuit à Yoshino, ce qui marque le début de l'époque Nanboku-chō.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Battle_of_minatogawa.svg/1920px-Battle_of_minatogawa.svg.png",
+    "legende": "Disposition des troupes à la bataille de Minatogawa"
+  },
+  {
     "id": 172,
     "titre": "Pierre IV d'Aragon dit le Cérémonieux",
     "date": 1336,
@@ -5455,6 +5653,121 @@
     "mois_fin": 1,
     "zones": [
       "Aragon"
+    ],
+    "type": 1,
+    "description": "Pierre IV d'Aragon dit le Cérémonieux ou el del punyalet (« celui avec une petite dague ») (en catalan Pere el Cerimoniós, en castillan Pedro el Ceremonioso), né le 5 octobre 1319 à Balaguer et mort le 5 janvier 1387 à Barcelone, est le fils aîné d'Alphonse IV le Débonnaire. Il est roi d'Aragon sous le nom de Pierre IV, comte de Barcelone sous le nom de Pierre III, roi de Valence sous le nom de Pierre II, roi de Sardaigne et de Corse sous le nom de Pierre Ier de 1336 à 1387. Après une guerre contre Jacques III, il devient roi de Majorque et comte de Roussillon et de Cerdagne de 1343/1349 à 1387. Enfin il est duc d'Athènes et de Néopatrie de 1381 à 1387.\nLe roi de Majorque, son oncle et beau-frère Jacques III, rechigne à lui prêter un hommage, qu'il finit pourtant par lui rendre sous une forme qui laisse Pierre IV insatisfait. Celui-ci prend prétexte de l'appel à l'aide de Jacques III dans son conflit avec le royaume de France pour la seigneurie de Montpellier, en 1341, pour le convoquer à Barcelone, invitation déclinée par le roi de Majorque. Soucieux de ne pas froisser ses alliés français, le roi d'Aragon considère son vassal comme déchu de son droit à l'assistance de son suzerain. Il prend également prétexte de la circulation de la propre monnaie du roi de Majorque dans le comté de Roussillon, qui constituerait un délit au regard du monopole royal existant dans le royaume d'Aragon. En 1349, Jacques III est tué par les troupes aragonaises à la bataille de Llucmajor à Majorque. Le royaume de Majorque est alors rattaché à la couronne d'Aragon.\nEn 1356, Pierre IV s'engage avec Pierre Ier de Castille, dit le Cruel, dans ce qui sera appelé la « Guerre des Deux Pierre ». Pierre le Cruel meurt en 1369 et son rival Henri de Trastamare est alors reconnu roi de Castille. C'est dans ces conditions que sera conclu entre Aragon et Castille, en 1375, le traité d'Almazán, sans vainqueur ni vaincu, du fait de la peste noire et de plusieurs catastrophes naturelles.\nUne des filles de Pierre IV d'Aragon épousera le fils d'Henri de Trastamare, Jean Ier de Castille.\nPendant son règne, Pierre IV eut de fréquents conflits avec l'inquisiteur général d'Aragon, Nicolas Eymerich.\nSous son règne, la Generalitat est instituée dans les cours de 1358-1359. Il écrit la Chronique de son nom. On dit que ses ordonnances « furent à l'origine du cérémonial et du protocole des cours européennes[1] ».",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jaume_Mateu_-_Peter_IV_the_Ceremonious_-_Google_Art_Project.jpg/960px-Jaume_Mateu_-_Peter_IV_the_Ceremonious_-_Google_Art_Project.jpg",
+    "legende": "Portrait de Pierre IV par Jaume Mateu, 1427. Musée national d'art de Catalogne",
+    "regne": true
+  },
+  {
+    "id": 530,
+    "titre": "Le pape rejette l’appel à la croisade  voulu par Philippe VI",
+    "date": 1336,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "En 1336, Philippe VI, sentant son pouvoir plus assuré, prend des initiatives. \nMars : Philippe VI de France réunit une flotte à Marseille pour gagner la Terre sainte. \nA Avignon où le pape Benoît XII, qui commence à bâtir la célèbre forteresse, refuse de lancer la croisade tant voulue par le roi de France, jugeant l'opération impossible étant donné les divisions nombreuses en Occident. Ce dernier, vexé (on lui avait promis le commandement de la croisade) fait passer la flotte française de Méditerranée en mer du Nord. L'Angleterre tremble. Édouard III met ses côtes en état d'alerte. Les shérifs arment de toute urgence tous les hommes de seize à soixante ans. Le Parlement vote un subside sans se faire prier. Benoît XII avait déjà retenu le roi de France sur le chemin de la croisade, il s'efforce de le retenir également sur celui de l'Écosse.\n\nLe roi de France ignore la leçon et ses ambassadeurs tiennent en Angleterre une conférence avec ceux de David Bruce et une délégation de barons écossais. On y parle de guerre. Édouard III, informé, ne se fait plus d'illusions, son cousin se pose en ennemi. Benoît XII impose à nouveau sa médiation, et calme difficilement les ardeurs de Philippe. Il empêche également l'empereur Louis de Bavière de former contre la France une coalition avec Édouard III. L'équilibre est fragile et la course aux armements reprend de plus belle, gênée par le manque d'argent de chacune des parties. Avec le concours de son principal conseiller Miles de Noyers, Philippe VI s'assure le soutien de quelques États (Gênes, Castille, Montferrat) et achète des places fortes au nord et à l'est du Royaume.",
+    "image": ""
+  },
+  {
+    "id": 531,
+    "titre": "Edouard II interdit l'exportation de laines anglaises en Flandre",
+    "date": 1336,
+    "mois": 10,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Le roi Édouard III d'Angleterre intrigue en Flandre. Il y interdit l'exportation de laine anglaise, ce qui provoque un soulèvement des tisserands flamands conduit par Jacob van Artevelde",
+    "image": ""
+  },
+  {
+    "id": 532,
+    "titre": "croisade antisémite  des Armleder",
+    "date": 1336,
+    "date_fin": 1338,
+    "zones": [
+      "St Empire",
+      "Alsace"
+    ],
+    "type": 3,
+    "description": "En 1336, un noble de Franconie, Arnold von Uissigheim (en), prétendant qu'un ange lui avait donné cette mission, rassemble une bande de maraudeurs et pille et massacre les Juifs. Ces assassins se font appeler Judenschläger (littéralement : frappeurs de Juifs). Peu de temps après, John Zimberlin, un aubergiste de Haute-Alsace, suit l'exemple donné en Franconie. Il attache des morceaux de cuir autour de ses bras et demande à ses partisans de faire de même. C'est ainsi que naît le nom Armleder (littéralement : cuir de bras). Leur chef est appelé Roi Armleder, et sous sa direction, ils marchent à travers l'Alsace, massacrant des Juifs dans environ 120 communautés, y compris Rouffach, Ensisheim, Mulhouse et Ribeauvillé. Ceux qui ont la chance de s'échapper fuient à Colmar, où les citoyens les protègent. Armleder, enivré par le succès, assiège la ville et dévaste les environs. ils assiègent Colmar où se sont réfugiés des familles rescapées du pogrom de Rouffach les notables et magistrats refusent d'ouvrir les portes mais doivent faire face à la pression de la plèbe proche des assaillants et sont victimes de la destruction des campagnes environnantes il faut attendre la prévention de l'empereur Louis 4 de Bavière qui se déplace pour mater mettre un terme aux agissements d’Armleder Les citoyens demandent de l'aide à l'empereur Louis IV. Quand Armleder entend dire que les troupes impériales approchent, il s'enfuit en France. Mais dès que l'empereur quitte le pays, Armleder réapparaît. Les persécutions se répandent bientôt en Bavière, en Bohême, en Autriche, en Styrie et en Carinthie[2],[3]\n\nLes seigneurs d'Alsace, sous la direction de l'évêque de Strasbourg, forment une alliance (17 mai 1338), dont les membres s'engagent à poursuivre Armleder et quinze de ses partisans les plus éminents. Mais, il est très difficile d'attaquer les partisans d'Armleder ; et l'année suivante, un chevalier, Rudolph d'Andlau, conclut un accord avec le Roi Armleder, accordant une amnistie à lui et à ses partisans, à condition qu'ils s'abstiennent de molester les Juifs pendant les dix prochaines années. une fois capturé les responsables sont condamnés à 10 ans d'interdiction de séjour , les victimes sont indemnisées par une taxe prélevée sur les familles israélites rescapées , un comble !! Bien que les attaques cessent pour un temps, les Juifs, pendant les dix années d'armistice, ne vivent jamais en sécurité ; et en 1349, il y a les terribles massacres à l'occasion de la peste noire, auxquels les attaques d'Armleder avaient été le prélude.avec l'aide de l'évêque de Strasbourg bertholt 2 de Bucheck het du grand Bailly Albert de Hohenburg Sénéchal des ducs d'Autriche enfin du bail d’Ensisheim Jean Ulrich de Hus , l'abbaye de Murbach Conrad de Murnhard, les Ribeaupierre, et enfin les villes de Strasbourg Sélestat Obernai Mulhouse et Kaysersberg\n\nCONTEXTE : Le mythe de l'empoisonnement des puits\nCette théorie de l'empoisonnement des puits apparaît en Franconie en 1319, les Juifs étant accusés de propager la lèpre. Elle réapparaît en 1321 dans le Dauphiné, et à Chinon où 160 Juifs sont brûlés vifs. Guillaume de Nangis rapporte ce qui se disait à l'époque à propos d'un vaste complot supposé entre les Juifs, les lépreux, et même le roi musulman de Grenade",
+    "image": ""
+  },
+  {
+    "id": 533,
+    "titre": "Redemptor noster, réforme de l’ordre Franciscain",
+    "date": 1336,
+    "mois": 11,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "Benoît XII adresse aux Franciscains la bulle de réforme Redemptor noster[11]. Il insiste sur la formation des missionnaires dont la foi et la science doivent avoir été vérifiées avant le départ.",
+    "image": ""
+  },
+  {
+    "id": 534,
+    "titre": "Fondation du Royaume de Vijayanagar",
+    "date": 1336,
+    "zones": [
+      "Inde"
+    ],
+    "type": 1,
+    "description": "Inde : à Kampilî, la population se révolte contre le gouverneur tughluq. Le sultan de Delhi relâche alors les deux fils d’un chef local, Harihara et Bukka, converti à l'Islam, en espérant que les choses rentreraient dans l’ordre. Harihara rejette la suzeraineté tughluq, retourne à l'hindouisme et crée le royaume hindou de Vijayanâgara, qu'il consolide avec ses quatre frères jusqu'à occuper tout le sud du Dekkan face à l'emprise musulmane. Il règne jusqu'en 1356.\nFondé en 1336 par les frères Harihara Ier et Bukka Raya I (en) de la dynastie Sangama (en), membres d'une communauté de bergers qui revendiquent la lignée des Yadava (bergers) Le royaume prend de l'importance comme point culminant des tentatives des puissances du Sud pour repousser les invasions musulmanes à la fin du XIIIe siècle. À son apogée, il soumet presque toutes les dynasties dirigeantes du sud de l'Inde et pousse les sultanats du Deccan au-delà de la région du Doab des rivières Tungabhadra et Krishna, en plus d'annexer le royaume Gajapati. Le royaume s'étend jusqu'en 1646, bien que sa puissance décline considérablement après une défaite militaire majeure lors de la bataille de Talikota en 1565 par les armées combinées des sultanats du Deccan. Le royaume doit son nom à sa capitale, Vijayanagara (aujourd'hui Hampi), dont les vastes ruines sont désormais inscrites au patrimoine mondial de l'UNESCO au Karnataka.Les Européens appelaient parfois le royaume de Vijayanagara « le royaume de Narasinga »[7],[8] (Narsingue en français), un nom dérivé de « Narasimha » par les Portugais.\n\nAu début du XIVe siècle les guerres et les pillages des raids du sultanat de Delhi musulman, conduits notamment par le commandant Malik Kafur entre 1307 et 1311 mettent à mal les royaumes hindous de l'Inde méridionale. Au cours des deux premières décennies après la fondation du royaume, Harihara Ier prend le contrôle de la majeure partie de la zone au sud de la rivière Tungabhadra et obtint le titre de « maître des mers orientales et occidentales » (Purvapaschima Samudradhishavara). En 1374, Bukka Raya I (en), successeur d'Harihara Ier, vainc la chefferie d'Arcot, les Reddys de Kondavidu et le sultan de Madurai (en), et prend le contrôle de Goa à l'ouest\nHarihara rejette la suzeraineté tughluq, retourne à l'hindouisme et crée le royaume hindou de Vijayanâgara, qu'il consolide avec ses quatre frères jusqu'à occuper tout le sud du Dekkan face à l'emprise musulmane. Il règne jusqu'en 1356. 1336 : fondation de la cité-temple de Vijayanagar à Hampi en Inde",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vijayanagara-empire-map.svg/960px-Vijayanagara-empire-map.svg.png",
+    "legende": "Étendue maximale de l'empire Vijayanagara (vers 1520)"
+  },
+  {
+    "id": 535,
+    "titre": "Pétrarque  1ere ascension du Ventoux",
+    "date": 1336,
+    "mois": 4,
+    "zones": [
+      "Sciences",
+      "Litterature"
+    ],
+    "type": 1,
+    "description": "Le poète François Pétrarque et son frère Gérard (Gherardo), accompagné d'un berger, font la première ascension du mont Ventoux au départ de Malaucène",
+    "image": ""
+  },
+  {
+    "id": 536,
+    "titre": "Bulle  pour la réforme des moines noirs",
+    "date": 1336,
+    "mois": 6,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "Bulle  pour la réforme des moines noirs, Summi magistri dite bénédictine, qui réforme la règle des Bénédictins et des Cisterciens. \nL'ordre qui attire le plus son attention est celui de Cîteaux, objet de différentes réformes sans grand succès. Benoît XII impose une réforme plus efficace par la bulle Summi magistri dignatis du 20 juin 1336, dont le principe est de regrouper les différentes abbayes en un certain nombre de provinces, et de les soumettre à une discipline commune. Cette bulle dite « bénédictine » n’a pas tout l’effet souhaité.",
+    "image": ""
+  },
+  {
+    "id": 538,
+    "titre": "Époque Nanboku-chō guerre civile Nord - Sud",
+    "date": 1336,
+    "date_fin": 1392,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "L'époque Nanboku-chō (南北朝時代, Nanboku-chō-jidai?) aussi appelée « période des cour du Nord et cour du Sud » ou « guerre entre les deux cours » s’étend de 1333 à 1392 au début de l'époque de Muromachi de l'histoire du Japon.\n\nIl s'agit d'une guerre civile entre les partisans de l’empereur Go-Daigo dirigeant la cour du Sud basée à Yoshino et les partisans de l’empereur Komyo (1322-1380) de la Cour du Nord établie à Kyoto et soutenue par Takauji Ashikaga.\n\nAprès presque soixante ans de guerre, le Nord l'emporte en 1392. C'est pourtant la cour du Sud qui est aujourd'hui considérée comme légitime au titre d'empereur du Japon, car elle est en possession du trésor impérial du Japon.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 541,
+    "titre": "Shogunat Ashikaga",
+    "date": 1336,
+    "date_fin": 1573,
+    "zones": [
+      "Japon"
     ],
     "type": 1,
     "image": "",
