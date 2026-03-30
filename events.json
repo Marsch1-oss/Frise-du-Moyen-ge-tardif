@@ -2711,6 +2711,20 @@
     "regne": true
   },
   {
+    "id": 516,
+    "titre": "2e siège de Gibraltar",
+    "date": 1316,
+    "mois": 3,
+    "zones": [
+      "Castille",
+      "Aragon",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Le deuxième siège de Gibraltar était une tentative avortée en 1315 par l'Émirat de Grenade pour reprendre Gibraltar, qui était tombée aux mains de Ferdinand IV de Castille en 1309 lors du premier siège de Gibraltar. Le siège a été précipité par le renversement en 1314 de Abu al-Juyuch Nasr, le sultan de Grenade par son neveu Ismaïl Ier de Grenade. Le nouveau sultan a déclaré le djihad contre les princes chrétiens de la péninsule ibérique en 1315 et a commencé à assiéger Gibraltar[1]..\n\nAlors que les forces de Ismaïl Ier de Grenade assiégeaient Gibraltar, les forces du Royaume de Castille sous le commandement du prince régent Pierre de Castille - qui exercent l'autorité au nom du jeune roi Alphonse XI de Castille- ont entrepris un raid en profondeur dans Grenade pour piller et détruire les riches terres agricoles de l'émirat. Quand les nouvelles de l'état de siège sont parvenues a Pierre à Cordoue, il a quitté son armée et est allé à Séville pour organiser les forces navales et terrestres de lever le blocus nasride. Le siège semble avoir pris fin sans un combat lorsque les Nasrides se retirèrent à l'approche des armées castillanes. Pierre s'est ensuite rendu à son armée à Cordoue pour continuer le siège de Grenade.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Estrecho_1310-1329.png"
+  },
+  {
     "id": 283,
     "titre": "Relations régulières par mer entre Bruges et Venise (galere da mercato)",
     "date": 1317,
@@ -4350,7 +4364,7 @@
       "Monde"
     ],
     "type": 4,
-    "description": "Le roi d’Éthiopie Amda Seyon Ier attaque le sultan d’Ifat Haqq-ed-Din en riposte aux attaques des musulmans dans le Choa. Il annexe le sultanat et nomme gouverneur un frère du sultan vaincu, Sabr ad-Din, qui se révolte à son tour en 1332.ancien État islamique situé dans le Choa à l'est de l'Éthiopie jusqu'à Berbera dans l'actuelle Somalie, fondé au XIIIe siècle par la dynastie Walashma. Ils se développe en concurrence avec l'Empire éthiopien qui le vassalise par intermittence. Le premier souverain connu de la dynastie Walashma (en) est Omar ibn Dunya-huz, qui selon l'historien Maqrîzî, est désigné par le roi d’Éthiopie Yekouno Amlak qui règne entre 1270 et 1285. Il meurt vers 1275 et ses quatre ou cinq enfants, dont sa fille Mä'ät-läylä, lui succèdent chacun à leur tour. Leur règne respectif est assez bref, à l'exception de celui de Bäzitu, qui dure de 1279 à 1299 environ. Le dernier d'entre eux, Sabr ad-Din, arrive à un âge avancé. Son fils Ali est le premier à se révolter contre le joug éthiopien.\n\nUn nouveau conflit éclate vers 1320 quand le sultan mamelouk du Caire An-Nâsir Muhammad ben Qalâ'ûn persécute les Coptes, et que l'empereur Amda Seyon Ier le menace de représailles. Le sultan d'Ifat Haqq-ed-Din attaque les territoires chrétiens, brûle les églises et contraint les fidèles à se convertir à l'islam. Un envoyé de l'empereur est assassiné. Amda-Syon réagit, et en 1328, il conquiert l’Ifat et le Fatajar. Il les met sous l’autorité d'un frère du sultan vaincu, Sabr ad-Din, mais ce dernier se révolte à son tour et proclame la guerre sainte en 1332 en s'alliant avec le Hadiya, le Daouaro et les Agao judaïsés du Nord du lac Tana. Amda-Syon devance les coalisés, ravage Hadiya, Fatajar et Daouaro et établit sur l’ensemble un autre frère des sultans vaincus, Jamal ad-Din en 1335. Il devra abattre deux autres coalitions avant de se résoudre à détruire la capitale de l’Ifat, avec ses mosquées.",
+    "description": "Le roi d’Éthiopie Amda Seyon Ier attaque le sultan d’Ifat Haqq-ed-Din en riposte aux attaques des musulmans dans le Choa. Il annexe le sultanat et nomme gouverneur un frère du sultan vaincu, Sabr ad-Din, qui se révolte à son tour en 1332.ancien État islamique situé dans le Choa à l'est de l'Éthiopie jusqu'à Berbera dans l'actuelle Somalie, fondé au XIIIe siècle par la dynastie Walashma. Ils se développe en concurrence avec l'Empire éthiopien qui le vassalise par intermittence. Le premier souverain connu de la dynastie Walashma (en) est Omar ibn Dunya-huz, qui selon l'historien Maqrîzî, est désigné par le roi d’Éthiopie Yekouno Amlak qui règne entre 1270 et 1285. Il meurt vers 1275 et ses quatre ou cinq enfants, dont sa fille Mä'ät-läylä, lui succèdent chacun à leur tour. Leur règne respectif est assez bref, à l'exception de celui de Bäzitu, qui dure de 1279 à 1299 environ. Le dernier d'entre eux, Sabr ad-Din, arrive à un âge avancé. Son fils Ali est le premier à se révolter contre le joug éthiopien.\n\nUn nouveau conflit éclate vers 1320 quand le sultan mamelouk du Caire An-Nâsir Muhammad ben Qalâ'ûn persécute les Coptes, et que l'empereur Amda Seyon Ier le menace de représailles. Le sultan d'Ifat Haqq-ed-Din attaque les territoires chrétiens, brûle les églises et contraint les fidèles à se convertir à l'islam. Un envoyé de l'empereur est assassiné. Amda-Syon réagit, et en 1328, il conquiert l’Ifat et le Fatajar. Il les met sous l’autorité d'un frère du sultan vaincu, Sabr ad-Din, mais ce dernier se révolte à son tour et proclame la guerre sainte en 1332 en s'alliant avec le Hadiya, le Daouaro et les Agao judaïsés du Nord du lac Tana. 18 février 1332 : début de la campagne du roi d’Éthiopie Amda Seyon Ier, qui réprime la révolte des États musulmans de l’Ifat et du Fatajar[2], au sud de l’Éthiopie (ou en 1329). Amda-Syon devance les coalisés, ravage Hadiya, Fatajar et Daouaro et établit sur l’ensemble un autre frère des sultans vaincus, Jamal ad-Din en 1335. Il devra abattre deux autres coalitions avant de se résoudre à détruire la capitale de l’Ifat, avec ses mosquées.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ifat.png",
     "legende": "Sultanat d'Ifat vers 1300.",
     "sources": "https://fr.wikipedia.org/wiki/Sultanat_d%27Ifat"
@@ -4974,7 +4988,7 @@
       "Papaute"
     ],
     "type": 4,
-    "description": "fondation de l’université de Cahors par le pape Jean XXII (le Cadurcien Jacques Duèze). Elle dépasse longtemps celle de Toulouse avant d’être intégrée à celle-ci au XVIIIe siècle[Elle est fondée en 1331 sous la forme d'un Studium generale par une bulle pontificale de Jean XXII, et dissoute en 1751 en fusionnant avec l'université de Toulouse[1] sur décision du chancelier de La Moignon. Elle comptait alors 1 600 étudiants.\nElle est composée des quatre facultés de théologie, droit, médecine, arts ou belles-lettres",
+    "description": "fondation de l’université de Cahors par le pape Jean XXII (le Cadurcien Jacques Duèze). Elle dépasse longtemps celle de Toulouse avant d’être intégrée à celle-ci au XVIIIe siècle.\nElle est fondée en 1331 sous la forme d'un Studium generale par une bulle pontificale de Jean XXII, et dissoute en 1751 en fusionnant avec l'université de Toulouse sur décision du chancelier de La Moignon. Elle comptait alors 1 600 étudiants.\nElle est composée des quatre facultés de théologie, droit, médecine, arts ou belles-lettres",
     "image": ""
   },
   {
@@ -5003,7 +5017,7 @@
   },
   {
     "id": 485,
-    "titre": "Ligue de Souabe",
+    "titre": "1ere Ligue de Souabe",
     "date": 1331,
     "zones": [
       "St Empire"
@@ -5038,6 +5052,180 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Ibn_Battuta_1332-1346.png"
   },
   {
+    "id": 487,
+    "titre": "Jean II de France épouse Bonne de Luxembourg.",
+    "date": 1332,
+    "mois": 7,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "1332  Philippe VI émancipe son fils, Jean, héritier du trône, et l'investit des comtés d'Anjou et du Maine et du duché de Normandie\nPhilippe VI cherchait à nouer une alliance matrimoniale aussi prestigieuse que possible et de lui remettre un apanage (la Normandie)Parmi les princes du Saint-Empire, Jean de Luxembourg (1296-1346), roi de Bohême est un des princes les plus puissants de l'époque, fils de l'empereur Henri VII, est un habitué de la cour de France (sa sœur Marie (1305-1324) a été l'épouse du roi Charles IV le Bel), tout comme son fils Venceslas (Charles) (1316-1378), futur empereur Charles IV . \nPhilippe VI l'invite à Fontainebleau et lui propose un traité d'alliance cimenté par le mariage de son fils Jean avec sa file Bonne de Luxembourg . (Son nom Guta (Gut en allemand signifie bon) est francisé en Bonne.)\nLe roi de Bohême, qui a des visées sur la Lombardie et a besoin du soutien diplomatique français, accepte. \nEn 1332, Jean le Bon reçoit la Normandie en apanage et constate qu'une grande partie de la noblesse normande est attirée par le camp anglais.\nEn effet, économiquement, la Normandie dépend des échanges maritimes à travers la Manche autant que des échanges par le transport fluvial sur la Seine.La noblesse normande est divisée entre deux factions, celle des Tancarville et celle des Harcourt qui se livrent à une guerre sans merci depuis plusieurs générationsCharles le Mauvais est par ailleurs comte d'Évreux et fait donc partie de la noblesse normande.1332 28 juillet[ Le jeune prince Jean fils de Philippe VI épouse Bonne de Luxembourg et devient duc de Normandie \nJean de Valois se rapproche des Tancarville, qui représentent le clan loyaliste, pour assurer son autorité sur la Normandie. Or, le vicomte Jean de Melun a épousé Jeanne, la seule héritière du comté de Tancarville ce sont donc  les Melun-Tancarville qui forment l'ossature du parti de Jean le Bon, alors que Godefroy de Harcourt est le défenseur historique des libertés normandes et donc du parti réformateur. Le rapprochement entre ce dernier et Charles de Navarre, qui se pose en champion des réformateurs, devient donc logique. \n Environné de périls, il développe une méfiance qui peut confiner à la paranoïa. Désireux d'en imposer à tous ceux qui remettent en question sa légitimité, il cherche comme son père avant lui à donner un aspect fastueux aux cérémonies royales, ce qui correspond à la conception médiévale de la noblesse. Cependant, les temps ont changé et les contribuables voient d'un mauvais œil ces dépenses somptuaires.\nCependant Jean, duc de Normandie, mais aussi comte d'Anjou, comte du Maine et comte de Poitiers, seigneur des conquêtes de Languedoc et de Saintonge[pas clair], ne joue pas un rôle politique très important dans ses fiefs, qui appartiennent au domaine royal. Ce sont les officiers royaux qui administrent la plupart de ses possessions\nEn revanche, il participe activement aux campagnes militaires de l'époque.\nIl  combat les Anglais dans le comté de Hainaut en 1340, en Bretagne en 1341–1342 et en Guyenne en 1345-1346",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bonne_of_Luxembourg%2C_with_her_husband_Jean.jpg",
+    "legende": "Représentation de Bonne de Luxembourg et de son époux Jean dans son psautier."
+  },
+  {
+    "id": 489,
+    "titre": "Robert III d'Artois  est banni",
+    "date": 1332,
+    "mois": 5,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "Condamnation au bannissement de Robert III d'Artois qui revendiquait l’Artois. \nRobert III d’Artois[1] (né en 1287 - mort en 1342 à Londres) est seigneur de Conches-en-Ouche, de Domfront, et de Mehun-sur-Yèvre ; en 1310, il reçut en outre en apanage le comté de Beaumont-le-Roger pour le dédommager de la perte du comté d’Artois auquel il prétendait.Avec la crise de succession de 1328, il est l'un des éléments déclencheurs de la guerre de Cent Ans, par son exil en Angleterre et sa détermination à entraîner le roi d'Angleterre dans un conflit contre le roi de France.\nRobert D’Artois n'a qu’onze ans quand son père meurt le 11 septembre 1298 des suites des blessures qu'il a reçues à la bataille de Furnes le 20 août 1297 contre les Flamands. Il a quinze ans quand son grand-père Robert II d'Artois meurt à son tour à la bataille de Courtrai en 1302, posant alors le problème de la succession au titre de comte d'Artois, qui sera la grande affaire de la vie de Robert III. En raison de son jeune âge, Robert III ne peut faire prévaloir les droits hérités de son père contre sa tante Mahaut (fille de Robert II et sœur du père de Robert III) ; elle hérite du titre tant en vertu de la coutume du comté d'Artois que pour des considérations politiques[2],[3].\nEn effet, il est établi que la coutume du comté d'Artois ne considère pas que le petit-fils puisse représenter le fils héritier décédé : le titre devait revenir aux enfants survivants, garçon ou fille. En outre, lorsqu'il a donné l'Artois en apanage à son fils puîné Robert Ier d'Artois, arrière-grand-père de Robert III, Louis VIII n'a pas précisé que la succession du comté ne se ferait que par les mâles[4],[3].\nDès lors, le roi et les pairs chargés de statuer considérèrent que le titre doit revenir logiquement à Mahaut.\nIls y sont d'autant plus enclins que cette dernière a épousé un prince d'Empire, Othon IV de Bourgogne et obtient le rattachement du comté de Bourgogne au royaume de France. Ce prince fait de Mahaut une femme puissante face à un adolescent de quinze ans dont personne ne se soucie à la cour.\nPour autant, rapidement, Robert se fixe pour objectif de recouvrer ce qu'il considère comme son héritage légitime. En effet, si son père, Philippe, n'était pas mort prématurément, il aurait, en tant qu'aîné masculin, disposé du comté d'Artois au détriment de Mahaut, et Robert III, naturellement, lui aurait succédé. Certes, le petit comté de Beaumont-le-Roger a été accordé à ce dernier à titre de compensation, mais Robert considère cela comme insuffisant.\nPersuadé d'avoir été floué, Robert bataillera perpétuellement pour évincer sa tante. Deux jugements devant la cour des Pairs, en 1309 et en mai 1318 donnent pourtant raison à Mahaut. À l'époque de ce second procès, il épouse Jeanne de Valois, la sœur d'un des plus puissants barons à la cour, Philippe de Valois, le neveu de Philippe le Bel et futur Philippe VI, ce qui lui permet de disposer d'une réelle influence au sein du conseil royal[2]. Certes, Mahaut n'est pas dénuée d'atout de son côté puisque le roi Philippe V est son gendre, mais cela n'empêche pas le roi de confier de nombreuses missions à Robert[3] : finalement, les capacités d'influence des deux partis s'équilibrent à la cour. Lorsque le dernier fils de Philippe le Bel, Charles IV, meurt sans descendance, Robert perçoit que cela peut l'aider dans sa querelle avec Mahaut. Conscient des avantages que lui procurerait l'accession au trône de son beau-frère Philippe de Valois, Robert est à la pointe du combat visant à ce que la couronne de France revienne en février 1328 à Philippe VI contre les prétentions d'Édouard III d'Angleterre. Philippe lui en est reconnaissant : il le fait pair de France et lui accorde de nombreuses pensions[3]. Comme le souligne Jean Favier, « au Conseil, Robert d'Artois est écouté ; dans l'entourage royal, il passe pour l'homme qui a l'oreille du roi ; pour l'opinion publique, il est l'ami du roi, son compagnon »[5].\n\nMais Robert ne se contente pas de cette position confortable, et considère plutôt qu'elle constitue un atout décisif dans sa quête de l'Artois. D'autant que s'y ajoutent des circonstances favorables lorsqu'un an plus tard, en 1329, Mahaut meurt. Robert saisit cette occasion pour réclamer à nouveau ce qu'il considère comme son dû, en engageant une nouvelle action judiciaire, fort de l'exemple de la succession du comté de Flandre : en effet, le comte de Flandre Robert de Béthune a choisi en 1322 de laisser son titre à son petit-fils Louis plutôt qu'aux frères de son fils aîné Louis Ier de Nevers, mort deux mois avant lui. Robert d'Artois veut voir dans ce précédent, si proche dans le temps comme dans l'espace, une inflexion de la coutume et la confirmation de ses droits[5]. Il prend soin de s'assurer des alliés importants : il est soutenu d'une part, en Artois même, par « ceux que l'autoritarisme de Mahaut avait jetés dans une sorte de complot permanent »[5], d'autre part à la Cour par des princes de premier rang, notamment le comte d'Alençon, frère du roi, et le duc de Bretagne.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Robert_d%27artois.jpg/960px-Robert_d%27artois.jpg",
+    "legende": "Statue de Robert d'Artois (vue d'artiste) au château de Versailles."
+  },
+  {
+    "id": 490,
+    "titre": "« Geschölle »  de Strasbourg",
+    "date": 1332,
+    "mois": 5,
+    "zones": [
+      "Alsace"
+    ],
+    "type": 1,
+    "description": "1332 Après le « Geschölle » une rixe entre groupes nobles les corporations s’emparent du pouvoir à Strasbourg.\nla lutte entre deux familles patriciennes, les Zorn et les Müllenheim, débouche en 1332 sur le « Geschölle », une rixe sanglante lors d'un banquet[9]. L'affrontement provoque un changement politique en faveur des artisans qui prennent le pouvoir. Suite à un banquet officiel dans le jardin de la résidence des Ochsenstein 9 rue brûlée l'actuel hôtel de ville, hé à noter que ces nobles se réunissent autour d'une table ronde pour éviter les problèmes de préséance et que ce banquet a lieu tous les ans à Pâques. hé mais cette année les choses tournent mal ces agapes   hé sont réservés aux édits nobles mais une dispute éclate entre gentilhomme du parti des Zorn et des Mülenheim. Nicolas Zorn est alors Schulteis de la ville.  Suite à ces événements qui font tout de même 21 morts la ville organise une série de procès d'épuration les turbines le step miste j'en stick qui ont partagé contre les familles patriciennes au combat sont expulsés les nobles sont condamnés à l'exil .  la lutte entre deux familles patriciennes, les Zorn et les Müllenheim, débouche en 1332 sur le « Geschölle », une rixe sanglante lors d'un banquet[9]. L'affrontement provoque un changement politique en faveur des artisans qui prennent le pouvoir.",
+    "image": ""
+  },
+  {
+    "id": 491,
+    "titre": "Bataille de Rusokastro",
+    "date": 1332,
+    "mois": 7,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "Victoire de l'Empire bulgare sur l'Empire byzantin.\nLa bataille a eu lieu le 18 juillet 1332, près du village de Rusokastro, en Bulgarie, entre les armées de l'Empire Bulgare et de l'Empire Byzantin. Elle débouche sur une victoire bulgare[1]. Il s'agit de la dernière bataille entre l'Empire bulgare et l'Empire byzantin. En 1328, les empereurs de Bulgarie et de l'Empire Romain d'Orient, Mikhail III et Andronic III Paléologue, signent un traité secret contre la Serbie. Alors que Mikhail III se bat contre les Serbes en 1330, les Byzantins en profitent pour renier leur traité en envahissant la Thrace, s'emparant de plusieurs villes bulgares. Les Byzantins ne sont pas préparés à la guerre. L'Empire Byzantin, épuisé par la guerre civile qui vient de s'achever, doit également se battre contre les Turcs en Asie Mineure. Au sein de l'Empire bulgare, des luttes intestines existent également, mais le nouvel empereur Ivan Aleksandre Asen sait que la confrontation décisive avec Byzance reste à venir. Il décide donc de se rapprocher des Serbes. En 1332, il conclut un traité de paix avec eux, qui durera jusqu'à sa mort. Le traité est confirmé par le mariage entre le roi Serbe Stefan Uros IV Dusan et la sœur de l'Empereur, Elena. Au cours de l'été de la même année, les Byzantins rassemblent une armée et, sans déclaration de guerre, avancent à travers la Bulgarie, pillant les villages qui se trouvent sur leur chemin.\nLes Byzantins parviennent tout d'abord à s'emparer de plusieurs châteaux car Ivan Aleksandre est occupé à réprimer la rébellion de son oncle Belaur à Vidin. Il essaye de négocier avec son ennemi mais sans succès. L'empereur bulgare décide alors d'agir rapidement. Sa cavalerie parcourt 230 km en cinq jours, pour finalement atteindre Aytos, faisant face à l'envahisseur. Ivan Aleksandre dispose d'une armée de 8 000 hommes, tandis que les Byzantins ne peuvent en aligner que 3 000. Des négociations ont lieu entre les deux souverains, mais l'empereur bulgare décide délibérément de les prolonger car il est en attente de renforts. Dans la nuit du 17 juillet, ces renforts arrivent enfin au camp bulgare (environ 3 000 cavaliers). Il décide donc d'attaquer les Byzantins le jour suivant. De son côté, Andronic III Paléologue n'a pas d'autre choix que d'accepter le combat[2]. L'armée byzantine est composée de 16 escouades, dont six constitue la première colonne. L'aile droite est commandée par le protostrator, l'aile gauche est sous le commandement du megas papias Alexis Tzamplakon, le centre étant commandé personnellement par l'empereur. L'armée byzantine forme un large front composé de deux lignes, avec des flancs placés derrière le centre, formant ainsi un croissant.\nLa bataille commence à six heures du matin et dure pendant trois heures. Les Byzantins essayent d'empêcher la cavalerie bulgare de les encercler, mais leurs manœuvres échouent. La cavalerie bulgare contourne la première ligne byzantine, la laissant affronter l'infanterie bulgare, chargeant sur l'arrière de leurs flancs. Après un combat acharné, les Byzantins sont vaincus, et doivent abandonner sur le champ de bataille. Les fuyards trouvent refuge dans le village de Rusokastro. L'armée bulgare entoure alors la forteresse, et à midi le même jour, Ivan Aleksandre envoie des émissaires pour rouvrir des négociations[3]. Les Bulgares récupèrent les territoires qu'ils avaient perdus en Thrace tout en renforçant leur position internationale. Le successeur de l'Empereur bulgare Michael Assen, âgé de 18 ans, épouse finalement Maria, la fille de l'empereur byzantin Andronic III, permettant ainsi de cimenter la paix entre les deux états.\nCette bataille est considérée par les historiens bulgares médiévaux comme le grand triomphe de l'empereur bulgare Ivan Aleksandre Asen. Il s'agit de la dernière grande bataille entre la Bulgarie et l'Empire byzantin. Leur rivalité de 7 siècles pour la domination de les Balkans allait bientôt prendre fin, avec la chute des deux empires et leur conquête par l'Empire Ottoman.\nLe rocher de Rusokastro à l'entrée nord du détroit McFarlane dans les Îles Shetland du Sud en l'Antarctique a été baptisé ainsi en référence à la forteresse médiévale de Rusokastro dans le Sud-est de la Bulgarie",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Battle_of_Rusokastro.png"
+  },
+  {
+    "id": 492,
+    "titre": "Lucerne rejoint les confédérés suisses",
+    "date": 1332,
+    "mois": 11,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Lucerne est la première ville à entrer dans la Ligue Éternelle Suisse.\nContexte général de l’alliance (début du XIVᵉ siècle)\nAu début du XIVᵉ siècle, la région alpine centrale est marquée par une forte instabilité politique. Le Saint-Empire romain germanique est affaibli, ce qui favorise les ambitions de grandes familles nobles, notamment les Habsbourg, qui cherchent à étendre leur domination sur les territoires stratégiques de Suisse centrale.\nLes cantons d’Uri, Schwyz et Unterwald (appelés les trois cantons primitifs) ont déjà conclu des pactes d’entraide (notamment celui de 1291) afin de préserver leurs libertés locales, leurs droits judiciaires et leur autonomie face aux seigneurs féodaux.\n\nLa situation particulière de Lucerne\nLucerne est à l’origine une ville sous domination des Habsbourg, qui y exercent un pouvoir politique et judiciaire. Toutefois, au début du XIVᵉ siècle :\nla bourgeoisie lucernoise s’enrichit grâce au commerce et au contrôle des routes reliant le Plateau suisse aux cols alpins (notamment le Gothard) ;\nles habitants de Lucerne souhaitent se libérer de la tutelle habsbourgeoise, perçue comme un frein à leur autonomie politique et économique.\nLucerne se trouve donc dans une position stratégique mais vulnérable, cherchant des alliés capables de garantir sa sécurité.\n\nLes motivations de l’alliance de 1332\nL’alliance conclue en 1332 entre Lucerne et les trois cantons répond à des intérêts réciproques :\nPour Lucerne :\nobtenir un soutien militaire face aux Habsbourg ;\nrenforcer son autonomie politique ;\nsécuriser ses activités commerciales.\nPour les trois cantons :\nétendre leur réseau d’alliances ;\ncontrôler davantage les axes de circulation vers le Gothard ;\naffaiblir l’influence des Habsbourg dans la région.\n\nImportance et conséquences de l’alliance\nCette alliance marque une étape majeure dans l’élargissement de la Confédération :\nLucerne devient le premier canton urbain à rejoindre l’alliance, jusqu’alors composée de communautés rurales ;\nelle montre que la Confédération n’est pas seulement une union alpine, mais un projet politique plus large ;\nelle renforce la résistance collective face aux Habsbourg, qui culminera avec la victoire de Morgarten (1315) déjà acquise, puis d’autres succès au XIVᵉ siècle.\nConclusion\nL’alliance de 1332 entre Lucerne et les trois cantons s’inscrit dans un contexte de lutte pour l’autonomie politique et de résistance à la domination habsbourgeoise. Elle illustre la transformation progressive d’alliances locales en une confédération durable, fondée sur l’entraide militaire et la défense des libertés, et constitue une étape essentielle dans la construction de la Suisse médiévale.",
+    "image": ""
+  },
+  {
+    "id": 493,
+    "titre": "Bataille d'Annan",
+    "date": 1332,
+    "mois": 12,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Édouard Balliol, né vers 1283 et mort en 1364 à Wheatley[1], est un prétendant au trône d'Écosse. Fils du roi Jean Balliol, il tente d'avancer ses droits sur le trône avec le soutien du roi d'Angleterre Édouard III et règne à trois reprises sur l'Écosse entre 1332 et 1336 mais ne parvient pas à imposer son hégémonie et finit par renoncer à ses droits en 1356 en faveur d'Édouard III. Robert Ier est mort en juin 1329, et l'Écosse est désormais gouvernée par Thomas Randolph, 1er comte de Moray, régent du jeune David II Bruce. Édouard Balliol se rend plusieurs fois en Angleterre à cette époque et constate que, si Édouard III n'est pas prêt à intervenir directement en Écosse, il veut toutefois bien favoriser une invasion de l'Écosse par Édouard Balliol et les « déshérités »[N 1], qui l'encouragent dans ses velléités pour le trône d'Écosse. Le projet est mis en œuvre immédiatement à la nouvelle de la mort du régent écossais le 20 juillet 1332. Édouard Balliol et les « déshérités » débarquent à Kinghorn le 6 août suivant[3]. Les Écossais réagissent mais Édouard Balliol bat les troupes de David II menées par le nouveau régent Donald, comte de Mar, le 11 août à la bataille de Dupplin Moor. Balliol est couronné roi des Écossais à Scone le 24 septembre 1332[3] et tente d'établir son autorité. Il offre lui-même dès novembre de rendre l'hommage pour le royaume d'Écosse au roi d'Angleterre et accepte qu'une importante partie du sud du territoire soit placée sous la souveraineté directe des Anglais[2].\n\n\nSceau utilisé par Édouard Balliol lors de son avènement au trône.\nAprès un succès lors d'une escarmouche à Roxburgh dans laquelle le gardien de l'Écosse Andrew Murray de Bothwell est capturé, Édouard Balliol se retire pour passer la Noël 1332 en sécurité à Annan, dans le manoir ancestral du domaine des Balliol dans le Galloway. Le 16 décembre, il y est surpris par un parti mené par Archibald Douglas et John Randolph, 3e comte de Moray. Balliol est obligé de s'enfuir à demi-nu vers l'Angleterre. Édouard III n'a pas d'autre choix que de s'impliquer directement dans le conflit car il cherche par ailleurs à rétablir la réputation de l'Angleterre après le cuisant échec subi par son père en Écosse au cours des décennies précédentes[4]. De mars à juillet 1333, Édouard III d'Angleterre et Édouard Balliol envahissent l'Écosse à la tête d'une armée de 13 000 hommes et mettent le siège devant Berwick[N 2]. Balliol bat une nouvelle fois avec l'aide de ses alliés anglais l'armée écossaise qui s'avance au secours de la cité lors de la bataille de Halidon Hill le 19 juillet 1333, où périt le régent Archibald Douglas[5].\n\nÉdouard Balliol est rétabli sur son trône. Il réussit à réunir un Parlement à Holyrood en février 1334, lors duquel il obtient la validation de l'accord passé avec Édouard III et récompense rapidement ses partisans, dont un certain nombre de nobles anglais, auxquels il octroie des domaines en Écosse[2]. Il met aussi en place une administration en nommant William Bullock chambellan et gardien du château de Cupar dans le Fife et au moins un shérif, Alan Lisle, qui officie à Bute et Cowal[2]. Il rend alors personnellement un hommage simple au roi d'Angleterre à York le 5 juin 1334[5], qui est suivi d'un hommage formel à Newcastle le 19 juin. Une semaine avant, il a cédé les sheriffdoms de Berwick, Roxburgh, Selkirk, Peebles, Dumfries, et trois parties du Lothian à Édouard III. Entretemps, le jeune David II et son épouse Jeanne d'Angleterre se sont réfugiés en France en mai 1334, où ils vont passer les sept années suivantes à Château-Gaillard en Normandie. Robert Stewart et John Randolph deviennent en juillet 1334 gardiens pour le compte de David",
+    "image": ""
+  },
+  {
+    "id": 494,
+    "titre": "L'université de Paris contre le pape",
+    "date": 1332,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "Conflit entre Jean XXII et l’Université de Paris soutenue par le roi de France.\nContexte général : l’Église et le pouvoir au début du XIVᵉ siècle. Au début du XIVᵉ siècle, la papauté traverse une période de tensions profondes :depuis 1309, les papes résident à Avignon, ce qui renforce leur dépendance vis-à-vis du roi de France ;l’Église est confrontée à des crises doctrinales, notamment autour de la pauvreté évangélique, de l’autorité pontificale et du salut des âmes ;le pape Jean XXII (1316–1334) affirme une vision très centralisatrice et autoritaire du pouvoir pontifical.Dans ce contexte, l’Université de Paris est l’un des centres intellectuels majeurs de la chrétienté, jouant un rôle essentiel dans la définition de l’orthodoxie théologique.Le rôle de l’Université de ParisL’Université de Paris, en particulier sa faculté de théologie, jouit d’un prestige considérable :elle est perçue comme une autorité en matière de doctrine ;elle défend une certaine autonomie intellectuelle face au pouvoir pontifical ;elle intervient régulièrement dans les débats théologiques majeurs.Ainsi, lorsqu’un pape adopte une position jugée discutable, l’Université peut se sentir légitime pour la critiquer.L’origine du conflit : la vision béatifiqueLe conflit éclate autour d’une question doctrinale centrale : le moment où les âmes des justes accèdent à la vision de Dieu (vision béatifique).Jean XXII soutient, dans des sermons prononcés entre 1331 et 1333, que les âmes des justes n’accèdent pas immédiatement à la vision béatifique après la mort, mais seulement après le Jugement dernier.Cette position va à l’encontre de l’opinion théologique majoritaire, notamment celle défendue à l’Université de Paris, selon laquelle les âmes des justes voient Dieu immédiatement après leur mort.Les maîtres parisiens considèrent cette thèse comme dangereuse, car elle remet en cause des croyances largement admises sur le salut et l’au-delà. Le conflit en 1332En 1332, la tension atteint son apogée :plusieurs théologiens parisiens critiquent ouvertement les positions du pape ;l’Université de Paris affirme son rôle de gardienne de l’orthodoxie et réclame une clarification doctrinale ;Jean XXII perçoit cette contestation comme une atteinte à son autorité pontificale.Le conflit révèle donc une opposition entre :l’autorité doctrinale du pape,et l’autorité intellectuelle collective de l’Université.Enjeux politiques et intellectuelsCe conflit dépasse la simple querelle théologique :il illustre les limites du pouvoir pontifical face aux institutions savantes ;il montre la montée en puissance des universités médiévales comme acteurs du débat religieux ;il s’inscrit dans une réflexion plus large sur la relation entre foi, raison et autorité.Il reflète également les tensions entre centralisation romaine (ou avignonnaise) et pluralité des voix dans l’Église.Issue et conséquences. Jean XXII ne condamne jamais officiellement l’opinion majoritaire, mais revient sur sa position peu avant sa mort en 1334.Son successeur, Benoît XII, tranche la question en 1336 en affirmant officiellement la doctrine de la vision béatifique immédiate.L’Université de Paris sort renforcée de cet épisode, confirmant son rôle de référence doctrinale.ConclusionLe conflit de 1332 entre Jean XXII et l’Université de Paris s’inscrit dans un contexte de crise de l’autorité ecclésiastique, de débats théologiques intenses et de montée en puissance des institutions universitaires. Il illustre les tensions entre pouvoir pontifical et liberté intellectuelle, caractéristiques de la fin du Moyen Âge.",
+    "image": ""
+  },
+  {
+    "id": 495,
+    "titre": "Victoire navale Génoise contre les Aragonais",
+    "date": 1332,
+    "mois": 3,
+    "zones": [
+      "Italie",
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "À la fin du XIIIᵉ et au début du XIVᵉ siècle, la Méditerranée occidentale est dominée par une rivalité commerciale et maritime intense entre plusieurs puissances :la République de Gênes ;la Couronne d’Aragon (incluant la Catalogne) ;la République de Venise (plutôt en Méditerranée orientale).Les enjeux sont :le contrôle des routes commerciales ;la domination maritime autour de la Sardaigne, de la Corse, de la Sicile et des côtes provençales ;l’accès aux marchés méditerranéens (blé, sel, épices, métaux).Antonio Grimaldi : personnage et rôleAntonio Grimaldi appartient à la puissante famille Grimaldi de Gênes, qui combine :activités commerciales,commandement naval,ambitions politiques.Il agit comme :amiral génois ou capitaine de flotte ;représentant des intérêts génois face aux puissances ibériques.Il est aussi emblématique de la stratégie génoise fondée sur :la guerre navale ;les opérations rapides (raids, blocus, attaques ciblées).Le conflit avec les Catalans et les AragonaisLes Catalans et Aragonais cherchent à :étendre leur influence maritime ;sécuriser leurs possessions (notamment en Sardaigne, conquise à partir de 1323).Cette expansion entre directement en conflit avec les intérêts génois, très présents dans la région.Dans ce contexte, Antonio Grimaldi mène plusieurs actions navales victorieuses, souvent décrites dans les sources génoises comme :des victoires sur des flottes catalano-aragonaises ;des succès tactiques, parfois locaux mais symboliquement importants.Nature de la « victoire » d’Antonio GrimaldiPlutôt qu’une grande bataille navale décisive, la victoire d’Antonio Grimaldi correspond à :des engagements navals limités, mais efficaces ;la capture ou la destruction de navires catalans ;la perturbation du commerce aragonais ;le maintien de la présence génoise dans certaines zones contestées.Ces succès renforcent :la réputation militaire de Grimaldi ;la position de Gênes face à l’Aragon dans les négociations diplomatiques.Enjeux et portée de ces succèsMême si ces victoires ne mettent pas fin au conflit, elles ont une importance réelle :elles montrent la supériorité tactique ponctuelle de la flotte génoise ;elles illustrent la capacité des grandes familles marchandes à diriger la guerre ;elles participent à l’équilibre instable des puissances maritimes en Méditerranée.Elles s’inscrivent dans une guerre de longue durée, faite d’escarmouches navales, de blocus et d’alliances changeantes.ConclusionLa victoire d’Antonio Grimaldi sur les Catalans et les Aragonais doit être comprise comme un succès naval génois dans un conflit maritime plus large, opposant Gênes à la Couronne d’Aragon pour le contrôle de la Méditerranée occidentale. Plus qu’un événement isolé, elle illustre :la rivalité entre puissances commerciales,le rôle des grandes familles génoises,et la militarisation du commerce maritime au Moyen Âge.",
+    "image": ""
+  },
+  {
+    "id": 496,
+    "titre": "Comptoir génois de Tana (Azov)",
+    "date": 1332,
+    "zones": [
+      "Italie",
+      "Russie",
+      "Orient"
+    ],
+    "type": 3,
+    "description": "Le khan Özbeg attribue aux commerçants génois et vénitiens un territoire à Tana (Azov)  à l’embouchure du Don après Caffa en Crimée en 1316. \nLe khan Özbeg attribue aux commerçants génois et vénitiens un territoire à Tana à l’embouchure du Don pour qu’ils y établissent des comptoirs. Tanais est une colonie grecque dans l'Antiquité. Située sur le Don qui marque alors la limite entre l'Europe et l'Asie, elle restera une « ville-frontière » jusqu'au règne de Pierre le Grand[1]. Point le plus au nord-est de la colonisation grecque, elle fait partie du royaume du Bosphore à partir du Ve siècle av. J.-C.. Fondée par des colons de Milet, la ville devient un point de rencontre des civilisations hellénique et scythique grâce à sa position sur un plateau surplombant un golfe de la mer d'Azov fréquenté par les marchands grecs et par les peuples des steppes[2] reliant l'Europe à la Chine à travers la steppe eurasienne jusqu'au Ve siècle.\n\nDétruite par les Goths au IIIe siècle puis à nouveau par les Mongols au XIIIe siècle, la ville se repeuple à chaque fois car l'attractivité de ce comptoir et base de commerce pour l'Empire romain d'Orient (dit byzantin) puis, au XIVe siècle, pour les grandes thalassocraties italiennes comme Gênes et Venise, ne se dément pas[3]. Ainsi Tana concurrence la principauté de Théodoros en Crimée, et le comptoir qui est dominée par les Génois de Caffa. Azaq est prise par Tamerlan en 1392, par l'Empire ottoman en 1471, qui la rattachent au pachalik de Kefe (Caffa).\nLe comptoir de Caffa y est créé par la République de Gênes en 1266 avec l'accord des frères Möngke et Berké, tous deux khans mongols et petit-fils de Gengis Kahn[4],[5]. Expulsé en 1308 par le Khan Toqtaï, les Génois se réinstalle à Caffa en 1316 sous Özbeg, en échange de privilégier le chemin commercial de la Horde à l'Ilkhanate. Au XIVe siècle, Caffa devient le principal port marchand en mer Noire, concurrencé par le comptoir vénitien de Tana érigé en 1332 au niveau de la ville actuelle d'Azov sur le fleuve Don[5] et relié par voie terrestre à Sarai Berke (aujourd'hui Voljski), capitale de la Horde d'Or[4].\n\nLa citadelle de Caffa est érigée entre 1340 et 1343 sur une colline située à l'ouest de la baie de Théodosie. Le site présente des pentes abruptes vers la mer facilitant sa défense. La citadelle est construite en calcaire extrait d'affleurements situés sur les pentes des montagnes environnantes. Sur les 718 m de murs de la citadelle initialement construits, 469 m ont été préservés, atteignant une hauteur de 11 m et 2 m d'épaisseur. En 1343, la ville de Caffa est assiégée par le Khan Djanibeg. Les habitants du comptoir voisin de Tana se replient sur Caffa, mieux défendue, bénéficiant d'un meilleur approvisionnement par la mer et protégée par deux murs d'enceinte[4].\n\nLe siège dure deux ans à la suite desquels les armées mongoles sont contraintes de se retirer après avoir été décimées par la peste noire. Avant de se retirer, Djanibeg décide de projeter par-dessus les murs d’enceinte de la ville des cadavres de pestiférés. Cette stratégie est connue comme l'une des premières utilisations d'une arme bactériologique dans l'Histoire[4]. Touchés à leur tour par l'épidémie, les Génois sont contraints d'abandonner la ville après la levée du siège par les Mongols. La dispersion des marchands italiens en Méditerranée, transportant avec eux des rats infestés de puces, fut à l'origine de la deuxième pandémie de peste en Europe.",
+    "image": ""
+  },
+  {
+    "id": 497,
+    "titre": "Taddeo Gaddi, fresques à la chapelle Baroncelli",
+    "date": 1332,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "La chapelle Baroncelli est la chapelle située à l'extrémité du transept droit de la basilique Santa Croce à Florence. Elle possède un cycle de fresques de Taddeo Gaddi exécutées entre 1328 et 1338, du vivant de Giotto dont il est un des disciples travaillant sur la manière du maître.\nLa chapelle, composée de deux espaces voûtés d'arêtes et dédiée à la Vierge de l'Annonciation, est située à l'extrémité du transept sud.\n\nElle fut fondée en 1328 par Bivigliano, Bartolomeo et Silvestro Manetti, ainsi que par Vanni et Piero Bandini Baroncelli, deux riches marchands et banquiers florentins qui la commandèrent pour « le bien-être et le salut de nos âmes et de celles de tous nos ancêtres », comme l'indique l'inscription sur le monument funéraire familial, une œuvre à deux faces de Giovanni di Balduccio qui orne le mur d'entrée de la chapelle. Les ornements figuratifs complexes de la chapelle furent peints par Taddeo Gaddi après 1328. Les épisodes des Histoires de la Vie de la Vierge Marie retracent son histoire, de sa conception miraculeuse à la naissance du Christ et à l'adoration des Rois mages. Les voûtes et l'encadrement des fenêtres à deux lancettes présentent des personnifications des Vertus choisies pour illustrer les qualités de Marie, qui devraient également être les objectifs des Franciscains. Les arcs, les piliers et les vitraux représentent des personnages bibliques et des saints associés à la dévotion mariale.\nDans ce cycle, Gaddi s'inspire du style de Giotto, tout en en adoucissant l'austérité pour adopter une approche plus anecdotique, témoignant d'un intérêt pour les étoffes et autres détails de mode. Il expérimente également des solutions novatrices qui deviendront un sujet d'étude pour les générations suivantes, telles que l'architecture vue en perspective sous différents angles, l'espace illusionniste des niches ornées de mobilier liturgique et, surtout, certaines des premières scènes nocturnes de l'art italien. Ici, l'obscurité contraste avec des éclairs de lumière pour symboliser la révélation du Christ, faisant écho à l'idée que Dieu est lumière. Le polyptyque de Giotto représentant le Couronnement de la Vierge sur l'autel s'intègre parfaitement dans ce contexte.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Cappella_baroncelli_03.jpg/960px-Cappella_baroncelli_03.jpg",
+    "legende": "Rencontre à la Porte Dorée de Jérusalem entre les parents de la Vierge Marie, ainsi que Joachim et Anne.",
+    "sources": "https://www.santacroceopera.it/en/places/basilica/baroncelli-chapel/"
+  },
+  {
+    "id": 502,
+    "titre": "Cortone est annexée par Florence",
+    "date": 1332,
+    "mois": 4,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "À partir du XIIIe siècle, la ville est une commune libre, gouvernée par un podestat, qui s'allie avec Pérouse pour se défendre contre les Arétins dans la lutte entre les guelfes et les gibelins. Ce conflit marque l'histoire de Cortone pendant toute la fin du Moyen Âge. En 1232, alliés aux Florentins, les Cortonais occupent leur rivale. Mais en 1258, Cortone est occupée et mise à sac par l'armée arétine, aidée par les guelfes cortonais eux-mêmes. Trois ans plus tard, les gibelins de Cortone reprennent la ville grâce à une alliance avec Sienne.\nJusqu'au début du XVe siècle, la ville est gouvernée par les Casali, auxquels on doit le palais du même nom.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Cortona-vista01.jpg/500px-Cortona-vista01.jpg"
+  },
+  {
+    "id": 503,
+    "titre": "Alliance  Venise - Andronic III",
+    "date": 1332,
+    "mois": 9,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "6 septembre : accord conclu à Rhodes entre les plénipotentiaires de Venise, le représentant de l'empereur byzantin Andronic III (certainement Pietro da Canale) et les Hospitaliers pour la formation d'une flotte de trente galères pour lutter contre les raid en Égée du ghazi d’Aydın Umur Bey",
+    "image": ""
+  },
+  {
+    "id": 504,
+    "titre": "Édouard Balliol est couronné roi d'Écosse à Scone",
+    "date": 1332,
+    "mois": 9,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Édouard Balliol, né vers 1283 et mort en 1364 à Wheatley[1], est un prétendant au trône d'Écosse. Fils du roi Jean Balliol, il tente d'avancer ses droits sur le trône avec le soutien du roi d'Angleterre Édouard III et règne à trois reprises sur l'Écosse entre 1332 et 1336 mais ne parvient pas à imposer son hégémonie et finit par renoncer à ses droits en 1356 en faveur d'Édouard III.\nRobert Ier est mort en juin 1329, et l'Écosse est désormais gouvernée par Thomas Randolph, 1er comte de Moray, régent du jeune David II Bruce. Édouard Balliol se rend plusieurs fois en Angleterre à cette époque et constate que, si Édouard III n'est pas prêt à intervenir directement en Écosse, il veut toutefois bien favoriser une invasion de l'Écosse par Édouard Balliol et les « déshérités »[N 1], qui l'encouragent dans ses velléités pour le trône d'Écosse. Le projet est mis en œuvre immédiatement à la nouvelle de la mort du régent écossais le 20 juillet 1332. Édouard Balliol et les « déshérités » débarquent à Kinghorn le 6 août suivant[3]. Les Écossais réagissent mais Édouard Balliol bat les troupes de David II menées par le nouveau régent Donald, comte de Mar, le 11 août à la bataille de Dupplin Moor. Balliol est couronné roi des Écossais à Scone le 24 septembre 1332[3] et tente d'établir son autorité. Il offre lui-même dès novembre de rendre l'hommage pour le royaume d'Écosse au roi d'Angleterre et accepte qu'une importante partie du sud du territoire soit placée sous la souveraineté directe des Anglais.",
+    "image": ""
+  },
+  {
+    "id": 505,
+    "titre": "Magnus Eriksson achète la Scanie aux Danois",
+    "date": 1332,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 4,
+    "description": "La Scanie (en suédois et danois Skåne) est une province historique en Suède, située à l'extrémité sud du pays.",
+    "image": ""
+  },
+  {
     "id": 207,
     "titre": "Casimir III le Grand",
     "date": 1333,
@@ -5048,7 +5236,9 @@
       "Pologne"
     ],
     "type": 1,
-    "image": "",
+    "description": "ort en 1370, fut roi de Pologne de 1333 à sa mort et membre de la dynastie des Piast. Fils de Ladislas Ier le Bref, il accède au trône dans un contexte difficile, marqué par des pertes territoriales et des conflits avec la Bohême et l’ordre Teutonique. N’ayant pas d’héritier masculin malgré plusieurs mariages, il laisse le trône à son neveu, Louis Ier de Hongrie.\n\nFormé à la cour et allié à la Hongrie et à la Lituanie, Casimir se distingue rapidement comme un souverain actif. Il met fin au conflit avec la Bohême, notamment en renonçant à la Silésie, et étend son royaume vers l’est, en particulier en Galicie. Grâce à des accords comme le traité de Kalisz avec l’ordre Teutonique, il consolide le territoire polonais, qui double presque de taille et gagne en importance en Europe.\n\nSon règne est aussi marqué par de profondes réformes. Il modernise l’administration, la justice et la fiscalité, et fait codifier le droit. Il favorise le développement intellectuel en fondant en 1364 l’Académie de Cracovie, future université Jagellonne.\n\nSouverain tolérant, il mène une politique favorable aux populations juives, leur garantissant protection et liberté de circulation, ce qui attire de nombreux migrants en Pologne. Enfin, il est connu comme un grand bâtisseur : il fait construire de nombreux châteaux, villes fortifiées, églises et hôpitaux. Son action est résumée par la formule selon laquelle il transforma un pays « de bois » en un pays « de pierre », illustrant l’importance de son règne dans l’histoire polonaise.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Krakow_nagrobek_Kazimierza_W.jpg/500px-Krakow_nagrobek_Kazimierza_W.jpg",
+    "legende": "Tombeau de Casimir III le Grand dans la basilique-cathédrale Saints-Stanislas-et-Venceslas de Cracovie",
     "regne": true
   },
   {
@@ -5062,6 +5252,150 @@
     ],
     "type": 3,
     "description": "1334, la commune de Florence honore Giotto du titre de Magnus magister (Grand maître), le nomme architecte en chef (capomaestro) de Santa Maria del Fiore, son œuvre majeur est le campanile . 1334 : Giotto rentre à Florence où il est nommé architecte en chef de la ville à la suite d’une inondation. Il réalise le projet de campanile pour la cathédrale Santa Maria del Fiore. Son assistant Andrea Pisano, lui succède à sa mort en 1337 comme maître d’œuvre de la cathédrale",
+    "image": ""
+  },
+  {
+    "id": 498,
+    "titre": "Annonciation entre les saints Ansan et Marguerite Simone Martini et Lippo Memmi",
+    "date": 1333,
+    "zones": [
+      "Art"
+    ],
+    "type": 4,
+    "description": "1333 : Simone Martini et Lippo Memmi peignent le triptyque de l'Annonciation entre les saints Ansan et Marguerite pour la cathédrale de Sienne. L'Annonciation entre les saints Ansan et Marguerite est une peinture à la détrempe et à l'or sur un panneau de bois de 305 × 265 cm réalisé par Simone Martini et Lippo Memmi, signée et datée de 1333, et conservée au musée des Offices à Florence. C'est un triptyque dont la partie centrale est trois fois plus large que les deux compartiments latéraux. Considéré comme le chef-d'œuvre de Simone Martini, de l'école siennoise et de la peinture gothique en général, il a été réalisé pour un autel latéral de la cathédrale de Sienne.\nLa documentation concernant cette œuvre est connue, confirmant la signature et la date indiquée sur le cadre, visible dans le fragment ancien inséré dans l'encadrement actuel du XIXe siècle. Il contient les noms de Simone et de son beau-frère Lippo Memmi (« SYMON MARTINI ET LIPPVS MEMMI DE SENIS ME PINXERVNT ANNO DOMINI MCCCXXXIII »), mais les parties attribuables à chacun des peintres sont inconnues. \nUne œuvre de ce genre, avec un raffinement linéaire extraordinaire, n'a pas de modèles contemporains en Italie, mais doit plutôt être comparée aux manuscrits enluminés de la cour française ou aux peintures plus imaginatives produites en Allemagne ou en Angleterre. Cette « manière » nord-européenne a ouvert la voie au recrutement de Simone Martini dans l'« entourage » des peintres italiens à la cour papale d'Avignon où aucun Florentin n'était présent, la monumentalité classique de l'école giottesque n'ayant pas fait consensus dans la société gothique française.\nL'œuvre est l'une des plus célèbres des Offices, depuis le réveil de l'intérêt pour les « primitifs » et l'art gothique, dont Simone Martini était le maître et précurseur incontesté du gothique international. \nParfois ressentie comme un signe de proche décadence du fait de son élégance trop « maniérée », l'Annonciation est en fait une œuvre nouvelle par la subtilité de ses notations spatiales. L'artiste suggère une spatialité précise de la scène, s'éloignant des schémas de dimensionnalité byzantine et insérant des détails de perspective : la main de l'ange, le rameau d'olivier, la branche de lys et le vase présentés obliquement créent la profondeur par superposition, tandis que la précision méticuleuse du détail (marqueterie du trône, livre ouvert, marbre du pavement) garantit la présence de la représentation[1]. Le sol en marbre, la draperie, les visages, le vase de lys, le rameau d'olivier, le trône de côté et le livre se caractérisent par un grand réalisme ; la dentelle dorée raffinée de la robe de Marie contribue à donner une touche de royauté à sa silhouette, par ailleurs excessivement sombre face à la splendeur angélique.\nL'importance de l'œuvre tient à la netteté de son choix esthétique, radicalement différent du giottisme. L'effet, l'efficacité de l'image sont dus au rythme linéaire fondé sur la courbe du manteau de Marie qui répond à celle de l'ange : le retrait et l'avancée sont exprimés par le contour plus que par un geste « psychologique » : il en résulte un balancement équilibré où se joue la vie de l'œuvre. Simone Martine renonce à toute représentation architecturale et donc, à toute évocation d'une profondeur géométriquement construite. La composition et l'unité de son Annonciation reposent sur le contraste entre la définition « irréelle » du lieu de la rencontre, fond d'or et sol de couleur fluide, et l'effet de réalité suscité à la fois par la représentation minutieuse des objets et le dynamisme des figures : la pose de Marie répond à l'intrusion de Gabriel, manifesté par le déploiement des ailes et l'envol de son vêtement, tandis qu'en franchissant ponctuellement le rebord idéal de l'image, les vêtements des personnages suscitent un remarquable effet de proximité, sinon de trompe-l'œil.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg/960px-Simone_Martini_%E2%80%94_Annunciation_with_St._Margaret_and_St._Ansanus.jpg"
+  },
+  {
+    "id": 499,
+    "titre": "Restauration de Kenmu chute de Kamakura",
+    "date": 1333,
+    "date_fin": 1336,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "1333 chute de Kamakura, prise par Nitta Yoshisada Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (ère Kenmu)\nAprès la victoire des loyalistes soutenus par le général Ashikaga Takauji sur les Hôjô, Go-Daigo Tenno restaure le pouvoir direct, et mythique, de l’empereur (Restauration de l’ère Kenmu)[1].\n17 juillet : Go-Daigo, empereur du Japon, entre à Kyōto après s'être échappé des îles Oki. Début de son règne sans shôgun (jusqu'en 1336)\nOctobre 1335 : début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392).",
+    "image": ""
+  },
+  {
+    "id": 500,
+    "titre": "Kapellbrücke de Lucerne",
+    "date": 1333,
+    "zones": [
+      "St Empire",
+      "Art"
+    ],
+    "type": 4,
+    "description": "Construction du Kapellbrücke, pont de bois couvert sur le Reuss à Lucerne, en Suisse. \nLe nom de Kapellbrücke (pont de la chapelle) s'explique par la proximité de la chapelle Saint-Pierre. Construit en 1333, il est reconstruit en 1994 après un incendie.\nLe Kapellbrücke était le plus ancien[1],[2],[3],[4], et, après celui de Bad Säckingen, le plus long pont couvert en bois d'Europe.\n\nOn pense que le bois utilisé provient de crues importantes qui ont eu lieu sur la région du Pilatus et qui avaient emporté les matériaux jusque dans la ville. Le pont figure dans la chronique d'Etterlin en 1507 ce qui permet d'avoir une estimation de sa forme à l'époque[5].\n\nLe pont était au départ encore plus long qu'aujourd'hui et reliait également la Peterskapelle et la Hofkirche. En 1741, la crue de la rivière Krienbach endommagea quatre piliers du pont. Affaibli, l'ouvrage s'était en partie effondré. En 1835, il fut également raccourci. En 1869, le pont faillit être détruit à la suite d'une demande au gouvernement qui visait à limiter les risques d'inondation. Les initiateurs du projet invoquèrent des problèmes d'écoulement des eaux, engendrés par le pont couvert. Le conseil municipal de la ville réussit à repousser cette demande et conserver ce patrimoine culturel. Le pont a été encore raccourci en 1898 lors de la construction d'un quai sur les rives du lac.\n\nDes panneaux triangulaires, peints à l'huile et datant du XVIIe siècle, étaient visibles dans la charpente de la toiture du pont. Ces tableaux, donnés par les familles bourgeoises de la ville, sont répartis sur toute la longueur du pont et retracent les principaux événements de l'histoire suisse, en glorifiant l'importance politique et économique de Lucerne. Le nombre de ces tableaux (initialement environ 150) a varié au cours du temps, et a encore subi une diminution drastique le 18 août 1993 en raison d'un incendie d'origine inconnue, qui a détruit une grande partie du pont et des tableaux. Un certain nombre d'entre eux ont pu être restitués d'après des illustrations anciennes[6].\nLe spectaculaire incendie du 18 août 1993 provoque la destruction presque totale de l'édifice. Le pont actuel est une reconstruction à l'identique de l'original et a été inauguré le 14 avril 1994. Les travaux ont coûté la somme de 3,4 millions de francs suisses.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Kapellbr%C3%BCcke_Dawn.jpg/1280px-Kapellbr%C3%BCcke_Dawn.jpg"
+  },
+  {
+    "id": 501,
+    "titre": "Alhambra de Grenade",
+    "date": 1333,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Construction de la partie la plus prestigieuse de l'Alhambra de Grenade par les rois Youssouf Ier (1333-1354) puis Mohammed V al-Ghanî (1354-1359 et 1362-1391). \nL'Alhambra (de l'arabe Al-Hamrâ - الحَمْراء) de Grenade en Andalousie est un ensemble palatial constituant l'un des monuments majeurs de l'architecture arabo-musulmane. Acropole médiévale la plus majestueuse du monde méditerranéen, située sur le plateau de la Sabika qui domine la ville, elle se compose essentiellement de quatre parties incluses dans son enceinte fortifiée : l'Alcazaba, les palais nasrides, le Généralife, ses jardins, et le palais de Charles Quint.\n\nC'est avec la Grande mosquée de Cordoue le plus prestigieux témoin de la présence arabo-musulmane en Espagne du VIIIe au XVe siècle. Leurs caractères sont d'ailleurs opposés : à la sobriété du monument religieux représentatif de la première architecture islamique, s'oppose l'exubérance de la dernière expression de l'art hispano-mauresque : celle-ci s'exprime en effet dans les palais des derniers souverains arabes de Grenade, les nasrides, alors en pleine décadence, et qui disparaîtront bientôt lors des derniers assauts de la Reconquista.\nC'est un ensemble fortifié situé sur la colline de la Sabika, qui domine la plaine et la ville de Grenade, et qui fait face au quartier populaire et pittoresque de l'Albaicín.\nLe nom vient de l'arabe الْقَلْعَةُ ٱلْحَمْرَاءُ, ʾal-Qalʻatu al-Ḥamrāʼ(u), c'est-à-dire « le château rouge ». Il peut s'agir d'une référence à Mohammed ben Nazar, dit الأحمر, ʾal-aḥmar (« le rouge », à cause de sa barbe rousse), le fondateur de la dynastie des Nasrides, qui entra à Grenade en 1238 et fonda le site[2],[3], mais le toponyme semble plus ancien[4]. Son fils Mohammed II le fortifia. Le style nasride atteint son apogée au XIVe siècle sous les rois Youssouf Ier et Mohammed V al-Ghanî, qui font édifier les parties les plus prestigieuses entre 1333 et 1354. Chaque souverain reprenait le palais de son prédécesseur et en édifiait de nouvelles parties, le modifiant à sa guise : on parle donc de palais nasrides, au pluriel, pour cet ensemble.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Vue_interieur_alhambra_grenade.jpg/500px-Vue_interieur_alhambra_grenade.jpg"
+  },
+  {
+    "id": 506,
+    "titre": "Début du déclin de la dynastie Yuan",
+    "date": 1333,
+    "mois": 7,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "Début du règne de Toghan Tèmur, grand khan des Mongols (fin en 1368). Il succède à son frère Rintchenpal à l’âge de 13 ans[3]. La dynastie Yuan, déchirée par les querelles de succession, est sur le déclin. Les gouverneurs et les fonctionnaires du palais se livrent à des luttes intestines et l’empereur n’a pratiquement plus aucun moyen d’intervenir dans la situation politique et économique.La dynastie Yuan, déchirée par les querelles de succession, est sur le déclin. Les gouverneurs et les fonctionnaires du palais se livrent à des luttes intestines et l’empereur n’a pratiquement plus aucun moyen d’intervenir dans la situation politique et économique.dynastie mongole fondée suivant la tradition chinoise[6] en 1271 par Kubilai Khan, le petit-fils de Gengis Khan, et qui règne sur la Chine jusqu'en 1368.\nFormellement, en Chine, elle succède à la dynastie Song et précède la dynastie Ming. Bien que les Mongols dominent la Chine du Nord depuis Gengis Khan, Khubilaï la fait débuter rétroactivement au règne de son grand-père comme fondateur officiel de la dynastie. Toutefois comme les Song tenaient le grand sceau d'empire, on la fait débuter à l'abdication de Hangzhou (1276) ou à l'achèvement de la conquête de la Chine du sud (1279).\nSon royaume est, à ce moment-là, isolé des autres Khanats et contrôle la plus grande partie de la Chine moderne et de ses environs, y compris le territoire qui correspond actuellement à la Mongolie[7]. C'est la première dynastie non-chinoise à gouverner toute la Chine et elle dure jusqu'en 1368, date à laquelle la nouvellement fondée dynastie Ming chasse les empereurs Mongols de Chine, ce qui oblige les Gengiskhanides à se replier dans leur patrie mongole, ou ils fondent la dynastie Yuan du Nord[8]. Si certains empereurs Mongols Yuan maîtrisent la langue chinoise, d'autres n'utilisaient que leur langue maternelle, le mongol, et l'Écriture phagpa. L'empereur Yuan, en plus d'être empereur de Chine, était aussi Grand Khan des Mongols, et à ce titre il régnait sur la Mongolie et était suzerain des trois khanats ayant institutionnalisés les apanages des fils de Gengis : le Khanat de Djaghataï en Asie centrale, la Horde d'or sur les actuelles Russie et Ukraine, et l'Ilkhanat de Perse incluant l'Irak et la plus grande part des actuelles Turquie et Afghanistan. En tant que tel, l'empire Yuan était l'Empire du Grand Khan. Cependant, assez rapidement la soumission des khanats devient purement nominale, chacun poursuivant sa propre politique et entrant souvent en guerre l'un contre l'autre. Les dernières années de la dynastie Yuan sont marquées par les conflits, la famine et l'amertume de la population mais aussi par les ravages de la Peste noire. Avec le temps, les successeurs de Kubilai Khan ont perdu toute influence sur les autres terres mongoles d'Asie, tandis que les Mongols vivant en dehors de l'Empire du Milieu les considèrent comme étant trop chinois. Peu à peu, ils perdent également de l'influence en Chine. Les règnes des derniers empereurs Yuan sont courts et marqués par des intrigues et des rivalités. Ne s'intéressant pas à l'administration, ils se coupent à la fois de l'armée et de la population, tandis que la Chine est déchirée par les dissensions et les troubles. Les hors-la-loi ravagent le pays sans avoir à craindre l'intervention des armées Yuan, qui s'affaiblissent.La Chine est victime de la sècheresse, de la famine et d'inondations, suivies par la peste en 1334. 1334 :\nune épidémie de peste se déclenche dans le Hubei en Chine. Elle se propage vers l’ouest par la route de la soie. Elle est à l'origine de la peste noire qui sévit en Europe à partir de 1347[1335 Soulèvements populaires en Chine contre l'autorité de la dynastie mongole des Yuan5 millions de personnes meurent. La peste noire part de chine et se répand vers l’Ouest pour atteindre l’Europe en 1347Le khan de Djaghataï Tarmachirin se convertit à la religion musulmane. Il contribue ainsi à la scission de l’empire djaghataïde. Les nomades de la région de l’Issyk-koul et de l’Ili voient dans son acte une trahison à l’égard des traditions gengiskhanides et des principes du Djasag1334 Révolte dans la région de l’Issyk-koul et de l’Ili, au Turkestan. Le khanat de Djaghataï se scinde en deux : au nord le khanat de Mogholistan, au sud celui de Transoxiane[1]. Début du règne de Bouzoun, khan du Mogholistan (fin en 1338)",
+    "image": ""
+  },
+  {
+    "id": 507,
+    "titre": "Toghan Tèmur,",
+    "date": 1333,
+    "date_fin": 1368,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
+    "description": "Neuvième et dernier empereur de Chine de la dynastie Yuan et le 14e khagan de l'Empire mongol. Décrit comme épris de débauche, il ne voit pas venir l'insurrection nationale chinoise venant du sud et qui entraîne sa chute. \nLe 19 juillet 1333, à l'âge de 13 ans, il monte sur le trône de Pékin (alors appelée Dadu ou Khanbalik) en succèdant à son frère cadet, Richinbal), mort le 14 décembre 1332 après deux mois de règne. Les seigneurs se battent pour l'autorité de la cour en raison de son jeune âge. Elle appartint d’abord à un seigneur d’origine märkit, nommé Bayan des Merkits qui entre en disgrâce et meurt en 1340. \nJean de Marignol, un franciscain florentin, envoyé en légat par le pape Benoît XII, rend visite à l'empereur et demeure à Pékin à partir de 1342 et dans l'Empire chinois jusqu'en 1347.\nL'historien René Grousset dit de lui que « Toghan Temür mou, indécis, ne se plaisant que dans la compagnie de mignons et de lamas tibétains, abruti par la débauche, se désintéressait des affaires, Il ne prêta aucune attention à la révolte nationale chinoise qui grondait dans le Sud ». Le spectacle de cette débauche pousse les patriotes chinois à se liguer contre cette domination étrangère. La révolte commence dans la bas Yangtsé et dans la province du Guangdong, comme pour la révolution de 1912, dirigé par de nombreux chefs à moitié bandits, qui se querellent autant entre eux qu'ils font la guerre contre les Mongols.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Toghon_Temur.png/500px-Toghon_Temur.png"
+  },
+  {
+    "id": 508,
+    "titre": "Édouard III d'Angleterre, qui soutient Edward Balliol, vainc le roi d’Écosse David II Bruce à la bataille de Halidon Hill",
+    "date": 1333,
+    "mois": 7,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Au cours des guerres d'indépendance de l'Écosse, la couronne d'Écosse est disputée entre Édouard Balliol, allié des Anglais, et David II d'Écosse. Édouard Balliol ayant dû fuir l'Écosse, le jeune roi Édouard III d'Angleterre intervient et défait les Écossais à Halidon Hill le 19 juillet 1333 à proximité de la ville de Berwick-upon-Tweed. Au début du XIVe siècle, Berwick est un port marchand qui prospère grâce aux échanges entre l'Angleterre, l'Écosse et la mer du Nord. La ville contrôle stratégiquement la route côtière vers Édimbourg. Le tissage de la laine est devenu une industrie importante et l’arrière-pays possède de riches zones agricoles (la vallée formée par la rivière Tweed, surnommée « The Mesh » en est le plus bel exemple) où l’on cultive aussi bien du blé que de l’orge, tous deux servant à la machine de guerre écossaise.\n\nLe siège appliqué à Berwick en 1333 utilise une grande variété d’engins de siège et peut-être même quelques canons portatifs primitifs qui commencent à faire leur apparition à cette époque. Vers le milieu du mois de mai, Berwick tient toujours bon et Édouard III décide d’envoyer son armée piller l’arrière-pays de Berwick. Une tentative d’attaque par voie maritime échoue et a pour conséquence de couper la ville de la mer. Une trêve conclue entre Édouard III et le gouverneur du château conduit à un échange d’otages, parmi lesquels le fils aîné et le fils cadet du gouverneur. Ils sont finalement pendus par Édouard III lorsque le gouverneur refuse de se rendre.\n\nVers la mi-juillet, la nourriture commence à manquer et le gouverneur de Berwick promet de cesser toute résistance le 20 juillet à moins que « Le Grim », l’armée de Sir Archibald Douglas, ne parvienne à briser le siège d’ici là.\n\nDouglas, de son côté, souhaite dans un premier temps combattre l’armée anglaise mais il change de tactique et décide de dévaster le Northumberland en territoire anglais. Il va même jusqu'à menacer le château de Bamburgh où la reine Philippa séjourne mais Édouard III sait pertinemment que Bamburgh n’a rien à craindre de l’armée écossaise, composée essentiellement d’infanterie et ne disposant de presque aucune machine de siège. Se rendant compte qu’Édouard III ne tomberait pas dans le leurre et ne viendrait jamais à la rescousse de Bamburgh, Douglas fait faire demi-tour à ses 13 000 hommes afin de tenter de libérer Berwick. Malheureusement pour lui, Édouard a stratégiquement placé le gros de son armée sur les hauteurs de Halidon Hill tout en laissant un contingent continuer d’assiéger la cité affamée. Édouard III, à l'âge de 20 ans et huit mois, menait sa première grande bataille sur la colline d'Halidon. Il dirigeait alors trois bataillons à pied totalisant 10 000 hommes. Des archers encadraient chacun de ces bataillons. Celui de gauche était mené par Édouard Balliol, celui de droite par le comte de Norfolk et celui au centre par Édouard III.\n\nLes archers anglais, en hauteur, tiraient des pluies de flèches sur les 14 700 hommes de l'armée écossaise. Les archers faisaient des ravages dans les rangs écossais qui parvenaient difficilement à s’extirper du sol marécageux au pied de la colline.\n\nLes piquiers écossais ne firent pas le poids face aux archers anglais qui étaient d’une rapidité stupéfiante. Les Écossais qui parvinrent à éviter les flèches virent alors venir à eux les chevaliers anglais qui les chargèrent à l’épée, à la masse et à la lance ne leur laissant pas la moindre chance. Plus de 4 000 Écossais dont le régent et cinq comtes périrent sur les flancs de Halidon Hill . Périrent en outre 70 barons, 500 chevaliers et de nombreux piquiers. Les Anglais quant à eux ne perdirent que quatorze soldats. Les archers du sud du pays de Galles ont donc, à nouveau, décimé les Écossais comme ce fut le cas du temps d’Édouard Ier d'Angleterre et comme ce sera le cas, contre les Français, lors de la future bataille de Crécy et même, encore plus tard, lors de la bataille d'Azincourt.",
+    "image": ""
+  },
+  {
+    "id": 509,
+    "titre": "Mariage de la future reine de Naples Jeanne Ire avec son cousin André de Hongrie",
+    "date": 1333,
+    "mois": 9,
+    "zones": [
+      "Naples",
+      "Hongrie"
+    ],
+    "type": 3,
+    "description": "Mariage de la future reine de Naples Jeanne Ire (1326-1382) avec son cousin André de Hongrie (1328-1345), qui devient alors duc de Calabre, fils de Charles Ier Robert, roi de Hongrie, et d'Élisabeth de Pologne. \nJeanne Ire de Naples était la fille de Charles, duc de Calabre, et de Marie de Valois (demi-sœur du roi de France Philippe VI ; fille de Charles de Valois et de Mahaut de Châtillon-St-Pol) Elle eut une seule sœur, Marie de Calabre. Son père, Charles de Calabre, mourut le 9 novembre 1328[4] alors qu'elle avait moins de deux ans. Son grand-père Robert, qui avait déjà perdu Louis, son deuxième fils, en 1310, se vit confronté au grave problème de sa succession, son royaume étant convoité par ses neveux. Ceux-ci avaient été écartés par Charles II le Boiteux du trône de Naples, avec tous les descendants de Charles Martel de Hongrie, au profit de Robert. Celui-ci désigna Jeanne pour lui succéder.\n\nLa mère de Jeanne, Marie de Valois, mourut à son tour le 23 octobre 1331, au cours d'un pèlerinage[5]. Charles Martel, décédé en 1295, fils de Charles II le Boiteux, avait un fils Carobert (ou Charles Robert) qui, marié à Élisabeth de Pologne, avait eu deux enfants : Louis et André. Pour se réconcilier avec cette branche hongroise de sa famille, le roi Robert décida de marier, malgré leur jeune âge, Jeanne et André de Hongrie. La cérémonie eut lieu à Naples le 26 septembre 1333 alors que les époux n'avaient que huit ansLorsque son grand-père, le roi Robert, mourut le 20 janvier 1343[7], Jeanne hérita du royaume de Naples, charge imposante pour laquelle elle était très mal préparée. Afin de la libérer de la tutelle pontificale, son grand-père avait mis en place un conseil de régence avec la reine Sancia, son épouse, le vice-chancelier Philippe de Cabassolle, évêque de Cavaillon, et le grand sénéchal de Provence Fillipo di Sanginetti. Devant l'inefficacité de ce conseil, le pape, en sa qualité de suzerain, décida d'imposer sa direction effective en envoyant sur place un légat, le cardinal Aymery de Châlus",
+    "image": ""
+  },
+  {
+    "id": 510,
+    "titre": "3e et 4e siège de Gibraltar",
+    "date": 1333,
+    "mois": 2,
+    "mois_fin": 8,
+    "zones": [
+      "Castille",
+      "Aragon",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Le troisième siège de Gibraltar s'est déroulé entre février et juin 1333, mené par une armée maure commandée le prince Abd al-Malik Abd al-Wahid du Maroc.\n\nLa ville fortifiée de Gibraltar est alors détenue par la Castille depuis 1309, date à laquelle elle a été confisquée à l'émirat maure de Grenade. L'attaque de Gibraltar est ordonnée par le sultan marocain Abou al-Hasan Ali ibn Othman, récemment couronné, en réponse à un appel du souverain Nasride Muhammed IV de Grenade. Le début du siège prend les Castillans par surprise. Les stocks de nourriture à Gibraltar sont épuisés à l'époque en raison du vol par le gouverneur de la ville, Vasco Perez de Meira, de l'argent destiné à la nourriture de la garnison et à l'entretien du château et des fortifications. Après plus de quatre mois de siège et de bombardements par des catapultes mauresques, la garnison et les citadins, réduits à la quasi-famine, se rendent à Abd al-Malik.En 1309, les troupes castillanes commandées par Ferdinand IV de Castille capturent Gibraltar, alors connue sous le nom de Medinat al-Fath (la ville de la Victoire), qui appartient à l'émirat à dominance musulmane de Grenade, lors du premier siège de Gibraltar. Ses fortifications sont réparées et améliorées par les Castillans. En 1315, les Grenadins tentent de reprendre Gibraltar lors d'un second siège infructueux. L'alliance entree les Nasrides de Grenade et les Mérinides du Maroc est tombée en désuétude après la perte de Gibraltar, mais l'accession au trône du sultan Mérinide Abu al-Hassan Ali ibn Othman conduit à un renouvellement du pacte entre les deux États musulmans.Le quatrième siège de Gibraltar, qui se déroula de juin à août 1333, opposa l'armée chrétienne dirigée par le roi Alphonse XI de Castille face à une imposante armée mauresque dirigée par Mohammed IV de Grenade et Abu al-Hasan Ali ibn Othman (en) de Fès.Le siège a commencé de façon désastreuse avec un atterrissage désastreux par les forces castillanes sur le côté ouest de Gibraltar, avant de se transformer en une impasse dans laquelle aucun des deux camps n'avait la force de capturer Gibraltar, ni pour sortir ou lever le siège. Les deux parties font face à une grave pénurie de nourriture - la garnison de Gibraltar est coupée du ravitaillement, tandis que les Castillans, au plus profond du territoire ennemi, ne peuvent être ravitaillés que via une route maritime peu fiable. Après deux mois de guerre de siège non concluante, les Castillans et les Maures ont conclu un accord de trêve qui a permis aux deux parties de faire une sortie honorable du siège. Bien que les Maures aient réussi à garder Gibraltar, la trêve a coûté la vie à Mohammed IV, assassiné par des nobles mécontents le lendemain de sa signature.",
+    "image": ""
+  },
+  {
+    "id": 511,
+    "titre": "Disette en Catalogne",
+    "date": 1333,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Disparition d’un cinquième des Barcelonais",
+    "image": ""
+  },
+  {
+    "id": 512,
+    "titre": "Inondation de Florence",
+    "date": 1333,
+    "mois": 11,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "1er novembre : grande inondation de Florence, décrite par le chroniqueur Giovanni Villani. La majorité des ponts sont emportés",
+    "image": ""
+  },
+  {
+    "id": 513,
+    "titre": "Charles IV de Luxembourg  régent du royaume de Bohême",
+    "date": 1333,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 3,
+    "description": "Charles IV de Luxembourg administre la Bohême pendant l'absence de son père Jean de Luxembourg[12]. Roi en 1346, il abandonne la politique italienne de ses prédécesseurs pour se consacrer à la Bohême (fin en 1378). \nEn 1333, à dix-huit ans, il reçoit le margraviat de Moravie en tant qu'héritier présomptif du royaume de Bohême, mais devient de fait le régent du royaume, en raison des absences fréquentes de son père, parfois surnommé[réf. nécessaire] le « chevalier-errant ».Charles IV de Luxembourg administre la Bohême pendant l'absence de son père Jean de Luxembourg , [12]. Roi en 1346, il abandonne la politique italienne de ses prédécesseurs pour se consacrer à la Bohême (fin en 1378). Élevé à la cour de France de 1323 à 1330, il assume des responsabilités politiques au Luxembourg et en Bohême avant même que son père, aveugle depuis 1340, trouve la mort sur le champ de bataille de Crécy en 1346",
     "image": ""
   },
   {
@@ -5079,6 +5413,17 @@
     "regne": true
   },
   {
+    "id": 515,
+    "titre": "sècheresse,  famine , inondations, suivies par la peste en Chine",
+    "date": 1334,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "La Chine est victime de la sècheresse, de la famine et d'inondations, suivies par la peste en 1334. 5 millions de personnes meurent. La peste noire part de chine et se répand vers l’Ouest pour atteindre l’Europe en 1347",
+    "image": ""
+  },
+  {
     "id": 477,
     "titre": "Révolte des Gibelins à Gênes",
     "date": 1335,
@@ -5087,6 +5432,18 @@
     ],
     "type": 4,
     "description": "Les Gibelins  chassent le vicaire du roi Robert de Naples et la plupart des Guelfes. Deux capitaines du peuple sont nommés (fin en 1339)",
+    "image": ""
+  },
+  {
+    "id": 514,
+    "titre": "Prise de la forteresse de Schwanau par les milices urbaines",
+    "date": 1335,
+    "mois": 4,
+    "zones": [
+      "Alsace"
+    ],
+    "type": 2,
+    "description": "Edifié sur une île du Rhin. Au XIVè il est occupé par des seigneurs-brigands qui perturbent le commerce fluvial et rançonnent les marchands. Exaspérés, la villes grandes villes de la région décident en avril 1333 d'en finir une fois pour toutes et se liguent pour assiéger la place.\n\nAprès un siège en règle de six semaines sans effet, des tonneaux remplis du contenu des fosses d'aisances de la ville de Strasbourg sont expédiés à l'aide de trébuchets sur le château. L'eau est souillée et l'air devient irrespirable. Mais les défenseurs tiennent bon et ne se rendent que lorsque les assiégeants parviennent à mettre le feu au château. 7 des défenseurs sont graciés et mis à rançon, les autres défenseurs (hormis le plus âgé et le plus jeune) sont décapités. Artisans, charpentiers et forgerons de la citadelle sont catapultés contre les murs. La fortification est rasée. Des vestiges subsistent à la limite de Gerstheim, actuellement enterrés. Les milices urbaines des villes de Strasbourg, Colmar Mulhouse base, Lucerne , Fribourg en Brisgau , appuyée par les troupes de l’évêque Berthold II de Bucheneck.  possession de la forteresse du seigneur brigand Walter de Twinger + 40 cavaliers ces brigands rançonnait les marchands sur la route de ballast Strasbourg et attaquait également les bateaux isolés sur le roi une innovation pour prendre la forteresse les assiégeants ont utilisé une arme bactériologique en projetant des matières fécales issues des latrines de Strasbourg afin de polluer les citernes du château . \nLa fortification est rasée. Des vestiges subsistent à la limite de Gerstheim, actuellement enterrés",
     "image": ""
   },
   {
@@ -5214,6 +5571,18 @@
     "type": 3,
     "description": "1325 : début de la construction de la torre del Mangia à Sienne, terminée en 1338-1348\nLa Torre del Mangia a été construite entre 1325 - 1344[2] et est située sur la Piazza del Campo, la première place de Sienne. Adjacente au Palazzo Pubblico (palais communal) et construite entièrement en brique, elle constitue une des plus hautes tours de l'Italie médiévale. La construction de la partie centrale fut confiée aux frères Francesco et Muccio (ou Minuccio) di Rinaldo (1338-1340) originaires d'Arezzo qui réalisèrent probablement la partie en brique et la maçonnerie. L'horloge a été ajoutée en 1360 (elle n'indique que les heures et les jours, les minutes, elles, étant affichées sur la façade de la Santa Maria della Scala, visible du parvis du Duomo). La tour de 102 m est visible de toutes les parties de Sienne et est adjacente au Palazzo Pubblico de style gothique.\nLa tour a été construite pour atteindre la même hauteur que le Duomo de Sienne comme un symbole d'égalité entre l'Église et l'État.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Torre_Palazzo_Pubblico_Siena.jpg/500px-Torre_Palazzo_Pubblico_Siena.jpg"
+  },
+  {
+    "id": 488,
+    "titre": "Bataille de Dupplin Moor  une révolution tactique",
+    "date": 1342,
+    "mois": 8,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "À la bataille de Dupplin Moor le 11 août 1332, l’armée du prétendant Édouard Balliol et des « déshérités » ( disinherited), dirigée par Henri de Beaumont, vainc les forces écossaises, pourtant plus nombreuses.\nAprès le désastre de Bannockburn 1314 contre les Écossais de Roberte Bruce , les Anglais prennent acte de la fin de la supériorité de la chevalerie sur les champs de bataille et mettent au point de nouvelles tactiques. Le roi Édouard Ier d'Angleterre instaure ainsi une loi qui incite les archers à s'entraîner le dimanche en bannissant l'usage des autres sports ; les Anglais deviennent alors habiles au maniement de l'arc long (long bow). Le bois utilisé est l'if (que l'Angleterre importe d'Italie) qui a des qualités mécaniques supérieures à l'orme blanc des arcs gallois : les performances sont donc améliorées. Pour être efficace, l'arc long doit être employé par une armée protégée et donc en position défensive. Il faut obliger l'adversaire à attaquer. Pour cela, les Anglais utilisent en Écosse le principe de la chevauchée : l'armée déployée sur une grande largeur dévaste tout un territoire, jusqu'à ce que l'adversaire soit obligé de l'attaquer pour mettre un terme aux pillages. 1332 après la mort de Robert Bruce (1329)  reprise de la guerre d’Ecosse,  Édouard Balliol, le fils de l'ancien roi John Balliol (Jean d'Écosse), prédécesseur de Robert Bruce sur le trône d'Écosse, regroupe les nobles écossais exilés (dont  Henri de Beaumont)  qui veulent récupérer leurs biens confisqués après la bataille de Bannockburn favorable aux Anglais reprend le pouvoir  grâce à la supériorité tactique conférée par le long bow, quand celui-ci est renversé le 16 décembre 1332, Édouard prend ouvertement les choses en main. il assiège et reprend le contrôle de Berwick, puis il écrase l'armée de secours écossaise à la bataille de Halidon Hill en utilisant exactement la même tactique qu'à Dupplin Moor (11 août 1332, l’armée du prétendant Édouard Balliol et des « déshérités » (en anglais : disinherited), dirigée par Henri de Beaumont, vainc les forces écossaises, pourtant plus nombreuses) . Beaumont utilise la tactique que les Anglais vont rendre célèbre lors de la guerre de Cent Ans, avec des chevaliers à pied au centre et des archers sur les ailes. Pris sous une meurtrière pluie de flèches, la plupart des soldats écossais n’atteignent pas la ligne ennemie et tombent dans une invraisemblable cohue. Les pertes écossaises sont très élevées. Quand le massacre fut finalement terminé, de nombreux nobles et environ 2 000 Écossais ont péri. Il fait preuve d'une extrême fermeté : tous les prisonniers sont exécutés Édouard III est alors en position de remettre Édouard Balliol sur le trône d'Écosse. \n1334  les questions de Guyenne et d'Écosse sont désormais liées Philippe VI de France accueille David II d'Écosse et l'installe avec sa cour à Château Gaillard, avec le soutien du roi de France les forces de David Bruce commencent bientôt à se ressaisir : dès juillet, Édouard Balliol doit fuir à Berwick et demander l'aide d'Édouard III qui  lance une chevauchée dévastatrice mais les Écossais évitent les batailles rangées en lui opposant la tactique de la terre déserte Les Français envoient un corps expéditionnaire de 6 000 hommes et livrent une guerre de course dans la MancheFin 1335, ils livrent bataille à Culblean contre un partisan de John Balliol. 1337,la grande majorité de l'Écosse a été reconquise par les forces de David II en laissant uniquement quelques châteaux tels que ceux d'Édimbourg, de Roxburgh et de Stirling aux mains des Plantagenets.",
+    "image": ""
   },
   {
     "id": 168,
