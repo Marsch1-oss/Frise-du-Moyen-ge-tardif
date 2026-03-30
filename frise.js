@@ -79,6 +79,8 @@ var currentDecade  = null;
 var allEvents      = [];
 var activeZones    = null;
 var detailLevel    = 1;  /* 1=Essentiel, 2=Détaillé, 3=Complet */
+var matchedIds     = [];  /* ids des événements correspondants, ordonnés par date */
+var currentMatchIdx = -1; /* index courant dans matchedIds */
 
 function initActiveZones() {
   activeZones = {};
@@ -423,6 +425,8 @@ function buildRulersSection(start, end, level) {
       var e = allEvents[j];
       if (!e.regne) continue;
       if (e.zones.indexOf(zone) === -1) continue;
+      /* En mode recherche, n'affiche que les règnes qui correspondent */
+      if (searchTerm && !eventMatchesSearch(e)) continue;
       var d0 = e.date, d1 = e.date_fin || e.date;
       if (level === 4) {
         var eF = e.date + (e.mois ? (e.mois-1)/12 : 0);
@@ -1087,6 +1091,40 @@ function onSearch(val) {
   applySearch();
 }
 
+/* ── Navigation entre résultats de recherche ────────────────────────*/
+function goToMatch(idx) {
+  if (matchedIds.length === 0) return;
+  idx = ((idx % matchedIds.length) + matchedIds.length) % matchedIds.length;
+  currentMatchIdx = idx;
+  var id  = matchedIds[idx];
+  var evt = allEvents.find(function(e) { return e.id === id; });
+  if (!evt) return;
+
+  /* Navigue à la période contenant cet événement */
+  var date = evt.date;
+  if (currentLevel === 4) {
+    if (date !== currentYear) { currentYear = date; renderLevel(4, date); }
+  } else if (currentLevel === 3) {
+    var dec = Math.floor(date / 10) * 10;
+    if (dec !== currentDecade) { currentDecade = dec; currentCentury = Math.floor(dec/100)*100; renderLevel(3, dec); }
+  } else if (currentLevel === 2) {
+    var cent = Math.floor(date / 100) * 100;
+    if (cent !== currentCentury) { currentCentury = cent; renderLevel(2, cent); }
+  }
+
+  /* Met à jour le compteur */
+  applySearch();
+
+  /* Scroll jusqu'au chip correspondant */
+  setTimeout(function() {
+    var chip = document.querySelector('.evt-chip[data-evt-id="' + id + '"]');
+    if (chip) chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 150);
+}
+
+function prevMatch() { goToMatch(currentMatchIdx - 1); }
+function nextMatch() { goToMatch(currentMatchIdx + 1); }
+
 function clearSearch() {
   var input = document.getElementById('search-input');
   if (input) input.value = '';
@@ -1095,6 +1133,7 @@ function clearSearch() {
   if (clearBtn) clearBtn.style.display = 'none';
   var countEl = document.getElementById('search-count');
   if (countEl) countEl.textContent = '';
+  matchedIds = []; currentMatchIdx = -1;
   /* Restaure les zones et le niveau d'origine */
   if (savedActiveZones) {
     activeZones = savedActiveZones;
@@ -1125,9 +1164,8 @@ function eventMatchesSearch(evt) {
     evt.sources || '',
     (evt.zones || []).join(' ')
   ].join(' ').toLowerCase();
-  return searchTerm.split(/\s+/).filter(Boolean).every(function(w) {
-    return haystack.indexOf(w) !== -1;
-  });
+  /* Recherche de la phrase exacte (pas mot par mot) */
+  return haystack.indexOf(searchTerm) !== -1;
 }
 
 function applySearch() {
@@ -1183,10 +1221,24 @@ function applySearch() {
     lbl.style.pointerEvents = hasMatch ? '' : 'none';
   });
 
+  /* Construit la liste ordonnée des IDs trouvés (ordre chronologique) */
+  matchedIds = allEvents
+    .filter(function(e) { return eventMatchesSearch(e); })
+    .map(function(e) { return e.id; });
+  if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
+    currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
+  }
+
   if (countEl) {
-    countEl.textContent = totalMatch > 0
-      ? totalMatch + ' résultat' + (totalMatch > 1 ? 's' : '')
-      : 'Aucun résultat';
+    if (matchedIds.length > 0) {
+      var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
+      countEl.innerHTML =
+        '<span class="match-nav" onclick="prevMatch()" title="Résultat précédent">&#8249;</span>'
+        + '<span class="match-pos">' + pos + '&thinsp;/&thinsp;' + matchedIds.length + '</span>'
+        + '<span class="match-nav" onclick="nextMatch()" title="Résultat suivant">&#8250;</span>';
+    } else {
+      countEl.textContent = 'Aucun résultat';
+    }
   }
 }
 

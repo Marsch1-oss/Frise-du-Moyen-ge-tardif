@@ -386,7 +386,15 @@
       transition:all 0.15s; display:none;
     }
     #search-clear:hover { background:var(--ink); color:var(--parchment); border-color:var(--ink); }
-    #search-count { font-size:0.78rem; color:var(--gold); font-style:italic; white-space:nowrap; min-width:80px; }
+    #search-count { font-size:0.82rem; color:var(--gold); font-style:italic; white-space:nowrap; display:flex; align-items:center; gap:0.15rem; }
+    #search-count .match-pos { font-weight:600; letter-spacing:0.03em; }
+    #search-count .match-nav {
+      font-size:1.1rem; line-height:1; cursor:pointer;
+      padding:0 0.2rem; color:var(--ink-soft);
+      transition:color 0.15s;
+      user-select:none;
+    }
+    #search-count .match-nav:hover { color:var(--ink); }
     .evt-chip.search-match { outline:2.5px solid var(--gold); outline-offset:1px; z-index:20; }
     .evt-chip.search-dim   { opacity:0.12; }
     .track-row.search-hidden { display:none; }
