@@ -1,59 +1,5 @@
 [
   {
-    "id": 525,
-    "titre": "Rébellion Nakasendai",
-    "date": 135,
-    "mois": 10,
-    "zones": [
-      "Japon"
-    ],
-    "type": 2,
-    "description": "Octobre 1335  début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
-    "legende": "Représentation d'Ashikaga Takauji"
-  },
-  {
-    "id": 517,
-    "titre": "Disette en Languedoc",
-    "date": 1134,
-    "date_fin": 1337,
-    "zones": [
-      "France"
-    ],
-    "type": 4,
-    "image": ""
-  },
-  {
-    "id": 518,
-    "titre": "Construction du Palais Vieux à Avignon",
-    "date": 1135,
-    "date_fin": 1340,
-    "zones": [
-      "Papaute",
-      "Art"
-    ],
-    "type": 2,
-    "description": "La construction du Palais-Vieux du Palais des Papes s’inscrit dans le contexte de l’installation durable de la papauté à Avignon au début du XIVe siècle. Après l’arrivée des papes sous Clément V puis l’installation définitive décidée par Jean XXII, les bâtiments épiscopaux existants sont progressivement agrandis pour répondre aux besoins du pouvoir pontifical.\\n\\nCependant, c’est sous le pontificat de Benoît XII (1335-1342) que débute la véritable construction du Palais-Vieux. Jugeant les aménagements précédents insuffisants, il fait démolir une grande partie des constructions antérieures afin d’édifier un palais entièrement nouveau. Ce projet est confié notamment à l’architecte Pierre Poisson (ou Peysson), chargé de réaliser un édifice à la fois fonctionnel et défensif.\\n\\nLe choix du rocher des Doms est déterminant : cette position élevée permet de protéger le palais des inondations, tout en affirmant la puissance pontificale grâce à sa visibilité sur toute la région. Le Palais-Vieux est conçu comme une véritable forteresse, avec des murs massifs, des tours imposantes comme celle du Trouillas, et une organisation rigoureuse des espaces. Il répond à la volonté de Benoît XII de créer un lieu sûr, capable d’abriter durablement la cour pontificale.\\nLes travaux, menés entre 1335 et 1340, aboutissent à un ensemble austère et solide, contrastant avec le futur Palais-Neuf plus décoratif. Ce premier noyau constitue la base du Palais des Papes et marque une étape essentielle dans l’affirmation d’Avignon comme centre de la chrétienté occidentale au XIVe siècle.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg/500px-Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg",
-    "legende": "Le cloître, œuvre de l'architecte Pierre Poisson.",
-    "sources": "https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon"
-  },
-  {
-    "id": 522,
-    "titre": "Polyptyque Orsini  Simone Martini à Avignon",
-    "date": 1135,
-    "date_fin": 1336,
-    "zones": [
-      "Papaute",
-      "Art"
-    ],
-    "type": 3,
-    "description": "Entre 1335 et 1336, Simone Martini  part pour Avignon, à la cour de Benoît XII. L'une des premières œuvres de la période avignonnaise est le polyptyque Orsini appelé aussi Polyptyque de la Passion du Christ peint pour un cardinal , Le commanditaire est représenté en habit de cardinal au pied de la descente de croix. Certains historiens de l'art y ont vu le portrait du cardinal romain Napoléon Orsini. Il avait en effet en sa possession un clou de la vraie croix, ce qui pourrait expliquer sa prédilection pour ce thème. \\nLe retable est présent en Bourgogne à une époque où Jean Malouel et ses neveux, les frères de Limbourg, travaillent dans la région au service de Philippe II de Bourgogne, fondateur de la chartreuse de Champmol dont il a fortement influencé la composition.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Polyptique_Simone_Martini_Antwerp.jpg/1280px-Polyptique_Simone_Martini_Antwerp.jpg",
-    "legende": "Polyptyque (Annonciation, Crucifixion, Déposition) conservé au Musée des Beaux-arts d'Anvers (Belgique)",
-    "sources": "https://fr.wikipedia.org/wiki/Polyptyque_Orsini"
-  },
-  {
     "id": 540,
     "titre": "Shogunat de Kamakura",
     "date": 1185,
@@ -65,17 +11,6 @@
     "description": "L'époque de Kamakura (鎌倉時代, Kamakura jidai?, 1185–1333) est l'une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période, qui commence en 1185 et s'achève en 1333, est placée sous l'autorité politique du shogunat de Kamakura. Elle constitue la première partie du « Moyen Âge » de l'histoire japonaise, qui va jusqu'à la fin du XVIe siècle.\n\nLe XIIe siècle vit le pouvoir impérial et l'aristocratie civile laisser les premiers rôles aux familles de l'élite guerrière, d'abord les Taira, puis, à l'issue de la guerre de Genpei (1180-1185), aux Minamoto de la lignée Seiwa-Genji, dont le chef de clan, Yoritomo, devint alors le personnage le plus puissant du Japon. Installé à Kamakura, il reçut de l'empereur le titre de shōgun, qui donna son nom au régime qu'il fonda, le shogunat (ou Bakufu), qui voyait les guerriers exercer les premiers rôles. Après la mort de Yoritomo en 1199, sa veuve Hōjō Masako prit en main la direction du shogunat, qui passa sous la coupe de son clan, les Hōjō, dont les chefs devinrent les « régents » (shikken) du shogun, exerçant de fait le pouvoir suprême, leur triomphe étant confirmé après qu'une nouvelle réaction de la cour impériale eut échoué en 1221.\n\nL'époque de Kamakura vit donc l'élite guerrière s'élever au rang de catégorie dominante, les hommes-liges du régime shogunal recevant en récompense de leurs services des charges importantes et le contrôle de domaines dans tout le pays. Les empereurs retirés et la noblesse de Kyoto continuèrent cependant à jouer un rôle politique, administratif et culturel notable, de même que les grands temples du Kinai. Cette période vit donc une forme de partage de pouvoir entre ces différents groupes pour l'administration du pays, même si les chefs des principaux clans guerriers installés à Kamakura et dans le Kantō, dirigés par les Hōjō, gardaient la direction du pays. Les provinces étaient organisées suivant un modèle domanial, les domaines publics et privés étant dirigés par les membres de la haute élite, et gérés par des administrateurs locaux, encadrant la vie des communautés de paysans, pêcheurs, forestiers, artisans et autres professions. Les élites locales, avant tout d'extraction guerrière, augmentèrent progressivement leur emprise sur les domaines, au détriment de l'aristocratie civile et des temples. Les échanges avec l'extérieur connurent un essor à cette période, ce qui se voit dans le fait que les monnaies en circulation à partir du XIIIe siècle avaient toutes été importées depuis la Chine.",
     "image": "",
     "regne": true
-  },
-  {
-    "id": 454,
-    "titre": "Insurrection à Chio contre Martino Zaccaria",
-    "date": 1229,
-    "zones": [
-      "Byzance"
-    ],
-    "type": 4,
-    "description": "Insurrection à Chio contre Martino Zaccaria dirigée par Léon Kalothétos. Celui-ci parvient à prendre le gouvernement de l'île et Andronic lui envoie une flotte de secours à l'automne. Zaccharia est arrêté, amené en captivité à Constantinople tandis que Kalothétos se voit confier le gouvernement de l'île, devenue domaine impérial.",
-    "image": ""
   },
   {
     "id": 31,
@@ -3367,7 +3302,7 @@
   },
   {
     "id": 341,
-    "titre": "Jugement d'Andronic II",
+    "titre": "Jugement d'Andronic III",
     "date": 1321,
     "mois": 4,
     "zones": [
@@ -3862,7 +3797,7 @@
   },
   {
     "id": 382,
-    "titre": "La guerre des quatre seigneurs dévaste la région de Metz",
+    "titre": "Guerre des 4  seigneurs à Metz",
     "date": 1324,
     "mois": 9,
     "date_fin": 1326,
@@ -3871,7 +3806,7 @@
       "St Empire"
     ],
     "type": 4,
-    "description": "Mi-Septembre :début du siège de Metz par Jean l'Aveugle, duc de Luxembourg, l'archevêque de Trêves Baudouin de Luxembourg, le comte Édouard de Bar et le duc Ferry IV de Lorraine. La guerre des quatre seigneurs dévaste la région de Metz entre septembre 1324 et mars 1326. \nLa Guerre des Quatre Seigneurs ou Guerre de Metz est un conflit qui opposa la République messine à quatre princes du Saint-Empire romain germanique, entre 1324 et 1326. Au XIVe et XVe siècles, la Lorraine est le théâtre d’affrontements fréquents entre différents seigneurs du Saint-Empire romain germanique. Les ducs de Lorraine, de Bar, de Luxembourg, les comtes de Deux-Ponts, de Vaudémont, l’archevêque de Trèves, les évêques de Metz, de Toul et de Verdun, s’allient ou s’opposent au gré des circonstances. En 1324, à la suite de querelles avec la ville de Metz et de dettes contractées auprès des bourgeois de la cité, Jean Ier, comte de Luxembourg et roi de Bohême, l’archevêque-électeur de Trêves Baudouin de Luxembourg, frère de l'empereur Henri VII, le comte Édouard Ier de Bar et le duc Ferry IV de Lorraine forment une coalition pour s’emparer de la ville[3],[4].\nLes querelles, d'ordre juridique, étaient dues à l’enchevêtrement des terres et des possessions, les bourgeois messins ne respectant pas toujours leurs obligations de vassaux sur certaines d’entre elles. Quant aux dettes, leurs origines étaient aussi diverses que variées. Parmi ces dettes, on peut citer :\nle paiement d’une rançon par le comte de Bar Édouard Ier, au duc Ferry IV de Lorraine, qui l’avait fait prisonnier après une bataille à Frouard en 1313 ;\nle paiement d’une rançon par le duc Ferry IV de Lorraine, à l'empereur Louis IV, qui l’avait fait prisonnier après la bataille de Mühldorf en 1322 ;\nun prêt de 50 000 livres au comte Henri VII de Luxembourg, père de Jean Ier de Bohême, pour financer son élection comme empereur du Saint-Empire ;\nla location des troupes de la cité messine, par Édouard Ier de Bar, dans un conflit qui l'opposait à l’évêque de Verdun Henri IV d’Aspremont[4] La ville confia la direction suprême de la guerre à un comité de sept seigneurs choisis parmi les Paraiges, appelés « les sept de la guerre », aux pouvoirs plus étendus. Elle renforça les remparts et les dota de pièces d'artillerie[4]. En septembre 1324, la ville de Metz fait appel à des mercenaires rhénans, de la vallée de la Moselle, de la Sarre et du Rhin pour renforcer la milice municipale. Plus de 700 cavaliers sont ainsi gagés par la cité messine, s'ajoutant aux huit cents cavaliers de la milice bourgeoise. Outre ces soldoyeurs, la ville achète à prix d’or les services de différents seigneurs, accompagnés de leurs chevaliers, de leurs écuyers et de leurs gens d’armes. Parmi eux, figuraient les comtes de Sarrebruck, de Deux-Ponts-Bitche, et de Saarwerden, ainsi que le Raugraf Konrad[5], connus pour leur grande habitude des armes. Les troupes des quatre seigneurs ravagent alors le plat-pays, faisant « œuvres inhumaines...,Sarasins, Turcks ou Juifs ne sceussent pis faire » dit la Chronique. Les assauts des coalisés sont toutefois repoussés à Saint-Julien, puis à Moulins, où le gibet de la cité est détruit[4]. Les troupes messines, menées par le comte de Sarrebruck, le sire de Bitche, ou le messin Jacques Grongnat, chevalier de Saint-Jean de Jérusalem, effectuent régulièrement des sorties, pour harceler les troupes coalisées. En octobre 1324, à l'approche de l'hiver, les coalisés lèvent le siège. Les messins s'empressent alors de réparer les dégâts causés aux fortifications, avant que les troupes ennemies ne reprennent leur pillage dans le plat pays l'année suivante[4]. Alors que la ville semble à cette époque inexpugnable, son plat pays, assise de son ravitaillement et de sa puissance, reste en fait particulièrement exposé aux razzias ou aux rançonnements[7]. Le conflit se poursuit ensuite sur les terres du comte de Bar, où Jean de la Court, à la tête de 1400 hommes, tant cavaliers que fantassins, incendie des villages du Barrois, pour inciter Édouard de Bar à négocier la paix[Après deux années de troubles, le pape Jean XXII refusant son assistance financière, les quatre princes ligués sont contraints de conclure une paix avec les Messins, le 3 mars 1326. L'accord ne reconnut ni vainqueurs, ni vaincus[8]. Les bourgeois messins doivent s’engager à ne plus acheter de terres sur les fiefs des princes, sans leur consentement[3].\nCe traité est aussi appelé « Paix des harengs »[9]. Ce mets, très prisé à l’époque, fut en effet servi par les Messins, lors des négociations, qui eurent lieu à Pont-à-Mousson dans le Comté de Bar, alors que les routes commerciales étaient censées être contrôlées, par les seigneurs coalisés contre la cité messine. Ces derniers se seraient plaints en disant: « Comment se puet il faire que vous aies hairans a Metz pour les chamins que vous sont clos ? Et ilz ne sont mie cloez pour nous et si n’en povons nulz avoir... » Les Messins auraient répondu : « Vous cuidies tenir les chamins et pays clous pour nous, mais nous les tenons clous pour vous! » C’est pendant le siège de Metz de 1324, qu’eut lieu le premier usage notable de canons en Occident[11]. Une couleuvrine et une serpentine au moins ont été utilisées durant le siège",
+    "description": "La guerre des 4  seigneurs dévaste la région de Metz\nMi-Septembre :début du siège de Metz par Jean l'Aveugle, duc de Luxembourg, l'archevêque de Trêves Baudouin de Luxembourg, le comte Édouard de Bar et le duc Ferry IV de Lorraine. La guerre des quatre seigneurs dévaste la région de Metz entre septembre 1324 et mars 1326. \nLa Guerre des Quatre Seigneurs ou Guerre de Metz est un conflit qui opposa la République messine à quatre princes du Saint-Empire romain germanique, entre 1324 et 1326. Au XIVe et XVe siècles, la Lorraine est le théâtre d’affrontements fréquents entre différents seigneurs du Saint-Empire romain germanique. Les ducs de Lorraine, de Bar, de Luxembourg, les comtes de Deux-Ponts, de Vaudémont, l’archevêque de Trèves, les évêques de Metz, de Toul et de Verdun, s’allient ou s’opposent au gré des circonstances. En 1324, à la suite de querelles avec la ville de Metz et de dettes contractées auprès des bourgeois de la cité, Jean Ier, comte de Luxembourg et roi de Bohême, l’archevêque-électeur de Trêves Baudouin de Luxembourg, frère de l'empereur Henri VII, le comte Édouard Ier de Bar et le duc Ferry IV de Lorraine forment une coalition pour s’emparer de la ville[3],[4].\nLes querelles, d'ordre juridique, étaient dues à l’enchevêtrement des terres et des possessions, les bourgeois messins ne respectant pas toujours leurs obligations de vassaux sur certaines d’entre elles. Quant aux dettes, leurs origines étaient aussi diverses que variées. Parmi ces dettes, on peut citer :\nle paiement d’une rançon par le comte de Bar Édouard Ier, au duc Ferry IV de Lorraine, qui l’avait fait prisonnier après une bataille à Frouard en 1313 ;\nle paiement d’une rançon par le duc Ferry IV de Lorraine, à l'empereur Louis IV, qui l’avait fait prisonnier après la bataille de Mühldorf en 1322 ;\nun prêt de 50 000 livres au comte Henri VII de Luxembourg, père de Jean Ier de Bohême, pour financer son élection comme empereur du Saint-Empire ;\nla location des troupes de la cité messine, par Édouard Ier de Bar, dans un conflit qui l'opposait à l’évêque de Verdun Henri IV d’Aspremont[4] La ville confia la direction suprême de la guerre à un comité de sept seigneurs choisis parmi les Paraiges, appelés « les sept de la guerre », aux pouvoirs plus étendus. Elle renforça les remparts et les dota de pièces d'artillerie[4]. En septembre 1324, la ville de Metz fait appel à des mercenaires rhénans, de la vallée de la Moselle, de la Sarre et du Rhin pour renforcer la milice municipale. Plus de 700 cavaliers sont ainsi gagés par la cité messine, s'ajoutant aux huit cents cavaliers de la milice bourgeoise. Outre ces soldoyeurs, la ville achète à prix d’or les services de différents seigneurs, accompagnés de leurs chevaliers, de leurs écuyers et de leurs gens d’armes. Parmi eux, figuraient les comtes de Sarrebruck, de Deux-Ponts-Bitche, et de Saarwerden, ainsi que le Raugraf Konrad[5], connus pour leur grande habitude des armes. Les troupes des quatre seigneurs ravagent alors le plat-pays, faisant « œuvres inhumaines...,Sarasins, Turcks ou Juifs ne sceussent pis faire » dit la Chronique. Les assauts des coalisés sont toutefois repoussés à Saint-Julien, puis à Moulins, où le gibet de la cité est détruit[4]. Les troupes messines, menées par le comte de Sarrebruck, le sire de Bitche, ou le messin Jacques Grongnat, chevalier de Saint-Jean de Jérusalem, effectuent régulièrement des sorties, pour harceler les troupes coalisées. En octobre 1324, à l'approche de l'hiver, les coalisés lèvent le siège. Les messins s'empressent alors de réparer les dégâts causés aux fortifications, avant que les troupes ennemies ne reprennent leur pillage dans le plat pays l'année suivante[4]. Alors que la ville semble à cette époque inexpugnable, son plat pays, assise de son ravitaillement et de sa puissance, reste en fait particulièrement exposé aux razzias ou aux rançonnements[7]. Le conflit se poursuit ensuite sur les terres du comte de Bar, où Jean de la Court, à la tête de 1400 hommes, tant cavaliers que fantassins, incendie des villages du Barrois, pour inciter Édouard de Bar à négocier la paix[Après deux années de troubles, le pape Jean XXII refusant son assistance financière, les quatre princes ligués sont contraints de conclure une paix avec les Messins, le 3 mars 1326. L'accord ne reconnut ni vainqueurs, ni vaincus[8]. Les bourgeois messins doivent s’engager à ne plus acheter de terres sur les fiefs des princes, sans leur consentement[3].\nCe traité est aussi appelé « Paix des harengs »[9]. Ce mets, très prisé à l’époque, fut en effet servi par les Messins, lors des négociations, qui eurent lieu à Pont-à-Mousson dans le Comté de Bar, alors que les routes commerciales étaient censées être contrôlées, par les seigneurs coalisés contre la cité messine. Ces derniers se seraient plaints en disant: « Comment se puet il faire que vous aies hairans a Metz pour les chamins que vous sont clos ? Et ilz ne sont mie cloez pour nous et si n’en povons nulz avoir... » Les Messins auraient répondu : « Vous cuidies tenir les chamins et pays clous pour nous, mais nous les tenons clous pour vous! » C’est pendant le siège de Metz de 1324, qu’eut lieu le premier usage notable de canons en Occident[11]. Une couleuvrine et une serpentine au moins ont été utilisées durant le siège",
     "image": ""
   },
   {
@@ -4393,8 +4328,7 @@
       "Byzance"
     ],
     "type": 3,
-    "image": "",
-    "regne": true
+    "image": ""
   },
   {
     "id": 420,
@@ -4680,6 +4614,17 @@
     "description": "Recensement sur l'état des feux & paroisses en le royaume de Francie ordonné par le roi Philippe : seul recensement pour tout le Moyen Âge jusqu'à l'époque moderne. \n \t\nL'état des paroisses et des feux de 1328 est un document célèbre à juste titre car il est le premier texte permettant une estimation chiffrée globale de la population française avant I'épidémie de peste du milieu du XIVe siècle et donc à la fin de la période d'expansion démographique du Moyen Âge. Ce dénombrement de population a été réalisé par les officiers royaux locaux, les baillis et les sénéchaux, à I'intention de leur nouveau souverain Philippe VI de Valois, monté sur le trône en avril 1328. Outre la curiosité de connaître le nombre de ses sujets (des opérations de statistique partielles ont déjà été menées du temps de Philippe le Bel : pour les nobles, les prélats ou les villes), Philippe VI a pour but d'asseoir un nouvel impôt nécessaire en cette époque de lutte quasi permanente contre le roi d'Angleterre, duc de Guyenne et prétendant au trône français, ou contre les Flamands.\nLe texte nous est parvenu sous forme de copies, conservées dans le fonds de la Chambre des comptes de Paris et énumérant 34 circonscriptions du royaume seulement, certaines n'ayant pas répondu : Orléans, Lille... Sont exclus les principautés vassales et les apanages : duché de Bretagne, Gascogne anglaise, duché de Bourgogne, comté de Flandre, comtés de Blois, de Nevers ou de Bar ; apanages d'Artois, d'Alençon, de Chartres, d'Évreux, de la Marche ou d'Angoulême. Donnant un total de 23 800 paroisses et de 2 470 000 feux environ, la partie recensée du royaume compterait autour de 12 000 000 d'habitants, I'ensemble du royaume plus de 16 000 000 et la France actuelle 21 000 000 ou 21 500v000, L'état des feux permet également de calculer des densités de population : 7,87 feux en moyenne par km2, 14,1 feux en région parisienne mais 5,77 feux dans les montagnes d'Auvergne ! C'est aussi à partir de ce document que I'on a établi que Paris (61 000 feux) devait être la plus grande ville d'Europe avec 200 000 ou 250 000 habitants au début du XIVe siècle.",
     "image": "",
     "sources": "https://classes.bnf.fr/ema/anthologie/paris/2.htm"
+  },
+  {
+    "id": 454,
+    "titre": "Insurrection à Chio contre Martino Zaccaria",
+    "date": 1329,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "Insurrection à Chio contre Martino Zaccaria dirigée par Léon Kalothétos. Celui-ci parvient à prendre le gouvernement de l'île et Andronic lui envoie une flotte de secours à l'automne. Zaccharia est arrêté, amené en captivité à Constantinople tandis que Kalothétos se voit confier le gouvernement de l'île, devenue domaine impérial.",
+    "image": ""
   },
   {
     "id": 352,
@@ -5494,6 +5439,60 @@
     "image": ""
   },
   {
+    "id": 522,
+    "titre": "Polyptyque Orsini  Simone Martini à Avignon",
+    "date": 1335,
+    "date_fin": 1336,
+    "zones": [
+      "Papaute",
+      "Art"
+    ],
+    "type": 3,
+    "description": "Entre 1335 et 1336, Simone Martini  part pour Avignon, à la cour de Benoît XII. L'une des premières œuvres de la période avignonnaise est le polyptyque Orsini appelé aussi Polyptyque de la Passion du Christ peint pour un cardinal , Le commanditaire est représenté en habit de cardinal au pied de la descente de croix. Certains historiens de l'art y ont vu le portrait du cardinal romain Napoléon Orsini. Il avait en effet en sa possession un clou de la vraie croix, ce qui pourrait expliquer sa prédilection pour ce thème. \\nLe retable est présent en Bourgogne à une époque où Jean Malouel et ses neveux, les frères de Limbourg, travaillent dans la région au service de Philippe II de Bourgogne, fondateur de la chartreuse de Champmol dont il a fortement influencé la composition.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Polyptique_Simone_Martini_Antwerp.jpg/1280px-Polyptique_Simone_Martini_Antwerp.jpg",
+    "legende": "Polyptyque (Annonciation, Crucifixion, Déposition) conservé au Musée des Beaux-arts d'Anvers (Belgique)",
+    "sources": "https://fr.wikipedia.org/wiki/Polyptyque_Orsini"
+  },
+  {
+    "id": 518,
+    "titre": "Construction du Palais Vieux à Avignon",
+    "date": 1335,
+    "date_fin": 1340,
+    "zones": [
+      "Papaute",
+      "Art"
+    ],
+    "type": 2,
+    "description": "La construction du Palais-Vieux du Palais des Papes s’inscrit dans le contexte de l’installation durable de la papauté à Avignon au début du XIVe siècle. Après l’arrivée des papes sous Clément V puis l’installation définitive décidée par Jean XXII, les bâtiments épiscopaux existants sont progressivement agrandis pour répondre aux besoins du pouvoir pontifical.\\n\\nCependant, c’est sous le pontificat de Benoît XII (1335-1342) que débute la véritable construction du Palais-Vieux. Jugeant les aménagements précédents insuffisants, il fait démolir une grande partie des constructions antérieures afin d’édifier un palais entièrement nouveau. Ce projet est confié notamment à l’architecte Pierre Poisson (ou Peysson), chargé de réaliser un édifice à la fois fonctionnel et défensif.\\n\\nLe choix du rocher des Doms est déterminant : cette position élevée permet de protéger le palais des inondations, tout en affirmant la puissance pontificale grâce à sa visibilité sur toute la région. Le Palais-Vieux est conçu comme une véritable forteresse, avec des murs massifs, des tours imposantes comme celle du Trouillas, et une organisation rigoureuse des espaces. Il répond à la volonté de Benoît XII de créer un lieu sûr, capable d’abriter durablement la cour pontificale.\\nLes travaux, menés entre 1335 et 1340, aboutissent à un ensemble austère et solide, contrastant avec le futur Palais-Neuf plus décoratif. Ce premier noyau constitue la base du Palais des Papes et marque une étape essentielle dans l’affirmation d’Avignon comme centre de la chrétienté occidentale au XIVe siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg/500px-Tour_%2B_Cour_du_cloitre%2C_vieux_palais_par_JM_Rosier.jpg",
+    "legende": "Le cloître, œuvre de l'architecte Pierre Poisson.",
+    "sources": "https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon"
+  },
+  {
+    "id": 525,
+    "titre": "Rébellion Nakasendai",
+    "date": 1335,
+    "mois": 10,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "Octobre 1335  début de la rébellion Nakasendai au Japon. Takauji Ashikaga entre en rébellion ouverte contre le pouvoir de plus en plus tyrannique de l’empereur Go-Daigo[3]. Il fonde à Kyōto un nouveau Bakufu. Une longue guerre commence entre les légitimistes et les révoltés, qui ruine le Japon et l’oblige à se replier sur lui-même (fin en 1392)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/960px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
+    "legende": "Représentation d'Ashikaga Takauji"
+  },
+  {
+    "id": 517,
+    "titre": "Disette en Languedoc",
+    "date": 1335,
+    "date_fin": 1337,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
     "id": 477,
     "titre": "Révolte des Gibelins à Gênes",
     "date": 1335,
@@ -5578,7 +5577,7 @@
       "Monde islamique"
     ],
     "type": 3,
-    "description": "Août : le roi mérinide Abu al-Hasan ben Uthman, en guerre contre les Abdalwadites prend Nedroma dont il massacre la garnison, puis commence le deuxième siège de Tlemcen.",
+    "description": "Août : le roi mérinide Abu al-Hasan ben Uthman, en guerre contre les Abdalwadites prend Nedroma dont il massacre la garnison, puis commence le deuxième siège de Tlemcen.\n1337 1er mai : prise de Tlemcen aux Abdalwadides par les Mérinides de Fès après deux ans de siège (fin en 1359)",
     "image": ""
   },
   {
@@ -5779,11 +5778,13 @@
     "date": 1337,
     "mois": 5,
     "zones": [
-      "France"
+      "France",
+      "Angleterre"
     ],
-    "type": 2,
-    "description": "Édouard III d'Angleterre revendique la couronne de France après l'extinction des Capétiens directs. Ce conflit dynastique, commercial et territorial durera jusqu'en 1453 et redéfinira les identités nationales françaises et anglaises.",
-    "image": "",
+    "type": 1,
+    "description": "Édouard III d'Angleterre revendique la couronne de France après l'extinction des Capétiens directs. Ce conflit dynastique, commercial et territorial durera jusqu'en 1453 et redéfinira les identités nationales françaises et anglaises.\n24 mai 1337 : le roi de France Philippe VI de Valois ordonne à Candide II d’Espagne, sénéchal de Périgord et de Quercy et au bailli d'Amiens de saisir le duché de Guyenne et le Ponthieu, fiefs du roi d'AngleterreSous le prétexte qu'il refuse de lui livrer Robert d'Artois, ennemi déclaré de la couronne de France, le roi Philippe VI de Valois confisque au roi d'Angleterre la Guyenne. ce n'est qu'au XIXe siècle que la formule « guerre de Cent Ans » s'impose dans l'historiographie. elle apparaît pour la première fois dans le Tableau chronologique de l'Histoire du Moyen Âge de Chrysanthe Desmichels[1], édité à Paris en 1823[2]. Le même auteur a en réalité déjà employé cette expression dans un manuel scolaire de 1820. Le 7 octobre 1337, à l'abbaye de Westminster, Édouard III lance publiquement un défi à son cousin Philippe VI de Valois. Il conteste sa légitimité et revendique la couronne de France pour lui-même. C'est le début de la guerre de Cent Ans. 7 octobre 1337 : Édouard III d'Angleterre réclame la couronne de France. Après la mort de Charles IV le Bel, la succession au trône de France fournit le prétexte de la guerre de Cent Ans.\n1er novembre 1337 : le chancelier Henry Burghersh, évêque de Lincoln, vient à Paris présenter au roi de France Philippe VI les lettres de défi du roi d’Angleterre.\n9 novembre 1337 : une flotte d'Édouard III écrase les alliés flamands de Philippe VI à la bataille de Cadzand.\n\nAu début du XIVe siècle, trois axes de tensions favorisent son émergence :\n\nla « grande dépression médiévale », théorisée par Guy Bois (crise démographique conjuguée à une stagnation économique du fait de l'alourdissement de la pression fiscale seigneuriale) ;\nles constants affrontements entre Plantagenêts et Capétiens pour la souveraineté et le contrôle des fiefs de Guyenne ; malgré les confiscations territoriales de Philippe Auguste, saint Louis et Philippe IV le Bel, les rois d'Angleterre ont conservé l'étroit duché de Guyenne et le petit comté de Ponthieu (région d’Abbeville)  : le roi d'Angleterre est ainsi le vassal du roi de France Depuis deux siècles, la souveraineté sur l'Ouest de la France, du duché d'Aquitaine au riche et puissant comté de Flandre, est à l'origine de conflits et d'intrigues entre Capétiens et Plantagenêts. Cette lutte, commencée au milieu du XIIe siècle avec un énorme avantage pour les Plantagenêts (qui possédaient alors l'Anjou, la Normandie, le Maine, le Poitou, l'Aquitaine et le Limousin), se termine par la confiscation de la majeure partie de leurs possessions au profit du roi de France[38]. Du grand empire Plantagenêt, il ne reste plus qu'une Aquitaine diminuée et réduite à la côte gasconne et à Bordeaux, nommée Guyenne[le conflit dynastique pour la couronne de France qui naît, en 1328, à la mort de Charles IV le Bel, dernier fils de Philippe IV le Bel.\n\nDu point de vue militaire, cette guerre marque une rupture, avec le déclin de la cavalerie au profit de l'infanterie et l'apparition de l'artillerie. Ce conflit voit également l'apparition durable de l'emploi de troupes mercenaires dans chacun des camps en présence. Elle a également des conséquences économiques, l'augmentation des prix favorisant le commerce sur de longues distances, et religieuses, avec le Grand Schisme d'Occident qui oppose les papes de Rome et d'Avignon. Elle aboutit à une affirmation du sentiment national, la rivalité franco-anglaise n'étant plus dorénavant seulement issue d'un conflit dynastique. De la même manière, la mutation de la Bourgogne en principauté indépendante engendre un conflit de deux siècles avec les Habsbourg.\nEnjeux pour l’Angleterre Le commerce rend l'Angleterre très dépendante de la Guyenne (car elle produit des vins supérieurs en qualité et en quantité à ceux d'Angleterre), des Flandres (dont les drapiers achètent la laine) et de la Bretagne (qui lui vend du sel indispensable à la conservation des aliments)[37].= ouest de la France enjeu stratégique pour les deux royaumes . La langue des élites est l'anglo-normand[40], pour l'essentiel de l'ancien normand, fortement influencé par le dialecte angevin à l'époque des Plantagenêts et de manière moindre par l'anglo-saxon, et cela, jusqu'en 1361 (décret d'Édouard III), bien que l'anglo-saxon continue d'être employé par le peuple[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/France_1330.svg/langfr-960px-France_1330.svg.png",
+    "legende": "La France en 1337",
     "sources": "Jean Froissart, Chroniques"
   },
   {
@@ -5799,6 +5800,117 @@
     "type": 3,
     "description": "Son règne personnel commence sous l'influence des frères Mathieu et Damien Palice, qui doivent quitter l'île sous la pression du peuple révolté par leur tyrannie. Ils se réfugient à Pise tandis qu'à leur départ, leur palais est détruit et leurs biens distribués aux soldats. Les villes dont ils jouissaient sont données au prince Jean. Les troubles étant calmés, le roi commence un voyage en Sicile mais tombe subitement malade et meurt le 15 août 1342. Il est enterré dans la cathédrale de Palerme. Son fils aîné, Louis, âgé de quatre ans, lui succède sous la tutelle de sa mère et de son oncle, Jean, qui devient régent.\n\nSous son règne, les Napolitains conquièrent les îles Lipari et prennent les villes de Milazzo et Termini en Sicile même.\nConsidéré par ses contemporains comme un faible d'esprit, il est même qualifié par Giovanni Villani, dans sa Nuova Cronica \"presque un imbécile\" (latin italianisé : quasi un mentacatto) et Nicola Speciale, dans son Historia Sicula, le qualifie de \"pur et simple\" (purus et simplex).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pedro_II_da_Sic%C3%ADlia.jpg"
+  },
+  {
+    "id": 542,
+    "titre": "Construction de l'actuel donjon de Vincennes",
+    "date": 1337,
+    "zones": [
+      "France",
+      "Art"
+    ],
+    "type": 4,
+    "description": "1337-1370 : construction de l'actuel donjon de Vincennes. \nLe donjon de Vincennes est le donjon du château de Vincennes, sur la commune de Vincennes du Val-de-Marne, en bordure du bois et du fort du même nom. S'élevant à 50 mètres de hauteur au-dessus du sol de la cour[1], il fut une résidence des rois de France[2] et l'un des plus hauts donjons d'Europe avec la tour de Crest dans la Drôme (depuis la destruction du donjon de Coucy 54 mètres en 1917). Ancien logis royal puis prison d'État, il est classé aux monuments historiques en 1993 et 1999 et constitue un important site touristique du Val-de-Marne et de la proche banlieue de Paris.\nLe donjon est au sein du complexe castral, l'espace d'habitation voulu par Charles V[3]. À sa création, le rez-de-chaussée devait être inclus dans les appartements royaux. Mais dès l'avènement de Charles V au trône, celui-ci fait le choix d'un accès au premier étage par le châtelet d'entrée, indépendant du rez-de-chaussée. Il décide en même temps de créer un accès prestigieux à la chambre du deuxième étage, par une « grande vis » telle qu'il en fait réaliser au même moment au Louvre. L'étroit escalier original devient alors un dégagement secondaire.\n\nLa salle du premier étage, aujourd'hui nommée « salle des gardes », était originellement la « chambre à parer », c'est-à-dire la principale pièce de réception d'un appartement royal médiéval. On ignore l'usage que pouvaient avoir les pièces contenues dans les tours d'angles.\n\nLa salle du deuxième étage était la chambre du roi, seconde pièce principale de l'appartement, elle combine des fonctions publiques et privées. Les pièces de cet étage sont bien décrites dans les archives. La salle centrale était meublée d'un buffet et de sa vaisselle, d'un lit et de trois coffres. Elle était décorée de pièces d'armement suspendues au mur. Sa somptuosité a frappé les contemporains de Charles V. Les pièces à l'entour étaient réservées à l'usage personnel du roi, accessibles à un nombre très réduit de personnes.\n\nAu sud-ouest, la garde-robe, conservait les textiles précieux dans des coffres. Le souverain choisissait de s'y retirer pour recevoir quelqu'un seul à seul, comme l'indiquent les chroniques au sujet de la visite de l'empereur Charles IV. Cette pièce est l'une des plus confortables et des mieux éclairées.\nAu nord-ouest, le \"retrait\" qui mène aux latrines, est plus sombre. Il servait probablement à la toilette du roi, ainsi que d'espace d'entrepôt du trésor royal. Seul cet étage présente, dans la tour des latrines, une pièce supplémentaire, « l'estude du roi », où il pouvait s'isoler et travailler.\nAu nord-est se trouve la chapelle, et l'oratoire du roi ménagé dans l'épaisseur du mur. L'autel se trouvait dans la fenêtre est.\nL'appartement du roi se poursuivait autour du châtelet d'entrée, par une grande salle, détruite au XVIIe siècle, et une autre étude, située au dessus de la porte ouest, qui était accessible par un pont de bois par une porte-fenêtre depuis la salle principale.\nLe troisième étage était destiné au dauphin Charles, futur Charles VI. L'appartement de la reine devait se trouver dans le manoir (aujourd'hui disparu).\n\nAux espaces résidentiels s'ajoute un programme défensif. Certains éléments militaire participent de l'image guerrière de l'occupant, servent à asseoir sa puissance symbolique. D'autres indiquent un souci fonctionnel de protection, particulièrement dans les derniers niveaux du donjon, où se concentrent les défenses verticales et les plateformes de tir et au niveau de la chemise, sur laquelle se déploient les systèmes défensifs rasants. La tour dispose d'un petit arsenal, attestées par les sources, comprenant arbalètes, pièces d'artillerie, martinets et garrots.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Donjon_Ch%C3%A2teau_de_Vincennes.JPG/1280px-Donjon_Ch%C3%A2teau_de_Vincennes.JPG",
+    "legende": "Vue du donjon depuis la cour du château."
+  },
+  {
+    "id": 543,
+    "titre": "Lorenezetti : Fresques du chapitre du couvent de Saint-François à Sienne",
+    "date": 1337,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Vers 1329-1337 : Ambrogio Lorenzetti et Pietro Lorenzetti travaillent aux fresques du chapitre du couvent de Saint-François à Sienne. Vers 1335, Ambrogio Lorenzetti retourna dans la campagne siennoise. Ugurgeri Azzolini rapporte avoir vu en 1649 les signatures d'Ambrogio Lorenzetti et de son frère Pietro sur les fresques, alors dégradées, de l' hôpital Santa Maria della Scala, avec la date ( 1335 ). Ces fresques sont aujourd'hui disparues. Lorenzo Ghiberti mentionne également des fresques de Pietro et Ambrogio Lorenzetti dans le cloître et la salle capitulaire de l' église San Francesco de Sienne , dont il ne reste aujourd'hui que quelques scènes, datées d'environ 1336. La présence de son frère Pietro dans ces cycles de fresques siennoises laisse supposer qu'Ambrogio Lorenzetti obtint des commandes dans sa ville natale grâce à l'intervention de son frère, certainement plus reconnu que lui à cette époque.\nLe cycle de fresques réalisé par Ambrogio Lorenzetti et son frère dans le couvent de San Francesco présente deux scènes complémentaires, marquées par un fort contraste de composition et de sens.\n\nLa première fresque représente une scène de martyre de franciscains en Orient, dont l’identification historique reste incertaine : massacre à Tanaïs, événement en Chine dans les années 1330 ou image symbolique des persécutions missionnaires. L’artiste propose une vision stylisée et parfois caricaturale de l’Orient, destinée à rendre la scène compréhensible. La composition oppose la loggia où siège le souverain à l’arène où se déroule l’exécution de trois moines. Ceux-ci, calmes face à la mort, incarnent l’accès au salut par le martyre. Au-dessus, des figures sculptées représentent les sept péchés capitaux (Avarice, Gourmandise, Colère, Oisiveté, etc.), transformant le lieu du pouvoir en « temple des vices » et renforçant la condamnation morale de la scène.\n\nLa seconde fresque, également attribuée à Ambrogio Lorenzetti, illustre la profession publique de Louis d'Anjou. Contrairement à une interprétation ancienne, il ne s’agit pas d’un départ mais d’un acte d’obéissance au pape Boniface VIII. La scène se distingue par son réalisme spatial : le spectateur est placé au cœur de l’assemblée. Louis, agenouillé, scelle symboliquement un lien de vassalité avec le pape. Autour, les attitudes variées des personnages traduisent les tensions, notamment celle du roi Charles II d'Anjou, opposé au choix de son fils.\n\nL’œuvre met ainsi en valeur l’idéal franciscain d’obéissance et de renoncement, dans un contexte marqué par les débats internes à l’ordre, tout en intégrant une possible dimension spirituelle avec la présence discrète d’une figure assimilable au Christ.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lorenzetti_Ambrogio_martyrdom-of-the-franciscans-.jpg/960px-Lorenzetti_Ambrogio_martyrdom-of-the-franciscans-.jpg",
+    "legende": "Martyre des Franciscains à Bombay (~1336), fresque, église San Francesco della Vigna, Sienne"
+  },
+  {
+    "id": 544,
+    "titre": "Édouard de Woodstock   futur Prince noir, devient duc de Cornouailles",
+    "date": 1337,
+    "mois": 3,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Édouard de Woodstock (7 ans ), fils ainé du roi Edouard III,  futur Prince noir, devient duc de Cornouailles. Il devient le premier duc en Angleterre. Né le 15 juin 1330 à Woodstock et décédé le 8 juin 1376 à Westminster, prince de Galles, comte de Chester, duc de Cornouailles et prince d'Aquitaine, est le fils aîné d'Édouard III d'Angleterre et de Philippa de Hainaut.\nDéjà habitué et formé aux tournois, Édouard de Woodstock débarque le 12 juillet 1346 à Saint-Vaast-la-Hougue, le jour-même il est fait chevalier[2] en l'église Saint-Vigor de Quettehou par son père, comme ses compagnons notamment Guillaume de Montaigu, Roger de Mortimer, Guillaume de Roos, Roger de la Ware, Richard de la Vere. Il guerroie ensuite en Normandie aux côtés de son père, et connaît sa première grande bataille à Crécy en 1346 où il commande l'aile droite de l'armée anglaise à l'aide du comte de Warwick",
+    "image": ""
+  },
+  {
+    "id": 545,
+    "titre": "Condamnation de Guillaume d'Occam par l’Université de Paris",
+    "date": 1337,
+    "zones": [
+      "France",
+      "Idees"
+    ],
+    "type": 4,
+    "description": "1339 L’Université de Paris, rend inaccessibles, les livres nominalistes et leur enseignement est condamné. Les bacheliers durent jurer qu’ils ignorent la doctrine d’Ockham.\nEn 1340 est promulgué un décret contre le nominalisme, « Que nul ne prétende enfermer la science dans les propositions et les termes [ce que font les logiciens nominalistes]; la science atteint la réalité ». \nAppliquer la raison à la recherche de la vérité soumettre la foi à la critique rationnelle tenter d'expliquer logiquement Dieu l'univers les créatures voilà à quoi s'était appliqué à la fin du 13e siècle les grands esprits qui font la gloire de la science scolastique hé les docteurs disparus les émules gloss et commentent à l'infini les sommes et les sentences dans de stériles barbouillamenta. (babillage)  1320 le docteur invincible Guillaume d’Occam est à Paris où il reste simple incepto candidat à la maîtrise ces études interrompues en 1324 sur dénonciation à Avignon il va pourtant porter à la scolastique moribonde le coup de grâce anglais et franciscain il a pris le parti du supérieur de son nom Michel de Césène contre le pape Jean XXII sur la pauvreté vécue et voulue par le Christ mais surtout virgule il enseigne que les idées générales, Article 2 fois ou concept philosophique virgule ne sont que des noms qui n'ont que la valeur que leur donne notre esprit son Centilogium theologicum Offre sans exemple d'articles de dogme auquel une analyse rationnelle trouve des conséquences hérétiques la théologie n'est donc pas une science puisqu'elle repose sur des vérités révélées la connaissance n'a pour source que l'intuition interne ou externe subversif, Guillaume est excommunié virgule il est menacé d'arrestations et s'enfuit à Pise \nLa connaissance humaine ne porte pas sur l’essence des choses, mais sur les faits concrets et particuliers.👉 Cela ouvre la voie à l’esprit scientifique moderne, fondé sur l’observation et non sur la spéculation. Ockham s’oppose au pape Jean XXII et défend la pauvreté évangélique des franciscains.Il affirme que :le pouvoir du pape n’est pas absolu,le roi ou la communauté politique ont une autonomie légitime.👉 Il est donc aussi un précurseur du politique moderne, qui distingue pouvoir spirituel et pouvoir temporel. Guillaume d’Ockham rompt avec la grande synthèse du XIIIᵉ siècle : il affirme que seuls les individus existent, que la raison doit rester simple et limitée, et que la foi relève d’un autre ordre.Il est le dernier grand scolastique, mais aussi le précurseur de la modernité.",
+    "image": ""
+  },
+  {
+    "id": 546,
+    "titre": "Drôle de guerre",
+    "date": 1337,
+    "date_fin": 1339,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "1337-1339 Le conflit franco-anglais débute par une drôle de guerre . \nSi la guerre est déclarée en 1337, le conflit ne débute que plus tard. Les deux rois ne sont pas riches, et doivent négocier les impôts avec leur parlement respectif, voire emprunter l'argent nécessaire à la guerre.\nLes belligérants commencent la guerre par alliés interposés. Ainsi, Édouard III d'Angleterre soutient Jean de Montfort contre Charles de Blois, parent de Philippe VI de Valois, lors de la guerre de Succession de Bretagne[81]. De leur côté, les Français soutiennent les Écossais en guerre contre les Anglais[82].\nAu début du conflit, tandis qu'Édouard III, en tant que petit-fils de Philippe le Bel, peut revendiquer la couronne de France, le roi de France, n'ayant pas de revendication sur la couronne d'Angleterre, n'a qu'un but : récupérer la Guyenne. Il lui faut donc contraindre Édouard III d'Angleterre à en accepter la confiscation et à mettre fin à ses prétentions à la couronne de France.\nLes Français, avec le renfort de mercenaires génois, ont le rapport de force maritime pour eux. Ainsi, la flotte française pille régulièrement les ports anglais[83]. Une stratégie de blocus est imaginée car le vin de Guyenne et le sel de Bretagne ou de Poitou sont vitaux pour l'Angleterre[n 7]. Le commerce de la laine vers les Flandres et du vin de Bordeaux est interrompu et les finances anglaises sont au plus mal. Les drapiers flamands, sévèrement touchés par le conflit, se soulèvent contre leur comte Louis Ier de Flandre[84]. Ils sont conduits par Jacob van Artevelde qui a pris le pouvoir en Flandres et s'allient au roi d'Angleterre[85].",
+    "image": ""
+  },
+  {
+    "id": 547,
+    "titre": "Bataille de Cadzand",
+    "date": 1337,
+    "mois": 11,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "La bataille de Cadzand est une bataille navale livrée le 9 novembre 1337, pendant la guerre de Cent Ans. Elle consiste en un raid sur l'île flamande de Cadzand, afin de conduire à une victoire anglaise rapide et ainsi encourager les alliés continentaux d'Édouard III d'Angleterre à le soutenir. Wauthier de Masny mène les troupes anglaises et écrase les Flamands mais échoue à s'emparer de l'île. Pour Édouard III, la guerre avec la France qui a commencé le 24 mai 1337 ne se déroule pas comme il le souhaite : ses alliés aux Pays-Bas et en Allemagne ne sont pas encore prêts à envahir la France et les échecs anglais en Gascogne l'empêchent de porter la guerre en Flandres. La flotte anglaise n'est pas encore prête à traverser la Manche avec toute l'armée et les finances royales sont en piteux état car Édouard III a dû payer ses troupes gasconnes. Édouard décide alors de procéder à une démonstration de force afin de renforcer le moral anglais. Il ordonne alors à Wauthier de Masny, chef de l'avant-garde anglaise stationnée en Hainaut, de rassembler une petite flotte et de s'emparer de l'île de Cadzand, située dans le comté de Flandres qui est alors allié avec Philippe VI de France. Cadzand est en 1337 une île de pêcheurs pauvre, qui ne présente aucun avantage au pillage si ce n'est qu'elle est assez proche du riche port de L'Écluse et peut servir de tête-de-pont pour s'en emparer. Masny est conscient de cette situation, et après un assaut infructueux sur la ville de L'Écluse le 9 novembre 1337, il emmène ses 3 700 marins et soldats à Cadzand et les incite à piller la zone, qui est fortement endommagée. Il conduit en quelque sorte une petite chevauchée, la première parmi celles qui constitueront la première phase de la guerre de Cent Ans au XIVe siècle.\n\nLa garnison de L'Écluse, conduite par Guy, fils bâtard du comte de Flandre, refuse de laisser Cadzand à la merci des Anglais et débarque sur l'île quelques jours plus tard afin de repousser Masny. Les Anglais se sont cependant préparés à un assaut flamand et organisent la défense de l'île. Les forces de Guy de Flandre sont écrasées par le redoutable longbow des Anglais. Seule une poignée de Flamands parvient à rentrer en hâte à L'Écluse. Guy de Flandre et d'autres nobles sont capturés tandis que les soldats communs sont passés au fil de l'épée. Les pertes anglaises au cours de cette bataille sont insignifiantes. Les conséquences directes de la bataille sont minimes, car Masny évacue Cadzand peu après sa victoire. Les alliés continentaux d'Édouard III sont considérablement impressionnés par la détermination des Anglais. Les Flamands sont fortement intimidés par la bataille d'autant que Philippe VI de France, mécontent, soupçonne les habitants de Cadzand d'avoir livré la ville aux Anglais et fait procéder à de cruelles exécutions. Cette violence de la part du roi de France provoque l'indignation des Flamands, qui se révoltent en 1338 sous l'égide de Jacob van Artevelde. Dix ans après la bataille, lorsque l'Angleterre et la Flandre sont alliées face à la France, Édouard III accepte de s'excuser pour les dommages causés à l'île de Cadzand et de procéder à des réparations. La ville de L'Écluse est plus tard la scène d'un combat naval bien plus important en 1340 où la France et l'Angleterre s'affrontent.",
+    "image": ""
+  },
+  {
+    "id": 548,
+    "titre": "Mort de Giotto à Florence",
+    "date": 1337,
+    "mois": 1,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Il décédé à Florence où il avait été appelé pour diriger la décoration De Santa Maria del Flore , il s’apprêtait à mener les travaux du campanile dont il avait tracé les plans en 1336. il est enterré à Santa Maria del Flore. Il avait déjà exécuté un programme de fresque  pour Santa Croce de 1318 à 1320.  \nL’œuvre de Giotto di Bondone (1267-1337) est considérée comme révolutionnaire dans l’histoire de l’art occidental, notamment parce qu’elle marque le passage du style médiéval (byzantin) à une représentation plus réaliste et humaine du monde. Giotto introduit une notion de perspective intuitive. Ses personnages et ses architectures s’inscrivent dans un espace cohérent, avec un avant-plan et un arrière-plan. Exemple : dans la Chapelle Scrovegni (ou Chapelle de l’Arena à Padoue), les scènes semblent se dérouler dans des lieux réels, pas sur un fond doré plat. Lumière et ombre : Il utilise le modelé, c’est-à-dire des jeux d’ombre et de lumière, pour donner du relief à ses figuresContrairement à l’art byzantin figé, les personnages de Giotto expriment des sentiments (tristesse, joie, compassion, colère…). Les attitudes sont crédibles et humaines, loin de la rigidité symbolique médiévale. Giotto abandonne le fond doré uniforme au profit de décors réels : murs, paysages, architectures. Les personnages ne sont plus des icônes spirituelles détachées du monde, mais des êtres incarnés. Il privilégie la narration visuelle : chaque fresque raconte une histoire claire, lisible, avec une mise en scène dramatique. Giotto cherche à rendre la foi plus proche du spectateur : le croyant peut s’identifier aux émotions et à l’humanité des personnages sacrés. Cette approche correspond à un nouvel esprit religieux, influencé par Saint François d’Assise, qui valorise la proximité entre l’homme et Dieu.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Uffizi_Giotto.jpg/500px-Uffizi_Giotto.jpg",
+    "legende": "Statue de Giotto (1845) par Giovanni Duprè (1817-1882) au piazzale des Offices de Florence."
+  },
+  {
+    "id": 549,
+    "titre": "Bernardo Daddi Polyptyque de Santa Reparata",
+    "date": 1337,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Le Polyptyque de Santa Reparata (en italien, Madonna con Bambino in trono e angeli, episodi della vita di Santi e di Maria Vergine, Santi, apostoli e evangelisti) est une peinture de Bernardo Daddi réalisée a tempera et or sur panneaux de bois.  L'ensemble complet est datable d'avant 1338 et sa grande partie est conservée au musée des Offices à Florence.Le polyptyque grandiose, composé d'au moins 33 compartiments, a été réalisé pour le maître-autel de l'ancienne église Santa Reparata à Florence, passant ensuite, après la destruction de l'église, au maître-autel de l'église San Pancrazio de Florence, où Giorgio Vasari l'a vu, qui l'a attribué à tort à Agnolo Gaddi. L'historien d'Arezzo n'a pas beaucoup apprécié l'ouvrage, n'en signalant que les parties mineures : « Ce qui est bon ne se voit que dans la prédelle, qui est toute pleine de petites figures ». August Schmarsow le réattribue à Daddi, le référant à la deuxième période de son activité, vers 1330-1340. La datation a été confirmée par Nicola Marcucci, qui a précisé les termes chronologiques en le plaçant avant le retable de la basilique Santa Maria Novella (maintenant démembré entre New Haven, Paris et Poznań), documenté en 1338. Certains l'ont toutefois attribué après 1340. En tout cas, grâce à la documentation notariale, il est attesté qu'en 1344, le polyptyque était déjà placé sur l'autel principal de la cathédrale de Florence. Le polyptyque est démembré et destiné aux Offices en 1808, après les spoliations napoléoniennes, arrivant déjà sans encadrement et divisé en 33 pièces. En 1817, une partie de la prédelle (Mariage de la Vierge) est vendue et se trouve aujourd'hui dans la Royal Collection du palais de Buckingham à Londres. D'après la reconstitution étudiée par Richard Offner, il manque au moins huit compartiments, dispersés avant 1808 : quatre pinacles aux Prophètes, deux tondi aux Anges et surtout la cimaise centrale, probablement en forme de pinacle représentant, selon l'iconographie générale dédiée à la Vierge, la Dormition dans la partie inférieure et l'Assomption ou le Couronnement de la Vierge dans la partie supérieure.\n\nL'œuvre a été restaurée en 1994Le retable central montre une Vierge en majesté avec l'Enfant entourée d'une série de petits anges agenouillés ; à ses pieds se trouve une rare nature morte représentée par un vase de fleurs aux significations mariales. Trois panneaux avec des saints en pied se trouvent de chaque côté pour un total de six, tous liés à Florence. À partir de la gauche :\nSaint Zénobe  Saint Pancras  Saint Jean l'évangéliste  Saint Jean Baptiste  Saint Miniato  Sainte Reparata\nAu-dessus se trouve une série de dix tablettes polylobées avec des Saints en demi-bustes (à l'origine il devait y en avoir douze), quatre tondi avec des Anges (sur six) et quatre tablettes de Prophètes similaires à la rangée inférieure (sur un total de six).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Bernardo_daddi%2C_polittico_di_san_pancrazio_00.jpg",
+    "legende": "Reconstitution virtuelle de l'œuvre complète"
+  },
+  {
+    "id": 550,
+    "titre": "Mansa Maghan empereur du Mali",
+    "date": 1337,
+    "zones": [
+      "Monde"
+    ],
+    "type": 4,
+    "description": "A  la mort de Mansa Moussa, Mansa Maghan devient empereur du Mali (fin en 1341)[8]. L’empire du Mali s’étend de l’Atlantique à la rive orientale de la boucle du Niger et de la forêt à Teghaza au milieu du désert.",
+    "image": ""
   },
   {
     "id": 353,
@@ -6039,10 +6151,11 @@
     "zones": [
       "Italie"
     ],
-    "type": 2,
+    "type": 1,
     "description": ",3e fils de Mathieu Ier Visconti, se destine d’abord à une carrière ecclésiastique. Élu archevêque de Milan en 1317, il se heurte à l’opposition du pape Jean XXII, qui refuse sa nomination.\nAprès la condamnation de sa famille pour hérésie, il s’appuie sur l’empereur Louis IV de Bavière et l’antipape Nicolas V, qui le nomme cardinal. Il devient ensuite évêque et seigneur de Novare, avant de s’imposer finalement comme archevêque de Milan en 1339, après la mort de son rival.\n\nÀ la disparition d’Azzon Visconti la même année, Jean et son frère Lucien héritent du pouvoir à Milan. En 1341, le pape Clément VI confirme leur autorité, puis lève les accusations d’hérésie en 1342, légitimant définitivement Jean.\n\nAprès la mort de Lucien en 1349, Jean gouverne en associant ses neveux. Il étend son influence en devenant doge de Gênes en 1353 et seigneur de plusieurs villes, dont Bologne et Novare.\nÀ sa mort en 1354, ses neveux se partagent le pouvoir, assurant la continuité de la domination des Visconti sur Milan.",
     "image": "Tombeau d'Otton Visconti et de Jean Visconti dans la cathédrale de Milan",
-    "legende": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg/960px-IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg"
+    "legende": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg/960px-IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg",
+    "regne": true
   },
   {
     "id": 134,
