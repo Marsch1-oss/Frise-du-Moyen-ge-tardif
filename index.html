@@ -215,6 +215,20 @@
     .chip-full.chip-type1 { font-weight: 700; font-size: 0.88rem; box-shadow: 0 2px 10px rgba(0,0,0,0.30); letter-spacing: 0.01em; }
     .chip-medium.chip-type1 { font-weight: 700; font-size: 0.8rem; }
 
+    /* ── Événements partagés (multi-zones) ── */
+    .chip-shared { position: relative; }
+    .chip-shared::after {
+      content: '\2295';  /* ⊕ */
+      position: absolute;
+      top: 1px; right: 3px;
+      font-size: 0.6rem;
+      opacity: 0.75;
+      line-height: 1;
+      pointer-events: none;
+    }
+    /* Renforce la bordure pour les chips-shared plats (dot) */
+    .chip-shared.chip-dot { border: 2px solid rgba(255,255,255,0.6) !important; }
+
     .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.78rem; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 10px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; }
     .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }
     .chip-period.chip-type3 { opacity: 0.65; }

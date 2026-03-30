@@ -228,6 +228,25 @@ function renderLevel(level, rangeStart) {
   if (rulersSection) container.appendChild(rulersSection);
 
   /* ── Zones événements ── */
+  /* Pré-calcul : zone d'affichage principale pour les événements multi-zones
+     = première zone active dans l'ordre de ZONES */
+  var sharedZoneOf = {};  /* id → zone principale */
+  for (var j = 0; j < allEvents.length; j++) {
+    var e = allEvents[j];
+    if (e.zones.length <= 1) continue;
+    if (!visibleAtLevel(e, level)) continue;
+    if (e.regne) continue;
+    /* Première zone active parmi les zones de l'événement */
+    for (var zi = 0; zi < ZONES.length; zi++) {
+      if (e.zones.indexOf(ZONES[zi]) !== -1 && activeZones[ZONES[zi]]) {
+        sharedZoneOf[e.id] = ZONES[zi];
+        break;
+      }
+    }
+  }
+
+  var displayedIds = {};  /* évite les doublons */
+
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
     if (!activeZones[zone]) continue;
@@ -236,7 +255,13 @@ function renderLevel(level, rangeStart) {
       var e = allEvents[j];
       if (e.zones.indexOf(zone) === -1) continue;
       if (!visibleAtLevel(e, level)) continue;
-      if (e.regne) continue;  /* règnes déjà affichés dans rulersSection */
+      if (e.regne) continue;
+      /* Événement multi-zones : n'afficher que dans la zone principale */
+      if (e.zones.length > 1) {
+        if (sharedZoneOf[e.id] !== zone) continue;  /* pas la zone principale */
+      }
+      if (displayedIds[e.id]) continue;  /* sécurité anti-doublon */
+      displayedIds[e.id] = true;
       var eDateF = e.date + (e.mois ? (e.mois - 1) / 12 : 0);
       var fin = (e.date_fin && e.date_fin > e.date)
         ? e.date_fin + (e.mois_fin ? (e.mois_fin - 1) / 12 : 0)
@@ -576,11 +601,16 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
 
 /* ── Chip ────────────────────────────────────────────────────────────*/
 function buildChip(evt, zone, start, end, level, rowIndex) {
+  var isShared = evt.zones && evt.zones.length > 1;
   var col      = COLORS[zone] || COLORS['France'];
+  /* Pour les événements partagés, calcule une couleur secondaire */
+  var col2     = isShared && evt.zones.length >= 2
+    ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col)
+    : col;
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
-  chip.className      = 'evt-chip';
+  chip.className      = isShared ? 'evt-chip chip-shared' : 'evt-chip';
   chip.dataset.evtId  = evt.id;
   chip.style.position = 'absolute';
   chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
@@ -594,15 +624,24 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
     chip.style.height      = ROW_H + 'px';
-    chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
-    chip.style.borderColor = col.bg;
+    if (isShared) {
+      /* Dégradé diagonal avec les deux couleurs de zones */
+      chip.style.background  = 'repeating-linear-gradient(60deg,'
+        + col.bg + 'CC 0px,' + col.bg + 'CC 8px,'
+        + col2.bg + 'CC 8px,' + col2.bg + 'CC 16px)';
+      chip.style.borderColor = col.bg;
+    } else {
+      chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
+      chip.style.borderColor = col.bg;
+    }
     chip.style.color       = '#fff';
     if (level > 1) {
       var mx = level === 3 ? 40 : 22;
       var titreP = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
       chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
     }
-    chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
+    var zonesLabel = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
+    chip.title = evt.titre + zonesLabel + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
 
   } else {
     chip.style.height    = ROW_H + 'px';
@@ -614,7 +653,11 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.classList.add('chip-full');
       if (type === 1) chip.classList.add('chip-type1');
       if (type === 3) chip.classList.add('chip-type3');
-      chip.style.background = col.bg;
+      chip.style.background = isShared
+        ? 'repeating-linear-gradient(60deg,'
+          + col.bg + ' 0px,' + col.bg + ' 7px,'
+          + col2.bg + ' 7px,' + col2.bg + ' 14px)'
+        : col.bg;
       chip.style.color      = '#fff';
       var maxC = level === 4 ? 38 : 26;
       var titreF = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
@@ -623,21 +666,28 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
       if (type === 3) chip.classList.add('chip-type3');
-      chip.style.background  = col.light;
+      chip.style.background  = isShared
+        ? 'repeating-linear-gradient(60deg,'
+          + col.light + ' 0px,' + col.light + ' 7px,'
+          + col2.light + ' 7px,' + col2.light + ' 14px)'
+        : col.light;
       chip.style.color       = col.text;
-      chip.style.borderColor = col.bg;
+      chip.style.borderColor = isShared ? col.bg : col.bg;
       var titreM = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
       chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreM;
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
-      chip.style.background   = col.bg;
+      chip.style.background   = isShared
+        ? 'linear-gradient(135deg, ' + col.bg + ' 50%, ' + col2.bg + ' 50%)'
+        : col.bg;
       chip.style.width        = sz + 'px';
       chip.style.height       = sz + 'px';
       chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - sz / 2) + 'px';
       chip.style.borderRadius = '50%';
     }
-    chip.title = evt.titre + ' (' + evt.date + ')';
+    var zonesLbl = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
+    chip.title = evt.titre + zonesLbl + ' (' + evt.date + ')';
   }
 
   chip.addEventListener('click', (function(e, z) {
