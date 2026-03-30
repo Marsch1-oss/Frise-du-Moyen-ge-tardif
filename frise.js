@@ -873,7 +873,8 @@ function updateDetailBar() {
   var bar  = document.getElementById('detail-bar');
   var hint = document.getElementById('detail-hint');
   if (!bar) return;
-  bar.style.display = (currentLevel >= 3) ? 'flex' : 'none';
+  /* Barre visible uniquement en vue décennale (level 3) — pas en annuelle */
+  bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
   if (hint) {
     hint.textContent = detailLevel === 1
       ? '— niveaux 1 & 2'
@@ -1192,9 +1193,12 @@ function applySearch() {
 
 /* ── Cartouche de période ────────────────────────────────────────────*/
 function updatePeriodBanner(level, rangeStart) {
-  var lbl = document.getElementById('pb-label');
-  var sub = document.getElementById('pb-sub');
+  var lbl     = document.getElementById('pb-label');
+  var sub     = document.getElementById('pb-sub');
+  var banner  = document.getElementById('period-banner');
   if (!lbl || !sub) return;
+  /* Classe spéciale pour la vue décennale */
+  if (banner) banner.classList.toggle('pb-decade', level === 3);
 
   var ROMAN = {
     1000:'XIe', 1100:'XIIe', 1200:'XIIIe',
@@ -1212,8 +1216,9 @@ function updatePeriodBanner(level, rangeStart) {
   } else if (level === 3) {
     var cent2 = Math.floor(rangeStart / 100) * 100;
     var rom2  = ROMAN[cent2] || (cent2 + 1) + 'e';
-    lbl.textContent = rom2 + ' siècle — décennie ' + rangeStart;
-    sub.textContent = rangeStart + ' — ' + (rangeStart + 10);
+    /* Dates en grand, siècle en petit */
+    lbl.textContent = rangeStart + ' – ' + (rangeStart + 10);
+    sub.textContent = rom2 + ' siècle — décennie ' + rangeStart;
   } else if (level === 4) {
     var cent3 = Math.floor(rangeStart / 100) * 100;
     var rom3  = ROMAN[cent3] || (cent3 + 1) + 'e';
