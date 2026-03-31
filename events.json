@@ -67,13 +67,13 @@
     "date": 1282,
     "date_fin": 1321,
     "zones": [
-      "Europe C. & Or.",
-      "Byzance"
+      "Europe C. & Or."
     ],
-    "type": 3,
+    "type": 1,
     "description": ", souverain de la dynastie des Nemanjić, règne sur la Serbie de 1282 à 1321. Il accède au trône après la déposition de son frère Stefan Dragutin, avec l’accord de lui succéder provisoirement, mais cherche rapidement à imposer sa propre lignée, provoquant des tensions familiales et politiques.\n\nSon règne est marqué par une importante expansion territoriale. Il conquiert une grande partie de la Macédoine byzantine, s’étend vers l’Albanie et profite des divisions en Bulgarie pour renforcer son influence. Parallèlement, il doit faire face à des conflits avec la Hongrie et à des luttes internes, notamment autour de la succession, allant jusqu’à faire arrêter et aveugler son fils Stefan Dečanski.\n\nMilutin consolide son pouvoir par une diplomatie active, notamment avec l’Empire byzantin dirigé par Andronic II Paléologue, scellée par un mariage dynastique. Il intervient aussi militairement en soutien à Byzance contre les Turcs.\n\nSon règne correspond à un essor économique important, fondé sur l’exploitation des mines d’or et d’argent et sur le développement du commerce. Il renforce également l’administration et le système juridique en s’inspirant du modèle byzantin.\n\nGrand bâtisseur, il fait ériger de nombreux monastères et soutient les institutions religieuses et médicales. Sous son autorité, la Serbie s’affirme comme un État puissant et profondément ancré dans le christianisme orthodoxe, fortement influencé par la culture byzantine.\nÀ sa mort en 1321, il laisse une Serbie agrandie, structurée et durablement marquée par son œuvre politique, religieuse et culturelle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Le_roi_Milutin_de_serbie.jpg",
-    "legende": "La fresque du roi Stefan Milutin, église du roi à Studenica, Serbie"
+    "legende": "La fresque du roi Stefan Milutin, église du roi à Studenica, Serbie",
+    "regne": true
   },
   {
     "id": 40,
@@ -1136,7 +1136,7 @@
       "Italie"
     ],
     "type": 3,
-    "description": "Gênes : Spinola nommé capitaine du peuple; les Guelfes sont bannis . Les Gibelins se divisent face à l'influence trop grande des Spinola, qui sortent vainqueurs des combats de rue. Opizzimo Spinola est nommé capitaine du peuple avec Barnado Doria, le seul de sa famille à être resté favorable aux Spinola[4]. Les Guelfes sont bannis jusqu'en 1307. \nEn janvier 1306, les citoyens de Gênes remplacèrent leur Podesta par deux Capitani del Popolo (« Capitaines du Peuple ») à la tête de la république, dans le cadre d'une lutte constitutionnelle qui dura de 1257 à 1339. Grâce à sa richesse, Spinola fut élu l'un des Capitaines.\nOpizzino Spinola était le fils de Corrado Spinola (mort en 1304), capitaine du peuple de 1295 à 1299 (aux côtés de Corrado Doria, puis de Lamba Doria ), et d'Argentina Fieschi d'Opizzo. Son grand-père, Oberto Spinola , fut capitaine du peuple de 1270 à 1291, également aux côtés d' Oberto Doria , puis avec le fils de ce dernier, Corrado, et gouverna la Commune de Gênes à l'apogée de sa puissance politique.\n\nEn 1306, Opizzino fut élu capitaine du peuple de Gênes aux côtés de Bernabò Doria. La même année, sa fille unique, Argentina, épousa Théodore Paléologue , fils de l' empereur byzantin Andronic II Paléologue , qui avait reçu le titre de marquis de Montferrat . Opizzino soutint Théodore dans sa lutte contre ses rivaux.\n\nEn 1308, Spinola se proclama capitaine perpétuel unique et emprisonna Bernabò Doria, qui parvint plus tard à s'évader. Par cette manœuvre, il tenta d'établir une suzeraineté personnelle sur Gênes. Cependant, l'année suivante, il fut défait par les factions rivales (les Doria, les Fieschi et les Grimaldi) lors de la bataille de Sestri Ponente. En conséquence, Opizzino fut banni de Gênes, mais il continua de chercher des moyens de reconquérir le pouvoir.\n\nAu cours des conflits qui suivirent, les forces génoises détruisirent Busalla, considérée comme un bastion des Spinola, mais Opizzino riposta en détruisant Montaldo et Voltaggio, forçant ainsi les Génois à négocier.\n\nFinalement, en 1311, il retourna à Gênes aux côtés de l'empereur Henri VII, venu en Italie pour son couronnement. En juillet 1313, il reçut l'investiture de plusieurs fiefs dans la région d'Oltregiogo, notamment Arquata, Serravalle, Stazzano, Pasturana, Castelletto d'Orba, San Cristoforo, Cremonte, le château et les terres de Valle Scrivia, ainsi que la grange de Bisio. Cette reconnaissance officielle conférait à tous ces fiefs un statut impérial, leur octroyant des privilèges et les mettant à l'abri de toute ingérence future des communes de Gênes et de Tortona. Cet État tampon entre Gênes et les États voisins – comprenant également d'autres territoires appartenant à la famille Spinola mais non directement concédés à Opizzino en 1313 – subsista malgré divers bouleversements politiques jusqu'en 1797, date à laquelle les fiefs restants furent annexés à la République ligure.\n\nAprès la mort d'Henri VII, Opizzino et la famille Spinola furent de nouveau chassés de Gênes. En 1315, ils furent assiégés et vaincus à Busalla, qui fut détruite pour la deuxième fois en quelques années. Cependant, l'année suivante, les Spinola lancèrent une nouvelle campagne dans la vallée de Polcevera contre Pontedecimo, qui fut rasée en représailles.\n\nOpizzino mourut de la fièvre à Serravalle Scrivia en 1317, comme le rapporte la *Chronique de Benvenuto da Sangiorgio*. Il ne laissa à sa fille Argentina que les droits sur ce fief, tandis que les autres terres qui lui avaient été concédées passèrent à ses proches.\nUne statue le représentant se dresse toujours sur la façade du palais Spinola dei Marmi, sur la Piazza delle Fontane Marose.\nLa ville connaît un essor urbain et une croissance économique sans précédent. Pour réduire les dissensions internes, on crée une autorité plus puissante et, en 1339, Simon Boccanegra est le premier Doge élu.",
+    "description": "Gênes : Spinola nommé capitaine du peuple; les Guelfes sont bannis . Les Gibelins se divisent face à l'influence trop grande des Spinola, qui sortent vainqueurs des combats de rue. Opizzimo Spinola est nommé capitaine du peuple avec Barnado Doria, le seul de sa famille à être resté favorable aux Spinola[4]. Les Guelfes sont bannis jusqu'en 1307. \nEn janvier 1306, les citoyens de Gênes remplacèrent leur Podesta par deux Capitani del Popolo (« Capitaines du Peuple ») à la tête de la république, dans le cadre d'une lutte constitutionnelle qui dura de 1257 à 1339. Grâce à sa richesse, Spinola fut élu l'un des Capitaines.\nOpizzino Spinola était le fils de Corrado Spinola (mort en 1304), capitaine du peuple de 1295 à 1299 (aux côtés de Corrado Doria, puis de Lamba Doria ), et d'Argentina Fieschi d'Opizzo. Son grand-père, Oberto Spinola , fut capitaine du peuple de 1270 à 1291, également aux côtés d' Oberto Doria , puis avec le fils de ce dernier, Corrado, et gouverna la Commune de Gênes à l'apogée de sa puissance politique.\nEn 1306, Opizzino fut élu capitaine du peuple de Gênes aux côtés de Bernabò Doria. La même année, sa fille unique, Argentina, épousa Théodore Paléologue , fils de l' empereur byzantin Andronic II Paléologue , qui avait reçu le titre de marquis de Montferrat . Opizzino soutint Théodore dans sa lutte contre ses rivaux.\nEn 1308, Spinola se proclama capitaine perpétuel unique et emprisonna Bernabò Doria, qui parvint plus tard à s'évader. Par cette manœuvre, il tenta d'établir une suzeraineté personnelle sur Gênes. Cependant, l'année suivante, il fut défait par les factions rivales (les Doria, les Fieschi et les Grimaldi) lors de la bataille de Sestri Ponente. En conséquence, Opizzino fut banni de Gênes, mais il continua de chercher des moyens de reconquérir le pouvoir.\nAu cours des conflits qui suivirent, les forces génoises détruisirent Busalla, considérée comme un bastion des Spinola, mais Opizzino riposta en détruisant Montaldo et Voltaggio, forçant ainsi les Génois à négocier.\nFinalement, en 1311, il retourna à Gênes aux côtés de l'empereur Henri VII, venu en Italie pour son couronnement. En juillet 1313, il reçut l'investiture de plusieurs fiefs dans la région d'Oltregiogo, notamment Arquata, Serravalle, Stazzano, Pasturana, Castelletto d'Orba, San Cristoforo, Cremonte, le château et les terres de Valle Scrivia, ainsi que la grange de Bisio. Cette reconnaissance officielle conférait à tous ces fiefs un statut impérial, leur octroyant des privilèges et les mettant à l'abri de toute ingérence future des communes de Gênes et de Tortona. Cet État tampon entre Gênes et les États voisins – comprenant également d'autres territoires appartenant à la famille Spinola mais non directement concédés à Opizzino en 1313 – subsista malgré divers bouleversements politiques jusqu'en 1797, date à laquelle les fiefs restants furent annexés à la République ligure.\n\nAprès la mort d'Henri VII, Opizzino et la famille Spinola furent de nouveau chassés de Gênes. En 1315, ils furent assiégés et vaincus à Busalla, qui fut détruite pour la deuxième fois en quelques années. Cependant, l'année suivante, les Spinola lancèrent une nouvelle campagne dans la vallée de Polcevera contre Pontedecimo, qui fut rasée en représailles.\n\nOpizzino mourut de la fièvre à Serravalle Scrivia en 1317, comme le rapporte la *Chronique de Benvenuto da Sangiorgio*. Il ne laissa à sa fille Argentina que les droits sur ce fief, tandis que les autres terres qui lui avaient été concédées passèrent à ses proches.\nUne statue le représentant se dresse toujours sur la façade du palais Spinola dei Marmi, sur la Piazza delle Fontane Marose.\nLa ville connaît un essor urbain et une croissance économique sans précédent. Pour réduire les dissensions internes, on crée une autorité plus puissante et, en 1339, Simon Boccanegra est le premier Doge élu.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Coat_of_arms_of_the_house_of_Spinola.svg/langfr-960px-Coat_of_arms_of_the_house_of_Spinola.svg.png",
     "sources": "https://en.wikipedia.org/wiki/Opicino_Spinola"
   },
@@ -3255,6 +3255,21 @@
     "image": ""
   },
   {
+    "id": 589,
+    "titre": "Gegeen Khan",
+    "date": 1320,
+    "mois": 4,
+    "date_fin": 1323,
+    "mois_fin": 9,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
+    "description": "Accession au trône et contexte politique\n\nEn 1320, Shidibala devient empereur sous le nom de Gegeen Khan. Au début de son règne, le pouvoir reste largement contrôlé par l’impératrice douairière Targi et le puissant ministre Temüder, qui gouverne de manière autoritaire et violente.\n\nAffirmation du pouvoir impérial\n\nMalgré son jeune âge, Gegeen Khan se montre rapidement indépendant. Il cherche à réduire l’influence de Temüder en s’entourant de nouveaux conseillers, notamment Baiju, un jeune aristocrate compétent et respecté. Celui-ci gagne la confiance de l’empereur et affaiblit progressivement le pouvoir de Temüder.\n\nUn empereur influencé par le confucianisme et le bouddhisme\n\nGegeen Khan se distingue par sa culture et son éducation :\n\nil soutient les lettrés confucéens et s’appuie sur eux politiquement,\nil est également très attaché au bouddhisme, finançant la construction de temples,\nen revanche, son règne est marqué par une forte discrimination envers les musulmans.\nFin de l’influence de Temüder\n\nLa montée en puissance de Baiju et de l’empereur marginalise Temüder. Après une tentative ratée de retour au pouvoir, celui-ci meurt, suivi peu après par l’impératrice douairière. Gegeen Khan semble alors pleinement maître du pouvoir.\n\nUn règne brutal malgré des réformes\n\nMalgré ses qualités, Gegeen Khan n’hésite pas à faire exécuter ses opposants, y compris des censeurs critiques. Son règne mêle donc volonté de réforme et autoritarisme.\n\nLe coup d’État et la mort de Gegeen Khan\nEn 1323, un complot mené par les partisans de Temüder aboutit au « coup d’État de Nanpo ». Gegeen Khan et son conseiller Baiju sont assassinés. Le pouvoir est ensuite repris par Yesün Temür, qui élimine les conspirateurs pour éviter d’être manipulé.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Gegeen_Khan.png",
+    "regne": true
+  },
+  {
     "id": 328,
     "titre": "La « peur des lépreux »",
     "date": 1321,
@@ -3427,13 +3442,13 @@
     "mois": 1,
     "date_fin": 1331,
     "zones": [
-      "Europe C. & Or.",
-      "Byzance"
+      "Europe C. & Or."
     ],
-    "type": 2,
+    "type": 1,
     "description": "Stefan Uroš III Dečanski Nemanjic, en  français : Étienne Decanski, roi de Serbie de 1321 à 1331, souverain serbe de la dynastie des Nemanjić, fils du roi Milutin, et saint de l’Église orthodoxe.Stefan (Étienne) est le fils du roi Stefan Milutin et Anne Terter. Il a postérieurement reçu le surnom de Dečanski, en raison de sa fondation du monastère de Visoki Dečani (les hauts Decani) en 1327. \nPeut-être dès 1299, et avec certitude à partir de 1309, il reçoit le gouvernement de la Zeta[2].\n\nIl se révolte cependant contre son père en 1314, avec l'aide d'une partie de la noblesse serbe. Il est cependant défait et capturé[2].\n\nMilutin fait enchainer son fils et l'emmene à Skopje. Là-bas, selon le rite hérité de Byzance, il lui fait crever les yeux. En effet, un aveugle n'a pas le droit au trône. Stefan est alors exilé à Constantinople avec sa femme et ses fils, à la cour d'Andronic II. L'un des enfants de Stefan est le futur empereur Dusan.\nLe futur roi est enfermé au monastère du Pantocrator de Constantinople où sa douceur et sa patience lui attirent la bonté des moines, en dépit des terribles épreuves subies. C'est dans ce monastère que saint Nicolas lui apparaîtra un jour et lui rendra la vue. À la mort de son père Milutin en 1321, Stefan revient en Serbie. Vladislav le fils de Dragutin a récupéré les terres de son père. Son demi-frère Stefan Konstantin est déjà en Serbie prêt à se battre pour récupérer le trône de Serbie. Mais très vite, Stefan réussit à s'allier avec l'Église serbe et plus important encore, la noblesse. Sa vue normale étant revenue, Stefan devient roi de toutes les terres serbes et du littoral, le 6 janvier 1322, sous le nom de Stefan (Étienne) Uros III.\n\nIl est donc roi des Serbes, mais il n'a pas encore autorité sur toutes les terres serbes. En effet, son cousin Vladislav est encore à la tête du royaume de son père. En 1323, Stefan saisit l'occasion de déclarer la guerre à son cousin lorsque celui-ci ne respecte pas l'accord passé entre les deux rois au sujet de la mine d'argent de Rudnik. Jusqu'en 1326, la guerre se poursuit entre les deux cousins jusqu'à la victoire de Stefan. Vladislav s'enfuit en Hongrie. La république de Dubrovnik, elle, choisit de soutenir Vladislav. Stefan fait intervenir les chevaliers serbes contre la cité marchande. Très vite, ne pouvant résister aux chevaliers serbes sur les champs de bataille, les soldats dalmates se retranchent derrière les murs de la ville. Les Serbes, eux, ne peuvent prendre d'assaut les murs de la ville. La situation reste bloquée jusqu'au 26 mars 1326 où la paix est signée. En 1327, Stefan se met au service de l'empereur byzantin Andronic II, alors en conflit avec son petit-fils Andronic III. Andronic III a le soutien de l'empereur Bulgare Michel Sismanivic. En 1330, Andronic III et Sismanivic décident d'attaquer la Serbie. Stefan Decanski rassemble une armée composée de soldats serbes d'expérience qui ont déjà combattu à plusieurs reprises contre son cousin, avec en plus des mercenaires catalans, saxons et surtout une troupe d'élite de cavalerie serbe préparée et dirigée par Dusan. La bataille de Velbazhd, près de Kyoustendil, le 28 juillet 1330, est un tournant dans l'histoire de l'Europe du Sud-Est, les Bulgares et l'armée d'Andronic III sont sévèrement battus. Michel Sismanivic trouve la mort pendant la bataille. Cette bataille victorieuse marque le début de la domination serbe en Europe du Sud-Est, jusqu'à la bataille de Kosovo Polje de 1389.\n\nPour faire définitivement disparaître la « menace » bulgare, Stefan installe sur le trône de Bulgarie le fils de sa sœur Anne, Ivan Stefan. Puis, il rassemble son armée pour occuper les villes byzantines de Vélès, Chtip, Prosek et Dobrun.\n\nStefan Decanski se consacre ensuite à la construction de son monastère, le monastère Decanski. Sa construction a débuté en 1327, mais Stefan ne verra jamais son monastère terminé. Son fils Dusan qu'il a eu avec sa première femme Théodora et qui a vécu avec lui son exil à Constantinople, organise le désordre en Serbie et profite d'une trêve avec son père pour lui prendre la couronne. Il enferme son père à Zvečan où celui-ci meurt en prison, sûrement empoisonné. Stefan qui a organisé la rébellion contre son père Milutin subit la même loi de la part de sa progéniture.\nMalgré un règne court, Stefan donne à la Serbie une puissance militaire et le monastère de Decanski, achevé quatre ans après sa mort, en 1335. Il a aussi un second fils, Siméon (en serbe : Siniša), avec la princesse María Paléologue, qui comme Dusan est empereur. Stefan est canonisé par l’Église en raison de sa vie sainte, et ses reliques sont encore aujourd'hui incorrompues.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Coins_of_Stefan_Uro%C5%A1_III.jpg",
     "legende": "Monnaie de Stefan Uroš III",
+    "regne": true,
     "sources": "https://fr.wikipedia.org/wiki/Stefan_Uro%C5%A1_III_De%C4%8Danski"
   },
   {
@@ -4872,7 +4887,7 @@
   },
   {
     "id": 463,
-    "titre": "Jan van Ruysbroeck L’Ornement des noces spirituelles",
+    "titre": "Jean de Ruysbroeck Le Royaume des amants de Dieu",
     "date": 1330,
     "mois": 5,
     "zones": [
@@ -5064,6 +5079,18 @@
     "image": ""
   },
   {
+    "id": 595,
+    "titre": "Jean 1er de Luxembourg seigneur de Lucques",
+    "date": 1331,
+    "date_fin": 1334,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "En 1320 Castruccio Castracani devient seigneur à vie de Lucques qui devient gibeline. Ce tyran fait de Lucques l'État le plus puissant de l'Italie centrale, rivale de Florence, jusqu'à sa mort en 1328. Machiavel a écrit sa biographie (La vie de Castruccio Castracani da Lucca). Son fils fut incapable de se maintenir au pouvoir. Les mercenaires allemands de l’empereur Louis IV du Saint-Empire, restés sans salaire s’emparèrent de Lucques et la vendirent au plus offrant: le génois Gherardo Spinola, pour 60 000 florins. Elle fut revendue par la suite à Jean Ier de Bohême. Les Lucquois, au sein desquels des représentants des familles nobles Buonvisi, Trenta, Dati, Balbani, Busdraghi, Minutoli, Burlamacchi, Bernardini, lui prêtent serment en 1331.",
+    "image": ""
+  },
+  {
     "id": 386,
     "titre": "2e voyage d'Ibn Battuta",
     "date": 1332,
@@ -5249,6 +5276,18 @@
     ],
     "type": 4,
     "description": "La Scanie (en suédois et danois Skåne) est une province historique en Suède, située à l'extrémité sud du pays.",
+    "image": ""
+  },
+  {
+    "id": 601,
+    "titre": "Edouard Balliol roi d'Ecosse",
+    "date": 1332,
+    "date_fin": 1336,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Édouard Balliol, fils de Jean de Balliol, et le parti des « Disinherited »[5], soutenu par Édouard III, profite de la mort du régent Thomas Randolph et débarque à Kinghorn dans le Fife le 6 août 1332. Le 11 août suivant, ils remportent la bataille de Dupplin Moor sur le parti de Bruce. Édouard Balliol est couronné roi à Scone le 24 septembre 1332[6].\nRepoussé par les Écossais pendant l'hiver 1332-1333 après le combat d'Annan, il doit solliciter l'aide d'Édouard III qui intervient alors personnellement à la tête de 13 000 hommes à partir de Carlisle et défait les Écossais du parti de Bruce à la bataille de Halidon Hill en juillet 1333. L'un des régents, Archibald Douglas y trouve la mort[7].\nDavid II et son épouse réfugiés dans le château de Dumbarton sont envoyés en France avec une petite suite pour leur sécurité. Ils arrivent à Boulogne-sur-Mer en mai 1334, où ils sont reçus très amicalement par le roi de France, Philippe VI. On sait que Château-Gaillard lui est donné en résidence[8]. En 1335-1336, alors qu'il avait onze ans, il a presque certainement été impliqué dans les négociations avortées entre Philippe VI et Édouard III, qui ont tenté de concilier les revendications respectives de David II et d'Édouard Balliol au trône d'Écosse et en 1339, pendant le siège de Perth par Robert Stuart, il est prouvé que Sir William Douglas lui a rendu visite l'année précédente à Château-Gaillard et obtenu le service de quelques chevaliers français et de marins qui ont contribué au siège[9]. Ces opérations ont été financées par David II ou Philippe VI. Le chroniqueur Jean Froissart indique que David II participe avec le roi de France à une rencontre entre les armées françaises et anglaises en octobre 1339 à Buironfosse, en Picardie, et au siège de Tournai en 1340[1].\nDe son côté, Édouard Balliol, qui s'est empressé de reconnaître la suzeraineté du roi d'Angleterre, est menacé par des actions de guérilla menées par Andrew Murray de Bothwell et ne peut se maintenir qu'avec l'aide des Anglais. Les Gardiens de l’Écosse — Andrew Murray de Bothwell, John Randolph, 3e comte de Moray, et Robert Stuart, 7e stewart — réussissent à reprendre progressivement le contrôle du pays, et il doit se résoudre à quitter l'Écosse définitivement en 1340[10",
     "image": ""
   },
   {
@@ -5452,6 +5491,18 @@
     "image": ""
   },
   {
+    "id": 596,
+    "titre": "La ville de Lucuqes vendue à Philippe de Valois",
+    "date": 1334,
+    "zones": [
+      "France",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Jean de Luxembourg, ne disposant pas de moyens militaires pour défendre Lucques, en céda théoriquement la seigneurie en 1334 pour 35 000 florins à Philippe VI de Valois et Charles VI en revendiquait également ces droits en 1398. De ce fait, les Lucquois se considéraient souvent comme sujets du roi de France. Les propriétaires se succédèrent et Lucques passa sous la domination de Pise en 1342.",
+    "image": ""
+  },
+  {
     "id": 522,
     "titre": "Polyptyque Orsini  Simone Martini à Avignon",
     "date": 1335,
@@ -5551,7 +5602,7 @@
       "Europe C. & Or.",
       "Pologne"
     ],
-    "type": 2,
+    "type": 3,
     "description": "Le premier congrès de Visegrád fut un sommet qui se tint en 1335 à Visegrád , au cours duquel les rois Jean Ier de Bohême , Charles Ier de Hongrie et de Croatie , et Casimir III de Pologne formèrent une alliance anti- Habsbourg . Les trois souverains convinrent de créer de nouvelles routes commerciales pour contourner le port stratégique de Vienne [ 1 ] [ 2 ] , qui obligeait les marchands à y proposer leurs marchandises avant de pouvoir les vendre ailleurs, et d'obtenir un accès plus facile aux autres marchés européens .\\n\\nLe sommet fut déclenché par l'expansion soudaine du pouvoir des Habsbourg dans la région, qui s'étaient emparés de la Carinthie et de la Carniole après la mort du duc Henri de Gorizia-Tyrol , qui avait revendiqué sans succès les couronnes de Bohême et de Pologne.\\n\\nElle reconnaissait également la souveraineté tchèque sur le duché de Silésie [ 3 ], que les rois tchèques contrôlaient de jure avec la couronne de Pologne. Jean Ier céda la couronne polonaise à Casimir III [ 4 ] en échange de 1 200 000 groschen de Prague . Le duché de Silésie fit ainsi partie de la couronne tchèque jusqu’en 1742, date à laquelle la majeure partie fut cédée à la Prusse et rattachée à la Pologne après la Seconde Guerre mondiale, en 1945. Une petite portion se trouve aujourd’hui en République tchèque .\\nLe congrès dura environ 21 jours. Les participants reçurent divers présents, notamment des échiquiers , des ceintures et des selles de grande valeur, ainsi que des huîtres. Environ 4 000 miches de pain furent distribuées aux représentants des États. Une seconde réunion eut lieu en 1339 et élut le nouveau roi de Pologne",
     "image": ""
   },
@@ -5798,6 +5849,7 @@
     "description": "Édouard III d'Angleterre revendique la couronne de France après l'extinction des Capétiens directs. Ce conflit dynastique, commercial et territorial durera jusqu'en 1453 et redéfinira les identités nationales françaises et anglaises.\n24 mai 1337 : le roi de France Philippe VI de Valois ordonne à Candide II d’Espagne, sénéchal de Périgord et de Quercy et au bailli d'Amiens de saisir le duché de Guyenne et le Ponthieu, fiefs du roi d'AngleterreSous le prétexte qu'il refuse de lui livrer Robert d'Artois, ennemi déclaré de la couronne de France, le roi Philippe VI de Valois confisque au roi d'Angleterre la Guyenne. ce n'est qu'au XIXe siècle que la formule « guerre de Cent Ans » s'impose dans l'historiographie. elle apparaît pour la première fois dans le Tableau chronologique de l'Histoire du Moyen Âge de Chrysanthe Desmichels[1], édité à Paris en 1823[2]. Le même auteur a en réalité déjà employé cette expression dans un manuel scolaire de 1820. Le 7 octobre 1337, à l'abbaye de Westminster, Édouard III lance publiquement un défi à son cousin Philippe VI de Valois. Il conteste sa légitimité et revendique la couronne de France pour lui-même. C'est le début de la guerre de Cent Ans. 7 octobre 1337 : Édouard III d'Angleterre réclame la couronne de France. Après la mort de Charles IV le Bel, la succession au trône de France fournit le prétexte de la guerre de Cent Ans.\n1er novembre 1337 : le chancelier Henry Burghersh, évêque de Lincoln, vient à Paris présenter au roi de France Philippe VI les lettres de défi du roi d’Angleterre.\n9 novembre 1337 : une flotte d'Édouard III écrase les alliés flamands de Philippe VI à la bataille de Cadzand.\n\nAu début du XIVe siècle, trois axes de tensions favorisent son émergence :\n\nla « grande dépression médiévale », théorisée par Guy Bois (crise démographique conjuguée à une stagnation économique du fait de l'alourdissement de la pression fiscale seigneuriale) ;\nles constants affrontements entre Plantagenêts et Capétiens pour la souveraineté et le contrôle des fiefs de Guyenne ; malgré les confiscations territoriales de Philippe Auguste, saint Louis et Philippe IV le Bel, les rois d'Angleterre ont conservé l'étroit duché de Guyenne et le petit comté de Ponthieu (région d’Abbeville)  : le roi d'Angleterre est ainsi le vassal du roi de France Depuis deux siècles, la souveraineté sur l'Ouest de la France, du duché d'Aquitaine au riche et puissant comté de Flandre, est à l'origine de conflits et d'intrigues entre Capétiens et Plantagenêts. Cette lutte, commencée au milieu du XIIe siècle avec un énorme avantage pour les Plantagenêts (qui possédaient alors l'Anjou, la Normandie, le Maine, le Poitou, l'Aquitaine et le Limousin), se termine par la confiscation de la majeure partie de leurs possessions au profit du roi de France[38]. Du grand empire Plantagenêt, il ne reste plus qu'une Aquitaine diminuée et réduite à la côte gasconne et à Bordeaux, nommée Guyenne[le conflit dynastique pour la couronne de France qui naît, en 1328, à la mort de Charles IV le Bel, dernier fils de Philippe IV le Bel.\n\nDu point de vue militaire, cette guerre marque une rupture, avec le déclin de la cavalerie au profit de l'infanterie et l'apparition de l'artillerie. Ce conflit voit également l'apparition durable de l'emploi de troupes mercenaires dans chacun des camps en présence. Elle a également des conséquences économiques, l'augmentation des prix favorisant le commerce sur de longues distances, et religieuses, avec le Grand Schisme d'Occident qui oppose les papes de Rome et d'Avignon. Elle aboutit à une affirmation du sentiment national, la rivalité franco-anglaise n'étant plus dorénavant seulement issue d'un conflit dynastique. De la même manière, la mutation de la Bourgogne en principauté indépendante engendre un conflit de deux siècles avec les Habsbourg.\nEnjeux pour l’Angleterre Le commerce rend l'Angleterre très dépendante de la Guyenne (car elle produit des vins supérieurs en qualité et en quantité à ceux d'Angleterre), des Flandres (dont les drapiers achètent la laine) et de la Bretagne (qui lui vend du sel indispensable à la conservation des aliments)[37].= ouest de la France enjeu stratégique pour les deux royaumes . La langue des élites est l'anglo-normand[40], pour l'essentiel de l'ancien normand, fortement influencé par le dialecte angevin à l'époque des Plantagenêts et de manière moindre par l'anglo-saxon, et cela, jusqu'en 1361 (décret d'Édouard III), bien que l'anglo-saxon continue d'être employé par le peuple[",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/France_1330.svg/langfr-960px-France_1330.svg.png",
     "legende": "La France en 1337",
+    "video": "https://www.youtube.com/watch?v=RZcU4tXT_CQ&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3",
     "sources": "Jean Froissart, Chroniques"
   },
   {
@@ -5885,7 +5937,7 @@
       "France",
       "Angleterre"
     ],
-    "type": 1,
+    "type": 3,
     "description": "La bataille de Cadzand est une bataille navale livrée le 9 novembre 1337, pendant la guerre de Cent Ans. Elle consiste en un raid sur l'île flamande de Cadzand, afin de conduire à une victoire anglaise rapide et ainsi encourager les alliés continentaux d'Édouard III d'Angleterre à le soutenir. Wauthier de Masny mène les troupes anglaises et écrase les Flamands mais échoue à s'emparer de l'île. Pour Édouard III, la guerre avec la France qui a commencé le 24 mai 1337 ne se déroule pas comme il le souhaite : ses alliés aux Pays-Bas et en Allemagne ne sont pas encore prêts à envahir la France et les échecs anglais en Gascogne l'empêchent de porter la guerre en Flandres. La flotte anglaise n'est pas encore prête à traverser la Manche avec toute l'armée et les finances royales sont en piteux état car Édouard III a dû payer ses troupes gasconnes. Édouard décide alors de procéder à une démonstration de force afin de renforcer le moral anglais. Il ordonne alors à Wauthier de Masny, chef de l'avant-garde anglaise stationnée en Hainaut, de rassembler une petite flotte et de s'emparer de l'île de Cadzand, située dans le comté de Flandres qui est alors allié avec Philippe VI de France. Cadzand est en 1337 une île de pêcheurs pauvre, qui ne présente aucun avantage au pillage si ce n'est qu'elle est assez proche du riche port de L'Écluse et peut servir de tête-de-pont pour s'en emparer. Masny est conscient de cette situation, et après un assaut infructueux sur la ville de L'Écluse le 9 novembre 1337, il emmène ses 3 700 marins et soldats à Cadzand et les incite à piller la zone, qui est fortement endommagée. Il conduit en quelque sorte une petite chevauchée, la première parmi celles qui constitueront la première phase de la guerre de Cent Ans au XIVe siècle.\n\nLa garnison de L'Écluse, conduite par Guy, fils bâtard du comte de Flandre, refuse de laisser Cadzand à la merci des Anglais et débarque sur l'île quelques jours plus tard afin de repousser Masny. Les Anglais se sont cependant préparés à un assaut flamand et organisent la défense de l'île. Les forces de Guy de Flandre sont écrasées par le redoutable longbow des Anglais. Seule une poignée de Flamands parvient à rentrer en hâte à L'Écluse. Guy de Flandre et d'autres nobles sont capturés tandis que les soldats communs sont passés au fil de l'épée. Les pertes anglaises au cours de cette bataille sont insignifiantes. Les conséquences directes de la bataille sont minimes, car Masny évacue Cadzand peu après sa victoire. Les alliés continentaux d'Édouard III sont considérablement impressionnés par la détermination des Anglais. Les Flamands sont fortement intimidés par la bataille d'autant que Philippe VI de France, mécontent, soupçonne les habitants de Cadzand d'avoir livré la ville aux Anglais et fait procéder à de cruelles exécutions. Cette violence de la part du roi de France provoque l'indignation des Flamands, qui se révoltent en 1338 sous l'égide de Jacob van Artevelde. Dix ans après la bataille, lorsque l'Angleterre et la Flandre sont alliées face à la France, Édouard III accepte de s'excuser pour les dommages causés à l'île de Cadzand et de procéder à des réparations. La ville de L'Écluse est plus tard la scène d'un combat naval bien plus important en 1340 où la France et l'Angleterre s'affrontent.",
     "image": ""
   },
@@ -6079,7 +6131,7 @@
       "Angleterre",
       "St Empire"
     ],
-    "type": 1,
+    "type": 3,
     "description": "22 juillet : Édouard III d'Angleterre débarque avec ses troupes à Anvers\n31 août : Édouard III d'Angleterre rencontre Louis IV de Bavière à Coblence qui le nomme vicaire d'Empire le 3 septembre.",
     "image": ""
   },
@@ -6109,7 +6161,8 @@
     ],
     "type": 2,
     "description": "La campagne de Thiérache , également connue sous le nom de chevauchée d'Édouard III de 1339, désigne la marche menée par une armée anglaise, appuyée par des alliés flamands , haïaultais et du Saint-Empire romain germanique , de Valenciennes (Hainault) à Thiérache , en passant par Cambrésis ( Picardie ). 1er septembre : Édouard III rassemble ses forces à Malines puis met le siège devant Cambrai[. Elle débuta le 20 septembre 1339, aboutissant au siège de Cambrai , et s'acheva le 24 octobre 1339 par le retrait des forces anglaises dans le Brabant . L'armée anglaise était commandée par le roi Édouard III , et l'armée française par le roi Philippe VI . Cette campagne s'inscrivait dans le cadre de la guerre de Cent Ans .\nseptembre - octobre 1339 : Édouard III ravage la Thiérache, le Laonnois et le Cambrésis. constatant les progrès français en Aquitaine et étant sous la menace d'un débarquement français en Angleterre, Édouard III décide de porter la guerre en Flandre L'Aquitaine est réputée indéfendable depuis sa saisie par Philippe VI de Valois en 1324. Édouard décide donc de porter le combat en Flandres où les villes flamandes ont besoin de la laine anglaise pour faire tourner leur économie, mais aussi de l'empereur et des princes de la région qui voient d'un mauvais œil les avancées françaises en terres d'Empire. Il laisse les mains libres au roi de France en Aquitaine, les places fortes de Penne, Castelgaillard, Puyguilhem, Blaye et Bourg sont prises l'armée met le siège devant Bordeaux en juillet. Mais la ville résiste Paradoxalement, à cette période, il est plus facile aux assiégés de tenir sur leurs réserves que les armées assiégeantes, souvent très nombreuses et qui se retrouvent rapidement affamées. À Bordeaux, le problème du ravitaillement de 12 000 hommes se révèle insoluble, les ressources locales sont épuisées.\nFin septembre 1339 Ayant reçu des renforts d'Angleterre et ayant réussi à garantir ses dettes vis-à-vis de ses alliés, Édouard bataille d'abord sur le Ponthieu, où il obtient quelques succès, puis fait le siège de Cambrai. (ville d'Empire mais dont l'évêque s'est rangé du côté de Philippe VI de Valois). 1er septembre : Édouard III rassemble ses forces à Malines puis met le siège devant Cambrai3 décembre : traité entre Édouard III et les insurgés flamands qui le reconnaissent comme roi de France le 6 février 1340\nCherchant à provoquer une bataille rangée avec les Français, il pille tout sur son passage, mais le roi de France ne bouge pas. Le 9 octobre, commençant à épuiser les ressources locales, le roi d'Angleterre doit se décider à livrer bataille. Il oblique donc vers le sud-ouest et traverse le Cambrésis en brûlant et tuant tout sur son passage : 55 villages du diocèse de Noyon sont rasés, Pendant ce temps, Philippe VI de Valois a fait réunir son ost et arrive jusqu'à Buironfosse. Les deux armées marchent alors l'une vers l'autre et se rencontrent une première fois près de Péronne. \nÉdouard a 12 000 hommes et Philippe 25 000. Le roi d'Angleterre trouvant le terrain défavorable se retire. Philippe VI lui propose de se rencontrer en terrain découvert pour que leurs armées puissent en découdre selon les règles de chevalerie. Édouard III l'attend donc près du village de La Capelle, où il a établi son camp en terrain favorable, retranché derrière pieux et fossés, ses archers positionnés sur les ailes. Le roi de France, estimant qu'une charge de cavalerie serait suicidaire, se retranche aussi, laissant l'honneur aux Anglais d'attaquer. Le 23 octobre 1339, faute que l'un des deux adversaires ne veuille prendre l'initiative et incapables de payer plus longtemps leurs troupes, les deux armées rentrent chez elles,\nLa chevalerie française, qui comptait se financer sur les rançons demandées aux éventuels prisonniers faits au cours des combats, gronde et accuse Philippe VI de « renardie ».\nEn 1340, après avoir tenu sa cour à Gand et pris le titre de « roi d'Angleterre et de France », Édouard III engage la seconde campagne sur mer et sur terre où il pratique la politique de la terre brûlée. Elle se solde, en juin 1340, par la défaite française lors de la bataille navale de l'Écluse. Ensuite la guerre se prolonge sans rien produire de décisif, jusqu'à la conclusion de la trêve d'Esplechin le 25 septembre 1340. La trêve expire le 24 juin 1342 lorsque Édouard III apprend que Philippe VI se dispose à confisquer le Ponthieu. Il y envoie de nouvelles troupes, mais il est trop tard, les Abbevillois, ruinés par les impôts levés par les Anglais et fatigués de leurs vexations, viennent de s'armer et de chasser leurs oppresseurs. En septembre 1345, Philippe VI se met en marche pour soutenir les révoltés et reconquiert toute la province à la fin de l’année.Édouard III marche avec eux sur Cambrai",
-    "image": ""
+    "image": "",
+    "video": "https://www.youtube.com/watch?v=-jJ_AiQ6lys&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3&index=2"
   },
   {
     "id": 565,
@@ -6198,6 +6251,166 @@
     "image": ""
   },
   {
+    "id": 572,
+    "titre": "Palais des Doges",
+    "date": 1340,
+    "zones": [
+      "Italie",
+      "Art"
+    ],
+    "type": 3,
+    "description": "Début de la construction du palais des doges à Venise sous la direction de l'architecte Pietro Baseggio . \nLa salle du Grand Conseil, qui comporte la plus ancienne façade, fut commencée dès 1340. C'est lors de sa reconstruction, de 1400 à 1410, que fut aménagée la grande fenêtre gothique centrale",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%28Venice%29_Doge%27s_Palace_facing_the_sea.jpg/1920px-%28Venice%29_Doge%27s_Palace_facing_the_sea.jpg"
+  },
+  {
+    "id": 573,
+    "titre": "Bataille de L'Écluse",
+    "date": 1340,
+    "mois": 6,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "En 1340, après avoir tenu sa cour à Gand et pris le titre de « roi d'Angleterre et de France », Édouard III engage la seconde campagne sur mer et sur terre où il pratique la politique de la terre brûlée. Elle se solde, en juin 1340, par la défaite française lors de la bataille navale de l'Écluse.  Elle s'est déroulée dans la rade de L'Écluse (en néerlandais Sluis), dans l'actuelle province de Zélande aux Pays-Bas, à proximité de l'estuaire du Zwin, un bras de mer qui menait alors à Bruges. Les connaissances historiques sur cette bataille sont très lacunaires et très majoritairement de sources anglaises. Or les Anglais ont naturellement cherché à embellir leur victoire et à minimiser leurs pertes. Le commerce ayant repris avec l'Angleterre, les Français envoient leur flotte à L'Écluse, à l'embouchure du canal reliant Bruges à la mer du Nord, pour imposer un blocus naval. Le 24 juin 1340, lors de la bataille de L'Écluse, la flotte française, y compris de nombreux navires bretons[86], subit une défaite totale qui inverse le rapport de force maritime. Cette défaite met fin au projet d'envoyer des troupes françaises soutenir les Écossais, et permet à Édouard III d'Angleterre de relancer le commerce de la laine[8 Édouard III a rassemblé tous les gros navires d'Angleterre et des Cinq-Ports, ce qui représente 190 bâtiments montés par 35 000 hommes d'armes et marins, dont 12 000 archers armés du fameux arc long. Les Flamands se joignent avec 50 autres navires de toutes tailles, montés par 8 000 hommes[2].\nLa flotte française est quant à elle un mélange hétéroclite de navires de commerce et de pêche80 de ces navires sont connus par un compte du Clos aux galées, le chantier naval de Rouen, qui permet de savoir qu'il y avait 50 nefs, 14 barges, 3 galées et une cogue. La flotte comptait au total 212 bâtiments, dont une quarantaine de galères méditerranéennesLes nefs sont des navires de haute mer, originaires de la Manche ou de la Baltique, dont les dimensions exactes ne sont pas connues. Elles ont entre un et trois mâts avec un gaillard d'avant et d'arrière. Le grand mât est gréé avec une voile carrée, à laquelle on ajoute parfois une bonnette. Elles naviguent uniquement à la voile et ne sont pas capables de remonter dans le ventLes galées (ou galères) sont plus longues, plus étroites et plus basses sur l'eau. Elles peuvent compter jusqu'à 28 bancs de trois rameurs sur chaque bord, ce qui leur permet de remonter facilement dans le vent. Cette grande agilité en fait le navire de guerre par excellence jusqu'au XVIIe siècle. Elles sont toutefois fragiles et peu faites pour les mers du nord, la cogue est un navire « rond » méditerranéenAlors que la flotte anglaise est directement commandée par le roi Édouard III, la flotte française est dirigée par deux amiraux improvisés : Hugues Quiéret, ancien sénéchal de Beaucaire, et Nicolas Béhuchet, ancien percepteur d'impôts. Ils sont assistés en sous-ordre par le vice-amiral Nicolas Hélie et le capitaine Matthieu Quiefdeville de Dieppe. Quant aux galères génoises, elles sont commandées par le capitaine Gilles Boccanegra, dit Barbanera (« Barbe Noire »)\n23 juin, le roi d'Angleterre décide de prendre l'initiative[1], espérant prendre sa revanche, là où deux ans plus tôt, sur cette même côte, ses navires avaient subi une défaite lors de la bataille d'Arnemuiden. l'armada anglaise attaque la flotte française ancrée dans une sorte de cul-de-sac. Du côté français, les arbalétriers ont l'initiative mais rapidement ils sont dominés par la vitesse de tir des archers gallois. Après l'abordage, les combats furieux se font sur les ponts. Quiéret et Béhuchet parviennent à investir le bateau d'Édouard, La Thomas, et à blesser ce dernier à la cuisse. Mais les chefs français sont faits prisonniers. Immédiatement Quiéret est décapité et Béhuchet pendu. Dans l'après-midi, grâce au vent qui a changé de direction, la flotte flamande peut quitter la rive et vient se mêler au combat. La panique s’empare des Français : n’ayant pas d’autre échappatoire que de sauter à l’eau, ils périssent noyés par milliers. Seule la moitié des Génois, dont Boccanegra, parvient à s'échapper. Ensuite la guerre se prolonge sans rien produire de décisif, jusqu'à la conclusion de la trêve d'Esplechin le 25 septembre 1340.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Bataille_de_l%27%C3%89cluse_%281340%29_-_Fran%C3%A7ais_2813.jpg/960px-Bataille_de_l%27%C3%89cluse_%281340%29_-_Fran%C3%A7ais_2813.jpg",
+    "legende": "La bataille de l'Écluse d'après une miniature extraite des Grandes Chroniques de France (1375-1380). BnF Ms 2813.",
+    "video": "https://www.youtube.com/watch?v=GnMnnmzsXeg"
+  },
+  {
+    "id": 574,
+    "titre": "Édouard III prend le titre de roi de France à Gand.",
+    "date": 1340,
+    "mois": 1,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Sous le prétexte qu'il refuse de lui livrer Robert d'Artois, ennemi déclaré de la couronne de France, le roi Philippe VI de Valois confisque au roi d'Angleterre la Guyenne le 24 mai 1337. Si le roi d'Angleterre est l'égal du roi de France, il est aussi duc de Guyenne depuis le mariage d'Henri II Plantagenêt avec Aliénor d'Aquitaine. Il est donc, à ce titre, vassal du roi de France et lui doit obéissance et fidélité. Au lieu de chercher une solution pacifique au conflit, Édouard revendique la couronne de France en tant que seul descendant mâle encore vivant de son défunt grand-père maternel, Philippe IV le Bel[34].\n\nCependant, les Français invoquent la loi salique et dénigrent ses revendications en reconnaissant le neveu de Philippe IV, Philippe VI, de la Maison de Valois, comme véritable héritier. En réponse, Édouard se déclare, en janvier 1340 à Gand, lui-même roi d'Angleterre et de France. En incorporant ses propres armoiries anglaises, les trois léopard d'or sur champ de gueules, aux armoiries de la France, les trois lys, d'or sur champ d'azur, il présente un nouveau blason personnel, marquant sa revendication des deux royaumes[35], et date alors ses actes « de la quatorzième année de (son) règne en Angleterre et de la première en France »[36]. Pour faire valoir ses droits, il entre en conflit armé avec la France, marquant ainsi le début de la guerre de Cent Ans[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Artist%2C_maker_unknown%2C_English_-_Heraldic_panel_with_the_Coat_of_Arms_of_Edward_III%2C_King_of_England_%28reigned_1327%E2%80%9377%29_-_Google_Art_Project.jpg/960px-Artist%2C_maker_unknown%2C_English_-_Heraldic_panel_with_the_Coat_of_Arms_of_Edward_III%2C_King_of_England_%28reigned_1327%E2%80%9377%29_-_Google_Art_Project.jpg",
+    "legende": "Pour souligner sa revendication à la couronne française, Édouard III écartela les armoiries de France, les plaçant dans les premier et quatrième quartiers. Vitrail anglais, vers 1350 – 1377."
+  },
+  {
+    "id": 575,
+    "titre": "2e chevauchée d’Edouard III en Flandre",
+    "date": 1340,
+    "mois": 3,
+    "mois_fin": 9,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "En 1340, après avoir tenu sa cour à Gand et pris le titre de « roi d'Angleterre et de France », Édouard III engage la seconde campagne sur mer et sur terre où il pratique la politique de la terre brûlée. Elle se solde, en juin 1340, par la défaite française lors de la bataille navale de l'Écluse. \n22 juillet[12] : Édouard III d'Angleterre aidé de troupes flamandes met le siège devant Tournai (fin le 25 septembre).\n26 juillet : défaite de Robert III d'Artois à Saint-Omer",
+    "image": ""
+  },
+  {
+    "id": 576,
+    "titre": "Trêve d'Esplechin-sur-Escaut",
+    "date": 1340,
+    "mois": 9,
+    "date_fin": 1342,
+    "mois_fin": 6,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "La trêve d'Esplechin est signée le 25 septembre 1340 malgré la bataille de l'Écluse remportée par Édouard III d'Angleterre le 24 juin 1340 sur la flotte de Philippe VI de France.\n\nEn effet le roi d'Angleterre se trouve dans une situation très incommode. Le souverain anglais fait le siège devant Tournai bien défendu par le Godemar du Fay. De son côté, la deuxième armée anglo-flamande sous les ordres de Robert III d'Artois assiège Saint-Omer, mais se fait massacrer par les troupes du duc de Bourgogne et du comte d'Armagnac[1]. C'est alors que l'armée de Philippe VI arrive en vue de Tournai le 7 septembre.\n\nEn outre, les troupes anglaises connaissent de sérieux revers en Guyenne et les Écossais en l'absence d'Édouard III d'Angleterre se sont révoltés. Cette situation oblige le roi d'Angleterre à négocier avec la France. Le monarque anglais et Philippe VI de Valois se rencontrent à Esplechin où est signée une trêve de neuf mois. La trêve ne concerne pas seulement le Nord-Est de la France, mais l'ensemble des théâtres d'opération : la Guyenne, l'Écosse, la lutte sur mer.\n\nAlors que le roi d'Angleterre est financièrement exsangue et ne peut payer ses alliés, la conduite timorée de Philippe VI face à un ennemi moins nombreux lui vaudra une perte de prestige[1].\nLa trêve expirera le 24 juin 1342.",
+    "image": ""
+  },
+  {
+    "id": 577,
+    "titre": "Noces spirituelles de Jan van Ruysbroeck",
+    "date": 1340,
+    "zones": [
+      "Papaute",
+      "Idees",
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "Le livre qui porte le nom d'Ornement des Noces spirituelles a été regardé de tout temps comme le chef-d'œuvre de Ruysbroeck. L'auteur lui-même, selon son propre témoignage, semble l'avoir considéré comme le meilleur de ses ouvrages, et il aime à y renvoyer comme à l'exposé le plus complet de sa doctrine. C'est à ce titre qu'en 1350 il l'envoie aux Amis de Dieu de Strasbourg ; et dix ans plus tard il n'hésite pas à déclarer aux chartreux de Hérinnes qu'il le tient « pour tout à fait bon et d'une doctrine très sûre  ».\nAinsi que nous l'avons remarqué au volume précédent, le Royaume des amants de Dieu avait été le premier essai de Ruysbroeck, et nous avons cru pouvoir le dater des environs de l'an 1330. L'auteur qui était alors simple chapelain de Sainte-Gudule, à Bruxelles, et n'avait pas encore quarante ans, y faisait preuve néanmoins d'une maturité extraordinaire et d'une science très élevée des voies cachées de Dieu dans l'âme. Une fois l'œuvre achevée néanmoins, il semble que Ruysbroeck n'en ait pas été pleinement satisfait. Les conditions de temps étaient fort délicates. Eckart venait d'être condamné (27 mars 1329), et l'agitation produite par cette condamnation, ainsi que la défiance qu'elle avait soulevée à l'égard des écrivains mystiques, étaient loin d'être calmées (2). Ruysbroeck craignit-il qu'on n'interprétât mal certaines de ses expressions, ou que la fausse mystique n'en abusât pour accréditer ses erreurs ? Toujours est-il qu'il ne voulut pas livrer à la publicité ce livre du Royaume des Amants de Dieu et qu'il défendit à son secrétaire d'en communiquer la copie.\nIl ne pouvait néanmoins laisser ce qu'il considérait comme une hérésie se propager impunément, à une époque surtout où les Frères du libre esprit faisaient preuve d'une audace toujours croissante.\n     La fameuse Bloemardinne était à leur tête, et cette femme, dont on perd les traces après 1316, reparaît à Bruxelles entre 1330 et 1335. Elle abusait le peuple par de faux dehors de sainteté, il devenait indispensable de démasquer son hypocrisie et celle de ses adeptes. Ruysbroeck se remit donc au travail et reprenant le sujet traité dans son premier ouvrage, il le développa suivant un plan tout nouveau, à la fois plus simple et plus méthodique. Puis il s'attacha à marquer nettement la distinction entre les vrais et les faux mystiques, montrant partout les écueils à éviter et prodiguant les conseils que lui inspiraient sa prudence et son expérience.",
+    "image": "",
+    "video": "https://livres-mystiques.com/partieTEXTES/Ruysbroek/Ruysbroeck/Tome3/introduction.html"
+  },
+  {
+    "id": 578,
+    "titre": "Prédication à Cologne du mystique alsacien Jean Tauler",
+    "date": 1340,
+    "zones": [
+      "Alsace",
+      "Idees"
+    ],
+    "type": 2,
+    "description": "Jean Tauler  enseigne que le progrès de l'homme dépend du travail et de l'accomplissement du devoir . \nJean Tauler (Taulerus), né vers 1300 à Strasbourg et mort le 16 juin 1361 dans la même ville, est un théologien, mystique et prédicateur alsacien influent, disciple strasbourgeois de Maître Eckhart. Il est parfois surnommé « le docteur illuminé »[1], mais il n’a pas obtenu le titre universitaire de Docteur et Maître en Saintes Écritures : ce surnom est daté de la fin de la Renaissance, autant pour faire valoir les ouvrages imprimés sous son nom. Tauler est né et mort à Strasbourg. Il fit partie de l'ordre des Dominicains, comme Maître Eckhart dont il fut l'élève. Son enseignement s'apparente à celui de Maître Eckhart, mais il fut aussi influencé par ses études approfondies des néo-platoniciens, tout particulièrement de Proclus et du Pseudo-Denys l'Aréopagite.\n\nSes prédications se placent dans la droite ligne de Maître Eckhart. Elles développent surtout le thème du détachement et prêchent une ascèse apparemment austère, mais qui, au XIVe siècle, est nettement moins doloriste que les autres. Il a probablement fait ses études au studium (couvent possédant un centre de formation) à Cologne et a séjourné à Bâle, lors du conflit entre le pape et l'empereur, où les dominicains, ayant pris le parti du pape, furent expulsés de la ville ; mais à part quelques voyages il passa toute sa vie à Strasbourg. Il a été formé par « Amis de Dieu de l'Oberland \" et il a fréquenté les béguines connues (Marguerite Ebner) qui vivaient librement dans la pauvreté dans une communauté retirée afin de s'entraider dans leur quête d'une voie intérieure. Ce fut un remarquable prédicateur. Il mourut au couvent des dominicaines de Saint-Nicolas in Undis, où sa propre sœur était religieuse.\n\nIl est cité parmi les réformateurs strasbourgeois de l'Ordre dominicain dans le manuscrit Liber reformationis ordinis praedicatorum in Germania[2], avec Maître Eckhart.\n\nOutre ses sermons, dispersés en un grand nombre de manuscrits rédigés en moyen-haut allemand, nous ne possédons de lui qu'un billet sans doute autographe destiné à une béguine, où il remercie du don d'un fromage et lui souhaite de se bien porter. C'est surtout dans ces sermons que l'on peut étudier la doctrine mystique de Jean Tauler, très proche de la mystique de Maître Eckhart, dont il donne ce témoignage : « il parlait depuis l'éternité, et vous l'avez compris depuis le temps ».\n\nPar le détachement du péché, la grâce divine toute puissante permet la naissance de Dieu dans l'âme. Cette venue du Christ en soi est le chemin d'une imitation du Christ très différente de celle de Thomas a Kempis, car marquée par Maître Eckhart, là où la mystique flamande voit une suite du Maître qu'est le Christ, Tauler envisage à demi-mot la réalisation de soi par la divinisation du sujet, en insistant sur le fond (Grund) de l'âme, qui, incréé et étincelle de l'âme, accueille Dieu et où est restituée l'Image divine perdue par le péché. Mais cela est une hérésie, car Dieu seul est incréé.\n\nPlus pratique que son maître Eckhart, Tauler insiste davantage sur l'importance d'un effort continu et patient : la croix prend plus d'importance dans ses écrits : c'est là un virage présent dans tous les textes, dans toute l'iconographie du XIVe siècle, que les pestes, les guerres, les schismes entre papes et antipapes, le tremblement de terre de Bâle en 1354 (8 sur l'échelle de Richter) et un épisode climatique quasi glaciaire ont amené à surnommer : le « siècle de fer ».\n\nCes deux mystiques rhénans, Maître Eckhart et Tauler, n'ont jamais été canonisés. Le troisième grand mystique rhénan, disciple d'Eckhart, Henri Suso, fut élevé au titre de Bienheureux. Ils font partie des grands maîtres du christianisme intérieur dont on redécouvre aujourd'hui l'importance.",
+    "image": ""
+  },
+  {
+    "id": 579,
+    "titre": "Bataille du Rio Salado",
+    "date": 1340,
+    "mois": 10,
+    "zones": [
+      "Castille",
+      "Aragon",
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "La bataille du Rio Salado ou bataille de Tarifa est une victoire d’Alphonse XI le Juste roi de Castille et de son allié Alphonse IV du Portugal contre les armés du sultan mérinide allié aux nasrides de Grenade , en 1344 les musulmans perdent Algésiras cette victoire permet aux castillans de prendre le contrôle de Gibraltar isolant ainsi le royaume de Grenade de son arrière-pays africain.à la fin du 13e siècle Le Royaume hispanique n'était pas à l'abri d'un retour offensif musulman, d'autant qu'il s'opposait les uns aux autres et que des luttes intestines et déchets C'est ainsi que la dynastie mérinide de fez ayant refait à son profit l'unité du Maghreb put tenter de reprendre la croisade almohade mais la victoire d'alphonse XI de Castille sur le Salado y mit un terme définitif \nEn 1339, le sultan mérinide Abû al-Hasan ben `Utman apprend la mort de son jeune fils l'émir Abu Malik, qui après avoir réussi à récupérer Gibraltar en 1333 des mains des chrétiens, s'est aventuré en territoire castillan, malgré les avertissements de ses généraux. Cet excès de confiance lui coûte la vie après avoir été surpris et attaqué en pleine nuit par une importante troupe envoyée sur les ordres du roi de Castille. \nAprès ce triste évènement, Abû al-Hasan ben `Utman jure de venger la mort de son fils et les préparatifs mérinides commencent. Pour avoir poussé très loin la Reconquista En 1340, la bataille maritime a lieu au détroit de Gibraltar et les Mérinides réussissent à infliger une lourde défaite au royaume de Castille (« …seuls cinq vaisseaux de guerre chrétiens parviendront à s'échapper. »), le commandant de l'armée castillane, l’amiral Alonso Jofre Tenorio (es), est emprisonné puis décapité. À la suite de cette bataille, 60 000 soldats musulmans entament le siège de Tarifa (perdue par les Andalous en 1292). Devant la supériorité militaire terrestre des Mérinides et Andalous, le roi de Castille Alphonse XI le Juste est contraint de demander l'aide au roi de Portugal Alphonse IV qui accepte la demande ; l'aide portugaise est cruciale et permet une victoire terrestre décisive.La veille de la bataille, à la nuit, plusieurs soldats chrétiens réussissent à s'infiltrer dans le camp musulman. Quand la bataille commence, les soldats chrétiens infiltrés commencent à massacrer tous les habitants du camp (parmi les morts figurent Fatima, l'épouse hafside du sultan mérinide) ; ils attaquent ensuite l'armée musulmane par derrière, semant la confusion et le désordre. Beaucoup de soldats mérinides fuient le combat et rejoignent le port d'Algésiras puis de Ceuta. Le sultan mérinide est sauvé in extremis, et réussit à regagner sa capitale, Fès.\n\nL'année suivante, le sultan prépare une nouvelle offensive militaire navale qui se solde par un échec en raison de la supériorité numérique des chrétiens qui reçoivent l'aide militaire navale des cités italiennes (Pise, Gênes, …). Cette défaite marque la fin des interventions mérinides en Espagne. Fort de cet exploit, le roi de Castille contrôle totalement le détroit et prend en 1343 le stratégique port d'Algésiras.\n\nEn 1350, Alphonse XI meurt de la peste pendant le siège de Gibraltar. Des problèmes internes obligent alors les Castillans à signer un traité de paix de 10 ans avec le royaume de Grenade.\n\nLa victoire chrétienne met fin au contrôle musulman du détroit de Gibraltar et rend difficile l'envoi de secours militaires depuis le Maghreb vers le royaume de Grenade, qui doit lutter seul pour assurer sa survie. Il résistera pendant encore un siècle et demi avant la capitulation finale de 1492.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Reino_de_Granada_ca.svg/langca-1920px-Reino_de_Granada_ca.svg.png",
+    "legende": "Royaume de Grenade"
+  },
+  {
+    "id": 581,
+    "titre": "Siméon Ier Ivanovitch dit le superbe",
+    "date": 1340,
+    "mois": 3,
+    "date_fin": 1353,
+    "mois_fin": 4,
+    "zones": [
+      "Russie"
+    ],
+    "type": 1,
+    "description": "31 mars : mort d'Ivan Kalita. Son fils Siméon le Superbe (1316-1353) se fait investir à la Horde d'or comme grand-prince de Moscou puis se fait couronner à Vladimir. \nIl est le fils aîné d'Ivan Ier Kalita, né en 1316 à Moscou. En 1339, il se rend avec son père à la Horde d'or. En 1341, il est couronné à Vladimir. Il poursuit pendant son règne la politique paternelle de soumission aux Mongols et s'appuie sur la Horde d'or. Il se rend d'ailleurs au moins cinq fois à Saraï, où il devient l'intime du khan Djanibeg, le fils d'Özbeg.\nEn 1352 apparaît en Russie la « mort noire » venue des Indes. Siméon meurt le 27 avril 1353 de l'épidémie, à Moscou, après avoir eu le temps de revêtir l'habit monacal sous le nom de Sozant. Il est enterré à la cathédrale de l'Archange-Saint-Michel de Moscou, qui devient ensuite la sépulture des princes de Moscovie.\nDeux de ses fils périssent au cours de l'épidémie et il ne laisse pas d'héritier survivant. Sa succession est assurée par son frère Ivan II Ivanovitch.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Croissance_Russies.jpg/1280px-Croissance_Russies.jpg",
+    "regne": true
+  },
+  {
+    "id": 582,
+    "titre": "Assassinat du comte Gérard III de Holstein",
+    "date": 1340,
+    "mois": 4,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 1,
+    "description": "Assassinat du comte Gérard III de Holstein, administrateur du royaume de Danemark par Niels Ebbesen[7]. Début du règne de Valdemar IV Atterdag (« le Restaurateur », 1320-1375) roi de Danemark (fin en 1375).\nOrigines et accession au pouvoir\n\nGérard III de Holstein, fils de Henri Ier de Holstein, devient comte en 1304. Il s’impose rapidement comme un acteur politique majeur en soutenant le roi Christophe II de Danemark lors de conflits de succession, allant jusqu’à conclure une alliance avec lui en 1323.\n\nConflit avec le roi du Danemark\n\nAprès la mort du duc de Schleswig en 1325, un conflit éclate entre Gérard III et Christophe II pour la régence du jeune héritier. Gérard, soutenu par une partie de la noblesse, fait déposer le roi et place sur le trône son protégé, Valdemar III, tout en exerçant lui-même le pouvoir réel.\n\nDomination politique et retournements\nEn tant que régent, Gérard obtient le Schleswig comme fief héréditaire. Toutefois, son autorité excessive provoque des oppositions, menant au retour de Christophe II en 1330. Malgré cela, Gérard conserve une forte influence et continue d’intervenir dans les affaires du royaume.\nContrôle du Danemark\nÀ la mort de Christophe II en 1332, Gérard III gouverne directement le Danemark sans nommer de nouveau roi, sous le titre d’« Administrateur du Royaume ». Il contrôle une grande partie du territoire, tandis que son cousin en détient une autre.\nFin de Gérard III et conséquences\n\nEn 1340, Gérard III est assassiné par le noble danois Niels Ebbesen. Cet acte met fin à sa domination et est souvent interprété comme un symbole de résistance danoise, bien que ses motivations restent incertaines.",
+    "image": ""
+  },
+  {
+    "id": 583,
+    "titre": "Guerre entre la Pologne et la Lituanie",
+    "date": 1340,
+    "mois": 4,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 1,
+    "description": "1341. Une guerre éclate entre la Lituanie et la Pologne pour le contrôle de la principauté de Galicie-Volhynie ; La Volhynie est partagée entre les deux pays et la Galicie occupée par les Polonais",
+    "image": ""
+  },
+  {
+    "id": 584,
+    "titre": "Famines en Italie[",
+    "date": 1340,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
     "id": 193,
     "titre": "Jean V Paléologue",
     "date": 1341,
@@ -6210,6 +6423,141 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 585,
+    "titre": "Constantin IV d'Arménie (Guy de Lusignan)",
+    "date": 1341,
+    "date_fin": 1344,
+    "zones": [
+      "Byzance",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Octobre 1341 : La dynastie hétoumienne s’éteint en Cilicie arménienne, faute d’héritier mâle, à la mort de Léon V le 28 décembre 1341. Guy de Lusignan, fils de la sœur du roi Héthoum II, Zabel, et d’Amaury, frère du roi de Chypre Henri II, monte sur le trône sous le nom de Constantin IV d'Arménie. Guy de Lusignan sera assassiné par les Arméniens, hostiles à l’installation de l’Église catholique dans le pays (1344). Léon VI, son neveu, lui succèdera (1374). Il vit d'abord à Constantinople à partir de 1317 et est nommé stratège et gouverneur de Serrès en Macédoine en 1328[2]. En 1336, le roi de Chypre le fait seigneur de Tyr, titre évidemment vidé de son contenu car cette ville est reprise et occupée par les Mamelouks depuis près de quarante-cinq ans.\nSon cousin Léon V, roi d'Arménie, est assassiné le 28 décembre 1341. Non seulement Guy est son parent le plus proche, mais le testament de Léon le désigne comme son héritier. Guy quitte alors Constantinople pour rejoindre son nouveau royaume tandis que son frère Jean, qui se trouve à proximité de la Cilicie à la mort du roi, en assure la régence. En plus de la légitimité dynastique, les Lusignan représentent pour l'Arménie son dernier atout dans la défense et la survie du royaume face aux Mamelouks.\n\nGuy arrive en Arménie à la tête d'une troupe de chevaliers, mais, au lieu de se consacrer à la défense du royaume, il se préoccupe de querelles religieuses et tente d'imposer à l'Église d'Arménie une allégeance à l'Église de Rome et l'abandon du miaphysisme. Très rapidement, des révoltes déciment son entourage latin, son frère Jean est assassiné le 10 octobre 1343, et lui-même est tué le 17 avril 1344. Les barons arméniens mettent ensuite sur le trône un lointain cousin héthoumide, Constantin V de Neghir.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Cilician_Armenia-fr.svg/langfr-1280px-Cilician_Armenia-fr.svg.png",
+    "legende": "royaume de Petite Arménie (en Cilicie) au XIIIe siècle."
+  },
+  {
+    "id": 586,
+    "titre": "Hérédité complète sur les pronoiai",
+    "date": 1341,
+    "date_fin": 1347,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "1341-1347 : les guerres civiles du XIVe siècle entraînent un relâchement du contrôle de l’État byzantin ; l’aristocratie byzantine en profite pour obtenir l’hérédité complète sur les pronoiai (terre cédée par l’État moyennant un service armé) et une immunité fiscale accrue",
+    "image": ""
+  },
+  {
+    "id": 587,
+    "titre": "Usurpation de jean Cantacuzène  Guerre civile",
+    "date": 1341,
+    "mois": 9,
+    "date_fin": 1347,
+    "mois_fin": 5,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "La mort d’Andronic III porta le coup de grâce à l’empire byzantin   : son successeur était un enfant de dix ans et la régence mise en place fut déchirée par des rivalités dynastiques qui conduisirent à une guerre civile dont l'empire ne devait jamais se relever III , Jean V n’avait que neuf ans lorsqu’il accéda au trône. Un conseil de régence fut créé, composé de sa mère, Anne de Savoie, de Jean VI Cantacuzène et du patriarche de Constantinople, Jean XIV Kalékas. Ce fut le patriarche, aidé par l’ambitieux Alexis Apokaukos qui déclencha la guerre civile en convainquant l’impératrice que l’ambition de Cantacuzène constituait une menace pour son fils. En septembre 1341, alors que Cantacuzène était en Thrace, Kalékas se déclara régent et lança une virulente attaque contre Cantacuzène, ses partisans et sa famille. Les deux camps engagèrent des mercenaires étrangers. Cantacuzène loua les services de Turcs et de Serbes et le bey d’Aydin, dont les liens avec Andronic faisaient un allié, fournit le gros des mercenaires turcs. La régence pour sa part engagea également les services de mercenaires turcs. Toutefois, Cantacuzène commença aussi à recevoir l’appui du sultan ottoman Orkhan dont il épousa la fille en 1345. Deux ans plus tard, Cantacuzène triomphait et pouvait retourner à Constantinople où il conclut un accord avec Anne de Savoie en fonction duquel Jean V et lui-même régneraient en tant que coempereurs\n\nL’accord aurait éventuellement pu durer, n'eût été que Cantacuzène avait un fils, Matthieu, qui en grandissant devint une menace pour Jean V. De surcroît Jean V épousa une fille de Cantacuzène, devenant ainsi son gendre, ce qui aurait dû en théorie rapprocher les deux familles, mais qui en fait éloignait Matthieu du trôneLes contrées ravagées et dépeuplées par la guerre civile furent repeuplées par de nouveaux colons turcs qui s’y installèrent à la suite de conquêtes ou d'arrangements commerciaux. Il en résulta que Byzance perdit définitivement son emprise sur la région\nLes Ottomans profitent de la guerre civile qui déchire Byzance pour mettre le pied en Europe; En 1345, alors que la guerre civile fait rage entre la Régence et Jean VI Cantacuzène pour la tutelle du jeune Jean V Paléologue, Cantacuzène fait appel à Orkhan. Trop heureux de pouvoir intervenir en Europe, ce dernier accepte. Pour sceller leur nouvelle amitié, Jean VI lui donne en mariage sa deuxième fille, Théodora. Celui-ci, en contrepartie s’engage à servir Jean VI comme vassal avec toute son armée. En 1352, les forces conjointes de Jean VI et d’Orkhan viennent à bout de celles de Jean V appuyées par des Bulgares et des Serbes. Les Ottomans prennent ainsi pied en Europe. À la même époque, devenu adulte, le fils ainé d’Orkhan, Soliman, s’empare de Gallipoli, ravagée par un puissant séisme, et refuse de la rendre aux Byzantins malgré l’intervention de Jean VI auprès de son père, Orkhan, lequel se retire progressivement de la vie publique. À partir de cette base les Ottomans ne cessent de progresser en Thrace et en Macédoine, s’emparant des villes et ports situées près des Dardanelles et de la mer Égée.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/John_VI_Kantakouzenos.jpg/960px-John_VI_Kantakouzenos.jpg",
+    "legende": "Jean VI Cantacuzène présidant le concile de 1351, Traités théologiques de Jean VI Cantacuzène, BnF Gr.1242."
+  },
+  {
+    "id": 588,
+    "titre": "Régence d'Anne de Savoie",
+    "date": 1341,
+    "mois": 6,
+    "date_fin": 1347,
+    "mois_fin": 4,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "15 juin : mort d’Andronic III Paléologue[10]. Début du premier règne de Jean V Paléologue (1332-1391), empereur byzantin (jusqu'en 1354). Régence de Jean Cantacuzène puis d’Anne de Savoie (1341-1347). \nJeanne de Savoie, renommée Anne de Savoie après son mariage (1326), née en 1306 et morte vers 1360, est une princesse de la maison de Savoie devenue une impératrice byzantine, seconde épouse de l’empereur Andronic III Paléologue (1297-1341)\nEn 1325, le comte Édouard de Savoie accorde la main de sa demi-sœur à Andronic III Paléologue, veuf d'Irène (née Adélaïde) de Brunswick[2]. Andronic III est en pleine guerre civile avec son grand-père paternel Andronic II Paléologue[2], puisqu'il revendique le trône depuis 1321.\n\nCette alliance entre l'Orient et l'Occident semble avoir été favorisée par Théodore Comnène Paléologue, marquis de Montferrat, qui tente de renforcer sa position dans la région alpine[2]. Pour les Savoie, il s'agit également d'une alliance bénéfique puisqu'elle s'allie avec une dynastie impériale[2]. Cette union placerait aussi les comtes de Savoie comme intermédiaire entre les deux sphères d'influence en Méditerranée.\nÀ la mort d’Andronic III en juin 1341, elle prend la régence au nom de son fils mineur Jean V Paléologue[2], sous la coupe du premier ministre Alexis Apokaukos[3]. L'ancien ministre Jean Cantacuzène s'impose jusqu'à se proclamer empereur[2] sous le nom de Jean VI en octobre 1341, à Didymotique[3].\n\nÀ la suite d’une longue guerre civile, Jean VI entre dans Constantinople en février 1347, et Anne doit se plier aux conditions du vainqueur.\nEn 1351, elle s’installe à Thessalonique, où elle tient une cour jusqu’à sa mort, son fils Jean V étant rétabli à Constantinople à partir de novembre 1354",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/EmpressAnnaofSavoy.JPG/500px-EmpressAnnaofSavoy.JPG",
+    "legende": "Anna de Savoie, épouse de l'empereur Andronic III Paléologue. Miniature du XIVe siècle. Stuttgart, Württembergische Landesbibliothek.",
+    "regne": true
+  },
+  {
+    "id": 590,
+    "titre": "Doctrine de hésychasme",
+    "date": 1341,
+    "date_fin": 1351,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "1341-1351 : consécration de la doctrine des hésychastes (quiétisme) par une série de conciles à Constantinople (1341-1351) et par le Tome synodal de 1351. \nContexte : une crise religieuse dans l’Empire byzantin\n\nAu XIVe siècle, l’Empire byzantin traverse une période de crises politiques et religieuses. Parmi elles, la querelle de l’hésychasme illustre les tensions entre différentes conceptions de la spiritualité chrétienne.\n\nL’hésychasme : une spiritualité contemplative\n\nL’hésychasme est une tradition ancienne du monachisme oriental, fondée sur :\n\nla prière intérieure,\nle silence et l’immobilité,\nla recherche d’une union directe avec Dieu.\n\nCette pratique vise à atteindre une expérience mystique, parfois décrite comme la perception d’une « lumière divine ».\n\nOrigines et développement\nSes racines remontent aux premiers moines (IIIe-IVe siècles).\nElle est développée par des figures comme Jean Climaque.\nAu XIVe siècle, elle connaît un renouveau avec Grégoire Palamas, qui en devient le principal défenseur.\nUne controverse théologique majeure\n\nL’hésychasme est vivement critiqué par Barlaam le Calabrais, qui le considère comme irrationnel et excessif.\n\nLe conflit aboutit à :\n\ndes débats théologiques,\ndes conciles (notamment en 1341),\nla condamnation de Barlaam.\n\nGrégoire Palamas développe alors une doctrine distinguant :\n\nl’essence de Dieu (inaccessible),\nses « énergies » (accessibles aux humains).\nUn impact politique et social\n\nCette querelle dépasse le cadre religieux :\n\nelle divise la société byzantine,\nmobilise les élites intellectuelles et religieuses,\ninfluence les rapports entre Église et pouvoir impérial.\nLa vie spirituelle et le combat intérieur\n\nLe texte développe aussi la discipline spirituelle des moines, centrée sur la lutte contre les passions :\n\ngourmandise, luxure, avarice, colère, tristesse, acédie, vaine gloire, orgueil.\n\nCette lutte repose sur :\n\nl’ascèse (jeûne, prière),\nla maîtrise de soi,\nla patience et l’humilité.\nIdée essentielle\nL’hésychasme représente à la fois un renouveau spirituel profond et une source de conflits majeurs dans l’Empire byzantin, révélant l’importance des débats religieux dans la vie politique et sociale médiévale.",
+    "image": ""
+  },
+  {
+    "id": 591,
+    "titre": "Pétrarque couronné au capitole par Robert d’Anjou",
+    "date": 1341,
+    "mois": 4,
+    "zones": [
+      "Naples",
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "Avec Dante Alighieri et Boccace, il compte parmi les auteurs fondateurs de la littérature italienne.\nMalgré l'anarchie qui règne depuis le milieu du 13e siècle l'Italie ne cesse de développer sa prospérité et sa civilisation. Depuis Dante et Giotto les lettres et les arts y multiplient les chefs d’œuvre tandis que la guerre de 100 ans épuise la sève du génie français l'Italie devient pour plus de 2 siècles l'école de l'Europe et lui propose des modèles sans cesse renouvelés. Héritière directe de Rome, proche voisine de Byzance ou les traditions ethniques se sont conservées, elles redonnent vie au classicisme antique. Cet humanisme, qui se développe surtout au 15e est un des aspects essentiels de la Renaissance . Né à Arezzo de parents Florentins exilés puis  en Provence à Carpentras ; il suit des études universitaires à Montpellier et Bologne Pétrarque passe à la postérité pour la qualité de sa poésie qui met en vers son amour pour Laure de Sade épouse du marquis Hugo de Sade. Son Canzoniere dans lequel il rénove la manière des écrivains du « dolce stil novo », a eu une influence stylistique et linguistique majeure, poésie écrite, non plus en latin, mais en langue vulgaire, le plus souvent le toscan.\n\nPétrarque, parce qu’il n’aimait point Avignon ou parce que Laure ne l’aimait pas, se réfugia sur les berges de la Sorgue à la fontaine de Vaucluse à partir de 1338 (« Ici j’ai fait ma Rome, mon Athènes, ma patrie»)\nIl est également reconnu comme celui qui a retrouvé les Correspondances de Cicéron jusqu'alors perdues. Ces dernières sont à l'origine de la volonté de Pétrarque de publier ses propres lettres.\nLe grand dessein qui occupa toute sa vie est de  « retrouver le très riche enseignement des auteurs classiques dans toutes les disciplines et, à partir de cette somme de connaissances le plus souvent dispersées et oubliées, de relancer et de poursuivre la recherche que ces auteurs avaient engagée »\nEn 1367 il s’installe à Arqua dans les Monts Euganéens où il décède en 1374 .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Petrarch_by_Bargilla.jpg",
+    "legende": "Pétrarque peint par Andrea del Castagno, série des Hommes et femmes illustres, Galerie des Offices, Florence. XVe"
+  },
+  {
+    "id": 593,
+    "titre": "Guerre de Succession de Bretagne",
+    "date": 1341,
+    "mois": 4,
+    "date_fin": 1364,
+    "mois_fin": 9,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "La guerre de Succession de Bretagne ou guerre des deux Jeanne, qui dura de 1341 à 1364, est l'une des guerres secondaires qui ont eu lieu au cours de la guerre de Cent Ans.\n\nElle se déclenche en 1341 à la mort du duc Jean III de Bretagne. Jeanne de Penthièvre et Jean de Montfort, deux prétendants au duché se disputent l'héritage et impliquent leurs conjoints respectifs Charles de Blois et Jeanne de Flandre dans le différend. Mais la France et l'Angleterre sont en conflit depuis 1337 et Édouard III s'est proclamé roi de France. Ainsi Jean de Montfort lui prête l'hommage lige alors que Charles de Blois le fait pour son cousin Philippe VI de France.\n\nLes Français capturent Jean de Montfort et installent Charles de Blois en 1341, mais Édouard III débarque à Brest en 1342. Alors que Jean de Montfort est incarcéré et que Jeanne de Flandre sombre dans la folie, une trêve est conclue en 1343.\nUn statu quo, où les coups de main sans avenir se succèdent, dure jusqu'à la défaite des Français à Auray en 1364. Cette victoire des troupes anglaises et du parti pro-anglais permet de conclure en 1365, le premier traité de Guérande qui établit Jean IV comme héritier légitime. Ce dernier signe alors un traité d'alliance avec l'Angleterre.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Battle_of_Auray.jpg",
+    "legende": "Chanson de Bertrand du Guesclin Yates Thompson 35 f. 90v"
+  },
+  {
+    "id": 598,
+    "titre": "Mort du grand-duc de Lituanie Gédymin",
+    "date": 1341,
+    "mois": 12,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "1341  le grand-duc de Lituanie Gédymin est tué en combattant les Teutoniques qui assiègent une ville près de Kaunas; Ses fils Algirdas et Keiskutis, se partagent le pouvoir, le premier régnant à Vilnius avec le titre de duc de Lituanie, le second portant le titre de duc de Troki, près de Kaunas.",
+    "image": ""
+  },
+  {
+    "id": 599,
+    "titre": "Prise de Milazzo",
+    "date": 1341,
+    "mois": 9,
+    "zones": [
+      "Naples"
+    ],
+    "type": 4,
+    "description": "La flotte angevine de Robert d'Anjou prend Milazzo . \naprès trois mois de siège, sans que le roi de Sicile Pierre II ne puisse intervenir pour la défendre. La ville est située sur un promontoire saillant entre deux baies, la baie de Milazzo à l'est et la baie de Patti à l'ouest, ce qui lui confère une position stratégique. Elle est située à une quarantaine de kilomètres à l'ouest de Messine.",
+    "image": ""
+  },
+  {
+    "id": 600,
+    "titre": "Retour de David II Bruce",
+    "date": 1341,
+    "mois": 6,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "David II Bruce débarque à Inverbervie en Écosse après 7 ans d'exil en Normandie et reprend le trône .\nEdward Balliol, malgré le soutien d’Édouard III d'Angleterre est renversé du trône d’Écosse.\nÉdouard Balliol, fils de Jean de Balliol, et le parti des « Disinherited »[5], soutenu par Édouard III, profite de la mort du régent Thomas Randolph et débarque à Kinghorn dans le Fife le 6 août 1332. Le 11 août suivant, ils remportent la bataille de Dupplin Moor sur le parti de Bruce. Édouard Balliol est couronné roi à Scone le 24 septembre 1332[6].\nRepoussé par les Écossais pendant l'hiver 1332-1333 après le combat d'Annan, il doit solliciter l'aide d'Édouard III qui intervient alors personnellement à la tête de 13 000 hommes à partir de Carlisle et défait les Écossais du parti de Bruce à la bataille de Halidon Hill en juillet 1333. L'un des régents, Archibald Douglas y trouve la mort[7].\nDavid II et son épouse réfugiés dans le château de Dumbarton sont envoyés en France avec une petite suite pour leur sécurité. Ils arrivent à Boulogne-sur-Mer en mai 1334, où ils sont reçus très amicalement par le roi de France, Philippe VI. On sait que Château-Gaillard lui est donné en résidence[8]. En 1335-1336, alors qu'il avait onze ans, il a presque certainement été impliqué dans les négociations avortées entre Philippe VI et Édouard III, qui ont tenté de concilier les revendications respectives de David II et d'Édouard Balliol au trône d'Écosse et en 1339, pendant le siège de Perth par Robert Stuart, il est prouvé que Sir William Douglas lui a rendu visite l'année précédente à Château-Gaillard et obtenu le service de quelques chevaliers français et de marins qui ont contribué au siège[9]. Ces opérations ont été financées par David II ou Philippe VI. Le chroniqueur Jean Froissart indique que David II participe avec le roi de France à une rencontre entre les armées françaises et anglaises en octobre 1339 à Buironfosse, en Picardie, et au siège de Tournai en 1340[1].\nDe son côté, Édouard Balliol, qui s'est empressé de reconnaître la suzeraineté du roi d'Angleterre, est menacé par des actions de guérilla menées par Andrew Murray de Bothwell et ne peut se maintenir qu'avec l'aide des Anglais. Les Gardiens de l’Écosse — Andrew Murray de Bothwell, John Randolph, 3e comte de Moray, et Robert Stuart, 7e stewart — réussissent à reprendre progressivement le contrôle du pays, et il doit se résoudre à quitter l'Écosse définitivement en 1340[10].\nPremier règne (1341-1346)\nAprès la prise d'Édimbourg par William Douglas le 16 avril, David II peut retourner dans son royaume et, avec la reine, il débarque à Inverbervie, au nord de Montrose, le 2 juin 1341 et prend les rênes du gouvernement[11].\nLe retour de David II est accueilli avec joie[12]. Pourtant, les problèmes qu'il rencontre sont graves, et il est seul et dans sa dix-huitième année. En son absence, son pays a été envahi à plusieurs reprises et déstabilisé. La plupart des nobles à un moment ou à un autre ont pactisé avec Édouard Balliol, même si ce n'est que brièvement[1]. Une partie du royaume a été cédée à l'Angleterre et la guerre de guérilla récurrente a provoqué des destructions massives. L'administration a été perturbée : parfois dans les comtés du Sud il y a eu une administration anglaise, ce qui exclut toute autorité écossaise, tandis qu'ailleurs il y avait deux administrations rivales. C'était une situation pour décourager quelqu'un de beaucoup plus expérimenté que le jeune roi[1].\nNéanmoins, les mécanismes du gouvernement sont remis en place. Le chambellan, William Bullock, qui curieusement, occupait la même fonction sous Édouard Balliol, rétablit les finances, recouvre les recettes et traite les problèmes de façon efficace. Un certain nombre de chartes sont immédiatement émises, confirmant les droits qui avaient été détenus par les prédécesseurs de David II, des parlements et les conseils royaux sont convoqués régulièrement[1].\nLes relations de David II avec la noblesse qui avait géré de facto le royaume de manière indépendante depuis son avènement s'avèrent plus difficiles, en particulier avec Sir William Douglas, fils et homonyme de l'ancien régent, un membre de la puissante famille Douglas et qui était à cette époque son représentant le plus actif. William Douglas avait été l'un des chefs les plus remarquables de la résistance écossaise contre Édouard III et Édouard Balliol, et avait acquis une position forte dans les régions frontières, en particulier les terres de Liddesdale, dont il porte désormais le nom, William Douglas de Liddesdale[1]. Dans les régions centrales, David II voulait s'appuyer sur un autre chef de guerre aussi remarquable, Sir Alexandre Ramsay de Dalhousie (en), qui venait tout juste récupérer en 1342 le château de Roxburgh. David le fait shérif de Teviotdale, une charge qui avait déjà été octroyée à Douglas qui réagit en capturant Ramsay, en l'emprisonnant dans son château d'Hermitage à Liddesdale, et en le laissant mourir de faim. Face à la pression nobiliaire, David II ne peut qu'accepter la situation, ce qui permet à Douglas de garder la fonction dont il s'était emparé par le meurtre.",
+    "image": ""
   },
   {
     "id": 157,
@@ -6280,6 +6628,18 @@
     "image": ""
   },
   {
+    "id": 594,
+    "titre": "Lucques passe sous le contrôle de Pise",
+    "date": 1342,
+    "mois": 7,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "2 octobre : victoire des Pisans sur les Florentins. Ils mettent le siège devant Lucques, prise en juillet 1342,\nEn 1320 Castruccio Castracani devient seigneur à vie de Lucques qui devient gibeline. Ce tyran fait de Lucques l'État le plus puissant de l'Italie centrale, rivale de Florence, jusqu'à sa mort en 1328. Machiavel a écrit sa biographie (La vie de Castruccio Castracani da Lucca). Son fils fut incapable de se maintenir au pouvoir. Les mercenaires allemands de l’empereur Louis IV du Saint-Empire, restés sans salaire s’emparèrent de Lucques et la vendirent au plus offrant: le génois Gherardo Spinola, pour 60 000 florins. Elle fut revendue par la suite à Jean Ier de Bohême. Les Lucquois, au sein desquels des représentants des familles nobles Buonvisi, Trenta, Dati, Balbani, Busdraghi, Minutoli, Burlamacchi, Bernardini, lui prêtent serment en 1331. Jean de Luxembourg, ne disposant pas de moyens militaires pour défendre Lucques, en céda théoriquement la seigneurie en 1334 pour 35 000 florins à Philippe VI de Valois et Charles VI en revendiquait également ces droits en 1398. De ce fait, les Lucquois se considéraient souvent comme sujets du roi de France. Les propriétaires se succédèrent et Lucques passa sous la domination de Pise en 1342.\n23 décembre le premier doge de Gênes Simone Boccanegra, abandonne le pouvoir et se retire à Pise. Jean de Murta est élu le 25 décembre.",
+    "image": ""
+  },
+  {
     "id": 168,
     "titre": "Jeanne Ire",
     "date": 1343,
@@ -6292,6 +6652,30 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 592,
+    "titre": "Généralisation de la gabelle",
+    "date": 1343,
+    "mois": 3,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "20 mars 1343  : ordonnance instituant le monopole[6] et un impôt sur le sel en France, ratifiée par les États généraux réunit pour l'occasion\nSous Philippe le Bel (1268-1314) le sel se vendait librement à Paris. Il en est de même sous Louis le Hutin (1289-1316) comme le montre une ordonnance datée du 25 septembre 1315 qui tente de lutter contre la hausse des prix du sel. L'ordonnance autorise certains représentants du roi à perquisitionner les lieux privés et à mettre en vente le sel accumulé au juste prix. Herbert S. Foxwell suppose que cette possibilité de s'enrichir par la vente du sel a donné au roi l'idée de faire la vente du sel à son profit car dans son ordonnance du 25 février 1318[13], Philippe V le Long déclare que cette imposition de gabelle « moult déplaisant au peuple » ne serait pas perpétuelle. Du Cange écrit dans son article Gabella salis que, dans une ordonnance de Philippe VI de 1331, il est écrit que pour subvenir aux frais de la guerre, il établit dans tout le royaume des greniers à sel dont les juges sont nommés souverains-commissaires, conducteurs et exécuteurs des greniers et gabelles.L'ordonnance de Philippe VI de Valois du 15 février 1345 reprend les termes de celle de 1318 et peut être considérée comme un renouvellement. Les guerres continuelles soutenues par Philippe VI l'ont amené à augmenter cette imposition. C'est ce qu'il exprime dans l'ordonnance du 20 mars 1342[14]. Cette ordonnance prévoit un premier établissement de greniers et une ébauche d'administration financière spéciale aux gabelles et aux greniers. Cet impôt ne change alors rien à la liberté de commerce du sel, ce que confirme le règlement pour la police générale du royaume fait par Jean II le Bon le 30 janvier 1350 dans lequel le sel est soumis aux mêmes lois que les autres denrées. Pour soutenir la guerre contre les Anglais, le roi fait réunir les États de langue d'oïl et coutumiers en 1355. Une ordonnance du 28 décembre 1355 arrête que, pour soutenir les frais de l'armée, il est imposé dans tout le pays coutumier, sur le sel, une gabelle levée suivant certaines instructions dressées à ce sujet. En mars 1356, le roi rend une ordonnance indiquant qu'après avoir réuni les États de langue d'oïl, du pays coutumier et deçà de la rivière de Dordogne pour avoir conseil sur le fait des guerres et des mises nécessaires, la majorité des personnes des trois États avaient accepté une imposition de huit deniers pour livre et la gabelle du sel, mais si ces aides étaient insuffisantes et désagréables au peuple, les États avaient décidé de se réunir en mars 1356. Ayant constaté que ces aides n'étaient pas suffisantes et la gabelle n'était pas agréable, ils ont accepté d'accorder une aide au roi mais en supprimant la gabelle. Cependant, pendant l'emprisonnement du roi à Londres, les États se sont réunis à Compiègne en mai 1358 et ont voté une seconde augmentation du prix du sel. Il est alors décidé que des greniers doivent être établis dans les bonnes villes du royaume, que le roi achète le sel aux marchands et que les grenetiers le revendent pour le compte du roi un cinquième de plus. Les lettres patentes de Charles V le Sage, alors régent du royaume, du 9 août 1359 confirment l'établissement de ces greniers à sel et la levée de la gabelle du sel. L'ordonnance d'octobre 1359 fixe le prix du sel. Les États des sénéchaussées de Beaucaire et de Nîmes ont accordé au roi un droit de gabelle qui devait finir en avril 1363, mais le 20 avril, le roi a pris une ordonnance pour continuer à percevoir cette gabelle. Le droit de gabelle n'est payé qu'une seule fois, on est ensuite libre de vendre le sel. Ceux qui avaient payé la gabelle recevaient une quittance pour en attester. Face aux plaintes exprimées par les États tenus à Compiègne en 1366 ou 1367, le roi rend une déclaration le 19 juillet 1367 réduisant de moitié la gabelle. La gabelle est établie en Languedoc en 1367 mais pas en Dauphiné. Pour réprimer les fraudes qui en résultaient, Charles V donne des lettres patentes le 15 mai 1367 imposant la gabelle au sel qui sort du Dauphiné. Bien que la gabelle du sel n'a été prévue que pour un temps, elle a continué à être prélevée.\n\nAu XIVe siècle, les plaintes commencent, elles ne cesseront plus. « En ce mois de mars 1343, dit le continuateur de Nangis, notre roy Philippe mit sur le sel une exaction dite gabelle, d’où il acquit la male grâce du peuple ». À la même époque (1342), sont créés les Greniers à sel, tribunaux chargés de juger toutes les contraventions relatives à la gabelle et dont les appels, plus tard, durent être portés devant la cour des aides. En 1343, par ordonnance du roi, le sel devient un monopole d'État. Taxe modeste d'abord, de deux deniers par minot, elle est déjà de huit sous pendant le règne de Charles V et l’impôt, malgré de solennelles promesses, devient permanent.",
+    "image": ""
+  },
+  {
+    "id": 597,
+    "titre": "Fondation de l'université de Pise",
+    "date": 1343,
+    "mois": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "3 septembre 1343 : fondation de l'Université de Pise\nLa bulle papale In supremæ dignitatis, accordée par le pape Clément VI le 3 septembre 1343, reconnut au Studium de Pise le statut de Studium Generale, c’est-à-dire d'établissement d'enseignement supérieur fondé ou approuvé par une des deux autorités catholiques suprêmes : la Papauté ou le Saint Empire. Pise fut l’une des premières universités européennes pouvant se prévaloir de cette reconnaissance papale, qui conférait à ses diplômés une reconnaissance universelle. Les premières matières enseignées étaient la théologie, le droit civil, le droit canon et la médecine. En 1355, Francesco da Buti, le célèbre commentateur de la Divine Comédie de Dante, commença à enseigner au Studium.\n\nPise et son Studium traversèrent une période de crise au tournant du XVe siècle : la conquête de la ville par les Florentins se solda par la fermeture de l’université en 1403. En 1473, grâce à Laurent de Médicis, le Studium pisan pouvait s’étendre de nouveau et l’on finança la construction d'un nouveau collège en 1486. Cet édifice (baptisé par la suite Palazzo della Sapienza) se trouvait au XIVe siècle sur la Piazza del Grano. La porte d’accès à la place, l’arche Dell'Abbondanza, était couronnée d'une tête de chérubin, qui reste encore aujourd’hui symbole de l’université.",
+    "image": ""
   },
   {
     "id": 150,
@@ -6318,6 +6702,7 @@
     "type": 2,
     "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.",
     "image": "",
+    "video": "https://www.youtube.com/watch?v=qBIDhqKSLhk&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3&index=5",
     "sources": "Jean Froissart, Chroniques, Livre I"
   },
   {
@@ -6355,8 +6740,20 @@
       "Byzance"
     ],
     "type": 1,
+    "description": "Jean Cantacuzène est cousin d'Andronic III Paléologue, qui le crée grand domestique, c'est-à-dire chef des armées, ce qui le place en seconde position dans la hiérarchie byzantine.\nLe 23 mai 1328, il participe à la prise de Constantinople par Andronic III et à la déposition d'Andronic II Paléologue. Il devient alors, en fait, le premier ministre du nouveau gouvernement, décidant de toutes les nominations et contrôlant les affaires de l'État.\nÀ plusieurs reprises il refuse le titre de co-empereur ou de régent, préférant soutenir les droits de l'empereur régnant.\nLa guerre civile (1341-1347)\nÀ la mort d'Andronic III Paléologue en 1341, il devient régent de facto de l'Empire, malgré l'absence d'instructions de l'empereur défunt. Il se heurte cependant à l'opposition d'une fraction importante de la population de l'Empire et, en particulier, du patriarche Jean XIV Kalékas.\n\nPressé par Alexis Apokaukos de se faire proclamer empereur, Jean Cantacuzène refuse afin de préserver les droits de la dynastie Paléologue et propose de se retirer des affaires ; l'impératrice Jeanne de Savoie le persuade de demeurer à la tête du gouvernement et il part aussitôt commander une expédition militaire afin de rétablir l'ordre en Macédoine puis en Thrace.\n\nApokaukos profite de son absence pour persuader le patriarche Kalékas ainsi que l'impératrice que Jean VI Cantacuzène est un usurpateur et un danger pour la paix. Réfugié à Didymotika, il s'y fait proclamer empereur par ses partisans le 26 octobre 1341[1]. La noblesse d'Andrinople annonce alors l'élection de Jean Cantacuzène au trône impérial, provoquant une rébellion populaire. L'insurrection gagne ensuite les principales villes de l'Empire.\nLe règne (1347-1354)\nDevenu empereur, Jean Cantacuzène prend le titre de Jean VI, montrant ainsi qu'il refuse la préséance de rang sur l'empereur légitime, Jean V Paléologue. Cet arrangement n'est pas approuvée par la dynastie règnante, qui persiste à ne voir en lui qu'un usurpateur.\n\nSoucieux de ramener la paix dans l'Empire, il accorde une amnistie générale à ceux qui l'avaient combattu, à l'exception de Jean XIV Kakélas qui refusa toujours d'être pardonné comme de lui pardonner et maintint l'excommunication qu'il avait prononcée contre lui en 1341.\nIl est couronné en l'église de la Vierge des Blachernes par le nouveau patriarche Isidore Ier de Constantinople, le 13 mai 1347[1]. Illustration de la décrépitude des finances impériales, le couronnement ne peut avoir lieu à Sainte-Sophie, trop délabrée, les joyaux de la couronne, gagés à Venise, sont remplacés par de la verroterie et la vaisselle du banquet était en simple terre cuite.\nLe règne de Jean VI est marqué par de nombreux troubles intérieurs, tant sur le plan social que sur le plan militaire :\n\nla peste noire s'abat sur l'Empire dès la première année du règne, ravageant notamment Constantinople, aggravant l'état de découragement et d'apathie dans lequel se trouvaient les byzantins après deux guerres civiles ;\nses anciens alliés et ceux d'Anne de Savoie (vénitiens et turcs) se font menaçants, notamment Etienne V, tsar de Serbie ;\nil doit faire face aussi à une opposition populaire et religieuse, et à une révolte des Zélotes à Thessalonique ;\nen août 1348 les Génois envahissent la Corne d'Or et incendient la flotte byzantine.\nil doit céder aux Génois Salymbrie et Héraclée en 1352, malgré le concours des Vénitiens et doit faire face à une nouvelle guerre civile, qui l'oppose à Jean V, dès 1351.\nIl abandonne la division de l'empire en thèmes, et met en place un système d'apanages pour le gouvernement de l'empire ; cette réorganisation correspond à la dispersion des territoires byzantins.\n\nLes territoires byzantins sont alors divisés en trois ensembles :\nla Thrace, proche de Constantinople,\nla Morée byzantine (où Jean VI, envoie son deuxième fils Manuel comme despote de Mistra),\nThessalonique, favorable aux Paléologues.\nLa population de Constantinople demeure cependant attachée à la dynastie légitime des Paléologues, et en particulier à Jean V et s'oppose de plus en plus nettement à Jean VI. L'opposition se renforce en avril 1353 lorsque Jean VI fait proclamer coempereur son fils Mathieu Cantacuzène.\n\nCe couronnement provoque l'irritation du patriarche Calliste Ier de Constantinople, qui abdique et est remplacé par Philothée Kokkinos, partisan déclaré de Jean VI.\n\nLe 22 novembre 1354, Jean V Paléologue entre à Constantinople, où il est acclamé par la foule. Le 1er décembre suivant, il signe avec Jean VI un accord de gouvernement aux termes duquel les deux hommes exercent en commun le pouvoir, tandis que Mathieu Cantacuzène demeurait empereur indépendant d'Andrinople jusqu'à sa mort.\n\nFinalement, le 10 décembre 1354, Jean VI abdique et revêt l'habit monastique en prenant le nom de Joasaph Cantacuzène ; il entre au monastère Saint-Georges-des-Manganes, à Constantinople. Il s'installe plus tard au monastère de la Néa Péribleptos ; il meurt à Mistra auprès de son fils Manuel.\nSon épouse, Irène, prend également le voile sous le nom d'Eugénie et se retire au couvent de Kyra Martha.\nJean Cantacuzène consacrera la fin de sa vie à l'écriture de ses Mémoires, qui sont achevés en 1369.",
     "image": "",
     "regne": true
+  },
+  {
+    "id": 580,
+    "titre": "Victoire Mérinides contre le sultan Hafside de Tunisie",
+    "date": 1347,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Les Mérinides du Maroc l’emportent  contre le sultan Hafside de Tunisie et dominent tout le Maghreb mais leurs échecs en Espagne et l’arrivée de la peste noire marqueront le début de leur déclin.",
+    "image": ""
   },
   {
     "id": 125,
