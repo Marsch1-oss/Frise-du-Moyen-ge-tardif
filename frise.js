@@ -327,9 +327,11 @@ function buildAxis(start, end, step, level) {
   } else if (level === 2) {
     for (var d = currentCentury; d < currentCentury + 100; d += 10) {
       (function(decade) {
-        bar.appendChild(makeBand(decade, decade + 10, start, end, function() {
+        var b = makeBand(decade, decade + 10, start, end, function() {
           renderLevel(3, decade);
-        }));
+        });
+        b.dataset.label = decade + '\u2013' + (decade + 10) + ' → zoomer';
+        bar.appendChild(b);
       })(d);
     }
   } else if (level === 3) {
@@ -340,6 +342,7 @@ function buildAxis(start, end, step, level) {
           renderLevel(4, yr);
         });
         band.classList.add('axis-band-year');
+        band.dataset.label = yr + ' \u2192 vue annuelle';
         bar.appendChild(band);
       })(y);
     }
@@ -953,12 +956,6 @@ function updateNavButtons() {
       ? currentYear + ''
       : currentDecade + '\u2013' + (currentDecade + 10);
   }
-  /* Boutons zoom */
-  var btnZoomIn  = document.getElementById('btn-zoom-in');
-  var btnZoomOut = document.getElementById('btn-zoom-out');
-  if (btnZoomIn)  btnZoomIn.disabled  = (currentLevel === 4);
-  if (btnZoomOut) btnZoomOut.disabled = false; /* jamais désactivé — on peut toujours remonter */
-
   /* Barre de détail */
   updateDetailBar();
 

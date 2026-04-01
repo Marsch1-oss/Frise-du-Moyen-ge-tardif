@@ -732,6 +732,20 @@
     "sources": "Wikipedia"
   },
   {
+    "id": 658,
+    "titre": "John Comyn Gardien de l'Ecosse",
+    "date": 1302,
+    "mois": 10,
+    "date_fin": 1306,
+    "mois_fin": 2,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "John Comyn reste seul Gardien à l'automne 1302, quand John de Soules part en France avec une grande ambassade. Au début de 1303 la suprématie de John Comyn dans la politique nationale de l'Écosse est de nouveau totale, depuis le 24 février il est « chef et capitaine » de l'armée écossaise qui défait les Anglais à la bataille de Roslin. \nLa cruelle exécution de William Wallace le 23 août 1305 soulève une vague d'indignation en Écosse contre la suzeraineté anglaise. Elle est à l'origine du meurtre de John III Comyn par Robert Bruce dans l'église des franciscains de Dumfries le 10 février 1306 et du couronnement par ses partisans de Robert Ier Bruce comme roi à Scone six semaines plus tard.",
+    "image": ""
+  },
+  {
     "id": 72,
     "titre": "Les Génois obtiennent d’Andronic II le droit de clore de mur leur comptoir de Péra-Galata",
     "date": 1303,
@@ -1225,6 +1239,19 @@
     "description": "Robert Ier d’Écosse, né en 1274 et mort en 1329, est l’une des figures majeures des guerres d’indépendance écossaise. Issu de la famille Bruce, il revendique le trône grâce à ses origines et devient roi en 1306 après avoir assassiné son rival John Comyn, un acte qui lui vaut l’excommunication.\n\nSon début de règne est difficile : battu par les Anglais, il doit se cacher et fuir. Cependant, à partir de 1307, il reprend progressivement le contrôle du royaume, profitant notamment de la mort du roi anglais Édouard Ier. Il soumet ses ennemis internes et renforce son autorité en Écosse.\n\nSa victoire décisive contre l’Angleterre à la bataille de Bannockburn en 1314 marque un tournant majeur. Par la suite, il mène des offensives en Angleterre et en Irlande. La Déclaration d’Arbroath de 1320 affirme l’indépendance de l’Écosse, finalement reconnue par l’Angleterre en 1328 avec le traité d’Édimbourg-Northampton.\n\nRobert Ier organise aussi la succession pour assurer la continuité de sa dynastie, désignant d’abord son frère puis son petit-fils comme héritiers en l’absence de fils. Finalement, son fils David II lui succède.\n\nIl meurt en 1329 après 23 ans de règne. Considéré comme un héros national, il a joué un rôle décisif dans l’indépendance de l’Écosse.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Robert_I%2C_King_of_Scotland_%28seal%29.png",
     "legende": "Sceau de Robert Ier."
+  },
+  {
+    "id": 657,
+    "titre": "Mort de John Comyn",
+    "date": 1306,
+    "mois": 2,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Robert Bruce exerce la fonction de gardien de l'Écosse conjointement avec John III Comyn à partir du second semestre de 1298, Il est possible que la tension entre John Comyn et Robert Bruce commence à cette époque du fait des prétentions de la Maison de Bruce à la couronne d'Écosse et de l'appui apporté à Jean Balliol par la famille Comyn . La tension entre les deux hommes est telle que Robert Bruce renonce à sa charge, lors du « Parlement » de Rutherglen le 10 mai 1300 et il est remplacé par Ingram de Umfraville[3]. En janvier 1302, Robert Bruce accepte « la Paix » proposée par le roi d'Angleterre et se soumet à lui. Peu après, avant le 16 février, il épouse en secondes noces Élisabeth de Bourg, une fille du comte d'Ulster. La paix conclue entre le royaume de France et l'Angleterre le 20 mai 1303 ayant exclu l'Écosse, la plupart des nobles écossais acceptent l'année suivante de se soumettre à Édouard Ier[4].\n\nDevenu le chef de sa maison après la mort de son père et après une rencontre secrète avec l'évêque William Lamberton, le 11 juin 1304, Robert Bruce décide de faire valoir ses droits au trône d'Écosse. Lors d'une entrevue à Dumfries le 10 février 1306, il tue John Commyn, devenu son rival potentiel, qui protestait contre la spoliation des droits de son parent Jean d'Écosse et refusait de lui apporter son soutien",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Death_of_Comyn.jpg?_=20130530214339",
+    "legende": "La Mort de John Comyn dans l'église des franciscains de Dumfries, telle que représentée au XIXe siècle par Félix Philippoteaux."
   },
   {
     "id": 103,
@@ -4763,16 +4790,16 @@
   },
   {
     "id": 449,
-    "titre": "David II Bruce roi d'Ecosse",
+    "titre": "Régence des gardiens de l'Ecosse",
     "date": 1329,
     "mois": 6,
-    "date_fin": 1371,
-    "mois_fin": 2,
+    "date_fin": 1341,
+    "mois_fin": 4,
     "zones": [
       "Angleterre"
     ],
     "type": 2,
-    "description": "David II naît en 1324, fils du roi Robert Ier d’Écosse. Héritier du trône après la mort de son frère jumeau, il devient roi à seulement cinq ans en 1329. Il est rapidement marié à Jeanne d’Angleterre dans le cadre d’un traité de paix avec l’Angleterre, qui reconnaît l’indépendance écossaise.\n\nDurant sa minorité, le pouvoir est exercé par plusieurs régents. Cette période est marquée par des troubles : Édouard Balliol, soutenu par l’Angleterre, tente de s’emparer du trône. Après plusieurs défaites écossaises, David est contraint de s’exiler en France en 1334, où il séjourne plusieurs années sous la protection du roi Philippe VI.\n\nIl revient en Écosse en 1341 et tente de restaurer l’autorité royale dans un royaume affaibli et divisé, où de nombreux nobles ont pris de l’indépendance. Malgré certaines réussites administratives, les tensions avec la noblesse restent fortes. En 1346, lors d’une invasion de l’Angleterre, il est vaincu et capturé à la bataille de Neville’s Cross.\n\nSa captivité dure onze ans. Pendant cette période, des négociations complexes ont lieu pour sa libération, notamment autour d’une rançon élevée et de la question de la domination anglaise sur l’Écosse. Il entretient des relations relativement cordiales avec Édouard III, mais ses propositions de compromis sont refusées par les Écossais.\n\nLibéré en 1357 contre une lourde rançon, David II doit faire face à de nombreux problèmes : difficultés financières, tensions avec la noblesse, et absence d’héritier. Son règne est aussi marqué par des conflits personnels, notamment avec son épouse et ses favorites.\n\nMalgré plusieurs tentatives de stabilisation du royaume et de règlement de la succession, il meurt en 1371 sans descendance. Son neveu Robert Stuart lui succède et devient Robert II, inaugurant la dynastie des Stuart.",
+    "description": "David II naît en 1324, fils du roi Robert Ier d’Écosse. Héritier du trône après la mort de son frère jumeau, il devient roi à seulement cinq ans en 1329. Il est rapidement marié à Jeanne d’Angleterre dans le cadre d’un traité de paix avec l’Angleterre, qui reconnaît l’indépendance écossaise.\n\nDurant sa minorité, le pouvoir est exercé par plusieurs régents. Cette période est marquée par des troubles : Édouard Balliol, soutenu par l’Angleterre, tente de s’emparer du trône. Après plusieurs défaites écossaises, David est contraint de s’exiler en France en 1334, où il séjourne plusieurs années sous la protection du roi Philippe VI.\n\nPendant la minorité et l'exil du roi, la régence d'Écosse est exercée par les Gardiens de l'Écosse suivants :\n\n1329-1332 : Thomas Randolph, 1er comte de Moray, mort le 20 juillet 1332 à Musselburgh ;\n2 au 12 août 1332 : Donald II, comte de Mar, tué le 12 août 1332 à la bataille de Dupplin Moor ;\ndécembre 1332 au 19 juillet 1333 : Archibald Douglas, tué le 19 juillet 1333 à la bataille de Halidon Hill ;\njuillet 1333 - 1335 : John Randolph, 3e comte de Moray, tué le 17 octobre 1346 à la bataille de Neville's Cross ;\njuillet 1334 - 1335 : Robert Stuart, 7e stewart, futur roi d'Écosse ;\n1335-1338 : Andrew Murray de Bothwell ;\n1338-1341 : Robert Stuart, 7e stewart, futur roi d'Écosse.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/David_Bruce%2C_king_of_Scotland%2C_acknowledges_Edward_III_as_his_feudal_lord.jpg",
     "legende": "David II, roi d'Écosse, reconnaît Édouard III, roi d'Angleterre, comme son suzerain féodal."
   },
@@ -5501,6 +5528,19 @@
     ],
     "type": 3,
     "description": "Jean de Luxembourg, ne disposant pas de moyens militaires pour défendre Lucques, en céda théoriquement la seigneurie en 1334 pour 35 000 florins à Philippe VI de Valois et Charles VI en revendiquait également ces droits en 1398. De ce fait, les Lucquois se considéraient souvent comme sujets du roi de France. Les propriétaires se succédèrent et Lucques passa sous la domination de Pise en 1342.",
+    "image": ""
+  },
+  {
+    "id": 659,
+    "titre": "Exil de David II roi dEcosse en France",
+    "date": 1334,
+    "date_fin": 1341,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "David II et son épouse réfugiés dans le château de Dumbarton sont envoyés en France avec une petite suite pour leur sécurité. Ils arrivent à Boulogne-sur-Mer en mai 1334, où ils sont reçus très amicalement par le roi de France, Philippe VI. On sait que Château-Gaillard lui est donné en résidence[8]. En 1335-1336, alors qu'il avait onze ans, il a presque certainement été impliqué dans les négociations avortées entre Philippe VI et Édouard III, qui ont tenté de concilier les revendications respectives de David II et d'Édouard Balliol au trône d'Écosse et en 1339, pendant le siège de Perth par Robert Stuart, il est prouvé que Sir William Douglas lui a rendu visite l'année précédente à Château-Gaillard et obtenu le service de quelques chevaliers français et de marins qui ont contribué au siège[9]. Ces opérations ont été financées par David II ou Philippe VI. Le chroniqueur Jean Froissart indique que David II participe avec le roi de France à une rencontre entre les armées françaises et anglaises en octobre 1339 à Buironfosse, en Picardie, et au siège de Tournai en 1340[1].\n\nDe son côté, Édouard Balliol, qui s'est empressé de reconnaître la suzeraineté du roi d'Angleterre, est menacé par des actions de guérilla menées par Andrew Murray de Bothwell et ne peut se maintenir qu'avec l'aide des Anglais. Les Gardiens de l’Écosse — Andrew Murray de Bothwell, John Randolph, 3e comte de Moray, et Robert Stuart, 7e stewart — réussissent à reprendre progressivement le contrôle du pays, et il doit se résoudre à quitter l'Écosse définitivement en 1340[1",
     "image": ""
   },
   {
@@ -6595,6 +6635,18 @@
     "image": ""
   },
   {
+    "id": 660,
+    "titre": "David II roi d'Ecosse (règne 1)",
+    "date": 1341,
+    "date_fin": 1346,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Le retour en Écosse de David II d'Écosse en juin 1341 marque une tentative de restauration de l’autorité monarchique après une période d’instabilité profonde liée aux interventions anglaises et aux divisions internes. Accueilli favorablement, le jeune roi hérite néanmoins d’un royaume politiquement fragmenté, économiquement affaibli et institutionnellement désorganisé. L’occupation partielle par l’Angleterre, la coexistence d’administrations concurrentes et les compromissions d’une partie de la noblesse avec Édouard Balliol témoignent de l’ampleur de la crise.\n\nMalgré ces difficultés, David II parvient à réactiver les structures de gouvernement. Sous l’impulsion du chambellan William Bullock, les finances sont restaurées et les mécanismes administratifs relancés, notamment par l’émission de chartes et la convocation régulière des parlements. Toutefois, la consolidation du pouvoir royal se heurte à l’autonomie acquise par les grands seigneurs durant l’absence du roi. Les tensions avec William Douglas de Liddesdale illustrent ces résistances nobiliaires : ce dernier, figure majeure de la lutte contre l’Angleterre, n’hésite pas à défier l’autorité royale en éliminant son rival Alexandre Ramsay, sans que le roi puisse réellement intervenir. Cet épisode révèle la faiblesse relative du pouvoir monarchique face à une aristocratie militarisée et indépendante.\n\nParallèlement, David II poursuit une politique extérieure hostile à l’Angleterre, dans la continuité de l’« Auld Alliance » avec la France. Encouragé par Philippe VI de Valois, il engage plusieurs incursions en territoire anglais, culminant avec l’expédition de 1346 destinée à soutenir la France contre Édouard III d'Angleterre. Toutefois, cette campagne révèle les divisions internes de l’armée écossaise, affaiblie par des rivalités entre chefs, comme l’assassinat de Ranald MacRuairi par le comte de Ross.\nLa défaite décisive lors de la Bataille de Neville's Cross constitue un tournant majeur. L’armée écossaise est écrasée, une grande partie de son élite capturée ou tuée, et David II lui-même est fait prisonnier. Cet échec met en lumière les limites de la restauration monarchique et prolonge la crise politique en Écosse, puisque la régence est à nouveau confiée à Robert Stuart.",
+    "image": ""
+  },
+  {
     "id": 585,
     "titre": "Constantin IV d'Arménie (Guy de Lusignan)",
     "date": 1342,
@@ -7337,22 +7389,272 @@
       "St Empire"
     ],
     "type": 1,
-    "image": "",
+    "description": "11 juillet : élection de Charles IV, empereur romain germanique après la déposition de Louis IV (jusqu'en 1378). \nLe règne de Louis IV (de 1314 à 1347) est difficile, marqué par la rivalité entre la maison de Wittelsbach et la maison de Luxembourg, soutenue par le pape. Louis s'est fait beaucoup d'ennemis dans la haute noblesse allemande, mais il a le soutien des villes libres d'Empire et des ordres militaires, en particulier de l'ordre Teutonique.\n\nC'est dans le cadre de cette rivalité que, sans attendre la mort de Louis IV, Charles de Luxembourg est élu roi des Romains le 11 juillet 1346 à Rhens par cinq princes-électeurs avec l’appui de Clément VI, ce qui lui vaut le surnom de rex clericorum. Il est couronné[Quoi ?] à Bonn le 26 novembre 1346.\n\nCharles n’est d’abord qu'un anti-roi, élu d'une faction : Louis IV reste empereur de droit et de fait. La guerre civile menace l'empire. La mort de Louis IV en 1347 (infarctus au cours d’une chasse au sanglier) permet l'élection d'un nouveau roi des Romains de la faction des Wittelsbach. Au bout d'une année de combats et d'intrigues entre ducs et évêques, les partisans de Charles l'emportent et les Wittelsbach font leur soumission en lui remettant la couronne des rois Ottoniens.Petit-fils de l'empereur Henri VII du Saint-Empire et fils de Jean de Luxembourg dit l’aveugle (Tombeau dans la crypte de la Cathédrale Notre-Dame de Luxembourg ). Élevé à la cour de France de 1323 à 1330, il assume des responsabilités politiques au Luxembourg et en Bohême avant même que son père (, aveugle depuis 1340, trouve la mort sur le champ de bataille de Crécy en 1346. Sa fratrie compte notamment Bonne de Luxembourg (1315-1349), épouse (1332) de Jean II, roi de France. il écrit une autobiographie en latin, la première autobiographie d'un souverain européen depuis celle de l'empereur romain Auguste.Il devient empereur  dans un contexte troublé ou la couronne impériale est en déshérence depuis la mort de Henri VII. C’est pour y mettre fin qu’il promulguera la bulle d’Or en 1356 À la mort d’Henri VII, deux rois sont élus simultanément, ce qui provoque une guerre civile :Louis IV de Wittelsbach (Louis de Bavière)Roi des Romains : 1314 – 1347Empereur : couronné en 1328 à Rome sans l’accord du pape (acte d’indépendance impériale).Conflit durable avec le pape Jean XXII (Querelle du pouvoir impérial).Favorise les villes et renforce la bourgeoisie impériale.Frédéric le Bel de Habsbourg (rival)Roi des Romains : 1314 – 1330 (reconnu dans une partie de l’Empire).Fait prisonnier par Louis IV en 1322 après la bataille de Mühldorf.Après un accord, il co-règne brièvement avant de mourir en 1330. Dynastie de Luxembourg (retour)Charles IV de Luxembourg (fils de Jean l’Aveugle, roi de Bohême)Roi des Romains : 1346 – 1378Empereur : couronné à Rome en 1355.Auteur de la Bulle d’or de 1356, qui fixe définitivement les règles d’élection de l’empereur.Fait de Prague une capitale impériale brillante.🧬 Fin du XIVᵉ siècle : les derniers Luxembourg Venceslas de Luxembourg (fils de Charles IV)Roi des Romains : 1376 – 1400Élu du vivant de son père (élection anticipée).\nSon règne est marqué par le désordre politique et la faiblesse du pouvoir impérial.Déposé en 1400 par les princes électeurs à cause de son inaction",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Charles_IV-John_Ocko_votive_picture-fragment.jpg/330px-Charles_IV-John_Ocko_votive_picture-fragment.jpg",
+    "legende": "Portrait de Charles IV (détail du couronnement), par Maître Théodoric",
+    "video": "https://www.youtube.com/watch?v=tSHDNXZaUzQ",
     "regne": true
   },
   {
     "id": 7,
-    "titre": "Bataille de Crécy",
+    "titre": "Désastre de Crécy",
     "date": 1346,
     "mois": 8,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.\nÉdouard décide de lancer une offensive majeure en 1346, embarquant pour la Normandie avec une force de 40 000 hommes à la demande de Godefroy de Harcourt  Son armée pille la cité de Caen et marche à travers le nord de la France. Le 26 août, il rencontre les forces du roi de France lors de la bataille rangée de Crécy au cours de laquelle l'organisation de son armée prend le dessus sur les charges de la chevalerie française qui s'effondre sous une pluie de flèches décochées par les archers gallois abrités par une forêt de pieux. \nPendant ce temps, en Angleterre, William Zouche, l'archevêque d'York, défait et capture David II à la bataille de Neville's Cross le 17 octobre. Avec sa frontière nord sécurisée, Morts durant la bataille : Jean Ier de Luxembourg, roi de Bohême et comte de Luxembourg ;/ Tombeau cathédrale de Luxembourg/ Raoul de Lorraine, duc de Lorraine ;\nLouis de Dampierre, comte de Nevers et de Flandre ;Charles II de valois duc d’Alençon frère du roi Philippe VI",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Battle_of_crecy_froissart.jpg/500px-Battle_of_crecy_froissart.jpg",
+    "legende": "La bataille de Crécy. Jean Froissart, Chroniques, BnF, fr2643, fo 165 vo.",
+    "video": "https://www.youtube.com/watch?v=qBIDhqKSLhk&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3&index=5",
+    "sources": "Jean Froissart, Chroniques, Livre I"
+  },
+  {
+    "id": 661,
+    "titre": "Captivité de David II",
+    "date": 1346,
+    "mois": 10,
+    "date_fin": 1357,
+    "mois_fin": 10,
     "zones": [
       "Angleterre"
     ],
     "type": 2,
-    "description": "Victoire décisive des archers anglais sur la chevalerie française. L'arc long gallois révolutionne la tactique militaire. Le roi de Bohême Jean l'Aveugle y périt, portant en devise Ich dien (Je sers), adoptée depuis par les princes de Galles.",
-    "image": "",
-    "video": "https://www.youtube.com/watch?v=qBIDhqKSLhk&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3&index=5",
-    "sources": "Jean Froissart, Chroniques, Livre I"
+    "description": "La captivité de David II d'Écosse, consécutive à la Bataille de Neville's Cross, s’étend sur onze années durant lesquelles le roi bénéficie de conditions de détention relativement souples. Détenu notamment à la Tour de Londres et au château de Windsor, puis placé en semi-liberté à Odiham à partir de 1355, il entretient des relations relativement cordiales avec Édouard III d'Angleterre. Cette période est également marquée par un éloignement conjugal avec Jeanne de la Tour et par sa liaison avec Catherine Mortimer, révélant une dimension personnelle qui accompagne son isolement politique.\n\nCependant, cette captivité constitue avant tout un moment clé de négociations diplomatiques complexes. Le principal obstacle à la libération du roi réside dans la volonté d’Édouard III d’imposer une suzeraineté durable sur l’Écosse. Les premières propositions anglaises envisagent une transformation radicale du statut du royaume écossais, qui deviendrait un fief de la couronne anglaise, avec une clause successorale prévoyant qu’en l’absence d’héritier direct de David II, le trône reviendrait au roi d’Angleterre ou à son héritier.\n\nFace à ces exigences, David II adopte une stratégie de compromis visant à préserver l’indépendance formelle de l’Écosse. Il propose que la succession éventuelle revienne non pas au roi d’Angleterre lui-même, mais à un de ses fils cadets, afin d’éviter une absorption directe du royaume. Si cette solution semble temporairement acceptable pour Édouard III, elle se heurte à une double opposition en Écosse : d’une part, celle de Robert Stuart, héritier légitime et régent du royaume, qui verrait ses droits menacés ; d’autre part, une résistance plus générale à toute forme de succession anglaise, perçue comme une atteinte à la souveraineté nationale.\n\nDans un contexte de guerre prolongée entre la France et l’Angleterre — notamment la guerre de Cent Ans —, les négociations évoluent au gré des rapports de force. Le succès anglais à la bataille de Poitiers, marqué par la capture de Jean II le Bon, renforce la position d’Édouard III, qui exploite alors la détention simultanée de deux souverains. Cette conjoncture conduit finalement à un accord pragmatique : le traité de 1357 prévoit la libération de David II contre une rançon considérable de 66 666 merks, payable sur dix ans, sans règlement définitif de la question de la suzeraineté.La captivité de David II d'Écosse, consécutive à la Bataille de Neville's Cross, s’étend sur onze années durant lesquelles le roi bénéficie de conditions de détention relativement souples. Détenu notamment à la Tour de Londres et au château de Windsor, puis placé en semi-liberté à Odiham à partir de 1355, il entretient des relations relativement cordiales avec Édouard III d'Angleterre. Cette période est également marquée par un éloignement conjugal avec Jeanne de la Tour et par sa liaison avec Catherine Mortimer, révélant une dimension personnelle qui accompagne son isolement politique.\n\nCependant, cette captivité constitue avant tout un moment clé de négociations diplomatiques complexes. Le principal obstacle à la libération du roi réside dans la volonté d’Édouard III d’imposer une suzeraineté durable sur l’Écosse. Les premières propositions anglaises envisagent une transformation radicale du statut du royaume écossais, qui deviendrait un fief de la couronne anglaise, avec une clause successorale prévoyant qu’en l’absence d’héritier direct de David II, le trône reviendrait au roi d’Angleterre ou à son héritier.\n\nFace à ces exigences, David II adopte une stratégie de compromis visant à préserver l’indépendance formelle de l’Écosse. Il propose que la succession éventuelle revienne non pas au roi d’Angleterre lui-même, mais à un de ses fils cadets, afin d’éviter une absorption directe du royaume. Si cette solution semble temporairement acceptable pour Édouard III, elle se heurte à une double opposition en Écosse : d’une part, celle de Robert Stuart, héritier légitime et régent du royaume, qui verrait ses droits menacés ; d’autre part, une résistance plus générale à toute forme de succession anglaise, perçue comme une atteinte à la souveraineté nationale.\n\nDans un contexte de guerre prolongée entre la France et l’Angleterre — notamment la guerre de Cent Ans —, les négociations évoluent au gré des rapports de force. Le succès anglais à la bataille de Poitiers, marqué par la capture de Jean II le Bon, renforce la position d’Édouard III, qui exploite alors la détention simultanée de deux souverains. Cette conjoncture conduit finalement à un accord pragmatique : le traité de 1357 prévoit la libération de David II contre une rançon considérable de 66 666 merks, payable sur dix ans, sans règlement définitif de la question de la suzeraineté.",
+    "image": ""
+  },
+  {
+    "id": 671,
+    "titre": "Siège de Calais",
+    "date": 1346,
+    "mois": 9,
+    "date_fin": 1347,
+    "mois_fin": 8,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "1347 Édouard se sent libre de continuer son offensive, assiégeant la ville portuaire de Calais qui tombe après un siège extraordinairement long (onze mois) — probablement la plus grande opération militaire simple menée par l’Angleterre au Moyen Âge. 4 septembre 1346 : Édouard III arrive devant Calais.\n17 septembre 1346 : 32 galères génoises de Carlo Grimaldi aidées de plusieurs barges françaises enlèvent à l’abordage 25 vaisseaux de la flotte anglaise participant au blocus de Calais.\nHiver 1346-1347 : Après quelques tentatives de sortie vers les terres, la population encerclée de Calais doit se contenter d’approvisionnements par mer, principalement menés par le corsaire Jean Marant et la flotte génoise.\n1347\nFévrier 1347 : Édouard III entame le blocus du port de Calais avec 120 navires afin d'empêcher tout approvisionnement de la ville.\n21 février 1347 : Plusieurs grandes nefs chargées de pain, blé, ail, oignons, harengs salés, fèves, pois partent de Saint-Valery-sur-Somme en direction de Calais et tentent, sans succès, de pénétrer dans la place forte.\n14 mars 1347 : Jean Marant à la tête de 30 vaisseaux force une nouvelle fois le blocus et entre dans la rade. Édouard III, trouvant que le siège s’éternisait à cause du ravitaillement des navires génois, normands et picards qui réussissaient à forcer régulièrement le blocus, il fit construire, à l’entrée du goulet, des fortifications munies de bombardes et autres armes de jet. Il fit également bloquer l’entrée du chenal avec des obstacles de toute nature et à partir de juin 1347, il fut totalement impossible pour les Français de ravitailler Calais.\n10 avril 1347 : 30 vaisseaux français réussirent, malgré la vigilance de la flotte ennemie, les fortifications élevées par les assiégeants et les obstacles de toute nature à l'entrée du chenal, à pénétrer dans le port. Ce fut le dernier convoi à pouvoir entrer pour ravitailler la ville assiégée. Les autres tentatives échoueront lamentablement; les navires tombant aux mains des Anglais. Dès lors, Calais n'eut plus d'espoir que dans le secours venant de la terre.\nMai 1347 : Une armée de secours commence à se former à Arras.\nJuin 1347 : Les Anglais interceptent une lettre du gouverneur destinée au roi de France, Philippe VI de Valois, présentant l’état de famine et contenant un appel au secours.\n20 juin 1347 : Un détachement français s’approche de Calais puis regagne Hesdin.\n25 juin 1347 : Jean Marant échappe une nouvelle fois à la flotte anglaise forte de 120 navires et arrive avec 30 bateaux à l’entrée du goulet, parvenant malgré la mitraille et les obstructions à ravitailler une dernière fois la ville.\n27 juillet 1347 : L'armée de secours française, forte de plus de 100 000 fantassins et de 35 000 cavaliers paraît enfin sur les hauteurs de Sangatte et Coquelles. Le roi de France fait aussitôt reconnaître le terrain et chercher les points d'attaque les plus favorables. L'examen des positions ennemies lui révèle que la nature du terrain et les mesures défensives prises par Édouard III rendent toute attaque impossible[8]. Philippe de Valois propose alors à Édouard III un combat en rase campagne. Ce dernier refuse, sachant que Calais est à sa merci.\n3 août 1347 : Édouard III d'Angleterre acceptent de laisser la vie sauve aux habitants de la ville de Calais en échange de six plus grands notables bourgeois devant lui apportant les clefs de la ville et de la forteresse.\n4 août 1347 : capitulation de Calais.\n28 septembre 1347 : Trêve de Calais signée entre l'Angleterre et la France pour un an, avec la médiation du pape Clément VI (fin en 1356).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Belagerung_von_Calais_1346-1347.JPG/500px-Belagerung_von_Calais_1346-1347.JPG",
+    "legende": "H. W. Koch: Illustrierte Geschichte der Kriegszüge im Mittelalter, S. 127, Bechtermünz Verlag"
+  },
+  {
+    "id": 672,
+    "titre": "Giovanni de Viterbe fresque  de la chapelle St Martial au palais des papes",
+    "date": 1346,
+    "zones": [
+      "Papaute",
+      "Art"
+    ],
+    "type": 2,
+    "description": "Peintre italien du Trecento, originaire de Viterbe dans le Latium, Matteo Giovanetti a été marqué par le travail de ses aînés siennois Simone Martini et les frères Lorenzetti, qui ont travaillé notamment pour la basilique Saint-François d'Assise ou le Palazzo Pubblico de Sienne. \nEn 1343, Matteo Giovanetti rejoint Avignon, où il devient l'ami de Pétrarque et travaille à la décoration du Palais des Papes à la demande de Clément VI. A la même époque, Simone Martini séjourne aussi en Provence, où il mourra en 1344.  \nEn quelques années, il peint les décors de la chapelle Saint-Martial, de l'oratoire Saint-Michel, deux chambres pour les appartements pontificaux ainsi que la fresque des prophètes de la Grande Audience. \n Relativement oublié par l'histoire de l'art, Matteo Giovanetti importe en France et à Avignon les grandes innovations de la peinture toscane de l'époque, par son naturalisme plein de fraîcheur et ses compositions savamment mises en scène pour jouer avec l'espace.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Chapelle_saint_Martial_-_mur_ouest_et_porte.jpg/500px-Chapelle_saint_Martial_-_mur_ouest_et_porte.jpg",
+    "legende": "Chapelle saint Martial - mur ouest et porte. Chapelle de saint Martial, Palais des Papes, Avignon, Vaucluse, France."
+  },
+  {
+    "id": 673,
+    "titre": "2e chevauchée d’Edouard III en Flandre",
+    "date": 1346,
+    "mois": 7,
+    "date_fin": 1347,
+    "mois_fin": 8,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 1,
+    "description": "La chevauchée d'Édouard III, commencée le 12 juillet 1346 avec le débarquement des troupes anglaises dans le Cotentin et qui se termine par le siège de Calais et sa prise le 3 août 1347, est un long raid dévastateur du roi d'Angleterre sur le sol français. Cette expédition ravage une grande partie de la Normandie, du Vexin, du Beauvaisis, du Vimeu, du Ponthieu, du Boulonnais et du Calaisis[1]. Elle culmine le 26 août 1346 par la bataille de Crécy qui voit les Anglais remporter une victoire éclatante sur la chevalerie française.Pour pouvoir continuer la guerre, Édouard III doit rallier les élites, et donc le Parlement, à sa cause. Pour ce faire il était nécessaire de mener des actions victorieuses sur le continent, or à cette époque la France est, avec 20 millions d'habitants, cinq fois plus peuplée que l'Angleterre. La chevalerie française est la plus nombreuse et la plus aguerrie d'Europe, c'est pourquoi Édouard III n'envisage pas de tenir le terrain où il était facile de perdre crédibilité, armée et même sa propre vie. Les quelques batailles rangées comme celles de Crécy, Poitiers voire Azincourt l'étaient plus par la force des choses que d'une volonté d'affrontement direct[90]. Édouard III prévoit donc une guerre de pillage qui a le mérite de s'autofinancer. Une des plus célèbres chevauchées anglaises est celle de 1346 : une armée réduite, mobile, avançant sur un front réduit et pratiquant une guerre totale dévastant systématiquement les régions traversées, sans égards pour une population dont le roi d'Angleterre se dit le souverain légitime.\nLe 12 juillet 1346 Édouard III débarque à Saint-Vaast-la-Hougue avec une flotte de 1 000 voiles, portant 40 000 hommes et entreprend une chevauchée qui le mène à Caen, au gué de Blanquetaque pour passer la Somme, à Crécy et à Calais.26 juillet 1346 : Siège de Caen\n15 août 1346 : les troupes anglaises passent la Seine à Poissy\n24 août 1346 : Bataille du gué de Blanquetaque\nLes Anglais pillent, incendient, rançonnent et font des razzias à travers le Cotentin, la Normandie, le Vexin, le Beauvaisis, le Vimeu, le Ponthieu. Le passage de la Somme au gué de Blanquetaque marquera, pour la France, le début d'un enchaînement de calamités en particulier sous le règne de Jean le Bon fils de Philippe VI de Valois.",
+    "image": ""
+  },
+  {
+    "id": 674,
+    "titre": "Louis de Tarente épouse Jeanne de Naples",
+    "date": 1346,
+    "mois": 8,
+    "zones": [
+      "Naples"
+    ],
+    "type": 2,
+    "description": "Louis de Tarente épouse Jeanne de Naples. Le roi Louis de Hongrie, furieux, intervient militairement (1347-1348). Jeanne quitte Naples pour la Provence, puis rejoint Avignon (1348).\nDeuxième fils de Philippe Ier de Tarente et de Catherine de Valois-Courtenay, il est donc le petit-fils de Charles II de Naples et de Marie de Hongrie, tandis que du côté maternel, il a pour grands-parents Charles de Valois et sa deuxième épouse, l'impératrice titulaire de Constantinople Catherine I re de Courtenay.\n\nEn 1342, Louis devient Grand Maître de l'Ordre du Saint-Sépulcre, l'un des plus anciens et des plus prestigieux ordres militaires de la Chrétienté. En 1346, son frère Robert devient empereur latin d'Orient, permettant du même coup à Louis de recueillir la principauté de Tarente.\n\nC'est dès l'adolescence que Louis commence à entretenir une relation avec la reine Jeanne, alors mariée à André de Hongrie, leur cousin commun. Au-delà du sentiment profond que la souveraine semble avoir éprouvé pour lui, il est probable que la mère du jeune prince, Catherine, ait largement favorisé cette relation dans le but d'investir le capital politique familial important pour garantir à son fils la couronne de Naples.\n\nÀ la mort d'André, tué par des conjurés auxquels la reine Jeanne est elle-même soupçonnée d'appartenir, Louis épouse le 20 août 1346 sa cousine, devenant le seul de ses quatre époux à porter le titre de roi. Le royaume de Naples traverse alors un moment de grande crise : en novembre 1347, pour venger la mort de son frère cadet André, le roi Louis Ier de Hongrie tout juste couronné envahit le royaume, entrant avec ses troupes à Bénévent début 1348. La défense est confiée à Louis de Tarente, qui, après avoir rassemblé une armée à Capoue pour tenter d'empêcher la prise de Naples, doit subir la défection de nombreux barons, qui, au lieu de défendre leur souveraine légitime, appuient l'envahisseur, acclamé partout en seigneur et porté en triomphe.\nLe roi tente de temporiser, peut-être trop longtemps, tandis que son armée continue de se réduire à la suite des nombreuses désertions. Désespérant de sauver la situation, le 15 janvier, la reine Jeanne quitte Naples en bateau en direction de ses terres de Provence. Louis de Tarente, face au désastre, rejoignit sa femme en France quelques semaines plus tard, afin de se placer sous la protection de l'église d'Avignon.\n\nLouis de Hongrie prend Naples avec une grande facilité mais son séjour dans les territoires parthénopéens est bref : en effet, le royaume de Naples est rapidement touché par la peste noire, ce qui pousse le roi à quitter la capitale en toute hâte, laissant la régence aux mains de fonctionnaires hongrois.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Louis_of_Taranto.jpg",
+    "legende": "Louis de Tarente"
+  },
+  {
+    "id": 675,
+    "titre": "Etienne Dusan nommé Tsar des Serbes et des Grecs",
+    "date": 1346,
+    "mois": 4,
+    "zones": [
+      "Europe C. & Or.",
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "En 1345, l'armée serbe occupe la ville de Serrès puis toute la Chalcidique ainsi que le Mont-Athos. Au vu de l'état de ruine de l'Empire byzantin, Dušan décide de créer un nouvel empire chrétien orthodoxe capable de résister aux Turcs. Le mont Athos est en accord avec Dusan et le considère déjà depuis longtemps comme le défenseur de l'orthodoxie[5]. La cité monastique décide que le nom de Dušan serait cité dans toutes les prières du monde orthodoxe, après celui de Jean V Paléologue.\nDušan se déclare empereur à Serrès dès Noël 1345. Comme il est impossible que le patriarche de Constantinople ou le pape intronise Dušan, une cérémonie est organisée à Skopje le 16 avril 1346 (jour de Pâques), en présence du patriarche de Bulgarie Siméon, de l'archevêque d'Ohrid Nikolaï Ier (en) et de divers dirigeants du mont Athos. L'archevêque de Serbie Joannicius II (en) est alors élevé au rang de patriarche et intronise Dusan « Empereur des Serbes et des Romains / Bασιλεὺς καὶ αὐτoκράτωρ Σερβίας καὶ Pωμανίας »[6]. En tant qu'empereur, Dusan se réclame maître des biens que Dieu avait donnés à Constantin Ier le Grand, des terres et des grandes villes dans tout l'Empire grec.\nEn 1347, Jean VI Cantacuzène devient officiellement Empereur byzantin : il ne reconnaît pas le titre d'empereur de Dušan, pourtant reconnu par les autorités du mont Athos, le considérant comme une menace pour son trône. L'empereur de Constantinople aidera à la nomination du patriarche de Constantinople Calliste, qui remercie son mécène en 1350 en jetant l’anathème sur Dušan et le patriarche de Serbie Joannicius II et excluant de l'Église orthodoxe toutes les terres serbes. Cet anathème n'est annulé que vingt-cinq ans plus tard, en 1375 sous le règne du prince Lazar de Serbie. Dušan organise son empire et le prépare à de nouvelles conquêtes, il donne à son fils Uroš le titre de roi. En 1348, les Serbes s'emparent de l'Épire et de la Thessalie. L'Empire serbe est étendu du Danube au nord, jusqu'au golfe de Corinthe au sud, de la mer Adriatique à l'ouest jusqu'à la mer Égée à l'est ; seule la ville de Thessalonique, qu'il est impossible de conquérir sans une puissante flotte, résiste à l'empereur serbe. Dušan tente des années durant de convaincre la république de Venise qu'elle l'aide avec sa flotte pour occuper non seulement Thessalonique mais aussi Constantinople ; en échange il lui aurait donné toutes les terres en dehors des remparts de la cité pour qu'elle y implante ses marchands. Mais Venise préfère avoir un Empire byzantin faible à Constantinople qu'un puissant Empire serbe qui a les moyens de lui retirer sans aucune difficultés ses avantages commerciaux. Dušan commence alors un travail diplomatique avec sa rivale Gênes qui se révèlera couronné de succès[réf. nécessaire]; en 1356 Jean VI récupére Constantinople grâce à l'aide de la flotte génoise",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Empire-byzantin-1355.svg/1920px-Empire-byzantin-1355.svg.png"
+  },
+  {
+    "id": 676,
+    "titre": "1ere réunion des Etats du Languedoc",
+    "date": 1346,
+    "mois": 2,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "2 février : ouverture des États généraux de la langue d'oïl à Paris.\n17 février : ouverture des États généraux de la langue d'oc à Toulouse\nAu début de la guerre de Cent Ans, la nécessité pousse le roi de France Philippe VI à demander des subsides à ses sujets pour soutenir les dépenses militaires. En 1346[N 1], alors qu'il convoque prélats, barons, communes et bonnes villes de son royaume, il réunit par souci d'économie les représentants des sept sénéchaussées du Midi à Toulouse. Il fait de même à Montpellier en 1351. L'an 1359 marque un « tournant décisif »[8] dans l'histoire des états et de la province de Languedoc : en effet, comme l'historien du droit Henri Gilles (1921-2012) l'a établi[9],[10] en 1965 dans sa monographie sur les États de Languedoc au XVe siècle[11], c'est en 1359 que les bonnes villes[12],[13] des trois sénéchaussées de Beaucaire, de Carcassonne et de Toulouse concluent entre elles une « union perpétuelle »[8],[9],[10],[11],[12],[13],[14] puis[11] exigent des officiers royaux[12],[14] d'être « convoquées ensemble »[9],[10],[11] et non plus séparément, par sénéchaussée. Dès lors, les assemblées de langue d'oc siègeront à dates régulières. Elles sont chargées d'établir le montant de l'impôt versé au roi, sa répartition et sa levée.Le 25 juillet[4] 1303, le roi de France, Philippe IV réunit, au couvent des Frères mineurs[4] de Montpellier, les représentants des trois états de trois sénéchaussées — celles de Beaucaire et de Carcassonne ainsi que celle de Rouergue — afin d'obtenir leur appui dans sa lutte contre le pape Boniface VIII et leur adhésion à l'appel au Concile — c.-à-d. à la convocation d'un concile général qui jugerait le pape qu'il accuse d'hérésie et de mauvaises mœurs[4] — qu'il avait lancé[5],[6]. Au XVIIe siècle, dans leur Histoire générale de Languedoc (1730-1745), Claude Devic (1670-1734) et Joseph Vaissète (1685-1756) soutiendront qu'il s'agit là de « première session des États de Languedoc »[5],[6]. Après avoir été débattue au XVIIe siècle et au début du XXe, leur position sera rejetée[5] notamment parce qu'en 1303, les représentants s'assemblèrent séparément tant par état que, de surcroît, par sénéchaussée",
+    "image": ""
+  },
+  {
+    "id": 677,
+    "titre": "Défaite écossaise à Neville’s Cross capture de David II",
+    "date": 1346,
+    "mois": 10,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Défaite écossaise à Neville’s Cross capture de David II qui est emprisonné à la Tour de Londres pour 10 ans 1346-1357  .\nRedoutant une invasion anglaise, Philippe VI parvient à convaincre son vieil allié écossais d'attaquer l'Angleterre par le nord car, Édouard III ayant regroupé son armée en France, la frontière écossaise devrait être peu défendue. Le 7 octobre 1346, David II d'Écosse, roi d'Écosse, attaque l'Angleterre à la tête de 12 000 hommes. Mais il est défait et capturé à la bataille de Neville's Cross. Hélas la stratégie et la tactique de David II ne permirent pas de profiter de l'effet de surprise. Il ne semble pas que les Écossais aient vu l'intérêt d'une action rapide. Après avoir pris Liddell (et contournant Carlisle et avoir été payés pour leur protection), les Écossais se déplacèrent vers leur but, Durham et le Yorkshire, après plus d'une semaine de marche. En route, ils mirent à sac le prieuré de Hexham et brûlèrent le territoire le long de leur progression. Ils arrivèrent à Durham le 16 octobre et campèrent à Beaurepaire, où les Écossais se virent offrir 1 000 £ pour leur protection qui devaient être versées le 18 octobre.\n\nNéanmoins, à l'insu des Écossais, les Anglais avaient préparé des troupes en cas d'invasion. Une fois que les Écossais furent entrés en Angleterre, une armée fut rapidement rassemblée à Richmond sous les ordres de William Zouche, archevêque de York. Ce n'était toutefois pas une grande armée, et les hommes disponibles étaient répartis en deux groupes :\n\nle premier, formé de 3 000 à 4 000 hommes du Cumberland, Northumberland et Lancashire,\nle second, de 3 000 hommes du Yorkshire, était en route.\nDu fait des exigences du siège de Calais, aucun autre soldat ne pouvait être mobilisé pour la défense du Nord de l'Angleterre. Le pire est que tandis que les Écossais saccageaient Hexham, l'archevêque décida de ne pas attendre les troupes du Yorkshire, et de faire mouvement vers le château Barnard. David II mena l'armée écossaise sur la hauteur de Neville's Cross (emplacement d'une vieille croix de pierre anglo-saxonne), d'où il prépara son armée pour la bataille. Les Écossais comme les Anglais s'organisèrent en trois bataillons. Bien que la position des Écossais fut stratégiquement peu favorable (plusieurs obstacles les séparant des Anglais), ils se rappelaient parfaitement leurs défaites aux batailles de Dupplin Moor et d'Halidon Hill et adoptèrent donc une position défensive pour attendre l'attaque anglaise. Cependant, les Anglais prirent eux aussi une position défensive sachant que la leur était plus favorable et que l'attente jouait en leur faveur. L'impasse dura jusqu'à l'après-midi quand les Anglais envoyèrent leurs archers en avant pour harceler les lignes écossaises. Les archers réussirent dans leur entreprise et les Écossais furent contraints de réagir, ce qui mit en évidence les inconvénients de leur mauvaise position stratégique : quand ils commencèrent à progresser et que leurs rangs se disloquaient tandis qu'ils avançaient, les Anglais purent profiter de leur avantage. Quand l'issue du combat sembla clairement en faveur des Anglais, Robert Stewart et le comte de March s'enfuirent, laissant le bataillon de David II seul face à l'ennemi. Tard dans l'après-midi, le bataillon du roi entreprit de faire retraite. Mais ce fut un échec et David fut capturé (avec difficulté) avec le comte de Fife, le comte de Sutherland et le comte de Menteith. Pendant ce temps le reste de l'armée écossaise était poursuivi sur une trentaine de kilomètres et John Randolph, 3e comte de Moray, était tué avec Maurice de Moray, comte de Strathearn.\n\nContrairement à la légende populaire, Édouard III ordonna l'emprisonnement des prisonniers de haut rang y compris David II, la demande de rançon étant interdite sans l'accord exprès du Conseil. Cet ordre impopulaire fut d'une manière ou d'une autre ignoré, et David II fut conduit à la tour de Londres en janvier 1347, où il passa plus de 10 ans avant d'être libéré contre une rançon de 100 000 marks. Le soldat qui avait réussi à capturer David II reçut le titre de banneret et 500 £ par an.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BNMsFr2643FroissartFol97vBatNevilleCross.jpg/960px-BNMsFr2643FroissartFol97vBatNevilleCross.jpg",
+    "legende": "Bataille de Neville's Cross d'après le manuscrit du XVe siècle Jean Froissart (Paris BnF (Mss.), Français 2643).",
+    "video": "https://www.youtube.com/watch?v=Ua5cK6yQ0l0"
+  },
+  {
+    "id": 678,
+    "titre": "Le royaume de Vijayanagara domine tout le Deccan",
+    "date": 1346,
+    "mois": 2,
+    "zones": [
+      "Inde"
+    ],
+    "type": 2,
+    "description": "23 février 1346 , Inde : les cinq frères Sangama célèbrent au temple de Shiva à Sringeri la domination par le roi de Vijayanâgara Harihara de tout le Deccan d'une côte à l'autre. Après la mort du dernier souverain la dynastie hindou des Hoysala du Mysore, Ballala IV, Harihara devient souverain de l'ancien empire Hoysala\nLe royaume de Vijayanâgara ou royaume de Vijayanâgar, aussi appelé empire Vijayanagara autrefois dit de Bisnagar, de Narsingue, ou encore de Carnate (de son nom originel (karṇāṭa rājya) est un État de la fin du Moyen Âge qui règne sur une grande partie du sud de l'Inde. Il est fondé en 1336 par les frères Harihara Ier et Bukka Raya I (en) de la dynastie Sangama (en), membres d'une communauté de bergers qui revendiquent la lignée des Yadava (bergers). Le royaume prend de l'importance comme point culminant des tentatives des puissances du Sud pour repousser les invasions musulmanes à la fin du XIIIe siècle. À son apogée, il soumet presque toutes les dynasties dirigeantes du sud de l'Inde et pousse les sultanats du Deccan au-delà de la région du Doab des rivières Tungabhadra et Krishna, en plus d'annexer le royaume Gajapati (en) (Odisha) jusqu'au fleuve Krishna, devenant ainsi l'un des États les plus importants en Inde. Le territoire de l'empire couvrait la plupart des superficies des États indiens actuels du Karnataka, de l'Andhra Pradesh, du Tamil Nadu, de Goa et certaines parties du Telangana, du Maharashtra et du Kerala.\nAu cours des deux premières décennies après la fondation du royaume, Harihara Ier prit le contrôle de la majeure partie de la zone au sud de la rivière Tungabhadra et obtint le titre de « maître des mers orientales et occidentales » (Purvapaschima Samudradhishavara). En 1374, Bukka Raya I (en), successeur d'Harihara Ier, vainquit la chefferie d'Arcot, les Reddys de Kondavidu et le sultan de Madurai (en), et prit le contrôle de Goa à l'ouest et de l'interfluve (Doāb) des rivières Tungabhadra-Krishna au nord[25],[26],[27]. La capitale d'origine du royaume se trouvait dans la principauté d’Anegondi, sur la rive nord de la rivière Tungabhadra, dans l'actuel Karnataka. Elle fut déplacée à Vijayanagara pendant le règne de Bukka Raya Ier car il était plus facile de s'y défendre contre les armées musulmanes, qui attaquaient constamment depuis les terres du nord",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/View_of_tower_and_mantapa_at_the_Raghunatha_temple_in_Hampi.JPG/500px-View_of_tower_and_mantapa_at_the_Raghunatha_temple_in_Hampi.JPG",
+    "legende": "Vue de la tour et du mantapa du temple de Ragunatha (Râma) à Hampi."
+  },
+  {
+    "id": 679,
+    "titre": "Expéditions de Jaume Ferrer",
+    "date": 1346,
+    "zones": [
+      "Monde"
+    ],
+    "type": 2,
+    "description": "Cette expédition est évoquée par l’atlas catalan de 1375  Tout à fait au sud-ouest de la carte, au sud des îles Canaries, l'auteur témoigne de l'intérêt de Majorque vis-à-vis de l'exploration de la côte occidentale de l'Afrique en faisant le choix de représenter l'expédition de Jaume Ferrer (en), dont il précise qu'il est parti le 10 août 1346 à la recherche du légendaire « riu d'Or », le fleuve de l'or. Il s'agît du premier document à faire mention de cette expédition dont l'échec ou la réussite ne nous est pas connu\nAu nord du bateau, les îles Canaries sont représentées avec une grande précision de façon multicolore. Situées tout à fait à l'occident de la mappemonde, elles sont allégoriques des îles des Bienheureux, symbole grec du paradis alors que par opposition l'extrême-orient est chargé de figures démoniaques\nLes seules informations disponibles concernant son expédition sont la description et la note de l' Atlas catalan de 1375 et un annuaire géographique génois de 1802. , attribuées au cartographe majorquin Abraham Cresques (patronyme correct : Cresques Abraham). Dans le coin inférieur gauche de la carte, on peut voir un navire aux couleurs vives, battant pavillon aragonais , et une note indiquant simplement que « Jacme Ferrer » partit à bord d'un uxer le 10 août 1346 à la recherche du « Riu de l'Or » (fleuve d'Or). [ 3 ] Un uxer est une galère de transport à un seul mât, gréée en carré et propulsée par des rames, avec une poupe arrondie et une proue basse , couramment utilisée pour le transport de chevaux. La position géographique du navire (au pied des îles Canaries ) suggère que Ferrer a probablement dépassé le cap Bojador , alors le summum de la navigation, au-delà duquel les navires européens n'osaient pas naviguer. Si Ferrer a survécu et est revenu, son exploit a précédé de près d'un siècle le célèbre passage réussi de ce cap par l'explorateur portugais Gil Eanes en 1434. La « Rivière d'Or », fréquemment évoquée par les commerçants transsahariens , était une référence au fleuve Sénégal qui coulait au cœur de l' Empire du Mali producteur d'or.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Jacme_ferrer.jpg",
+    "legende": "Détail de l' Atlas catalan de 1375 représentant le navire de Jaume Ferrer"
+  },
+  {
+    "id": 680,
+    "titre": "Mauvaises récoltes en Europe occidentale (Italie, France, Angleterre,)",
+    "date": 1346,
+    "date_fin": 1347,
+    "zones": [
+      "France",
+      "Angleterre",
+      "Italie"
+    ],
+    "type": 2,
+    "image": ""
+  },
+  {
+    "id": 681,
+    "titre": "Faillite des Bardi à Florence",
+    "date": 1346,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Entre 1250 et 1345, la famille Bardi a constitué une compagnie bancaire et commerciale Compagnia dei Bardi, avec des comptoirs commerciaux en Italie, en Europe, au Levant et en Afrique du Nord, finançant entre autres les rois de France et d'Angleterre[1]. 1318 est l'année durant laquelle la famille réalise son chiffre d'affaires maximal, d'une valeur de 3 tonnes d’or. Les Bardi, collecteurs des décimes pontificales, voient leur déclin et leur faillite en 1345, à la suite de prises de risque inconsidérées en finançant les deux premières campagnes d'Édouard III contre la France[2],[1] et la guerre de Florence contre Lucques.",
+    "image": ""
+  },
+  {
+    "id": 682,
+    "titre": "Peste noire en Égypte",
+    "date": 1346,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "image": ""
+  },
+  {
+    "id": 684,
+    "titre": "Charles Grimaldi achète Menton",
+    "date": 1346,
+    "mois": 4,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "19 avril : Charles Grimaldi achète Menton qui reste à la famille Grimaldi jusqu'au 29 septembre 1792.",
+    "image": ""
+  },
+  {
+    "id": 685,
+    "titre": "Chios reconquise par les Génois",
+    "date": 1346,
+    "mois": 6,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "16 juin - 3 septembre : Chios perdue par Gênes en 1329, est reconquise par une compagnie d’armateur Génois, la mahone.",
+    "image": ""
+  },
+  {
+    "id": 686,
+    "titre": "Geoffroy d'Harcourt, brûle les faubourgs d'Avranches",
+    "date": 1346,
+    "mois": 7,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Renault de Gobehen, sous la conduite de Geoffroy d'Harcourt, brûle les faubourgs d'Avranches pour Édouard III, qui envahissait la Normandie",
+    "image": ""
+  },
+  {
+    "id": 687,
+    "titre": "Fondation de l'université de Valladolid",
+    "date": 1346,
+    "mois": 7,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "31 juillet : bulle de Clément VI consacrant la fondation de l'université de Valladolid en Espagne",
+    "image": ""
+  },
+  {
+    "id": 688,
+    "titre": "Pillage du Ponthieu par les Anglais",
+    "date": 1346,
+    "mois": 8,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Les troupes anglaises, qui pillent et brûlent les villages du Ponthieu sur leur passage, mettent à sac Ponthoile le jour de la Saint-Barthélémy, à peine deux jours avant la bataille de Crécy, brûlant l'Église, datant du XIIe siècle",
+    "image": ""
+  },
+  {
+    "id": 689,
+    "titre": "L'Etonie sous le contrôle des Teutoniques",
+    "date": 1346,
+    "mois": 8,
+    "zones": [
+      "St Empire",
+      "Scandinavie"
+    ],
+    "type": 1,
+    "description": "l'Estonie passe sous le gouvernement des Chevaliers teutoniques qui l'ont achetée pour 19 000 marks d'argent au Danemark.",
+    "image": ""
   },
   {
     "id": 8,
@@ -7402,6 +7704,53 @@
     ],
     "type": 3,
     "description": "Les Mérinides du Maroc l’emportent  contre le sultan Hafside de Tunisie et dominent tout le Maghreb mais leurs échecs en Espagne et l’arrivée de la peste noire marqueront le début de leur déclin.",
+    "image": ""
+  },
+  {
+    "id": 667,
+    "titre": "Prise de Tunis par les Mérinides",
+    "date": 1347,
+    "mois": 9,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 2,
+    "description": "Le sultanat mérinide atteint son apogée sous le règne d'Abu al-Hasan ben Uthman (1331-1348) qui entame une politique d'expansion territoriale au Maghreb central[13]. En 1333, toujours en possession de Ronda et d'Algésiras, il conquiert Gibraltar, vingt ans après qu'elle a été prise par les Castillans[20]. Il dirige ensuite l'armée vers des objectifs stratégiques pour le contrôle du commerce transsaharien et reprend le contrôle de Sijilmassa en 1332[21]. Puis, en 1337, après un siège de deux ans, Tlemcen tombe. Il poursuit sa conquête en direction de l'Ifriqiya[19]. Ce faisant, il s'assure le contrôle des principales voies commerciales[19].\nAprès ces victoires, l'armée mérinide doit retourner dans la péninsule ibérique. Elle est mise en déroute le 30 octobre 1340 lors de la bataille du Río Salado. Plusieurs membres de la famille royale y trouvent la mort, ainsi que l'épouse du sultan. Le 26 mai 1344, Algésiras tombe également au profit des Castillans, signant la fin des ambitions ibériques de la dynastie[21]. En quête de prestige, le sultan trouve un prétexte au printemps 1346 pour envahir le reste des territoires ifriqiyen, à savoir qu'il n'a pas reçu de réponse à sa demande de mariage d'une princesse hafside[22]. La campagne débute le 25 mars 1347 depuis Tlemcen et prend possession de la majorité des villes, tandis que les délégations de Gafsa, Tripoli et Bizerte annoncent leur soumission. L'armée s'empare ensuite de Constantine puis de Tunis[21].\nAprès cette phase d'expansion, Abu al-Hassan tente d'organiser ses nouvelles conquêtes, positionnant des cheikhs mérinides au contrôle des villes. Cette situation provoque le soulèvement des tribus arabes qui affrontent l'armée du sultan à Kairouan, celui-ci en réchappe de peu et s'échappe, laissant sur place une situation chaotique de laquelle se dégage la rumeur de sa mort[]. défaite du sultan Mérinide Abû al-Hasan à la bataille de Kairouan devant la révolte des tribus arabes du Sud tunisien et la sécession de Tripoli. Il doit se réfugier au Maroc.En conséquence, Abu Inan Faris, son fils, se fait proclamer roi à Tlemcen et rentre à Fès pour être proclamé sultan. Un de ses frères, également prétendant, se soulève pour la succession[21]. Selon les sources, la version diverge. Selon Michel Abitbol, Abu al-Hassan est toujours en vie et meurt en 1351 chez les Hintata avant d'être découvert par son fils Abu Inan Faris[24]. Une autre version appuyée par plusieurs auteurs est qu'Abu Inan est soutenu par les cheikhs et tue son père lors d'un affrontement militaire, ou le pousse à se réfugier et mourir un an plus tard",
+    "image": ""
+  },
+  {
+    "id": 668,
+    "titre": "Pisano cathédrale d'Orvieto",
+    "date": 1347,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Andrea Pisano devient maître d’œuvre de la cathédrale d'Orvieto. \nDe style gothique, elle est notamment célèbre pour sa façade, ainsi que pour la chapelle San Brizio, décorée des fresques de Fra Angelico et Luca Signorelli. La première pierre fut posée le 13 novembre 1290 par le pape Nicolas IV. Dénommée pendant plus de quatre siècles Santa Maria delle Stella – Sainte Marie de l’Étoile – elle fut rebaptisée Santa Maria Assunta in Cielo au XIXe siècle.\nDurant la première période de la construction, les travaux ont été dirigés par Fra’ Bevignate mais c’est avec l’arrivée de Lorenzo Maitani (1308) que des modifications radicales au projet initial furent introduites avec la mise en œuvre d’un plan gothique en croix latine. Toujours de Maitani est la façade imposante à trois gables et trois pignons (1310). L’achèvement du transept fut réalisé avec la chapelle du Corporal (1350-1355) et la chapelle de Saint Brice (1408). D’autres artistes illustres se manifestèrent à Orvieto comme Andrea Pisano en 1347, Andrea Orcagna en 1359, Antonio Federighi (de 1415 à 1456) et Antonio da Sangallo le Jeune qui refit le pavement de la cathédrale.\nEn 1890, on voulut revenir à une certaine pureté originelle en retirant des éléments postérieurs datant du Moyen Âge tardif et de la Renaissance.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Orvieto_-_Duomo_di_Orvieto_-_2023-10-01_01-15-01_001.JPG/500px-Orvieto_-_Duomo_di_Orvieto_-_2023-10-01_01-15-01_001.JPG"
+  },
+  {
+    "id": 670,
+    "titre": "Jean Cantacuzène chasse la régente Anne de Savoie",
+    "date": 1347,
+    "mois": 2,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "Jean Cantacuzène, aidé des Turcs et des Serbes prend Constantinople, chasse la régente Anne de Savoie soutenue par les Bulgares et se fait reconnaître empereur principal. \nDevenu empereur, Jean Cantacuzène prend le titre de Jean VI, montrant ainsi qu'il refuse la préséance de rang sur l'empereur légitime, Jean V Paléologue. Cet arrangement n'est pas approuvée par la dynastie règnante, qui persiste à ne voir en lui qu'un usurpateur.\n\nSoucieux de ramener la paix dans l'Empire, il accorde une amnistie générale à ceux qui l'avaient combattu, à l'exception de Jean XIV Kakélas qui refusa toujours d'être pardonné comme de lui pardonner et maintint l'excommunication qu'il avait prononcée contre lui en 1341.\n\nIl est couronné en l'église de la Vierge des Blachernes par le nouveau patriarche Isidore Ier de Constantinople, le 13 mai 1347[1]. Illustration de la décrépitude des finances impériales, le couronnement ne peut avoir lieu à Sainte-Sophie, trop délabrée, les joyaux de la couronne, gagés à Venise, sont remplacés par de la verroterie et la vaisselle du banquet était en simple terre cuite.Le règne de Jean VI est marqué par de nombreux troubles intérieurs, tant sur le plan social que sur le plan militaire :\n\nla peste noire s'abat sur l'Empire dès la première année du règne, ravageant notamment Constantinople, aggravant l'état de découragement et d'apathie dans lequel se trouvaient les byzantins après deux guerres civiles ;\nses anciens alliés et ceux d'Anne de Savoie (vénitiens et turcs) se font menaçants, notamment Etienne V, tsar de Serbie ;\nil doit faire face aussi à une opposition populaire et religieuse, et à une révolte des Zélotes à Thessalonique ;\nen août 1348 les Génois envahissent la Corne d'Or et incendient la flotte byzantine.\nil doit céder aux Génois Salymbrie et Héraclée en 1352, malgré le concours des Vénitiens et doit faire face à une nouvelle guerre civile, qui l'oppose à Jean V, dès 1351.\nRéorganisation de l'Empire\nIl abandonne la division de l'empire en thèmes, et met en place un système d'apanages pour le gouvernement de l'empire ; cette réorganisation correspond à la dispersion des territoires byzantins.\nLes territoires byzantins sont alors divisés en trois ensembles :\nla Thrace avec Constantinople,\nla Morée byzantine (où Jean VI, envoie son deuxième fils Manuel comme despote de Mistra),\nThessalonique, favorable aux Paléologues.\nAbdication et retraite\nLa population de Constantinople demeure cependant attachée à la dynastie légitime des Paléologues, et en particulier à Jean V et s'oppose de plus en plus nettement à Jean VI. L'opposition se renforce en avril 1353 lorsque Jean VI fait proclamer coempereur son fils Mathieu Cantacuzène.",
+    "image": ""
+  },
+  {
+    "id": 683,
+    "titre": "un capitaine anglais met Lannion à sac.",
+    "date": 1347,
+    "mois": 1,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
     "image": ""
   },
   {
@@ -7664,6 +8013,20 @@
     "regne": true
   },
   {
+    "id": 662,
+    "titre": "David II roi d'Ecosse 2d règne",
+    "date": 1357,
+    "mois": 10,
+    "date_fin": 1371,
+    "mois_fin": 2,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "À son retour en Écosse en 1357, David II d'Écosse doit affronter des difficultés à la fois politiques, financières et personnelles. Sa situation conjugale se dégrade durablement : son attachement à Catherine Mortimer, assassinée en 1360, entraîne une rupture avec Jeanne de la Tour, qui se retire en Angleterre. Ses mariages successifs avec Margaret Drummond puis son projet d’union avec Agnès Dunbar témoignent de sa volonté persistante d’assurer une descendance, objectif qui demeure pourtant inabouti et constitue un facteur majeur d’instabilité politique.\n\nLa question financière domine également son règne. Le paiement de la rançon fixée par le traité de 1357 s’avère rapidement problématique, compromettant les relations avec Édouard III d'Angleterre et mettant en danger les nobles écossais retenus comme otages. Les négociations qui s’ensuivent révèlent les tensions entre souveraineté et pragmatisme : en 1363, une proposition anglaise prévoit l’abandon de la rançon en échange d’une succession anglaise en cas de décès sans héritier, solution rejetée par le Parlement écossais. Finalement, dans le contexte de la guerre de Cent Ans, un compromis est trouvé en 1369 avec un allègement de la dette et une trêve durable, illustrant l’importance des rapports de force internationaux.\n\nSur le plan intérieur, David II doit composer avec une aristocratie renforcée par son absence prolongée. Des figures majeures comme Robert Stuart, Patrick V de Dunbar et William Douglas dominent la scène politique. Le roi adopte une politique d’équilibre : il reconnaît leur pouvoir en leur attribuant titres et honneurs, tout en cherchant à promouvoir ses propres fidèles, notamment issus de son entourage ou liés à la famille Drummond. Cette stratégie de patronage, parfois perçue comme partisane, provoque des tensions, voire des révoltes, comme celle de 1363, rapidement réprimée.\n\nPar ailleurs, David II tente de réaffirmer l’autorité royale, notamment dans les Highlands, en imposant discipline et contrôle aux grands seigneurs territoriaux. Toutefois, ces efforts s’inscrivent dans un contexte de rivalités persistantes, notamment avec Robert Stuart, brièvement emprisonné, ce qui révèle la fragilité de l’équilibre politique.\n\nEnfin, la question de la succession demeure centrale. Faute d’héritier, David II semble s’orienter vers une transmission dynastique en faveur des Stuart, tout en cherchant à encadrer cette transition par des alliances matrimoniales stratégiques. À sa mort en 1371, Robert Stuart accède au trône sous le nom de Robert II, marquant une continuité dynastique mais aussi l’échec partiel de David II à restaurer pleinement l’autorité monarchique.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Royal_Coat_of_Arms_of_the_Kingdom_of_Scotland.svg/langfr-960px-Royal_Coat_of_Arms_of_the_Kingdom_of_Scotland.svg.png"
+  },
+  {
     "id": 10,
     "titre": "Jacquerie",
     "date": 1358,
@@ -7674,6 +8037,17 @@
     "description": "Soulèvement paysan d'une rare violence en Île-de-France et Picardie, déclenché par les exactions fiscales après la défaite de Poitiers. La révolte est écrasée dans le sang par la noblesse. Premier grand mouvement social de la France médiévale.",
     "image": "",
     "sources": "Jean Froissart, Chroniques"
+  },
+  {
+    "id": 669,
+    "titre": "Orcagna Rosace de la cathédrale d'Orivieto",
+    "date": 1358,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Œuvre de Andrea Orcagna en 1358, la splendide rosace à double cercle de colonnettes séparés par des arcs montre au centre le visage du Rédempteur. Les figures des quatre Docteurs de l’Église ornent les angles du carré dans lequel s’inscrit la rosace, et que bordent 52 têtes de saints en relief du XIVe siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Rosone_del_Duomo_di_Orvieto.JPG/500px-Rosone_del_Duomo_di_Orvieto.JPG"
   },
   {
     "id": 189,
@@ -8204,6 +8578,20 @@
     "regne": true
   },
   {
+    "id": 663,
+    "titre": "Robert III (roi d'Écosse)",
+    "date": 1390,
+    "mois": 4,
+    "date_fin": 1406,
+    "mois_fin": 4,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Robert III (vers 1337 – 4 avril 1406), né sous le nom de Jean Stewart est le fils aîné du roi Robert II et de sa maîtresse Elizabeth Mure, a été légitimé par le mariage formel de ses parents en 1349.\nDébut 1363, John, devenu Lord de Kyle, joue un rôle actif dans la rébellion de son père contre son grand-oncle, le roi David II d'Écosse, En 1367, David II lui fait épouser Annabella, la nièce de la reine Marguerite Drummond, et le fait comte de Carrick. Quand son père devient roi quatre ans après sous le nom de Robert II d'Écosse à l'âge de 55 ans, il prend part activement au gouvernement du royaume avec ses frères cadets.\nEn novembre 1384, il est nommé Gardien de l'Écosse pour le compte de son père devenu sénile. Le 1er décembre 1388 il doit céder cette charge à son frère Robert, comte de Fife, car il aurait été rendu invalide à la suite d'un coup donné par un cheval[3]. Il n'en succède pas moins à son père sur le trône lors de son décès en avril 1390 mais son frère obtient d'être confirmé dans sa charge de Gardien du Royaume avant son couronnement le 14 août 1390.\nÀ ce moment, il remplace Jean, son nom de baptême - impopulaire à cause de sa similitude avec Jean de Baliol - par celui de Robert lorsqu'il est couronné par Walter Trayl, à Scone le 14 août 1390, avec son épouse Annabella, sous le nom de Robert III. Bien qu'il ait probablement assisté à plusieurs séances du parlement, le nouveau roi ne dirige que nominalement du pays, le pouvoir réel restant entre les mains de son frère, le comte de Fife. \nNéanmoins, en 1399, à cause de la « maladie du corps » du roi, son fils aîné, David, duc de Rothesay, reçoit le titre de lieutenant du royaume ; mais s'ensuivent une invasion anglaise de l'Écosse, de sévères différends entre Rothesay et son oncle Robert, désormais duc d'Albany, et finalement, en mars 1402, la mystérieuse mort de Rothesay au palais de Falkland[2].\n\nCraignant pour la vie de Jacques, son fils survivant, le roi tient le garçon caché au château de Dirleton, en vue de lui faire quitter secrètement le pays pour la France. Robert III prend la décision de l'envoyer en France en 1406 pour garantir sa sécurité.\n\nPendant ce voyage, son navire est capturé en février par des pirates anglais et il est amené à Henri IV d'Angleterre qui le met en résidence surveillée et demande une rançon à son père. Robert III, dit-on, serait mort de chagrin à cette nouvelle. Selon la tradition, Robert demande même à être enterré sous un monticule de déjections avec comme épitaphe : « Ici repose le pire des Rois et le plus malheureux des hommes ». En fait, il a été enterré à Paisley, au lieu de Scone, la sépulture traditionnelle des Rois d'Écosse, ne s'estimant pas digne de cet honneur.",
+    "image": ""
+  },
+  {
     "id": 192,
     "titre": "Manuel II Paléologue",
     "date": 1391,
@@ -8339,6 +8727,20 @@
     "regne": true
   },
   {
+    "id": 664,
+    "titre": "Robert duc d'Albany Régent d'Écosse",
+    "date": 1406,
+    "mois": 4,
+    "date_fin": 1420,
+    "mois_fin": 9,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Le roi Robert III d'Écosse ayant été sévèrement blessé par une ruade, c'est son frère cadet Robert comte de Fife qui exerce la réalité du pouvoir. Mais il doit le partager à partir de 1399 avec le duc David Stuart, le fils aîné de Robert III, héritier du trône. L'oncle et le neveu ne s'entendent pas et le second trouve la mort dans des circonstances troublantes en 1402 au château de Falkland[1].\n\nÀ la mort de son frère aîné, Jacques devient héritier du royaume à l'âge de huit ans. Robert III prend la décision de l'envoyer en France en 1406 pour garantir sa sécurité.\n\nPendant ce voyage, son navire est capturé en février par des pirates anglais et il est amené à Henri IV d'Angleterre qui le met en résidence surveillée et demande une rançon à son père. Robert III, dit-on, serait mort de chagrin à cette nouvelle. L'oncle du jeune Jacques, Robert, duc d'Albany, devient donc régent d'Écosse, mais ne se presse pas pour payer la rançon du jeune roi, conservant ainsi son pouvoir sur le royaume. Jacques Ier reste dix-huit ans détenu à la cour de Windsor. Pendant cette captivité, il reçoit une excellente éducation, se familiarise avec l'administration et le gouvernement et accompagne même Henri V lors de campagnes militaires en France. Il compose également des poèmes et s'éprend de Jeanne Beaufort, une princesse anglaise avec qui il se fiance.\n\nRobert d'Albany meurt en 1420 et la régence passe à son fils Murdoch. C'est pendant la régence des deux ducs d'Albany que le roi de France Charles VII obtint de l'allié écossais l'envoi d'un corps expéditionnaire qui lui est fort utile pour combattre les Anglais pendant la période de la guerre de Cent Ans comprise entre le traité de Troyes et l'intervention de Jeanne d'Arc[2]. La rançon de 40 000 £ est enfin payée. Jacques épouse alors Jeanne, fille de Jean Beaufort, comte de Somerset, le 2 février 1424 à Southwark près de Londres, dont il a huit enfants. Le couple retourne ensuite en Écosse où il trouve le pays dans le chaos.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Blason_Robert_Stuart_d%27Albany.svg/330px-Blason_Robert_Stuart_d%27Albany.svg.png"
+  },
+  {
     "id": 154,
     "titre": "Jobst de Moravie",
     "date": 1410,
@@ -8443,6 +8845,35 @@
     "description": "Charles VI, sous influence bourguignonne, reconnaît Henri V d'Angleterre comme héritier de France. Le Dauphin Charles est déclaré bâtard et exclu de la succession. La France est au bord de l'effacement en tant que royaume indépendant.",
     "image": "",
     "sources": "Enguerrand de Monstrelet, Chronique"
+  },
+  {
+    "id": 665,
+    "titre": "Murdoch Stuart 2e duc d'Albany  Régent d'Ecosse",
+    "date": 1420,
+    "mois": 9,
+    "date_fin": 1424,
+    "mois_fin": 4,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Son père, Robert Stuart, 1er duc d'Albany fut régent du royaume, avec des pouvoirs différents, durant les règnes de trois rois (Robert II, Robert III et Jacques Ier).\n\nMurdoch occupe la charge de justicier au nord du Forth vers 1389, et participe à plusieurs opérations militaires contre le royaume d'Angleterre au début du XVe siècle. Il est capturé par les Anglais en 1402, mais négocie avec Henry Percy, 1er comte de Northumberland. Bien que Murdoch ait hérité des pairies de son père et de la régence en 1420, quand Jacques Ier rentre en Écosse, en 1424, il perd sa fonction de régent.\nEn 1425, le roi décide de se débarrasser des Stuart d'Albany, et il est exécuté avec plusieurs membres de sa famille et de ses proches collaborateurs ; tous ses titres de pairie sont confisqués.",
+    "image": ""
+  },
+  {
+    "id": 666,
+    "titre": "Jacques Ier (roi d'Écosse)",
+    "date": 1424,
+    "mois": 5,
+    "date_fin": 1437,
+    "mois_fin": 2,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": ", surnommé « le captif », incarne une figure singulière de la monarchie écossaise médiévale, marquée par une longue captivité en Angleterre suivie d’un règne réformateur mais autoritaire. Fils de Robert III d'Écosse, il accède théoriquement au trône en 1406, mais son pouvoir est confisqué durant près de dix-huit ans par sa détention en Angleterre, conséquence de sa capture par des Anglais alors qu’il était envoyé en France pour sa sécurité.\n\nDurant cette captivité, Jacques bénéficie d’une formation politique et culturelle approfondie à la cour anglaise, notamment sous Henri V d'Angleterre. Cette expérience, qui inclut sa participation à des campagnes militaires et la rédaction de son œuvre poétique The Kingis Quair, façonne sa conception du pouvoir. Parallèlement, l’Écosse est gouvernée par les régents de la maison d’Albany, dont Robert Stuart duc d'Albany et son fils Murdoch, qui tirent profit de son absence pour consolider leur autorité.\n\nLibéré en 1424 après le paiement d’une rançon et son mariage avec Jeanne Beaufort, Jacques Ier revient dans un royaume profondément désorganisé. Son règne s’ouvre par une reprise en main brutale de l’aristocratie : il fait exécuter Murdoch d’Albany et plusieurs de ses alliés en 1425, marquant ainsi sa volonté de restaurer l’autorité royale face aux grandes familles qui avaient dominé durant sa captivité.\n\nJacques Ier mène ensuite une politique active de centralisation et de réforme. Il impose son autorité dans les régions périphériques, notamment dans les Highlands face à Alexandre II MacDonald, et développe une œuvre législative importante qui lui vaut le titre de « roi législateur ». Ses réformes visent à renforcer l վարչական contrôle, notamment par l’usage de la langue vernaculaire dans les lois, la réorganisation du parlement et la réforme religieuse, dans un contexte marqué par la lutte contre les mouvements dissidents comme le lollardisme.\n\nSur le plan extérieur, il maintient l’alliance traditionnelle avec la France dans le cadre de la guerre de Cent Ans, tout en adoptant une politique plus prudente que ses prédécesseurs. Sa stratégie dynastique se concrétise avec la naissance d’un héritier masculin en 1430, assurant la continuité de la dynastie.\n\nCependant, son autoritarisme et ses réformes suscitent de fortes oppositions. Les tensions politiques, exacerbées par des contestations de légitimité dynastique et des échecs militaires comme celui de Roxburgh en 1436, conduisent à un complot nobiliaire. Jacques Ier est finalement assassiné en 1437 par Robert Graham. Néanmoins, la monarchie est rapidement restaurée par son entourage, qui assure la succession de son fils, Jacques II d'Écosse.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/King_James_I_of_Scotland.jpg/960px-King_James_I_of_Scotland.jpg",
+    "legende": "Portrait de Jacques Ier, XVIe siècle, Scottish National Portrait Gallery."
   },
   {
     "id": 19,

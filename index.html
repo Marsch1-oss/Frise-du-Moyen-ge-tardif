@@ -32,22 +32,17 @@
     .nav-bar { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
     .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.28rem 0.9rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
     .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-    .nav-btn.active { background: var(--ink); color: var(--parchment); border-color: var(--ink); font-weight: 600; }
+    .nav-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; letter-spacing: 0.02em; }
     /* ── Boutons zoom ── */
     .nav-sep { flex: 0 0 1px; height: 1.4rem; background: var(--border-dark); margin: 0 0.2rem; align-self: center; }
-    .zoom-btn {
-      font-size: 1.05rem; line-height: 1;
-      padding: 0.28rem 0.65rem;
-      border: 1.5px solid var(--border-dark);
-      border-radius: 50%;
-      background: rgba(245,237,216,0.7);
-      color: var(--ink-soft);
-      cursor: pointer;
-      transition: all 0.18s;
-      user-select: none;
+    .help-inline {
+      font-size: 0.78rem; color: var(--ink-muted); font-style: italic;
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.45rem; flex-wrap: wrap;
     }
-    .zoom-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-    .zoom-btn:disabled { opacity: 0.35; cursor: default; }
+    .help-zoom { color: var(--gold); font-weight: 500; }
+    .help-sep-dot { color: var(--border-dark); }
+    /* .zoom-btn supprimé — loupes retirées de l'interface */
 
         .nav-btn:disabled { opacity: 0.35; cursor: default; }
 
@@ -133,11 +128,33 @@
     .axis-bar { flex: 1; position: relative; height: 30px; border-bottom: 1.5px solid var(--border-dark); }
     .tick { position: absolute; bottom: 5px; font-size: 0.72rem; color: var(--ink-muted); transform: translateX(-50%); white-space: nowrap; font-style: italic; pointer-events: none; }
     .tick-line { position: absolute; bottom: 0; width: 1px; height: 7px; background: var(--border-dark); transform: translateX(-50%); pointer-events: none; }
-    .axis-band { position: absolute; top: 0; bottom: 0; cursor: pointer; border-left: 1px dashed var(--border); transition: background 0.15s; }
+    .axis-band {
+      position: absolute; top: 0; bottom: 0;
+      cursor: pointer;
+      border-left: 1px dashed var(--border);
+      transition: background 0.18s;
+      border-radius: 3px;
+    }
+    .axis-band:hover {
+      background: rgba(154,107,26,0.13);  /* doré translucide */
+      border-left-color: var(--gold);
+    }
+    .axis-band:hover::after {
+      content: attr(data-label);
+      position: absolute;
+      top: 2px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.62rem;
+      color: var(--gold);
+      font-style: italic;
+      white-space: nowrap;
+      pointer-events: none;
+    }
     .axis-band:hover { background: rgba(100,60,20,0.07); }
 
     /* Pistes */
-    .track-row { display: flex; align-items: stretch; margin-bottom: 0.35rem; }
+    .track-row { display: flex; align-items: stretch; margin-bottom: 0.35rem; border-radius: 3px; }
+    .track-row:nth-child(even) { background: rgba(0,0,0,0.018); }
     .zone-label { align-self: stretch; display: flex; align-items: flex-start; padding-top: 4px; width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
     .zone-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .track { flex: 1; position: relative; overflow: visible; min-width: 0; }
@@ -145,7 +162,7 @@
 
     /* Chips */
     .evt-chip { position: absolute; cursor: pointer; transition: filter 0.15s; z-index: 1; }
-    .evt-chip:hover { z-index: 10; filter: brightness(1.15); }
+    .evt-chip:hover { z-index: 10; filter: brightness(1.15); box-shadow: 0 3px 10px rgba(0,0,0,0.22); transform: translateY(-1px); transition: filter 0.12s, box-shadow 0.12s, transform 0.12s; }
     .chip-dot { border-radius: 50%; border: 2px solid rgba(245,237,216,0.7); }
     /* type 1 = plus grand, type 3 = plus petit — géré en JS via style.width/height */
 
@@ -474,7 +491,7 @@
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
-      box-shadow: 0 1px 6px rgba(100,80,40,0.12);
+      box-shadow: 0 2px 10px rgba(100,80,40,0.18);
     }
     #period-banner .pb-label {
       font-family: 'IM Fell English', Georgia, serif;
@@ -581,17 +598,23 @@
     <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
   </div>
 
+  <div class="help-inline">
+    <span class="help-zoom">&#128269; Cliquez sur l&rsquo;axe pour zoomer</span>
+    <span class="help-sep-dot">&bull;</span>
+    <span>Fl&egrave;ches pour changer de p&eacute;riode</span>
+    <span class="help-sep-dot">&bull;</span>
+    <span>Cliquez sur un &eacute;v&eacute;nement pour sa fiche</span>
+  </div>
+
   <div id="period-banner">
     <span class="pb-label" id="pb-label">XIVe si&egrave;cle</span>
     <span class="pb-sub" id="pb-sub">1300 &mdash; 1400</span>
   </div>
 
   <div class="control-bar">
-    <button class="zoom-btn" id="btn-zoom-out" onclick="zoomOut()" title="D&eacute;zoomer">&#8722;&#128269;</button>
     <button class="ctrl-nav-btn" id="btn-prev" onclick="navigatePeriod(-1)" style="display:none;">&larr; P&eacute;riode pr&eacute;c&eacute;dente</button>
     <span id="decade-label" class="period-label"></span>
     <button class="ctrl-nav-btn" id="btn-next" onclick="navigatePeriod(1)" style="display:none;">P&eacute;riode suivante &rarr;</button>
-    <button class="zoom-btn" id="btn-zoom-in" onclick="zoomIn()" title="Zoomer">+&#128269;</button>
     <span class="nav-sep"></span>
     <div class="search-bar">
       <label for="search-input">&#128269;</label>
@@ -627,17 +650,7 @@
     </div>
   </div>
 
-  <div class="help-banner">
-    <span class="help-title">&#128218; Navigation</span>
-    <div class="help-steps">
-      <span class="help-step"><span class="help-icon">&#128269;</span> Cliquez sur l&rsquo;axe pour zoomer &bull; utilisez &#8722;&#128269; / +&#128269; pour changer d&rsquo;&eacute;chelle</span>
-      <span class="help-sep">&bull;</span>
-      <span class="help-step"><span class="help-icon">&larr;&rarr;</span> Naviguez entre les p&eacute;riodes avec les fl&egrave;ches</span>
-      <span class="help-sep">&bull;</span>
-      <span class="help-step"><span class="help-icon">&#128269;</span> Recherchez par mot-cl&eacute;</span>
-      <span class="help-note">Cliquez sur un &eacute;v&eacute;nement pour ouvrir sa fiche compl&egrave;te.</span>
-    </div>
-  </div>
+
 
 <!-- Lightbox image -->
 <div id="img-lightbox" onclick="closeLightbox()">
