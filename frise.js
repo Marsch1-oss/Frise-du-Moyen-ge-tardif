@@ -5,6 +5,7 @@ var ZONES = [
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
   'Europe C. & Or.', 'Pologne', 'Russie', 'Scandinavie',
   'Byzance', 'Ottomans', 'Monde islamique', 'Orient',
+  'Afrique', 'Amerique',
   'Japon', 'Chine', 'Inde', 'Monde',
   'Alsace',
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'
@@ -38,7 +39,9 @@ var COLORS = {
   'Sciences':            { bg: '#1A4A5C', light: '#E0EEF5', text: '#0A2A3A' },
   'Idees':               { bg: '#1A3A6B', light: '#E0E8F5', text: '#0A1E3A' },
   'Litterature':         { bg: '#2A5C2A', light: '#E0F0E0', text: '#163316' },
-  'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' }
+  'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
+  'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
+  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
 };
 
 var ZONE_ALIASES = {
@@ -63,7 +66,10 @@ var ZONE_ALIASES = {
   'Idees':               'Idees',
   'Idées':               'Idees',
   'Littérature':         'Litterature',
-  'Literature':          'Litterature'
+  'Literature':          'Litterature',
+  'Amérique':            'Amerique',
+  'America':             'Amerique',
+  'Africa':              'Afrique'
 };
 
 var ROW_H    = 28;
@@ -1161,8 +1167,8 @@ function eventMatchesSearch(evt) {
     evt.sources || '',
     (evt.zones || []).join(' ')
   ].join(' ').toLowerCase();
-  /* Recherche de la phrase exacte (pas mot par mot) */
-  return haystack.indexOf(searchTerm) !== -1;
+  /* Recherche exacte insensible à la casse (searchTerm déjà en minuscules) */
+  return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
 }
 
 function applySearch() {

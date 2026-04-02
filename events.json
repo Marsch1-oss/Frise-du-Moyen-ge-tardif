@@ -1,5 +1,17 @@
 [
   {
+    "id": 751,
+    "titre": "Bataille de Llucmajor (Majorque)",
+    "date": 149,
+    "mois": 10,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 2,
+    "description": "Fin du royaume de Majorque. \nLa bataille de Llucmajor se déroule le 25 octobre 1349 à proximité de la ville homonyme (à Majorque dans les Îles Baléares) et oppose les troupes de Pierre IV d'Aragon à l'armée du roi Jacques III de Majorque. Ce dernier est tué dans la bataille et la victoire permet à Pierre IV d'intégrer définitivement le royaume de Majorque à la Couronne d'Aragon.",
+    "image": ""
+  },
+  {
     "id": 540,
     "titre": "Shogunat de Kamakura",
     "date": 1185,
@@ -364,7 +376,7 @@
     "zones": [
       "Art"
     ],
-    "type": 1,
+    "type": 2,
     "description": "La Vierge d'Ognissanti ou de tous les saints. Elle a des dimensions monumentales : 325 × 204 cm. Elle est conservée à la Galerie des Offices de FlorenceCe retable a probablement été peint par le maître à son retour d'Assise La comparaison avec les œuvres précédentes donne la mesure de la façon dont l'art de Giotto évolue désormais vers un renouveau radical de la peinture, même si des éléments stylistiques archaïques ne manquent pas tels que le fond d'or et la perspective signifiante, cette dernière peut-être en raison du besoin de montrer le plus de fidèles possible autour de la Vierge. Le thème de la Maestà est réinterprété avec une grande originalité, centré sur la récupération de la spatialité tridimensionnelle de l'antiquité et sur le dépassement de la frontalité byzantine. Mais contrairement aux œuvres plus anciennes, les personnages latéraux ne sont pas placés les uns au-dessus des autres, ne sont pas aplatis, chacun possède une physionomie propre et, surtout, ils sont placés dans un dispositif perspectif que la construction précise du trône, avec son point de fuite central, ainsi que celle du baldaquin, accentuent et précisent. Les personnages sont encadrés par un trône à pinacle raffiné, créé selon une perspective intuitive mais efficace, qui accentue la profondeur spatiale malgré le fond d'orCe tableau annonce clairement le mouvement de la pré-Renaissance des primitifs italiens, qui, tout en validant les principes fondamentaux de la peinture byzantine (sujet, symbolisation des personnages sacrés, iconographie, symbolique des couleurs), commence à élaborer une autre peinture, en humanisant la représentation des personnages, leur individualisation, l'introduction d'une représentation cohérente et réaliste du décor (perspective formelle du trône, détails architecturaux, plans de placement des personnages).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Giotto%2C_1267_Around-1337_-_Maest%C3%A0_-_Google_Art_Project.jpg/960px-Giotto%2C_1267_Around-1337_-_Maest%C3%A0_-_Google_Art_Project.jpg",
     "legende": "Vierge d'Ognissanti peinte à la tempera et à l'or sur bois ,325 × 204 cm. Conservée à la Galerie des Offices de Florence",
@@ -616,7 +628,7 @@
     "zones": [
       "Art"
     ],
-    "type": 1,
+    "type": 2,
     "description": "Cimabue achève la mosaïque représentant Le Christ en majesté, entouré par la Vierge et de saint Jean l’évangéliste dans l’abside de la cathédrale de Pise, sa dernière œuvre (il meurt la même année à Pise ) . Cimabue est le premier peintre de la Basilique Saint-François d'Assise et l’un des premiers peintres à chercher à représenter le monde, les objets et les corps tels qu’ils existent et les émotions humaines telles qu'elles se manifestent. Il assure ainsi le renouvellement de la peinture chrétienne en s’écartant des pratiques proches de l’art byzantin que ses prédécesseurs et la plupart de ses contemporains employaient en Italie. La manière de Cimabue a imprégné de nombreux artistes. Avec lui, quelques peintres, dont Duccio di Buoninsegna, cherchent aussi à susciter l’implication émotionnelle des fidèles par ces peintures d'un style nouveau. Ils le font en réponse à la demande de l'ordre des Frères mineurs, les franciscains, grands commanditaires de l'époque avec les dominicains, l'ordre des Prêcheurs.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Christ_in_Majesty_%28Cimabue%29_Duomo_of_Pisa_20100930.jpg/1280px-Christ_in_Majesty_%28Cimabue%29_Duomo_of_Pisa_20100930.jpg",
     "legende": "Le Christ en majesté, entouré par la Vierge et de saint Jean l’évangéliste a été achevée par Cimabue en 1302  a miraculeusement survécu à l’incendie de 1595",
@@ -1125,7 +1137,7 @@
     "zones": [
       "Art"
     ],
-    "type": 1,
+    "type": 2,
     "description": "La chapelle des Scrovegni est un édifice religieux, faisant partie d'un palais construit au XIVe siècle à l'emplacement de l'ancienne arène romaine de Padoue en Italie. De style gothique, la chapelle abrite le cycle de fresques de Giotto. Ce chef-d’œuvre de la peinture aux couleurs intenses a été commandé à l'artiste en 1303 par un riche mécène, Enrico Scrovegni, banquier et homme d'affaires padouan.\nPour décorer la chapelle qu'il faisait construire attenante à son nouveau palais, il fit appel aux plus grands artistes de l'époque : Giovanni Pisano reçut commande de trois statues de marbre et Giotto celle de la décoration picturale des murs.\nLa décoration de la chapelle des Scrovegni par Giotto est une des réalisations les plus magistrales de l’histoire de l’art occidental.\nCe cycle de peintures murales est considéré comme le cycle de fresques le plus complet réalisé par le maître toscan dans sa période de maturité\nDe 1303 à 1306, il est à Padoue, où il peint les cinquante-trois fresques de la chapelle Scrovegni, ou chapelle Santa Maria dell'Arena, qui sont considérées comme son chef-d'œuvre et l'un des tournants de l'histoire de la peinture européenne\nDante — exilé de Florence en 1302 — se trouvait probablement à Padoue en même temps que Giotto L'influence de Dante serait décelable dans la vaste composition du Jugement dernier et mieux encore dans les figures allégoriques en camaïeu, qui simulent à la base des fresques évangéliques deux rangées de bas-reliefs. Ces quatorze figures de Vertus et de Vices qui se font face, les Vertus à droite et les Vices à gauche, comptent parmi les créations les plus parfaites du génie de Giotto.\nSa peinture se distingue de ce qu’on appelle la « maniera graeca », c’est-à-dire le style byzantin, dans lequel les figures flottent dans un univers céleste où baigne une lumière dorée irréelle. Les personnages de Giotto s'inscrivent dans la réalité.\nLe peintre a cherché à camper ses scènes dans un environnement terrestre qui puisse, tant que possible, être crédible, même si la représentation des architectures semble trop petite par rapport aux personnages. Dans ces scènes, l'architecture joue un rôle de décor théâtral, comme la maison d’Anne, dans l'Annonciation, dont la paroi a été retirée pour en rendre l’intérieur visible.\nUne des scènes les plus expressives est sans doute le Baiser de Judas, dans laquelle Giotto s’est passé de décor architectural. \nLes séries des Vices et des Vertus sont peintes sur le soubassement des murs et constituent le complément moral du cycle narratif. Elles montrent le génie de Giotto dans sa capacité à utiliser les différentes traditions figuratives. L'écho entre les figures (Vertu/Vice)\n« renvoie à la tradition des imagines agentes, des images actives, c'est-à-dire frappantes et inhabituelles, dont les arts mnémoniques font grand usage à l'époque.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cappella_degli_Scrovegni.jpg/500px-Cappella_degli_Scrovegni.jpg",
     "legende": "Fresque des parois.",
@@ -1323,7 +1335,7 @@
     "zones": [
       "Art"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Gaddo Gaddi (vers 1239, Florence – vers 1312, Florence) était un peintre et mosaïste florentin de style gothique . Presque aucune de ses œuvres ne nous est parvenue. Gaddo Gaddi a beaucoup œuvré sur la mosaïque de la voûte du baptistère Saint-Jean de Florence et sur le médaillon central de la façade de Santa Maria del Fiore, en particulier sur le Couronnement de la Vierge, selon Vasari était peintre et mosaïste, aurait exécuté la grande mosaïque à l'intérieur du portail de la cathédrale de Florence, représentant le couronnement de la Vierge , et peut être plus certainement crédité des mosaïques à l'intérieur du portique de la basilique Santa Maria Maggiore, à Rome, relatives à la légende de la fondation de cette église ; leur date est probablement 1308. [ 1 ]\n\nDans l'ancienne basilique Saint-Pierre de Rome, il réalisa également les mosaïques du chœur et celles du fronton représentant Dieu le Père, à une échelle colossale, entouré de nombreuses autres figures ; il exécuta aussi un retable dans l'église Santa Maria Novella de Florence ; ces œuvres ont aujourd'hui disparu. On considère généralement qu'aucune peinture (à l'exception des mosaïques) de Gaddo Gaddi ne subsiste. [ 1 ]\n\nCrowe et Cavalcaselle estiment que les mosaïques de Santa Maria Maggiore présentent une ressemblance stylistique si frappante avec quatre des fresques de la basilique supérieure d'Assise , représentant des épisodes de la vie de saint François (fresques 2, 3, 4 et surtout 5, qui montre François se dévêtant, protégé par l'évêque), que ces fresques peuvent également, avec une quasi-certitude, être attribuées à Gaddi. D'autres mosaïques conservées lui sont attribuées, mais sans authentification complète. Cet artiste a bâti une fortune considérable, qui n'a cessé de croître, et a placé sa descendance dans une position sociale très éminente.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Gaddo_gaddi_%28attr.%29%2C_incoronazione_della_Vergine.JPG/1280px-Gaddo_gaddi_%28attr.%29%2C_incoronazione_della_Vergine.JPG",
     "legende": "Couronnement de la Vierge (attribué à Gaddo Gaddi), Santa Maria del Fiore, Florence",
@@ -2187,7 +2199,7 @@
     "zones": [
       "Art"
     ],
-    "type": 1,
+    "type": 2,
     "description": "1313 à 1318La chapelle Saint-Martin de l'église inférieure de la basilique Saint-François d'Assise est décorée de fresques en trois phases par  Simone Martini. \nEn juillet 1317, Simone Martini est appelé à Naples par Robert d'Anjou, qui le nomme chevalier, lui attribue une pension annuelle et lui commande le tableau, Saint Louis de Toulouse couronne Robert d'Anjou, une icône profane aujourd'hui conservé au musée de Capodimonte à Naples. Louis de Toulouse, frère aîné de Robert et donc destiné au trône de Naples, est canonisé ; Louis avait abdiqué en faveur de son frère pour se consacrer à la vie religieuse. Robert veut, avec cette peinture, créer un manifeste politique qui légitimerait son pouvoir.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Simone_Martini_037.jpg/500px-Simone_Martini_037.jpg",
     "legende": "Investiture de saint Martin (détail des musiciens), chapelle Saint-Martin, église inférieure de la basilique Saint-François d'Assise."
@@ -5119,6 +5131,20 @@
     "image": ""
   },
   {
+    "id": 740,
+    "titre": "Stefan Uroš IV Dušan",
+    "date": 1331,
+    "mois": 9,
+    "date_fin": 1355,
+    "mois_fin": 12,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 386,
     "titre": "2e voyage d'Ibn Battuta",
     "date": 1332,
@@ -5166,7 +5192,7 @@
     "zones": [
       "Alsace"
     ],
-    "type": 1,
+    "type": 2,
     "description": "1332 Après le « Geschölle » une rixe entre groupes nobles les corporations s’emparent du pouvoir à Strasbourg.\nla lutte entre deux familles patriciennes, les Zorn et les Müllenheim, débouche en 1332 sur le « Geschölle », une rixe sanglante lors d'un banquet[9]. L'affrontement provoque un changement politique en faveur des artisans qui prennent le pouvoir. Suite à un banquet officiel dans le jardin de la résidence des Ochsenstein 9 rue brûlée l'actuel hôtel de ville, hé à noter que ces nobles se réunissent autour d'une table ronde pour éviter les problèmes de préséance et que ce banquet a lieu tous les ans à Pâques. hé mais cette année les choses tournent mal ces agapes   hé sont réservés aux édits nobles mais une dispute éclate entre gentilhomme du parti des Zorn et des Mülenheim. Nicolas Zorn est alors Schulteis de la ville.  Suite à ces événements qui font tout de même 21 morts la ville organise une série de procès d'épuration les turbines le step miste j'en stick qui ont partagé contre les familles patriciennes au combat sont expulsés les nobles sont condamnés à l'exil .  la lutte entre deux familles patriciennes, les Zorn et les Müllenheim, débouche en 1332 sur le « Geschölle », une rixe sanglante lors d'un banquet[9]. L'affrontement provoque un changement politique en faveur des artisans qui prennent le pouvoir.",
     "image": ""
   },
@@ -5395,9 +5421,11 @@
   },
   {
     "id": 507,
-    "titre": "Toghan Tèmur,",
+    "titre": "Toghan Temour",
     "date": 1333,
+    "mois": 6,
     "date_fin": 1368,
+    "mois_fin": 9,
     "zones": [
       "Chine"
     ],
@@ -5836,7 +5864,7 @@
       "Sciences",
       "Litterature"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Le poète François Pétrarque et son frère Gérard (Gherardo), accompagné d'un berger, font la première ascension du mont Ventoux au départ de Malaucène",
     "image": ""
   },
@@ -6212,7 +6240,7 @@
     "zones": [
       "Russie"
     ],
-    "type": 1,
+    "type": 3,
     "description": "En 1339 le Kremlin est entouré d'une palissade et de tours en bois de chêne.Le siège de l'église orthodoxe est transféré de Vladimir à Moscou. Moscou bénéficie d’une remarquable situation géographique à la convergence de plusieurs fleuves. En unissant pouvoir religieux et politique dans le même lieu c’est l’unité nationale qui s’ordonne . . Yvan 1er Kalita est l’un des fondateurs de l’état russe, à sa mort, le 31 mars 1340, il laisse 26 villes — dont Moscou et Vladimir — à son fils aîné, Siméon, 23 villes au second, Ivan, 21 villes à André, 26 villes à sa seconde femme et à ses plus jeunes fils. Il est inhumé dans la cathédrale de l'Archange-Saint-Michel de Moscou.",
     "image": ""
   },
@@ -6424,7 +6452,7 @@
     "zones": [
       "Scandinavie"
     ],
-    "type": 1,
+    "type": 4,
     "description": "Assassinat du comte Gérard III de Holstein, administrateur du royaume de Danemark par Niels Ebbesen[7]. Début du règne de Valdemar IV Atterdag (« le Restaurateur », 1320-1375) roi de Danemark (fin en 1375).\nOrigines et accession au pouvoir\n\nGérard III de Holstein, fils de Henri Ier de Holstein, devient comte en 1304. Il s’impose rapidement comme un acteur politique majeur en soutenant le roi Christophe II de Danemark lors de conflits de succession, allant jusqu’à conclure une alliance avec lui en 1323.\n\nConflit avec le roi du Danemark\n\nAprès la mort du duc de Schleswig en 1325, un conflit éclate entre Gérard III et Christophe II pour la régence du jeune héritier. Gérard, soutenu par une partie de la noblesse, fait déposer le roi et place sur le trône son protégé, Valdemar III, tout en exerçant lui-même le pouvoir réel.\n\nDomination politique et retournements\nEn tant que régent, Gérard obtient le Schleswig comme fief héréditaire. Toutefois, son autorité excessive provoque des oppositions, menant au retour de Christophe II en 1330. Malgré cela, Gérard conserve une forte influence et continue d’intervenir dans les affaires du royaume.\nContrôle du Danemark\nÀ la mort de Christophe II en 1332, Gérard III gouverne directement le Danemark sans nommer de nouveau roi, sous le titre d’« Administrateur du Royaume ». Il contrôle une grande partie du territoire, tandis que son cousin en détient une autre.\nFin de Gérard III et conséquences\n\nEn 1340, Gérard III est assassiné par le noble danois Niels Ebbesen. Cet acte met fin à sa domination et est souvent interprété comme un symbole de résistance danoise, bien que ses motivations restent incertaines.",
     "image": ""
   },
@@ -6436,7 +6464,7 @@
     "zones": [
       "Pologne"
     ],
-    "type": 1,
+    "type": 4,
     "description": "1341. Une guerre éclate entre la Lituanie et la Pologne pour le contrôle de la principauté de Galicie-Volhynie ; La Volhynie est partagée entre les deux pays et la Galicie occupée par les Polonais",
     "image": ""
   },
@@ -7254,14 +7282,14 @@
   },
   {
     "id": 648,
-    "titre": "Assassinat de Jacob von Artevelde",
+    "titre": "Kwade Maantag et assassinat de Jacob von Artevelde",
     "date": 1345,
-    "mois": 7,
+    "mois": 5,
     "zones": [
       "France"
     ],
     "type": 3,
-    "description": "Mai = Kwade Maantag  Révolte des ouvriers tisserands à Gand et à Bruges. Les tisserands de Gand massacrent les foulons (ongles bleus), main d’œuvre pauvre et peu qualifiée.\nL'administration rebelle de Gand commença à se fissurer de plus en plus en 1345. En mars, Jacob van Artevelde fut déposé comme régent de Flandre. L'inflation exacerba les tensions sociales. Les foulons exigèrent une augmentation de salaire des tisserands, mais ne reçurent que quatre groats par pièce de tissu foulée . En conséquence, les foulons marchèrent sur la place publique (Vrijdagmarkt) sous la conduite de Jan van Blake. Les petites corporations, dont il était le doyen , se joignirent à la marche. On estime qu'environ 4 200 foulons firent face à quelque 5 100 tisserands menés par le doyen Geraard Denijs . [ 2 ] Selon un chroniqueur anonyme, le Saint-Sacrement fut transporté entre les deux camps pour tenter de les calmer, mais en vain. [ 1 ] Lors de l'affrontement sanglant qui s'ensuivit, les tisserands prirent le dessus. Plus d'un millier de personnes furent tuées, dont Jan van Blake. [ 1 ]\nLors du conflit, Jacob van Artevelde s'était attiré la méfiance des tisserands par son intervention modérée, et fut assassiné quelques mois plus tard. Suite à leur défaite, les foulons restèrent exclus de l'administration de la ville. Lors d'une nouvelle confrontation, le mardi saint 13 janvier 1349, ils prirent l'avantage et purent ainsi ramener Gand sous le contrôle du comte Louis de Malé .\nAu début des années 1340, le retour des laines anglaises ne ramène cependant pas la prospérité en Flandre et l'autorité de Jacob van Artevelde est de plus en plus contestée. Le pape Clément VI a lancé une excommunication aux Flamands parjures. Louis de Flandre parvient à reprendre pied dans le comté en se formant un parti chez les opposants. Van Artevelde répond par la fuite en avant. Il désavoue le comte de Flandre et suggère à Édouard III d'offrir le comté à son fils Édouard, le futur Prince Noir. Il est cependant déjà trop tard pour lui. Contesté dans sa ville même de Gand, il est assassiné lors d'une émeute le 17 ou le 24 juillet 1345. La Flandre abandonne dès lors Édouard III et se rallie à la France.",
+    "description": "Mai = Kwade Maantag  (Mauvias Lundi ) Révolte des ouvriers tisserands à Gand et à Bruges. Les tisserands de Gand massacrent les foulons (ongles bleus), main d’œuvre pauvre et peu qualifiée.\nL'administration rebelle de Gand commença à se fissurer de plus en plus en 1345. En mars, Jacob van Artevelde fut déposé comme régent de Flandre. L'inflation exacerba les tensions sociales. Les foulons exigèrent une augmentation de salaire des tisserands, mais ne reçurent que quatre groats par pièce de tissu foulée . En conséquence, les foulons marchèrent sur la place publique (Vrijdagmarkt) sous la conduite de Jan van Blake. Les petites corporations, dont il était le doyen , se joignirent à la marche. On estime qu'environ 4 200 foulons firent face à quelque 5 100 tisserands menés par le doyen Geraard Denijs . [ 2 ] Selon un chroniqueur anonyme, le Saint-Sacrement fut transporté entre les deux camps pour tenter de les calmer, mais en vain. [ 1 ] Lors de l'affrontement sanglant qui s'ensuivit, les tisserands prirent le dessus. Plus d'un millier de personnes furent tuées, dont Jan van Blake. [ 1 ]\nLors du conflit, Jacob van Artevelde s'était attiré la méfiance des tisserands par son intervention modérée, et fut assassiné quelques mois plus tard. Suite à leur défaite, les foulons restèrent exclus de l'administration de la ville. Lors d'une nouvelle confrontation, le mardi saint 13 janvier 1349, ils prirent l'avantage et purent ainsi ramener Gand sous le contrôle du comte Louis de Malé .\nAu début des années 1340, le retour des laines anglaises ne ramène cependant pas la prospérité en Flandre et l'autorité de Jacob van Artevelde est de plus en plus contestée. Le pape Clément VI a lancé une excommunication aux Flamands parjures. Louis de Flandre parvient à reprendre pied dans le comté en se formant un parti chez les opposants. Van Artevelde répond par la fuite en avant. Il désavoue le comte de Flandre et suggère à Édouard III d'offrir le comté à son fils Édouard, le futur Prince Noir. Il est cependant déjà trop tard pour lui. Contesté dans sa ville même de Gand, il est assassiné lors d'une émeute le 17 ou le 24 juillet 1345. La Flandre abandonne dès lors Édouard III et se rallie à la France.",
     "image": ""
   },
   {
@@ -7303,14 +7331,14 @@
   },
   {
     "id": 652,
-    "titre": "Étienne Douchan occupe Serres et le Mont Athos",
+    "titre": "Étienne Duchan occupe Serres et le Mont Athos",
     "date": 1345,
     "mois": 9,
     "zones": [
       "Europe C. & Or.",
       "Byzance"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Étienne Douchan occupe la ville de Serrès puis toute la Chalcidique et le mont Athos. Il se déclare empereur à Serrès à Noël",
     "image": ""
   },
@@ -7646,14 +7674,14 @@
   },
   {
     "id": 689,
-    "titre": "L'Etonie vendue aux  Teutoniques",
+    "titre": "L'Estonie vendue aux  Teutoniques",
     "date": 1346,
     "mois": 8,
     "zones": [
       "St Empire",
       "Scandinavie"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Le roi Waldemar IV Atterdag du Danemark vend l'Estonie , qui avait été conquise par le Danemark en 1219, à l' Ordre Teutonique .",
     "image": ""
   },
@@ -7888,7 +7916,7 @@
   },
   {
     "id": 693,
-    "titre": "La pêste Noire atteint le sud de l'Europe",
+    "titre": "La peste Noire atteint le sud de l'Europe",
     "date": 1347,
     "mois": 9,
     "zones": [
@@ -7897,7 +7925,7 @@
       "Italie",
       "Sciences"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Septembre : l’épidémie de peste noire, transportée par des bateaux génois venus de Caffa, atteint Messine, puis Gênes et Marseille (1er novembre) et se répand dans toute l’Europe[16]. Venise sera atteinte en juin 1348.\nSelon la légende, lors d’une guerre entre le Khan de la Horde d'or Djanibeg et le comptoir génois de Caffa, des cadavres de pestiférés auraient été catapultés dans la ville. Le siège levé, les galères génoises quittent la ville et répandent l'épidémie en Europe occidentale[17].",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Diffusion_de_la_peste_noire_1347_1351.svg/langfr-960px-Diffusion_de_la_peste_noire_1347_1351.svg.png",
     "legende": "Septembre : une épidémie de peste commence en Europe. Elle se répand jusqu'en 1353, provoquant la mort de 25 à 30 % de la population. Carte montrant l'avancée de la peste noire en Europe"
@@ -7984,7 +8012,7 @@
     "zones": [
       "Italie"
     ],
-    "type": 1,
+    "type": 3,
     "description": "Devant la difficulté de ravitailler Rome et l’hostilité du pape, Cola di Rienzo est contraint de s’enfuir par le légat Bertrand de Deaulx, n’ayant pas su retenir la faveur du pape et du peuple, écrasé sous de lourds impôts[22]. S’ouvre une période de vacance du pouvoir (1347-1417), pendant laquelle les États pontificaux explosent en une série de seigneuries et de cités-États dont Ferrare, dominée par la famille d’Este ou Rimini par les Malatesta. Les grands nobles romains, Orsini et Colonna, se disputent le pouvoir dans une ville en pleine décadence.",
     "image": ""
   },
@@ -8136,7 +8164,7 @@
     "zones": [
       "Monde islamique"
     ],
-    "type": 1,
+    "type": 3,
     "description": "10 avril[1] : défaite du sultan Mérinide Abû al-Hasan à la bataille de Kairouan devant la révolte des tribus arabes du Sud tunisien et la sécession de Tripoli. Il doit se réfugier au Maroc.",
     "image": ""
   },
@@ -8187,7 +8215,7 @@
       "Aragon"
     ],
     "type": 2,
-    "description": "Bataille d'Épila (Saragosse) , victoire de Pierre III le Cérémonieux contre l’Union des Nobles et des villes d’Aragon. \n21 juillet Pierre le Cérémonieux écrase la rébellion de l’Union des nobles et des villes d’Aragon. Il doit accorder l’autonomie à la Catalogne qui l’avait aidé dans sa lutteLa bataille d'Épila eut lieu le 21 juillet 1348, près de Saragosse , dans l'actuelle Espagne, entre les partisans de l' Union d'Aragon et le roi Pierre IV , menés par Don Lope de Luna . Cette bataille fut l'aboutissement d'une longue confrontation entre une grande partie de la noblesse et du peuple aragonais contre le roi, et se termina par la défaite décisive de l'Union.Arrière-plan\nLe début du conflit direct entre le roi d'Aragon et une grande partie de la noblesse et des villes du royaume remonte à 1282, suite à la conquête de la Sicile par Pierre III , son excommunication par le pape Martin IV et la croisade aragonaise qui s'ensuivit . Afin d'exercer une pression plus efficace sur le roi et de se protéger mutuellement, la noblesse aragonaise signa le Serment d'Union , par lequel elle s'engageait à se soutenir mutuellement contre le roi d'Aragon si celui-ci tentait de porter atteinte à ses privilèges. La première rébellion nobiliaire s'étendit ensuite à l'Union d'Aragon et aux principales villes, dont Saragosse, capitale du royaume d'Aragon .\nSuite à la réunion des Cortes à Saragosse en 1283, Pierre III fut contraint d'accepter les exigences du Privilège général de l'Union , qui s'étendit en 1287 sous le règne de son fils Alphonse III concernant les privilèges de l'Union. L'Union contre Pierre IV\nPierre IV devint roi d'Aragon en 1336, à la suite du décès de son père Alphonse IV . Son premier problème intérieur majeur survint en 1347 avec la réactivation de l'Union d'Aragon. Le conflit initial était dû à la décision de Pierre IV de reconnaître sa fille Constance comme héritière de la couronne d'Aragon , ce qui portait atteinte aux droits de l' infant Jacques , son propre frère. [ 3 ] En tant que gouverneur par intérim d'Aragon , Jacques se rendit immédiatement à Saragosse pour solliciter le soutien de la noblesse aragonaise contre la décision royale. Les nobles rebelles prêtèrent à nouveau serment d'allégeance à l'Union en soutien au mouvement de l'infant ; la majorité des municipalités, y compris la capitale, se joignirent bientôt à ce mouvement. Une Union similaire s'organisa également au sein du royaume de Valence . La principauté de Catalogne resta fidèle au roi.\nDans un premier temps, Pierre IV chercha à résoudre la situation par la voie diplomatique : les Cortés se réunirent à Saragosse et révoquèrent sa décision, acceptant plutôt de confirmer les privilèges de l’Union de 1287. Dès lors, la seule solution possible fut le conflit armé.\nSuite à la décision des Cortes, l'infant Jacques mourut à Barcelone , probablement empoisonné sur ordre de Pierre IV. Fin 1287, des combats éclatèrent dans les deux royaumes d'Aragon et de Valence : l'Union valencienne vainquit d'abord les royalistes à Largo et Bétera [ 4 ] , mais en Aragon, le roi Pierre IV rallia à sa cause d'importants nobles aragonais comme Lope de Luna et les communautés villageoises de Daroca et Teruel. Début 1348, Pierre IV parvint à un accord avec l'Union valencienne afin que toute activité militaire soit désormais concentrée dans le royaume d'Aragon.La bataille\nAu printemps 1348, les unionistes avaient concentré toutes leurs forces à Saragosse, réticents à collaborer avec les nobles qui soutenaient encore le roi. De son côté, Lope de Luna tenta de prendre Tarazona , ville membre de l'Union. Début juillet, Pierre IV, le royaume de Valence pacifié et avec le soutien des habitants de Teruel , Daroca et Calatayud , marcha sur Saragosse avec l'intention de mettre fin à la révolte. Les unionistes, réalisant leur impuissance face aux forces combinées de Pierre IV et de Lope de Luna, tentèrent de les encercler en s'emparant d'une position stratégique aux mains des royalistes : le village d'Épila. Lope de Luna comprit que si les unionistes prenaient Épila, il serait bloqué et ne pourrait plus recevoir le soutien du roi Pierre. Aussi, il leva immédiatement le siège de Tarazona et marcha de force vers Épila pour stopper l'armée unioniste.\nLa bataille finale eut lieu le 21 juillet 1348. a bataille débuta le matin du 21 juillet par une tentative des troupes de l'Union, menées par Juan Ximénez de Urrea fils, d'occuper Épila. Blasco de Alagon s'était réfugié dans la ville, avec pour mission de la défendre jusqu'à la jonction des troupes principales de Pierre IV et de celles de Lope de Luna. L'attaque frontale fut d'une grande violence, mais les unionistes manquaient d'effectifs pour percer les défenses et n'eurent pas le temps de se préparer, sachant que Lope de Luna avait levé le siège de Tarazona et marchait sur Jalón pour provoquer un affrontement. Repoussés lors de leur premier assaut, les unionistes incendièrent les récoltes et les faubourgs afin de forcer une confrontation en rase campagne.",
+    "description": "Défaite de l' Union d'Aragon à la bataille d'ÉpilaBataille d'Épila (Saragosse) , victoire de Pierre III le Cérémonieux contre l’Union des Nobles et des villes d’Aragon. \n21 juillet Pierre le Cérémonieux écrase la rébellion de l’Union des nobles et des villes d’Aragon. Il doit accorder l’autonomie à la Catalogne qui l’avait aidé dans sa lutteLa bataille d'Épila eut lieu le 21 juillet 1348, près de Saragosse , dans l'actuelle Espagne, entre les partisans de l' Union d'Aragon et le roi Pierre IV , menés par Don Lope de Luna . Cette bataille fut l'aboutissement d'une longue confrontation entre une grande partie de la noblesse et du peuple aragonais contre le roi, et se termina par la défaite décisive de l'Union.Arrière-plan\nLe début du conflit direct entre le roi d'Aragon et une grande partie de la noblesse et des villes du royaume remonte à 1282, suite à la conquête de la Sicile par Pierre III , son excommunication par le pape Martin IV et la croisade aragonaise qui s'ensuivit . Afin d'exercer une pression plus efficace sur le roi et de se protéger mutuellement, la noblesse aragonaise signa le Serment d'Union , par lequel elle s'engageait à se soutenir mutuellement contre le roi d'Aragon si celui-ci tentait de porter atteinte à ses privilèges. La première rébellion nobiliaire s'étendit ensuite à l'Union d'Aragon et aux principales villes, dont Saragosse, capitale du royaume d'Aragon .\nSuite à la réunion des Cortes à Saragosse en 1283, Pierre III fut contraint d'accepter les exigences du Privilège général de l'Union , qui s'étendit en 1287 sous le règne de son fils Alphonse III concernant les privilèges de l'Union. L'Union contre Pierre IV\nPierre IV devint roi d'Aragon en 1336, à la suite du décès de son père Alphonse IV . Son premier problème intérieur majeur survint en 1347 avec la réactivation de l'Union d'Aragon. Le conflit initial était dû à la décision de Pierre IV de reconnaître sa fille Constance comme héritière de la couronne d'Aragon , ce qui portait atteinte aux droits de l' infant Jacques , son propre frère. [ 3 ] En tant que gouverneur par intérim d'Aragon , Jacques se rendit immédiatement à Saragosse pour solliciter le soutien de la noblesse aragonaise contre la décision royale. Les nobles rebelles prêtèrent à nouveau serment d'allégeance à l'Union en soutien au mouvement de l'infant ; la majorité des municipalités, y compris la capitale, se joignirent bientôt à ce mouvement. Une Union similaire s'organisa également au sein du royaume de Valence . La principauté de Catalogne resta fidèle au roi.\nDans un premier temps, Pierre IV chercha à résoudre la situation par la voie diplomatique : les Cortés se réunirent à Saragosse et révoquèrent sa décision, acceptant plutôt de confirmer les privilèges de l’Union de 1287. Dès lors, la seule solution possible fut le conflit armé.\nSuite à la décision des Cortes, l'infant Jacques mourut à Barcelone , probablement empoisonné sur ordre de Pierre IV. Fin 1287, des combats éclatèrent dans les deux royaumes d'Aragon et de Valence : l'Union valencienne vainquit d'abord les royalistes à Largo et Bétera [ 4 ] , mais en Aragon, le roi Pierre IV rallia à sa cause d'importants nobles aragonais comme Lope de Luna et les communautés villageoises de Daroca et Teruel. Début 1348, Pierre IV parvint à un accord avec l'Union valencienne afin que toute activité militaire soit désormais concentrée dans le royaume d'Aragon.La bataille\nAu printemps 1348, les unionistes avaient concentré toutes leurs forces à Saragosse, réticents à collaborer avec les nobles qui soutenaient encore le roi. De son côté, Lope de Luna tenta de prendre Tarazona , ville membre de l'Union. Début juillet, Pierre IV, le royaume de Valence pacifié et avec le soutien des habitants de Teruel , Daroca et Calatayud , marcha sur Saragosse avec l'intention de mettre fin à la révolte. Les unionistes, réalisant leur impuissance face aux forces combinées de Pierre IV et de Lope de Luna, tentèrent de les encercler en s'emparant d'une position stratégique aux mains des royalistes : le village d'Épila. Lope de Luna comprit que si les unionistes prenaient Épila, il serait bloqué et ne pourrait plus recevoir le soutien du roi Pierre. Aussi, il leva immédiatement le siège de Tarazona et marcha de force vers Épila pour stopper l'armée unioniste.\nLa bataille finale eut lieu le 21 juillet 1348. a bataille débuta le matin du 21 juillet par une tentative des troupes de l'Union, menées par Juan Ximénez de Urrea fils, d'occuper Épila. Blasco de Alagon s'était réfugié dans la ville, avec pour mission de la défendre jusqu'à la jonction des troupes principales de Pierre IV et de celles de Lope de Luna. L'attaque frontale fut d'une grande violence, mais les unionistes manquaient d'effectifs pour percer les défenses et n'eurent pas le temps de se préparer, sachant que Lope de Luna avait levé le siège de Tarazona et marchait sur Jalón pour provoquer un affrontement. Repoussés lors de leur premier assaut, les unionistes incendièrent les récoltes et les faubourgs afin de forcer une confrontation en rase campagne.",
     "image": ""
   },
   {
@@ -8239,7 +8267,7 @@
       "Italie"
     ],
     "type": 3,
-    "description": "13 janvier : de Spalato, la peste gagne par voie maritime les ports voisins de Sebenico et de Raguse (Dubrovnik) puis arrive à Venise le 25 janvier\n25 janvier : Venise subit un violent tremblement de terre qui fait des centaines de victimes et détruit de nombreux édifices.",
+    "description": "13 janvier : de Spalato, la peste gagne par voie maritime les ports voisins de Sebenico et de Raguse (Dubrovnik) puis arrive à Venise le 25 janvier\n25 janvier : Venise subit un violent tremblement de terre qui fait des centaines de victimes et détruit de nombreux édifices.\nUn séisme de magnitude 7,1 frappe l'Italie , faisant 10 000 morts.",
     "image": ""
   },
   {
@@ -8317,6 +8345,154 @@
     "image": ""
   },
   {
+    "id": 728,
+    "titre": "Querelle des archevêques de Brême",
+    "date": 1348,
+    "date_fin": 1350,
+    "zones": [
+      "St Empire",
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "La querelle des archevêques de Brême opposa Moritz d'Oldenburg et Gottfried d'Arnsberg au sein de l' archevêché de Brême, pour le contrôle de la charge d' archevêque . Débutée en 1348, elle dégénéra en conflit armé en 1350, impliquant la ville de Brême . Elle coïncida avec une épidémie de peste dévastatrice et donna lieu à la querelle de Hoya .\nLa querelle des archevêques de Brême constitue un épisode révélateur des tensions politiques et religieuses qui traversent le Saint-Empire au XIVe siècle. Ce conflit, opposant Moritz d’Oldenbourg à Gottfried von Arnsberg, s’inscrit dans un contexte de crise marqué à la fois par les rivalités de pouvoir au sein de l’Église et par les bouleversements liés à la Peste noire.\n\nÀ la mort de Otton Ier de Brême, le chapitre cathédral élit unanimement Moritz d’Oldenbourg comme successeur légitime. Ce choix s’explique par son expérience administrative et par les soutiens solides dont il dispose au sein du clergé local et du conseil urbain. Toutefois, cette élection est contestée par la papauté : le pape Clément VI impose à sa place Gottfried von Arnsberg, probablement à la suite d’interventions financières. Cette décision constitue une rupture notable, dans la mesure où elle contrevient aux usages électifs du chapitre cathédral, suscitant une forte opposition locale.\n\nDans un premier temps, Moritz conserve l’avantage grâce à son ancrage territorial et au soutien de la noblesse régionale, tandis que Gottfried peine à faire valoir son autorité. Cependant, l’équilibre des forces évolue en 1349 lorsque Gottfried parvient à obtenir l’appui de la ville de Brême, profitant de l’absence de son rival et des troubles politiques internes. Le conflit se transforme alors progressivement en affrontement armé, chaque camp mobilisant des alliés ecclésiastiques, urbains et nobiliaires.\n\nLes hostilités éclatent ouvertement en 1350. Gottfried, soutenu par la ville de Brême et plusieurs puissances régionales, excommunie Moritz, tandis que ce dernier rassemble une coalition de seigneurs locaux et de chevaliers. Les combats, marqués par des raids, des sièges et des destructions, demeurent cependant indécis. Un tournant survient lorsque Moritz reçoit des renforts importants et lance une offensive contre Brême. Bien qu’il renonce à assiéger directement la ville, il parvient à affaiblir ses défenses et à imposer sa domination dans les environs.\n\nToutefois, l’issue du conflit ne se joue pas uniquement sur le terrain militaire. L’irruption de la peste à Brême en 1350 bouleverse profondément la situation. L’épidémie, particulièrement meurtrière, décime une large part de la population et désorganise les structures urbaines, facilitant la reddition de la ville à Moritz. Ce contexte de catastrophe sanitaire favorise également la recherche d’un compromis.\n\nUne trêve est conclue en juillet 1350, suivie d’un arbitrage entre les parties. L’accord final établit une solution de compromis : Gottfried conserve le titre d’archevêque, tandis que Moritz exerce le pouvoir effectif en tant que « gardien de l’archevêché ». Ce partage du pouvoir illustre la difficulté à trancher entre légitimité canonique et légitimité locale.\n\nEn définitive, la querelle des archevêques de Brême met en lumière les tensions structurelles entre autorité pontificale et pouvoirs locaux au sein du Saint-Empire romain germanique. Elle révèle également le rôle déterminant des villes et des élites régionales dans les conflits ecclésiastiques. Enfin, en s’articulant avec la crise démographique et sociale provoquée par la peste, elle inaugure une période d’instabilité durable, prolongée notamment par la querelle de Hoya.",
+    "image": ""
+  },
+  {
+    "id": 729,
+    "titre": "Bataille navale près de Caryste entre Venise et Gènes",
+    "date": 1348,
+    "mois": 8,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "29 août : Lors d'une bataille navale près de Caryste entre les républiques maritimes rivales de Venise et de Gênes , les Vénitiens remportent la victoire.\nAu Moyen Âge, la ville appartenait à Venise , comme en témoigne la forteresse de Castel Rosso, construite au XIIIe siècle. Le 29 août 1348, les Vénitiens vainquirent les Génois lors de la bataille navale de Carystus .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/2011_Dimos_Karystou.png/250px-2011_Dimos_Karystou.png",
+    "legende": "Situation géographique : région de Grèce centrale"
+  },
+  {
+    "id": 730,
+    "titre": "Traité de Namslau",
+    "date": 1348,
+    "mois": 11,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 1,
+    "description": "19 novembre : Le traité de Namslau représente un compromis entre le roi Charles IV de Bohême et le roi Casimir III le Grand de Pologne . Casimir renonce à ses prétentions sur la Silésie et la maison de Luxembourg renonce à ses droits sur la Pologne .",
+    "image": ""
+  },
+  {
+    "id": 731,
+    "titre": "Le faux Woldemar  investi du margraviat de Brandebourg",
+    "date": 1348,
+    "mois": 11,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Le faux Woldemar fut investi du margraviat de Brandebourg par Charles IV . Vers 1350, il fut démasqué comme imposteur.\ne faux Woldemar ou faux Waldemar († 1356 à Dessau , Anhalt ) était un imposteur allemand qui fut investi du margraviat de Brandebourg par Charles IV de 1348 à 1350 .\nWoldemar s'appelait apparemment Jakob Rehbock et aurait été apprenti meunier. Sa véritable identité demeure inconnue à ce jour.\n\nDurant l'été 1348, il se présenta à l'archevêque Otton de Magdebourg comme un pèlerin âgé , prétendant être le vieux margrave Woldemar de Brandebourg , inhumé 29 ans auparavant. Il affirma que l'enterrement de 1319 avait été mis en scène et qu'il avait effectué un pèlerinage en Terre sainte entre-temps . Après l'extinction de la dynastie ascanienne de Brandebourg, le roi Louis de Bavière, de la lignée de Wittelsbach , avait octroyé le margraviat de Brandebourg à son propre fils, Louis, en 1323 .\n\nWoldemar gagna rapidement des partisans, notamment parmi les princes rivaux des Wittelsbach. Il se présenta comme un représentant de l'ancienne dynastie ascanienne, dont les branches de Saxe-Wittenberg et d'Anhalt le soutenaient, espérant ainsi acquérir le margraviat de Brandebourg après sa mort. En quelques semaines, il parvint à rallier une grande partie du margraviat lors d'une campagne d'hommage . Le faux Woldemar convenait parfaitement à Charles IV, qui cherchait à affaiblir les Wittelsbach, et c'est pourquoi il inféoda le margraviat de Brandebourg à l'« Ascanien » le 2 octobre 1348. Seules quelques villes continuèrent à soutenir les Wittelsbach ; Treuenbrietzen , par exemple, tiendrait son nom de cette période.\n\nLe faux Woldemar fut déclaré imposteur en février 1350. Charles, qui avait alors conclu un accord avec les Wittelsbach (traités d' Eltville ), déclara avoir été trompé, réinvestit Louis du margraviat de Brandebourg et proclama en mars et avril 1350 que Woldemar n'était pas le margrave légitime. Dès lors, Woldemar résida à la cour ascanienne d' Anhalt-Dessau , où il conserva néanmoins tous les honneurs de la cour jusqu'à sa mort, probablement de causes naturelles, en 1356.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/SiegelFalscherWaldemar.JPG/960px-SiegelFalscherWaldemar.JPG",
+    "legende": "Grand sceau du faux Woldemar, de : Hermann Bier : Märkische Siegel . Berlin 1933, planche I, n° 16"
+  },
+  {
+    "id": 732,
+    "titre": "Rapport de la faculté de Paris sur la Peste",
+    "date": 1348,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Sciences"
+    ],
+    "type": 4,
+    "description": "La faculté de médecine la plus prestigieuse d'Occident, celle de Paris , fut chargée par le roi de France de soumettre un rapport d'experts sur la Grande Peste . Elle conclut qu'une conjonction des planètes Jupiter , Saturne et Mars , le 24 mars 1345, avait déclenché les changements atmosphériques qui auraient provoqué l'épidémie.",
+    "image": ""
+  },
+  {
+    "id": 733,
+    "titre": "Bulle papale condamnant la persécution des Juifs",
+    "date": 1348,
+    "mois": 7,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "Le 4 juillet, le pape Clément VI publie une bulle papale condamnant la persécution des Juifs pendant la peste noire . Sa lettre est largement ignorée en dehors d' Avignon .\n26 septembre : Dans une seconde bulle intitulée Quamvis perfidiam , le pape Clément VI déclare les Juifs innocents d’ avoir empoisonné les puits ou d’avoir propagé la peste . Quiconque persécute des Juifs doit s’attendre à l’excommunication .\nDans sa bulle Quamvis Perfidiam, le pape Clément VI qualifie de « superstition » les accusations selon lesquelles les Juifs auraient provoqué la peste noire en empoisonnant les sources d'eau . Le pape a sollicité l'avis du médecin Guy de Chauliac",
+    "image": ""
+  },
+  {
+    "id": 734,
+    "titre": "Tremblement de Terre au Frioul et en Carinthie",
+    "date": 1348,
+    "mois": 1,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Un violent séisme dont l'épicentre se situe dans le Frioul provoque, entre autres, un glissement de terrain sur le mont Dobratsch en Carinthie , ensevelissant de nombreux villages et détruisant plusieurs châteaux.",
+    "image": ""
+  },
+  {
+    "id": 735,
+    "titre": "Hangzhouplus grande ville du monde,",
+    "date": 1348,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "Hangzhou, en Chine mongole , devient la plus grande ville du monde, dépassant ainsi Le Caire , capitale de l'Égypte mamelouke",
+    "image": ""
+  },
+  {
+    "id": 736,
+    "titre": "La Peste se propage à Barcelone",
+    "date": 1348,
+    "mois": 5,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "Au début du printemps, la peste noire arriva dans le royaume de Majorque , se propageant à Barcelone en mai et probablement à Valence en juin.",
+    "image": ""
+  },
+  {
+    "id": 737,
+    "titre": "Bataille de Mislata",
+    "date": 1348,
+    "mois": 12,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "La bataille de Mislata eut lieu le 9 décembre 1348, [ 2 ] au cours de laquelle les troupes de Pierre le Cérémonieux , commandées par Lope de Luna , s'affrontèrent à celles des unionistes valenciens.\nL' Union de Valence , tout comme l' Union d'Aragon , était un La victoire du roi, malgré de lourdes pertes, mit fin à la rébellion de l'Union de Valence. Ce fut la bataille décisive des guerres des Unions . Le roi s'empara de Valence et fit exécuter les rebelles. Des châtiments cruels furent également infligés aux vaincus, comme celui d'être forcés de boire le bronze en fusion dont était faite la cloche servant à convoquer les réunions des rebelles. [mouvement seigneurial défendant ses privilèges de classe.",
+    "image": ""
+  },
+  {
+    "id": 738,
+    "titre": "Les Cortes de Castille interdisent l'usure",
+    "date": 1348,
+    "mois": 5,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Les Cortes de Castille, réunies dans la ville d' Alcalá de Henares sous le règne d' Alphonse XI, interdirent la pratique de l'usure .",
+    "image": ""
+  },
+  {
+    "id": 739,
+    "titre": "Décès de Guillaume d'Ockham, d'Andrea Pisano,  Ambrogio Lorenzetti",
+    "date": 1348,
+    "zones": [
+      "Art",
+      "Idees"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
     "id": 354,
     "titre": "Jean Visconti",
     "date": 1349,
@@ -8369,6 +8545,352 @@
     "image": ""
   },
   {
+    "id": 744,
+    "titre": "Règne de Yedji souverain Haoussa de Kano",
+    "date": 1349,
+    "date_fin": 1384,
+    "zones": [
+      "Monde"
+    ],
+    "type": 2,
+    "description": "Nigeria  Début du règne de Yedji (1349- 1384), souverain Haoussa de Kano (fin en 1384)[1]. Il se convertit à l’islam sous l’influence des commerçants mandingues; La plupart des cités haoussas se rapprochent de l’islam au XIVe siècle, mais les Haoussas restent cependant en majorité animistes. Les Haoussas sont un peuple du Sahel essentiellement établi au nord du Nigeria et du Cameroun et dans le sud du Niger. Ils constituent une des ethnies les plus importantes d'Afrique par leur nombre[2]. La région qu'ils habitent depuis des siècles porte le nom de pays Hausa (kasar hausa ou Hausaland en anglais). La ville de Kano est considérée comme le centre du commerce et de la culture du royaume Haoussa. En termes de relations culturelles avec les autres peuples d'Afrique de l'Ouest, les Haoussas sont culturellement et historiquement proches des Mandingues, des Songhaïs et des Touaregs ainsi que d'autres groupes afro-asiatiques et nilo-sahariens, plus à l'est, au Tchad et au Soudan. Étroitement liée aux Kanouris du royaume du Kanem-Bornou (lac Tchad), l'aristocratie haoussa a adopté l'islam au XIe siècle. Au XIIe siècle, les Haoussas devenaient l'une des nations les plus puissantes d'Afrique sub-saharienne. Ils se montrèrent puissants et unis pour s'engager dans les conquêtes locales, le commerce et le trafic d'esclaves.\n\nAu XIVe siècle, les cités-États haoussas de Biram, Daura, Katsina, Zaria, Kano, Rano et Gobir existent déjà. Elles sont organisées selon le système de la sarauta, un modèle politique très structuré, avec la nomination d'un sarki à leur tête[4]. Cette civilisation est urbaine et aussi belliciste, car les conflits entre les cités sont nombreux[4].\n\nCes cités jouissent d'une économie florissante, fondée sur le commerce, l'artisanat (fer et cuir) et aussi la culture des céréales[4].\n\nL'architecture haoussa est peut-être une des moins connues, mais est l'une des plus belles de l'époque médiévale. Beaucoup de leurs premières mosquées sont lumineuses et colorées et montrent souvent des gravures complexes ou des dessins symboliques élaborés sur les façades. Les Haoussas ont écrit plusieurs histoires dont la plus célèbre est la Chronique de Kano.",
+    "image": ""
+  },
+  {
+    "id": 745,
+    "titre": "Goede Dienstag",
+    "date": 1349,
+    "mois": 1,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "En 1349 Les partisans  de la politique  de Van Artweld  sont massacrés à Gand c’est le « bon mardi » Goede Dienstag revanche du «  mauvais lundi » Kwade Maantag ». \n\n13 janvier : troubles en Flandre (goede maandag)[3]. Les foulons d’Ypres, de Bruges et de Gand massacrent les tisserands, qui prendront leur revanche en 1350… La constitution gantoise consacrera la victoire des métiers moyens : les poorters (grands bourgeois) seront minoritaires à l’échevinage dominé par les tisserands et les métiers moyens.\nDans l'histoire flamande , Goede Disendach (ou : Mardi Saint) fait référence au 13 janvier 1349. À Gand , les foulons prirent le dessus sur les tisserands et livrèrent la ville au comte Louis de MaléLa lutte de pouvoir entre les deux guildes les plus puissantes de la ville faisait rage depuis quelque temps. Le 2 mai 1345, Lundi funeste , les tisserands massacrèrent 500 foulons ainsi que leur doyen sur la place du marché (Vrijdagmarkt ). Le 24 juillet, le tisserand Thomas Denijs , alors chef de la révolte, assassina le marchand de tissus Jacob van Artevelde .\n\nMoins de quatre ans plus tard, une nouvelle bataille sanglante éclata dans les rues de Gand entre les deux groupes. Les tisserands, qui jusque-là exerçaient de facto le pouvoir, furent vaincus par les foulons et contraints de reconnaître l'autorité de Louis de Male à Gand. Louis était officiellement devenu comte de Flandre après la mort de son père, Louis II de Nevers, en 1346 , mais ce titre n'était pas reconnu à Gand. Le jour du Goede Disendach, la situation changea et Louis de Male obtint de fait l'autorité sur la ville.\n\nLa soumission au comte de Flandre marqua un tournant dans la position de Gand, au sein du contexte international tumultueux de l'époque. Dans le contexte de la guerre de Cent Ans qui faisait rage et du conflit franco-anglais, le comté de Flandre avait pris parti pour les Français.\n\nCette victoire ne signifia cependant pas la fin des troubles dans la ville. Même après 1349, des escarmouches persistèrent entre les puissantes guildes, qui, avec la population, continuèrent de réclamer davantage de pouvoir dans la gouvernance de la ville, ce qui provoqua à plusieurs reprises des soulèvements contre le comte. Trente ans plus tard, la révolte de Gand suivante éclata .",
+    "image": ""
+  },
+  {
+    "id": 746,
+    "titre": "Gunther de Schwarzbourg   Roi des Romains",
+    "date": 1349,
+    "mois": 1,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "Gunther de Schwarzbourg est élu Roi des Romains à Francfort par le parti des Wittelsbach. \nIl est battu par Charles de Luxembourg à Eltville et abdique le 20 mai en échange de 20 000 marcs d'argent, puis meurt le 12 juin à Francfort, sans doute de la peste[. \n25 juillet : Charles de Luxembourg, après avoir été réélu empereur en juin, est couronné de nouveau par l'archevêque de Cologne à Aix-la-Chapelle",
+    "image": ""
+  },
+  {
+    "id": 747,
+    "titre": "Propagation de la peste et multiplication des pogroms",
+    "date": 1349,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "9 janvier : toute la population juive de Bâle, accusée d'être responsable de la propagation de la peste, est massacrée et incinérée.14 février : pogrom à Strasbourg : 900 Juifs[6], accusés d’avoir propagé la peste, sont exécutés.\n21 mars : la majorité des juifs de Erfurt est massacrée par le reste de la population qui la rend responsable de la peste.",
+    "image": ""
+  },
+  {
+    "id": 748,
+    "titre": "Peste Noire en Norvège",
+    "date": 1349,
+    "date_fin": 1363,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 2,
+    "description": "Juillet : la peste noire arrive à Bergen par un bateau venu d’Angleterre[14]. Elle envahit la Norvège tout entière, décimant la population (1349-1363). Le pays sort de l’épreuve extrêmement affaibli. La noblesse est pratiquement anéantie.",
+    "image": ""
+  },
+  {
+    "id": 749,
+    "titre": "Peste en Pologne et au nord de l'Allemagne",
+    "date": 1349,
+    "mois": 8,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "24 août : la peste noire atteint Elbląg, en Pologne[18]. Elle apparaît à l'automne en Prusse et se propage jusqu’en 1351 : Francfort est atteinte en décembre 1349. Hambourg aurait perdu 66 % de sa population, Brême 70 %, la Pomérélie 42 %. Le dépeuplement arrête la colonisation à l’Est. Les seigneurs asservissent les paysans libres pour les fixer à la terre.",
+    "image": ""
+  },
+  {
+    "id": 750,
+    "titre": "Les flagellants déclarés hérétiques",
+    "date": 1349,
+    "mois": 10,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 2,
+    "description": "15 août (Assomption de la Saint-Vierge) : 200 bourgeois de Bruges organisent une procession de flagellants à Tournai. La foule, galvanisée par leur exemple, se joint aux mortifications.\n20 octobre : le pape Clément VI déclare hérétique la secte des flagellants et s’efforce de la dissoudre\n\nLes Flagellants (nommés disciplinati ou battuti au Moyen Âge) étaient des groupes ambulants de fidèles qui s'adonnaient à la discipline collectivement en public. Leur mouvement atteignit son apogée durant le XIIIe siècle et le XIVe siècle en Europe occidentale. Ceux qui y prenaient part pensaient que la pratique de la flagellation leur permettrait d'expier leurs péchés, atteignant ainsi la perfection, de manière à être acceptés au royaume des cieux après l'Apocalypse. Ils allaient en procession par les villes, nus jusqu'à la ceinture et armés d'un fouet dont ils se flagellaient publiquement, en chantant des cantiques, pour expier leurs péchés.\nLes circonstances dans lesquelles les premières manifestations massives de flagellants ont eu lieu sont significatives. À la suite de la famine de 1258, la situation de l’Italie était particulièrement difficile à l’époque. De plus, les guerres incessantes entre les Guelfes et les Gibelins avaient plongé la région dans une misère et installèrent une ambiance de grande insécurité parmi le peuple\nLe mouvement des flagellants commença au printemps de 1260 dans la ville de Pérouse en Italie sur l'initiative d’un laïc pérugin nommé Ranieri Fasani. Celui-ci avait prétendu agir sous l’inspiration d’une lettre sacrée reçue par la Vierge Marie et prit par la suite la tête d’une procession expiatoire et parcourut les rues de Pérouse pour se flageller[4]. Dans un premier temps les battuti furent favorablement accueillis par le clergé qui prenait fréquemment la tête des processions. Le mouvement s’étendit rapidement au sud jusqu’à Rome et au nord jusqu’en Lombardie et par la suite dans certaines régions d'Allemagne[5]. Elle peut s'inspirer du dominicain Ranieri dal Borgo (ou de Sansepolchro, mort en 1304).\n\nBien que la flagellation ne fût pas inconnue en Italie, elle était jusque-là une pratique pénitentielle privée ou liturgique. Elle était infligée auparavant aux grands pécheurs ayant demandé et obtenu d’être réconciliés par l’Église dans le cadre d’une pénitence publique. La nouveauté introduite par les flagellants de 1260 était le fait que désormais, la flagellation était pratiquée en plein air et par le désir des fidèles[6].\n\nEn Allemagne, comme en Europe méridionale, les groupes de flagellants subsistèrent pendant plus de deux siècles mais leur statut et leurs fonctions ne coïncidaient pas avec ceux d'Italie. En Italie et dans le Sud de la France, les communautés de flagellants s’épanouissaient en plein jour dans toutes les villes de quelque importance. En Allemagne, au contraire, les flagellants ne cessèrent pas d’être accusés d’hérésie puis eurent par la suite des traits plus révolutionnaires que leurs homologues italiens. Le mouvement tantôt interdit en 1262, survécut de manière clandestine[7]. Le mouvement des flagellants avait repris des proportions considérables en 1349. Ceci était dû à l’une des plus grandes épidémies de peste du Moyen Âge : la dite Peste noire (introduite par des hordes mongoles en 1346-1347). Celle-ci fut interprétée, dans la perspective médiévale, comme un châtiment divin contre les pêchés commis par les humains. Les processions de flagellants étaient mises en avant comme un effort pour détourner ce châtiment[8]. La zone de développement du mouvement se situa principalement en Europe centrale, de la Pologne à l’Allemagne et jusqu’aux Pays-Bas et à la France. Les flagellants se déplaçaient entre villes par bandes de cinquante à cinq cents hommes ou plus. Plusieurs régions furent prises l’une après l’autre d’une grande agitation où le mouvement prenait une grande importance avant de s’éteindre peu à peu[9].\nDès la seconde moitié de 1349, le mouvement des flagellants avait pris une dimension anarchique. Les flagellants allemands en particulier devinrent les ennemis implacables de l’Église. Non seulement ils condamnaient le clergé, ils déniaient toute autorité surnaturelle de celui-ci, répudiant même le sacrement de l’eucharistie comme étant absurde. Ils avaient tendance à interrompre les services religieux et n’accordaient de valeur qu’à leurs propres rites ou hymnes[10].\nLes Juifs furent aussi victimes des mêmes persécutions que les clercs, mais sur une tout autre échelle. Durant le grand massacre des Juifs qui suivit la Peste Noire (cf. par exemple le Pogrom de Strasbourg), les flagellants jouèrent un rôle considérable. \nLes processions de flagellants étaient connues pour avoir une organisation nettement définie. Ils portaient un nom collectif comme « Porteurs de la croix » ou « Frères flagellants ». Ils étaient vêtus d’une sorte de sarrau blanc frappé devant et derrière d’une croix rouge et un chapeau ou un capuchon munis du même signe[22]. Chaque groupe de flagellants était placé sous les ordres d’un chef qui devait être obligatoirement un laïc. Appelé sous le nom de père ou maître, celui-ci imposait des pénitences et accordait l’absolution. Durant la procession, les fidèles devaient jurer obéissance absolue à leur maitre. La durée de la procession était fixée selon des règles précises. Il s’agissait toujours d’une durée de trente-trois jours et demi[23]. Durant cette période, les flagellants étaient soumis à une discipline rigoureuse. Ils n’avaient pas le droit de se baigner ou de se laver. Ils devaient demander l’autorisation de leur maître pour converser entre eux. Il était surtout interdit d’avoir le moindre rapport avec des femmes. C’est pour cela qu’ils devaient se tenir à l’écart de leurs épouses et ne pouvaient pas être servis par des femmes chez leurs hôtes[22].\nLorsqu’ils arrivaient dans une nouvelle ville, les flagellants se dirigeaient tantôt vers une église, se rassemblaient en cercle et revêtaient une sorte de jupon qui leur descendait de la taille aux talons. Ils commençaient alors à défiler en cercle et se jetaient l’un après l’autre face contre terre, puis ils demeuraient immobiles les bras en croix. Ceux qui passaient derrière eux enjambaient leurs corps et leur donnaient de légers coups de fouet. Lorsque le dernier était allongé à son tour, tous pouvaient alors commencer à se flageller. À certains passages de l’hymne qu’ils chantaient, les hommes s’acharnaient sur le sol les bras en croix pour prier en sanglots. Après un certain temps, ils se redressaient, levaient les bras au ciel et entonnaient des hymnes pour reprendre leur flagellation. Il faut noter que si par hasard une femme ou un prêtre pénétraient à l’intérieur du cercle, la flagellation était considérée comme échec et il fallait tout reprendre du début. Les disciplinati faisaient deux sessions complètes par jour aux yeux du public. Chaque nuit une troisième se déroulait dans l’intimité de leurs chambres. Ils étaient tenus de faire cette tâche avec tant de force que les piquants de leurs fouets se coinçaient dans leurs chairs et qu’il fallait les enlever à la main[24].\nLa population dans son ensemble se montrait coopérative vis-à-vis de la procession. Partout où les flagellants allaient, des foules immenses de spectateurs s’attroupaient pour voir et écouter les hommes. Nul ne songeait à mettre en doute l’authenticité de la Lettre Céleste. Les flagellants se considéraient et étaient considérés comme de simples pêcheurs qui expiaient leurs propres péchés, mais puisque ceux-ci assumaient leurs propres péchés et essayaient de gagner le pardon de l’humanité, les accueillir et les protéger devint un privilège pour le peuple. Lorsqu’une procession des flagellants approchait une ville, les habitants sonnaient les cloches et une fois la flagellation terminée, ils invitaient les frères dans le foyer[25].\nDans les confréries\nÀ la suite de la propagation du mouvement, on voit apparaitre en Italie un nombre impressionnant de confréries laïques qui rénovent leurs dogmes en fonction de ces nouvelles formes de piété. La propagation de la culture pénitentielle parmi les laïcs fut très largement due à ces confréries de flagellants. On a pu compter au moins 1 890 confréries pénitentielles en Italie et 42 dans d’autres pays d'Europe. Les confréries de flagellants employaient la discipline comme rite collectif de pénitence[26]. En Corse, le Catenacciu de Sartène en est peut-être la dernière illustration[27]. La plupart des confréries se trouvaient dans des milieux urbains comme Cologne ou Strasbourg car les coutumes confraternelles étaient déjà bien présentes[28].\nPour appartenir à une confrérie de battuti il fallait remplir certaines conditions. Par exemple à Bologne, il fallait être âgé d’au moins 18 ans et il y avait une période d’essai de deux mois avant d’être définitivement admis. Les femmes n’étaient pas admises à participer dans les séances de flagellation. Cela dit, elles pouvaient faire partie d’une confrérie de Battuti dans certains cas sous l’autorisation de leur mari ou père[29].\nLorsqu’il y avait des réunions, les membres entraient dans l’oratoire de la confrérie et s’agenouillaient un par un sur une dalle de marbre et demandaient pardon pour tous actes commis qui n’étaient pas dans le règlement de la confrérie. Puis ils faisaient une lecture en commun à haute voix des manuscrits qui comprenaient les sept psaumes de pénitence, ainsi que les quinze psaumes graduels. Ils se donnaient la discipline au cours des réunions du vendredi soir. Après avoir revêtu une tenue spéciale, les confrères allaient pieds nus embrasser le crucifix dans leur chapelle puis se frappaient mutuellement, chacun recevant sur son dos nu autant de coups qu’il pensait nécessaires pour être pardonné. Ils avaient tous la face couverte d’une cagoule pour ne pas se faire reconnaitre[30].\nFlagellation au durian, Phuket (Thaïlande), 2011\nHabituellement les réunions des membres n’avaient pas pour unique but la flagellation. Au contraire, souvent le dimanche ils assistaient à la messe dans l’oratoire de la confrérie et discutaient également des affaires du groupe. Cependant il était impératif d’assister chaque jour à la messe ou au moins le plus souvent possible et de communier deux à quatre fois par mois. De plus, les membres des confréries étaient tenus de réciter chaque jour un certain nombre de prières même si la plupart ne savaient pas lire. Le jeûne était imposé dans les normes des lois ecclésiastiques et il était vivement recommandé de jeûner un jour par semaine, de préférence le vendredi[.",
+    "image": ""
+  },
+  {
+    "id": 752,
+    "titre": "Création du despotat de Morée",
+    "date": 1349,
+    "mois": 10,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "Le despotat de Morée fondé par Jean IV Cantacuzène s’étend sur toute la Morée byzantine. \ngouverné par les frères où les fils des empereurs. Manuel Cantacuzène est despote de Mistra jusqu'en 1380Le despotat de Morée (en grec ancien : Δεσποτᾶτον τοῦ Μορέως / Despotâton toû Moréōs) était une province de l'Empire byzantin, puis un État grec plus ou moins dépendant de cet Empire. État fondé au milieu du XIVe siècle dans la péninsule du Péloponnèse, ayant pour capitale la cité de Mistra près de l'ancienne Sparte. La taille de son territoire a varié au cours de son existence, mais a fini par inclure presque toute la péninsule. Le territoire était généralement donné en apanage à un ou plusieurs fils de l’empereur byzantin contemporain, voire à un membre de la famille impériale à qui on donnait le titre de despote. Le terme de « despotat » est formé sur celui de despote (Δεσπότης). Son équivalent le plus proche est prince, un despotat correspondant donc à une principauté.\nLe nom de « Morée » vient du grec Morea, mot d'étymologie incertaine, peut-être en rapport avec la ressemblance entre la carte du Péloponnèse et la feuille du mûrier (ou celle du platane).\nLe despotat de Morée est fondé par l'empereur byzantin Jean VI Cantacuzène, arrivé au pouvoir en 1347 à la suite d'une longue guerre civile durant la régence de Jean V Paléologue, âgé alors d'une quinzaine d'années. L'Empire byzantin est profondément appauvri par des années de guerre, et le Péloponnèse, dans une situation déplorable, est handicapé par une administration défaillante. Afin de parer à ces problèmes, Jean VI décide de faire de ce territoire une sorte de principauté aux pouvoirs étendus capables de reprendre en main la direction d'un pays livré à l'anarchie et aux raids des Turcs et des Francs. C'est son fils Manuel Cantacuzène qui est nommé à la tête de la province à la fin de l'année 1349. Il parvient assez rapidement à rétablir l'ordre entre les différents aristocrates terriens locaux ainsi qu'à signer une paix avec les Francs. Il ne réussit toutefois pas à maintenir longtemps la situation, car après avoir essayé de lever des fonds pour la constitution d'une marine susceptible de contrer la piraterie des Turcs, Manuel doit affronter aussitôt une nouvelle révolte de l'aristocratie terrienne. Il lève aussitôt une petite armée de 300 hommes et parvient à disperser les rebelles sans devoir engager le moindre combat. Si certains se rendent, d'autres tentent de continuer la lutte sans réussite.\nAvec la déposition de son père en 1355, remplacé par Jean V Paléologue, Manuel Cantacuzène doit faire face à la volonté du nouvel empereur d'éliminer des postes de pouvoir les membres de la famille Cantacuzène. Pour cela, il nomme Michel et André Asen comme gouverneurs de Mistra. Ces derniers parviennent rapidement à réunir autour d'eux les nobles mécontents de la politique de Manuel Cantacuzène qui ne peut compter que sur la fidélité de Monemvasie ou de Mistra. En s'appuyant sur ce bastion et avec l'aide de la république de Venise, Manuel Cantacuzène parvient à conserver son pouvoir. Il décide rapidement de défendre son territoire contre les attaques franques et turques pour favoriser son repeuplement. C'est ainsi qu'il fait venir un grand nombre d'Albanais en Morée pour servir comme soldats et paysans. C'est de cette époque que l'on peut dater le début de la colonisation du Péloponnèse par les Albanais. La création du despotat de Morée en 1349 par Jean VI afin de confier le territoire à son fils Manuel a pour objectif premier de rétablir l'ordre dans la région. Toutefois, elle est symptomatique de l'esprit de division régnant au sein de l'Empire byzantin dont les dirigeants fragmentent l'empire en diverses possessions devenant l'apanage de membres de la famille impériale. Cette tendance décentralisatrice est à l'opposé du pouvoir central fort, symbole de l'autorité suprême de l'empereur lors des siècles précédents. La ville de Thessalonique et ses alentours deviennent aussi à la même époque le siège d'une province aux compétences de plus en plus étendues au point de devenir une forme de nouveau despotat après sa reprise en 1402 bien que le terme de despotat ne soit utilisé que pour la Morée au sein de l'Empire byzantin. Le titre de despote est une création de Manuel Ier Comnène. Il est réservé aux parents proches de l'empereur avant de devenir le titre que se donnent des dynasties indépendantes comme les Lascaris aux premiers de temps de l'empire de Nicée ou les dirigeants du despotat d'Épire.\n\nProgressivement, le despotat de Morée s'affirme comme un territoire à l'organisation proche de celle de toute autre principauté indépendante. Il possède ainsi sa propre administration dans l'ensemble des domaines bien que l'empereur a toujours gardé la prééminence sur le despote. L'autonomie du despotat doit beaucoup à son isolement et au fait qu'avec la chute de Jean VI et le retour au pouvoir de Jean V, le despotat est dirigé par le membre d'une famille déchue par celle de la dynastie régnante (les Paléologue). Jusqu'en 1382/1383 et l'arrivée de Théodore Ier Paléologue à la tête du despotat, Manuel mène une politique extérieure indépendante et aucun document de Jean V ne semble avoir concerné la Morée.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Despotate_of_Morea_1450.svg/langfr-500px-Despotate_of_Morea_1450.svg.png",
+    "legende": "Le Despotat de Morée en 1450"
+  },
+  {
+    "id": 753,
+    "titre": "Pogrom de la St Valentin à Strasbourg",
+    "date": 1349,
+    "mois": 2,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 1,
+    "description": "9 janvier : toute la population juive de Bâle, accusée d'être responsable de la propagation de la peste, est massacrée et incinérée.Le pogrom est résumé par un des chroniqueurs, Closener[30], en vieil allemand :\n« Le vendredi on a capturé les Juifs, le samedi on les a brûlés, ils étaient environ deux mille comme on les a estimés[31]. »Le Pogrom de Strasbourg, connu aussi sous la désignation de massacre de la Saint-Valentin, est le massacre d’environ 2 000 habitants juifs, arrêtés le vendredi puis brûlés vifs le samedi 14 février 1349 par les habitants (et les autorités nouvellement installées par ces derniers) de la ville impériale libre de Strasbourg. Dès le printemps 1348, de nombreux pogroms se produisent tout d'abord en France faisant des milliers de victimes parmi la population juive, puis à partir de novembre, par la Savoie, ils se propagent à de nombreuses villes du Saint-Empire[2], en particulier de Rhénanie. En janvier 1349, le Pogrom de Bâle a lieu ainsi qu'un autre à Fribourg-en-Brisgau où dans les deux cas les Juifs sont envoyés par centaines au bûcher. À Strasbourg, cet événement tragique est étroitement lié à la révolte des corporations de métiers qui se déroule cinq jours auparavant et qui renverse le pouvoir en place depuis 1332, composé de riches bourgeois dont le juge Sturm et Conrad Kuntz von Winterthur, les deux Stettmeister (premier magistrat de la ville) et Peter Schwarber, l'Ammeister (second magistrat de la ville) et chef des corporations de métiers, qui garantissaient jusqu'alors une protection aux Juifs de la ville. Les artisans, aidés par une grande partie de la population, se sont insurgés plus particulièrement contre Schwaber, jugeant son pouvoir trop important, et sa politique envers les Juifs trop favorable[3].Le contexte :  Les Juifs formellement appartenaient toujours à la maison du roi, mais celui-ci avait depuis longtemps fait don des droits à la ville (en 1347, l'empereur Charles IV avait reconfirmé l'attribution des droits à la ville[5]). Strasbourg reçoit donc la plus grande partie des impôts juifs, mais en contrepartie doit prendre à sa charge la protection des Juifs (le montant exact des impôts est fixé dans une lettre datant de 1338, à la suite des rançonnements et des massacres de Juifs en Alsace par les bandes d'Armleder). Pour pouvoir répondre aux exigences pécuniaires de la ville, les Juifs devaient se montrer très stricts sur leurs créances, ce qui provoquait la haine de la population et surtout de leurs débiteurs. Dans ce contexte déjà tendu, survient la menace de la peste noire, une épidémie de peste bubonique qui fit en tout près de 25 millions de morts en Europe. Les Juifs sont accusés d'empoisonner les puits.\nEn ce début de 1349, la peste n'a pas encore atteint Strasbourg, mais les nouvelles de sa propagation à travers l'Empire germanique, créent un climat de panique parmi la population, climat entretenu par certains provocateurs dont le but inavoué est de se libérer des dettes contractées auprès des Juifs et de s'approprier leurs biens. Le peuple réclame leur extermination[Contrairement à la grande majorité de la population, le Conseil de la ville et le chef des corporations de métiers appliquent une politique de retenue et de protection des Juifs, et tentent de calmer le peuple afin d'empêcher le déclenchement d'un pogrom incontrôlé et sanguinaire. Le Conseil essaye tout d'abord d'infirmer la rumeur d'empoisonnement des puits par les Juifs. Il procède à l'arrestation de plusieurs Juifs et les fait torturer pour qu'ils avouent leurs fautes[8]. Comme prévu, il n'obtient aucune confession des accusés[9], malgré le supplice de la roue. En plus, le quartier réservé aux Juifs est gardé par des gens en armes afin de les protéger et écarter tout excès de la population[10]. Le gouvernement désire respecter la voie légale vis-à-vis des Juifs pour éviter que la situation dégénère et que leur pouvoir même soit remis en question[11]. Un pogrom peut dégénérer facilement en soulèvement populaire incontrôlable comme cela s'était produit une dizaine d'années auparavant avec la révolte d'Armleder. Une lettre du 12 janvier 1349 du Conseil municipal de Cologne adressée à la ville de Strasbourg, met en garde contre le risque très élevé d'une rébellion, en avertissant que dans d'autres villes, le peuple s'était révolté et qu'il en était résulté déjà de nombreux maux et de grandes dévastations[12]. En outre, les opposants pouvaient profiter des troubles pour s'emparer du pouvoir. Les bourgeois eux-mêmes, de façon similaire aux hommes politiques, pouvaient profiter des querelles ouvertes entre les familles nobles des Zorn et des Müllenheim pour accéder au pouvoir. En tant que suzerain effectif des Juifs, la ville se doit de les protéger, d'autant plus que ceux-ci versent pour cela en contrepartie des sommes considérables. Peter Schwaber, le chef des corporations de métiers, attire l'attention sur le fait que la ville en étant payée a donné, par une lettre frappée de son sceau, des gages de sécurité et qu'elle a donc un devoir à l'égard de sa minorité juive[14]. Aussi, ne peut-il approuver et refuse-t-il tout massacre de la population juive, avec en plus la crainte que cela pourrait avoir des conséquences économiques négatives pour la ville. En effet, un affaiblissement de la ville conduirait immanquablement à un affaiblissement du patriciat bourgeois De plus, les Juifs jouaient un rôle important en prêtant de l'argent pour tous les investissements importants et par leurs activités financières interrégionales assuraient une balance commerciale positive à la ville de Strasbourg et remplissaient les caisses de la municipalité[16]. Il y avait donc suffisamment de raisons pour que la municipalité protège les Juifs.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Pogrom_de_Strasbourg_1349.jpg/1280px-Pogrom_de_Strasbourg_1349.jpg",
+    "legende": "Pogrom de Strasbourg, illustration du XIXe siècle d’Émile Schweitzer."
+  },
+  {
+    "id": 754,
+    "titre": "Charles le Mauvais  roi de Navarre",
+    "date": 1349,
+    "mois": 10,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "1349 Charles de Navarre dit le Mauvais devient roi à la mort de sa mère Jeanne,, il tentera en vain de faire valoir ses droits sur le trône de France  (descendant mâle le plus directe il est le petit-fils de Louis X le Hutin par sa mère Jeanne de Navarre fille de  Louis X le Hutin et de Marguerite de Bourgogne, condamnée pour infidélité)  . \n Il détient aussi des fiefs en France, notamment le comté d'Évreux, ce qui fait de lui un des principaux nobles normands. À ce titre, il bénéficie du soutien des nobles normands hostiles au roi, notamment la famille d'Harcourt.\nLe discrédit des Valois permet à Charles de Navarre, fils de Jeanne II, de contester leur légitimité et de réclamer le trône de France.\nAîné d'une puissante lignée,  Charles le Mauvais regroupe autour de lui les mécontents du règne de Philippe VI de Valois.\n\nla famille des comtes de Boulogne la maison d'Auvergne, dont les membres ont été évincés de la régence de Bourgogne du fait du mariage de leur sœur avec Jean le Bon;\nles barons champenois fidèles à Jeanne de Navarre ;\nles fidèles de Robert III d'Artois, banni du royaume par Philippe VI (bien qu'il soit l'époux de sa demi-sœur Jeanne de Valois, internée au Château-Gaillard).\nIl est aussi soutenu par l'université de Paris et par les marchands des régions du nord-ouest du royaume, pour lesquels le commerce avec l'Angleterre est essentiel[45].\n\n Il n'a de cesse d'essayer de satisfaire son ambition et de profiter de la déstabilisation du royaume pour jouer sa carte. Pour parvenir à ses fins, il change plusieurs fois d'alliance, s'accordant avec le dauphin Charles (le futur Charles V) puis avec les Anglais et Étienne Marcel, pour ensuite se retourner contre les Jacques quand la révolte parisienne tourne court.\nBrillant orateur et habitué à la monarchie contrôlée par sa fréquentation des cortes navarraises (l'équivalent des états généraux), Charles le Mauvais se fait le champion de la réforme d'un État jugé trop arbitraire, ne laissant plus voix ni à la noblesse ni aux villes (Jean le Bon gouverne avec un cercle de favoris et d'officiers d’ascendance parfois roturière).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Charles_le_mauvais_et_les_Parisiens.jpg/960px-Charles_le_mauvais_et_les_Parisiens.jpg",
+    "legende": "Charles le Mauvais, roi de Navarre, assis sur une estrade au Pré-aux-Clercs, haranguant les Parisiens. Enluminure des Grandes Chroniques de France, XIVe siècle. Paris, BnF, département des Manuscrits, Français 2813, folio 405 verso."
+  },
+  {
+    "id": 755,
+    "titre": "Suspension des hostilités liées à la guerre de 100 ans, la légitimité des Valois remise en cause",
+    "date": 1349,
+    "date_fin": 1355,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Si la peste noire, ou Grande Peste, de 1349 oblige les belligérants à cesser le combat jusqu'en 1355, elle est aussi vécue comme une punition divine[93]. Philippe VI doit sa couronne à un vote des pairs de France qui ont écarté Édouard III et Philippe d'Évreux. Vaincu par une armée nettement inférieure en nombre à Crécy, le roi de France a dû fuir, ce qui met en doute la légitimité divine de son pouvoir[94]. Le prestige et l'autorité royale des Valois sont donc profondément altérés[93]. Le désordre s'installe dans le Royaume sans que son successeur, Jean II le Bon, parvienne à inverser la tendance. L'économie va mal et, pour éviter de recourir aux impôts de plus en plus impopulaires, l'État procède à des mutations qui dévaluent brutalement la monnaie[95] ; le commerce se réduit comme une peau de chagrin[96] ce qui conduit les commerçants et artisans à souhaiter plus d'autonomie pour les villes et une monnaie stable. Les mercenaires démobilisés, que ce conflit a utilisé sur le long terme[97], se regroupent en bandes et forment les Grandes compagnies qui terrorisent et pillent les campagnes. L'insécurité grandit sur les routes et dans les campagnes : la noblesse ne remplit plus le rôle qui lui est imparti dans la société féodale.",
+    "image": ""
+  },
+  {
+    "id": 756,
+    "titre": "Bataille de Melito",
+    "date": 1349,
+    "mois": 6,
+    "zones": [
+      "Naples",
+      "Hongrie"
+    ],
+    "type": 2,
+    "description": "Louis de Tarente et les barons napolitains sont mis en déroute par les troupes hongroises qui ont envahi le royaume de Naples à la bataille de Melito. \nBataille de Melito (6 juin 1349) – Affrontements entre Angevins et Hongrois sur le territoire du village de Melito. Plus de 1 000 morts et blessés, et 25 des principaux barons du royaume de Naples faits prisonniers.\nC'était le 6 juin 1349. La paix habituelle régnait sur le village de Melito, malgré la situation délicate dans laquelle il se trouvait alors. Les habitants de Melito ignoraient qu'ils allaient assister à l'un des affrontements les plus importants et les plus sanglants du Moyen Âge, connu dans l'histoire sous le nom de bataille de Melito. Face à face, dans l'une des batailles majeures du sud de l'Italie, se trouvaient les Angevins-Napolitains et les Angevins-Hongrois . Melito, historiquement à moitié sous l'influence de Naples et à moitié sous celle d'Aversa, se transforma en champ de bataille pour les deux factions. La bataille du 6 juin 1349 allait parfaitement démontrer combien la stratégie, la technologie et la ruse ont toujours été essentielles pour remporter la victoire dans les batailles de toutes les époques. Le royaume de Naples était ravagé par des luttes dynastiques qui avaient vu, en 1345, l'assassinat d'André, de la branche hongroise de la maison d'Anjou, époux de la reine Jeanne Ire , alors régnante, par des conspirateurs probablement inspirés par la reine elle-même. Après diverses vicissitudes, le frère d'André, Louis, roi de Hongrie , fondit sur le royaume de Naples avec une puissante armée composée de Hongrois (comme les appelaient les chroniques de l'époque), d'Allemands et de compagnies de mercenaires. En 1348, après avoir assouvi sa vengeance en faisant pendre certains nobles des conspirateurs à Aversa, il rentra chez lui, non sans avoir pris le contrôle de nombreuses villes et forteresses du royaume. La reine Jeanne, après s'être réfugiée en Provence pour échapper à la colère des Hongrois, revint à Naples accompagnée de son nouvel époux, son cousin Louis de Tarente , qui, à la tête de la baronnie napolitaine, entreprit la reconquête des territoires occupés par les Hongrois. L'avancée sur Aversa, le débarquement à Melito et le piège tendu aux Napolitains\nLes combats firent particulièrement rage en Apulie, où, au printemps 1348, arrivèrent d'importants renforts hongrois, une armée de 300 chevaliers menée par le voïvode de Transylvanie, Stefan Laczkfy . Il soumit rapidement les villes de Barletta, Trani, Bitonto, Giovinazzo, Molfetta et d'autres localités. Il marcha ensuite sur Aversa, d'où il atteignit Melito, aux portes de Naples .\nLes grands barons napolitains, ayant rassemblé une importante armée, l'interpellèrent pour lui barrer la route vers la capitale. L'armée du voïvode, composée de Hongrois et des compagnies mercenaires italo-allemandes de Corrado Lupo (Konrad Wolfhardt de Bregenz), du tristement célèbre duc Guarnieri (Werner von Urslingen, chef de la Grande Compagnie, qui se proclamait « ennemi de Dieu, de la piété et de la miséricorde ») et de Konrad Wirtinger von Landau, dit comte Lando , tenait position à Aversa.\nIls y tendirent un piège aux Napolitains en leur faisant croire à un violent conflit entre troupes allemandes et hongroises dans leur camp. Les Napolitains marchèrent sur Aversa avec une armée importante commandée par les principaux barons du royaume – parmi lesquels on se souvient de Roberto et Ruggiero di Sanseverino , et de Raimondo del Balzo, maréchal du royaume – ainsi que par des mercenaires des compagnies du comte allemand de Sprech et de Guglielmo da Fogliano . Pensant pouvoir immédiatement tirer profit de la situation, ils tombèrent dans le piège. C'était le 6 juin (selon d'autres, le 5 juin) 1349.\nLa bataille Entre-temps, les Hongrois avaient posté un corps d'environ 300 archers à cheval, commandé par Landau , aux abords de la ville . Ces derniers, comme nous le verrons, jouèrent un rôle décisif dans l'issue de la bataille. Ce fait est remarquable car il témoigne du fait que les Hongrois du XIVe siècle, bien qu'utilisant désormais des techniques et un équipement de style occidental – basés sur la cavalerie lourde –, conservaient l'héritage de leurs ancêtres. magyars, qui employaient les tactiques classiques des archers à cheval des steppes asiatiques .\nLes Hongrois sortirent d'Aversa pour affronter l'ennemi en rangs serrés. La première armée, celle des Allemands commandée par Corrado Lupo , fut cependant rapidement submergée par la cavalerie napolitaine, et son chef lui-même fut fait prisonnier. Loin de décourager les Hongrois, cet événement les incita à contre-attaquer. Bien qu'en infériorité numérique, ils chargèrent les Napolitains avec leurs troupes restantes, s'engageant dans une mêlée féroce. C'est alors que les archers à cheval entrèrent en action , surgissant de leurs cachettes et attaquant les Napolitains par derrière, abattant chevaux et cavaliers. L'armée royale se retrouva ainsi encerclée et, voyant la situation désespérée, tenta de battre en retraite vers Naples. Mais les Hongrois et les Allemands poursuivirent aussitôt les fuyards jusqu'aux murs de la capitale, en tuant un grand nombre et capturant autant de chefs et de nobles de l'armée du roi que possible, libérant ainsi Conrad lui-même, qui avait été fait prisonnier auparavant.",
+    "image": ""
+  },
+  {
+    "id": 757,
+    "titre": "Le Dauphiné est rattaché au royaume de France",
+    "date": 1349,
+    "mois": 3,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "23 avril 1343  , Vincennes[9] : acquisition du Dauphiné par Philippe VI de France. La province passera au royaume de France en 1349.30 mars : Humbert II de Viennois, en mauvaise posture financière et politique, cède le Dauphiné au roi de France au traité de Romans. Le prince héritier du trône de France, Charles, petit-fils du roi, prend le titre de dauphin[7]. Le roi de France respecte les libertés régionales du Dauphiné, en particulier celles des Juifs, qui cependant émigrent d’eux-mêmes vers la Provence.Malgré les défaites subies face à l'Angleterre, l'attraction politique de la France permet d'étendre le royaume vers l'est.\nEn 1349, le comte Humbert II, ruiné  à la suite d'une croisade à Smyrne, et sans héritier après la mort de son fils unique, décide de vendre le Dauphiné de Viennois, fief relevant du Saint-Empire romain germanique. Philippe VI se porte acquéreur et conclut avec Humbert le traité de Romans, selon lequel le Dauphiné de Viennois doit revenir à un fils du prince héritier Jean le Bon. C'est Charles, fils aîné de Jean, qui reçoit le fief, ainsi que le titre de dauphin, qui devient ensuite le titre du prince héritier de France.\n\nCette prise de possession du Dauphiné est la première extension du royaume au delà des limites définies par le traité de Verdun de 843 (ici : le Rhône). Elle permet de mieux contrôler la vallée du Rhône, axe commercial majeur entre la Méditerranée et l'Europe du Nord. Elle met les rois de France en contact direct avec Avignon, ville pontificale et centre diplomatique important à cette époque. Un des points de cet accord est que le Dauphiné et le titre de « dauphin (de Viennois) » qui y est attaché seront attribués à un fils de Jean le Bon. C'est Charles, son fils aîné, qui devient, le 16 juillet 1349, le premier dauphin (de France), inaugurant une tradition pluriséculaire.",
+    "image": ""
+  },
+  {
+    "id": 758,
+    "titre": "Montpellier vendu à la France  par le roi de Majorque",
+    "date": 1349,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "18 avril 1349  : Jacques III, dernier roi indépendant de Majorque, destitué en 1344, revend la ville de Montpellier pour 120 000 écus d’or à la France pour pouvoir reconstituer une armée et poursuivre sa lutte contre Pierre IV d'Aragon[19 mai : le chancelier Firmin de Coquerel prend possession de la ville de Montpellier au nom de Philippe VI de France",
+    "image": ""
+  },
+  {
+    "id": 760,
+    "titre": "Mort de Bonne de Luxembourg (1349) et remariage de Jean avec Jeanne d'Auvergne (1350)",
+    "date": 1349,
+    "mois": 9,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "Bonne de Luxembourg meurt de la peste le 11 septembre 1349 et Jean le Bon suit l’avis du roi qui, pour des motifs politiques, souhaite que l’héritier présomptif fasse alliance avec la duchesse Jeanne fille de Guillaume XII d'Auvergne et de Marguerite d'Évreux, héritière du duché (fief français) et du comté (fief d'Empire) de Bourgogne, ainsi que du comté d'Artois. Âgée de vingt-quatre ans, Jeanne est veuve de Philippe de Bourgogne, mort en pleine jeunesse au siège d'Aiguillon en 1346 (23) . à la suite d'une chute de cheval alors qu'il franchissait un fossé\nJean l'épouse donc le 9 février 1350 au château de Sainte-Gemme (aujourd'hui disparu) à Feucherolles à l'ouest de Saint-Germain-en-Laye. Comtesse de Boulogne et d'Auvergne depuis la mort de son père en 1332, elle assure la régence du duché et du comté de Bourgogne ainsi que de l'Artois depuis la mort, en 1349, de son beau-père, le duc Eudes IV.",
+    "image": ""
+  },
+  {
+    "id": 761,
+    "titre": "Giovanni Visconti règne seul sur Milan à la mort de son frère Luchino",
+    "date": 1349,
+    "mois": 1,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": "Luchino meurt le 24 janvier 1349.(62) son frère Jean lui succède , co-seigneur de Milan de 1339 à 1349 avec son frère Lucien puis seul seigneur de 1349 à 1354. Troisième fils du seigneur de Milan, Mathieu Ier et de Bonacossa Borri, il se destine à la carrière ecclésiastique. Il est élu archevêque de Milan par le chapitre de la cathédrale, en 1317, mais le pape Jean XXII refuse cette décision[1] et nomme Aicardo di Comodeia.\n\nAprès la condamnation familiale pour hérésie en 1323[2], il trouve dans l'antipape Nicolas V nommé par l'empereur Louis IV de Bavière un allié qui lui confère le cardinalat en 1329. En 1331, il devient évêque et seigneur de Novare. En 1334, il négocie avec Aicardo di Comodeia la permutation des charges. Ce dernier ayant refusé, il faudra que Jean Visconti attende son décès, en 1339, pour s'installer, triomphalement accueilli, à sa place Le 16 août 1339, Azzon, seigneur de Milan, décède sans postérité et la lignée de Galéas Ier, le premier fils de Mathieu Ier, s'éteint. Jean laissera cependant à Lucien toute latitude quant au gouvernement de l'État milanais.\nContre la somme de 500 000 florins et en l'absence de l'empereur, le pape leur accorde, en 1341, le vicariat qui les confirme dans leur fonction.\nEn 1342, une bulle papale de Clément VI lève l'accusation d'hérésie qui pèse sur Jean et sa famille et le reconnaît finalement comme archevêque de Milan.\n\nLorsque Lucien meurt, le 24 janvier 1349, Jean décide d'associer ses neveux, les trois fils de leur frère benjamin Étienne, Mathieu, Galéas et Barnabé, à son gouvernement et les rappelle de l'exil dans lequel Lucien les avait confinés.\n\nLe 9 octobre 1353, Jean est élu doge de Gênes et y délègue comme gouverneur Guglielmo Pallavicino. L'année suivante, il devient seigneur de Bologne et de Novare\n\nIl meurt le 5 octobre 1354 à Milan (64)  et ses trois neveux Mathieu II, Galéas II et Barnabé lui succèdent, se partageant le gouvernement de la seigneurie.",
+    "image": ""
+  },
+  {
+    "id": 762,
+    "titre": "Assassinat d'Enrico Caracciolo",
+    "date": 1349,
+    "mois": 4,
+    "zones": [
+      "Naples"
+    ],
+    "type": 2,
+    "description": "Jeanne Ire de Naples est écartée du pouvoir par son époux Louis de Tarente dès le mois de juillet. \nTrès vite Louis de Tarente ne se préoccupa que de sa prise de pouvoir au détriment de la reine Jeanne. À la faveur des troubles provoqués par les combats avec les troupes hongroises restées dans différentes places, il réussit un véritable coup d'État : Enrico Caracciolo, le protégé de la reine, fut arrêté et mis à mort[23]. Après une nouvelle offensive de Louis de Hongrie qui l'amena sous les murs de Naples, le pape Clément VI envoya un légat Raymond Saquet, évêque de Thérouanne avec une flotte commandée par Hugues des Baux[24]. Louis de Tarente promit de rendre à la reine son indépendance. Peu après Louis de Hongrie, grièvement blessé, rentrait dans son pays. Le 23 mars 1352 la paix était proclamée entre Naples et la Hongrie.\n\nL'exercice du pouvoir commun entre la reine et Louis de Tarente avait été réglé par un édit qui laissait à ce dernier la liberté de gouverner à son gré. Mais en fait le véritable maître était son conseiller, Niccolo Acciaiuoli.\nPhilippe II de Tarente, frère de Louis, avait épousé Marie de Calabre, veuve de Charles de Duras, et était envoyé en Provence en tant que vicaire général pour lutter contre les différentes compagnies qui ravageaient la Provence. Il acheta le concours des troupes du comte d'Armagnac qui se montrèrent aussi redoutables pour les populations locales. Finalement Innocent VI obtint l'éloignement de ces bandes contre rançon. Ces dangers montraient clairement la sous-administration de la Provence à partir de Naples[réf. nécessaire].\n\nLouis de Tarente, ayant pris froid en prenant un bain, tomba malade. Son état empira durant un mois et il mourut le 25 mai 1362",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Giovanna_I_d%27Angi%C3%B2%2C_matrimonio_con_Luigi_di_Taranto.jpg",
+    "legende": "Fresque de Roberto d'Oderiso à l'église Santa Maria Incoronata de Naples : mariage de la reine Jeanne Ire et de Louis de Tarente."
+  },
+  {
+    "id": 763,
+    "titre": "Ordonnance et Statut des travailleurs (Statute of Labourers)",
+    "date": 1349,
+    "mois": 6,
+    "date_fin": 1351,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "18 juin : ordonnance des Travailleurs en Angleterre[12]. Interdiction de la mendicité en Angleterre (fin en 1388)\nD'autres mesures sont prises pour  éviter la hausse des prix consécutive  à la pénurie de main d’oeuvre. \nLes élites les plus aisées souffrirent de ce bouleversement soudain de l’économie. La difficulté de trouver des travailleurs créa de la frustration. John Gower dit des travailleurs de l’après-peste : « ils sont paresseux, ils sont rares, ils sont âpres au gain. Pour la moindre chose qu’ils font ils demandent la plus forte paie »\n\nL’ordonnance comprenait entre autres les mesures suivantes :\n\ntoute personne âgée de moins de 60 ans devait travailler ;\nles employeurs ne devaient pas employer de main d’œuvre excédentaire ;\nles salaires ne devaient pas être supérieurs à ceux d’avant la peste ;\nla nourriture devait être vendue à un prix raisonnable sans profit excédentaire.\nL’ordonnance est considérée comme largement inefficace. Malgré le renforcement de l’ordonnance par le parlement anglais, avec le statut des travailleurs de 1351, les travailleurs continuèrent à demander de très forts salaires et la majorité de l’Angleterre (la classe des travailleurs) bénéficia d’une période de relative prospérité avant que les salaires et les prix ne retrouvassent les proportions d’avant la peste avec l’augmentation du nombre de travailleurs. Tandis que la situation fut finalement inversée, la peste modifia radicalement la structure sociale de la société anglaise.\nLe statut des travailleurs (en anglais Statute of Labourers) est une loi votée en 1351 par le parlement anglais sous le règne d'Édouard III en réponse aux conséquences démographiques et économiques de la grande peste[1]. Son promoteur principal est John Halles. La grande peste a tué environ le tiers de la population européenne et créé un manque de main-d’œuvre brutal qui intervient après une phase de surpopulation. Les propriétaires terriens se retrouvent en compétition pour obtenir de la main-d’œuvre, les paysans sont donc en position de force pour obtenir des avancées sociales[2]. Mais l'augmentation des prix agricoles et des salaires entraînent une importante inflation. Pour la contrer Édouard III décrète l'ordonnance des Travailleurs de 1349[1]. Le parlement la renforce par le statut des travailleurs de 1351.\n\nLe statut établit pour les travailleurs un salaire plafonné proportionnel aux salaires payés avant la grande peste. Il est également établi que doit travailler tout homme ou femme en état de le faire et impose de fortes amendes aux oisifs. Dans la pratique, le statut est relativement peu appliqué et n’est pas vraiment couronné de succès ; en revanche, il permet d’établir une différenciation entre les travailleurs en état de travailler et les autres. Cette différenciation sera reprise dans les législations postérieures relatives à la pauvreté.\n\nLe mécontentement provoqué par cette loi est l'un des facteurs déclenchant de la révolte des paysans anglais de 1381. Des évolutions similaires ont eu lieu à travers l'Europe et en particulier en France où le roi Jean II le Bon bloque les prix et interdit la mendicité pour les mêmes raisons.",
+    "image": ""
+  },
+  {
+    "id": 764,
+    "titre": "Tremblements de terre en Italie",
+    "date": 1349,
+    "mois": 1,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "22 janvier – Un tremblement de terre frappe L'Aquila, dans le sud de l'Italie, avec une intensité maximale de X ( Extrême ) sur l'échelle de Mercalli, causant de graves dégâts et faisant 2 000 morts.\n27 mars – Un tremblement de terre en Angleterre frappe l’abbaye de Meaux \n9 septembre  Séisme des Apennins centraux et méridionaux : Deux violents séismes ont frappé l’ensemble de la chaîne des Apennins centraux ( Pérouse , Frosinone , Bénévent , Abruzzes , Molise ). Dégâts importants à Rome : une grande partie du périmètre extérieur du Colisée s’est effondrée . L’ abbaye de Montecassino a été détruite . À Naples, la façade de la cathédrale s’est effondrée et le monastère de San Vincenzo al Volturno, près d’Isernia, a également été détruit . Nombreuses victimes.",
+    "image": "",
+    "sources": "https://it.wikipedia.org/wiki/1349"
+  },
+  {
+    "id": 765,
+    "titre": "Charles le Mauvais roi de Navarre",
+    "date": 1349,
+    "mois": 9,
+    "date_fin": 1387,
+    "zones": [
+      "France",
+      "Castille"
+    ],
+    "type": 2,
+    "image": ""
+  },
+  {
+    "id": 766,
+    "titre": "Annexion de la Ruthénie",
+    "date": 1349,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "Annexion de la Ruthénie, par Casimir III (Kamizierz) le Grand, de Halicz à Wlodzimierz (Galicie)",
+    "image": ""
+  },
+  {
+    "id": 767,
+    "titre": "Voyage de sainte Brigitte en Italie.",
+    "date": 1349,
+    "mois": 1,
+    "zones": [
+      "Papaute",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Elle séjourne à Rome à la fin de l'année[",
+    "image": ""
+  },
+  {
+    "id": 768,
+    "titre": "Pogrom de Bâle et Fribourg",
+    "date": 1349,
+    "mois": 2,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "16 janvier : Lors du pogrom de Bâle contre les Juifs, 50 à 70 personnes sont assassinées. Elles sont enfermées dans une cabane sur une île du Rhin et brûlées vives. De nombreux enfants d'origine juive sont épargnés, mais baptisés de force et placés dans un couvent. Lorsque la peste éclate finalement dans la ville en mai, leur conversion religieuse nouvellement acquise perd tout son sens. Ils sont emprisonnés et exécutés après avoir avoué sous la torture leur implication dans un complot d'empoisonnement contre Bâle .\n22 janvier : La communauté juive de Spire, qui compte environ 400 membres, est anéantie par un pogrom lors des persécutions contre les Juifs à l'époque de la peste noire .\n30 janvier : Un autre pogrom contre la population juive a lieu à Fribourg-en-Brisgau .\n23/24 août : Lors du massacre de la Saint-Barthélemy, une foule prend d’assaut le quartier juif de Cologne , l’incendie et assassine la majeure partie de la population, tenue pour responsable de l’ épidémie de peste en Europe . Plusieurs milliers de personnes perdent la vie.\nÀ Nuremberg, 562 Juifs, soit environ un tiers de la communauté juive locale, ont été assassinés lors d'un pogrom lié à la peste .\nDes pogroms ont également lieu à Saint-Gall .\nÀ Zoffingue et à Berne ( Suisse ), la population persécuta les Juifs , les accusant de propager la peste. Les deux tiers furent tués et les survivants émigrèrent en Pologne \n28 mai – À Breslau, en Silésie, 60 Juifs sont assassinés à la suite d'un incendie catastrophique qui détruit une partie de la ville.",
+    "image": ""
+  },
+  {
+    "id": 769,
+    "titre": "2e couronnement de Charles IV",
+    "date": 1349,
+    "mois": 7,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Suite au décès de Günther von Schwarzburg, Charles IV est couronné roi des Romains pour la seconde fois . Cette fois, son titre est universellement reconnu.",
+    "image": ""
+  },
+  {
+    "id": 770,
+    "titre": "Conquête de l'Epire",
+    "date": 1349,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "L'Épire est conquise par l' empereur byzantin Jean Cantakuzène",
+    "image": ""
+  },
+  {
+    "id": 771,
+    "titre": "Hôtel de ville gothique d'Aix-la-Chapelle",
+    "date": 1349,
+    "zones": [
+      "St Empire",
+      "Art"
+    ],
+    "type": 4,
+    "description": "Suite au délabrement et à la démolition avancée de la salle de l’assemblée carolingienne au XIIIe siècle, le magistrat et l’empereur Louis de Bavière convinrent d’un nouveau bâtiment à double fonction, qui allait héberger le siège administratif de la ville libre d’Empire et accueillir les plus importantes cérémonies impériales : les banquets de couronnement. La construction s’acheva en 1350 ; le bâtiment fut dès lors considéré comme une œuvre d’architecture profane des plus grandioses et des plus audacieuses. Le célèbre humaniste Enea Silvio Piccolomini, le futur pape Pie II, le décrivit en 1435 comme le « palais le plus noble de toute l’Allemagne ».\n\nUn édifice palatial à trois étages fut construit sur les fondations du palais et certains vestiges de ses murs extérieurs, selon une orientation strictement est-ouest. Les deux étages principaux étaient chacun divisés en cinq travées de forme proche du carré et dotées de voûtes en croisée d’ogives. La tour Granus datant de l’époque de Charlemagne fut exhaussée de trois étages et intégrée à l’édifice. La façade nord était ornée de 60 statues peintes et partiellement dorées. Cet édifice impressionna tellement son époque qu’il inspira de nombreux hôtels de ville en Flandre, notamment à Anvers, Bruges et Gand.\nL’incendie de 1656 détruisit les combles et les flèches de l’hôtel de ville. On opta rapidement pour la construction de tours plus hautes dans un style baroque, alors considéré comme moderne. Ce même style s’imposa également lorsqu’il fut question de réaménager la façade à partir de 1727. Les précieuses statues furent ôtées et remplacées par des élements en stuc. On retrouve aujourd’hui l’aménagement intérieur datant de cette époque dans la Salle blanche. \nLorsque le grand romantique Frédéric-Guillaume IV accéda au trône de Prusse en 1840, on décida de restaurer l’ancien faste de la « Salle impériale ». Une tour d’escalier fut construite au sud en guise d’accès représentatif, selon les plans de l’urbaniste Friedrich Ark. Ce dernier reconstitua également la structure gothique des fenêtres de la façade donnant sur le marché. Un nouvel incendie emporta les tours baroques en 1883. Elles réapparurent dans un style néogothique. La regothisation s’acheva en 1901 avec la réinstallation de statues.\nLes bombardements de 1943/44 ont gravement endommagé l’hôtel de ville. En 1944, et surtout à partir de 1946, on s’attacha tout d’abord à la préservation du bâtiment, puis à sa reconstruction. Dès 1950, le prix international Charlemagne put être décerné dans la salle des couronnements provisoirement restaurée. Le conseil et le maire réintégrèrent les lieux un an plus tard.\n\nLe portail principal de la tour ouest et les fenêtres de la salle des couronnements ont été conçus par Ewald Mataré. Les nouvelles flèches conçues par Leo Hugot apportèrent en 1979 la touche finale à l’apparence  actuelle de l’hôtel de ville.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/De_merian_Westphaliae_100.jpg/960px-De_merian_Westphaliae_100.jpg",
+    "legende": "L'hôtel de ville d'Aix-la-Chapelle sur une gravure de Matthäus Merian, 1647"
+  },
+  {
+    "id": 772,
+    "titre": "Alexis III de Trébizonde fin des guerres civiles",
+    "date": 1349,
+    "mois": 12,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "22 décembre – L’accession au trône d’ Alexis III de Trébizonde met fin aux guerres civiles trapézontines.",
+    "image": ""
+  },
+  {
+    "id": 759,
+    "titre": "le futur dauphin Charles, épouse Jeanne de Bourbon",
+    "date": 1350,
+    "mois": 4,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "Le 8 avril 1350, à l'âge de 12 ans, le dauphin épouse, sa parente Jeanne de Bourbon (âgée de 12 ans également). Un accord du pape a été obtenu pour ce mariage consanguin : Jeanne est en effet la fille d'Isabelle de Valois, sœur de Philippe VI, grand-père de Charles, ce qui fait de lui son petit-cousin. Cette consanguinité est probablement à l'origine[réf. souhaitée] des troubles psychiatriques[réf. souhaitée] de Charles VI et de la fragilité des autres enfants de Charles V. Le mariage est retardé par les morts de Bonne de Luxembourg et de Jeanne de Bourgogne, emportées par la peste pendant son séjour en Dauphiné[12]. Le dauphin a lui-même été gravement malade d'août à décembre 1349[12]. Les rassemblements étant limités, afin de ralentir la diffusion de la peste qui sévissait alors dans toute l'Europe, le mariage a lieu dans l'intimité. \nLe dauphin est rappelé à Paris à la mort de Philippe VI (22 août 1350), puis est présent le 26 septembre 1350 au sacre de son père à Reims. Il est fait chevalier de l'ordre de l'Étoile",
+    "image": ""
+  },
+  {
     "id": 175,
     "titre": "Pierre Ier dit le Cruel",
     "date": 1350,
@@ -8379,6 +8901,7 @@
       "Castille"
     ],
     "type": 1,
+    "description": "Dès le début de son règne s'affrontent deux clans : la faction dirigée par sa mère Marie de Portugal et celle de la maîtresse d'Alphonse XI, Leonor de Guzmán, puissante tant que le père de Pierre était en vie et dont les enfants illégitimes  sont largement dotés en honneurs et privilèges.\nEn 1351, rétabli d'une grave maladie qui l'a frappé l'année même de son couronnement, il ordonne la levée du siège de Gibraltar et quitte Séville pour la Castille, toujours sous la coupe de sa mère et d'Albuquerque (son précepteur portugais) , celui-ci obtient la reddition de Léonor de Guzmann qu’il fait exécuter en 1351. \n\nEn 1352, profitant de la mort du seigneur de Biscaye, Pierre 1er fait assassiner le jeune héritier et absorber la seigneurie par la couronne, malgré une opposition armée de quelque 10 000 Basques. Il organise le mariage de la sœur de l'héritier assassiné, Jeanne de Lara — qu'il fait assassiner par la suite —, avec son demi-frère Tello de Castille, un autre des fils illégitimes d'Alphonse XI et Leonor de Guzmán.\nEn 1351 et 1352 se tiennent les Cortes (pendant castillan des états généraux du royaume de France) à Valladolid à l'occasion desquelles seront publiées un nombre important de lois contre le brigandage et le vagabondage, pour la protection des Juifs, pour le développement du commerce et de l'agriculture et pour la limitation des droits de la noblesse.\nEn 1352, pour sceller une alliance avec le royaume de France, il décide d'épouser Blanche de Bourbon, descendante de Saint Louis par son père, le duc Pierre Ier de Bourbon, et de Philippe III de France par sa mère Isabelle de Valois. Il s'agit surtout d'une nièce du roi de France.Mais trois jours après son mariage. Il fait enfermer son épouse et rejoint sa maîtresse, Marie de Padilla, qui lui a déjà donné une fille, L'échec de ce mariage provoque la rupture de l'alliance avec le roi de France et la chute d'Albuquerque qui l'avait encouragé et organisé. . Albuquerque s'est réfugié auprès du roi du Portugal, Alphonse IV, qui refuse de le remettre à Pierre Ier.Enfermée à l'Alcazar de Séville, la reine Blanche se plaint du traitement dont elle est l'objet auprès du pape Innocent VI et du roi de France. Les interventions du pape en faveur de la recluse, ainsi que les menaces d'excommunication, n'aboutissent à rien.\nIl devait dans un premier temps épousé Jeanne la fille du roi d’Angleterre Edouard III  Mais au moment de quitter Bordeaux, la région est frappée par la peste et Jeanne en meurt le 1er juillet 1348. Ces tentatives de mariage sont motivées par l'existence d'une flotte castillane puissante, élément important pour le contrôle des mers dans le cadre du conflit franco-anglais.",
     "image": "",
     "regne": true
   },
@@ -8393,8 +8916,137 @@
       "France"
     ],
     "type": 1,
-    "image": "",
+    "description": "Philippe VI meurt en 1350, complètement discrédité et en pleine épidémie de la Grande peste. Jean le Bon est sacré à Reims, en compagnie de son épouse Jeanne d'Auvergne, par l'archevêque Jean II de Vienne.\nSon intronisation est suivie par l'adoubement de quatre cents nouveaux chevaliers appartenant aux grandes familles du royaume.\nLe nouveau roi choisit pour emblème l'aigle, symbole de son patron Saint Jean l'évangéliste\nLes deux premiers Valois, incapables de faire rentrer les impôts, recourent à des mutations monétaires pour renflouer le trésor, ce qui entraine des dévaluations extrêmement impopulaires. La légitimité de Jean II est en outre contestée par son cousin Charles le Mauvais roi de Navarre .\nDu fait de la mort de Philippe VI, la trêve signée en 1347 n’est plus valable. La guerre reprend entre les rois de France et de Navarre. Charles de La Cerda, nommé connétable de France en janvier 1351, s'illustre par une brillante campagne en Poitou et Saintonge. Il prend Saint-Jean-d'Angély le 11 août 1351.\nProfitant de ces difficultés, Édouard III et son fils le Prince Noir relancent la guerre en 1355\nLe règne de Jean le Bon est marqué, comme celui de son père, par la contestation de Charles de Navarre et d'Édouard III, lesquels n'acceptent pas l'accession des Valois au trône de France. Les actions de Jean le Bon sont donc guidées par la nécessité politique de prouver avant tout la légitimité de sa couronne.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Jean_II_Le_Bon_-_BnF_-_Mus%C3%A9e_du_Louvre_Peinures_RF_2490.jpg?uselang=fr",
+    "legende": "Portrait de Jean II le Bon, anonyme vers 1350[1], dép. des Estampes de la BnF, en dépôt au musée du Louvre.",
     "regne": true
+  },
+  {
+    "id": 773,
+    "titre": "Raids des pirates japonais Wakô sur les côtes coréennes",
+    "date": 1350,
+    "zones": [
+      "Japon",
+      "Chine"
+    ],
+    "type": 2,
+    "description": "Les équipages des wakō sont composés de marins provenant de diverses ethnies d'origines est-asiatique, et non pas seulement japonais, qui varient au fil du temps. Ils attaquent le continent à partir des îles de la mer du Japon et de la mer de Chine orientale[3]. L'activité des wakō en Corée décline après le Traité de Gyehae (Traité de Kakitsu, 嘉吉条約) en 1443[1], mais continue sur les côtes de la Chine des Ming et culmine lors des raids des wakō de Jiajing, au milieu du XVIe siècle. Les représailles chinoises et la forte répression des pirates par les autorités japonaises aboutissent à la disparition des wakō au XVIIe siècle.\nSi l'origine du terme wakō remonte au Ve siècle, la période d'intense activité des raids commence au XIIe et connaît un essor important dans la seconde moitié du XIVe siècle[6]. Les pirates actifs lors de la première vague de raids, les « premiers wakō », sont directement lés aux tentatives d'invasions mongoles du Japon. Une fois tout risque d'invasion écarté, les défenses côtière de la Chine et de la Corée sont considérablement réduites et les habitants des îles de Tsushima, Iki et Gotō, à Kyushu, perdent les revenus liés à la présence militaire et souffrent d'une pauvreté extrême. C'est pour ces raisons que les wakō intensifient progressivement leurs pillages sur les côtes chinoises et coréennes[7],[8]. Les dirigeants de la dynastie Goryeo réagissent en envoyant Jeong Mong-ju au Japon pour régler le problème. Pendant la visite de l'envoyé coréen, le gouverneur de Kyushu, Imagawa Sadayo attaque et vainc les wakō, avant de renvoyer en Corée les biens et personnes capturés lors des raids de ces derniers[9],[10]. En 1405, Ashikaga Yoshimitsu envoie en Chine 20 pirates capturés par ses hommes. Les autorités chinoises les exécutent à Ningbo, en les faisant bouillir dans un chaudron[1",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Wokou.jpgjpg",
+    "legende": "Raids des wakō sur la Chine et la Corée au XVIe siècle."
+  },
+  {
+    "id": 774,
+    "titre": "Jean le Bon, duc de Normandie épouse Jeanne d'Auvergne",
+    "date": 1350,
+    "mois": 2,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Dite Jeanne de Boulogne. Fille de Guillaume XII, comte d'Auvergne et de Boulogne, et de Marguerite d'Évreux, elle hérite des comtés d'Auvergne et de Boulogne à la mort de son père en 1332. \nElle épouse en premières noces Philippe de Bourgogne dit Monsieur, fils et héritier d'Eudes IV, duc de Bourgogne et de Jeanne de France, comtesse d'Artois et de Bourgogne. De ce mariage sont nés :\n\nJeanne de Bourgogne (1344-1360) fiancée à Amédée VI, comte de Savoie ;\nMarguerite de Bourgogne (née en 1345 ; morte jeune) ;\nPhilippe de Rouvres (1346-1361), duc de Bourgogne, comte de Bourgogne, d'Artois, de Boulogne et d'Auvergne.\nSon mari meurt le 10 août 1346, suivi de sa belle-mère, le 15 août 1347 et de son beau-père le 3 avril 1349. Son fils Philippe hérite alors du duché de Bourgogne, ainsi que des comtés de Bourgogne et d'Artois. Comme il n'a que deux ans et demi à la mort du duc Eudes IV, Jeanne d'Auvergne assure la régence des États de son fils.\nLe 9 février 1350[4], elle se remarie avec Jean de France, duc de Normandie, fils du roi de France Philippe VI. Leur union est consacrée à la chapelle du château royal de Sainte-Gemme (parfois appelé aussi Saint-James et aujourd'hui disparu) à Feucherolles, près de Saint-Germain-en-Laye",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Entr%C3%A9e_de_Jean_II_le_Bon.jpg/960px-Entr%C3%A9e_de_Jean_II_le_Bon.jpg",
+    "legende": "Entrée de Jean II le Bon Grandes Chroniques de France, enluminées par Jean Fouquet, Tours, vers 1455-1460 Paris, BnF, département des Manuscrits, Français 6465, fol. 378 v. (Livre de Jean II le Bon) Après avoir été couronnés à Reims le 27 septembre 1350, Jean II le Bon et son épouse, Jeanne d'Auvergne, entrent solennellement à Paris le 17 octobre."
+  },
+  {
+    "id": 775,
+    "titre": "Lors du 4e siège de Gibraltar Alphonse XI de Castille  meurt de la peste",
+    "date": 1350,
+    "zones": [
+      "Castille"
+    ],
+    "type": 2,
+    "description": "Le 26 mars 1350, alors qu'il assiège Gibraltar, Alphonse XI de Castille  meurt de la peste. Pierre 1er ( dit le cruel)  est proclamé « roi de Castille et León » à Séville.\nDès le début de son règne s'affrontent deux clans : la faction dirigée par sa mère Marie de Portugal et celle de la maîtresse d'Alphonse XI, Leonor de Guzmán, puissante tant que le père de Pierre était en vie et dont les enfants illégitimes  sont largement dotés en honneurs et privilèges.\nEn 1351, rétabli d'une grave maladie qui l'a frappé l'année même de son couronnement, il ordonne la levée du siège de Gibraltar et quitte Séville pour la Castille, toujours sous la coupe de sa mère et d'Albuquerque (son précepteur portugais) , celui-ci obtient la reddition de Léonor de Guzmann qu’il fait exécuter en 1351. \nEn 1352, profitant de la mort du seigneur de Biscaye, Pierre 1er fait assassiner le jeune héritier et absorber la seigneurie par la couronne, malgré une opposition armée de quelque 10 000 Basques. Il organise le mariage de la sœur de l'héritier assassiné, Jeanne de Lara — qu'il fait assassiner par la suite —, avec son demi-frère Tello de Castille, un autre des fils illégitimes d'Alphonse XI et Leonor de Guzmán.",
+    "image": ""
+  },
+  {
+    "id": 776,
+    "titre": "2e campagne de Louis de Hongrie en Italie",
+    "date": 1350,
+    "mois": 2,
+    "zones": [
+      "Naples",
+      "Hongrie"
+    ],
+    "type": 1,
+    "description": "Il s’empare une nouvelle fois du royaume de Naples mais le pape refuse de destituer Jeanne de son trône.\nBattu par Venise en 1346 à Zara, Louis Ier organise une expédition contre Naples en 1347/1348 dont le souverain Louis de Tarente est suspecté d'avoir participé au meurtre du plus jeune frère de Louis, André. Il occupe Naples[1] mais une épidémie de peste et les révoltes des barons napolitains l'obligent à se retirer. Une seconde campagne contre Naples en 1350 ne donne pas plus de résultats.En 1351, 1352 et 1354, Louis Ier participe à des croisades menées contre les tribus baltes païennes de Lituanie. En 1354/1355 il fait campagne contre les Serbes et récupère l'Herzégovine. La seconde guerre contre Venise (1356/1358) est plus heureuse et, par le Traité de Zara (1358) il reçoit les possessions vénitiennes de la Dalmatie.\nParvenu à Manfredonia par la mer début 1350 , Louis gagna rapidement la Campanie . Mais cette fois, ce furent ses propres soldats qui exigèrent la fin des hostilités et le retour au pays, las de la longue guerre. Grâce à la médiation des légats pontificaux, le roi de Hongrie accepta la signature de la trêve et reprit son chemin vers son pays, obtenant toutefois l'ouverture d'un procès contre Jeanne afin d'établir sa responsabilité dans l'assassinat d'André. Le procès se tint à la cour papale d'Avignon, où l'influence des Angevins était considérable. Grâce également à la cession de la ville d'Avignon à l'Église, la reine fut déclarée innocente et les prétentions de Louis le Grand furent, pour le moment, mises de côté\n\n26 juillet[9] : Louis de Hongrie prend Aversa qu'il assiège depuis avril.\nOctobre : une trêve est signée entre Louis de Hongrie et Jeanne de Naples jusqu'au 21 avril 1351",
+    "image": ""
+  },
+  {
+    "id": 777,
+    "titre": "Bataille de L'Espagnols sur Mer ou de Winchelsea",
+    "date": 1350,
+    "mois": 8,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "29 août : victoire de la flotte anglaise commandée par Édouard III d'Angleterre sur la flotte castillanne de Charles de La Cerda à la bataille de L'Espagnols sur Mer.\nLa bataille de L'Espagnols sur Mer ou bataille de Winchelsea, oppose le 29 août 1350, au début de la guerre de Cent Ans, une flotte anglaise de cinquante vaisseaux commandée par Édouard III d'Angleterre et le Prince noir et une flotte castillane de quarante vaisseaux commandée par Charles de la Cerda, un proche du roi de France Jean II le Bon, devenu roi sept jours auparavant, à la mort de son père, Philippe VI de Valois.\nElle s'achève par la victoire des Anglais : de quatorze à vingt-six vaisseaux castillans (selon les sources) sont coulés ou capturés, sans doute beaucoup moins pour les Anglais (seulement deux navires connus comme perdus). Le nom de « bataille de Winchelsea » se réfère au port anglais le plus proche, Winchelsea, point de départ de la flotte anglaise.\nEn revanche, le nom de « bataille de Lespagnols sur Mer » reste à expliquer même si les historiens pensent que ce nom viendrait du fait que des navires castillans aient participé à la bataille.À partir de 1340, la flotte française est réduite à peu de choses, aussi Philippe VI s'en remet sur mer à ses alliés génois ou castillans. L'un des officiers les plus actifs est Charles de la Cerda qui s'en prend au commerce anglais dans la Manche et en mer du Nord.\nProfitant de la mort de Philippe VI, les Anglais, décident d'en finir avec la flotte de Charles de La Cerda et mobilisent pour cela d'importants moyens navals. Charles de la Cerda (1326-1354), descendant du roi de Castille Alphonse X (en ligne masculine) et du roi de France Louis IX (par sa fille Blanche), est né en France où son grand-père, Alphonse le Déshérité (1270-1333), spolié du trône de Castille par Sanche IV, s'est installé en 1303 après avoir séjourné treize ans dans le royaume d'Aragon.\nLe fils cadet d'Alphonse le Déshérité, Louis de la Cerda (1291-1348), oncle de Charles, est amiral de France sous le règne de Philippe VI. Charles, élevé avec le prince Jean le Bon, fait partie de ses proches quand celui-ci arrive sur le trône. Au début du mois d'août 1350, Charles de la Cerda est signalé dans le comté de Flandre, à l'Écluse, qui est le port de Bruges, à la tête d'un convoi de navires marchands chargeant leurs cales avant de repartir vers la côte basque.\nÉdouard III décide de l'attaquer sur la route du retour. Il se rend solennellement à Winchelsea, accompagné de son fils Édouard de Woodstock, le « Prince Noir » et de jeunes nobles décidés à en découdre avec La Cerda[1]. Le 28 août, les troupes embarquent sur une cinquantaine de navires de guerre. Le roi, sur le navire amiral, le cogue Thomas, prend le commandement de la flotte.\nCharles de la Cerda est considéré comme un adversaire dangereux : avant l'embarquement, le roi a ordonné aux archevêques de Cantorbéry et d’York de faire dire des prières pour le succès de l’opération, L’attente n’est pas longue. Le dimanche 29 août dans l'après-midi, les quarante navires de Charles de la Cerda sont signalés, poussés vers Winchelsea par une bonne brise de sud-ouest[pas clair] qui les rapproche rapidement. Édouard III ordonne de lever l’ancre et fait sonner le branle-bas de combat. Après l’appareillage, Édouard fait servir du vin à ses chevaliers et à lui-même pour renforcer encore la cohésion de ses hommes[pas clair].\nCharles de la Cerda pourrait facilement éviter le contact[réf. nécessaire]. Tout porte à croire, au contraire, qu’il le recherche[réf. nécessaire] : la route suivie, le fait qu’il ait embarqué des mercenaires dans les ports flamands, la détermination qu’il montre, au moment de la rencontre, pour se jeter sur l’ennemi[1].\nLe choc est donc très violent. Le cogue Thomas est heurté par un navire castillan lors d’une tentative d’abordage ; la collision est si violente que le navire castillan perd son mât et que le navire amiral anglais subit une importante voie d’eau. À l’issue d’un corps à corps sanglant, l’équipage du Thomas s'empare d’un autre bâtiment et Édouard abandonne son navire qui coule pour se transporter sur cette prise[1].\nLes navires castillans sont plus hauts sur l’eau, ce qui leur permet d’accabler le pont des navires anglais de projectiles et de causer de gros dommages aux hommes et au matériel. Le navire du Prince Noir se retrouve bientôt réduit à l’état d’épave, accroché au flanc d’un navire castillan qui le malmène. Le prince héritier doit son salut au courage du comte de Lancastre, qui aborde la nef ennemie d'un autre côté et lui fait amener son pavillon[1].\nUn grand navire anglais, commandé par le comte Guillaume Ier de Namur, qui transporte la « maison du roi », est attaqué à l'abordage : les Castillans s'efforcent de l’entraîner à l’écart de la bataille pour le neutraliser plus facilement. À ce moment, la situation des Anglais est compromise. Finalement, un valet du comte de Namur réussit à passer sur le pont du navire castillan et à couper la drisse de la grand-voile, rendant le bâtiment ingouvernable et permettant aux Anglais de reprendre la situation en mains.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Bataille_navale_medievale_debut_XIVe_siecle.jpg",
+    "legende": "Miniature représentant un combat naval. Manuscrit napolitain, début du XIVe siècle, Italie"
+  },
+  {
+    "id": 778,
+    "titre": "Exécution de  Raoul II de Brienne comte de Guines",
+    "date": 1350,
+    "mois": 11,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "19 novembre : Raoul II de Brienne, connétable de France, soupçonné de haute trahison est exécuté sur ordre du roi Jean II.\nRaoul II de Brienne . \n comte d'Eu et de Guînes, seigneur de Jarnac et de Châteauneuf, et de Jeanne de Mello-St-Bris. Le 19 novembre 1350, sur ordre du roi Jean II de France, il est décapité à Paris. Les causes de son exécution sont restées secrètes mais il semble qu'il ait été convaincu de haute trahison.\nEn 1346, lors de la prise de Caen, Raoul de Brienne est fait prisonnier, lors de la chevauchée d'Édouard III, par les forces anglaises menées par le comte de Kent, Thomas Holland. En automne 1350, il est autorisé à rentrer en France afin qu'il puisse réunir la somme de 60 000 moutons d'or pour payer sa rançon.\nIl s'agit d'un gentilhomme cosmopolite dont le domaine est partagé entre plusieurs royaumes (en France, en Angleterre et en Irlande). Comme tous les seigneurs dont les possessions ont une façade maritime à l'ouest (sauf ceux dont les domaines sont dans le bassin de la Seine et qui peuvent facilement commercer avec Paris), il a intérêt à soutenir l'Angleterre pour des raisons économiques (le transport maritime étant à l'époque plus performant que le transport terrestre, la Manche constitue une intense zone d'échange)[3]. Dès son arrivée à Paris, de mauvaises langues prétendent que le connétable aurait été libéré parce qu'il aurait rendu hommage au roi Édouard III d'Angleterre en lui cédant sa forteresse de Guînes, place forte donnant sur le Pas de Calais. Il semble qu'il ait négocié sa libération contre l'engagement de reconnaître Édouard III comme roi de France et que Jean le Bon en ait eu connaissance par l'interception de courriers à destination du souverain anglais[4]. Le roi ne souhaite pas que cela s'ébruite car cela remettrait en avant les problèmes de droits d'Édouard à la couronne[4]. Le roi de France le fait arrêter et enfermer dans un cachot du Louvre. Le lendemain, 19 novembre 1350, il est emmené devant l'hôtel de Nesle où, sans avoir eu de procès, il est décapité et ses biens confisqués[4]. Personne ne connaîtra jamais les vraies raisons de cette exécution.\nTandis qu'il confie la charge de connétable à Charles de La Cerda en janvier 1351, le roi de France rattache le comté de Guînes au domaine royal et donne le comté d'Eu à Jean d'Artois, fils de Robert III. L'opacité sur les raisons de cette exécution laisse place aux rumeurs : le connétable aurait été exécuté parce qu'il entretenait une liaison avec feu la reine Bonne de Luxembourg (ce qui permet de discréditer les futurs Valois en instituant un doute sur leur hérédité et donc leur légitimité)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Armoiries_Brienne-Eu.svg/langfr-250px-Armoiries_Brienne-Eu.svg.png"
+  },
+  {
+    "id": 779,
+    "titre": "Charles de la Cerda comte d'Angoulême",
+    "date": 1350,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "Jean II obtient le soutien vient de la maison de la Cerda, famille castillane d'extraction royale (castillane et française). Après Louis de la Cerda au service de Philippe VI, Jean le Bon est servi par Charles de la Cerda, avec qui il a été éduqué et qui est devenu son favori. Dès le début du règne, Charles de La Cerda accumule les honneurs. Jean le Bon lui confie missions diplomatiques et commandements militaires ou maritimes.vCharles de la Cerda reçoit le comté d'Angoulême en décembre 1350, ce qui le met en conflit avec Charles de Navarre.En 1352, il épouse Marguerite, fille de Charles de Blois, prétendant soutenu par les Valois au trône ducal de Bretagne. Ce mariage lui vaut le soutien de certains nobles bretons, comme Bertrand du Guesclin.",
+    "image": ""
+  },
+  {
+    "id": 781,
+    "titre": "3e  guerre vénéto-génoise où guerre de Caffa",
+    "date": 1350,
+    "date_fin": 1355,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "Un nouveau conflit entre les deux puissances maritimes éclate entre 1350 et 1355, émaillée de victoires incertaines de part et d'autre, jusqu'à ce que les deux puissances signent une paix temporaire à Byzance, en 1355, puis qu'elles concluent des accords commerciaux en 1361. La troisième guerre vénéto-génoise est déclenchée par l'interdiction faite par les Génois aux navires vénitiens d'accéder aux ports de la mer Noire[2]. Les deux républiques rivales enchaînent dès lors les combats navals.\nLe doge de Venise Andrea Dandolo, allié à l'empire byzantin de Jean VI Cantacuzène et au royaume d'Aragon de Pierre IV d'Aragon, connaît d'abord la victoire. Mais la défaite de cette alliance lors de la bataille de Gallipoli entraîne la défection des Byzantins.\nDébut des guerres de Caffa[15] entre Venise et Gênes (fin en 1355). Les Génois prétendent interdire aux vénitiens la navigation sur la mer Noire.\n1351  Septembre : les Génois sont chassés de Nègrepont par les Vénitiens de alliés aux Aragonais et aux Byzantins[\n13 février 1352  : bataille navale du Bosphore entre la flotte génoise de Paganino Doria et les forces combinées de Venise (Nicolo Pisani), de l'Aragon et de l'empire byzantin. Une tempête provoque de lourdes pertes dans les deux camps. Les Génois victorieux mettent le siège devant Constantinople avec l'aide des Turcs d'Orhan.\n6 mai : paix séparée entre la république de Gênes et l'empire byzantin[8]. L'empereur confirme aux Génois leurs anciens privilèges et ferme les ports de la Grèce aux Vénitiens et aux Catalans.\n1353 29 août : bataille d'Alghero ou de la Loiera. (large de la Sardaigne)  Défaite navale de l'amiral génois Antonio Grimaldi contre Venise et l'Aragon au large de Cagliari. Gênes, qui n'est plus ravitaillée par la mer, se tourne vers l'archevêque de Milan. Les forces navales de Niccolò Pisani, au repos après la défaite de Gallipoli, sont renforcées par les forces de l'amiral d'Aragon Bernardo Chiabrera. Informé de ce mouvement, l'amiral génois part avec 52 galères afin d'atteindre une ou l'autre de ces flottes, avant leur réunion[1]. La bataille se solde par une victoire de la république de Venise et de son allié aragonais, en supériorité numérique. La république de Gênes perd une quarantaine de galères[2].Gênes, qui n'est plus ravitaillée par la mer, se tourne vers l'archevêque de Milan. Le conflit trouvera son épilogue après la bataille de Porto-Longo en 1354, où Gênes écrase Venise, et son terme lors du traité de Milan de 1355.\n10 octobre[9] : la république de Gênes se place sous la protection du milanais Giovanni Visconti. Guillaume, marquis de Pallavicini, devient doge\n1354  3 novembre : la flotte vénitienne commandée par Niccolo Pisani est capturée par les Génois de Paganino Doria à la bataille de Sapienza (ou de Porto-Longo) près de Modon\n1354  16 novembre : Pierre le Cérémonieux roi d’Aragon occupe Alghero, en Sardaigne\n1355 Juin[2] : prise par surprise et pillage de Tripoli par l'amiral génois Philippe Doria\n17 juillet : le corsaire génois Francesco Gattilusio (en) devient archonte de Lesbos[14]. L'île de Samothrace devient possession de la famille génoise des Gattilusi.",
+    "image": ""
+  },
+  {
+    "id": 782,
+    "titre": "Dantzig devient ville hanséatique",
+    "date": 1350,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "Cent cinquante villes composent la Hanse Teutonique.\nLa Hanse, ou Ligue hanséatique (dite aussi Hanse germanique, Hanse teutonique ou guilde de la Hanse) est une association de villes marchandes d'Europe du Nord, autour de la mer du Nord et de la mer Baltique, ayant existé du Moyen Âge central à l'époque moderne. Elle se distingue des autres associations du même type, également dénommées « hanses », par un commerce reposant sur des privilèges jalousement défendus, octroyés à ses villes-membres par divers souverains européens.\n\nPendant trois siècles, cette Hanse en particulier, et à un moindre degré les hanses par extension, ont eu un rôle dominant au niveau commercial, puis politique, en Europe[1]. Actives du XIIe au XVIIe siècle, leur déclin et quasi-disparition ont été achevées en 1648 avec les traités de Westphalie signant la fin de la guerre de Trente Ans et la fin de la guerre de Quatre-Vingts Ans.\nLa croissance de la Ligue hanséatique a lieu dans un monde où colonisation et évangélisation vont de pair. Elle est particulièrement liée à la montée de l'ordre des Chevaliers teutoniques, au prosélytisme catholique servant de façade aux jeux de pouvoir mondiaux de l'époque[1].\nAu Moyen Âge, une hanse, parfois appelée anse, est une association professionnelle de marchands exerçant une activité commune. De telles associations existaient par exemple à Paris[2], à Londres[3] ou encore entre les villes du Nord de la France et des Pays-Bas comme avec la Hanse drapière des XVII villes[4]. On parle aussi de hanse en ce qui concerne les Phéniciens de la période classique (880-675 av. J.-C.). \nC'est surtout la refondation de Lübeck par Henri le Lion après son incendie en 1159 qui est considérée comme le principal évènement fondateur de la Hanse. En 1160, Henri le Lion octroie à Lübeck le droit urbain de Soest (Soester Stadtrecht), alors utilisé en Westphalie, marquant le point de départ de l’autonomie juridique de la ville. Ce droit est progressivement adapté aux besoins locaux et marchands, donnant naissance à un droit propre, le droit de Lübeck (Lübisches Recht), qui s’impose au XIIIe siècle comme modèle juridique dans tout l’espace baltique[13],[14],[15]. Ce cadre légal urbain structuré attira marchands et favorisa la formation d’alliances commerciales stables.\nÀ la fin du XIIIe siècle, la coopération entre marchands laisse place à une Hanse des villes, plus structurée et offensive politiquement. La Hanse organise des blocus contre Novgorod, Bruges, la Norvège, et devient une puissance collective, capable d’imposer ses intérêts à des États.\nEn 1356, se tient à Lübeck le premier Hansetag général (le 2 février). Sa tenue marque un tournant : les villes hanséatiques s’institutionnalisent comme organe collectif, prenant en charge à la fois les décisions économiques, diplomatiques et militaires. En 1359, l’expression même de « villes de la Hanse d’Allemagne » apparaît dans les traités, reflétant la transformation définitive de la « Hanse des marchands » en « Hanse des villes ».\n\nCe passage est le fruit de plusieurs évolutions : les conseils urbains organisés surpassent les guildes, l’écriture remplace progressivement la tradition orale, et la Hanse développe une structure logistique (navires armés, phares, pilotes) à l’échelle urbaine, garantissant efficacité et protection collective.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Haupthandelsroute_Hanse.png"
+  },
+  {
+    "id": 780,
+    "titre": "Siège de Saint-Jean-d'Angély",
+    "date": 1351,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "Le siège de Saint-Jean-d'Angély se déroula en Saintonge de mars à août 1351.\nDe nos jours on s'interroge encore sur les motivations qui poussèrent Jean II de France à faire le siège de cette petite ville sans importance du point de vue militaire. En mars 1351, Jean II le Bon ordonna que fut mis le siège devant Saint-Jean-d'Angély. Les chevaliers poitevins, saintongeais, tourangeaux, angevins installèrent leur camp au pied des murs de la cité. Les maréchaux Guy II de Nesle et Édouard Ier de Beaujeu furent désignés pour prendre le commandement de l'armée royale française.\n\nLes Français ne prirent aucune initiative pour attaquer la ville car ils manquaient d'organisation et ne disposaient d'aucun engin de siège assez puissant pour ébranler les murs de Saint-Jean-d'Angély. La ville resta inctacte, les Français refusant on ne sait pourquoi d'attaquer cette petite ville de Saintonge sans grand intérêt stratégique pour le royaume de France. Un message parvint au roi d'Angleterre, les habitants de la ville assiégée demandaient l'aide du souverain anglais. Édouard III d'Angleterre ordonna à Arnaud-Amanieu d'Albret de se porter au secours des assiégés de Saint-Jean-d'Angély. Arrivé sur les lieux, le sire d'Albret refusa d'engager bataille avec les Français. Arnaud-Amanieu d'Albret regagna Bordeaux, laissant les pauvres habitants de la ville à la merci de l'armée française. Une compagnie ayant à sa tête Jean III, comte de Sancerre, comptant vingt-deux écuyers, arriva en renfort devant Saint-Jean d'Angély le 29 avril 1351[1].\n\nDans ce face à face entre les deux armées, où il n'y eut aucun combat, un groupe de soixante chevaliers ayant à leur tête le maréchal Guy de Nesle furent capturés par le sire d'Albret et emmenés à Bordeaux. Malgré la grande déception que lui causa la capture du maréchal, Jean II le Bon tint à conduire lui-même le siège de la ville de Saint-Jean-d'Angély. Le mois d'août arriva et l'armée française assiégeait toujours la ville, l'armée française semblait n'avoir aucune motivation pour prendre cette cité. Le 7 août 1351, la présence du roi de France poussa les habitants à ouvrir les portes de leur cité au souverain français.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entr%C3%A9e_dans_Saint_Jean_d%27Angely.jpg/960px-Entr%C3%A9e_dans_Saint_Jean_d%27Angely.jpg",
+    "legende": "Entrée du roi Jean II le Bon à Saint-Jean-d'Angély."
   },
   {
     "id": 158,
@@ -8468,6 +9120,18 @@
     "image": ""
   },
   {
+    "id": 741,
+    "titre": "Stefan Uroš V",
+    "date": 1355,
+    "date_fin": 1371,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 11,
     "titre": "Bataille de Poitiers",
     "date": 1356,
@@ -8531,6 +9195,17 @@
     "type": 3,
     "description": "Œuvre de Andrea Orcagna en 1358, la splendide rosace à double cercle de colonnettes séparés par des arcs montre au centre le visage du Rédempteur. Les figures des quatre Docteurs de l’Église ornent les angles du carré dans lequel s’inscrit la rosace, et que bordent 52 têtes de saints en relief du XIVe siècle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Rosone_del_Duomo_di_Orvieto.JPG/500px-Rosone_del_Duomo_di_Orvieto.JPG"
+  },
+  {
+    "id": 742,
+    "titre": "Dissolution de l'Empire Serbe",
+    "date": 1360,
+    "date_fin": 1371,
+    "zones": [
+      "Europe C. & Or."
+    ],
+    "type": 2,
+    "image": ""
   },
   {
     "id": 189,
@@ -8600,6 +9275,20 @@
     ],
     "type": 1,
     "description": "Ferdinand est le second enfant du roi Pierre Ier (1320-1367), dit Pierre le Justicier, roi de Portugal (1357-1367), et de Constance de Castille, morte trois semaines après sa naissance. \nIl devient roi en 1367, à l'âge de 21 ans, après la mort de son père, Pierre Ier. Il hérite d'un royaume en paix et avec un trésor public bien fourni [3].\n\nLe règne de Ferdinand Ier est marqué par la politique étrangère. Quand Pierre Ier de Castille, dit Pierre le Cruel meurt en 1369 sans héritier mâle direct, Ferdinand Ier, en tant qu'arrière-petit–fils de Sanche IV par la ligne féminine, se déclare héritier du trône de Castille. Les autres candidats à la succession sont les rois d'Aragon et de Navarre ainsi que Jean de Gand, duc de Lancastre marié avec Constance, la fille aînée de Pierre le Cruel. Entretemps, Henri de Trastamare, frère bâtard de Pierre, s'est déclaré roi. Après deux campagnes militaires sans succès, les parties acceptent l'intervention du pape Grégoire XI.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 743,
+    "titre": "Hongwu (Dynastie Ming)",
+    "date": 1368,
+    "mois": 1,
+    "date_fin": 1398,
+    "mois_fin": 6,
+    "zones": [
+      "Chine"
+    ],
+    "type": 1,
     "image": "",
     "regne": true
   },
@@ -8888,9 +9577,8 @@
     "zones": [
       "Byzance"
     ],
-    "type": 1,
-    "image": "",
-    "regne": true
+    "type": 2,
+    "image": ""
   },
   {
     "id": 288,

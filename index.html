@@ -36,12 +36,27 @@
     /* ── Boutons zoom ── */
     .nav-sep { flex: 0 0 1px; height: 1.4rem; background: var(--border-dark); margin: 0 0.2rem; align-self: center; }
     .help-inline {
-      font-size: 0.78rem; color: var(--ink-muted); font-style: italic;
       display: flex; align-items: center; gap: 0.5rem;
-      margin-bottom: 0.45rem; flex-wrap: wrap;
+      margin-bottom: 0.55rem; flex-wrap: wrap;
     }
-    .help-zoom { color: var(--gold); font-weight: 500; }
-    .help-sep-dot { color: var(--border-dark); }
+    .help-tip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.78rem; color: var(--ink-soft); font-style: italic;
+      background: rgba(245,237,216,0.7);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.18rem 0.7rem 0.18rem 0.25rem;
+    }
+    .help-icon-box {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--gold);
+      color: #fff;
+      border-radius: 50%;
+      width: 1.4em; height: 1.4em;
+      font-size: 0.72rem;
+      font-style: normal;
+      flex-shrink: 0;
+    }
     /* .zoom-btn supprimé — loupes retirées de l'interface */
 
         .nav-btn:disabled { opacity: 0.35; cursor: default; }
@@ -599,11 +614,22 @@
   </div>
 
   <div class="help-inline">
-    <span class="help-zoom">&#128269; Cliquez sur l&rsquo;axe pour zoomer</span>
-    <span class="help-sep-dot">&bull;</span>
-    <span>Fl&egrave;ches pour changer de p&eacute;riode</span>
-    <span class="help-sep-dot">&bull;</span>
-    <span>Cliquez sur un &eacute;v&eacute;nement pour sa fiche</span>
+    <span class="help-tip">
+      <span class="help-icon-box">&#128269;</span>
+      Cliquez sur l&rsquo;axe pour zoomer
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&larr;&rarr;</span>
+      Fl&egrave;ches pour changer de p&eacute;riode
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&#128196;</span>
+      Cliquez sur un &eacute;v&eacute;nement pour sa fiche
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&#128269;</span>
+      Recherche par mot-cl&eacute; possible
+    </span>
   </div>
 
   <div id="period-banner">
