@@ -31,6 +31,88 @@
     /* .top-bar supprimée */
     .nav-bar { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
     .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.28rem 0.9rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); color: var(--ink-soft); cursor: pointer; transition: all 0.18s; }
+    .nav-btn-home { background: var(--parchment-dk); font-weight: 600; }
+    .nav-btn-home:hover { background: var(--ink); color: var(--parchment); }
+    .nav-btn-zones { background: rgba(42,74,107,0.1); border-color: rgba(42,74,107,0.4); color: #2A4A6B; font-weight: 600; }
+    .nav-btn-zones:hover { background: #2A4A6B; color: #fff; border-color: #2A4A6B; }
+
+    /* ── Modale Zones & Thèmes ── */
+    #zones-modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(10,6,2,0.55);
+      z-index: 200;
+      align-items: center; justify-content: center;
+    }
+    #zones-modal-overlay.open { display: flex; }
+    .zones-modal {
+      background: var(--parchment);
+      border: 1.5px solid var(--border-dark);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+      width: min(680px, 94vw);
+      max-height: 82vh;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .zones-modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 1.05rem; color: var(--ink);
+      background: var(--parchment-dk);
+    }
+    .zones-modal-close {
+      background: none; border: none; font-size: 1.1rem;
+      cursor: pointer; color: var(--ink-muted);
+      line-height: 1; padding: 0.2rem 0.4rem;
+      border-radius: 4px; transition: all 0.15s;
+    }
+    .zones-modal-close:hover { background: var(--border); color: var(--ink); }
+    .zones-modal-body {
+      overflow-y: auto; padding: 1rem 1.2rem;
+      display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .zones-group-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-muted);
+      margin-bottom: 0.3rem;
+    }
+    .zones-group-chips {
+      display: flex; flex-wrap: wrap; gap: 0.35rem;
+    }
+    .zone-modal-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.22rem 0.75rem;
+      border-radius: 16px; border: 1.5px solid;
+      font-family: 'Crimson Pro', serif; font-size: 0.85rem;
+      cursor: pointer; user-select: none;
+      transition: all 0.15s;
+    }
+    .zone-modal-chip .chip-dot-sm {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .zones-modal-footer {
+      display: flex; gap: 0.5rem; align-items: center;
+      padding: 0.7rem 1.2rem;
+      border-top: 1px solid var(--border);
+      background: var(--parchment-dk);
+      flex-wrap: wrap;
+    }
+    .zones-modal-btn {
+      font-family: 'Crimson Pro', serif; font-size: 0.85rem;
+      padding: 0.25rem 0.9rem;
+      border: 1px solid var(--border-dark); border-radius: 16px;
+      background: rgba(245,237,216,0.8); color: var(--ink-soft);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .zones-modal-btn:hover { background: var(--parchment-dk); }
+    .zones-modal-ok {
+      margin-left: auto;
+      background: var(--gold); color: #fff;
+      border-color: var(--gold); font-weight: 700;
+    }
+    .zones-modal-ok:hover { filter: brightness(1.1); }
     .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     .nav-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; letter-spacing: 0.02em; }
     /* ── Boutons zoom ── */
@@ -607,10 +689,14 @@
 <main>
 
   <div class="nav-bar">
+    <button class="nav-btn nav-btn-home" onclick="goHome()" title="Retour page d&rsquo;accueil">&#127968; Accueil</button>
+    <span class="nav-sep"></span>
     <button class="nav-btn" onclick="goLevel(1)">Vue d&rsquo;ensemble</button>
     <button class="nav-btn" id="btn-level2" onclick="goLevel(2)">Vue si&egrave;cle</button>
     <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
     <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
+    <span class="nav-sep"></span>
+    <button class="nav-btn nav-btn-zones" onclick="openZonesModal()" title="Choisir les zones et th&egrave;mes affich&eacute;s">&#127757; Zones &amp; th&egrave;mes</button>
   </div>
 
   <div class="help-inline">
@@ -653,6 +739,8 @@
 
   <div id="breadcrumb"></div>
 
+  
+
   <div class="frise-card">
     <div id="frise-container">
       <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
@@ -660,7 +748,7 @@
   </div>
 
   <div id="detail-bar" style="display:none;">
-    <span class="detail-title">Affichage&nbsp;:</span>
+    <span class="detail-title">&#128270; Zoom &eacute;v&eacute;nements&nbsp;:</span>
     <button class="detail-btn active" data-level="1" onclick="setDetailLevel(1)">Essentiel</button>
     <button class="detail-btn" data-level="2" onclick="setDetailLevel(2)">D&eacute;taill&eacute;</button>
     <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)">Complet</button>
@@ -679,6 +767,22 @@
 
 
 <!-- Lightbox image -->
+<!-- Modale Zones & Thèmes -->
+<div id="zones-modal-overlay" onclick="closeZonesModal()">
+  <div class="zones-modal" onclick="event.stopPropagation()">
+    <div class="zones-modal-header">
+      <span>&#127757; Zones g&eacute;ographiques &amp; th&egrave;mes</span>
+      <button class="zones-modal-close" onclick="closeZonesModal()">&#10005;</button>
+    </div>
+    <div class="zones-modal-body" id="zones-modal-grid"></div>
+    <div class="zones-modal-footer">
+      <button class="zones-modal-btn" onclick="zonesModalAll(true)">Tout s&eacute;lectionner</button>
+      <button class="zones-modal-btn" onclick="zonesModalAll(false)">Tout d&eacute;s&eacute;lectionner</button>
+      <button class="zones-modal-btn zones-modal-ok" onclick="closeZonesModal()">Valider &#10003;</button>
+    </div>
+  </div>
+</div>
+
 <div id="img-lightbox" onclick="closeLightbox()">
   <div class="lightbox-inner" onclick="event.stopPropagation()">
     <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>

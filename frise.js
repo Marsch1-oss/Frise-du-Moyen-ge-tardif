@@ -11,6 +11,13 @@ var ZONES = [
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'
 ];
 
+var ZONES_GROUPS = {
+  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Papaute', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Alsace', 'Scandinavie'],
+  'Europe orientale': ['Hongrie', 'Europe C. & Or.', 'Pologne', 'Russie', 'Byzance', 'Ottomans'],
+  'Monde': ['Monde islamique', 'Orient', 'Afrique', 'Amerique', 'Japon', 'Chine', 'Inde', 'Monde'],
+  'Thèmes': ['Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'],
+};
+
 var COLORS = {
   'France':              { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
   'Angleterre':          { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
@@ -863,6 +870,104 @@ function zoomOut() {
   }
 }
 
+/* ── Accueil ─────────────────────────────────────────────────────────*/
+function goHome() {
+  /* Remet France seule active, vue siècle XIVe */
+  for (var z in activeZones) activeZones[z] = false;
+  activeZones['France'] = true;
+  updateFilterCheckboxes();
+  currentCentury = 1300;
+  currentDecade  = null;
+  currentYear    = null;
+  /* Annule toute recherche en cours */
+  var inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  clearSearch();
+  renderLevel(2, 1300);
+}
+
+/* ── Modale Zones & Thèmes ──────────────────────────────────────────*/
+function openZonesModal() {
+  var overlay = document.getElementById('zones-modal-overlay');
+  var grid    = document.getElementById('zones-modal-grid');
+  if (!overlay || !grid) return;
+
+  /* Construit la grille groupée */
+  grid.innerHTML = '';
+  var groupNames = Object.keys(ZONES_GROUPS);
+  for (var gi = 0; gi < groupNames.length; gi++) {
+    var grpName  = groupNames[gi];
+    var grpZones = ZONES_GROUPS[grpName];
+
+    var section = document.createElement('div');
+    var title   = document.createElement('div');
+    title.className   = 'zones-group-title';
+    title.textContent = grpName;
+    section.appendChild(title);
+
+    var chips = document.createElement('div');
+    chips.className = 'zones-group-chips';
+
+    for (var zi = 0; zi < grpZones.length; zi++) {
+      (function(zone) {
+        var col     = COLORS[zone] || { bg: '#888', light: '#eee', text: '#333' };
+        var isOn    = !!activeZones[zone];
+        var chip    = document.createElement('span');
+        chip.className = 'zone-modal-chip';
+        chip.dataset.zone = zone;
+        chip.style.borderColor = col.bg;
+        chip.style.color       = isOn ? '#fff' : col.text;
+        chip.style.background  = isOn ? col.bg : col.light;
+
+        var dot = document.createElement('span');
+        dot.className = 'chip-dot-sm';
+        dot.style.background = isOn ? 'rgba(255,255,255,0.6)' : col.bg;
+        chip.appendChild(dot);
+        chip.appendChild(document.createTextNode(zone));
+
+        chip.addEventListener('click', function() {
+          activeZones[zone] = !activeZones[zone];
+          var on = activeZones[zone];
+          chip.style.color      = on ? '#fff' : col.text;
+          chip.style.background = on ? col.bg : col.light;
+          dot.style.background  = on ? 'rgba(255,255,255,0.6)' : col.bg;
+        });
+
+        chips.appendChild(chip);
+      })(grpZones[zi]);
+    }
+    section.appendChild(chips);
+    grid.appendChild(section);
+  }
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeZonesModal() {
+  var overlay = document.getElementById('zones-modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  /* Applique les changements et rafraîchit */
+  updateFilterCheckboxes();
+  refreshFrise();
+}
+
+function zonesModalAll(val) {
+  /* Coche/décoche toutes les zones dans la modale */
+  for (var z in activeZones) activeZones[z] = val;
+  var chips = document.querySelectorAll('.zone-modal-chip');
+  chips.forEach(function(chip) {
+    var zone = chip.dataset.zone;
+    var col  = COLORS[zone] || { bg: '#888', light: '#eee', text: '#333' };
+    var on   = val;
+    chip.style.color      = on ? '#fff' : col.text;
+    chip.style.background = on ? col.bg : col.light;
+    var dot = chip.querySelector('.chip-dot-sm');
+    if (dot) dot.style.background = on ? 'rgba(255,255,255,0.6)' : col.bg;
+  });
+}
+
 function goLevel(level) {
   if      (level === 1)                             renderLevel(1);
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
@@ -1347,7 +1452,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target === this) closeModal();
   });
   document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeLightbox(); }
+  if (e.key === 'Escape') { closeLightbox(); closeZonesModal(); }
     if (e.key === 'Escape') {
       closeModal();
       if (searchTerm) clearSearch();
