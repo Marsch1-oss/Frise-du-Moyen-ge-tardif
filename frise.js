@@ -79,7 +79,7 @@ var ZONE_ALIASES = {
   'Africa':              'Afrique'
 };
 
-var ROW_H    = 28;
+var ROW_H    = 32;
 var ROW_GAP  = 5;
 var CHIP_PAD = 6;
 var TRACK_PX = 820;
@@ -399,32 +399,62 @@ function chipW(evt, start, end, level) {
 }
 
 function assignRows(evts, start, end, level) {
-  var rowEnds = [];
-  var reignEnds = [];          /* file dédiée aux règnes */
   var gap = CHIP_PAD / TRACK_PX * 100;
-  return evts.map(function(evt) {
-    /* Les règnes ont leur propre file (rowIndex 0) sans collision */
-    if (evt.regne) {
-      var d0r = evt.date, d1r = evt.date_fin || evt.date;
-      var placed = false;
-      for (var ri = 0; ri < reignEnds.length; ri++) {
-        if (d0r >= reignEnds[ri]) {
-          reignEnds[ri] = d1r + gap;
-          return ri;           /* rowIndex dans la zone règne */
-        }
-      }
-      reignEnds.push(d1r + gap);
-      return reignEnds.length - 1;
-    }
+
+  /* Sépare règnes et événements ordinaires */
+  var reigns   = evts.filter(function(e) { return !!e.regne; });
+  var regulars = evts.filter(function(e) { return !e.regne; });
+
+  /* Trie les événements par date de début pour un ordre vertical chronologique */
+  var sorted = regulars.slice().sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+
+  /* Anti-collision avec ordre chronologique : rangée la plus haute = plus ancien */
+  var rowEnds = [];  /* rowEnds[i] = position droite occupée sur la rangée i */
+  var rowMap  = {};  /* id → rowIndex */
+
+  for (var si = 0; si < sorted.length; si++) {
+    var evt = sorted[si];
     var isPeriod = evt.date_fin && evt.date_fin > evt.date;
     var left = isPeriod
       ? (Math.max(evt.date, start) - start) / (end - start) * 100
       : (evt.date - start) / (end - start) * 100;
     var right = left + chipW(evt, start, end, level);
+    /* Cherche la première rangée libre (la plus haute = plus petite valeur) */
     var row = 0;
     while (row < rowEnds.length && rowEnds[row] > left - gap) row++;
+    if (rowEnds[row] === undefined) rowEnds[row] = 0;
     rowEnds[row] = right;
-    return row;
+    rowMap[evt.id] = row;
+  }
+
+  /* Règnes : file dédiée indépendante */
+  var reignEnds = [];
+  var reignMap  = {};
+  for (var ri = 0; ri < reigns.length; ri++) {
+    var re = reigns[ri];
+    var d0r = re.date, d1r = re.date_fin || re.date;
+    var placed = false;
+    for (var rj = 0; rj < reignEnds.length; rj++) {
+      if (d0r >= reignEnds[rj]) {
+        reignEnds[rj] = d1r + gap;
+        reignMap[re.id] = rj;
+        placed = true;
+        break;
+      }
+    }
+    if (!placed) {
+      reignMap[re.id] = reignEnds.length;
+      reignEnds.push(d1r + gap);
+    }
+  }
+
+  /* Retourne les rangées dans l'ordre original de evts */
+  return evts.map(function(e) {
+    return e.regne ? (reignMap[e.id] || 0) : (rowMap[e.id] || 0);
   });
 }
 
@@ -620,6 +650,16 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
 }
 
 /* ── Chip ────────────────────────────────────────────────────────────*/
+/* ── Taille de police adaptative selon longueur du titre ────────────*/
+function adaptFontSize(titre, basePx, maxChars) {
+  /* basePx = taille nominale en rem, réduit si le titre dépasse maxChars */
+  var len = titre.length;
+  if (len <= maxChars)        return basePx + 'rem';
+  if (len <= maxChars * 1.4)  return (basePx * 0.88).toFixed(2) + 'rem';
+  if (len <= maxChars * 1.8)  return (basePx * 0.78).toFixed(2) + 'rem';
+  return (basePx * 0.70).toFixed(2) + 'rem';
+}
+
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var isShared = evt.zones && evt.zones.length > 1;
   var col      = COLORS[zone] || COLORS['France'];
@@ -656,8 +696,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     }
     chip.style.color       = '#fff';
     if (level > 1) {
-      var mx = level === 3 ? 40 : 22;
-      var titreP = evt.titre.length > mx ? evt.titre.slice(0, mx - 1) + '\u2026' : evt.titre;
+      var titreP = evt.titre;
+      chip.style.fontSize   = adaptFontSize(titreP, 0.78, level === 3 ? 32 : 18);
+      chip.style.whiteSpace = 'normal';
+      chip.style.lineHeight = '1.2';
       chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
     }
     var zonesLabel = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
@@ -679,8 +721,12 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
           + col2.bg + ' 7px,' + col2.bg + ' 14px)'
         : col.bg;
       chip.style.color      = '#fff';
-      var maxC = level === 4 ? 38 : 26;
-      var titreF = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 2) + '\u2026' : evt.titre;
+      /* Titre non tronqué — font-size réduit si trop long */
+      var titreF = evt.titre;
+      chip.style.fontSize   = adaptFontSize(titreF, 0.83, level === 4 ? 32 : 22);
+      chip.style.maxWidth   = 'none';
+      chip.style.whiteSpace = 'normal';
+      chip.style.lineHeight = '1.25';
       chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreF;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
@@ -693,7 +739,11 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
         : col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = isShared ? col.bg : col.bg;
-      var titreM = evt.titre.length > 20 ? evt.titre.slice(0, 18) + '\u2026' : evt.titre;
+      var titreM = evt.titre;
+      chip.style.fontSize   = adaptFontSize(titreM, 0.76, 18);
+      chip.style.maxWidth   = 'none';
+      chip.style.whiteSpace = 'normal';
+      chip.style.lineHeight = '1.2';
       chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreM;
     } else {
       chip.classList.add('chip-dot');
