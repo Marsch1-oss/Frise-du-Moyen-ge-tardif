@@ -595,83 +595,110 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
-  /* Collecte les événements visibles ayant une image, dans les zones actives */
+  var IMG_W = 60;   /* largeur image en px */
+  var IMG_H = 74;   /* hauteur image en px */
+  var MARGIN = 8;   /* marge autour de l'image */
+
+  /* Collecte candidats : événements de la période, zones actives, avec image */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
     if (!visibleAtLevel(e, level)) return false;
-    var inZone = e.zones && e.zones.some(function(z) { return activeZones[z]; });
-    if (!inZone) return false;
+    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
     var d0 = e.date, d1 = e.date_fin || e.date;
     return d0 <= end && d1 >= start;
   });
-
   if (candidates.length === 0) return;
 
-  /* Compte le total de chips visibles */
-  var totalChips = container.querySelectorAll('.evt-chip').length;
-
-  /* Seuil de surcharge : si trop d'événements, pas d'image */
+  /* Pas d'image si trop chargé */
+  var chips = Array.prototype.slice.call(container.querySelectorAll('.evt-chip'));
   var maxChips = level === 4 ? 6 : level === 3 ? 10 : 8;
-  if (totalChips > maxChips) return;
+  if (chips.length > maxChips) return;
 
-  /* Découpe la période en segments et mesure la densité */
-  var chips = container.querySelectorAll('.evt-chip');
-  var segCount = level === 2 ? 10 : level === 3 ? 10 : 5;
-  var segW = (end - start) / segCount;
+  /* Dimensions réelles du container */
+  var friseW  = container.offsetWidth || TRACK_PX;
+  var friseH  = container.offsetHeight || 200;
+  var labelW  = 130;
+  var trackW  = friseW - labelW;   /* largeur utile */
 
-  var density = [];
-  for (var s = 0; s < segCount; s++) {
-    var sStart = start + s * segW;
-    var sEnd   = sStart + segW;
-    var count  = 0;
-    chips.forEach(function(chip) {
-      var evtId = parseInt(chip.dataset.evtId);
-      var evt   = allEvents.find(function(e) { return e.id === evtId; });
-      if (!evt) return;
-      var eS = evt.date, eE = evt.date_fin || evt.date;
-      if (eS < sEnd && eE >= sStart) count++;
-    });
-    density.push(count);
+  /* Collecte les rectangles occupés par les chips (en px dans container) */
+  var occupied = [];
+  chips.forEach(function(chip) {
+    var r = chip.getBoundingClientRect();
+    var cr = container.getBoundingClientRect();
+    /* Position relative au container */
+    var x0 = r.left - cr.left - MARGIN;
+    var x1 = r.right - cr.left + MARGIN;
+    var y0 = r.top  - cr.top  - MARGIN;
+    var y1 = r.bottom - cr.top + MARGIN;
+    occupied.push({ x0: x0, x1: x1, y0: y0, y1: y1 });
+  });
+
+  /* Cherche un rectangle libre pour l'image
+     Stratégie : balaye la zone horizontalement par pas de 20px,
+     teste si un emplacement IMG_W × IMG_H ne chevauche aucun chip */
+  var stepX   = 20;
+  var imgTop  = (friseH - IMG_H) / 2;  /* centré verticalement */
+  var imgBot  = imgTop + IMG_H;
+  var bestX   = null;
+
+  /* Calcule le "score de proximité temporelle" du centre de chaque emplacement */
+  /* Choisit l'emplacement le plus proche du centre temporel d'un candidat */
+  var candidateDates = candidates.map(function(e) {
+    return e.date + (e.mois ? (e.mois - 1) / 12 : 0);
+  });
+
+  var slots = [];
+  for (var x = labelW; x + IMG_W <= friseW - 4; x += stepX) {
+    var x1 = x + IMG_W;
+    /* Vérifie l'absence de chevauchement */
+    var free = true;
+    for (var oi = 0; oi < occupied.length; oi++) {
+      var o = occupied[oi];
+      /* Collision si rectangles se chevauchent */
+      if (x < o.x1 && x1 > o.x0 && imgTop < o.y1 && imgBot > o.y0) {
+        free = false;
+        break;
+      }
+    }
+    if (free) slots.push(x);
   }
 
-  /* Seuil de densité : n'insère une image que si le segment le plus vide est vraiment vide */
-  var indexed = density.map(function(d, i) { return { i: i, d: d }; });
-  indexed.sort(function(a, b) { return a.d - b.d; });
-  var best = indexed[0];
-  if (!best || best.d > 1) return;  /* trop chargé — pas d'image */
+  if (slots.length === 0) return;  /* pas de place libre */
 
-  /* Choisit UN candidat parmi ceux dont la date est dans la période */
-  var segMid = start + (best.i + 0.5) * segW;
-  var byProx = candidates.slice().sort(function(a, b) {
-    return Math.abs(a.date - segMid) - Math.abs(b.date - segMid);
+  /* Parmi les slots libres, cherche celui dont le centre est le plus proche
+     d'un candidat (en coordonnées temporelles) */
+  var bestSlot = null;
+  var bestScore = Infinity;
+
+  slots.forEach(function(x) {
+    var centerX = x + IMG_W / 2;
+    /* Convertit en date */
+    var centerDate = start + ((centerX - labelW) / trackW) * (end - start);
+    candidateDates.forEach(function(d) {
+      var score = Math.abs(d - centerDate);
+      if (score < bestScore) { bestScore = score; bestSlot = x; }
+    });
   });
-  var pick = byProx[0];
+
+  if (bestSlot === null) return;
+
+  /* Choisit le candidat dont la date est la plus proche du slot retenu */
+  var slotCenterDate = start + ((bestSlot + IMG_W / 2 - labelW) / trackW) * (end - start);
+  var pick = candidates.slice().sort(function(a, b) {
+    return Math.abs(a.date - slotCenterDate) - Math.abs(b.date - slotCenterDate);
+  })[0];
   if (!pick) return;
 
-  /* Insère l'image dans un bloc séparé SOUS la frise (pas par-dessus les chips) */
-  /* Cherche ou crée le bloc #frise-img-panel dans frise-card */
-  var card = document.querySelector('.frise-card');
-  if (!card) return;
-
-  /* Supprime un éventuel panel précédent */
-  var old = card.querySelector('.frise-img-panel');
-  if (old) old.parentNode.removeChild(old);
-
-  /* Calcule la position horizontale dans la frise */
-  var friseW   = container.offsetWidth || TRACK_PX;
-  var labelW   = 130;
-  var trackArea = friseW - labelW;
-  var leftPct  = (best.i + 0.5) / segCount;
-  var leftPx   = labelW + leftPct * trackArea;
-
-  /* Supprime wrapper précédent */
+  /* Supprime un éventuel wrapper précédent */
   var oldWrap = container.querySelector('.frise-bg-wrap');
   if (oldWrap) oldWrap.parentNode.removeChild(oldWrap);
 
-  /* Wrapper positionné dans la frise */
+  /* Crée le wrapper centré sur le slot */
   var wrap = document.createElement('div');
   wrap.className  = 'frise-bg-wrap';
-  wrap.style.left = leftPx + 'px';
+  wrap.style.left = bestSlot + 'px';
+  wrap.style.top  = imgTop + 'px';
+  wrap.style.transform = '';  /* annule translateY(-50%) du CSS */
 
   var img = document.createElement('img');
   img.src       = pick.image;
@@ -679,13 +706,11 @@ function injectBackgroundImages(container, start, end, level) {
   img.className = 'frise-bg-img';
   wrap.appendChild(img);
 
-  /* Légende flottante au survol */
   var cap = document.createElement('span');
   cap.className   = 'frise-bg-caption';
   cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
   wrap.appendChild(cap);
 
-  /* Clic → ouvre la fiche */
   wrap.addEventListener('click', (function(e) {
     return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
   })(pick));
