@@ -301,6 +301,10 @@ function renderLevel(level, rangeStart) {
     ? 'Cliquez sur une annee pour voir le detail mensuel \u00b7 cliquez sur un evenement pour sa fiche'
     : 'Vue mensuelle \u00b7 cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
+
+  /* Injecte les illustrations dans les espaces vides (après un tick pour que le DOM soit peint) */
+  setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 60);
+
   /* Ré-applique la recherche si active */
   if (searchTerm) applySearch();
 }
@@ -588,6 +592,84 @@ function buildTrack(zone, evts, start, end, level) {
   return row;
 }
 
+
+/* ── Illustrations de fond dans les espaces vides ───────────────────*/
+function injectBackgroundImages(container, start, end, level) {
+  /* Collecte les événements visibles ayant une image, dans les zones actives */
+  var candidates = allEvents.filter(function(e) {
+    if (!e.image || !e.image.trim()) return false;
+    if (!visibleAtLevel(e, level)) return false;
+    var inZone = e.zones && e.zones.some(function(z) { return activeZones[z]; });
+    if (!inZone) return false;
+    var d0 = e.date, d1 = e.date_fin || e.date;
+    return d0 <= end && d1 >= start;
+  });
+
+  if (candidates.length === 0) return;
+
+  /* Largeur de la frise en px (approximée) */
+  var friseW = container.offsetWidth || TRACK_PX;
+
+  /* Découpe la période en segments et détecte les zones avec peu de chips */
+  var chips = container.querySelectorAll('.evt-chip');
+  var segCount = level === 2 ? 10 : level === 3 ? 10 : 5;
+  var segW = (end - start) / segCount;
+
+  /* Pour chaque segment, compte les chips qui le chevauchent */
+  var density = [];
+  for (var s = 0; s < segCount; s++) {
+    var sStart = start + s * segW;
+    var sEnd   = sStart + segW;
+    var count  = 0;
+    chips.forEach(function(chip) {
+      var evtId = parseInt(chip.dataset.evtId);
+      var evt   = allEvents.find(function(e) { return e.id === evtId; });
+      if (!evt) return;
+      var eS = evt.date, eE = evt.date_fin || evt.date;
+      if (eS < sEnd && eE >= sStart) count++;
+    });
+    density.push(count);
+  }
+
+  /* Choisit les 2 segments les plus vides */
+  var indexed = density.map(function(d, i) { return { i: i, d: d }; });
+  indexed.sort(function(a, b) { return a.d - b.d; });
+  var chosen = indexed.slice(0, 2).filter(function(x) { return x.d <= 1; });
+
+  if (chosen.length === 0) return;
+
+  /* Pour chaque zone vide, insère une illustration */
+  chosen.forEach(function(seg) {
+    /* Choisit un candidat dans ce segment ou le plus proche */
+    var segMid   = start + (seg.i + 0.5) * segW;
+    var byProx   = candidates.slice().sort(function(a, b) {
+      return Math.abs(a.date - segMid) - Math.abs(b.date - segMid);
+    });
+    var pick = byProx[0];
+    if (!pick) return;
+
+    /* Position horizontale : centre du segment */
+    var leftPct = (start + seg.i * segW - start) / (end - start) * 100;
+    /* Ajuste pour label zone (--label-w = 130px) */
+    var labelW   = 130;
+    var trackArea = friseW - labelW;
+    var leftPx   = labelW + (leftPct / 100) * trackArea;
+
+    var img = document.createElement('img');
+    img.src = pick.image;
+    img.alt = pick.legende || pick.titre;
+    img.className = 'frise-bg-img';
+    img.title = pick.titre + ' (' + pick.date + ')';
+    img.style.left = leftPx + 'px';
+
+    /* Clic → ouvre la fiche */
+    img.addEventListener('click', (function(e) {
+      return function() { openModal(e, e.zones[0]); };
+    })(pick));
+
+    container.appendChild(img);
+  });
+}
 
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
 function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {

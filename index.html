@@ -217,7 +217,31 @@
 
     /* ── Frise pleine largeur ── */
     .frise-card { background: rgba(245,237,216,0.85); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem 1rem 0.8rem; box-shadow: var(--shadow); overflow-x: auto; width: 100%; }
-    #frise-container { min-width: 600px; }
+
+    /* ── Illustrations de fond ── */
+    #frise-container { min-width: 600px; position: relative; }
+    .frise-bg-img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 90px;
+      height: 110px;
+      object-fit: cover;
+      opacity: 0.13;
+      border-radius: 6px;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: opacity 0.25s, transform 0.25s;
+      z-index: 0;
+      filter: sepia(30%) saturate(80%);
+    }
+    .frise-bg-img:hover {
+      opacity: 0.55;
+      transform: translateY(-50%) scale(1.08);
+      filter: sepia(0%) saturate(100%);
+      z-index: 1;
+    }
+    /* #frise-container intégré dans .frise-card */
 
     /* Axe */
     .axis-row { display: flex; align-items: flex-end; margin-bottom: 0.2rem; height: 30px; }
