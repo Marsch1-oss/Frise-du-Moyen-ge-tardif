@@ -655,19 +655,29 @@ function injectBackgroundImages(container, start, end, level) {
     var trackArea = friseW - labelW;
     var leftPx   = labelW + (leftPct / 100) * trackArea;
 
+    /* Wrapper positionné */
+    var wrap = document.createElement('div');
+    wrap.className = 'frise-bg-wrap';
+    wrap.style.left = leftPx + 'px';
+
     var img = document.createElement('img');
-    img.src = pick.image;
-    img.alt = pick.legende || pick.titre;
+    img.src       = pick.image;
+    img.alt       = pick.legende || pick.titre;
     img.className = 'frise-bg-img';
-    img.title = pick.titre + ' (' + pick.date + ')';
-    img.style.left = leftPx + 'px';
+    wrap.appendChild(img);
+
+    /* Légende visible au survol */
+    var cap = document.createElement('span');
+    cap.className   = 'frise-bg-caption';
+    cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
+    wrap.appendChild(cap);
 
     /* Clic → ouvre la fiche */
-    img.addEventListener('click', (function(e) {
+    wrap.addEventListener('click', (function(e) {
       return function() { openModal(e, e.zones[0]); };
     })(pick));
 
-    container.appendChild(img);
+    container.appendChild(wrap);
   });
 }
 

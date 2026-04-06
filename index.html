@@ -220,26 +220,53 @@
 
     /* ── Illustrations de fond ── */
     #frise-container { min-width: 600px; position: relative; }
-    .frise-bg-img {
+    .frise-bg-wrap {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 90px;
-      height: 110px;
-      object-fit: cover;
-      opacity: 0.13;
-      border-radius: 6px;
-      pointer-events: auto;
-      cursor: pointer;
-      transition: opacity 0.25s, transform 0.25s;
-      z-index: 0;
-      filter: sepia(30%) saturate(80%);
-    }
-    .frise-bg-img:hover {
-      opacity: 0.55;
-      transform: translateY(-50%) scale(1.08);
-      filter: sepia(0%) saturate(100%);
       z-index: 1;
+      cursor: pointer;
+    }
+    .frise-bg-img {
+      display: block;
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+      opacity: 0.35;
+      border-radius: 6px;
+      border: 1px solid rgba(154,107,26,0.25);
+      transition: opacity 0.22s, transform 0.22s, box-shadow 0.22s;
+      filter: sepia(20%) saturate(90%);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .frise-bg-wrap:hover .frise-bg-img {
+      opacity: 0.88;
+      transform: scale(1.06);
+      filter: sepia(0%) saturate(100%);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+    }
+    .frise-bg-caption {
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      background: rgba(28,20,10,0.82);
+      color: #f5edd8;
+      font-size: 0.68rem;
+      font-style: italic;
+      white-space: nowrap;
+      padding: 3px 8px;
+      border-radius: 4px;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.18s;
+      z-index: 10;
+    }
+    .frise-bg-wrap:hover .frise-bg-caption {
+      opacity: 1;
     }
     /* #frise-container intégré dans .frise-card */
 
