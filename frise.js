@@ -657,11 +657,21 @@ function injectBackgroundImages(container, start, end, level) {
   var old = card.querySelector('.frise-img-panel');
   if (old) old.parentNode.removeChild(old);
 
-  var panel = document.createElement('div');
-  panel.className = 'frise-img-panel';
+  /* Calcule la position horizontale dans la frise */
+  var friseW   = container.offsetWidth || TRACK_PX;
+  var labelW   = 130;
+  var trackArea = friseW - labelW;
+  var leftPct  = (best.i + 0.5) / segCount;
+  var leftPx   = labelW + leftPct * trackArea;
 
+  /* Supprime wrapper précédent */
+  var oldWrap = container.querySelector('.frise-bg-wrap');
+  if (oldWrap) oldWrap.parentNode.removeChild(oldWrap);
+
+  /* Wrapper positionné dans la frise */
   var wrap = document.createElement('div');
-  wrap.className = 'frise-bg-wrap';
+  wrap.className  = 'frise-bg-wrap';
+  wrap.style.left = leftPx + 'px';
 
   var img = document.createElement('img');
   img.src       = pick.image;
@@ -669,7 +679,7 @@ function injectBackgroundImages(container, start, end, level) {
   img.className = 'frise-bg-img';
   wrap.appendChild(img);
 
-  /* Légende sous l'image, visible au survol */
+  /* Légende flottante au survol */
   var cap = document.createElement('span');
   cap.className   = 'frise-bg-caption';
   cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
@@ -677,11 +687,10 @@ function injectBackgroundImages(container, start, end, level) {
 
   /* Clic → ouvre la fiche */
   wrap.addEventListener('click', (function(e) {
-    return function() { openModal(e, e.zones[0]); };
+    return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
   })(pick));
 
-  panel.appendChild(wrap);
-  card.appendChild(panel);
+  container.appendChild(wrap);
 }
 
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
@@ -853,6 +862,32 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     }
     var zonesLbl = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
     chip.title = evt.titre + zonesLbl + ' (' + evt.date + ')';
+  }
+
+  /* Pastille vidéo */
+  if (evt.video && evt.video.trim()) {
+    var badge = document.createElement('span');
+    badge.className   = 'chip-video-badge';
+    badge.textContent = '\u25B6';
+    badge.title       = 'Contient une vid\u00e9o';
+    chip.appendChild(badge);
+  }
+
+  /* Tooltip image au survol (sauf chip-dot) */
+  if (evt.image && evt.image.trim() && !chip.classList.contains('chip-dot')) {
+    var tt = document.createElement('div');
+    tt.className = 'chip-img-tooltip';
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    ttImg.alt = evt.legende || evt.titre;
+    tt.appendChild(ttImg);
+    if (evt.legende) {
+      var ttCap = document.createElement('span');
+      ttCap.textContent = evt.legende;
+      tt.appendChild(ttCap);
+    }
+    chip.appendChild(tt);
+    chip.style.position = 'absolute';  /* assure le positionnement */
   }
 
   chip.addEventListener('click', (function(e, z) {
