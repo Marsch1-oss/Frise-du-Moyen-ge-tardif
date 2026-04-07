@@ -13,7 +13,7 @@
       --parchment: #F5EDD8; --parchment-dk: #E8D9BA; --ink: #1C140A;
       --ink-soft: #4A3B28; --ink-muted: #7A6A52; --red: #8B1A1A; --gold: #9A6B1A;
       --border: rgba(100,80,40,0.25); --border-dark: rgba(100,80,40,0.5);
-      --track-h: 48px; --ruler-h: 24px; --label-w: 130px; --radius: 6px;
+      --track-h: 48px; --ruler-h: 24px; --label-w: 90px; --radius: 6px;
       --shadow: 0 2px 12px rgba(50,30,10,0.12);
     }
     html { font-size: 15px; }
@@ -351,7 +351,7 @@
     /* Pistes */
     .track-row { display: flex; align-items: stretch; margin-bottom: 0.35rem; border-radius: 3px; }
     .track-row:nth-child(even) { background: rgba(0,0,0,0.018); }
-    .zone-label { align-self: stretch; display: flex; align-items: flex-start; padding-top: 4px; width: var(--label-w); flex-shrink: 0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--ink-soft); padding-right: 0.5rem; padding-top: 4px; white-space: nowrap; font-style: italic; }
+    .zone-label { align-self: stretch; display: flex; align-items: center; gap: 0.35rem; width: var(--label-w); flex-shrink: 0; font-size: 0.75rem; color: var(--ink-soft); padding-right: 0.4rem; white-space: nowrap; overflow: hidden; font-style: italic; }
     .zone-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .track { flex: 1; position: relative; overflow: visible; min-width: 0; }
     .track-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); pointer-events: none; }
@@ -401,10 +401,11 @@
       align-items: center;
       gap: 0.4rem;
       padding: 0 0.5rem;
-      font-size: 0.78rem;
+      font-size: 0.70rem;
       font-style: italic;
       font-weight: 600;
       white-space: nowrap;
+      overflow: hidden;
       border-right: 1px solid var(--border);
       background: rgba(0,0,0,0.03);
     }

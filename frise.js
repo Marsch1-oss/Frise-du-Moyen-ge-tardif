@@ -82,7 +82,7 @@ var ZONE_ALIASES = {
 var ROW_H    = 32;
 var ROW_GAP  = 5;
 var CHIP_PAD = 6;
-var TRACK_PX = 820;
+var TRACK_PX = 860;
 
 var currentLevel   = 1;
 var currentYear    = null;
@@ -222,7 +222,7 @@ function renderLevel(level, rangeStart) {
     start = rangeStart; end = rangeStart + 100; tickStep = 10;
   } else if (level === 3) {
     currentDecade = rangeStart;
-    start = rangeStart; end = rangeStart + 10; tickStep = 1;
+    start = rangeStart; end = rangeStart + 9; tickStep = 1;
   } else {
     currentYear = rangeStart;
     currentDecade = Math.floor(rangeStart / 10) * 10;
@@ -398,8 +398,11 @@ function chipW(evt, start, end, level) {
   if (evt.date_fin && evt.date_fin > evt.date)
     return (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start) * 100;
   if (level === 1) return 1.5;
-  if (level === 4) return (Math.min(evt.titre.length, 35) * 7 + 16) / TRACK_PX * 100;
-  return (Math.min(evt.titre.length, level === 3 ? 28 : 20) * 7 + 16) / TRACK_PX * 100;
+  /* Estime la largeur réelle du chip en px :
+     ~7px par caractère + 22px de padding, plafonné à 280px */
+  var charPx = level === 4 ? 7.5 : 7;
+  var chipPx = Math.min(evt.titre.length * charPx + 22, 280);
+  return chipPx / TRACK_PX * 100;
 }
 
 function assignRows(evts, start, end, level) {
@@ -616,7 +619,7 @@ function injectBackgroundImages(container, start, end, level) {
 
   /* Dimensions réelles du container */
   var friseW  = container.offsetWidth || TRACK_PX;
-  var labelW  = 130;
+  var labelW  = 90;
   var trackW  = friseW - labelW;   /* largeur utile */
   var cr      = container.getBoundingClientRect();
 
@@ -1224,7 +1227,7 @@ function wzBuildPeriodSelect() {
     sub.textContent = 'Sélectionnez la décennie à afficher.';
     for (var d = 1300; d < 1500; d += 10) {
       var opt = document.createElement('option');
-      opt.textContent = d + ' – ' + (d + 10);
+      opt.textContent = d + ' – ' + (d + 9);
       opt.value = d;
       sel.appendChild(opt);
     }
@@ -1494,7 +1497,7 @@ function updateNavButtons() {
     } else if (currentLevel === 3) {
       atStart = currentDecade <= 1290;
       atEnd   = currentDecade >= 1490;
-      if (lbl) lbl.textContent = currentDecade + '–' + (currentDecade + 10);
+      if (lbl) lbl.textContent = currentDecade + '–' + (currentDecade + 9);
     } else {
       atStart = currentYear <= 1290;
       atEnd   = currentYear >= 1509;
@@ -1784,7 +1787,7 @@ function updatePeriodBanner(level, rangeStart) {
     var cent2 = Math.floor(rangeStart / 100) * 100;
     var rom2  = ROMAN[cent2] || (cent2 + 1) + 'e';
     /* Dates en grand, siècle en petit */
-    lbl.textContent = rangeStart + ' – ' + (rangeStart + 10);
+    lbl.textContent = rangeStart + ' – ' + (rangeStart + 9);
     sub.textContent = rom2 + ' siècle — décennie ' + rangeStart;
   } else if (level === 4) {
     var cent3 = Math.floor(rangeStart / 100) * 100;
