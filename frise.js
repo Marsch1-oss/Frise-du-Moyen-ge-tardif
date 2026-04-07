@@ -616,16 +616,28 @@ function injectBackgroundImages(container, start, end, level) {
 
   /* Dimensions réelles du container */
   var friseW  = container.offsetWidth || TRACK_PX;
-  var friseH  = container.offsetHeight || 200;
   var labelW  = 130;
   var trackW  = friseW - labelW;   /* largeur utile */
+  var cr      = container.getBoundingClientRect();
+
+  /* Mesure la zone events en excluant la rulers-section */
+  var rulersSection = container.querySelector('.rulers-section');
+  var evtZoneTop    = 0;
+  var evtZoneH      = container.offsetHeight || 200;
+  if (rulersSection) {
+    var rsH     = rulersSection.offsetHeight || 0;
+    evtZoneTop  = rsH;
+    evtZoneH    = (container.offsetHeight || 200) - rsH;
+  }
+
+  /* Centre l'image dans la zone events uniquement */
+  var imgTop  = evtZoneTop + (evtZoneH - IMG_H) / 2;
+  var imgBot  = imgTop + IMG_H;
 
   /* Collecte les rectangles occupés par les chips (en px dans container) */
   var occupied = [];
   chips.forEach(function(chip) {
-    var r = chip.getBoundingClientRect();
-    var cr = container.getBoundingClientRect();
-    /* Position relative au container */
+    var r  = chip.getBoundingClientRect();
     var x0 = r.left - cr.left - MARGIN;
     var x1 = r.right - cr.left + MARGIN;
     var y0 = r.top  - cr.top  - MARGIN;
@@ -633,12 +645,8 @@ function injectBackgroundImages(container, start, end, level) {
     occupied.push({ x0: x0, x1: x1, y0: y0, y1: y1 });
   });
 
-  /* Cherche un rectangle libre pour l'image
-     Stratégie : balaye la zone horizontalement par pas de 20px,
-     teste si un emplacement IMG_W × IMG_H ne chevauche aucun chip */
+  /* Cherche un rectangle libre dans la zone events uniquement */
   var stepX   = 20;
-  var imgTop  = (friseH - IMG_H) / 2;  /* centré verticalement */
-  var imgBot  = imgTop + IMG_H;
   var bestX   = null;
 
   /* Calcule le "score de proximité temporelle" du centre de chaque emplacement */
@@ -826,10 +834,24 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     chip.style.color       = '#fff';
     if (level > 1) {
       var titreP = evt.titre;
-      chip.style.fontSize   = adaptFontSize(titreP, 0.78, level === 3 ? 32 : 18);
-      chip.style.whiteSpace = 'normal';
-      chip.style.lineHeight = '1.2';
-      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
+      /* Calcule la largeur disponible en px pour adapter la fonte */
+      var chipPct = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
+      var chipPxApprox = chipPct * (TRACK_PX - 130);
+      var maxC = level === 3 ? 32 : 18;
+      /* Si très étroit (< 60px), tronque le texte */
+      if (chipPxApprox < 60) {
+        chip.style.fontSize   = '0.60rem';
+        chip.style.whiteSpace = 'nowrap';
+        chip.style.overflow   = 'hidden';
+        chip.style.textOverflow = 'ellipsis';
+        chip.textContent = titreP;
+      } else {
+        chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
+        chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
+        chip.style.overflow   = 'hidden';
+        chip.style.lineHeight = '1.2';
+        chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
+      }
     }
     var zonesLabel = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
     chip.title = evt.titre + zonesLabel + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
@@ -837,7 +859,13 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   } else {
     chip.style.height    = ROW_H + 'px';
     var evtDateF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
-    chip.style.left      = pct(evtDateF, start, end);
+    /* Évite le débordement en fin de période : plafonne à 97% */
+    var rawPct = (evtDateF - start) / (end - start) * 100;
+    var clampedPct = Math.min(rawPct, 97);
+    /* En début de période : pas de translateX si trop à gauche */
+    var clampedPctLeft = Math.max(rawPct, 3);
+    var finalPct = Math.min(clampedPctLeft, 97);
+    chip.style.left      = finalPct.toFixed(3) + '%';
     chip.style.transform = 'translateX(-50%)';
 
     if (level === 4 || level === 3) {
