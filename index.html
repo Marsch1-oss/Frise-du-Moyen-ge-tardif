@@ -776,6 +776,81 @@
 
     #modal-img-wrap { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem 0; }
     }
+  
+    /* ══════════ WIZARD D'ACCUEIL ══════════ */
+    #wizard-overlay {
+      display: flex; position: fixed; inset: 0;
+      background: rgba(10,6,2,0.72);
+      z-index: 300; align-items: center; justify-content: center; padding: 1rem;
+    }
+    #wizard-overlay.hidden { display: none; }
+    .wizard-box {
+      background: var(--parchment); border: 1.5px solid var(--gold); border-radius: 10px;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.38);
+      width: min(640px, 96vw); max-height: 90vh;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .wizard-progress {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0.9rem 1.5rem 0.5rem;
+      background: var(--parchment-dk); border-bottom: 1px solid var(--border);
+    }
+    .wz-step-dot {
+      width: 24px; height: 24px; border-radius: 50%;
+      border: 2px solid var(--border-dark); background: var(--parchment);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.68rem; font-weight: 700; color: var(--ink-muted);
+      flex-shrink: 0; transition: all 0.2s;
+    }
+    .wz-step-dot.active { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .wz-step-dot.done   { background: var(--ink-soft); border-color: var(--ink-soft); color: #fff; }
+    .wz-step-line { flex: 1; height: 2px; background: var(--border); max-width: 60px; }
+    .wizard-step { display: none; flex-direction: column; overflow-y: auto; }
+    .wizard-step.active { display: flex; }
+    .wz-header { display: flex; align-items: center; gap: 0.75rem; padding: 1.1rem 1.5rem 0.4rem; }
+    .wz-icon { font-size: 1.7rem; flex-shrink: 0; }
+    .wz-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.1rem; color: var(--ink); margin: 0; }
+    .wz-sub { font-size: 0.82rem; color: var(--ink-muted); font-style: italic; margin: 0 1.5rem 0.8rem; line-height: 1.5; }
+    .wz-zones-grid { display: flex; flex-direction: column; gap: 0.45rem; padding: 0 1.5rem; max-height: 26vh; overflow-y: auto; }
+    .wz-group-title { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.15rem; }
+    .wz-group-chips { display: flex; flex-wrap: wrap; gap: 0.28rem; margin-bottom: 0.25rem; }
+    .wz-zone-chip {
+      display: inline-flex; align-items: center; gap: 0.28rem;
+      padding: 0.15rem 0.6rem; border-radius: 13px; border: 1.5px solid;
+      font-family: 'Crimson Pro', serif; font-size: 0.8rem;
+      cursor: pointer; user-select: none; transition: all 0.13s;
+    }
+    .wz-zone-chip .chip-dot-sm { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .wz-divider { display: flex; align-items: center; gap: 0.7rem; margin: 0.65rem 1.5rem; color: var(--ink-muted); font-size: 0.76rem; }
+    .wz-divider::before, .wz-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .wz-search-row { padding: 0 1.5rem; }
+    .wz-search-label { display: block; font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.3rem; }
+    .wz-search-input { width: 100%; box-sizing: border-box; font-family: 'Crimson Pro', Georgia, serif; font-size: 0.92rem; padding: 0.38rem 0.75rem; border: 1px solid var(--border-dark); border-radius: 6px; background: var(--parchment); color: var(--ink); }
+    .wz-search-hint { font-size: 0.7rem; color: var(--ink-muted); font-style: italic; margin-top: 0.25rem; }
+    .wz-scale-choices, .wz-detail-choices { display: flex; flex-direction: column; gap: 0.45rem; padding: 0 1.5rem 0.4rem; }
+    .wz-scale-card, .wz-detail-card {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.55rem 0.85rem; border: 1.5px solid var(--border); border-radius: 7px;
+      cursor: pointer; transition: border-color 0.14s, background 0.14s;
+      background: rgba(245,237,216,0.5);
+    }
+    .wz-scale-card:has(input:checked), .wz-detail-card:has(input:checked) { border-color: var(--gold); background: rgba(154,107,26,0.09); }
+    .wz-scale-card input, .wz-detail-card input { display: none; }
+    .wz-scale-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .wz-scale-label, .wz-detail-label { font-family: 'Crimson Pro', serif; font-size: 0.92rem; font-weight: 600; color: var(--ink); display: block; }
+    .wz-scale-desc, .wz-detail-desc { font-size: 0.73rem; color: var(--ink-muted); font-style: italic; display: block; }
+    .wz-select-wrap { padding: 0.4rem 1.5rem 0.9rem; }
+    .wz-select { width: 100%; font-family: 'Crimson Pro', Georgia, serif; font-size: 1rem; padding: 0.42rem 0.75rem; border: 1.5px solid var(--border-dark); border-radius: 6px; background: var(--parchment); color: var(--ink); }
+    .wz-guide { display: flex; flex-direction: column; gap: 0.45rem; padding: 0 1.5rem 0.4rem; max-height: 34vh; overflow-y: auto; }
+    .wz-guide-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.42rem 0.65rem; background: rgba(245,237,216,0.6); border: 1px solid var(--border); border-radius: 6px; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4; }
+    .wz-guide-icon { font-size: 1rem; flex-shrink: 0; width: 1.6rem; text-align: center; }
+    .wz-guide-item strong { display: block; color: var(--ink); margin-bottom: 0.08rem; }
+    .wz-footer { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 1.5rem; border-top: 1px solid var(--border); background: var(--parchment-dk); margin-top: auto; flex-shrink: 0; }
+    .wz-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.3rem 1rem; border-radius: 18px; border: 1.5px solid var(--border-dark); background: rgba(245,237,216,0.8); color: var(--ink-soft); cursor: pointer; transition: all 0.14s; }
+    .wz-btn:hover { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
+    .wz-btn-ok { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
+    .wz-btn-ok:hover { filter: brightness(1.1); background: var(--gold); color: #fff; }
+
   </style>
 </head>
 <body>
@@ -889,6 +964,192 @@
     <p id="lightbox-caption"></p>
   </div>
 </div>
+
+
+<!-- ══════════ WIZARD D'ACCUEIL ══════════ -->
+<div id="wizard-overlay">
+  <div class="wizard-box">
+
+    <!-- Barre de progression -->
+    <div class="wizard-progress" id="wizard-progress">
+      <span class="wz-step-dot active" data-step="1"></span>
+      <span class="wz-step-line"></span>
+      <span class="wz-step-dot" data-step="2"></span>
+      <span class="wz-step-line"></span>
+      <span class="wz-step-dot" data-step="3"></span>
+      <span class="wz-step-line"></span>
+      <span class="wz-step-dot" data-step="4"></span>
+      <span class="wz-step-line"></span>
+      <span class="wz-step-dot" data-step="5"></span>
+    </div>
+
+    <!-- ── ÉTAPE 1 : Zones & Thèmes ou recherche ── -->
+    <div class="wizard-step active" id="wz-step-1">
+      <div class="wz-header">
+        <span class="wz-icon">&#127757;</span>
+        <h2 class="wz-title">Que souhaitez-vous explorer&nbsp;?</h2>
+      </div>
+      <p class="wz-sub">Choisissez une ou plusieurs zones géographiques et/ou thèmes,<br>ou effectuez une recherche par mot-clé.</p>
+
+      <div id="wz-zones-grid" class="wz-zones-grid"></div>
+
+      <div class="wz-divider"><span>ou</span></div>
+
+      <div class="wz-search-row">
+        <label class="wz-search-label">&#128269; Recherche par mot-clé</label>
+        <input type="text" id="wz-search-input" class="wz-search-input"
+               placeholder="Ex. : Giotto, Peste, Croisade…"
+               autocomplete="off">
+        <p class="wz-search-hint">La frise s'ouvrira directement sur les résultats.</p>
+      </div>
+
+      <div class="wz-footer">
+        <span></span>
+        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 2 : Échelle ── -->
+    <div class="wizard-step" id="wz-step-2">
+      <div class="wz-header">
+        <span class="wz-icon">&#128337;</span>
+        <h2 class="wz-title">Choisissez l&rsquo;échelle de temps</h2>
+      </div>
+      <p class="wz-sub">À quelle granularité souhaitez-vous explorer la période&nbsp;?</p>
+
+      <div class="wz-scale-choices">
+        <label class="wz-scale-card">
+          <input type="radio" name="wz-scale" value="2" checked>
+          <span class="wz-scale-icon">&#128198;</span>
+          <span class="wz-scale-label">Vue siècle</span>
+          <span class="wz-scale-desc">Vue d'ensemble sur 100 ans — événements majeurs</span>
+        </label>
+        <label class="wz-scale-card">
+          <input type="radio" name="wz-scale" value="3">
+          <span class="wz-scale-icon">&#128197;</span>
+          <span class="wz-scale-label">Vue décennale</span>
+          <span class="wz-scale-desc">Zoom sur une décennie — détail configurable</span>
+        </label>
+        <label class="wz-scale-card">
+          <input type="radio" name="wz-scale" value="4">
+          <span class="wz-scale-icon">&#128196;</span>
+          <span class="wz-scale-label">Vue annuelle</span>
+          <span class="wz-scale-desc">Tous les événements d'une année</span>
+        </label>
+      </div>
+
+      <div class="wz-footer">
+        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
+        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 3 : Période ── -->
+    <div class="wizard-step" id="wz-step-3">
+      <div class="wz-header">
+        <span class="wz-icon">&#128205;</span>
+        <h2 class="wz-title">Choisissez la période</h2>
+      </div>
+      <p class="wz-sub" id="wz-period-sub">Sélectionnez le siècle à afficher.</p>
+
+      <div class="wz-select-wrap">
+        <select id="wz-period-select" class="wz-select">
+          <!-- rempli dynamiquement -->
+        </select>
+      </div>
+
+      <div class="wz-footer">
+        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
+        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 4 : Précision (décennie seulement) ── -->
+    <div class="wizard-step" id="wz-step-4">
+      <div class="wz-header">
+        <span class="wz-icon">&#128270;</span>
+        <h2 class="wz-title">Niveau de détail</h2>
+      </div>
+      <p class="wz-sub">Combien d'événements souhaitez-vous afficher&nbsp;?</p>
+
+      <div class="wz-detail-choices">
+        <label class="wz-detail-card">
+          <input type="radio" name="wz-detail" value="1" checked>
+          <span class="wz-detail-label">Essentiel</span>
+          <span class="wz-detail-desc">Les événements les plus importants (niveaux 1 &amp; 2)</span>
+        </label>
+        <label class="wz-detail-card">
+          <input type="radio" name="wz-detail" value="2">
+          <span class="wz-detail-label">Détaillé</span>
+          <span class="wz-detail-desc">Vue intermédiaire (niveaux 1, 2 &amp; 3)</span>
+        </label>
+        <label class="wz-detail-card">
+          <input type="radio" name="wz-detail" value="3">
+          <span class="wz-detail-label">Complet</span>
+          <span class="wz-detail-desc">Tous les événements disponibles</span>
+        </label>
+      </div>
+
+      <div class="wz-footer">
+        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
+        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 5 : Guide de navigation ── -->
+    <div class="wizard-step" id="wz-step-5">
+      <div class="wz-header">
+        <span class="wz-icon">&#128218;</span>
+        <h2 class="wz-title">Bienvenue sur la Frise du Moyen Âge</h2>
+      </div>
+      <p class="wz-sub">Ces réglages peuvent être modifiés à tout moment grâce aux commandes de la frise,<br>ou en cliquant sur <strong>&#127968; Accueil</strong> pour revenir à cet assistant.</p>
+
+      <div class="wz-guide">
+        <div class="wz-guide-item">
+          <span class="wz-guide-icon">&#128269;</span>
+          <div>
+            <strong>Zoomer</strong>
+            Cliquez sur une période de l'axe pour descendre d'un niveau de détail.
+          </div>
+        </div>
+        <div class="wz-guide-item">
+          <span class="wz-guide-icon">&larr;&rarr;</span>
+          <div>
+            <strong>Naviguer</strong>
+            Les flèches <em>Période précédente / suivante</em> défilent dans le temps à l'échelle choisie.
+          </div>
+        </div>
+        <div class="wz-guide-item">
+          <span class="wz-guide-icon">&#128196;</span>
+          <div>
+            <strong>Fiche complète</strong>
+            Cliquez sur n'importe quel événement pour ouvrir sa fiche (description, illustration, vidéo).
+          </div>
+        </div>
+        <div class="wz-guide-item">
+          <span class="wz-guide-icon">&#128270;</span>
+          <div>
+            <strong>Recherche</strong>
+            Saisissez un mot-clé dans la barre de recherche pour filtrer les événements.
+          </div>
+        </div>
+        <div class="wz-guide-item">
+          <span class="wz-guide-icon">&#127757;</span>
+          <div>
+            <strong>Zones &amp; thèmes</strong>
+            Ajustez les zones affichées via le bouton <em>Zones &amp; thèmes</em> ou le filtre sous la frise.
+          </div>
+        </div>
+      </div>
+
+      <div class="wz-footer">
+        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
+        <button class="wz-btn wz-btn-ok" onclick="wzClose()">Découvrir la frise &#10003;</button>
+      </div>
+    </div>
+
+  </div><!-- .wizard-box -->
+</div><!-- #wizard-overlay -->
 
 </main>
 

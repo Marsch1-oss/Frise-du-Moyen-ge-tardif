@@ -139,8 +139,8 @@ function loadEvents() {
           return e;
         });
         buildFilterBar();
-        currentCentury = 1300;
-        renderLevel(2, 1300);  /* Démarrage vue siècle XIVe */
+        /* Ouvre le wizard d'accueil au lieu de lancer directement la frise */
+        wzInit();
       } catch(err) {
         document.getElementById('frise-container').innerHTML =
           '<p class="error">Erreur JSON : ' + err.message + '</p>';
@@ -1104,20 +1104,194 @@ function zoomOut() {
 }
 
 /* ── Accueil ─────────────────────────────────────────────────────────*/
+/* ══════════ WIZARD D'ACCUEIL ══════════ */
+var wzCurrentStep = 1;
+var WZ_TOTAL_STEPS = 5;
+
+function wzInit() {
+  /* Numérotation des dots */
+  document.querySelectorAll('.wz-step-dot').forEach(function(d, i) {
+    d.textContent = i + 1;
+  });
+
+  /* Construit la grille zones (étape 1) */
+  var grid = document.getElementById('wz-zones-grid');
+  if (grid) {
+    grid.innerHTML = '';
+    var groupNames = Object.keys(ZONES_GROUPS);
+    for (var gi = 0; gi < groupNames.length; gi++) {
+      var grpName  = groupNames[gi];
+      var grpZones = ZONES_GROUPS[grpName];
+      var titleEl = document.createElement('div');
+      titleEl.className   = 'wz-group-title';
+      titleEl.textContent = grpName;
+      grid.appendChild(titleEl);
+      var chipsEl = document.createElement('div');
+      chipsEl.className = 'wz-group-chips';
+      for (var zi = 0; zi < grpZones.length; zi++) {
+        (function(zone) {
+          var col  = COLORS[zone] || { bg: '#888', light: '#eee', text: '#333' };
+          var isOn = !!activeZones[zone];
+          var chip = document.createElement('span');
+          chip.className = 'wz-zone-chip';
+          chip.dataset.zone = zone;
+          chip.style.borderColor = col.bg;
+          chip.style.color       = isOn ? '#fff' : col.text;
+          chip.style.background  = isOn ? col.bg : col.light;
+          var dot = document.createElement('span');
+          dot.className = 'chip-dot-sm';
+          dot.style.background = isOn ? 'rgba(255,255,255,0.6)' : col.bg;
+          chip.appendChild(dot);
+          chip.appendChild(document.createTextNode(zone));
+          chip.addEventListener('click', function() {
+            activeZones[zone] = !activeZones[zone];
+            var on = activeZones[zone];
+            chip.style.color      = on ? '#fff' : col.text;
+            chip.style.background = on ? col.bg : col.light;
+            dot.style.background  = on ? 'rgba(255,255,255,0.6)' : col.bg;
+          });
+          chipsEl.appendChild(chip);
+        })(grpZones[zi]);
+      }
+      grid.appendChild(chipsEl);
+    }
+  }
+  wzGoTo(1);
+}
+
+function wzGoTo(step) {
+  wzCurrentStep = step;
+  /* Affiche la bonne étape */
+  document.querySelectorAll('.wizard-step').forEach(function(el, i) {
+    el.classList.toggle('active', i + 1 === step);
+  });
+  /* Met à jour les dots */
+  document.querySelectorAll('.wz-step-dot').forEach(function(d, i) {
+    d.classList.toggle('active', i + 1 === step);
+    d.classList.toggle('done',   i + 1 < step);
+  });
+  /* Popule le sélecteur période (étape 3) */
+  if (step === 3) wzBuildPeriodSelect();
+  /* Gère la visibilité étape 4 (uniquement pour décennie) */
+  if (step === 4) {
+    var scale = wzGetScale();
+    if (scale !== 3) { wzGoTo(5); return; }
+  }
+}
+
+function wzNext() {
+  /* Étape 1 : si recherche saisie → ferme directement */
+  if (wzCurrentStep === 1) {
+    var q = (document.getElementById('wz-search-input').value || '').trim();
+    if (q) { wzClose(); wzApplySearch(q); return; }
+    /* Au moins une zone doit être active */
+    var anyZone = Object.values(activeZones).some(Boolean);
+    if (!anyZone) { alert('Sélectionnez au moins une zone ou saisissez un mot-clé.'); return; }
+  }
+  var next = wzCurrentStep + 1;
+  if (next > WZ_TOTAL_STEPS) { wzClose(); return; }
+  wzGoTo(next);
+}
+
+function wzPrev() {
+  var prev = wzCurrentStep - 1;
+  /* Étape 4 → revient à 3 */
+  if (wzCurrentStep === 5 && wzGetScale() !== 3) { wzGoTo(3); return; }
+  if (prev < 1) return;
+  wzGoTo(prev);
+}
+
+function wzGetScale() {
+  var r = document.querySelector('input[name="wz-scale"]:checked');
+  return r ? parseInt(r.value) : 2;
+}
+
+function wzBuildPeriodSelect() {
+  var scale = wzGetScale();
+  var sel   = document.getElementById('wz-period-select');
+  var sub   = document.getElementById('wz-period-sub');
+  if (!sel) return;
+  sel.innerHTML = '';
+  if (scale === 2) {
+    sub.textContent = 'Sélectionnez le siècle à afficher.';
+    [['XIVe siècle (1300–1400)', 1300],
+     ['XVe siècle (1400–1500)',  1400]].forEach(function(o) {
+      var opt = document.createElement('option');
+      opt.textContent = o[0]; opt.value = o[1];
+      sel.appendChild(opt);
+    });
+  } else if (scale === 3) {
+    sub.textContent = 'Sélectionnez la décennie à afficher.';
+    for (var d = 1300; d < 1500; d += 10) {
+      var opt = document.createElement('option');
+      opt.textContent = d + ' – ' + (d + 10);
+      opt.value = d;
+      sel.appendChild(opt);
+    }
+  } else {
+    sub.textContent = "Sélectionnez l’année à afficher.";
+    for (var y = 1300; y < 1500; y++) {
+      var opt = document.createElement('option');
+      opt.textContent = y;
+      opt.value = y;
+      sel.appendChild(opt);
+    }
+  }
+}
+
+function wzApplySearch(q) {
+  var inp = document.getElementById('search-input');
+  if (inp) { inp.value = q; onSearch(q); }
+}
+
+function wzClose() {
+  /* Applique les choix et lance la frise */
+  var overlay = document.getElementById('wizard-overlay');
+  if (overlay) overlay.classList.add('hidden');
+
+  var q = (document.getElementById('wz-search-input').value || '').trim();
+  if (q) { wzApplySearch(q); return; }
+
+  /* Applique zones */
+  updateFilterCheckboxes();
+
+  /* Applique l'échelle et la période */
+  var scale  = wzGetScale();
+  var period = parseInt(document.getElementById('wz-period-select').value || '1300');
+
+  /* Applique le niveau de détail si décennie */
+  if (scale === 3) {
+    var dr = document.querySelector('input[name="wz-detail"]:checked');
+    detailLevel = dr ? parseInt(dr.value) : 1;
+    document.querySelectorAll('.detail-btn').forEach(function(b) {
+      b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
+    });
+  }
+
+  currentCentury = Math.floor(period / 100) * 100;
+  currentDecade  = scale >= 3 ? Math.floor(period / 10) * 10 : null;
+  currentYear    = scale === 4 ? period : null;
+
+  renderLevel(scale, period);
+}
+
 function goHome() {
-  /* Remet France seule active, vue siècle XIVe */
+  /* Remet France seule active et rouvre le wizard */
   for (var z in activeZones) activeZones[z] = false;
   activeZones['France'] = true;
-  updateFilterCheckboxes();
-  currentCentury = 1300;
-  currentDecade  = null;
-  currentYear    = null;
-  /* Annule toute recherche en cours */
   var inp = document.getElementById('search-input');
   if (inp) inp.value = '';
   clearSearch();
-  renderLevel(2, 1300);
+  /* Réinitialise le champ recherche du wizard */
+  var wzInp = document.getElementById('wz-search-input');
+  if (wzInp) wzInp.value = '';
+  /* Rouvre le wizard */
+  var overlay = document.getElementById('wizard-overlay');
+  if (overlay) overlay.classList.remove('hidden');
+  wzInit();
 }
+
+
 
 /* ── Modale Zones & Thèmes ──────────────────────────────────────────*/
 function openZonesModal() {
