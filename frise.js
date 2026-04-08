@@ -222,7 +222,9 @@ function renderLevel(level, rangeStart) {
     start = rangeStart; end = rangeStart + 100; tickStep = 10;
   } else if (level === 3) {
     currentDecade = rangeStart;
-    start = rangeStart; end = rangeStart + 9; tickStep = 1;
+    /* end = +10 pour laisser de la place visuellement après l'année 9
+       Les événements sont filtrés à +9 dans la boucle de rendu */
+    start = rangeStart; end = rangeStart + 10; tickStep = 1;
   } else {
     currentYear = rangeStart;
     currentDecade = Math.floor(rangeStart / 10) * 10;
@@ -283,6 +285,9 @@ function renderLevel(level, rangeStart) {
         : eDateF;
       if (level === 4) {
         if (eDateF > end || fin < start) continue;
+      } else if (level === 3) {
+        /* Événements limités à l'année 9 de la décennie (pas l'année tampon) */
+        if (e.date > start + 9 || (e.date_fin ? e.date_fin : e.date) < start) continue;
       } else {
         if (e.date > end || (e.date_fin ? e.date_fin : e.date) < start) continue;
       }
@@ -883,7 +888,9 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.color      = '#fff';
       /* Titre non tronqué — font-size réduit si trop long */
       var titreF = evt.titre;
-      chip.style.fontSize   = adaptFontSize(titreF, 0.83, level === 4 ? 32 : 22);
+      /* maxChars basé sur la largeur réelle du chip (~7px/char, max 280px → ~40 chars) */
+      var maxCharsF = level === 4 ? 48 : 40;
+      chip.style.fontSize   = adaptFontSize(titreF, 0.83, maxCharsF);
       chip.style.maxWidth   = 'none';
       chip.style.whiteSpace = 'normal';
       chip.style.lineHeight = '1.25';
@@ -927,6 +934,15 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     badge.textContent = '\u25B6';
     badge.title       = 'Contient une vid\u00e9o';
     chip.appendChild(badge);
+  }
+
+  /* Pastille image */
+  if (evt.image && evt.image.trim() && !chip.classList.contains('chip-dot')) {
+    var imgBadge = document.createElement('span');
+    imgBadge.className   = 'chip-img-badge';
+    imgBadge.textContent = '\uD83D\uDDBC';   /* 🖼 */
+    imgBadge.title       = 'Contient une illustration';
+    chip.appendChild(imgBadge);
   }
 
   /* Tooltip image au survol (sauf chip-dot) */
