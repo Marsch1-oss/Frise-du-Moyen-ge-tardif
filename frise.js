@@ -1143,6 +1143,9 @@ var wzCurrentStep = 1;
 var WZ_TOTAL_STEPS = 5;
 
 function wzInit() {
+  /* Lance la musique dès l'ouverture du wizard (muette 30s) */
+  startMusic();
+
   /* Numérotation des dots */
   document.querySelectorAll('.wz-step-dot').forEach(function(d, i) {
     d.textContent = i + 1;
@@ -1888,19 +1891,75 @@ function extractYouTubeId(url) {
 
 /* ── Init ────────────────────────────────────────────────────────────*/
 /* ── Musique d'ambiance ────────────────────────────────────────────*/
-var musicMuted = false;
+/* Playlist des deux pièces enchaînées */
+var MUSIC_PLAYLIST = '9ti59NdbG1c,ZBQxrD3d7MI';
+var MUSIC_FIRST    = '9ti59NdbG1c';
+var musicMuted     = true;   /* commence muet pour éviter la pub */
+var musicStarted   = false;
+var musicUnmuteTimer = null;
+
+function startMusic() {
+  if (musicStarted) return;
+  musicStarted = true;
+  var iframe = document.getElementById('music-yt');
+  if (!iframe) return;
+
+  /* Démarre muet — la pub passe en silence */
+  iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
+    + '?autoplay=1&mute=1&controls=0&modestbranding=1'
+    + '&playlist=' + MUSIC_PLAYLIST
+    + '&loop=1&rel=0&enablejsapi=0';
+
+  var btn = document.getElementById('music-toggle');
+  if (btn) btn.classList.add('muted');
+
+  /* Rétablit le son après 30 secondes (pub terminée) */
+  musicUnmuteTimer = setTimeout(function() {
+    unmuteMusic();
+  }, 30000);
+}
+
+function unmuteMusic() {
+  musicMuted = false;
+  var iframe = document.getElementById('music-yt');
+  if (!iframe) return;
+  /* Recharge sans mute pour activer le son */
+  iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
+    + '?autoplay=1&mute=0&controls=0&modestbranding=1'
+    + '&playlist=' + MUSIC_PLAYLIST
+    + '&loop=1&rel=0&start=30';
+  var btn = document.getElementById('music-toggle');
+  if (btn) btn.classList.remove('muted');
+  var status = document.getElementById('music-status');
+  if (status) status.textContent = '⏸';
+}
 
 function toggleMusic() {
   var iframe = document.getElementById('music-yt');
   var btn    = document.getElementById('music-toggle');
-  var lbl    = document.getElementById('music-lbl');
+  var status = document.getElementById('music-status');
   if (!iframe) return;
+
+  if (!musicStarted) {
+    /* Premier clic : démarre immédiatement avec son */
+    musicStarted = true;
+    musicMuted   = false;
+    if (musicUnmuteTimer) clearTimeout(musicUnmuteTimer);
+    iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
+      + '?autoplay=1&mute=0&controls=0&modestbranding=1'
+      + '&playlist=' + MUSIC_PLAYLIST + '&loop=1&rel=0';
+    if (btn) btn.classList.remove('muted');
+    if (status) status.textContent = '⏸';
+    return;
+  }
+
   musicMuted = !musicMuted;
-  /* Recharge l'iframe avec ou sans mute */
-  var base = 'https://www.youtube.com/embed/9ti59NdbG1c?autoplay=1&loop=1&playlist=9ti59NdbG1c&controls=0&modestbranding=1&';
-  iframe.src = base + (musicMuted ? 'mute=1' : 'mute=0&volume=20');
-  if (lbl) lbl.textContent = musicMuted ? 'Son coupé' : 'Musique';
-  if (btn) btn.classList.toggle('muted', musicMuted);
+  var base = 'https://www.youtube.com/embed/' + MUSIC_FIRST
+    + '?autoplay=1&controls=0&modestbranding=1'
+    + '&playlist=' + MUSIC_PLAYLIST + '&loop=1&rel=0&';
+  iframe.src = base + (musicMuted ? 'mute=1' : 'mute=0');
+  if (btn)    btn.classList.toggle('muted', musicMuted);
+  if (status) status.textContent = musicMuted ? '▶' : '⏸';
 }
 
 document.addEventListener('DOMContentLoaded', function() {

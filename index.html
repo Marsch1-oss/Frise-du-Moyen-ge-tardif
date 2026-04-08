@@ -907,19 +907,28 @@
       z-index: 100;
     }
     #music-toggle {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-family: 'Crimson Pro', serif; font-size: 0.82rem;
-      padding: 0.35rem 0.85rem;
-      background: rgba(28,20,10,0.78);
-      color: rgba(245,237,216,0.9);
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: 'Crimson Pro', serif;
+      padding: 0.4rem 1rem;
+      background: rgba(28,20,10,0.82);
+      color: rgba(245,237,216,0.92);
       border: 1px solid rgba(154,107,26,0.5);
-      border-radius: 20px;
+      border-radius: 24px;
       cursor: pointer;
       backdrop-filter: blur(4px);
       transition: all 0.2s;
+      text-align: left;
+      max-width: 280px;
     }
-    #music-toggle:hover { background: rgba(28,20,10,0.92); color: #fff; }
-    #music-toggle.muted { opacity: 0.5; }
+    #music-toggle:hover { background: rgba(28,20,10,0.95); color: #fff; }
+    #music-toggle.muted { opacity: 0.55; }
+    #music-note { font-size: 1.1rem; flex-shrink: 0; }
+    #music-lbl { display: flex; flex-direction: column; gap: 0; flex: 1; min-width: 0; }
+    .music-title { font-size: 0.80rem; font-weight: 600; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .music-sub   { font-size: 0.66rem; opacity: 0.75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    #music-status { font-size: 0.7rem; opacity: 0.6; flex-shrink: 0; letter-spacing: -2px; }
+    #music-toggle.muted #music-status::before { content: '\25BA'; letter-spacing: 0; }
+    #music-toggle:not(.muted) #music-status { content: '\9646\9646'; }
 
   </style>
 </head>
@@ -1223,17 +1232,23 @@
 
 
 <!-- ── Lecteur musical d'ambiance ── -->
-<div id="music-player" title="Musique d'ambiance médiévale">
+<div id="music-player">
   <div id="music-yt-wrap">
+    <!-- Démarrage muet pour éviter la pub — son rétabli après 30s -->
     <iframe id="music-yt"
-      src="https://www.youtube.com/embed/9ti59NdbG1c?autoplay=1&loop=1&playlist=9ti59NdbG1c&controls=0&modestbranding=1&mute=0&volume=20"
+      src=""
       allow="autoplay; encrypted-media"
       frameborder="0"
       style="width:0;height:0;position:absolute;opacity:0;pointer-events:none;">
     </iframe>
   </div>
-  <button id="music-toggle" onclick="toggleMusic()" title="Musique médiévale d'ambiance">
-    &#127925; <span id="music-lbl">Musique</span>
+  <button id="music-toggle" onclick="toggleMusic()">
+    <span id="music-note">&#127925;</span>
+    <span id="music-lbl">
+      <span class="music-title">Guillaume de Machaut</span>
+      <span class="music-sub">Je vivroie liement &bull; Je vivrais joyeusement</span>
+    </span>
+    <span id="music-status">&#9646;&#9646;</span>
   </button>
 </div>
 
