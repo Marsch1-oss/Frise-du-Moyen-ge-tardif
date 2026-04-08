@@ -231,7 +231,7 @@
       display: block;
       width: 56px;
       height: 68px;
-      object-fit: cover;
+      object-fit: contain;
       opacity: 0.45;
       border-radius: 5px;
       border: 1.5px solid rgba(154,107,26,0.5);
@@ -286,10 +286,13 @@
     }
     .chip-img-tooltip img {
       width: 110px;
-      height: 80px;
-      object-fit: cover;
+      max-height: 140px;
+      height: auto;
+      object-fit: contain;
+      object-position: top;
       border-radius: 4px;
       display: block;
+      background: rgba(0,0,0,0.2);
     }
     .chip-img-tooltip span {
       display: block;
@@ -380,8 +383,37 @@
     .chip-medium.chip-type1 { font-weight: 600; font-size: 0.75rem; border-width: 2px; }
     .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
 
-    .chip-full { font-size: 0.83rem; padding: 4px 11px; border-radius: 10px; white-space: normal; font-style: italic; line-height: 1.25; max-width: 260px; word-break: break-word; box-shadow: 0 1px 5px rgba(0,0,0,0.20); box-sizing: border-box; }
-    .chip-full.chip-type3 { opacity: 0.72; font-size: 0.72rem; }
+    .chip-full { font-size: 0.83rem; padding: 4px 11px 4px 11px; border-radius: 10px; white-space: normal; font-style: italic; line-height: 1.25; max-width: 260px; word-break: break-word; box-sizing: border-box; position: relative; overflow: visible; }
+
+    /* ── Label date au-dessus des chips ── */
+    .chip-date-label {
+      display: block;
+      position: absolute;
+      bottom: calc(100% + 3px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.58rem;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      background: rgba(245,237,216,0.92);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1px 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    /* ── Bordure selon niveau d'importance (remplace l'étoile) ── */
+    .chip-full.chip-type1 { font-weight: 700; box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 2px 10px rgba(0,0,0,0.30); letter-spacing: 0.01em; }
+    .chip-full:not(.chip-type1):not(.chip-type3) { box-shadow: 0 0 0 1.5px rgba(255,255,255,0.6), 0 1px 5px rgba(0,0,0,0.18); }
+    .chip-full.chip-type3 { opacity: 0.82; box-shadow: none; border: 1px dashed rgba(255,255,255,0.4); }
+    .chip-period.chip-type1 { border-width: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+    .chip-period:not(.chip-type1):not(.chip-type3) { border-width: 1.5px; }
+    .chip-period.chip-type3 { border-width: 1px; border-style: dashed; opacity: 0.78; }
+    
 
     /* ── Section Rulers globale (en haut de la frise) ── */
     .rulers-section {
@@ -440,7 +472,7 @@
     }
 
     /* ── Étoile type 1 ── */
-    .chip-full.chip-type1 { font-weight: 700; box-shadow: 0 2px 10px rgba(0,0,0,0.30); letter-spacing: 0.01em; }
+    
     .chip-medium.chip-type1 { font-weight: 700; font-size: 0.8rem; }
 
     /* ── Événements partagés (multi-zones) ── */
@@ -866,6 +898,29 @@
     .wz-btn-ok { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
     .wz-btn-ok:hover { filter: brightness(1.1); background: var(--gold); color: #fff; }
 
+  
+    /* ── Lecteur musical ── */
+    #music-player {
+      position: fixed;
+      bottom: 1.2rem;
+      right: 1.2rem;
+      z-index: 100;
+    }
+    #music-toggle {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-family: 'Crimson Pro', serif; font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(28,20,10,0.78);
+      color: rgba(245,237,216,0.9);
+      border: 1px solid rgba(154,107,26,0.5);
+      border-radius: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s;
+    }
+    #music-toggle:hover { background: rgba(28,20,10,0.92); color: #fff; }
+    #music-toggle.muted { opacity: 0.5; }
+
   </style>
 </head>
 <body>
@@ -1165,6 +1220,22 @@
 
   </div><!-- .wizard-box -->
 </div><!-- #wizard-overlay -->
+
+
+<!-- ── Lecteur musical d'ambiance ── -->
+<div id="music-player" title="Musique d'ambiance médiévale">
+  <div id="music-yt-wrap">
+    <iframe id="music-yt"
+      src="https://www.youtube.com/embed/9ti59NdbG1c?autoplay=1&loop=1&playlist=9ti59NdbG1c&controls=0&modestbranding=1&mute=0&volume=20"
+      allow="autoplay; encrypted-media"
+      frameborder="0"
+      style="width:0;height:0;position:absolute;opacity:0;pointer-events:none;">
+    </iframe>
+  </div>
+  <button id="music-toggle" onclick="toggleMusic()" title="Musique médiévale d'ambiance">
+    &#127925; <span id="music-lbl">Musique</span>
+  </button>
+</div>
 
 </main>
 

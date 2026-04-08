@@ -858,7 +858,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
         chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
         chip.style.overflow   = 'hidden';
         chip.style.lineHeight = '1.2';
-        chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreP;
+        chip.textContent = titreP;
       }
     }
     var zonesLabel = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
@@ -886,15 +886,25 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
           + col2.bg + ' 7px,' + col2.bg + ' 14px)'
         : col.bg;
       chip.style.color      = '#fff';
+
+      /* Label de date au-dessus du chip */
+      var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
+                      'jul.','aoû.','sep.','oct.','nov.','déc.'];
+      var dateLbl = document.createElement('span');
+      dateLbl.className = 'chip-date-label';
+      dateLbl.textContent = evt.mois
+        ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date
+        : '' + evt.date;
+      chip.appendChild(dateLbl);
+
       /* Titre non tronqué — font-size réduit si trop long */
       var titreF = evt.titre;
-      /* maxChars basé sur la largeur réelle du chip (~7px/char, max 280px → ~40 chars) */
       var maxCharsF = level === 4 ? 48 : 40;
       chip.style.fontSize   = adaptFontSize(titreF, 0.83, maxCharsF);
       chip.style.maxWidth   = 'none';
       chip.style.whiteSpace = 'normal';
       chip.style.lineHeight = '1.25';
-      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreF;
+      chip.textContent = titreF;
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
@@ -911,7 +921,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.maxWidth   = 'none';
       chip.style.whiteSpace = 'normal';
       chip.style.lineHeight = '1.2';
-      chip.textContent = (type === 1 && !evt.regne ? '\u2605 ' : '') + titreM;
+      chip.textContent = titreM;
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
@@ -949,6 +959,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   if (evt.image && evt.image.trim() && !chip.classList.contains('chip-dot')) {
     var tt = document.createElement('div');
     tt.className = 'chip-img-tooltip';
+    /* Image portrait : object-fit cover avec ratio fixe */
     var ttImg = document.createElement('img');
     ttImg.src = evt.image;
     ttImg.alt = evt.legende || evt.titre;
@@ -959,7 +970,11 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       tt.appendChild(ttCap);
     }
     chip.appendChild(tt);
-    chip.style.position = 'absolute';  /* assure le positionnement */
+    chip.style.position = 'absolute';
+    /* Pour chip-period : overflow visible nécessaire pour le tooltip */
+    if (chip.classList.contains('chip-period')) {
+      chip.style.overflow = 'visible';
+    }
   }
 
   chip.addEventListener('click', (function(e, z) {
@@ -1872,6 +1887,22 @@ function extractYouTubeId(url) {
 }
 
 /* ── Init ────────────────────────────────────────────────────────────*/
+/* ── Musique d'ambiance ────────────────────────────────────────────*/
+var musicMuted = false;
+
+function toggleMusic() {
+  var iframe = document.getElementById('music-yt');
+  var btn    = document.getElementById('music-toggle');
+  var lbl    = document.getElementById('music-lbl');
+  if (!iframe) return;
+  musicMuted = !musicMuted;
+  /* Recharge l'iframe avec ou sans mute */
+  var base = 'https://www.youtube.com/embed/9ti59NdbG1c?autoplay=1&loop=1&playlist=9ti59NdbG1c&controls=0&modestbranding=1&';
+  iframe.src = base + (musicMuted ? 'mute=1' : 'mute=0&volume=20');
+  if (lbl) lbl.textContent = musicMuted ? 'Son coupé' : 'Musique';
+  if (btn) btn.classList.toggle('muted', musicMuted);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   initActiveZones();
   document.getElementById('modal-overlay').addEventListener('click', function(e) {
