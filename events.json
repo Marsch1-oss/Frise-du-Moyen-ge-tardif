@@ -1,30 +1,5 @@
 [
   {
-    "id": 751,
-    "titre": "Bataille de Llucmajor (Majorque)",
-    "date": 149,
-    "mois": 10,
-    "zones": [
-      "Aragon"
-    ],
-    "type": 2,
-    "description": "Fin du royaume de Majorque. \nLa bataille de Llucmajor se déroule le 25 octobre 1349 à proximité de la ville homonyme (à Majorque dans les Îles Baléares) et oppose les troupes de Pierre IV d'Aragon à l'armée du roi Jacques III de Majorque. Ce dernier est tué dans la bataille et la victoire permet à Pierre IV d'intégrer définitivement le royaume de Majorque à la Couronne d'Aragon.",
-    "image": ""
-  },
-  {
-    "id": 540,
-    "titre": "Shogunat de Kamakura",
-    "date": 1185,
-    "date_fin": 1333,
-    "zones": [
-      "Japon"
-    ],
-    "type": 1,
-    "description": "L'époque de Kamakura (鎌倉時代, Kamakura jidai?, 1185–1333) est l'une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période, qui commence en 1185 et s'achève en 1333, est placée sous l'autorité politique du shogunat de Kamakura. Elle constitue la première partie du « Moyen Âge » de l'histoire japonaise, qui va jusqu'à la fin du XVIe siècle.\n\nLe XIIe siècle vit le pouvoir impérial et l'aristocratie civile laisser les premiers rôles aux familles de l'élite guerrière, d'abord les Taira, puis, à l'issue de la guerre de Genpei (1180-1185), aux Minamoto de la lignée Seiwa-Genji, dont le chef de clan, Yoritomo, devint alors le personnage le plus puissant du Japon. Installé à Kamakura, il reçut de l'empereur le titre de shōgun, qui donna son nom au régime qu'il fonda, le shogunat (ou Bakufu), qui voyait les guerriers exercer les premiers rôles. Après la mort de Yoritomo en 1199, sa veuve Hōjō Masako prit en main la direction du shogunat, qui passa sous la coupe de son clan, les Hōjō, dont les chefs devinrent les « régents » (shikken) du shogun, exerçant de fait le pouvoir suprême, leur triomphe étant confirmé après qu'une nouvelle réaction de la cour impériale eut échoué en 1221.\n\nL'époque de Kamakura vit donc l'élite guerrière s'élever au rang de catégorie dominante, les hommes-liges du régime shogunal recevant en récompense de leurs services des charges importantes et le contrôle de domaines dans tout le pays. Les empereurs retirés et la noblesse de Kyoto continuèrent cependant à jouer un rôle politique, administratif et culturel notable, de même que les grands temples du Kinai. Cette période vit donc une forme de partage de pouvoir entre ces différents groupes pour l'administration du pays, même si les chefs des principaux clans guerriers installés à Kamakura et dans le Kantō, dirigés par les Hōjō, gardaient la direction du pays. Les provinces étaient organisées suivant un modèle domanial, les domaines publics et privés étant dirigés par les membres de la haute élite, et gérés par des administrateurs locaux, encadrant la vie des communautés de paysans, pêcheurs, forestiers, artisans et autres professions. Les élites locales, avant tout d'extraction guerrière, augmentèrent progressivement leur emprise sur les domaines, au détriment de l'aristocratie civile et des temples. Les échanges avec l'extérieur connurent un essor à cette période, ce qui se voit dans le fait que les monnaies en circulation à partir du XIIIe siècle avaient toutes été importées depuis la Chine.",
-    "image": "",
-    "regne": true
-  },
-  {
     "id": 31,
     "titre": "Edouard 1er Longues Jambes",
     "date": 1272,
@@ -99,7 +74,8 @@
     ],
     "type": 1,
     "description": "Il hérite d'un Empire restauré par la reconquête de Constantinople menée par son père en 1261. Toutefois, l'Empire est épuisé par la politique extérieure de Michel VIII. Constantinople doit faire face à de nombreuses menaces sur ses différentes frontières.\n\nMalgré un trésor vide et des forces armées diminuées, Andronic a contribué à une renaissance culturelle, ainsi qu'à des réformes financières et judiciaires durables. Il met en place une réforme financière drastique qui réduit les effectifs de l'armée, s'oppose à l'union religieuse avec Rome et tente de freiner l'avance turque en Asie mineure.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Serres_IM_Prodromou_Andronicos.jpg/960px-Serres_IM_Prodromou_Andronicos.jpg",
+    "legende": "Fresque représentant Andronic II Paléologue, située au monastère de Saint-Jean-le-Précurseur près de Serrès.",
     "regne": true,
     "sources": "Wikipedia"
   },
@@ -130,8 +106,9 @@
       "France"
     ],
     "type": 1,
-    "description": "Il devient roi de France en octobre 1285 à l'âge de 17 ans. Son règne est notamment marqué par un renforcement important du pouvoir royal et une mise au pas du duc-roi de Guyenne ainsi que de la Flandre en révolte.\n\nPhilippe IV croit trouver une solution à ses difficultés financières en abattant l'ordre du Temple et en expulsant les Juifs tout en confisquant leurs biens. Il rétablit une monnaie d'or qui va rester stable pendant plus d'un siècle.",
+    "description": "Philippe IV le Bel : synthèse\n1. Un roi puissant à la tête d’un royaume prospère\n\nPhilippe IV, roi de France de 1285 à 1314, est l’un des grands souverains capétiens. Il hérite d’un royaume très puissant, le plus peuplé d’Europe, bénéficiant d’une économie encore dynamique malgré certaines évolutions commerciales.\n\nIl devient roi à 17 ans et incarne une monarchie forte, autoritaire et centralisée.\n\n2. Renforcement de l’autorité royale\n\nSon règne est marqué par une volonté de centraliser le pouvoir :\n\nDéveloppement d’une administration organisée (Conseil, Parlement, Chambre des comptes)\nAppui sur des juristes (légistes) pour imposer l’autorité du roi\nCréation d’assemblées représentant les trois ordres (préfiguration des États généraux)\n\nCependant, cette centralisation provoque des oppositions :\n\nRévoltes populaires\nContestation des grands seigneurs\nTensions avec l’Église\n3. Difficultés financières et politiques économiques\n\nPhilippe le Bel fait face à de graves problèmes financiers :\n\nMultiplication des dévaluations monétaires, entraînant inflation et mécontentement\nCréation d’une monnaie d’or stable (agnel)\nRéformes fiscales et meilleure organisation des finances\n\nPour renflouer le trésor, il adopte des mesures radicales :\n\nExpulsion des Juifs (1306) et confiscation de leurs biens\nDissolution de l’ordre du Temple (1307) et saisie de ses richesses\n4. Une politique extérieure active\n\nPhilippe IV mène plusieurs conflits pour affirmer son autorité :\n\nGuerre contre l’Angleterre (Guyenne) : conflit avec Édouard Ier, finalement résolu par un traité\nConflit en Flandre : révoltes flamandes, défaites (Courtrai 1302) puis victoire (Mons-en-Pévèle 1304)\n\nCes guerres renforcent son pouvoir mais coûtent cher.\n\n5. Conflit majeur avec le pape\n\nPhilippe le Bel s’oppose au pape Boniface VIII sur la question du pouvoir :\n\nLe roi veut taxer le clergé\nLe pape affirme la supériorité du pouvoir religieux\n\nLe conflit culmine avec l’attentat d’Anagni (1303), où le pape est arrêté. Cet épisode marque la victoire politique du roi sur la papauté.\n\n6. Un règne autoritaire et contesté\n\nSurnommé le « roi de fer », Philippe IV est perçu comme :\n\nFroid et autoritaire\nImpopulaire en raison des impôts et des crises monétaires\nCritiqué pour ses méthodes brutales\n\nMalgré cela, il transforme profondément la monarchie française en un État plus moderne et centralisé.\n\n7. Fin de règne et héritage\n\nPhilippe IV meurt en 1314 après 29 ans de règne.\n\nSon héritage est important :\n\nRenforcement durable du pouvoir royal\nMise en place d’institutions administratives solides\nMais aussi une monarchie fragilisée par les tensions sociales et politiques",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Philip_iv_and_family._2_%28detail_crop%29.jpg",
+    "video": "https://www.youtube.com/watch?v=DpNtto_U8S0",
     "regne": true,
     "sources": "Grandes Chroniques de France"
   },
@@ -145,9 +122,11 @@
     "zones": [
       "Monde islamique"
     ],
-    "type": 2,
+    "type": 1,
     "description": "Fils d'Abû Yûsuf Ya`qûb, il lui succéda sans difficulté en 1286 comme sultan mérinide.\nAbû Ya`qûb Yûsuf an-Nasr dut faire face à de nombreuses révoltes qui montrent que l'état mérinide était encore fragile. Ayant confié à l'un de ses frères une troupe pour mater une rébellion, celui-ci au lieu de le combattre s'allia aux rebelles pour renverser le sultan. Puis ce fut un autre parent qui s'insurgea, puis ce fut un des fils d'Abû Ya`qûb Yûsuf (1288). Quatre années plus tard c'est la tribu des Benî Wattas qui se révolte. Le fils rebelle qui s'était réfugié à Tlemcen réitèra vainement sa tentative.\n\nIl laissa de côté l'Espagne, n'intervenant que contraint par les évènements. En 1291, Don Sanche de Castille rompit le traité de paix signé en 1285. Le Castillan s'allia aux Nasrides de Grenade contre les Mérinides. Les Castillans fournissaient les hommes et les Nasrides le financement. Tarifa qui appartenait aux Mérinides est assiégée pendant quatre mois par Don Sanche. La ville capitule en septembre 1291. Don Sanche garde la place malgré son accord avec les Nasrides. Mohammed al-Faqîh menait un jeu de bascule entre ses deux ennemis potentiels, les Mérinides et les Castillans. Il renverse ses alliances et se met du côté des Mérinides contre les Castillans. Abû Ya`qûb Yûsuf lassé des revirements de Mohammed al-Faqîh l'oblige à y mettre le prix. Comme prix de cette alliance, Abû Ya`qûb Yûsuf reçut un des quatre exemplaires du Coran que le calife Uthman avait fait rédiger et que les Omeyyades avaient amené de Damas à Grenade. Abû Ya`qûb Yûsuf mit le siège devant Tarifa mais ce fut un échec.\n\nLes Abdalwadides de Tlemcen sont un plus gros problème car ils représentent une menace directe. Ils avaient accueilli le fils de félon d'Abû Ya`qûb Yûsuf. Tlemcen fut menacée à plusieurs reprises jusqu'en 1299 où il mit le siège devant la ville avec l'intention de la prendre à tout prix. Le siège dura, pendant ce temps un Mérinide rival prenait Ceuta. Finalement Abû Ya`qûb Yûsuf mourut assassiné par un eunuque pour une obscure affaire de harem (1307).",
-    "image": ""
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Abu_Ya%27qub_Yusuf%2C_Marinid_dinar.png",
+    "legende": "Dinars en or du sultan mérinide Abu Yaqub Yusuf an-Nasr",
+    "regne": true
   },
   {
     "id": 405,
@@ -160,6 +139,7 @@
       "Italie"
     ],
     "type": 1,
+    "description": ", né en 1250, est un seigneur italien devenu maître de Milan dans le contexte des luttes politiques entre guelfes (partisans du pape) et gibelins (partisans de l’Empire). Issu de la famille Visconti, il s’appuie d’abord sur son grand-oncle Otton Visconti, qu’il sert militairement avant d’être nommé capitaine du peuple en 1287, puis seigneur de Milan en 1291.\n\nAprès la mort d’Otton, Mathieu doit affronter les rivalités avec la famille des Della Torre. Chassé de Milan en 1302 par une coalition ennemie, il s’exile plusieurs années avant de revenir au pouvoir grâce à l’appui de l’empereur Henri VII. En 1311, il retrouve le contrôle de la ville et renforce une ligue gibeline pour affirmer son autorité en Lombardie.\n\nSon règne est marqué par des conflits constants contre les guelfes et leurs alliés, notamment soutenus par Robert d’Anjou. Ses fils jouent un rôle important dans les campagnes militaires qui assurent la domination des Visconti sur plusieurs villes du nord de l’Italie.\n\nÀ partir de 1317, Mathieu entre en conflit avec la papauté dirigée par Jean XXII, qui l’accuse d’hérésie et le fait excommunier. Un long affrontement politico-religieux s’engage, accompagné de procès et de condamnations, allant jusqu’à l’accuser de nécromancie.\nMalgré son âge avancé, les guerres continuent en Lombardie jusqu’à ses dernières années. En 1322, affaibli et retiré du pouvoir au profit de son fils Galéas, Mathieu meurt peu après, laissant une dynastie solidement implantée à Milan.",
     "image": "",
     "regne": true
   },
@@ -174,7 +154,7 @@
       "Hongrie"
     ],
     "type": 1,
-    "description": "André III, dernier des Árpád, élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit lutter pour conserver sa couronne contre l'empereur Albert de Habsbourg et les prétentions de Charles Martel d'Anjou-Naples.\n\nIl s'appuie sur la chevalerie pour régner et est le premier roi à convoquer une diète en Hongrie. Il est le dernier représentant mâle de sa dynastie ; le pays connaît une période anarchique après sa mort.",
+    "description": "André III, dernier des Árpád, élevé au palais des Morosini de Venise, se montre incapable de briser la puissance des barons. Il doit lutter pour conserver sa couronne contre l'empereur Albert de Habsbourg et les prétentions de Charles Martel d'Anjou-Naples.\nIl s'appuie sur la chevalerie pour régner et est le premier roi à convoquer une diète en Hongrie. Il est le dernier représentant mâle de sa dynastie ; le pays connaît une période anarchique après sa mort.",
     "image": "",
     "regne": true,
     "sources": "Wikipedia"
@@ -208,7 +188,8 @@
     ],
     "type": 2,
     "description": "Jean Balliol (vers 1249 – 1314) est roi d’Écosse de 1292 à 1296, choisi après la crise de succession qui suit la disparition de la dynastie des Dunkeld. Son accession au trône est décidée par le roi d’Angleterre Édouard Ier, dont il reconnaît la suzeraineté, ce qui limite fortement son autorité.\n\nRapidement, Balliol entre en conflit avec Édouard Ier, notamment lorsqu’il refuse de soutenir ses campagnes militaires. En 1295, il conclut une alliance avec la France (Auld Alliance), provoquant la réaction anglaise. En 1296, Édouard envahit l’Écosse, remporte la bataille de Dunbar et contraint Balliol à se rendre.\n\nLe roi écossais abdique peu après et est dépouillé de ses insignes royaux. Emprisonné en Angleterre, il est ensuite libéré et envoyé en France, où il vit retiré jusqu’à sa mort.\n\nSon règne bref et marqué par la domination anglaise fait de lui une figure faible, souvent considérée comme un roi sans réel pouvoir, dont la chute déclenche les guerres d’indépendance écossaise.",
-    "image": ""
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/John_Balliol.jpg",
+    "legende": "Jean Balliol dans l'armorial de Forman (1562). Son sceptre et sa couronne sont brisés, et son blason vierge reflète son surnom de « tabard vide »."
   },
   {
     "id": 45,
@@ -220,8 +201,8 @@
       "Byzance"
     ],
     "type": 1,
-    "description": "Fils aîné de l'empereur byzantin Andronic II Paléologue et d'Anne de Hongrie. Il régna conjointement avec son père de 1294 à sa mort en 1320, premier co-empereur à exercer le pouvoir avec les mêmes prérogatives que son collègue.\n\nIl conduisit plusieurs campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, qui se terminèrent par des échecs ou des demi-succès. Il fut nommé gouverneur de Thessalonique où il mourut de chagrin après la perte de sa fille et de son fils.",
-    "image": "",
+    "description": "Fils aîné de l'empereur byzantin Andronic II Paléologue et d'Anne de Hongrie. Il régna conjointement avec son père de 1294 à sa mort en 1320, premier co-empereur à exercer le pouvoir avec les mêmes prérogatives que son collègue.\nIl conduisit plusieurs campagnes militaires contre les Ottomans, les Bulgares et les mercenaires de la Compagnie catalane, qui se terminèrent par des échecs ou des demi-succès. Il fut nommé gouverneur de Thessalonique où il mourut de chagrin après la perte de sa fille et de son fils.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Michael_IX_Palaiologos.jpg",
     "regne": true,
     "sources": "Wikipedia"
   },
@@ -254,7 +235,8 @@
     ],
     "type": 1,
     "description": "Benedetto Caetani, célèbre pour avoir porté à son sommet l'absolutisme théocratique de la papauté. Sa bulle Unam Sanctam (18 novembre 1302) manifestait la primauté du pouvoir spirituel sur le temporel et concluait que toute créature humaine doit être soumise au pontife romain.\n\nCette intransigeance contribue à la querelle qui l'oppose au roi de France Philippe IV le Bel, au terme de laquelle il est victime de l'attentat d'Anagni (7-8 septembre 1303).",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Bonifatius_VIII_Grabstatue.JPG",
+    "legende": "Arnolfo di Cambio, Monument funéraire de Boniface VIII (vers 1298, détail), Florence, Museo dell'Opera del Duomo.",
     "regne": true,
     "sources": "Wikipedia"
   },
@@ -269,7 +251,8 @@
       "Castille"
     ],
     "type": 1,
-    "image": "",
+    "description": "Ferdinand IV de Castille, dit l'Ajourné, est né à Séville le 6 décembre 1285, il meurt à Jaén, le 7 septembre 1312. Il est le fils de Sanche IV de Castille et de Marie de Molina.\nIl règne le 25 avril 1295 à la mort de son père tout d'abord sous la tutelle de sa mère jusqu'en 1301. En 1296, son oncle Jean de Castille se proclame roi de Castille sous le nom de Jean Ier mais sera rapidement relégué dans le Léon et contraint d'abdiquer en sa faveur en 1301. Dès lors, il règne personnellement sous des auspices cléments, surtout grâce à l'action de sa régente mère qui aura su, en cette période de troubles, maintenir la légitimité de son fils en s'appuyant sur le peuple (lorsque cela fut nécessaire) contre une partie de la noblesse s'appuyant sur les royaumes chrétiens voisins.\n\nEn 1301, il s'allie au Portugal puis avec l'Aragon. Il repousse les Maures qui avaient conquis ses États, et leur enlève provisoirement Gibraltar, en 1310, et Quesada.\nOn conte qu'ayant fait jeter du haut d'un rocher deux gentilshommes, les frères Carvajal, accusés d'assassinat, ceux-ci, avant d'être précipités, l'ajournèrent à comparaître devant Dieu dans trente jours, et qu'en effet il mourut au bout de ce terme ; d'où viendrait son surnom. Inhumé tout d'abord en la chapelle royale de la cathédrale de Cordoue, son corps sera finalement transféré en l'église collégiale Saint-Hippolyte à Cordoue.\nMarié à Valladolid le 23 janvier 1302 avec Constance de Portugal, fille de Denis Ier de Portugal et d'Isabelle d'Aragon, (née le 3 janvier 1290, morte le 18 novembre 1313 à Sahagún, inhumée à Valladolid). Trois enfants naîtront de cette union:\nÉléonore (1307-1359) reine consort d'Aragon et de Valence\nConstance (1309-1311)\nAlphonse XI de Castille (1311-1350)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Fernando_IV_de_Castela_-_Compendio_de_cr%C3%B3nicas_de_reyes_%28Biblioteca_Nacional_de_Espa%C3%B1a%29.png",
     "regne": true
   },
   {
@@ -298,7 +281,8 @@
     ],
     "type": 2,
     "description": "Contexte : Depuis la prise de Constantinople en 1204, les républiques maritimes italiennes occupent une grande partie de l'ancien espace maritime byzantin. Que ce soit Gênes ou Venise, chacune des cités n'hésite pas à se confronter avec Constantinople et à lui faire concurrence en ce qui concerne les fruits du commerce régional. La chute de l'Empire latin de Constantinople soutenu par Venise entraîne un certain déclassement de celle-ci dont profite Gênes. Ainsi cette dernière ville assure-t-elle à la fois le ravitaillement de l'Empire de nombreuses denrées mais aussi la défense maritime de celui-ci. Toutefois, on note un certain retour en grâce de Venise à partir de 1285. Le traité de 1277 est en effet rétabli. Les Vénitiens bénéficient d'un quartier au sein de la cité impériale et voient leur souveraineté confirmée sur la Crète. La chute de Saint-Jean-d'Acre en 1291 et la fin des États latins d'Orient privent Venise de sa dernière place dans la région. Très vite, elle se tourne vers la mer Noire, monopolisée par les Génois qui se sont implantés dans les anciens territoires byzantins de Crimée\nLa guerre vénéto-byzantine de 1296-1302 est un conflit entre la république de Venise et l'Empire byzantin, venu se greffer sur une guerre opposant Venise et la république de Gênes entre 1294 et 1299. En juillet 1296, quelques jours après qu'un tremblement de terre eut sérieusement endommagé la capitale byzantine, les Vénitiens lancent une attaque contre Constantinople et Galata[39]. Andronic II fait arrêter tous les citoyens vénitiens à titre de représailles mais ne peut empêcher la flotte vénitienne de mettre à sac les habitations génoises et byzantines situées en dehors des murailles. Très vite, Andronic se retrouve pris au piège dans l'escalade des tensions entre Venise et Gênes. Cette dernière réagit en massacrant les nobles vénitiens de Constantinople[40]. En retour, et malgré les explications d'Andronic, Venise envoie 18 navires à Constantinople. Ces derniers exigent une indemnisation et, face au refus des Byzantins, ils brûlent certains bâtiments près des Blachernes, avant de piller les côtes de la mer de Marmara pour constituer des prisonniers et obtenir indirectement l'indemnisation attendue grâce aux rançons. Si la lutte entre Venise et Gênes s'achève en 1299, après la défaite de Venise l'année précédente, la guerre byzantino-vénitienne se prolonge encore jusqu'en 1302, date à laquelle Andronic refuse à nouveau de verser une quelconque indemnité. Les Vénitiens envoient alors une nouvelle flotte ravager les alentours de Constantinople et menacer de tuer tout un groupe de réfugiés en provenance d'Asie mineure pour obtenir une rançon de 4 000 hyperpérion. Dénué de flotte, Andronic doit renoncer à toute forme de résistance et, en septembre 1302, il s'engage dans un traité à verser la somme demandée. En 1310, ce même traité est prorogé pour une durée de douze ans. Paradoxalement, Gênes profite de ces événements pour accroître l'autonomie de sa colonie, Galata en y construisant une muraille. Andronic II reconnaît les droits de cette cité dans plusieurs chartes successives mais, à la différence de son prédécesseur, il n'a plus les moyens de faire reconnaître la suzeraineté byzantine sur Galata.\n\nOutre l'action néfaste des républiques maritimes, Andronic subit aussi les agissements de pirates italiens qui profitent de la disparition de marine byzantine pour se tailler des fiefs dans la région de la mer Égée. Les frères Zaccaria étendent leur domaine autour de Phocée et bâtissent une nouvelle ville (Nea Phokaia), tandis que Benedetto Zaccaria s'empare de l'île de Chios en 1304 au prétexte qu'elle est dénuée de tout moyen de défense contre les Turcs[41]. C'est le début d'une période de domination italienne sur l'île qui dure jusqu'en 1329. Domenico Cattaneo agit de la même façon à Lesbos. Enfin, dernier exemple de l'instabilité des alliés italiens de l'Empire : Andrea Morisco, alors au service d'Andronic II, s'empare de l'île de Ténédos après avoir combattu les Vénitiens et les Turcs.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/AyasMarcoPolo.JPG",
+    "legende": "Miniature représentant l'emporium de Laiazzo autour de l'affrontement entre les Génois et les Vénitiens.",
     "sources": "Wikipedia"
   },
   {
@@ -327,7 +311,8 @@
     ],
     "type": 1,
     "description": "Élu roi des Romains en 1298, il est le deuxième souverain du Saint-Empire issu de la dynastie des Habsbourg. Son règne fut brutalement interrompu par son assassinat par son neveu Jean de Souabe le 1er mai 1308.\n\nAlbert s'avère un souverain capable : il se garantit la paix avec Philippe IV le Bel par mariage et parvint à un accord avec le roi Venceslas II de Bohême. Il n'obtint l'approbation papale qu'en 1303, non sans d'importantes concessions, notamment des abandons de souveraineté en Italie.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Habsburger_BSB_Cod_icon_330_fol_01r.jpg/960px-Habsburger_BSB_Cod_icon_330_fol_01r.jpg",
+    "legende": "Portraits des Habsbourg du XIVe siècle d'après les vitraux de Königsfelden/Aargau - BSB Cod.icon. 330 [S.l.] Nord de la Suisse (Berne?) vers 1560 fol. 01r : Albrecht Ier, roi du Saint-Empire romain germanique",
     "regne": true,
     "sources": "Wikipedia"
   },
@@ -341,7 +326,8 @@
     ],
     "type": 1,
     "description": "Le prénom Osman étant emprunté à l'arabe Uṯmān – initialement et pendant longtemps francisé en Ottoman Ier  forme qui est à l'origine de l'adjectif  \"ottoman\".\nIl profita de la faiblesse des empires seldjoukide et byzantin sur leurs frontières respectives pour établir et renforcer son émirat. Son État, à l’origine une petite principauté turkmène d'Anatolie occidentale[8] pendant la vie d'Osman, s'est transformé en un empire transcontinental dans les siècles qui suivirent sa mort[9], qui a existé jusqu'à peu de temps après la fin de la Première Guerre mondiale. En raison de la rareté des sources historiques datant de sa vie, très peu d'informations factuelles sur Osman ont survécu. Pas une seule source écrite ne survit du règne d'Osman[10]. Les Ottomans n'ont enregistré l'histoire de la vie d'Osman qu'au XVe siècle, plus de cent ans après sa mort[11]. Pour cette raison, les historiens trouvent qu'il est très difficile de faire la différence entre les faits et les mythes dans les nombreuses histoires racontées à son sujet[12]. Des historiens comme Colin Imber sont même allés jusqu'à qualifier la période de la vie d'Osman comme un « trou noir »",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Osman_Gazi2.jpg/960px-Osman_Gazi2.jpg",
+    "legende": "Portrait d'Osman Ier par Konstantin Kapıdağlı. Fin 18e",
     "regne": true
   },
   {
@@ -427,7 +413,9 @@
       "Pologne"
     ],
     "type": 1,
-    "image": "",
+    "description": "Prince de la dynastie des Přemyslides, le fils du roi Ottokar II de Bohême et de Cunégonde de Slavonie. L'avant-dernier souverain de la dynastie, il est roi de Bohême de 1278 et roi de Pologne de 1300 à sa mort.\n, né en 1271, est le fils du roi Ottokar II Přemysl. Son enfance est marquée par la chute brutale de son père, tué lors de la bataille de Marchfeld face à Rodolphe de Habsbourg. Encore enfant, Venceslas est placé sous régence, puis emprisonné plusieurs années, avant d’être libéré en 1283 et de reprendre progressivement le pouvoir en Bohême.\n\nDevenu majeur, il consolide son autorité en éliminant son ancien tuteur Záviš de Falkenstein et mène une politique d’expansion vers le nord, notamment en Silésie et en Pologne. Il renonce en revanche aux territoires alpins de son père. Grâce à des alliances et à l’appui des élites locales, il étend son influence sur la Petite-Pologne et affaiblit ses rivaux, dont Ladislas Ier le Bref.\n\nÀ partir de 1291, Venceslas s’impose progressivement en Pologne, jusqu’à être couronné roi en 1300. Il parvient alors à réunifier une grande partie du territoire polonais et renforce sa puissance en Europe centrale. Il tente également d’étendre l’influence de sa dynastie en Hongrie en y faisant couronner son fils.\n\nSon règne suscite cependant des oppositions, notamment de la part du pape Boniface VIII et de Albert Ier de Habsbourg. Affaibli par la maladie, il doit renoncer à certaines conquêtes à la fin de sa vie.\n\nSur le plan intérieur, Venceslas mène une politique de centralisation, développe les villes, réforme la monnaie et organise l’exploitation minière. Il meurt en 1305 de la tuberculose, laissant un royaume puissant mais contesté.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg/960px-Codex_Manesse_Wenzel_II._von_B%C3%B6hmen.jpg",
+    "legende": "Codex Manesse, UB Heidelberg, Cod. Pal. germ. 848, fol. 10r, König Wenzel von Böhmen (= Vaclav II.)",
     "regne": true
   },
   {
@@ -712,6 +700,7 @@
     "description": "Les milices flamandes écrasent la chevalerie française à Courtrai. Cette défaite symbolique marque un tournant : pour la première fois, une armée de piétons bourgeois vainc la cavalerie noble, annonçant la crise du système féodal.\nla bataille opposa opposa, le 11 juillet 1302, près de Courtrai, l'armée du roi de France Philippe le Bel surnommée les leliaerts (en français : les hommes du lys) aux milices communales flamandes surnommées les klauwaerts (en français : les hommes de la griffe du lion)\nAprès un premier échange de flèches et une charge de fantassins, l’armée du roi du France prend l’avantage dans un premier temps, entraînant la retraite des Flamands. Certains de leur victoire, les chevaliers français s’élancent alors avec précipitation et chutent dans des fossés où étaient cachés une partie des troupes flamandes.\nEmbourbés et dans l’impossibilité de manœuvrer, les chevaliers français sont alors massacrés par les combattants flamands.\nAu cours du massacre, les milices flamandes enlèvent aux chevaliers leurs éperons d'or afin de les ramener comme trophée, ce qui donna son nom à la bataille.\nLes combattants flamands, peu au fait des us et coutumes de la guerre, massacrèrent les chevaliers à terre sans chercher à faire de prisonniers. Périrent ainsi dans la bataille un grand nombre de fantassins et chevaliers français dont le comte Robert d'Artois, Raoul de Nesle et son frère Guy de Nesle ; Jean de Burlats, les comtes d'Eu et d'Aumale et le chancelier Pierre Flote. Les pertes furent également très lourdes parmi leurs alliés : Jean Sans-Merci du Hainaut ; Godefroid de Brabant et son fils Jean, sire de Vierzon et châtelain de Tournai, ainsi que pratiquement tous les Brabançons, Au total, le nombre de pertes du côté français dut largement dépasser le millier de morts puisque,\nDeux ans plus tard, Philippe le Bel  prit néanmoins sa revanche sur mer à la bataille de Zierikzee (10 et 11 août 1304) et sur terre à Mons-en-Pévèle (18 août). La sagesse lui fit alors préférer une paix négociée, mais tout à son avantage, et la Flandre retourna, après cette revanche, sous l'autorité royale (effaçant ainsi, pour plusieurs décennies, la défaite de 1302).\nLors de la bataille de Roosebeke en 1382, les Français menés par le roi Charles VI récupérèrent les éperons perdus lors de la bataille de Courtrai",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bataille_de_Courtrai_%281302%29_-_Fran%C3%A7ais_2813.png/960px-Bataille_de_Courtrai_%281302%29_-_Fran%C3%A7ais_2813.png",
     "legende": "iniature extraite des Grandes Chroniques de France de Charles V. Fin XIVe siècle. BnF.",
+    "video": "https://www.youtube.com/watch?v=p2_GI3g1Ls4",
     "sources": "Giovanni Villani, Nuova Cronica"
   },
   {
@@ -740,7 +729,8 @@
     ],
     "type": 2,
     "description": "Ce traité marque la fin de la guerre des Vêpres commencée vingt ans plus tôt en 1282, opposant la maison d'Aragon et les Angevins de Naples pour le contrôle de la Sicile.\nLe traité établit que Frédéric III garde la Sicile à titre viager sous le titre de roi de Trinacrie. Pour affermir la paix, Frédéric III épouse Éléonore d'Anjou. Le chroniqueur Giovanni Villani conclut ironiquement : Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix.\nLa guerre des Vêpres Siciliennes se termine par le traité de paix de Caltabellotta, signé le 31 août 1302, probablement au château de Pizzo. Modifié par le pape le 12 mai 1303, ce texte prévoit que Frédéric III se maintienne au pouvoir en Sicile avec le titre de roi de Trinacrie jusqu'à sa mort, après laquelle l'île reviendra aux Anjou. Frédéric doit par ailleurs épouser Éléonore, la troisième fille de Charles II. En échange, les Aragonais récupèrent la Corse ou la Sardaigne, ou d'autres territoires, ou une forte somme d'argent. Charles II prend le titre de roi de Sicile (Rex Siciliae, ducatus Apuliae et principatus Capuae), tout en renonçant temporairement à l'île mais en conservant la Campanie, la Calabre, les Pouilles et la Basilicate, en obtenant la reconnaissance de facto du royaume de Naples.La paix de Caltabellotta, qui fut signée le 31 août 1302[1], est un traité intervenant dans la lutte opposant la maison d'Aragon à la maison d'Anjou, pour le contrôle de la Sicile insulaire. Il est conclu à la suite de l'expédition de Charles de Valois, au service de Charles II d'Anjou, contre Frédéric de Sicile en 1302. Ce traité marque la fin de la Guerre des Vêpres commencée vingt ans plus tôt en 1282. Depuis 1282, Aragon et Angevins de Naples s'affrontent dans le cadre de guerre des Vêpres. Le 30 mars 1282 la population de Palerme s'est révoltée contre l'autorité de Charles d'Anjou, maître de l'Italie du Sud depuis 1266, en tant que roi de Sicile investi par le pape. Pierre III d'Aragon prend alors le contrôle de l'île de Sicile au nom de ses enfants, dont la mère est Constance de Hohenstaufen (dynastie impériale en possession du royaume de Sicile avant Charles d'Anjou. S'ouvre alors une guerre ouverte entre la royauté angevine et la couronne d'Aragon pour la maîtrise de l'île. Se sentant menacé par la présence aragonaise proche des Etats pontificaux, le pape Martin IV vient en aide à son vassal en excommuniant le roi Pierre III d'Aragon. Par l'intermédiaire du cardinal légat Jean Cholet, la papauté offre à Philippe III de France une croisade, pour placer Charles de Valois, fils cadet de Philippe, à la couronne d'Aragon, en lieu et place de Pierre III[2]. La campagne militaire, entreprise en 1285, s'avère cependant un cuisant échec et n'aboutit pas.En 1301, Charles de Valois épouse Catherine de Courtenay, impératrice titulaire de Constantinople, et projette donc de mener une croisade pour récupérer l'Empire byzantin au nom de sa femme. Le pape Boniface VIII, qui a fourni les dispenses pour ce mariage, y est favorable mais soumet cette croisade à une expédition préalable en Italie, son objectif principal est de reprendre là où Jacques II avait échoué : la reconquête de la Sicile. Lors de cette expédition, Charles de Valois mate notamment les Gibelins et Guelfes Blancs en Toscane à la demande du pape. Il poursuit ensuite son voyage plus au Sud pour aller servir Charles II et tenter de reprendre le contrôle de l'île de Sicile que Frédéric n'a finalement jamais abandonnée. Charles de Valois arrive en mai 1302 à Naples. Charles de Valois obtient le droit de traiter avec les rebelles au nom du roi de Naples. Un appel aux armes est formé dans le royaume pour constituer une armée de 3 000 cavaliers et 20 000 piétons sous les ordres de Charles de Valois et Robert de Calabre qui occupe également une place majeure dans l'expédition Charles de Valois qui avait pourtant fait ses preuves lors des guerres de Gascogne et de Flandre, ne parvient à aucun résultat en Sicile. Les Angevins et Français parviennent rapidement à prendre Termes et pillent les vallées de l'Ouest sicilien (Val de Polizzi et du Val de Mazzara). Cependant la campagne s'enlise rapidement : certaines villes comme Palerme ou Sciacca, pourtant indiquée comme la plus petite ville de l'île par le chroniqueur Muntaner, résistent. Charles de Valois, qui plus est, peine à s'imposer comme chef de l'armée, il y a d'ailleurs quelques tensions entre Italiens, Provençaux et Français. Frédéric qui a bien saisi son infériorité face aux nombreuses troupes du capétien, préfère éviter les batailles rangées et privilégier la guérilla (avec les Almogavres) . La guerre est épuisante pour les deux côtés[Un évènement amène Charles de Valois à mettre définitivement fin aux opérations : le 11 juillet 1302 a lieu en Flandre la bataille de Courtrai qui annihile une grande partie de la chevalerie française. En outre, la soudaine montée des tensions entre son frère Philippe le Bel et Boniface VIII rend sa position délicate. Le retour en France de Charles de Valois s'avère alors nécessaire. Il négocie donc à la hâte une paix avec Frédéric d'Aragon : le traité de Caltabellota. Frédéric III garde la Sicile, mais à titre viager ; en outre, il est contraint de prendre le titre de roi de Trinacrie, afin de laisser aux Angevins la seule prééminence du titre de roi de Sicile. La possession de la Sicile étant viagère, l'île doit revenir à la dynastie angevine à la mort de Frédéric III. En compensation, Frédéric se voit promettre le soutien à la conquête de Chypre pour y voir régner sa descendance[6].Charles II d’Ajou prend le titre de roi de Sicile (Rex Siciliae, ducatus Apuliae et principatus Capuae), tout en renonçant temporairement à l'île mais en conservant la Campanie, la Calabre, les Pouilles et la Basilicate, en obtenant la reconnaissance de facto du royaume de Naples.\nPour corroborer la paix, Frédéric III épouse Eleonore d'Anjou, fille du roi Charles II de Naples. Ce projet d'union des deux maisons avait déjà été envisagé par Jacques II d'Aragon quelques années plus tôt[7].Parallèlement, Charles de Valois conclue un second traité avec Frédéric III. Ce dernier s'engage notamment à mettre à disposition du prince français une flotte pour l'aider à la conquête de Constantinople, empire sur lequel son mariage avec Catherine de Courtenay lui-donne des prétentions.\nLe chroniqueur italien Giovanni Villani conclut assez ironiquement l'expédition de Charles de Valois en Italie : « Charles vint en Toscane pour faire la paix et la laissa en guerre, il alla en Sicile faire la guerre et il y fit une honteuse paix » À la suite de cette paix, Roger de Flor et les Almogavres, qui avaient combattu avec le roi Frédéric, se retrouvèrent sans emploi et offrirent leurs services à Andronic II Paléologue. Ils forment ainsi la Compagnie Catalane, un groupe de mercenaires assez autonome, actif dans la mer Egée.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Caltabellotta%2C_Sicilia_giugno_2011.jpg/1280px-Caltabellotta%2C_Sicilia_giugno_2011.jpg",
+    "legende": "Caltabellotta, en juin 2011",
     "sources": "Wikipedia"
   },
   {
@@ -755,7 +745,7 @@
     ],
     "type": 2,
     "description": "John Comyn reste seul Gardien à l'automne 1302, quand John de Soules part en France avec une grande ambassade. Au début de 1303 la suprématie de John Comyn dans la politique nationale de l'Écosse est de nouveau totale, depuis le 24 février il est « chef et capitaine » de l'armée écossaise qui défait les Anglais à la bataille de Roslin. \nLa cruelle exécution de William Wallace le 23 août 1305 soulève une vague d'indignation en Écosse contre la suzeraineté anglaise. Elle est à l'origine du meurtre de John III Comyn par Robert Bruce dans l'église des franciscains de Dumfries le 10 février 1306 et du couronnement par ses partisans de Robert Ier Bruce comme roi à Scone six semaines plus tard.",
-    "image": ""
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Jan_Comijn.svg/960px-Jan_Comijn.svg.png"
   },
   {
     "id": 72,
@@ -796,6 +786,7 @@
     "description": "Hiver rude. Selon Christian Pfister, c'est le début du \"Petit âge glaciaire\" (PAG) qui perdure jusqu'en 1860, caractérisé par une avancée des glaciers européens, des températures hivernales très froides, non constantes mais fréquentes, des étés souvent humides et frais. Sécheresse en été ; la Loire, le Rhin, la Seine et le Danube sont à sec.\nHiver 1305-1306 très rude, au point de faire geler le Rhin, suivi d'un printemps et été sec, avec forte sècheresse au printemps et en l'été en France selon Guillaume de Nangis.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/2000_Year_Temperature_Comparison_fr.png",
     "legende": "La chronologie des oscillations du petit âge glaciaire varie selon les études, mais toutes s'accordent sur une baisse générale de la température moyenne entre les années 1303 et 1860",
+    "video": "https://www.youtube.com/watch?v=uhvOdL6KaD0",
     "sources": "Wikipedia"
   },
   {
@@ -838,6 +829,7 @@
     "description": "les Almogavres, des compagnies de routiers catalans, aragonais et navarrais débauchés après la paix de Catalbellotta (1302), arrivent à Constantinople ; Andronic II Paléologue les embauche contre les Turcs. L'Empire byzantin tombe sous leur main jusqu'en 1311. \nétaient des soldats mercenaires ou miliciens au service de la couronne d'Aragon, majoritairement catalans et aragonais, constitués en compagnies qui avaient vu le jour dans la péninsule Ibérique à l’occasion des guerres contre la présence islamique en Espagne, entre le XIIIe et le XVe siècle.\nLa Reconquête achevée, ils participèrent ensuite à la guerre de Sicile, au service du roi Frédéric II. Ils étaient réputés pour leur habileté et leur agressivité au combat. En terre ennemie, ils vivaient de pillage, mais en temps de paix ils causaient des problèmes en s’en prenant aux habitants des campagnes. De l’arabe mugâwir, désignant celui qui mène une incursion en terre ennemie, du verbe gâwar, réaliser une expédition armée décisive, autrement dit des commandos avant la lettre. On peut trouver en français la forme Almogavare mais elle est moins conforme à la prononciation du mot catalan. Les Almogavres furent donc considérés comme l'une des meilleures infanteries chrétiennes de leur époque. Ils sont reconnus par l’historiographie militaire comme les précurseurs de la guerre de harcèlement ou guérilla.\nÀ une époque où la chevalerie était l’arme préférée des armées et dans laquelle l'idéal chevaleresque était le modèle du guerrier, les Almogavres utilisaient le terrain à leur avantage, combattaient de nuit, se déplaçaient à pied et ne portaient pas de cuirasse, ce qui les rendait très mobiles.\nVoici la célèbre description des Almogavres que l’on trouve sous la plume de Bernat Desclot dans sa chronique intitulée Livre du roi Pierre d'Aragon et de ses prédécesseurs, plus connue sous le titre de La Chronique de Desclot[. \n« Ces gens que l'on appelle Almogavres ne vivent que par le métier des armes. Ils n'habitent ni les villes ni les bourgs, mais dans les montagnes et les bois, et ils guerroient tous les jours contre les Sarrasins: ils pénètrent chez eux une journée ou deux, pillant et s'emparant des personnes, puis ils s'en retournent avec leurs nombreux prisonniers sarrasins et beaucoup de butin divers. Ils vivent grâce à ces prises et supportent des conditions d'existence très dures, que le commun des mortels ne saurait endurer. Ils peuvent parfaitement rester deux jours sans manger s'ils ne peuvent faire autrement, ou alors ils peuvent se nourrir sans problème de l'herbe des champs. Ils sont guidés par des commandants éclaireurs (adalils) qui connaissent le pays et les chemins. Ils ne sont vêtus, été comme hiver, que d'une gonelle, ou chemise, très courte, et portent aux jambes des chausses fort étroites en cuir et aux pieds de grosses chaussures en peau. Ils ont un bon coutelas et une bonne ceinture d'où pend un fusil à aiguiser. Ils portent chacun une bonne lance et deux dards, ainsi qu'une panetière en cuir au dos, dans laquelle ils transportent leur pain pour deux ou trois jours. Ils sont forts et rapides, tant dans la retraite que dans la poursuite; ce sont des Catalans, des Aragonais et des Sarrasins. »  Le premier témoignage de leur existence dont nous disposions remonte au XIIIe siècle, lorsqu'en groupes d'une douzaine d'hommes ils se livraient à des incursions d'un ou deux jours en terre sous domination musulmane. Ils avançaient sous la conduite d'un capitaine (almugatèn), et lorsqu'ils devaient livrer une attaque plus importante, ils recevaient leurs ordres d'un commandant (adalil) désigné par le Roi. Ils subsistaient essentiellement du butin qu'ils faisaient, comme cela a été dit par Desclot.\n\nLe nom qu'on leur donnait, d'origine arabe, montre de façon claire que leur organisation militaire était empruntée au vocabulaire de la guerre islamique. Ceci est corroboré par les noms que portaient leurs chefs, tant adalil (de l'arabe ad-dalil, le guide, l'indice, la preuve) que almugatèn (arabe al-mucaddem, celui qui dirige).\n\nIls formaient une armée importante : Pierre (Pere) le Grand (1276-1285) en prit une quinzaine de milliers lors de ses expéditions en Afrique et en Sicile, sous le commandement de Roger de Lauria, ou Loria, (Llúria). Nombre d'entre eux restèrent en Sicile, pour défendre le fils de Pierre, Frédéric (Fadric) II, en lutte contre les Angevins. Mais après la paix de Caltabellotta (1302), ils n'eurent plus rien à faire sur l'île.\n\nC'est alors que fut créée la Compagnie catalane d'Orient, sous les ordres de Roger de Flor. Leur cri de guerre, « Debout, fers ! Debout ! » (Desperta, ferro! Desperta!), qu'ils poussaient en frappant les pierres avec les pointes de leurs lances, dans le but d’impressionner leurs ennemis, avant de se lancer dans la bataille est resté célèbre. Le comte de Brienne se serait écrié à la vue des étincelles et au vacarme ainsi produit : « Nous sommes tombés sur des démons ! », ainsi que le relate Ramon Muntaner au chapitre 191 de sa Chronique. Après l'assassinat de Roger de Flor à Andrinople, ils eurent à se défendre contre les Grecs et leurs alliés dans leurs quartiers de Gallipoli où leurs ennemis étaient venus les attaquer. Cet épisode héroïque est raconté par Muntaner, qui se trouvait là en tant que trésorier de la Compagnie et qui prit une part active aux combats. Puis les Almogavres dévastèrent pendant deux ans l'Empire en guise de représailles, se livrant à la célèbre Vengeance catalane.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Almogavers-catalans.jpg",
     "legende": "Soldats de Jacques Ier le Conquérant. Artiste inconnu. Jacques fut roi d'Aragon au XIIIe siècle. Ancien palais royal de Barcelone",
+    "video": "https://www.youtube.com/watch?v=yvJNO1hKtWo",
     "sources": "https://fr.wikipedia.org/wiki/Almogavres"
   },
   {
@@ -986,6 +978,7 @@
     "description": "La bataille de Mons-en-Pévèle opposa les troupes de Philippe le Bel aux troupes flamandes le 18 août 1304. Elle fut remportée par Philippe le Bel.\nCette bataille est immortalisée par un des tableaux de la Galerie des Batailles du château de Versailles, où figure une œuvre peinte par Charles-Philippe Larivière, sur la demande de Louis-Philippe Ier, intitulée Bataille de Mons-en-Pévèle. Durant l'année 1303, le sud de la Flandre et la frontière de l'Artois connaissent de nombreuses chevauchées et des coups de main meurtriers. Le roi constitue un trésor de guerre afin de disposer de vaisseaux et de troupes qui seraient en mesure d'assouvir sa vengeance. Les 10 et 11 août 1304, dans les eaux du sud de la Hollande, la flotte royale, commandée par l'amiral Rainier Grimaldi, vainc celle des Flamands (Bataille de Zierikzee). Philippe le Bel apprend la nouvelle alors qu'il se trouve déjà en Flandre. Il a quitté Arras le 29 juillet afin de rejoindre Tournai par le Hainaut, pour se rabattre ensuite en direction de Lille, son principal objectif.\nNon loin d'Orchies, les deux armées se rencontrent, aux alentours du village de Mons-en-Pévèle (entre Lille et Douai, dominé par une colline. Les historiens estiment qu'environ 15 000 hommes se trouvent là, dont un peu plus de Flamands que de Français\nL'armée de Philippe IV le Bel fait de nombreuses victimes chez les Flamands grâce à des machines de jet ; néanmoins ceux-ci réussissent à en détruire quatre sur cinq. La fatigue est générale, une pause s'instaure, chacun étant persuadé que les combats ne reprendront que le lendemain. Deux contingents flamands, épuisés, décident de quitter le champ de bataille et, sous la conduite de Jean de Namur, vont se réfugier à Lille. À ce moment, les Flamands se concertent et deux actions sont entreprises. La première, menée par le petit-fils du comte, Guillaume de Juliers, réussit à bousculer l'armée royale, mais la cavalerie parvient à encercler les assaillants et Juliers est tué. Le second assaut, celui des Brugeois, manque de tourner au drame pour le roi : ils parviennent près de lui alors qu'il n'est entouré que d'une cinquantaine de ses hommes, et il doit se battre comme un forcené pour écarter le mortel danger qui le menace : c'est le thème du tableau du château de Versailles. Ici également, la cavalerie sauve la situation, en repoussant les Flamands.\nCeux-ci se regroupent sur le mont puis repartent vers Lille, abandonnant le champ de bataille et laissant ainsi la victoire au roi. La lourde défaite de la Bataille de Courtrai (1302) (nommée « Bataille des Éperons d'Or » en Belgique) était ainsi compensée.\nLe siège de Lille dure un mois, puis la ville capitule le 25 septembre. La ville de Douai se rend le 26 septembre. Lille, ses environs et la Flandre wallonne reviennent sous contrôle royal.\nDes négociations aboutissent, en juin 1305, au traité d'Athis-sur-Orge. La Flandre sauvegarde son autonomie et conserve une partie de son territoire mais perd la Flandre wallonne et se trouve condamnée à de fortes amendes. Le traité est révisé en 1310, en 1312 puis en 1320. Robert de Béthune, qui a succédé à son père, Gui de Dampierre - mort en captivité en 1305 -, renonce aux châtellenies stratégiques de Lille, Douai et Orchies. Elles passent sous domination bourguignonne en 1369, mais restent sous la suzeraineté française jusqu'au règne de François Ier.\nPhilippe IV le Bel attribua cette victoire à la protection de la Vierge et dans la nef de Notre-Dame de Paris, accolée au premier pilier oriental côté sud, il fit dresser une statue équestre en bois en ex-voto face à l'autel de Marie",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Bataille-de-Mons-en-P%C3%A9v%C3%A8le.jpg",
     "legende": "La bataille de Mons-en-Pévèle, par Charles Philippe Larivière. pour la Galeries Batailles du château de  Versailles",
+    "video": "https://www.youtube.com/watch?v=Pp6oyPdzuUs",
     "sources": "https://fr.wikipedia.org/wiki/Bataille_de_Mons-en-P%C3%A9v%C3%A8le"
   },
   {
@@ -1014,6 +1007,7 @@
     "description": "Maître Eckhart rédige le livre de la consolation divine (aussi connu sous le titre latin \"Benedictus Deus\") . Ce dominicain allemand est les meilleur représentant du mysticisme chrétien avant St Jean de la Croix Ce texte s’inscrit dans une tradition philosophique et mystique ancienne, héritière des stoïciens, mais porte aussi l’influence de contemporains tels que Dante , la pensée béguinale ou le consolamentum des Cathares.(Ce rite cathare visait une forme de purification et de détachement du monde, un thème qui résonne avec la pensée mystique d’Eckhart.) Cette influence se manifeste dans l’accent mis sur le détachement intérieur, la purification de l’âme et la recherche d’une union directe avec Dieu, sans intermédiaire ni attachement aux biens matériels ou terrestres. un acte ultime de renoncement au monde matériel et aux péchés, qui imposait une vie de pureté et de détachement total. Cette idée rejoint fortement la notion eckhartienne de \"Gelassenheit\", un détachement radical de tout ce qui n’est pas Dieu, vécu comme un \"dessaisissement\" ou un vide intérieur que l’âme doit atteindre pour accueillir pleinement Dieu. Le consolamentum invitait à vider l’âme de tout élément impur pour permettre à l’esprit divin d’y habiter pleinement. De façon similaire, Eckhart décrit un processus ontologique d’annihilation (\"Entbildung\") de ce qui n’est pas Dieu pour permettre la \"deiformation\", c’est-à-dire la divinisation de l’âme. Cette purification ultime mène à une union intime et mystique avec Dieu, en vue de la théosis ou divinisation de l’homme.Ainsi, les deux courants partagent une vision de la transformation intérieure par le renoncement, la purification et la réunion avec le divin,La Divine Consolation\" est l’un des derniers traités de Maître Eckhart. Il vise à offrir une consolation spirituelle profonde en affirmant que tout malheur porte en soi un bonheur caché et que toute perte n’est jamais une perte totale. Ce livre témoigne de la pensée mystique d’Eckhart, qui explore la relation entre l’âme et Dieu, et cherche à guider l’homme vers une union intérieure divine, même dans la souffrance et la perte. La grandeur de cette œuvre réside aussi dans sa dimension philosophique et spirituelle inspirée à la fois par la tradition chrétienne et des influences plus larges. En 1329 un an après sa mort (68)  est signée la bulle rejetant ces propositions. Mais aucune sanction n'est demandée, pas même une réécriture. Son œuvre, parfois en raison d'une hostilité envers le catholicisme romain, parfois pour sa qualité a eu une influence considérable sur la pensée chrétienne et il est aujourd'hui considéré par les catholiques comme un théologien catholique «orthodoxe»",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Meister_Eckhart_base_copie.jpg/500px-Meister_Eckhart_base_copie.jpg",
     "legende": "Représentation de Maître Eckhart par Andrea di Bonaiuto, détail de la fresque Via Veritas dans la chapelle des Espagnols de Santa Maria Novella, Florence, v. 1365.",
+    "video": "https://www.youtube.com/watch?v=y_aJpTS-jfU",
     "sources": "https://fr.wikipedia.org/wiki/Ma%C3%AEtre_Eckhart"
   },
   {
@@ -1042,6 +1036,7 @@
     "description": "En 1303 Andronic II engage les mercenaires de la Grande Compagnie des Catalans (environ 6 500 hommes) menés par Roger de Flor pour combattre les Turcs en Asie Mineure. Cette troupe se retrouve sans mission à la suite de la paix signée entre Frédéric II de Sicile et Charles II d'Anjou en 13021304-1305\tCampagnes des Catalans en Asie Mineure Les Catalans remportent quelques victoires initiales contre les Turcs, mais leurs exactions et leur indiscipline créent des tensions avec la population et les autorités byzantines. Roger de Flor est assez vite informé de la situation de plus en plus désastreuse de l'Empire byzantin et il offre donc ses services à Andronic qui accepte toutes les conditions des Catalans. Ces derniers arrivent à Constantinople en septembre 1303 et ils sont vite envoyés à Cyzique pour préparer leur campagne contre les Turcs, accompagnés par un petit contingent byzantin dirigé par Maroulès[58]. Leur offensive est fulgurante et très efficace, ce qui démontre que la puissance militaire des peuples turcs est loin d'être irrésistible et peine à s'opposer à une force organisée[59]. Mais, à la différence d'autres mercenaires, la compagnie catalane refuse d'obéir aux chefs byzantins et n'hésitent pas à piller les populations grecques ou turques pour compléter leur butin. De surcroît, leurs succès restent sans lendemain, bien que Roger de Flor marche jusqu'aux frontières du royaume arménien de Cilicie[Éphèse est cependant reprise par les Turcs, peu après le départ des Catalans. Assez vite, les relations entre les Grecs et les mercenaires se dégradent et, lorsque Roger de Flor revient à Magnésie récupérer son butin, il trouve les portes de la ville fermées[61]. Alors qu'il s'apprête à mettre le siège devant la cité, il est appelé par Andronic II pour combattre la menace bulgare[60]. Menés par Teodor Svetoslav, qui s'est débarrassé de la tutelle mongole, les Bulgares ont envahi une partie du territoire impérial. Après une première défaite, Michel IX réussit à l'emporter contre les Bulgares mais sans pour autant faire disparaître la menace[62]. Toutefois, les troupes de Michel IX refusent de combattre aux côtés des Catalans tandis que ces derniers exigent de récupérer leur butin avant de repartir combattre les Turcs. Finalement, un accord est trouvé en 1305 et Roger de Flor accepte de repasser en Asie mineure, mais il meurt assassiné par des Alains alors qu'il rend visite à Michel IX, peu avant son départ. Cet incident a des répercussions considérables car les Catalans quittent le service de l'empereur et se lancent dans une entreprise de pillage de la Thrace et font de Gallipoli une terre espagnole dirigée par Berenguer d'Entença. Michel IX est impuissant à les vaincre[63] et les Catalans réussissent à faire passer 2 000 Turcs en Europe, qui s'associent à leur pillage[64]. La Thrace devient très vite une terre dévastée et les Catalans finissent en 1308 par quitter cette terre devenue impuissante à les nourrir[65].1305  en même temps que cent trente chefs almogavresMassacre des Aragonais et des Catalans à Constantinople à la suite de la crise almugavare. Le nom qu'on leur donnait, d'origine arabe, montre de façon claire que leur organisation militaire était empruntée au vocabulaire de la guerre islamique. Ceci est corroboré par les noms que portaient leurs chefs, tant adalil (de l'arabe ad-dalil, le guide, l'indice, la preuve) que almugatèn (arabe al-mucaddem, celui qui dirige).\nIls formaient une armée importante : Pierre (Pere) le Grand (1276-1285) en prit une quinzaine de milliers lors de ses expéditions en Afrique et en Sicile, sous le commandement de Roger de Lauria, ou Loria, (Llúria). Nombre d'entre eux restèrent en Sicile, pour défendre le fils de Pierre, Frédéric (Fadric) II, en lutte contre les Angevins. Mais après la Paix de Caltabellotta (1302), ils n'eurent plus rien à faire sur l'île.\nC'est alors que fut créée la Compagnie catalane d'Orient, sous les ordres de Roger de Flor. Leur cri de guerre, « Debout, fers ! Debout ! » (Desperta, ferro! Desperta!), qu'ils poussaient en frappant les pierres avec les pointes de leurs lances, dans le but d’impressionner leurs ennemis, avant de se lancer dans la bataille est resté célèbre. Le comte de Brienne se serait écrié à la vue des étincelles et au vacarme ainsi produit : « Nous sommes tombés sur des démons ! », ainsi que le relate Ramon Muntaner au chapitre 191 de sa Chronique. Après l'assassinat de Roger de Flor à Andrinople, ils eurent à se défendre contre les Grecs et leurs alliés dans leurs quartiers de Gallipoli où leurs ennemis étaient venus les attaquer. Cet épisode héroïque est raconté par Muntaner, qui se trouvait là en tant que trésorier de la Compagnie et qui prit une part active aux combats. Puis les Almogavres dévastèrent pendant deux ans l'Empire en guise de représailles, se livrant à la célèbre Vengeance catalane . 7 juin : victoire des Almugavars de Gallipoli sur les Byzantins. N’ayant reçu aucune solde de Byzance, les Almugavars, basés à Gallipoli, dirigés par Berenguer d'Entença à la mort de Roger de Flor, entrent dans une longue révolte qui ruine l’empire byzantin (fin en 1311)La Compagnie s'établit en 1310 à Athènes, où les avait appelés le comte Gautier V de Brienne. La présence catalane sur les terres byzantines réactive les projets angevins de conquête de Constantinople. En se remariant avec Catherine de Courtenay, Charles de Valois reprend l'héritage de l'Empire latin de Constantinople. Mais, de nouveau, cette menace n'est qu'apparente. Pourtant, en 1306, Charles de Valois s'allie avec Venise qui ne peut voir que d'un bon œil un rétablissement des Latins à Constantinople. Cela lui permettrait de retrouver sa domination économique sur la région. Clément V le soutient dans ses projets et excommunie Andronic II en 1307[66]. En 1308, malgré la mort de sa femme, c'est avec le serbe Stefan Uroš II Milutin que Charles de Valois conclut une alliance. Enfin, certains dignitaires byzantins se disent prêts à soutenir les Angevins. Les Francs cherchent alors le soutien de la compagnie catalane qui domine la région de Cassandréia. Toutefois, malgré un accord en 1308, les Catalans décident de piller la Thessalie dirigée par Jean II Doukas. Après un an de pillages, les Catalans se dirigent vers le sud de la Grèce avant de vaincre en 1311 les troupes du duché d'Athènes dont elle prend le contrôle pour 80 ans[67]. Cette défection des Catalans entrave l'action angevine dont le projet de restauration d'un Empire latin à Constantinople devient de plus en plus illusoire.\nLe passage des Catalans laisse l'Empire byzantin ruiné. Il n'a pas permis la reconquête de l'Asie mineure car les Turcs reprennent leurs conquêtes dès le départ des Catalans, tandis que les Byzantins se résignent, en 1307, à céder les villes prises par les Bulgares (Mesembria, Anchialos, etc.). La province de la Thrace n'est plus qu'un « désert scythe » pour reprendre l'expression des historiens byzantins, tandis que les finances sont à sec. On estime qu'Andronic a donné près d'un million d'hyperpérion aux Catalans, soit bien plus que le revenu annuel de l'Empire byzantin[68]. Face à de telles dépenses, la monnaie byzantine est de nouveau dévaluée en 1304. Andronic renforce le poids des taxes sur les propriétaires terriens de la Thrace mais aussi sur les monastères. Un nouvel impôt nommé sitokrithon est créé ; il correspond à une taxe sur le blé et l'orge. Chaque propriétaire doit céder une part de sa production qui est ensuite vendue sur les marchés en échange d'or et d'argent utilisés pour financer les Catalans. À Constantinople, l'arrivée massive de réfugiés couplée aux récoltes détruites par les Catalans entraîne une pénurie de biens alimentaires qui alimente un marché noir fructueux. Le patriarche Athanase Ier de Constantinople soutient fortement l'empereur dans sa lutte contre ce commerce illégal. Enfin, les Turcs, qui avaient rejoint les Catalans en Europe, continuent de répandre la terreur en Thrace et Michel IX échoue à les vaincre. Finalement, grâce au soutien des Serbes, la troupe turque dirigée par Halil est défaite dans la péninsule de Gallipoli en 1312.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Entrada_de_Roger_de_Flor_en_Constantinopla_%28Palacio_del_Senado_de_Espa%C3%B1a%29.jpg/1280px-Entrada_de_Roger_de_Flor_en_Constantinopla_%28Palacio_del_Senado_de_Espa%C3%B1a%29.jpg",
     "legende": "Entrée de Roger de Flor à Constantinople , par José Moreno Carbonero . 1888. ( Palais du Sénat d'Espagne ).",
+    "video": "https://www.youtube.com/watch?v=LfT9fhvT9qI",
     "sources": "https://es.wikipedia.org/wiki/Roger_de_Flor"
   },
   {
@@ -1086,7 +1081,9 @@
       "Pologne"
     ],
     "type": 1,
-    "image": "",
+    "description": "Venceslas III (Wacław III) est un prince de la dynastie des Přemyslides, fils du roi Venceslas II de Bohême et de Judith de Habsbourg. Il est roi de Hongrie de 1301 à 1305, ainsi que roi de Bohême et roi de Pologne de 1305 jusqu'à sa mort.\nSon assassinat en 1306 marque l'extinction de la lignée royale des Přemyslides en Bohême.\nLorsque son père décède le 21 juin 1305 des suites d'une longue maladie, il hérite des trônes de Bohême et de Pologne. Impopulaire en Bohême, il doit aussi affronter une forte opposition en Pologne, menée par les ducs Ladislas Ier le Bref et Henri III de Głogów qui ont profité de l'implication des Přemyslides dans les conflits en Hongrie.\n\nLadislas le Bref, avec l’aide des magnats hongrois, prend le contrôle de Cracovie en Petite-Pologne tandis qu’Henri de Głogów s’empare de la Grande-Pologne. Le 8 août 1305, Venceslas III cède la Poméranie orientale aux margraves Valdemar et Hermann Ier de Brandebourg, pour s’assurer de leur soutien.\nEn route vers la Pologne pour revendiquer la couronne, à la tête d’une armée, il est assassiné à Olomouc dans le palais épiscopal le 4 août 1306 dans des circonstances obscures. Enterré dans la cathédrale Saint-Venceslas d'Olomouc, son corps est ensuite placé dans son tombeau définitif à la sépulture de l'abbaye de Zbraslav. Avec sa disparition s’éteint aussi la dynastie des Přemyslides en ligne masculine[2].\n\nÀ la suite de la disparition des Přemyslides, Albert de Habsbourg insiste sur le fait que le royaume de Bohême n’est qu’un fief du Saint-Empire et proclame son fils Rodolphe III roi (Rodolphe Ier), ce qui déclenche une guerre de cinq ans entre les Habsbourg et Henri de Goritz, l'époux de la sœur de Venceslas III, Anne de Bohême. En Pologne, profitant de la situation confuse, Ladislas Ier le Bref accède au pouvoir, faisant plier les patriciens de Cracovie et l’évêque Jan Muskata.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wenceslaus_%28Chronica_Hungarorum%29.jpg/500px-Wenceslaus_%28Chronica_Hungarorum%29.jpg",
+    "legende": "Enluminure de Johannes de Thurocz, Chronica Hungarorum (vers 1488).",
     "regne": true
   },
   {
@@ -1101,7 +1098,8 @@
     ],
     "type": 1,
     "description": "Othon III de Bavière, prince de la maison de Wittelsbach, fut roi de Hongrie de 1305 à 1308. Il adopte le nom dynastique Arpad de Béla V et est couronné le 6 décembre 1305.\nEn tentant de lutter contre László II Kán, voïvode de Transylvanie, il est capturé en 1307. Après négociations, il est livré aux fidèles de Charles Robert d'Anjou-Naples et doit renoncer à la Hongrie pour se retirer en Bavière.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Ota3_Thurocsi.jpg",
+    "legende": "Chronicon Pictum (XIVe siècle).",
     "regne": true,
     "sources": "Wikipedia"
   },
@@ -1115,7 +1113,9 @@
     ],
     "type": 3,
     "description": "chevalier écossais né vers 1270 et mort le 23 août 1305. Il est l'une des principales figures de la résistance écossaise contre l'Angleterre durant les guerres d'indépendance de l'Écosse. Aux côtés d'Andrew de Moray, Wallace défait une armée anglaise à la bataille du pont de Stirling en septembre 1297. Il est nommé Gardien de l'Écosse et sert jusqu'à sa défaite à la bataille de Falkirk, en juillet 1298. En août 1305, Wallace est capturé à Robroyston (en), près de Glasgow, et remis au roi anglais Édouard Ier, qui le fait pendre, traîner et mettre en quartiers pour haute trahison et crimes contre des civils anglais.\nAprès sa mort, Wallace devient une icône dont la renommée dépasse les frontières de l'Écosse. Le poète du XVe siècle Harry l'Aveugle lui consacre une épopée en vers, The Wallace, Au temps de la naissance de William Wallace, le roi Alexandre III régnait depuis vingt ans sur l'Écosse. Son règne avait été une période de paix et de stabilité économique, et il avait repoussé avec succès les demandes incessantes de suzeraineté du roi d'Angleterre. En 1286, Alexandre III meurt d'une chute de cheval ; aucun de ses enfants ne lui avait survécu. La haute noblesse écossaise déclara sa petite-fille Margaret alors âgée de trois ans, reine. À cause de son âge, les nobles mirent en place une régence, les Gardiens de l'Écosse, pour assurer l'administration de l'Écosse jusqu'à ce qu'elle soit en âge de gouverner. Le roi anglais Édouard Ier mit à profit l'instabilité potentielle pour signer avec les nobles le traité de Birgham, promettant de marier son fils Édouard à Margaret, sous réserve que l'Écosse demeure une nation indépendante. Mais Margaret tomba malade et mourut en 1290, à huit ans sur le chemin de sa Norvège natale vers l'Écosse. Pas moins de treize prétendants au trône se manifestèrent presque immédiatement, ce qui mena à la crise de succession écossaise.\nJean Balliol avait une prétention légitime au trône. Cependant, les Écossais voulaient faire intervenir un arbitre étranger pour trancher, afin d'éviter tout parti pris. Étant d'une grande imprudence, ils en appelèrent au roi Édouard Ier pour arbitrer. Au lieu d'arriver comme un tiers neutre, il se rendit à la frontière anglo-écossaise avec une grande armée, et annonça qu'il était venu en seigneur pour régler une dispute dans un État vassal, forçant tous les prétendants à lui rendre hommage. Après leur avoir fait prêter serment, Édouard choisit Balliol en 1292 pour régner sur « l'État vassal d'Écosse ». En mars 1296, Balliol renia son serment et s'allia avec le royaume de France. Rapidement vaincu, le 7 juillet, il renonça au traité avec la France et le 8 juillet 1296 à Montrose il céda son royaume au roi anglais[2]. William Wallace apparaît dans l'histoire en assassinant William de Heselrig, shérif anglais de Lanark, pour venger la mort de sa bien-aimée (nommée Marion Braidfute selon la tradition). En raison de ce crime, il est mis hors la loi et se réfugie dans les bois où il est bientôt rejoint par une trentaine de compagnons avec lesquels il massacre la garnison anglaise de Lanark (en mai 1297). C'est le signal de la rébellion. De grands seigneurs ne tardent pas à se joindre à lui : William Douglas, qui devient son lieutenant, Robert Wishart, évêque de Glasgow qui parvient à rallier James Stewart le Grand Sénéchal à la cause, et bientôt Robert Bruce le Jeune rompant par là la réputation d'anglophilie de la famille Bruce. Et c'est avec une armée que Wallace met le siège devant Dundee au mois d'août 1297. Édouard Ier doit intervenir en personne, abandonnant un temps le continent — où il appuyait les Flamands contre la France — pour reprendre le contrôle de l'Écosse. Il reprend Berwick en juillet 1298, puis Roxburgh. Il parvient à couper le chemin de Wallace à Falkirk. L'armée écossaise y est écrasée le 22 juillet 1298 : 2 000 morts. C'est la fin de l'épopée de Wallace. William Wallace réapparaît en Écosse aux alentours de 1303-1304 où il reprend sa vie de hors-la-loi. Sa dernière action militaire est une escarmouche en septembre 1304 à l'extrémité des Ochil Hills entre Abernethy et Lindores. Il est capturé près de Glasgow le 3 août 1305 par les hommes de sire John de Menteith, le gardien du château de Dumbarton qui, comme la plupart des nobles écossais, avait fait allégeance au roi d'Angleterre[4].\n\nWilliam Wallace est transféré à Londres le 22 août 1305 et condamné à mort pour haute trahison envers son souverain, crimes et sacrilège. Le lundi 23 août 1305, il est emmené en procession sur un cheval jusqu'à Westminster Hall et exécuté à l'âge de 35 ans. William Wallace est mis à mort dans les conditions atroces réservées aux traîtres (hanged, drawn and quartered) : traîné par des chevaux par les pieds sur plusieurs kilomètres de la tour de Londres à Smithfield, le lieu d'exécution proche de l'hôpital St Barthélémy, moitié pendu, émasculé, éventré et le feu mis à ses entrailles. Il est finalement décapité, puis découpé en morceaux. Pour que cela serve d'exemple, Edouard Ier fait exposer les différentes parties du corps de William Wallace aux quatre coins du royaume d'Angleterre. Sa tête est placée sur le pont de Londres et les parties de son corps réparties entre Newcastle-upon-Tyne, Berwick-upon-Tweed, Stirling et Perth.",
-    "image": ""
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/William_Wallace_Statue_%2C_Aberdeen2.jpg/500px-William_Wallace_Statue_%2C_Aberdeen2.jpg",
+    "legende": "Statue de William Wallace, Aberdeen.",
+    "video": "https://www.youtube.com/watch?v=8fKjAaXPTEk"
   },
   {
     "id": 95,
@@ -1141,6 +1141,7 @@
     "description": "La chapelle des Scrovegni est un édifice religieux, faisant partie d'un palais construit au XIVe siècle à l'emplacement de l'ancienne arène romaine de Padoue en Italie. De style gothique, la chapelle abrite le cycle de fresques de Giotto. Ce chef-d’œuvre de la peinture aux couleurs intenses a été commandé à l'artiste en 1303 par un riche mécène, Enrico Scrovegni, banquier et homme d'affaires padouan.\nPour décorer la chapelle qu'il faisait construire attenante à son nouveau palais, il fit appel aux plus grands artistes de l'époque : Giovanni Pisano reçut commande de trois statues de marbre et Giotto celle de la décoration picturale des murs.\nLa décoration de la chapelle des Scrovegni par Giotto est une des réalisations les plus magistrales de l’histoire de l’art occidental.\nCe cycle de peintures murales est considéré comme le cycle de fresques le plus complet réalisé par le maître toscan dans sa période de maturité\nDe 1303 à 1306, il est à Padoue, où il peint les cinquante-trois fresques de la chapelle Scrovegni, ou chapelle Santa Maria dell'Arena, qui sont considérées comme son chef-d'œuvre et l'un des tournants de l'histoire de la peinture européenne\nDante — exilé de Florence en 1302 — se trouvait probablement à Padoue en même temps que Giotto L'influence de Dante serait décelable dans la vaste composition du Jugement dernier et mieux encore dans les figures allégoriques en camaïeu, qui simulent à la base des fresques évangéliques deux rangées de bas-reliefs. Ces quatorze figures de Vertus et de Vices qui se font face, les Vertus à droite et les Vices à gauche, comptent parmi les créations les plus parfaites du génie de Giotto.\nSa peinture se distingue de ce qu’on appelle la « maniera graeca », c’est-à-dire le style byzantin, dans lequel les figures flottent dans un univers céleste où baigne une lumière dorée irréelle. Les personnages de Giotto s'inscrivent dans la réalité.\nLe peintre a cherché à camper ses scènes dans un environnement terrestre qui puisse, tant que possible, être crédible, même si la représentation des architectures semble trop petite par rapport aux personnages. Dans ces scènes, l'architecture joue un rôle de décor théâtral, comme la maison d’Anne, dans l'Annonciation, dont la paroi a été retirée pour en rendre l’intérieur visible.\nUne des scènes les plus expressives est sans doute le Baiser de Judas, dans laquelle Giotto s’est passé de décor architectural. \nLes séries des Vices et des Vertus sont peintes sur le soubassement des murs et constituent le complément moral du cycle narratif. Elles montrent le génie de Giotto dans sa capacité à utiliser les différentes traditions figuratives. L'écho entre les figures (Vertu/Vice)\n« renvoie à la tradition des imagines agentes, des images actives, c'est-à-dire frappantes et inhabituelles, dont les arts mnémoniques font grand usage à l'époque.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cappella_degli_Scrovegni.jpg/500px-Cappella_degli_Scrovegni.jpg",
     "legende": "Fresque des parois.",
+    "video": "https://www.youtube.com/watch?v=3bfg_5JmISM",
     "sources": "https://fr.wikipedia.org/wiki/Chapelle_des_Scrovegni"
   },
   {
@@ -1485,6 +1486,19 @@
     "image": ""
   },
   {
+    "id": 825,
+    "titre": "Abû Thâbit `Âmir",
+    "date": 1307,
+    "date_fin": 1308,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Abû Thâbit `Âmir sultan Mérinide .\nIl succéda à son grand-père Abû Yûsuf Ya`qûb ben `Abd al-Haqq comme sultan mérinide en 1307 et mourut de maladie en 1308.\nDès le début de son règne en 1307, ce petit-fils d'Abû Ya`qûb Yûsuf se voit contesté par trois puis quatre prétendants. Les trois premiers furent vite éliminés et ce fut au cours de la campagne contre le quatrième où il fonda Tétouan qu'Abû Thâbit mourut de maladie (1308)..",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 119,
     "titre": "Édouard II d'Angleterre épouse à Boulogne Isabelle de France",
     "date": 1308,
@@ -1646,6 +1660,19 @@
     "type": 2,
     "description": "En allant réprimer une révolte à Taza il mourut emporté par la maladie (1310).",
     "image": ""
+  },
+  {
+    "id": 826,
+    "titre": "Abu al-Rabi Sulayman",
+    "date": 1308,
+    "date_fin": 1310,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Abû al-Rabî`, frère d'Abû Thâbit, lui succéda sans difficulté en 1308 comme sultan mérinide. Il est mort à Taza en 1310.\nEn allant réprimer une révolte à Taza il mourut emporté par la maladie (1310).",
+    "image": "",
+    "regne": true
   },
   {
     "id": 4,
@@ -1907,6 +1934,21 @@
     "type": 2,
     "description": "Il succéda à son petit-neveu Abu al-Rabi Sulayman comme sultan mérinide en 1310[3]. Il mourut en 1331.\nPacifiste et pieux il préféra la construction de mosquées et de madrasas à la guerre. Mais son fils Abû `Ali 'Omar désigné comme successeur se révolta contre son père. Abû Sa`id dans un premier temps fut démis par ce fils (1315), mais il put reprendre le pouvoir et désigner comme héritier son autre fils Abû al-Hasan.",
     "image": ""
+  },
+  {
+    "id": 827,
+    "titre": "Abu Saïd Uthman II",
+    "date": 1310,
+    "mois": 11,
+    "date_fin": 1331,
+    "mois_fin": 8,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Fils tardif d'Abû Yûsuf Ya`qûb né en 1276. Il succéda à son petit-neveu Abu al-Rabi Sulayman comme sultan mérinide en 1310[3]. Il mourut en 1331.\nPacifiste et pieux il préféra la construction de mosquées et de madrasas à la guerre. Mais son fils Abû `Ali 'Omar désigné comme successeur se révolta contre son père. Abû Sa`id dans un premier temps fut démis par ce fils (1315), mais il put reprendre le pouvoir et désigner comme héritier son autre fils Abû al-Hasan.",
+    "image": "",
+    "regne": true
   },
   {
     "id": 230,
@@ -3902,6 +3944,20 @@
     "legende": "Représentation de Mansa Musa, souverain de l'Empire du Mali au XIVe siècle, tirée d'un atlas catalan du monde connu (mapamundi) de 1375, dessiné par Abraham Cresques de Majorque. Musa est représenté tenant une pépite d'or et portant une couronne de style européen. La section à droite se traduit par : Musa Mali, Seigneur de Guinée. L'or trouvé dans son pays est si abondant qu'il est le roi le plus riche et le plus noble de tout le pays. Littéralement, dans le texte, il est appelé musse melly."
   },
   {
+    "id": 838,
+    "titre": "Guillaume de Machaut (oeuvre)",
+    "date": 1324,
+    "date_fin": 1377,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Guillaume de Machaut, né probablement à Machault, dans les Ardennes, non loin de Reims, vers 1300 et mort à Reims en 1377, est un compositeur et écrivain français du XIVe siècle. Il a mené une vie dans le monde laïc, au service de mécènes et en liens étroits avec la Couronne de France. Il a aussi mené une vie ecclésiastique en tant que chanoine de Reims. Clerc lettré et maître des arts, il a marqué pendant au moins un siècle la production artistique européenne.\nEn 1324, il composa la première œuvre que l'on connaît de lui, le motet Bone Pastor Guillerme dédié au nouvel archevêque de Reims Guillaume de Trie.\n\nIl fut employé comme secrétaire de 1323 à 1346 par Jean Ier de Bohême, avec lequel il acquit l'amour de la fauconnerie, de la chevalerie et des aventures. Il accompagna Jean Ier dans ses divers voyages (principalement des expéditions militaires) à travers l'Europe (en particulier à Prague), et participe aux campagnes de Silésie, de Pologne (1327)[5], de Lituanie (1329) et d'Italie (1330)[6]. Ces divers voyages sont racontés dans ses œuvres Le Confort d'Ami et La Prise d'Alexandrie. Machaut parle de Jean de Bohême comme d'un roi idéal : courageux et généreux. Grâce à son protecteur, il obtint successivement des prébendes canoniales à Verdun en 1330, à Arras en 1332, à Reims en 1333[6] et à Saint-Quentin.\n\nEn 1346, Jean Ier fut tué à la bataille de Crécy, et Guillaume de Machaut entra au service de divers seigneurs, parmi lesquels la fille de son ancien maître, Bonne de Luxembourg (pour laquelle il écrivit le Remède de Fortune et un motet) en 1347, puis Charles II de Navarre, aussi appelé Charles le Mauvais (pour lequel il écrivit le Confort d'Ami), de 1349 à 1357. Il est ensuite au service des fils de Bonne Jean de Berry à partir de 1357, Philippe le Hardi et Charles, duc de Normandie, qui allait devenir le roi Charles V en 1364. Par ce biais, il se mit sous la protection des princes et se revendiqua à la fois poète de la Cour et poète individu. Vers la fin de sa vie, il servit Pierre de Lusignan (auquel il dédia la Prise d'Alexandrie) et Amédée de Savoie (pour lequel il écrivit le dit de la Harpe).\nMachaut s'installa ensuite en tant que chanoine au sein du chapitre de la cathédrale de Reims, après avoir renoncé à ses autres postes canoniaux à la demande du pape Benoît XII. La date de son installation est floue. Nous savons qu'il reçut son canonicat en expectative en 1333, puis une confirmation en 1335 lors de l'arrivée du nouveau Pape Benoît XII. Il fit une réception de ce poste par procuration en 1338, et si certaines hypothèses prétendent une installation à Reims en 1340, une étude récente indique que la présence de Machaut en tant que chanoine n'est régulière qu'à partir de 1359. En effet, après la réception de sa prébende, il continuait ses déplacements et maintenait ses liens avec les princes, ce qui lui permettait de ne pas perdre le contact avec le monde profane. C'est d'ailleurs à cette dernière date qu'il participe à la défense de la ville assiégée par les Anglais d'Édouard III[7].\n\nCette vie de chanoine sera le point de départ de la période la plus féconde pour son œuvre poétique et musicale. Il posséda une maison à Reims au 4 de l'actuelle rue d'Anjou. Il s'y retira à la fin de sa vie. Il mourut en 1377[8] et repose avec son frère Jean en la cathédrale de Reims.\n\nGuillaume de Machaut survécut à la Peste noire qui dévasta l'Europe, et vécut ses dernières années à Reims, recopiant ses manuscrits et composant. Son poème Le Veoir Dit (vers 1364) est autobiographique selon certains auteurs. Il relate une histoire d'amour tardive pour une jeune femme de 19 ans, supposée être Péronne d'Armentières, bien que cela soit contesté par d'autres.\nDans son œuvre il allie les lumières d'un clerc et la vaillance chevaleresque, il est proche de son contemporain Jean III de Craon. Comme toutes les autres productions pour l'église, ses œuvres liturgiques sont destinées à faire entendre la parole divine au cours d'un office et chantent la gloire de Dieu. Sa production religieuse part ainsi des motifs de plain-chant (ou chant grégorien), dont elle s'éloigne en les ornant et en les développant. Il perpétua alors, en les bouleversant, les traditions médiévales des polyphonistes de l'École de Notre-Dame de Paris et celles de l’Ars antiqua du XIIIe siècle (l'« art ancien » aux yeux des créateurs du XIVe siècle) : ces anciens auteurs avaient fait naître dès la fin du XIIe siècle un langage et des formes musicales que Machaut et ses contemporains contribueront grandement à faire évoluer. Les auteurs du XIVe siècle développèrent ainsi l’Ars nova (l'« art nouveau »), expression par laquelle eux-mêmes caractérisaient fièrement leur art, aussi bien dans le domaine religieux que profane. Machaut est certainement le plus important représentant de cette école. Dans son œuvre profane, il se sert d'allégories et de la nature. Nous les retrouvons à travers les figures d'Amour et ses enfants, le Doux-penser, Plaisance et Espérance pour inspirer le poète à travers le Sens (raison), la Rhétorique (l'art du discours, envisagé sous sa forme poétique) et la Musique, alors indissociable de la parole et du discours poétique.\n\nTel celui du légendaire Orphée, son « chant » mêle poésie et musique pour exprimer des idées et des sentiments, et s'inscrit ainsi dans la tradition poétique et musicale venue de l'Antiquité, lignée initiée, pour nous, par Homère. Mais il est un héritier encore plus direct des trouvères médiévaux des XIIe et XIIIe siècles (évidemment bien plus proches de lui), à cette différence près que son œuvre n'est plus monodique mais polyphonique.\n\nC'est ainsi qu'il maîtrise les formes lyriques fixes comme le lai, la ballade, le rondeau, le chant royal et donne une impulsion décisive au virelai, forme née à la fin du XIIIe siècle. De manière tout aussi essentielle, il renouvelle l'art des grands polyphonistes d'église, dont il a contribué à faire évoluer les techniques ou les formes musicales, en les complexifiant et en y acclimatant de nombreuses innovations.\n\nQuand il mourut en 1377, le poète Eustache Deschamps écrivit une complainte à la gloire du « maître de toute mélodie », qui fut mise en musique par François Andrieu.\nJugement dou Roy de Behaingne (Jugement du Roi de Bohême, fin des années 1330) - Le narrateur entend une conversation entre une dame (dont l'amant est mort) et un chevalier (trahi par sa dame) ; afin de déterminer lequel des deux est le plus malheureux, le narrateur va demander l'avis du roi de Bohême, qui consulte des allégories, et le chevalier malheureux est déclaré vainqueur (2079 vers).\nLe Remède de Fortune (vers 1341) - Le narrateur se voit demander par sa dame si le poème qu'elle a trouvé est de lui ; il la fuit et arrive dans un jardin où Espérance le console et lui apprend comment être un bon amant ; il revient alors auprès de sa dame (environ 4300 vers ; sont insérés 8 poèmes lyriques, dont 7 mis en musique).\nDit dou Lyon (Dit du Lion, achevé le 3 avril 1342) - Le narrateur arrive sur une île magique où un lion le guide vers une belle dame ; un vieux chevalier s'approche du narrateur et lui révèle la signification de ce qu'il voit, puis lui donne des conseils pour être un meilleur amant.\nDit de l'Alérion, ou Dit des Quatre Oiseaux (avant 1349) - Un conte symbolique d'amour : le narrateur élève quatre oiseaux différents, mais chacun d'entre eux s'enfuit ; un jour, le premier oiseau, son favori, revient auprès de lui.\nJugement dou Roy de Navarre (vers 1349) - Suite du Jugement dou Roy de Behaingne : une dame reproche au narrateur d'avoir accordé le prix au chevalier ; le roi de Navarre est consulté et condamne le poète (4212 vers). Au début de son ouvrage Le Bouc émissaire, René Girard commente un extrait du Jugement du Roy de Navarre.\nConfort d'Ami (1357) - Dédiée à Charles II de Navarre, qui était prisonnier en France, cette consolation poétique donne des exemples (exempla) de force d'âme tirés de récits bibliques et classiques.\nDit de la Fonteinne amoureuse, ou Livre de Morphée (écrit pour Jean de Berry, vers 1360) - Le narrateur rencontre un amant désespéré qui doit se séparer de sa dame ; les deux hommes se rendent devant une fontaine magique où ils s'endorment, et en rêve la dame vient consoler son amant (2848 vers).\nLe Veoir Dit (Le Voir Dit, le dit de la vérité, vers 1364) - Chef-d'œuvre de Machaut, ce poème (parfois vu comme autobiographique) raconte la tristesse de la séparation d'un amant de sa dame (Toute-Belle) et les fausses rumeurs répandues sur lui ; des lettres en prose et des poèmes lyriques échangés par les amants malheureux sont intégrés dans un récit narratif (près de 10000 vers) qui donne à cette œuvre sa structure complexe et nouvelle pour le XIVe siècle.\nDit de la Fleur de Lis et de la Marguerite (vers 1369) - Récit amoureux en l'honneur du mariage de Philippe le Hardi (dont les armoiries sont semées de fleurs de lys) avec Marguerite de Flandre (416 vers).\nPrise d'Alexandrie (vers 1370) - Récit poétique des exploits de Pierre de Lusignan, roi de Chypre, écrit après la mort de celui-ci à la demande de Charles V (près de 9000 vers).\nPrologue - Conçue comme une préface à l'édition de ses œuvres réunies, qu'il rédige vers 1371, cette allégorie décrit les principes de Machaut en matière de poésie, musique et rhétorique ; il y célèbre ses deux sources d'inspiration, Nature et Amour ; Nature lui a donné trois enfants : Sens, qui tient son esprit informé, Rhétorique, qui lui enseigne l'art de construire, et Musique, qui « porte joie » partout où elle est ; Amour lui a donné trois autres enfants, Doux penser, Plaisance et Espérance : ce sont les thèmes sur lesquels vont travailler les dons de Nature.\nLa Louange des Dames - Œuvre dans laquelle le personnage-poète chante son amour aux Dames et décrit ses émotions, qu'elles soient heureuses ou malheureuses. Cette œuvre peint aussi le paradoxe de l'amour courtois avec l'entre-deux de la distance et de la proximité, et la douleur provoquée par le désir acharné de la Dame.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Guillaume_de_Machaut-Oeuvres.jpg",
+    "legende": "Page manuscrite de Dame, mon cuer en vous remaint, rondeau à trois voix de Guillaume de Machaut.",
+    "video": "https://www.youtube.com/watch?v=9ti59NdbG1c"
+  },
+  {
     "id": 285,
     "titre": "Alphonse IV, dit « le Brave »",
     "date": 1325,
@@ -5142,6 +5198,21 @@
     ],
     "type": 1,
     "image": "",
+    "regne": true
+  },
+  {
+    "id": 828,
+    "titre": "Abu al-Hasan ben Uthman",
+    "date": 1331,
+    "mois": 8,
+    "date_fin": 1348,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Sultan mérinide qui succède à son père Abû Sa`îd `Uthmân en 1331.\nSelon les sources, Abu al-Hasan est né en 1288 ou en 1299. Son père est Abu Said Uthman II et sa mère serait une esclave d'origine abbyssine, Abu al-Hasan avait une couleur de peau très brune, ce qui lui valut le surnom de « sultan noir ». Sa belle-mère est Mariam al-Mariniya, elle remplace sa mère qui est décédéeavant de pouvoir occuper la position d’ambassadrice du sultant mérinide auprès des pays du Moyen-Orient et d’effectuer le Hajj en même temps.\nLes Mérinides sont des berbères zénètes, issus de la tribu des Wassin selon Ibn Khaldoun, ils nomadisaient durant tout l'hiver dans le Tafilalet entre Figuig et Sijilmassa, puis remontaient vers le Nord chaque été, jusqu'à la vallée de la Moulouya, afin d'y trouver des pâturages et acheter des réserves de grains pour l'hiver.\nSon père Abû Saïd Uthmân, fils de Abu Yusuf Yaqub, est le 6e sultan mérinide. Son épouse fut Lalla Chella.\nIl doit compter avec son frère, Abou Ali, rebelle qui tient le versant saharien de l'Atlas dans la vallée du Dra` avec comme capitale Sijilmâsa. Abou Ali s'étant notamment allié avec le sultan zianide Abû Tâshfîn, ennemi des Mérinides. Abu al-Hasan attaque alors Sijilmâsa en 1332 et capture son frère qu'il fait assassiner.\nDans le but de chasser les chrétiens d'Espagne et d'unir les pays musulmans d'Afrique du Nord, il attaque et capture Algésiras et Gibraltar en 1333. À cet effet il signe une alliance économique et militaire avec le roi Jacques III de Majorque en 1339.\nAbou Ali éliminé, Abu al-Hasan peut envisager la conquête de territoires plus à l'est. Après le siège de Tlemcen de 1335 à 1337, Abu al-Hasan prend aux Abdalwadides la ville de Tlemcen pendant 11 ans de 1337 à 1348.\nIl gagne le 5 avril 1340 une bataille navale dans le détroit de Gibraltar, mais subit une défaite six mois plus tard, le 30 octobre 1340, à la bataille du rio Salado. Le roi Alphonse XI de Castille prend Algésiras en 1344. Abu al-Hasan abandonne alors son projet de reconquête musulmane de l'Espagne.\nSouhaitant faire renaître l'empire almohade, Abu al-Hasan veut dominer le Maghreb. Il s'attaque alors aux Hafsides qui règnent à Tunis. Bien que marié à la fille du sultan hafside Abû Yahyâ Abû Bakr, il prend Tunis le 15 septembre 1347, mais se heurte aux Arabes à Kairouan qui le battent le 10 avril 1348 l'union de son Maghreb n'aura duré que quelques mois.\n\nFuyant Tunis par la mer, Abu al-Hasan débarque à Alger après avoir tenté de rallier Béjaïa puis Dellys[6]. Il marche sur Tlemcen pour reconquérir la ville que son fils, Abu Inan Faris, régent de l'État mérinide, avait fui pour se faire proclamer souverain en l'absence de son père. Mais il est vaincu dans la plaine de l'oued Chelif par les Abdalwadides qui restaurent le royaume zianide de Tlemcen. Abu al-Hasan se replie alors sur Sijilmâsa où est il confronté à une rébellion conduite par son fils Abu Inan Faris. Abandonné par ses troupes, il abdique et se replie jusqu'au sud de l'actuelle Maroc dans l'Atlas où il meurt d'une blessure infectée le 24 mai 1351.\n\nLe règne d'Abu al-Hasan marque un certain apogée de la dynastie des Mérinides[1] mais aussi son impuissance à réussir l'union par les armes. La personnalité de ce monarque fut parfois trop impulsive (cf. l'attaque non conventionnelle du souverain de Tunis, pourtant son beau-frère). Elle le précipita à l'isolement de la population locale et au désaveu de son propre clan. Ceci a fortement limité « son » unité du Maghreb et de l'Espagne qui n'aura finalement duré qu'une poignée de mois.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Abu_al-Hasan_ben_Uthman.jpg",
+    "legende": "Dirhams frappés sous le règne du sultan mérinide Abu al-Hasan ben Uthman.",
     "regne": true
   },
   {
@@ -8517,6 +8588,32 @@
     "image": ""
   },
   {
+    "id": 829,
+    "titre": "Abu Inan Faris",
+    "date": 1348,
+    "date_fin": 1358,
+    "mois_fin": 1,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Abu Inan Faris est né en 1329. Il succéda à son père Abû al-Hasan ben `Utman comme sultan mérinide en 1348. Il mourut étranglé par son vizir alors qu'il était agonisant, le 27 novembre 1358[1],[2]. Ibn Khaldoun donne aussi cette date, dans Le voyage d'Occident et d'Orient[3], mais il affirme que Abû `Inân mourut des suites d'une longue maladie (contractée deux ans plus tôt) qui s'était aggravée cinq jours après son retour de Tlemcen à Fès, et il ne mentionne pas de meurtre.\nPeu après être arrivé au pouvoir, il contraint Ibn Marzouk à l'exil dans le Royaume maure de Grenade[4]. Il se qualifie de « commandeur des croyants » (amir al-mûminin). Il doit éliminer un de ses neveux qui avait pris le pouvoir à Fès.\n\nAprès cela il reprend l'œuvre de son père et fait construire la médersa qui porte son nom à Fès, la médersa Bou 'Inania. Il reprend Tlemcen, puis Béjaïa (Bougie) en 1352 et Tunis, mais les révoltes continuèrent et l’État mérinide ne cessa de s'affaiblir.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 751,
+    "titre": "Bataille de Llucmajor (Majorque)",
+    "date": 1349,
+    "mois": 10,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 2,
+    "description": "Fin du royaume de Majorque. \nLa bataille de Llucmajor se déroule le 25 octobre 1349 à proximité de la ville homonyme (à Majorque dans les Îles Baléares) et oppose les troupes de Pierre IV d'Aragon à l'armée du roi Jacques III de Majorque. Ce dernier est tué dans la bataille et la victoire permet à Pierre IV d'intégrer définitivement le royaume de Majorque à la Couronne d'Aragon.",
+    "image": ""
+  },
+  {
     "id": 354,
     "titre": "Jean Visconti",
     "date": 1349,
@@ -8926,7 +9023,8 @@
     ],
     "type": 1,
     "description": "Dès le début de son règne s'affrontent deux clans : la faction dirigée par sa mère Marie de Portugal et celle de la maîtresse d'Alphonse XI, Leonor de Guzmán, puissante tant que le père de Pierre était en vie et dont les enfants illégitimes  sont largement dotés en honneurs et privilèges.\nEn 1351, rétabli d'une grave maladie qui l'a frappé l'année même de son couronnement, il ordonne la levée du siège de Gibraltar et quitte Séville pour la Castille, toujours sous la coupe de sa mère et d'Albuquerque (son précepteur portugais) , celui-ci obtient la reddition de Léonor de Guzmann qu’il fait exécuter en 1351. \n\nEn 1352, profitant de la mort du seigneur de Biscaye, Pierre 1er fait assassiner le jeune héritier et absorber la seigneurie par la couronne, malgré une opposition armée de quelque 10 000 Basques. Il organise le mariage de la sœur de l'héritier assassiné, Jeanne de Lara — qu'il fait assassiner par la suite —, avec son demi-frère Tello de Castille, un autre des fils illégitimes d'Alphonse XI et Leonor de Guzmán.\nEn 1351 et 1352 se tiennent les Cortes (pendant castillan des états généraux du royaume de France) à Valladolid à l'occasion desquelles seront publiées un nombre important de lois contre le brigandage et le vagabondage, pour la protection des Juifs, pour le développement du commerce et de l'agriculture et pour la limitation des droits de la noblesse.\nEn 1352, pour sceller une alliance avec le royaume de France, il décide d'épouser Blanche de Bourbon, descendante de Saint Louis par son père, le duc Pierre Ier de Bourbon, et de Philippe III de France par sa mère Isabelle de Valois. Il s'agit surtout d'une nièce du roi de France.Mais trois jours après son mariage. Il fait enfermer son épouse et rejoint sa maîtresse, Marie de Padilla, qui lui a déjà donné une fille, L'échec de ce mariage provoque la rupture de l'alliance avec le roi de France et la chute d'Albuquerque qui l'avait encouragé et organisé. . Albuquerque s'est réfugié auprès du roi du Portugal, Alphonse IV, qui refuse de le remettre à Pierre Ier.Enfermée à l'Alcazar de Séville, la reine Blanche se plaint du traitement dont elle est l'objet auprès du pape Innocent VI et du roi de France. Les interventions du pape en faveur de la recluse, ainsi que les menaces d'excommunication, n'aboutissent à rien.\nIl devait dans un premier temps épousé Jeanne la fille du roi d’Angleterre Edouard III  Mais au moment de quitter Bordeaux, la région est frappée par la peste et Jeanne en meurt le 1er juillet 1348. Ces tentatives de mariage sont motivées par l'existence d'une flotte castillane puissante, élément important pour le contrôle des mers dans le cadre du conflit franco-anglais.",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Gran_dobla_de_Pedro_I_de_Castilla_1360_%28M.A.N._1867-21-2%29_01.jpg/960px-Gran_dobla_de_Pedro_I_de_Castilla_1360_%28M.A.N._1867-21-2%29_01.jpg",
+    "legende": "Pierre Ier le Cruel (avers d'une monnaie, musée archéologique national de Madrid, 1360).",
     "regne": true
   },
   {
@@ -9057,6 +9155,18 @@
     "type": 2,
     "description": "Cent cinquante villes composent la Hanse Teutonique.\nLa Hanse, ou Ligue hanséatique (dite aussi Hanse germanique, Hanse teutonique ou guilde de la Hanse) est une association de villes marchandes d'Europe du Nord, autour de la mer du Nord et de la mer Baltique, ayant existé du Moyen Âge central à l'époque moderne. Elle se distingue des autres associations du même type, également dénommées « hanses », par un commerce reposant sur des privilèges jalousement défendus, octroyés à ses villes-membres par divers souverains européens.\n\nPendant trois siècles, cette Hanse en particulier, et à un moindre degré les hanses par extension, ont eu un rôle dominant au niveau commercial, puis politique, en Europe[1]. Actives du XIIe au XVIIe siècle, leur déclin et quasi-disparition ont été achevées en 1648 avec les traités de Westphalie signant la fin de la guerre de Trente Ans et la fin de la guerre de Quatre-Vingts Ans.\nLa croissance de la Ligue hanséatique a lieu dans un monde où colonisation et évangélisation vont de pair. Elle est particulièrement liée à la montée de l'ordre des Chevaliers teutoniques, au prosélytisme catholique servant de façade aux jeux de pouvoir mondiaux de l'époque[1].\nAu Moyen Âge, une hanse, parfois appelée anse, est une association professionnelle de marchands exerçant une activité commune. De telles associations existaient par exemple à Paris[2], à Londres[3] ou encore entre les villes du Nord de la France et des Pays-Bas comme avec la Hanse drapière des XVII villes[4]. On parle aussi de hanse en ce qui concerne les Phéniciens de la période classique (880-675 av. J.-C.). \nC'est surtout la refondation de Lübeck par Henri le Lion après son incendie en 1159 qui est considérée comme le principal évènement fondateur de la Hanse. En 1160, Henri le Lion octroie à Lübeck le droit urbain de Soest (Soester Stadtrecht), alors utilisé en Westphalie, marquant le point de départ de l’autonomie juridique de la ville. Ce droit est progressivement adapté aux besoins locaux et marchands, donnant naissance à un droit propre, le droit de Lübeck (Lübisches Recht), qui s’impose au XIIIe siècle comme modèle juridique dans tout l’espace baltique[13],[14],[15]. Ce cadre légal urbain structuré attira marchands et favorisa la formation d’alliances commerciales stables.\nÀ la fin du XIIIe siècle, la coopération entre marchands laisse place à une Hanse des villes, plus structurée et offensive politiquement. La Hanse organise des blocus contre Novgorod, Bruges, la Norvège, et devient une puissance collective, capable d’imposer ses intérêts à des États.\nEn 1356, se tient à Lübeck le premier Hansetag général (le 2 février). Sa tenue marque un tournant : les villes hanséatiques s’institutionnalisent comme organe collectif, prenant en charge à la fois les décisions économiques, diplomatiques et militaires. En 1359, l’expression même de « villes de la Hanse d’Allemagne » apparaît dans les traités, reflétant la transformation définitive de la « Hanse des marchands » en « Hanse des villes ».\n\nCe passage est le fruit de plusieurs évolutions : les conseils urbains organisés surpassent les guildes, l’écriture remplace progressivement la tradition orale, et la Hanse développe une structure logistique (navires armés, phares, pilotes) à l’échelle urbaine, garantissant efficacité et protection collective.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Haupthandelsroute_Hanse.png"
+  },
+  {
+    "id": 844,
+    "titre": "Cola di Rienzo à Prague",
+    "date": 1350,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "1350 le dictateur romain Cola di Rienzo se rend à Prague pour demander son soutien à l’empereur germanique Charles IV, mais celui-ci le fait prisonnier et le livrera à Clément VI en 1352.\nLe 15 décembre 1347, le cardinal Bertrand de Déaulx et les sénateurs Bertoldo Orsini et Luca Savelli rétablissent l'ancien ordre seigneurial. Rienzo n'a que le temps de s'enfuir[5].\n\nIl trouve d'abord refuge chez les franciscains de Monte Marilla. En 1350, il se rend à Prague où il tente de persuader le futur empereur Charles IV de venir délivrer l'Italie. Celui-ci l'arrête et le livre à Clément VI, qui le libère sur la demande de Pétrarque. Les Orsini et les Colonna contestent de nouveau l'autorité pontificale. En septembre 1353, le nouveau pape Innocent VI renvoie Cola di Rienzo à Rome après l'avoir absous, accompagné du cardinal Albornoz, pour y rétablir l'ordre",
+    "image": ""
   },
   {
     "id": 780,
@@ -9571,6 +9681,19 @@
     "image": ""
   },
   {
+    "id": 839,
+    "titre": "Pierre le Cruel épouse Blanche de Bourbon",
+    "date": 1353,
+    "mois": 6,
+    "zones": [
+      "Castille"
+    ],
+    "type": 3,
+    "description": "3 juin : mariage à Valladolid de Pierre le Cruel avec Blanche de Bourbon. De nombreuses tentatives de mariage avec les filles d’Edouard III ou Jeannne de Navvarre avaient échoué . Ces tentatives de mariage sont motivées par l'existence d'une flotte castillane puissante, élément important pour le contrôle des mers dans le cadre du conflit franco-anglais.En 1352, pour sceller une alliance avec le royaume de France, il décide d'épouser Blanche de Bourbon, descendante de Saint Louis par son père, le duc Pierre Ier de Bourbon, et de Philippe III de France par sa mère Isabelle de Valois. Il s'agit surtout d'une nièce du roi de France. Il s'agit d'un mariage de raison car Pierre Ier a déjà rencontré celle qui devient sa maîtresse attitrée, Marie de Padilla. \nLe roi de Castille abandonne son épouse dès le lendemain et la jette en prison. Blanche de Bourbon meurt en 1361, assassinée sur l'ordre de son mari dans sa chambre par deux hommes de main juifs, Daniot et Turquant, dont l'un est un de ses vassaux. Pour l'occire en faisant croire à un accident, ils font tomber une poutre sur elle, tandis que les autres membres du groupe étranglent ses servantes pour les faire taire.  L'échec de cette union fait tomber en disgrâce João Afonso de Albuquerque qui prend la tête de la rébellion en Castille aux côtés des demi-frères du roi, Henri de Trastamare et Fadrique de Castille. Il fait enfermer son épouse et rejoint sa maîtresse, Marie de Padilla, qui lui a déjà donné une fille. L'échec de ce mariage provoque la rupture de l'alliance avec le roi de France et la chute d'Albuquerque qui l'avait encouragé et organisé. La reine mère soutient Albuquerque, ainsi que les nombreux nobles que ce dernier a nommé aux différentes charges et fonctions dans le royaume. Albuquerque s'est réfugié auprès du roi du Portugal, Alphonse IV, qui refuse de le remettre à Pierre Ier. Ce dernier, qui a à cette époque l'appui de ses demi-frères, laisse Henri de Trastamare et Fadrique de Castille en poste à la frontière portugaise.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Louis_Georges_Paradis_-_L%27empoisonnement_de_Blanche_de_Bourbon%2C_%C3%A9pouse_de_Pierre_le_Cruel.jpg",
+    "legende": "'L'empoisonnement de Blanche de Bourbon, épouse de Pierre le Cruel', peinture par Louis-Georges Paradis, 1838"
+  },
+  {
     "id": 203,
     "titre": "Mathieu Cantacuzène",
     "date": 1353,
@@ -9583,6 +9706,98 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 840,
+    "titre": "Pierre 1er gouverne seul",
+    "date": 1353,
+    "mois": 8,
+    "zones": [
+      "Castille"
+    ],
+    "type": 2,
+    "description": "Pierre Ier a 19 ans. Sous l'influence de sa maîtresse, Marie de Padilla, il choisit de gouverner en autocrate en s'appuyant sur le peuple (qui lui octroie son surnom de Justicier). \nLe surnom de « Pierre le Cruel » vient des nombreux assassinats et exécutions qu'il a ordonnés, notamment celui d'une épouse, Blanche de Bourbon, belle-sœur du roi de France Charles V. Sa cruauté est essentiellement exercée sur les nobles, révoltés ou juste gênants, mais ne concerne pas les gens du peuple chez qui sa réputation est moins marquée. Durant ses 19 années de règne, il est en effet constamment en butte à des rébellions nobiliaires, soutenues par des souverains étrangers. e 26 mars 1350, alors qu'il assiège Gibraltar, Alphonse XI meurt de la peste. Pierre est proclamé « roi de Castille et León » à Séville.\nDès le début de son règne s'affrontent deux clans : la faction dirigée par sa mère Marie de Portugal et celle de la maîtresse d'Alphonse XI, Leonor de Guzmán, puissante tant que le père de Pierre était en vie et dont les enfants illégitimes[2] sont largement dotés en honneurs et privilèges. En 1351, rétabli d'une grave maladie qui l'a frappé l'année même de son couronnement, il ordonne la levée du siège de Gibraltar et quitte Séville pour la Castille, toujours sous la coupe de sa mère et d'Albuquerque. \nIl aurait été un protecteur de la communauté juive[1] dont fait partie sa principale favorite et où il recrute ses hommes de main, et également un protecteur des musulmans.\nSes partisans l'appelaient « le Justicier », mais sa défaite finale a relégué cette dénomination dans l'obscurité au profit de celle de ses ennemis.Sa volonté de renforcer l'autorité royale se traduisant par un comportement autoritaire et expéditif vis-à-vis de cette haute noblesse castillane, cette dernière ne tarde pas à se rebeller ouvertement : son ancien chancelier, João Afonso de Albuquerque, désireux de rendre le pouvoir à la noblesse, organise une conspiration avec les bâtards royaux et le roi d'Aragon Pierre IV. Il est le fils du roi de Castille Alphonse XI (1311-1350) et de son épouse depuis 1328, Marie de Portugal (1313-1357), fille du roi de Portugal Alphonse IV (1291-1357).\nSon père, qui vit avec sa favorite Leonor de Guzmán, ne s'occupe guère de son éducation, confiée à la reine Marie, qui vit avec son fils dans l'Alcázar de Séville. Mais c'est un favori du roi, le noble portugais João Afonso de Albuquerque, qui est choisi comme précepteur.\nÀ la mort d'Afonso de Albuquerque empoisonné à Medina del Campo en 1354 l'aîné des bâtards royaux Henri de Trastamare prend la tête de la rébellion. Henri de Trastamare est désormais à la tête de la rébellion. Le roi peut s'appuyer sur la petite noblesse, la bourgeoisie urbaine et la communauté juive qui sont les principaux bénéficiaires des lois et mesures adoptées par les Cortes à Valladolid. En revanche, Henri de Trastamare reçoit le soutien inconditionnel de la haute noblesse, du roi d'Aragon et du peuple.\nÀ Tolède, capitale de la Castille, Pierre Ier réprime les comploteurs, déclare la guerre à l'Aragon et fait assassiner en 1359 deux de ses demi-frères, Jean-Alphonse et Pierre respectivement âgés de 19 et 14 ans. Pierre le Justicier devient dès lors Pierre le Cruel.",
+    "image": ""
+  },
+  {
+    "id": 841,
+    "titre": "Rédaction des voyages d'Ibn Battûta",
+    "date": 1353,
+    "zones": [
+      "Monde islamique",
+      "Litterature"
+    ],
+    "type": 3,
+    "description": "A la demande du souverain Marinide  du Maroc Ibn Battûta (la Marco Polo musulman)  entreprend la rédaction de ses récits de voyages au titre : « Cadeau précieux pour ceux qui considèrent les choses étranges des grandes villes et les merveilles des voyages » communément appelé la  rhila (le voyage un genre littéraire musulman ) qui s’étend entre 1325 et 1349dicté à un lettré  Ibn Jubayy.  \nCertains érudits, s’ils considèrent le récit d’Ibn Battûta comme une œuvre littéraire importante, doutent en même temps de l’historicité des voyages accomplis. Ainsi, le spécialiste allemand en études islamiques Ralph Elger met-il en doute la véracité d’une bonne partie du contenu, qu’il soupçonne de n’être qu’un travail de fiction compilé à partir d’autres comptes rendus de voyage contemporains.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg/500px-Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg"
+  },
+  {
+    "id": 842,
+    "titre": "Statute of Praemunire",
+    "date": 1353,
+    "zones": [
+      "Angleterre",
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "Les Statute of Praemunire, votés par le Parlement anglais, interdisent aux sujets anglais de recourir à une justice étrangère (en particulier à celle de la Papauté, alors transférée à Avignon).\nLes statuts de Praemunire est le nom donné en Angleterre à divers actes qui prohibaient, entre autres choses :\n\nl'introduction en Angleterre des provisions papales;\nl'intervention du pape dans les élections ecclésiastiques;\nl'évocation des sujets du roi en cour de Rome sur des points dont la connaissance appartenait aux cours royales;\nl'acceptation en cour étrangère de bénéfices ecclésiastiques du royaume d'Angleterre.\nLes principaux de ces actes sont de 1343, 51, 53, 64. Grégoire XI indiqua pour discuter ces statuts une conférence à Bruges (1375); Wiclef y fut l'un des commissaires d’Édouard III; la convention qui y fut signée admit une partie de ces statuts.\nNotre seigneur le roi, avec l'assentiment et à la demande des seigneurs et des communes de son royaume d'Angleterre, réuni en son grand conseil[13] à Westminster le lundi\nsuivant la fête de saint Matthieu l'Apôtre, la vingt-septième année de son règne, c'est-à-dire en Angleterre ; en France la quatorzième, pour le bien de son royaume et pour le maintien de ses lois et coutumes, a ordonné et établi les mesures ci-dessous :\n\nPremièrement, considérant que les plaintes véhémentes et graves de ses seigneurs et des communes susmentionnés ont montré à Notre seigneur le roi combien de personnes ont été et sont encore amenées hors du royaume pour répondre dans des affaires relevant de la compétence de la cour de Notre seigneur le roi ; et aussi comment les jugements rendus par la même cour sont contestés devant une\nautre cour, au préjudice et au déshonneur de Notre Seigneur le Roi, de sa Couronne et de tout le peuple de son royaume, et à l'annulation du\ndroit coutumier dudit royaume en tout temps : par conséquent, après mûre délibération des seigneurs et autres membres dudit conseil, il est accordé et\nconvenu par Notre Seigneur le Roi et par lesdits seigneurs et communes que toute personne d'allégeance au Roi, quelle que soit sa condition, qui\nfait sortir quiconque du royaume dans une affaire relevant de la compétence de la cour du Roi ou dans des affaires ayant fait l'objet de jugements rendus par la cour du Roi, ou qui intente une action devant une autre cour pour annuler ou entraver les jugements rendus par la cour du Roi, se verra accorder un jour… [pour]\ncomparaître devant le Roi et son conseil, ou devant sa chancellerie, ou devant les juges du Roi dans leurs cours. Soit devant l'un ou l'autre tribunal, soit devant\nd'autres juges du roi désignés à cet effet, ils devront répondre devant le roi en personne de l'outrage que constitue un tel acte. Et s'ils ne se présentent pas en personne le jour dit pour être jugés, qu'eux, leurs procureurs, avocats, exécuteurs testamentaires, notaires et soutiens, à compter de ce jour, soient tenus de comparaître.\nQu'ils soient mis hors de la protection du roi, que leurs terres, leurs biens et leurs effets personnels soient confisqués au profit du roi, et que leurs corps, où qu'ils soient\ntrouvés, soient capturés, emprisonnés et rachetés au bon vouloir du roi...",
+    "image": ""
+  },
+  {
+    "id": 843,
+    "titre": "Décaméron de Boccace",
+    "date": 1353,
+    "zones": [
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "Durant la peste qui frappe la ville de Florence en 1348 et dont l’auteur a été témoin, trois jeunes hommes et sept jeunes femmes se réunissent à l’église Santa Maria Novella et prennent la décision de s’isoler dans une villa lointaine pour échapper à la peste.\nDans ce lieu, pour éviter de repenser aux horreurs vues, les jeunes gens se racontent des contes les uns aux autres. Ils restent durant quatorze jours dans la villa mais sans raconter d'histoire les vendredis et samedis. Le titre vient donc de ces dix journées de contes. Chaque jour, un participant tient le rôle de « roi » et décide du thème des contes. (soit 10 contes par jour durant 10 jours) Cependant, le premier et le neuvième jour, cette règle n'est pas appliquée. Au total, l'œuvre se compose de cent récits de longueur inégale. Les sources qu’utilise Boccace sont variées : des classiques gréco-romains aux fabliaux français médiévaux.\nBoccace est le fils naturel de Boccaccino di Chelino, un homme d’affaires important de Florence, originaire de Certaldo dont on sait qu'il fit plusieurs séjours à Paris.\nLié à la compagnie des Bardi, particulièrement puissante à Naples, Boccaccino di Chelino y est envoyé en 1327 comme représentant et conseiller du roi Robert Ier de Naples (1277-1343) qui lui donne un titre honorifique de chambellan\nBoccace accompagne son père à Naples en vue de faire des études de droit canonique.\nLe droit et le commerce l'intéressant peu, il s'intègre à la cour du roi où il a l'occasion de se lier avec des membres de la maison d'Anjou-Sicile\nIl approfondit ses connaissances littéraires, lisant les classiques latins, la littérature chevaleresque française, Dante et Pétrarque. Il rédige ses premiers textes d'inspiration courtoise, en prose, comme le Filocolo, ou en vers, comme le Teseida. Il compose un poème épique sur la guerre de Troie, le Filostrato\nla fin de l'année 1340, la famille de Boccace rentre à Florence dans un contexte économique difficile qui mènera notamment à la faillite des Bardi en 1345.  Cependant, il rencontre Pétrarque avec qui il se lie d'amitié.\nIl continue d'écrire : la Commedia delle Ninfe, qui relate les amours d'une nymphe et de son berger, l'Amorosa visione, le Ninfale d'Ameto et le Ninfale fiesolano, plus allégoriques\nLes ravages que la peste noire le décide à rédiger son chef-d'œuvre : le Décaméron. L'œuvre est un succès et se propage largement après 1353. \nEn 1362, Boccace vit une profonde crise religieuse et se retire en solitaire dans le domaine que son père possède à Certaldo. \nEntre 1365 et 1366, Boccace rédige le Corbaccio, œuvre qui reprend la tradition de la satire misogyne de façon moraliste. C'est son dernier ouvrage en toscan.\nil meurt à Certaldo en 1375 (62) , un an après la disparition de Pétrarque.\nSi Dante est considéré comme le fondateur de la poésie italienne, Boccace est généralement admis comme le créateur de la prose italienne.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Boccaccio_by_Morghen.jpg",
+    "legende": "Giovanni Boccaccio, gravure par Raffaello Morghen (1822).",
+    "video": "https://www.youtube.com/watch?v=SYEFi5UnRaU"
+  },
+  {
+    "id": 845,
+    "titre": "Retour et mort  de Cola di Rienzo",
+    "date": 1353,
+    "mois": 9,
+    "date_fin": 1354,
+    "mois_fin": 10,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": ", le nouveau pape Innocent VI renvoie Cola di Rienzo à Rome après l'avoir absous, accompagné du cardinal Albornoz, pour y rétablir l'ordre.En août 1354, il rentre à nouveau triomphalement dans Rome où il se fait élire sénateur Il engage Fra Moriale Jean Montréal du Bar, un mercenaire français  à la réputation effroyable, Après la mort de von Urslingen (1354), il refonde la Grande Compagnia avec des mercenaires allemands, italiens et provençaux. après la défaite de Rienzo il est arrêté avec ses frères et condamné à mort et décapité sur la place du Capitole le 29 août 1354 et enterré dans la Basilique Santa Maria in Aracoeli (derrière le monument Vicor Emmanuel) Érigée sur les ruines du temple de Junon Moneta au VIe siècle . Son nom provient d'une légende selon laquelle une sibylle aurait prédit à Auguste la venue du fils de Dieu en disant \"Haec est ara filii Dei\", ou \"Voici l'autel du fils de Dieu\" . Vers l'an 1000, elle est devenue une abbaye bénédictine, puis est passée aux Frères Mineurs, qui y officient encore aujourd'hui et qui l'ont rénovée, lui donnant son aspect romano-gothique actuel. Au Moyen-Âge, il a joué un rôle très important car les conseillers s'y réunissaient pour discuter de la \"Res Publica\", une sorte de nouveau forum de Rome. De là, Cola di Rienzo s'adressait au peuple. Les élections des Caporioni de la ville s'y tenaient également, et en 1341, le poète Francesco Petrarca y a obtenu son diplôme.\nLa construction d'un nouvel escalier en marbre de 124 marches, datant de 1348, a été commandée comme un vœu à la Vierge Marie pour la fin de l'épidémie de peste qui faisait rage en Europe. Avec du marbre provenant des marches du temple de Sérapis au Quirinal et fut ensuite inaugurée par le tribun Cola di Rienzo. Il était considéré comme un véritable Escalier Saint. Les vieilles filles qui cherchaient un mari, les femmes qui voulaient un enfant, les mères qui demandaient du lait pour leurs enfants, et même ceux qui voulaient gagner au Loto le grimpaient à genoux.\nSon pouvoir est cependant très contesté. 8 octobre 1354, les Colonna organisent un soulèvement populaire. Arrêté par les émeutiers, Cola di Rienzo est « lynché par la foule », condamné à mort, décapité ; son cadavre, exposé plusieurs jours en face du palais des Colonna, est brûlé sur un bûcher grandiose et ses cendres jetées dans le Tibre. \nAu XIXe siècle, Cola di Rienzo devient une figure revendiquée par les partisans du Risorgimento en vue de l'unification de l'Italie dans leur lutte face aux papes, alors que Cola di Rienzo, en son temps, avait souvent représenté le pouvoir temporel pontifical à Rome durant la résidence de Clément VI à Avignon.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/William_Holman_Hunt_-_Rienzi_vowing_to_obtain_justice.jpg/1280px-William_Holman_Hunt_-_Rienzi_vowing_to_obtain_justice.jpg",
+    "legende": "Rienzi jurant d'obtenir justice pour la mort de son jeune frère, par William Holman Hunt , 1848-1849",
+    "video": "https://www.youtube.com/watch?v=Tyqc5n7Vejw"
+  },
+  {
+    "id": 846,
+    "titre": "Traité de Westminster",
+    "date": 1353,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre",
+      "Papaute"
+    ],
+    "type": 1,
+    "description": "1er mars 1353 : Signature du traité de Westminster entre la France et l'Angleterre, fin de la première phase de la guerre de Succession de Bretagne.\nSous la pression du pape Innocent VI, Anglais, Français et Bretons mènent des négociations de paix.\n\nLe conflit breton est en effet dans une phase d'attente : Jean de Montfort est mort en 1345, laissant un fils de 4 ans sous la tutelle de son épouse Jeanne de Flandre. L'autre prétendant, Charles de Blois, est prisonnier à Londres et négocie sa rançon. Édouard III obtient, par le traité de Westminster du 1er mars 1353, qu'en contrepartie de la reconnaissance de Charles de Blois comme duc de Bretagne, ce dernier s'engage à verser une rançon de 300 000 écus et à ce que la Bretagne signe un traité d'alliance perpétuelle avec l'Angleterre. Cette alliance doit être scellée par le mariage de Jean de Montfort (fils) avec la fille d'Édouard III, Marie. Les époux étant cousins, le mariage nécessite des lettres de dispense canonique que le pape n'accorderait qu'avec l'approbation du roi de France.\n\nCharles de La Cerda, époux de Marguerite de Blois et très proche du roi de France, fait partie des plénipotentiaires. En revanche, Charles le Mauvais est tenu à l'écart des négociations. Cette paix franco-anglaise nuirait à ses intérêts car, sans la menace d'une alliance anglo-navarraise, il n'a aucune chance de faire valoir ses prétentions sur le comté de Champagne et encore moins sur la couronne de France. Or, en janvier 1354, au moment où Charles de La Cerda part pour la Normandie, le roi donne son accord au mariage anglo-breton",
+    "image": ""
+  },
+  {
+    "id": 847,
+    "titre": "Traité de commerce anglo-portugais",
+    "date": 1353,
+    "mois": 10,
+    "zones": [
+      "Angleterre",
+      "Portugal"
+    ],
+    "type": 3,
+    "description": "20 octobre 1353  : traité de commerce entre l’Angleterre et les ports de Lisbonne et de Porto[",
+    "image": ""
   },
   {
     "id": 355,
@@ -9716,6 +9931,19 @@
     "image": ""
   },
   {
+    "id": 837,
+    "titre": "1ere  éclipse mérinide",
+    "date": 1358,
+    "mois": 11,
+    "date_fin": 1361,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "À la mort d'Abû `Inân Fâris le 27 novembre 1358, la dynastie mérinide entra dans une première période de confusion. Chaque vizir tenta de mettre sur le trône son prétendant en choisissant de préférence l'individu le plus faible. Mansûr ben Sulayman (arrière-arrière-petit-fils de `Abd al-Haqq) avait été placé sur le trône par les chefs mérinides. Il s'est enfui lorsque Abû Sâlim a pris le pouvoir.\nAbû Ziân as-Sa`id Muhammad ben Fâris (أبو زيان السعيد محمد بن فارس) (1358)\nAbû Yahyâ abû Bakr ben Fâris (أبو يحي أبو بكر بن فارس) (1358-1359)\nAbû Sâlim Ibrâhîm ben `Alî (أبو سالم إبراهيم بن علي) est né à une date inconnue. Soutenu par le roi de Castille Pierre le cruel, il est un fils d'Abû al-Hasan ben `Uthmân. Il accéda au poste de sultan en 1359. Il fut destitué en 1361 au profit de son très éphémère successeur, Tachfîn, soutenu par les milices chrétiennes ; Ibn Khaldoun travailla à son accession au pouvoir et fut un temps son secrétaire[2].\nTachfîn (تاشفين) né à une date inconnue est le fils de Abû al-Hasan ben `Uthmân. Il fut nommé successeur de Abû Salîm, par les vizirs en 1361. Il ne régna que quelques mois.",
+    "image": ""
+  },
+  {
     "id": 742,
     "titre": "Dissolution de l'Empire Serbe",
     "date": 1360,
@@ -9755,6 +9983,18 @@
     "regne": true
   },
   {
+    "id": 830,
+    "titre": "Muhammad ben Yaqub",
+    "date": 1362,
+    "date_fin": 1366,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Petit-fils d'Abû al-Hasan ben `Uthmân réfugié à la cour de Castille. Il a pris le titre de sultan mérinide en 1362 après la période dite du « règne des vizirs ». Il est mort en 1366.\nAu début du règne d'Abû Ziyân Muhammad, le royaume était amputé du Sud, de la façade saharienne et de l'ouest algérien. Abû Ziyân Muhammad essaya d'échapper à la tutelle de son vizir et envisagea de le mettre à mort. Ce dernier prévenu du complot fit étrangler son maître en 1366. Le vizir remplaça le Sultan par Abû Fâris `Abd al-`Azîz, un des fils Abû al-Hasan qui jusque-là, avait été tenu enfermé dans le palais de Fès.",
+    "image": ""
+  },
+  {
     "id": 142,
     "titre": "Charles V le Sage",
     "date": 1364,
@@ -9779,6 +10019,19 @@
       "Castille"
     ],
     "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 831,
+    "titre": "Abu Faris Abd al-Aziz ben Ali",
+    "date": 1366,
+    "date_fin": 1372,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Sultan mérinide succédant à son père Abû al-Hasan ben `Uthmân en 1366.\nAbû Fâris est un homme malade, d'où son surnom de \"dolent\", mais volontaire et soutenu par sa mère. Le vizir `Omar, qui l'a mis au pouvoir, voyant que ce nouveau souverain échappe à son contrôle, projette de le tuer. Le souverain qui en est informé, fait capturer le vizir et le condamne à être haché à coups de sabre.\n\n`Abd al-`Azîz reprend en mains les régions en dissidence et le royaume mérinide retrouve son étendue. En 1368, il envoie des troupes pour soutenir le roi Pierre Ier de Castille et les Anglais contre le demi-frère de ce roi, le roi Henri II de Castille et les Français conduits par Bertrand Du Guesclin et Guillaume Boitel.\n\nIl meurt en 1372, laissant le trône à un très jeune enfant.",
     "image": "",
     "regne": true
   },
@@ -9866,6 +10119,19 @@
     "type": 2,
     "description": "Robert II Stuart (1316-1390) est roi d’Écosse de 1371 à sa mort et fondateur de la dynastie des Stuart. Petit-fils du roi Robert Bruce par sa mère Marjorie, il est le neveu et héritier de David II d’Écosse.\n\nDès 1318, il est reconnu comme successeur potentiel au trône en l’absence d’héritier direct de Robert Ier. Il devient grand sénéchal d’Écosse en 1326 et joue un rôle politique majeur comme régent durant la minorité de David II puis pendant sa captivité en Angleterre (1346-1357). Il participe activement à la gestion du royaume et à sa stabilité.\n\nSes relations avec David II sont parfois tendues, allant jusqu’à une révolte en 1363, mais il reste un acteur central du pouvoir. Il prépare aussi l’avenir dynastique en faisant reconnaître son fils aîné, Jean, comme héritier.\n\nÀ la mort de David II en 1371, Robert accède au trône à 55 ans et est couronné à Scone. Déjà âgé, il délègue largement le pouvoir à ses fils, notamment Jean, comte de Carrick, Robert, comte de Fife, et Alexandre de Badenoch, qui gouvernent différentes régions du royaume.\n\nSon règne est relativement pacifique, malgré quelques conflits avec l’Angleterre. En 1385, une tentative d’invasion conjointe avec la France échoue, suivie d’un raid anglais qui ravage Édimbourg. En 1388, les Écossais remportent une victoire importante à la bataille d’Otterburn, bien que le chef écossais James Douglas y trouve la mort.\n\nÀ la fin de sa vie, devenu sénile, Robert II laisse le pouvoir à ses fils : d’abord à Jean, puis à Robert lorsque celui-ci devient incapable de gouverner. Il meurt en 1390 à l’âge de 74 ans, après un long règne, et est enterré à Scone.",
     "image": ""
+  },
+  {
+    "id": 832,
+    "titre": "Muhammad as-Sa`îd",
+    "date": 1372,
+    "date_fin": 1374,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Muhammad Abu Zayyan monte sur le trône, alors qu'il est encore mineur, à la mort de son père, le sultan Abu Faris Abd al-Aziz. Ce dernier s'était lié d'amitié avec Lisan al-Din bin al-Khatib, ancien vizir de Mohammed V de Grenade, et pendant le règne de Muhammad bin Abd al-Aziz, al-Khatib est en sécurité.\n\nMohammed III envoie en actuelle Maroc deux princes mérinides qu'il retenait captifs à Grenade : Ahmad ibn Abd al-Aziz et Abdul Rahman bin Yaflusin, et les soutient dans la prise de contrôle du nord du Maroc. Muhammad Abu Zayyan est remplacé en 1374 par Abul Abbas Ahmad et Abd-al-Rahman. Abul-Abbas Ahmad (Mustanzir) devient le sultan de Fès, tandis qu'Abdul Rahman devient le sultan indépendant de Marrakech. Al-Khatib est emprisonné et exécuté par étranglement en 1375 alors qu'il était en captivité.",
+    "image": "",
+    "regne": true
   },
   {
     "id": 152,
@@ -10089,6 +10355,18 @@
     "regne": true
   },
   {
+    "id": 540,
+    "titre": "Shogunat de Kamakura",
+    "date": 1385,
+    "zones": [
+      "Japon"
+    ],
+    "type": 1,
+    "description": "L'époque de Kamakura (鎌倉時代, Kamakura jidai?, 1185–1333) est l'une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période, qui commence en 1185 et s'achève en 1333, est placée sous l'autorité politique du shogunat de Kamakura. Elle constitue la première partie du « Moyen Âge » de l'histoire japonaise, qui va jusqu'à la fin du XVIe siècle.\n\nLe XIIe siècle vit le pouvoir impérial et l'aristocratie civile laisser les premiers rôles aux familles de l'élite guerrière, d'abord les Taira, puis, à l'issue de la guerre de Genpei (1180-1185), aux Minamoto de la lignée Seiwa-Genji, dont le chef de clan, Yoritomo, devint alors le personnage le plus puissant du Japon. Installé à Kamakura, il reçut de l'empereur le titre de shōgun, qui donna son nom au régime qu'il fonda, le shogunat (ou Bakufu), qui voyait les guerriers exercer les premiers rôles. Après la mort de Yoritomo en 1199, sa veuve Hōjō Masako prit en main la direction du shogunat, qui passa sous la coupe de son clan, les Hōjō, dont les chefs devinrent les « régents » (shikken) du shogun, exerçant de fait le pouvoir suprême, leur triomphe étant confirmé après qu'une nouvelle réaction de la cour impériale eut échoué en 1221.\n\nL'époque de Kamakura vit donc l'élite guerrière s'élever au rang de catégorie dominante, les hommes-liges du régime shogunal recevant en récompense de leurs services des charges importantes et le contrôle de domaines dans tout le pays. Les empereurs retirés et la noblesse de Kyoto continuèrent cependant à jouer un rôle politique, administratif et culturel notable, de même que les grands temples du Kinai. Cette période vit donc une forme de partage de pouvoir entre ces différents groupes pour l'administration du pays, même si les chefs des principaux clans guerriers installés à Kamakura et dans le Kantō, dirigés par les Hōjō, gardaient la direction du pays. Les provinces étaient organisées suivant un modèle domanial, les domaines publics et privés étant dirigés par les membres de la haute élite, et gérés par des administrateurs locaux, encadrant la vie des communautés de paysans, pêcheurs, forestiers, artisans et autres professions. Les élites locales, avant tout d'extraction guerrière, augmentèrent progressivement leur emprise sur les domaines, au détriment de l'aristocratie civile et des temples. Les échanges avec l'extérieur connurent un essor à cette période, ce qui se voit dans le fait que les monnaies en circulation à partir du XIIIe siècle avaient toutes été importées depuis la Chine.",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 198,
     "titre": "Jean VII Paléologue  (à Selymbria)",
     "date": 1385,
@@ -10214,6 +10492,19 @@
     "regne": true
   },
   {
+    "id": 833,
+    "titre": "Ahmad ibn Ibrahim al-Mustansir",
+    "date": 1387,
+    "date_fin": 1393,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Abu al-'Abbas Ahmad ibn Abd al-Aziz (en arabe : أبو العباس أحمد بن عبدالعزيز), connu sous son nom regnal d’al-Mustansir, était un sultan mérinide régnant sur le Maroc de 1374 à 1384",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 190,
     "titre": "Bayezid Ier",
     "date": 1389,
@@ -10296,6 +10587,19 @@
     "regne": true
   },
   {
+    "id": 834,
+    "titre": "Abu Faris Abd al-Aziz ben Ahmad",
+    "date": 1393,
+    "date_fin": 1396,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Né à une date inconnue et mort en 1396 – sultan mérinide qui a succédé à Abû al-`Abbâs en 1393 et a régné jusqu'à sa mort.",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 163,
     "titre": "Benoît XIII (antipape)  Pedro Martínez de Luna",
     "date": 1394,
@@ -10333,6 +10637,35 @@
     ],
     "type": 1,
     "image": "",
+    "regne": true
+  },
+  {
+    "id": 835,
+    "titre": "Abu Amir Abd Allah",
+    "date": 1396,
+    "date_fin": 1398,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Né à une date inconnue. Il succéda à son frère Abû Fâris `Abd al-`Azîz ben Ahmad comme sultan mérinide en 1396. Abû `Âmir `Abd Allah est mort en 1398.\nProfitant de l'anarchie du royaume mérinide, le roi Henri III de Castille débarqua en Afrique s'empara de Tétouan massacra la moitié de la population et réduisit l'autre moitié en esclavage 1398.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 836,
+    "titre": "Abû Saïd Uthmân III",
+    "date": 1398,
+    "mois": 3,
+    "date_fin": 1420,
+    "mois_fin": 10,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 1,
+    "description": "Abu Said Uthman III, ou Abû Sa`id `Uthmân ben Ahmad[1], né à une date inconnue, est un sultan mérinide. Il succéda à son frère Abu Amir Abd Allah comme sultan en 1398. Il est mort assassiné par son vizir le 21 octobre 1420, laissant la succession à son fils Abu Muhammad Abd al-Haqq, âgé seulement d'un an.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Abusaiduthmaniiicoin.jpg",
+    "legende": "Monnaie d'or d'Abû Saïd Uthmân III",
     "regne": true
   },
   {
