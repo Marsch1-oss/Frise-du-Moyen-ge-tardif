@@ -842,8 +842,15 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     /* En début de période : pas de translateX si trop à gauche */
     var clampedPctLeft = Math.max(rawPct, 3);
     var finalPct = Math.min(clampedPctLeft, 97);
-    chip.style.left      = finalPct.toFixed(3) + '%';
-    chip.style.transform = 'translateX(-50%)';
+    chip.style.left = finalPct.toFixed(3) + '%';
+    /* Si proche de la fin : aligne à droite pour éviter le débordement */
+    if (finalPct > 88) {
+      chip.style.transform = 'translateX(-100%)';
+    } else if (finalPct < 8) {
+      chip.style.transform = 'translateX(0%)';
+    } else {
+      chip.style.transform = 'translateX(-50%)';
+    }
 
     if (level === 4 || level === 3) {
       chip.classList.add('chip-full');
@@ -873,7 +880,8 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.maxWidth   = 'none';
       chip.style.whiteSpace = 'normal';
       chip.style.lineHeight = '1.25';
-      chip.textContent = titreF;
+      /* Ajoute le titre comme noeud texte pour ne pas écraser dateLbl */
+      chip.appendChild(document.createTextNode(titreF));
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
@@ -900,7 +908,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
         ? MOIS_ABR2[evt.mois - 1] + ' ' + evt.date
         : '' + evt.date;
       chip.appendChild(dateLbl2);
-      chip.textContent = titreM;
+      chip.appendChild(document.createTextNode(titreM));
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
@@ -1887,9 +1895,8 @@ var MUSIC_TRACKS  = [
 var musicTrackIdx = 0;
 var musicStarted  = false;
 
-function startMusic() {
-  if (musicStarted) return;
-  musicStarted = true;
+function initMusicPlayer() {
+  /* Prépare le lecteur sans lancer la lecture (autoplay bloqué par les navigateurs) */
   var audio = document.getElementById('music-audio');
   if (!audio) return;
   audio.volume = 0.28;
@@ -1899,27 +1906,32 @@ function startMusic() {
     audio.src = MUSIC_TRACKS[musicTrackIdx];
     audio.play().catch(function(){});
   });
-  audio.play().catch(function() {
-    /* Autoplay bloqué par le navigateur : active au 1er clic */
-    var handler = function() {
-      audio.play().catch(function(){});
-      document.removeEventListener('click', handler);
-    };
-    document.addEventListener('click', handler);
-  });
-  updateMusicBtn();
+  /* Rend le bouton actif */
+  var btn = document.getElementById('music-toggle');
+  if (btn) btn.classList.remove('muted');
+}
+
+function startMusic() {
+  /* Appelé depuis wzInit — prépare seulement, ne joue pas encore */
+  initMusicPlayer();
 }
 
 function toggleMusic() {
   var audio = document.getElementById('music-audio');
   if (!audio) return;
-  if (!musicStarted) { startMusic(); return; }
+  /* Premier clic : si src pas encore chargé, init d'abord */
+  if (!audio.src || audio.src === window.location.href) {
+    initMusicPlayer();
+  }
   if (audio.paused) {
-    audio.play().catch(function(){});
+    musicStarted = true;
+    audio.play().catch(function(e) {
+      console.warn('Lecture audio impossible :', e);
+    });
   } else {
     audio.pause();
   }
-  setTimeout(updateMusicBtn, 50);
+  setTimeout(updateMusicBtn, 80);
 }
 
 function updateMusicBtn() {
@@ -1927,9 +1939,9 @@ function updateMusicBtn() {
   var btn    = document.getElementById('music-toggle');
   var status = document.getElementById('music-status');
   if (!audio || !btn) return;
-  var playing = musicStarted && !audio.paused;
-  btn.classList.toggle('muted', !playing);
-  if (status) status.textContent = playing ? '⏸' : '▶';
+  var playing = !audio.paused && audio.currentTime > 0;
+  btn.classList.remove('muted');  /* jamais grisé */
+  if (status) status.textContent = playing ? '\u23F8' : '\u25B6';
 }
 
 
