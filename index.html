@@ -225,7 +225,7 @@
     .frise-bg-strip {
       position: absolute;
       inset: 0;
-      pointer-events: none;   /* ne bloque pas les clics sur les chips */
+      pointer-events: none;
       overflow: hidden;
       border-radius: var(--radius);
       z-index: 0;
@@ -239,42 +239,42 @@
     }
     .frise-bgf-img {
       display: block;
-      width: 80px;
-      height: 100px;
-      object-fit: contain;
-      object-position: center;
-      opacity: 0.10;          /* très estompé pour ne pas gêner la lecture */
-      border-radius: 4px;
-      filter: sepia(20%) saturate(70%);
-      transition: opacity 0.22s, transform 0.22s, filter 0.22s;
+      width: 110px;
+      height: 135px;
+      object-fit: cover;
+      object-position: top;
+      opacity: 1;
+      border-radius: 6px;
+      border: 1.5px solid rgba(154,107,26,0.35);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.22);
+      transition: transform 0.2s, box-shadow 0.2s;
       user-select: none;
       -webkit-user-drag: none;
     }
     .frise-bgf-wrap:hover .frise-bgf-img {
-      opacity: 0.70;
-      transform: scale(1.55) translateY(-8%);
-      filter: sepia(0%) saturate(100%);
+      transform: scale(1.06);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.32);
       z-index: 15;
     }
-    /* Légende au survol */
+    /* Légende : tooltip discret au survol */
     .frise-bg-caption {
       position: absolute;
-      top: calc(100% + 5px);
+      bottom: calc(100% + 6px);
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(28,20,10,0.88);
+      background: rgba(28,20,10,0.90);
       color: #f5edd8;
-      font-size: 0.64rem;
+      font-size: 0.66rem;
       font-style: italic;
       white-space: normal;
-      width: 150px;
+      width: 160px;
       text-align: center;
-      padding: 4px 7px;
-      border-radius: 4px;
+      padding: 5px 8px;
+      border-radius: 5px;
       line-height: 1.35;
       pointer-events: none;
       opacity: 0;
-      transition: opacity 0.18s;
+      transition: opacity 0.16s;
       z-index: 30;
     }
     .frise-bgf-wrap:hover .frise-bg-caption { opacity: 1; }
