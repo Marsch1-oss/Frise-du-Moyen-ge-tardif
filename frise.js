@@ -1963,3 +1963,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   loadEvents();
 });
+document.addEventListener('click', function firstClick() {
+  var audio = document.getElementById('music-audio');
+  if (audio && audio.paused) {
+    audio.play().catch(()=>{});
+  }
+  document.removeEventListener('click', firstClick);
+});
