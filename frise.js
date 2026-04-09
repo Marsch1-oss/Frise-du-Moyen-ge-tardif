@@ -1896,17 +1896,26 @@ var musicTrackIdx = 0;
 var musicStarted  = false;
 
 function initMusicPlayer() {
-  /* Prépare le lecteur sans lancer la lecture (autoplay bloqué par les navigateurs) */
   var audio = document.getElementById('music-audio');
   if (!audio) return;
   audio.volume = 0.28;
   audio.src    = MUSIC_TRACKS[0];
+
+  /* Enchaîne les pistes */
   audio.addEventListener('ended', function() {
     musicTrackIdx = (musicTrackIdx + 1) % MUSIC_TRACKS.length;
     audio.src = MUSIC_TRACKS[musicTrackIdx];
     audio.play().catch(function(){});
   });
-  /* Rend le bouton actif */
+
+  /* Démarre au premier clic n'importe où sur la page */
+  document.addEventListener('click', function firstClick() {
+    if (audio.paused) audio.play().catch(function(){});
+    updateMusicBtn();
+    document.removeEventListener('click', firstClick);
+  });
+
+  /* Bouton toujours actif */
   var btn = document.getElementById('music-toggle');
   if (btn) btn.classList.remove('muted');
 }
@@ -1962,11 +1971,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   loadEvents();
-});
-document.addEventListener('click', function firstClick() {
-  var audio = document.getElementById('music-audio');
-  if (audio && audio.paused) {
-    audio.play().catch(()=>{});
-  }
-  document.removeEventListener('click', firstClick);
 });

@@ -9176,7 +9176,7 @@
   },
   {
     "id": 781,
-    "titre": "3e  guerre vénéto-génoise où guerre de Caffa",
+    "titre": "3e  guerre vénéto-génoise où guerre des détroits",
     "date": 1350,
     "date_fin": 1355,
     "zones": [
@@ -9996,6 +9996,258 @@
     "regne": true
   },
   {
+    "id": 866,
+    "titre": "Mort du seigneur de Milan Jean Visconti",
+    "date": 1354,
+    "mois": 10,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": "Octobre 1354 mort du seigneur de Milan Jean Visconti , Le 5 octobre 1354 , Giovanni Visconti , archevêque de Milan et doge de Gênes , décède. Son pouvoir est partagé entre ses neveux Matteo II , Galeazzo II et Bernabò . Un membre de la famille Visconti lui succède également comme archevêque de Milan .\nBarnabé était le troisième fils d'Étienne Visconti (NC-1327) et de la génoise Valentine Doria (1290-1359).\nÉtienne était lui-même le cinquième fils du seigneur Mathieu Ier et ses trois enfants Mathieu, Galéas et Barnabé se trouvaient être, après les décès successifs de leur oncle Galéas Ier, de leur cousin Azzon, puis de leurs deux autres oncles Lucien et Jean, qui avaient tous quatre régné sur Milan, les derniers descendants légitimes mâles de la famille.En juillet 1340, il participe avec ses frères à la conjuration menée par Francesco Pusterla et quelques autres nobles contre ses oncles Jean et Lucien qui viennent de succéder à leur cousin Azzon. Cette conjuration ayant été dénoncée, Lucien sévit contre les conjurés mais ne punit pas ses neveux. En 1346, après un nouveau complot, il est contraint à l'exil en même temps que ses frères. Barnabé quitte Milan pour voyager en Savoie, dans les Flandres et en France où il est l'hôte de la cour de Philippe VI en 1348.\nEn mars 1349, après la mort de Lucien, il est rappelé avec ses frères à Milan par l'oncle restant, l'archevêque Jean qui a succédé à son frère Lucien, pour participer au gouvernement dont il est devenu seul seigneur et vicaire impérial et qui les reconnaît comme ses successeurs.Le 5 octobre 1354, Jean décède et les trois neveux Mathieu II, Galéas II et Barnabé deviennent co-seigneurs de Milan en se partageant les seigneuries affidées :\n\nMathieu II est seigneur de Plaisance, Lodi, Parme, Bologne, Pontremoli, Monza et San Donnino[2].\nGaléas II obtient Pavie, Côme, Novare, Verceil, Asti, Alba, Tortona, Alexandrie et Vigevano.\nBarnabé règne sur Bergame, Brescia, Crémone, Soncino, Lonato et Val Camonica.Barnabé fait commencer la construction de la citadelle de Bergame. Le 26 septembre 1355, Mathieu II décède[3] et Barnabé reprend les citadelles de Lodi, Parme, Bologne, et Pontremoli.À la suite d'offenses faites à l'empereur Charles IV par les Visconti, celui-ci dépêche son vicaire impérial Markward von Randeck qui attaque Milan le 4 octobre 1356. Le 12 novembre, le vicaire impérial est fait prisonnier par les troupes de Barnabé, commandées par Lodrisio Visconti, un neveu de Mathieu Ier.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg/960px-IMG_6926_-_Milano_-_Duomo_-_Tomba_Giovanni_Visconti%2C_1354_-_Foto_di_Giovanni_Dall%27Orto_-_8-Mar-2007.jpg",
+    "legende": "Tombeau d'Otton Visconti et de Jean Visconti dans la cathédrale de Milan"
+  },
+  {
+    "id": 868,
+    "titre": "Andrea Orcagna retable de la chapelle Strozzi",
+    "date": 1354,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "1354-1357 : retable pour la chapelle Strozzi à Santa Maria Novella à Florence, d’Andrea Orcagna (le Christ glorieux parmi les anges et les saints). \nAndrea Orcagna fut l'élève d'Andrea Pisano et de Giotto di Bondone. Ses frères Jacopo et Nardo di Cione furent également peintres, et Matteo di Cione, sculpteur.\nSelon le peintre du XVIe siècle Giorgio Vasari, Andrea Orcagna est la plus forte personnalité de Florence au milieu du XIVe siècle. Il le présente comme doué pour la peinture, la sculpture, l’architecture et la poésie[1].\nTravaillant d'abord avec son frère Bernardo, il montre son talent sur plusieurs fresques à Florence, ce qui pousse la ville de Pise à lui confier des travaux, notamment un Jugement dernier, dans le Camposanto. Puis il reproduit ces compositions dans la basilique Santa Croce de Florence, remplaçant les visages des personnages. Selon Vasari, il représente parmi les damnés de l'Enfer un huissier qui a saisi ses biens, ainsi que le notaire et le juge qui ont contribué à sa condamnation[1].\nL'une de ses œuvres majeures demeure le tabernacle de l'église d'Orsanmichele à Florence.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/8_Andrea_di_Cione_Orcagna%2C_Strozzi_Altarpiece._1354-57%2C_Santa_Maria_Novella%2C_Florence..jpeg/1280px-8_Andrea_di_Cione_Orcagna%2C_Strozzi_Altarpiece._1354-57%2C_Santa_Maria_Novella%2C_Florence..jpeg",
+    "legende": "Retable de Strozzi (1354-1357), Santa Maria Novella , Florence"
+  },
+  {
+    "id": 869,
+    "titre": "Bataille de Viterbe",
+    "date": 1354,
+    "mois": 3,
+    "zones": [
+      "Papaute",
+      "Italie"
+    ],
+    "type": 1,
+    "description": "10 Mars 1354 Bataille de Viterbe, le cardinal et condotiere espagnol Albornoz  rétablit l’autorité papale sur les états pontificaux . \nEn 1353, Innocent VI l’envoie comme légat en Italie, à la tête d’une petite armée de mercenaires en vue de restaurer l’autorité papale sur les États pontificaux. Après avoir reçu l’appui de l’archevêque de Milan, Giovanni Visconti et de ceux de Pise, Florence et Sienne, il commence une campagne contre le seigneur de Viterbe Giovanni di Vico qui avait usurpé la plupart des territoires du Pape dans le Latium et en Ombrie.\n\nGiovanni di Vico est battu à la bataille de Viterbe le 10 mars 1354 et signe un acte de soumission.\n\nPour marquer son autorité sur Viterbe, il décide aussitôt d'y faire construire un palais proche de l'église San Faustino[1].\n\nAlbornoz se déplace alors vers les Marches et la Romagne contre les Malatesta de Rimini et les Ordelaffi de Forlì. Il soumet ensuite les Montefeltro d’Urbino et les da Polenta de Ravenne ainsi que les villes de Senigallia et d’Ancône.Entre 1354 et 1357, il soumet Orvieto en réformant les statuts de la cité pour réduire les pouvoirs du tyran Giovanni de Vico.À la mort d'Innocent VI en 1362, Albornoz fut pressenti pour lui succéder mais refusa la tiare. Le nouveau pape fut Urbain V qui signa un pacte avec Barnabé Visconti en 1364 afin de pouvoir se consacrer à la croisade contre les Turcs.En tant que légat, Albornoz continue à agir en faveur du retour de la papauté à Rome. En 1367 Urbain V prend la route de Rome. Albornoz le reçoit à Viterbe, mais meurt peu après, avant même qu'Urbain V ne soit rentré à Rome. Selon ses souhaits, il est d’abord inhumé dans la basilique de saint François à Assise. Quatre ans plus tard ses restes sont transférés à la cathédrale de Tolède.\nEn 1357, il publie la Constitutiones Sanctæ Matris Ecclesiæ qui restera la constitution des États pontificaux jusqu’en 1816.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cardinal_Abornoz_en_Italie.jpg/960px-Cardinal_Abornoz_en_Italie.jpg",
+    "legende": "Miniature du XIVe siècle montrant le cardinal Albornoz recevant les clefs des villes italiennes soumises"
+  },
+  {
+    "id": 870,
+    "titre": "Création de la Décapole",
+    "date": 1354,
+    "mois": 8,
+    "zones": [
+      "Alsace"
+    ],
+    "type": 2,
+    "description": "Dix villes impériales libres d' Alsace fondèrent la Richestette (Conseil des villes libres) d'Alsace dans le but de s'entraider pour défendre leurs droits et libertés. Les villes de la Décapole échappent ainsi a l’autorité des Habsbourg. Strasbourg devient ville libre. \nLes villes de Colmar ,,Mulhouse ,Kaysersberg, Turckheim, Munster en Hte Alsace , Haguenau, Wissembourg, Sélestat , Obernai, Rosheim, en Basse Alsace Ont décidé de s'unir le siège de la Décapole est situé à Haguenau le grand bailli impérial Landvogt de Haguenau exercera une tutelle sur les affaires de politique extérieure. 7 villes avaient déjà conclu une alliance dès 1342 cette Ligue régionale s'explique par les troubles et l'insécurité croissante . Strasbourg qui bénéficie du droit d'immédiateté d'empire dispose d'un statut d'autonomie totale à l'instar d'un état Soudan ne fait donc pas partie de la Décapole mais peut signer des accords avec elle .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ancien_h%C3%B4tel_de_ville_de_Colmar.jpg/1280px-Ancien_h%C3%B4tel_de_ville_de_Colmar.jpg",
+    "legende": "https://fr.wikipedia.org/wiki/D%C3%A9capole_(Saint-Empire)#/media/Fichier:Ancien_h%C3%B4tel_de_ville_de_Colmar.jpg:~:text=B%C3%A2timent%20du%20Ko%C3%AFfhus%2C%20l%27Ancienne%20douane%20de%20Colmar%2C%20pouvant%20accueillir%20les%20repr%C3%A9sentants%20des%20dix%20villes.%20(BNU%20de%20Strasbourg)"
+  },
+  {
+    "id": 871,
+    "titre": "Assassinat de Charles de la Cerda",
+    "date": 1354,
+    "mois": 1,
+    "zones": [
+      "France"
+    ],
+    "type": 1,
+    "description": "La puissance du roi de Navarre est telle que, le 8 janvier 1354, il fait assassiner en toute impunité son rival Charles de la Cerda (le favori du roi)Charles le Mauvais décide de faire échouer le processus de paix en cours et pour cela de capturer Charles de la Cerda. Mais, le 8 janvier 1354, Charles de la Cerda est assassiné à L'Aigle par des hommes du roi de Navarre.\nCharles de Navarre endosse la responsabilité de la mort de la Cerdaqu'il justifie comme une question d'honneur, pour couvrir son frère Philippe de Navarre. \nLes traités de Mantes et de Valognes avec Charles de Navarre\nIl obtient même, lors du traité de Mantes, des concessions territoriales et de souveraineté grâce à la menace d'une alliance avec les Anglais. Charles de Navarre est fortement soutenu, et les seigneurs normands se rangent derrière lui, Il envoie Jean de Fricamp emprunter de l'argent à Bruges pour lever une armée et demande de l’aide à Édouard III, au Prince Noir, à la reine Philippa de Hainaut et à Jean de Gand, duc de Lancastre.\nLe 22 février 1354, Jean le Bon est contraint de signer le traité de Mantes pour éviter une reprise de la guerre avec les Anglais. Il peut recevoir l'hommage des seigneurs normands qui le soutiennent. Ce traité l'autorise à tenir chaque année un échiquier pour y rendre justice, sans possibilité d'appel au parlement de Paris. Au total, il reçoit les prérogatives du duc de Normandie, sans en avoir le titre. Pour la forme, il doit demander pardon au roi devant un lit de justice tenu le 4 mars, mais c'est son seul châtiment. Les partisans de Charles reviennent en force dans le conseil du roi.\n\nJean le Bon tente de faire assassiner Charles II de Navarre et ses frères Philippe et Louis à l'occasion d'un dîner en août 1354. Charles II quitte alors Paris pour Avignon, puis rentrera en Navarre[]. Jean II parviendra ensuite à faire prisonnier Philippe de Navarre, en avril 1355, afin d'affaiblir Charles II. Il faudra que le roi de Navarre revienne en Normandie avec une forte troupe armée, en août 1355, pour que Jean II cède et signe le traité de Valognes du 10 septembre 1355, qui consacre l'application du traité de Mantes",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Blason_Charles_de_la_Cerda_%28selon_Gelre%29.svg/250px-Blason_Charles_de_la_Cerda_%28selon_Gelre%29.svg.png"
+  },
+  {
+    "id": 872,
+    "titre": "Traité (provisoire) de Guines",
+    "date": 1354,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "6 avril 1354 : à Guînes, au terme de longues négociations le cardinal diplomate Guy de Boulogne, envoyé par le pape Innocent VI, parvint à mettre d'accord les représentants du roi de France et d'Angleterre sur un projet de traité de paix, qui était censé être signé par la suite en Avignon et qui n'aboutit finalement pas.\nLes négociations franco-anglaises de Guînes évoluent très favorablement pour les Anglais. Cet accord qui préfigure le traité de Brétigny est signé le 6 avril 1354. Il est envisagé que le roi d'Angleterre reçoive toute l'Aquitaine des Plantagenêts (le tiers du royaume de France) et garde Calais, en échange du renoncement à la couronne de France.\nLe traité de Guînes doit être confirmé à Avignon à l'automne. Une trêve valable jusqu'au 1er avril 1355 est conclue[98].\n\nLes négociations d'Avignon (novembre 1354) et les intrigues du roi de Navarre\nEn novembre 1354, pendant les négociations de paix franco-anglaises, Charles le Mauvais se rend à Avignon. Pour lui un traité de paix franco-anglais serait une catastrophe, surtout si Édouard III acceptait de renoncer à la couronne.\nPar un subterfuge, il reste quinze jours dans la ville en faisant croire qu'il est reparti en Navarre, et influe sur le cours des négociations\nIl conclut avec le duc de Lancastre un pacte qui prévoit le démembrement de la France. Édouard recevrait la couronne de France, mais laisserait à Charles de Navarre la Normandie, la Champagne, la Brie, le Languedoc et quelques autres fiefs. Un débarquement anglais est prévu pour la fin de la trêve, qui expire le 24 juin 1355\nLe roi français Jean II refusa toutefois de le ratifier, car ses conditions étaient politiquement et territorialement avantageuses pour l'Angleterre et menaçaient la souveraineté française. Jean II craignait que l'acceptation du traité ne légitime les revendications anglaises sur le territoire français, n'affaiblisse son pouvoir et ne crée un précédent pour d'autres ambitions anglaises.[",
+    "image": ""
+  },
+  {
+    "id": 873,
+    "titre": "Les ottomans s'emparent de Gallipoli",
+    "date": 1354,
+    "mois": 4,
+    "zones": [
+      "Byzance",
+      "Ottomans"
+    ],
+    "type": 2,
+    "description": "Le sultan ottoman Orhan intervient en Europe pour aider son beau-père Jean Cantacuzène contre son rival Jean V Paléologue soutenu par les Serbes. Son fils Suleyman s'empare par surprise avec 39 hommes du château de Tzympe (Cinbi), sur la rive européenne de l'Hellespont. Il renforce la garnison qui compte 3 000 hommes en quelques jours. Quand Jean VI sollicite leur aide, Orhan accepte mais exige que Suleyman conduise les opérations. 10 000 hommes de plus viennent renforcer les troupes de Suleyman qui réussit à vaincre les Serbes. Plus tard, il profite de ce qu'un tremblement de terre ouvre une brèche dans les remparts de Gallipoli pour s'emparer durablement de la ville. \nL' Empire ottoman , autrefois allié de Cantacuzène durant la guerre civile, entreprend des conquêtes indépendantes au sein d'un empire affaibli par la guerre. Le sultan Orhan Ier parvient à s'emparer de Gallipoli , frappée quelques jours auparavant par un violent tremblement de terre. Après cinquante années de défaites, les Byzantins ont ainsi perdu la quasi-totalité de leurs possessions en Asie Mineure . L'accès à la mer Égée et à la mer de Marmara permet aux Ottomans de conquérir ensuite le Péloponnèse et la Grèce , puis de progresser vers le nord, en Serbie et en Hongrie .",
+    "image": ""
+  },
+  {
+    "id": 874,
+    "titre": "Abdication de Jean VI Cantacuzène",
+    "date": 1354,
+    "mois": 12,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "10 décembre : Jean VI Cantacuzène doit abdiquer[15]. Les Cantacuzène se retirent en Morée (fin en 1382) et l’Empire byzantin est réduit à la Thrace, à Thessalonique et à quelques îles Égéennes. Les Turcs appelés par Jean Cantacuzène tiennent Gallipoli, tête de pont qui leur permet de passer d’Asie en Europe. Jean Cantacuzène se retire au Mont Athos puis à Mistra où il meurt en 1383.\n\nLe 21 mai 1346, Jean Cantacuzène parvient à s’imposer comme co-empereur au terme de la guerre civile : il confirme sa proclamation comme co-empereur, aux côtés de Jean V Paléologue, en acceptant de recevoir la couronne impériale à Andrinople des mains du patriarche de Jérusalem, mais il refuse catégoriquement de faire proclamer son fils Mathieu comme empereur associé. Finalement, le 3 février 1347, il entre à Constantinople.\nDevenu empereur, Jean Cantacuzène prend le titre de Jean VI, montrant ainsi qu'il refuse la préséance de rang sur l'empereur légitime, Jean V Paléologue. Cet arrangement n'est pas approuvée par la dynastie règnante, qui persiste à ne voir en lui qu'un usurpateur.\nLe règne de Jean VI est marqué par de nombreux troubles intérieurs, tant sur le plan social que sur le plan militaire :\n\nla peste noire s'abat sur l'Empire dès la première année du règne, ravageant notamment Constantinople, aggravant l'état de découragement et d'apathie dans lequel se trouvaient les byzantins après deux guerres civiles ;\nses anciens alliés et ceux d'Anne de Savoie (vénitiens et turcs) se font menaçants, notamment Etienne V, tsar de Serbie ;\nil doit faire face aussi à une opposition populaire et religieuse, et à une révolte des Zélotes à Thessalonique ;\nen août 1348 les Génois envahissent la Corne d'Or et incendient la flotte byzantine.\nil doit céder aux Génois Salymbrie et Héraclée en 1352, malgré le concours des Vénitiens et doit faire face à une nouvelle guerre civile, qui l'oppose à Jean V, dès 1351.\nLa population de Constantinople demeure cependant attachée à la dynastie légitime des Paléologues, et en particulier à Jean V et s'oppose de plus en plus nettement à Jean VI. L'opposition se renforce en avril 1353 lorsque Jean VI fait proclamer coempereur son fils Mathieu Cantacuzène.\n\nCe couronnement provoque l'irritation du patriarche Calliste Ier de Constantinople, qui abdique et est remplacé par Philothée Kokkinos, partisan déclaré de Jean VI.\n\nLe 22 novembre 1354, Jean V Paléologue entre à Constantinople, où il est acclamé par la foule. Le 1er décembre suivant, il signe avec Jean VI un accord de gouvernement aux termes duquel les deux hommes exercent en commun le pouvoir, tandis que Mathieu Cantacuzène demeurait empereur indépendant d'Andrinople jusqu'à sa mort.\n\nFinalement, le 10 décembre 1354, Jean VI abdique et revêt l'habit monastique en prenant le nom de Joasaph Cantacuzène ; il entre au monastère Saint-Georges-des-Manganes, à Constantinople. Il s'installe plus tard au monastère de la Néa Péribleptos ; il meurt à Mistra auprès de son fils Manuel.\n\nSon épouse, Irène, prend également le voile sous le nom d'Eugénie et se retire au couvent de Kyra Martha.\n\nJean Cantacuzène consacrera la fin de sa vie à l'écriture de ses Mémoires, qui sont achevés en 1369.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Meister_der_Schriften_des_Johannes_VI._Cantacuzemos_001.jpg/960px-Meister_der_Schriften_des_Johannes_VI._Cantacuzemos_001.jpg",
+    "legende": "Jean VI Cantacuzème , représenté deux fois sur une fresque, en empereur et en moine."
+  },
+  {
+    "id": 875,
+    "titre": "Le Luxembourg  est érigé en duché",
+    "date": 1354,
+    "mois": 3,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Le 13 Mars A Metz , Charles IV du Saint-Empire érige le Luxembourg en duché en faveur de son frère Venceslas Ier. Il passera par héritage à la maison de Bourgogne. Venceslas Ier devient le premier duc de Luxembourg .",
+    "image": ""
+  },
+  {
+    "id": 877,
+    "titre": "Traité de Mantes",
+    "date": 1354,
+    "mois": 2,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "Le traité de Mantes fut signé le 22 février 1354 à Mantes par Jean II de France et Charles II de Navarre.\n\nPar ce traité, Charles II le Mauvais, roi de Navarre accepta de céder Asnières-sur-Oise, Pontoise et Beaumont. En contrepartie il reçut le comté de Beaumont-le-Roger, les châteaux de Breteuil, Conches et de Pont-Audemer, le clos du Cotentin avec la ville de Cherbourg, les vicomtés de Carentan, Coutances et Valognes en Normandie. Ce traité lui donnait également la permission de tenir chaque année un échiquier, prérogative ducale et surtout les affaires ne pourront plus être jugées en appel à Paris. Ce traité lui donna l'assurance de percevoir rapidement la dot de son épouse Jeanne de France, dot qui s'élevait à 60 000 deniers or.\nLorsque l'on étudie ce traité, on se rend compte que le roi de Navarre fut largement gagnant, malgré la perte des châtellenies du Vexin et de l'Île-de-France.\nIl est confirmé et précisé par le traité de Valognes signé l'année suivante.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Paix_entre_le_R%C3%A9gent_Charles_et_Charles_II_de_Navarre.png/500px-Paix_entre_le_R%C3%A9gent_Charles_et_Charles_II_de_Navarre.png",
+    "legende": "BnF Ms. Français 2813 fol. 416r (Grandes Chroniques de France), Représentation d'une paix postérieure au traité de Mantes avec le roi de Navarre. Sur la demande de Jeanne d'Évreux, le Régent Charles et Charles le Mauvais se sont assemblés sous un pavillon neutre et jurent sur une hostie présentée par Guillaume V Guitard, évêque de Lisieux.vers 1380. Le Régent et le roi de Navarre prêtent serment sur une hostie présentée par l'évêque de Lisieux."
+  },
+  {
+    "id": 878,
+    "titre": "Mathieu Cantacuzène  coempereur byzantin.",
+    "date": 1354,
+    "mois": 2,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "En 1346, au cours de la guerre civile, son père lui confie le gouvernement militaire de la Thrace.\n\nEn 1347, lorsque son père devient empereur, il se constitue une principauté à Andrinople tout en s'impatientant de ne pouvoir prendre le pas sur Jean V Paléologue afin de pouvoir, un jour, succéder à son père.\n\nAprès la tentative de Jean V Paléologue de reprendre le pouvoir en 1352, Mathieu est associé au trône impérial par son père en avril 1353. Il est alors couronné co-empereur, en l'église des Blachernes, en février 1354. Ce couronnement apparaît, aux yeux des Byzantins, comme le transfert du pouvoir héréditaire entre les mains de la famille Cantacuzène.\n\nAprès l'abdication de son père en décembre 1354, il se maintient au pouvoir, mais il est capturé par les Serbes à Philippes et est ensuite livré à Jean V. Il est enfermé, avec sa femme et ses enfants, dans les îles de Ténédos puis de Lesbos.\n\nEn décembre 1357, il abdique son titre impérial au cours d'une cérémonie qui se déroule à Eibatai, sur la mer de Marmara. Il se retire ensuite auprès de son frère Manuel, despote de Mistra, à qui il succède, en 1380. En 1383, il se retire dans un monastère où il compose des ouvrages religieux et philosophiques.",
+    "image": ""
+  },
+  {
+    "id": 879,
+    "titre": "Alexis  sacré métropolite de Moscou",
+    "date": 1354,
+    "mois": 6,
+    "zones": [
+      "Russie"
+    ],
+    "type": 2,
+    "description": "Alexis, métropolite de Kiev, puis de Moscou et de toute la Russie (né entre 1292 et 1305 à Moscou - mort le 12 février 1378 à Moscou), occupa le premier siège épiscopal des terres russes et ukrainiennes de 1354 à 1378. C'est un saint de l'Église orthodoxe. Il est fêté par elle le 12 février (dormition), le 20 mai, et le 5 octobre (dates du calendrier julien).\nSaint Alexis, né Éleuthère, était le fils d’un gouverneur de Moscou et le filleul du prince Ivan Kalita. En 1320, il entra au monastère de l’Épiphanie où il mena une vie d’ascète pendant plus de vingt ans, sous l’influence de Serge de Radonège.\n\nRemarqué pour ses qualités, il fut choisi par le métropolite Théognoste comme vicaire, puis lui succéda en 1354 comme métropolite de Kiev et de toute la Russie, fonction confirmée par Constantinople. Il fonda en 1365 le Couvent du Miracle au Kremlin, centre religieux majeur de Moscou.\n\nPremier métropolite à s’installer durablement à Moscou, il accompagna l’unification de la Russie. Durant la minorité du prince Dimitri Donskoï, il exerça un rôle politique important et contribua à former le futur dirigeant, notamment dans la lutte contre les Tatars.\n\nAlexis joua aussi un rôle idéologique en soutenant l’idée de Moscou comme « troisième Rome », destinée à devenir le centre de la chrétienté. Après sa mort en 1378, il fut rapidement vénéré comme saint, ses reliques étant considérées comme miraculeuses.\nEnfin, il est également connu pour avoir traduit les Évangiles du grec en russe.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/AlessiodiMosca.jpg",
+    "legende": "Le métropolite Alexis, avec des scènes de sa vie Dionisii ou Dionysius (vers 1440-vers 1510)"
+  },
+  {
+    "id": 880,
+    "titre": "Charles IV entre en Italie",
+    "date": 1354,
+    "mois": 10,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "En 1354, Charles marcha sur l'Italie avec une petite armée de 300 hommes. Cola di Rienzo , qui avait séjourné à Prague, avait insisté à plusieurs reprises pour que le roi se rende sur place. Le 6 janvier 1355, il fut couronné à Milan de la Couronne de Fer de Lombardie. Son sacre impérial eut lieu à Rome le 5 avril 1355, célébré par le cardinal Pierre d'Ostie [ 7 ] , nommé par le pape Innocent VI , qui, comme tous les papes depuis Clément V, résidait à Avignon.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Karl-IV-beim-kroenungsmahl_2-800x430.jpg",
+    "legende": "Banquet du Couronnement - miniature du manuscrit de la Bulle d'or"
+  },
+  {
+    "id": 881,
+    "titre": "Bataille de navale Porto-Longo) près de Modon",
+    "date": 1354,
+    "mois": 11,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "La bataille navale de Porto-Longo, encore appelée bataille de Sapienza est une victoire génoise sur Venise survenue le 3 novembre 1354 lors de la troisième guerre vénéto-génoise (1350-1355). La flotte vénitienne commandée par Niccolò Pisani est capturée par les Génois de Paganino Doria près de Modon.\nPendant la troisième guerre vénito-génoise, la République de Venise subit une lourde défaite face à la République de Gênes . Une grande partie de sa flotte est capturée et incendiée, et 5 000 hommes sont faits prisonniers, dont le commandant de la flotte et ancien héros de guerre, Niccolò Pisani .\nEn 1350, les Génois prétendent interdire aux Vénitiens la navigation sur la mer Noire, déclenchant les guerres de Caffa entre les deux républiques maritimes. Les Vénitiens, malgré l'alliance des Aragonais et de l'empereur Jean VI Cantacuzène, perdent la bataille de Gallipoli, et Constantinople, menacée par les vainqueurs, ferme ses ports aux vaincus (1352). Ce revers et cette défection n'empêchent pas le pavillon vénitien de tenir la mer, et les Génois sont battus à leur tour à la Loiera ou Alghero, devant Cagliari, où ils perdent quarante-une galères le 29 août 1353.\n\nEn 1354, après leur défaite de la Loiera, les Génois choisissent comme amiral Paganino Doria qui a remporté deux ans auparavant la victoire du Bosphore et lui confient trente-trois galères. Les Vénitiens, de leur côté, en arment trente-cinq, toujours sous la conduite de Niccolo Pisani. Tandis que ce dernier seconde les opérations des Aragonais sur la Sardaigne, où Pierre le Cérémonieux avait envoyé une armée considérable, Doria entre en mer Adriatique et prend plusieurs vaisseaux marchands et quelques galères revenant de Candie ; il ravage les côtes de l'Istrie. Le 11 août, il s'empare de la ville de Parenzo et la brûle. Les Vénitiens, effrayés de l'approche des Génois, envoient à Niccolò Pisani l'ordre de revenir défendre sa patrie. Ils ferment d'une chaîne l'entrée de leur port et se préparent à résister en cas d'attaque. Le doge Andrea Dandolo serait mort de chagrin à l'approche des Génois le 7 septembre 1354 et remplacé par Marino Faliero.\nDoria, au lieu d'attendre dans le golfe le retour de la flotte vénitienne, fait voile vers la Grèce ; Pisani, averti de la route qu'il avait prise, se dirige vers les mêmes mers. Les deux amiraux se cherchent dans l'Archipel, sans se rencontrer. Pisani entre enfin dans le mouillage de Porto-Longo, sur l'île de Sapienza qui ferme la baie de Modon, pour reposer ses équipages et réparer ses vaisseaux. Il partage sa flotte en deux parties, pour que l'une fasse la garde, tandis que l'autre se ravitaillait. Il se place à l'entrée du port, avec six grands vaisseaux, et vingt galères qu'il enchaîne les unes aux autres. Pendant ce temps, Morosini, son contre-amiral, avec quinze galères et vingt spéronates ou barques armées, a mis la proue en terre, au fond du port, qui est fort éloigné de son ouverture.\n\nLorsque Paganino Doria apprit où étaient ses ennemis, il vient leur offrir la bataille, le 3 novembre 1354, devant l'entrée du canal de Porto-Longo ; et ses équipages cherchent vainement, par mille provocations, à engager Pisani à l'accepter. Celui-ci, avec ses galères embossées, demeure immobile, dédaignant les insultes des Génois, et attendant sa propre commodité pour combattre. Enfin, Jean Doria, neveu de l'amiral, avec une méprisante hardiesse, passe entre la flotte vénitienne et le rivage, et entre dans le port. Pisani le laisse faire, persuadé que ce jeune homme, placé entre sa ligne et celle de Morosini, ne pourrait plus lui échapper. Il laissa passer de même douze galères qui suivirent l'une après l'autre le jeune Doria. Ces treize vaisseaux, s'avançant vers l'autre extrémité du port, attaquent impétueusement la division de Morosini. Les navires, appuyés au rivage, n'en étaient que plus faciles à défendre ; mais les Vénitiens, surpris d'être attaqués dans un lieu où ils croyaient n'avoir rien à craindre, ne font qu'une faible résistance. Beaucoup de matelots, dans le premier effroi, se jettent à la mer pour gagner le rivage, plusieurs se noient, et toute cette division de la flotte tombe au pouvoir des Génois. Le jeune Doria revient alors attaquer par derrière la ligne qui défendait l'entrée du port, tandis que son oncle l'attaque par devant : il pousse sur elle deux des vaisseaux qu'il vient de prendre, auxquels il a mis le feu, pour incendier toute la flotte ; il cause aux Vénitiens un si grand effroi, qu'ils se rendent tous sans combattre davantage. Ils avaient déjà perdu quatre mille hommes dans le port ou sur le rivage. Doria revient en triomphe à Gênes, conduisant avec lui l'amiral vénitien, avec toute sa flotte et cinq mille huit cent soixante-dix prisonniers.\nLa victoire est suivie d'un armistice signé le 15 janvier 1355 puis d'un traité de paix signé à Milan le 1er juin suivant. Les Vénitiens payent les frais de la guerre et renoncent à fréquenter les ports de la mer Noire, sous la réserve d'un comptoir à Caffa.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ottoman_fortress_in_Methoni.JPG/960px-Ottoman_fortress_in_Methoni.JPG",
+    "legende": "Remparts de Modon (Methoni Péloponnèse)",
+    "sources": "https://fr.wikipedia.org/wiki/Bataille_de_Porto-Longo"
+  },
+  {
+    "id": 882,
+    "titre": "Carte obligatoire sur les navires Aragonais",
+    "date": 1354,
+    "zones": [
+      "Aragon",
+      "Techniques"
+    ],
+    "type": 3,
+    "description": "Une ordonnance de Pierre IV d'Aragon oblige chaque navire de guerre à avoir deux cartes à bord",
+    "image": ""
+  },
+  {
+    "id": 883,
+    "titre": "Guerre du Vogtland",
+    "date": 1354,
+    "date_fin": 1357,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Guerre  menée par l'empereur Charles IV contre les souverains du Vogtland de Weida , Gera et Plauen , débuta après que le landgrave Frédéric le Strict de Thuringe se fut plaint que ces mêmes souverains soutenaient des barons brigands . À la demande de Charles IV, Erfurt et d'autres villes de Thuringe, telles que Mühlhausen et Nordhausen , rejoignirent également la campagne .\nLa guerre du Vogtland dura de 1354 à 1357. Durant cette période, les Vogt de Weida , Gera et Plauen perdirent la plupart de leurs possessions au profit de l'empereur Charles IV et de la dynastie Wettin .\nLa famille Vogt, qui a donné son nom à la région du Vogtland, descend des Vogt de Weida et a donné naissance aux branches Vogt de Plauen , Vogt de Gera et Reuss de Greiz . Sous la dynastie des Hohenstaufen, les Vogt s'élevèrent du statut de fonctionnaires impériaux à celui de seigneurs territoriaux et, en tant que baillis de l' abbaye de Quedlinbourg sur ses terres de Gera, adoptèrent le titre officiel comme nom et patronyme. Ce fut le premier Henri II le Riche de Weida, Gera, Plauen et Greiz à le faire en 1209. L'empereur du Saint-Empire romain germanique, Rodolphe Ier, les reconnut comme seigneurs territoriaux, et l'empereur Louis IV (Louis de Bavière) confirma ce statut en 1329 par la « Bulle d'or du Vogtland ». Dès lors, les Vogt furent considérés comme directement subordonnés à l' empereur du Saint- Empire romain germanique et ne relevaient que du souverain de ce dernier .\n\nJusqu'au milieu du XIIIe siècle, les chefs de la famille Vogt formèrent un parti uni et étendirent considérablement leur terra advocatorum (le territoire des Vogt). Vers 1350, les terres des quatre branches Vogt s'étendaient au nord jusqu'à Ronneburg , Gera et Schmölln , à l'est au-delà de Werdau , au sud jusqu'à la frontière actuelle avec la République tchèque et à l'ouest jusqu'à Lobenstein . Elles étaient entourées de puissants souverains : au nord par les margraves de Meissen (et landgraves de Thuringe), au sud-est par les rois de Bohême et au sud-ouest par les burgraves de Nuremberg .\n\nAu XIVe siècle, les familles Vogt furent cependant victimes des ambitions expansionnistes de leurs voisins, les margraves de Meissen et les rois de Bohême : les Vogt formèrent des alliances avec ces deux puissances, certaines étant dirigées les unes contre les autres. Les Vogt de Plauen se placèrent sous la suzeraineté des rois de Bohême et donc sous la protection du roi Jean , tandis que les Vogt de Weida et les Vogt de Gera s’allièrent à la dynastie des Wettin.\nEn 1347, Charles Ier, futur empereur du Saint-Empire romain germanique Charles IV, devint roi de Bohême. Sa politique visait principalement à consolider le pouvoir de sa dynastie, la maison de Luxembourg. La dynastie des Wettin cherchait également à étendre son territoire. En 1354, lorsque le landgrave Frédéric le Strict se plaignit que les prévôts soutenaient des barons brigands , une campagne de représailles conjointe fut lancée. À la demande de Charles IV, Erfurt et d'autres villes de Thuringe, comme Mühlhausen et Nordhausen, participèrent également à cette campagne. Au cours de ce conflit, au moins soixante châteaux du Vogtland auraient été détruits. Certains, comme Elsterberg , furent même rasés , bien qu'ayant été auparavant déclarés « maisons ouvertes ». Les prévôts, accablés par des dettes toujours plus importantes, étaient largement impuissants à empêcher ces actes de violence. Les villes espéraient sans doute une meilleure protection de leurs routes commerciales contre les grandes puissances. Il reste à déterminer si la pratique des barons voleurs était réellement plus répandue parmi les ministères des baillis que dans les pays voisins – et si elle s'est améliorée après leur conquête – ou si elle constituait principalement un prétexte dans le contexte politique général.\nÀ la suite de la guerre, les baillis de Plauen perdirent la quasi-totalité de leurs possessions. Les villes de Mylau et Reichenbach, appartenant à la branche cadette, tombèrent aux mains du roi de Bohême, qui fondait sa revendication sur un acte de donation du roi Frédéric II daté de 1212. De plus, ils durent reconnaître la dynastie des Wettin comme souverains de leurs possessions restantes. Henri IV, de la branche aînée, fut contraint de vendre ses biens. Adorf, Auma, Gattendorf, Hirschberg, Markneukirchen, Mühltroff, Neuberg (Podhradí), Pausa, Sachsgrün, Schönberg, Triptis, Voigtsberg et Ziegenrück revinrent aux Wettin. Henri IV lui-même fut exilé et ne conserva finalement qu'un manoir à Dresde.\n\nLes baillis de Gera durent également reconnaître la dynastie Wettin comme leurs suzerains. Les baillis de Weida perdirent leur ville de Hof et la région de Regnitz au profit des burgraves de Nuremberg . Bien qu'ils fussent vassaux de Nuremberg depuis 1318 , les burgraves de Nuremberg n'avaient jusqu'alors exercé qu'une faible influence. En 1354, les burgraves de Weida furent contraints de renouveler leur serment de fidélité. En 1373, Heinrich von Weida vendit finalement Hof et la région de Regnitz aux burgraves de Nuremberg.\nLes baillis perdirent progressivement toute influence politique. Leur titre disparut lui aussi peu à peu. À partir du milieu du XIVe siècle, ils acceptèrent d'être désignés uniquement comme « seigneurs ».",
+    "image": ""
+  },
+  {
+    "id": 884,
+    "titre": "Marino Falier nouveau doge de Venise",
+    "date": 1354,
+    "mois": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "11 septembre :  Quatre jours après la mort d' Andrea Dandolo, Marino Falier est élu nouveau doge de Venise .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Venezia%2C_soldino_di_marino_faliero%2C_1354-55.JPG/250px-Venezia%2C_soldino_di_marino_faliero%2C_1354-55.JPG",
+    "legende": "Soldino, frappé sous le nom de « Main Faledro Dvx »"
+  },
+  {
+    "id": 885,
+    "titre": "Jean V reprend Constantinople",
+    "date": 1354,
+    "mois": 10,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "Depuis Thessalonique , Jean V , gendre et adversaire de Jean VI durant la guerre civile, reprend Constantinople avec le soutien des Génois . Panhypersébastos Andronikos Asanes envoie une armée de Bizyé à Kantakuzenos pour le secourir, mais ne parvient pas à empêcher la déposition de son oncle en décembre. Kantakuzenos se retire au monastère Saint-Georges de Mangana, où il prend le nom de Joasaph Christodolos et se consacre à l'écriture. Matthieu Kantakuzenos poursuit la guerre contre Jean V depuis la Thrace.",
+    "image": ""
+  },
+  {
+    "id": 886,
+    "titre": "1ere horloge astronomique de Strasbourg",
+    "date": 1354,
+    "zones": [
+      "Alsace"
+    ],
+    "type": 3,
+    "description": "Construction de la (première) « horloge astronomique » dans la cathédrale de Strasbourg .",
+    "image": ""
+  },
+  {
+    "id": 887,
+    "titre": "La ville vénitienne de Poreč en Istrie  pillée par les Génois",
+    "date": 1354,
+    "mois": 8,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "La ville vénitienne de Poreč (Istrie/ actuelle Croatie )  pillée par les Génois de Paganino Doria , qui emportent les reliques des saints Eleutherius et Maurus de Parentium à Gênes, où elles sont déposées à l'église San Matteo .",
+    "image": ""
+  },
+  {
     "id": 356,
     "titre": "Galéas II et Barnabo  Visconti",
     "date": 1355,
@@ -10034,6 +10286,32 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 867,
+    "titre": "Matteo II Visconti assassin par ses frères",
+    "date": 1355,
+    "mois": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Matteo II Visconti, qui régnait sur Plaisance, Parme et Bologne est assassiné par ses frères à Monza. \nEn juillet 1340, il participe avec ses frères à la conjuration menée par Francesco Pusterla et quelques autres nobles contre leurs oncles Jean et Lucien qui viennent de succéder à leur cousin Azzon. Cette conjuration ayant été dénoncée, Lucien sévit contre les conjurés mais ne punit pas ses neveux.\n\nIl épouse, vers 1341, Gigliola Gonzague (NC - 1354), fille de Filippino[1], vicaire impérial de Reggio d'Émilie et d'Anna di Dovara.\n\nEn 1346, après un nouveau complot, il est contraint à l'exil en même temps que ses frères. Il part à Morano sul Po dans le petit État du Montferrat où le marquis régnant est Jean II Paléologue.\nIl n'en revient qu'en 1350, après la mort de Lucien, rappelé avec ses frères à Milan par l'oncle restant, l'archevêque Jean, qui a succédé à son frère Lucien, pour participer au gouvernement dont il est devenu seul seigneur et vicaire impérial et qui les reconnaît comme ses successeurs.\n\nLe 5 octobre 1354, Jean décède et les trois neveux Mathieu II, Galéas II et Barnabé deviennent co-seigneurs de Milan en se partageant les seigneuries affidées :\n\nMathieu II est seigneur de Plaisance, Lodi, Parme, Bologne, Pontremoli, Monza et San Donnino[2].\nGaléas II obtient Pavie, Côme, Novare, Verceil, Asti, Alba, Tortona, Alexandrie et Vigevano.\nBarnabé règne sur Bergame, Brescia, Crémone, Soncino, Lonato et Val Camonica.\nDans la dotation de Mathieu, la cité de Bologne posa un problème dans la mesure où Giovanni Visconti d'Oleggio en avait obtenu le gouvernement en récompense de services rendus. Ce dernier proclama l'indépendance du fief. Mathieu limita sa réaction à une protestation auprès du pape mais son frère benjamin Barnabé appela à la révolte contre Bologne.\n\nTrop arrangeant, Mathieu était considéré comme un poids mort dans le triumvirat milanais. Personne ne s'étonna de ce qui advint : le 29 septembre 1355, après un repas au retour d'une battue de chasse à Monza, il fut pris de violentes douleurs abdominales. Il fut transporté à Milan, mais les médecins ne purent qu'assister, impuissants, à la mort de Mathieu.\n\nDans son testament, Valentina Doria, la mère des trois co-seigneurs, écrira qu'elle est convaincue que Mathieu a été assassiné par ses frères",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Visconti%2C_Matteo_II.jpg",
+    "legende": "Mathieu II Visconti (illustration anonyme du XVIIIe siècle)"
+  },
+  {
+    "id": 876,
+    "titre": "Charles IV couronné empereur à Rome",
+    "date": 1355,
+    "mois": 4,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 2,
+    "description": "En 1354, Charles marcha sur l'Italie avec une petite armée. Cola di Rienzo , qui avait séjourné à Prague, avait insisté à plusieurs reprises pour que le roi se rende sur place. Le 6 janvier 1355, il fut couronné à Milan de la Couronne de Fer de Lombardie. Son sacre impérial eut lieu à Rome le 5 avril 1355, célébré par le cardinal Pierre d'Ostie [ 7 ] , nommé par le pape Innocent VI , qui, comme tous les papes depuis Clément V, résidait à Avignon. Son épouse, Anne, fut également couronnée impératrice à cette occasion. Peu après, il quitta de nouveau l'Italie sans chercher à y rétablir l'ordre, bien qu'il eût tiré profit financièrement de la campagne romaine grâce aux paiements de nombreuses communes et qu'il eût obtenu son sacre impérial sans effusion de sang. Néanmoins, son comportement envers la papauté contribua à lui valoir le surnom de « roi-prêtre » ( rex clericorum ), appellation certes inexacte, mais révélatrice de la politique de la Curie de Charlemagne, fondée sur l'accord du pape.\n\nLa première campagne italienne de Charles , tout comme sa seconde en 1368-1369 (durant laquelle il collabora avec le pape Urbain V , dont il espérait le retour de la papauté d' Avignon à Rome), eut peu d'impact. Sa politique italienne fut largement inefficace, Charles se contentant de la couronne impériale. Il collecta des fonds auprès des communes et accorda des privilèges en échange, mais n'intervint guère davantage dans les affaires italiennes ; son comportement fut qualifié de celui d'un marchand (voir Matteo Villani et Pétrarque ). Charles abandonna ainsi la politique universaliste de son grand-père Henri VII au profit d'une politique impériale fondée sur le pouvoir dynastique . Il obtint néanmoins la reconnaissance de son titre d'empereur par Florence et Milan et ne renonça à aucun droit impérial en Italie.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Karl_IV._%28HRR%29.jpg",
+    "legende": "Charles IV, fragment d'une fresque provenant de la salle Hansa de l'hôtel de ville de Cologne , vers 1360"
   },
   {
     "id": 11,
