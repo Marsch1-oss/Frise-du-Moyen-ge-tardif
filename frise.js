@@ -603,11 +603,12 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
-  var IMG_W = 60;   /* largeur image en px */
-  var IMG_H = 74;   /* hauteur image en px */
-  var MARGIN = 8;   /* marge autour de l'image */
+  /* Supprime les anciens fonds */
+  var card = document.querySelector('.frise-card');
+  if (!card) return;
+  card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
 
-  /* Collecte candidats : événements de la période, zones actives, avec image */
+  /* Collecte candidats : événements de la période avec image, zones actives */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
     if (!visibleAtLevel(e, level)) return false;
@@ -617,121 +618,56 @@ function injectBackgroundImages(container, start, end, level) {
   });
   if (candidates.length === 0) return;
 
-  /* Pas d'image si trop chargé */
-  var chips = Array.prototype.slice.call(container.querySelectorAll('.evt-chip'));
-  var maxChips = level === 4 ? 6 : level === 3 ? 10 : 8;
-  if (chips.length > maxChips) return;
+  /* Nombre d'images selon la largeur de la période */
+  var nImgs = level === 4 ? 2 : level === 3 ? 3 : 4;
+  if (candidates.length < nImgs) nImgs = candidates.length;
 
-  /* Dimensions réelles du container */
-  var friseW  = container.offsetWidth || TRACK_PX;
-  var labelW  = 90;
-  var trackW  = friseW - labelW;   /* largeur utile */
-  var cr      = container.getBoundingClientRect();
-
-  /* Mesure la zone events en excluant la rulers-section */
-  var rulersSection = container.querySelector('.rulers-section');
-  var evtZoneTop    = 0;
-  var evtZoneH      = container.offsetHeight || 200;
-  if (rulersSection) {
-    var rsH     = rulersSection.offsetHeight || 0;
-    evtZoneTop  = rsH;
-    evtZoneH    = (container.offsetHeight || 200) - rsH;
+  /* Répartition équitable : on trie par date et on échantillonne */
+  var sorted = candidates.slice().sort(function(a, b) { return a.date - b.date; });
+  var step   = Math.max(1, Math.floor(sorted.length / nImgs));
+  var picks  = [];
+  for (var i = 0; i < nImgs; i++) {
+    var idx = Math.min(i * step, sorted.length - 1);
+    /* Évite les doublons d'image */
+    var candidate = sorted[idx];
+    var alreadyUsed = picks.some(function(p) { return p.image === candidate.image; });
+    if (!alreadyUsed) picks.push(candidate);
   }
+  if (picks.length === 0) return;
 
-  /* Centre l'image dans la zone events uniquement */
-  var imgTop  = evtZoneTop + (evtZoneH - IMG_H) / 2;
-  var imgBot  = imgTop + IMG_H;
+  /* Crée un bandeau de fond DERRIÈRE la frise-card */
+  var strip = document.createElement('div');
+  strip.className = 'frise-bg-strip';
 
-  /* Collecte les rectangles occupés par les chips (en px dans container) */
-  var occupied = [];
-  chips.forEach(function(chip) {
-    var r  = chip.getBoundingClientRect();
-    var x0 = r.left - cr.left - MARGIN;
-    var x1 = r.right - cr.left + MARGIN;
-    var y0 = r.top  - cr.top  - MARGIN;
-    var y1 = r.bottom - cr.top + MARGIN;
-    occupied.push({ x0: x0, x1: x1, y0: y0, y1: y1 });
+  picks.forEach(function(pick, pi) {
+    var wrap = document.createElement('div');
+    wrap.className   = 'frise-bgf-wrap';
+    /* Position horizontale : distribue régulièrement */
+    wrap.style.left  = (10 + pi * (80 / Math.max(picks.length - 1, 1))) + '%';
+
+    var img = document.createElement('img');
+    img.src             = pick.image;
+    img.alt             = '';
+    img.className       = 'frise-bgf-img';
+    img.draggable       = false;
+
+    var cap = document.createElement('span');
+    cap.className   = 'frise-bg-caption';
+    cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
+
+    wrap.appendChild(img);
+    wrap.appendChild(cap);
+
+    /* Clic ouvre la fiche */
+    wrap.style.cursor = 'pointer';
+    wrap.addEventListener('click', (function(e) {
+      return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
+    })(pick));
+
+    strip.appendChild(wrap);
   });
 
-  /* Cherche un rectangle libre dans la zone events uniquement */
-  var stepX   = 20;
-  var bestX   = null;
-
-  /* Calcule le "score de proximité temporelle" du centre de chaque emplacement */
-  /* Choisit l'emplacement le plus proche du centre temporel d'un candidat */
-  var candidateDates = candidates.map(function(e) {
-    return e.date + (e.mois ? (e.mois - 1) / 12 : 0);
-  });
-
-  var slots = [];
-  for (var x = labelW; x + IMG_W <= friseW - 4; x += stepX) {
-    var x1 = x + IMG_W;
-    /* Vérifie l'absence de chevauchement */
-    var free = true;
-    for (var oi = 0; oi < occupied.length; oi++) {
-      var o = occupied[oi];
-      /* Collision si rectangles se chevauchent */
-      if (x < o.x1 && x1 > o.x0 && imgTop < o.y1 && imgBot > o.y0) {
-        free = false;
-        break;
-      }
-    }
-    if (free) slots.push(x);
-  }
-
-  if (slots.length === 0) return;  /* pas de place libre */
-
-  /* Parmi les slots libres, cherche celui dont le centre est le plus proche
-     d'un candidat (en coordonnées temporelles) */
-  var bestSlot = null;
-  var bestScore = Infinity;
-
-  slots.forEach(function(x) {
-    var centerX = x + IMG_W / 2;
-    /* Convertit en date */
-    var centerDate = start + ((centerX - labelW) / trackW) * (end - start);
-    candidateDates.forEach(function(d) {
-      var score = Math.abs(d - centerDate);
-      if (score < bestScore) { bestScore = score; bestSlot = x; }
-    });
-  });
-
-  if (bestSlot === null) return;
-
-  /* Choisit le candidat dont la date est la plus proche du slot retenu */
-  var slotCenterDate = start + ((bestSlot + IMG_W / 2 - labelW) / trackW) * (end - start);
-  var pick = candidates.slice().sort(function(a, b) {
-    return Math.abs(a.date - slotCenterDate) - Math.abs(b.date - slotCenterDate);
-  })[0];
-  if (!pick) return;
-
-  /* Supprime un éventuel wrapper précédent */
-  var oldWrap = container.querySelector('.frise-bg-wrap');
-  if (oldWrap) oldWrap.parentNode.removeChild(oldWrap);
-
-  /* Crée le wrapper centré sur le slot */
-  var wrap = document.createElement('div');
-  wrap.className  = 'frise-bg-wrap';
-  wrap.style.left = bestSlot + 'px';
-  wrap.style.top  = imgTop + 'px';
-  wrap.style.transform = '';  /* annule translateY(-50%) du CSS */
-
-  var img = document.createElement('img');
-  img.src       = pick.image;
-  img.alt       = pick.legende || pick.titre;
-  img.className = 'frise-bg-img';
-  wrap.appendChild(img);
-
-  var cap = document.createElement('span');
-  cap.className   = 'frise-bg-caption';
-  cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
-  wrap.appendChild(cap);
-
-  wrap.addEventListener('click', (function(e) {
-    return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
-  })(pick));
-
-  container.appendChild(wrap);
+  card.appendChild(strip);
 }
 
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
@@ -786,6 +722,39 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   }
   chip.title = '\u265b ' + evt.titre
     + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
+
+  /* Pastille image sur les règnes illustrés */
+  if (evt.image && evt.image.trim()) {
+    var imgBadge = document.createElement('span');
+    imgBadge.className   = 'chip-img-badge';
+    imgBadge.textContent = '\uD83D\uDDBC';
+    imgBadge.title       = 'Contient une illustration';
+    chip.appendChild(imgBadge);
+
+    /* Tooltip image au survol */
+    chip.style.overflow = 'visible';
+    var tt = document.createElement('div');
+    tt.className = 'chip-img-tooltip';
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    ttImg.alt = evt.legende || evt.titre;
+    tt.appendChild(ttImg);
+    if (evt.legende) {
+      var ttCap = document.createElement('span');
+      ttCap.textContent = evt.legende;
+      tt.appendChild(ttCap);
+    }
+    chip.appendChild(tt);
+  }
+
+  /* Pastille vidéo */
+  if (evt.video && evt.video.trim()) {
+    var vBadge = document.createElement('span');
+    vBadge.className   = 'chip-video-badge';
+    vBadge.textContent = '\u25B6';
+    vBadge.title       = 'Contient une vid\u00e9o';
+    chip.appendChild(vBadge);
+  }
 
   chip.addEventListener('click', (function(e, z) {
     return function(ev) { ev.stopPropagation(); openModal(e, z); };
@@ -921,6 +890,16 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.maxWidth   = 'none';
       chip.style.whiteSpace = 'normal';
       chip.style.lineHeight = '1.2';
+      chip.style.overflow   = 'visible';
+      /* Label date au-dessus */
+      var MOIS_ABR2 = ['jan.','fév.','mar.','avr.','mai','jun.',
+                       'jul.','aoû.','sep.','oct.','nov.','déc.'];
+      var dateLbl2 = document.createElement('span');
+      dateLbl2.className   = 'chip-date-label';
+      dateLbl2.textContent = evt.mois
+        ? MOIS_ABR2[evt.mois - 1] + ' ' + evt.date
+        : '' + evt.date;
+      chip.appendChild(dateLbl2);
       chip.textContent = titreM;
     } else {
       chip.classList.add('chip-dot');
@@ -932,6 +911,12 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.height       = sz + 'px';
       chip.style.top          = (4 + rowIndex * (ROW_H + ROW_GAP) + ROW_H / 2 - sz / 2) + 'px';
       chip.style.borderRadius = '50%';
+      chip.style.overflow = 'visible';
+      /* Année au-dessus du point */
+      var dateLblD = document.createElement('span');
+      dateLblD.className   = 'chip-date-label chip-date-dot';
+      dateLblD.textContent = '' + evt.date;
+      chip.appendChild(dateLblD);
     }
     var zonesLbl = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
     chip.title = evt.titre + zonesLbl + ' (' + evt.date + ')';
@@ -1021,9 +1006,9 @@ function openModal(evt, zone) {
 
   var MOIS_L = ['janvier','février','mars','avril','mai','juin',
                 'juillet','août','septembre','octobre','novembre','décembre'];
-  var dateStr = evt.mois ? MOIS_L[evt.mois - 1] + ' ' + evt.date : evt.date + ' apr. J.-C.';
+  var dateStr = evt.mois ? MOIS_L[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
   if (evt.date_fin && evt.date_fin > evt.date) {
-    var finStr = evt.mois_fin ? MOIS_L[evt.mois_fin - 1] + ' ' + evt.date_fin : evt.date_fin + ' apr. J.-C.';
+    var finStr = evt.mois_fin ? MOIS_L[evt.mois_fin - 1] + ' ' + evt.date_fin : '' + evt.date_fin;
     dateStr += ' \u2013 ' + finStr;
   }
   document.getElementById('modal-date').textContent = dateStr;
@@ -1890,77 +1875,63 @@ function extractYouTubeId(url) {
 }
 
 /* ── Init ────────────────────────────────────────────────────────────*/
-/* ── Musique d'ambiance ────────────────────────────────────────────*/
-/* Playlist des deux pièces enchaînées */
-var MUSIC_PLAYLIST = '9ti59NdbG1c,ZBQxrD3d7MI';
-var MUSIC_FIRST    = '9ti59NdbG1c';
-var musicMuted     = true;   /* commence muet pour éviter la pub */
-var musicStarted   = false;
-var musicUnmuteTimer = null;
+/* ── Musique d'ambiance (MP3 local) ─────────────────────────────────*/
+/* Fichiers à déposer dans le dossier audio/ sur GitHub :
+   audio/machaut1.mp3  →  Je vivroie liement (Guillaume de Machaut)
+   audio/machaut2.mp3  →  2e pièce de Machaut                        */
+var MUSIC_TRACKS  = [
+  'audio/Guillaume_de_Machaut_Je_vivroie_liementLiement_me_deport.mp3',
+  'audio/Guillaume_de_Machaut_Jaim_sans_penser.mp3',
+  'audio/Douce_Dame_Jolie Guillaume de Machaut.mp3'
+];
+var musicTrackIdx = 0;
+var musicStarted  = false;
 
 function startMusic() {
   if (musicStarted) return;
   musicStarted = true;
-  var iframe = document.getElementById('music-yt');
-  if (!iframe) return;
-
-  /* Démarre muet — la pub passe en silence */
-  iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
-    + '?autoplay=1&mute=1&controls=0&modestbranding=1'
-    + '&playlist=' + MUSIC_PLAYLIST
-    + '&loop=1&rel=0&enablejsapi=0';
-
-  var btn = document.getElementById('music-toggle');
-  if (btn) btn.classList.add('muted');
-
-  /* Rétablit le son après 30 secondes (pub terminée) */
-  musicUnmuteTimer = setTimeout(function() {
-    unmuteMusic();
-  }, 30000);
-}
-
-function unmuteMusic() {
-  musicMuted = false;
-  var iframe = document.getElementById('music-yt');
-  if (!iframe) return;
-  /* Recharge sans mute pour activer le son */
-  iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
-    + '?autoplay=1&mute=0&controls=0&modestbranding=1'
-    + '&playlist=' + MUSIC_PLAYLIST
-    + '&loop=1&rel=0&start=30';
-  var btn = document.getElementById('music-toggle');
-  if (btn) btn.classList.remove('muted');
-  var status = document.getElementById('music-status');
-  if (status) status.textContent = '⏸';
+  var audio = document.getElementById('music-audio');
+  if (!audio) return;
+  audio.volume = 0.28;
+  audio.src    = MUSIC_TRACKS[0];
+  audio.addEventListener('ended', function() {
+    musicTrackIdx = (musicTrackIdx + 1) % MUSIC_TRACKS.length;
+    audio.src = MUSIC_TRACKS[musicTrackIdx];
+    audio.play().catch(function(){});
+  });
+  audio.play().catch(function() {
+    /* Autoplay bloqué par le navigateur : active au 1er clic */
+    var handler = function() {
+      audio.play().catch(function(){});
+      document.removeEventListener('click', handler);
+    };
+    document.addEventListener('click', handler);
+  });
+  updateMusicBtn();
 }
 
 function toggleMusic() {
-  var iframe = document.getElementById('music-yt');
+  var audio = document.getElementById('music-audio');
+  if (!audio) return;
+  if (!musicStarted) { startMusic(); return; }
+  if (audio.paused) {
+    audio.play().catch(function(){});
+  } else {
+    audio.pause();
+  }
+  setTimeout(updateMusicBtn, 50);
+}
+
+function updateMusicBtn() {
+  var audio  = document.getElementById('music-audio');
   var btn    = document.getElementById('music-toggle');
   var status = document.getElementById('music-status');
-  if (!iframe) return;
-
-  if (!musicStarted) {
-    /* Premier clic : démarre immédiatement avec son */
-    musicStarted = true;
-    musicMuted   = false;
-    if (musicUnmuteTimer) clearTimeout(musicUnmuteTimer);
-    iframe.src = 'https://www.youtube.com/embed/' + MUSIC_FIRST
-      + '?autoplay=1&mute=0&controls=0&modestbranding=1'
-      + '&playlist=' + MUSIC_PLAYLIST + '&loop=1&rel=0';
-    if (btn) btn.classList.remove('muted');
-    if (status) status.textContent = '⏸';
-    return;
-  }
-
-  musicMuted = !musicMuted;
-  var base = 'https://www.youtube.com/embed/' + MUSIC_FIRST
-    + '?autoplay=1&controls=0&modestbranding=1'
-    + '&playlist=' + MUSIC_PLAYLIST + '&loop=1&rel=0&';
-  iframe.src = base + (musicMuted ? 'mute=1' : 'mute=0');
-  if (btn)    btn.classList.toggle('muted', musicMuted);
-  if (status) status.textContent = musicMuted ? '▶' : '⏸';
+  if (!audio || !btn) return;
+  var playing = musicStarted && !audio.paused;
+  btn.classList.toggle('muted', !playing);
+  if (status) status.textContent = playing ? '⏸' : '▶';
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
   initActiveZones();

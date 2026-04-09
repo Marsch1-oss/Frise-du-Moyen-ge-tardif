@@ -216,47 +216,58 @@
     #decade-label { font-family: 'IM Fell English', Georgia, serif; font-size: 1rem; color: var(--ink-soft); display: none; }
 
     /* ── Frise pleine largeur ── */
-    .frise-card { background: rgba(245,237,216,0.85); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem 0.4rem 0.8rem 0.8rem; box-shadow: var(--shadow); overflow-x: auto; width: 100%; }
+    .frise-card { background: rgba(245,237,216,0.85); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem 0.4rem 0.8rem 0.8rem; box-shadow: var(--shadow); overflow-x: auto; width: 100%; position: relative; }
 
     /* ── Illustrations de fond ── */
     #frise-container { min-width: 600px; position: relative; }
     /* ── Image décorative dans la frise (in-track) ── */
-    .frise-bg-wrap {
+    /* ── Bandeau d'images de fond ── */
+    .frise-bg-strip {
       position: absolute;
-      z-index: 2;
-      cursor: pointer;
+      inset: 0;
+      pointer-events: none;   /* ne bloque pas les clics sur les chips */
+      overflow: hidden;
+      border-radius: var(--radius);
+      z-index: 0;
+    }
+    .frise-bgf-wrap {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: auto;
       display: inline-block;
     }
-    .frise-bg-img {
+    .frise-bgf-img {
       display: block;
-      width: 56px;
-      height: 68px;
+      width: 80px;
+      height: 100px;
       object-fit: contain;
-      opacity: 0.45;
-      border-radius: 5px;
-      border: 1.5px solid rgba(154,107,26,0.5);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.20);
-      transition: opacity 0.2s, transform 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s;
+      object-position: center;
+      opacity: 0.10;          /* très estompé pour ne pas gêner la lecture */
+      border-radius: 4px;
+      filter: sepia(20%) saturate(70%);
+      transition: opacity 0.22s, transform 0.22s, filter 0.22s;
+      user-select: none;
+      -webkit-user-drag: none;
     }
-    .frise-bg-wrap:hover .frise-bg-img {
-      opacity: 0.95;
-      width: 130px;
-      height: 158px;
-      transform: translateY(-15%);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-      z-index: 20;
+    .frise-bgf-wrap:hover .frise-bgf-img {
+      opacity: 0.70;
+      transform: scale(1.55) translateY(-8%);
+      filter: sepia(0%) saturate(100%);
+      z-index: 15;
     }
+    /* Légende au survol */
     .frise-bg-caption {
       position: absolute;
-      top: calc(100% + 4px);
+      top: calc(100% + 5px);
       left: 50%;
       transform: translateX(-50%);
       background: rgba(28,20,10,0.88);
       color: #f5edd8;
-      font-size: 0.66rem;
+      font-size: 0.64rem;
       font-style: italic;
       white-space: normal;
-      width: 140px;
+      width: 150px;
       text-align: center;
       padding: 4px 7px;
       border-radius: 4px;
@@ -266,7 +277,7 @@
       transition: opacity 0.18s;
       z-index: 30;
     }
-    .frise-bg-wrap:hover .frise-bg-caption { opacity: 1; }
+    .frise-bgf-wrap:hover .frise-bg-caption { opacity: 1; }
 
     /* ── Tooltip image sur chip (prévisualisation) ── */
     .chip-img-tooltip {
@@ -404,6 +415,12 @@
       white-space: nowrap;
       pointer-events: none;
       z-index: 6;
+    }
+    /* Date sur les points (niveau 1) : plus discret */
+    .chip-date-dot {
+      font-size: 0.52rem;
+      opacity: 0.8;
+      bottom: calc(100% + 2px);
     }
 
     /* ── Bordure selon niveau d'importance (remplace l'étoile) ── */
@@ -1231,24 +1248,16 @@
 </div><!-- #wizard-overlay -->
 
 
-<!-- ── Lecteur musical d'ambiance ── -->
+<!-- ── Lecteur musical d'ambiance (MP3) ── -->
 <div id="music-player">
-  <div id="music-yt-wrap">
-    <!-- Démarrage muet pour éviter la pub — son rétabli après 30s -->
-    <iframe id="music-yt"
-      src=""
-      allow="autoplay; encrypted-media"
-      frameborder="0"
-      style="width:0;height:0;position:absolute;opacity:0;pointer-events:none;">
-    </iframe>
-  </div>
+  <audio id="music-audio" preload="none"></audio>
   <button id="music-toggle" onclick="toggleMusic()">
     <span id="music-note">&#127925;</span>
     <span id="music-lbl">
       <span class="music-title">Guillaume de Machaut</span>
       <span class="music-sub">Je vivroie liement &bull; Je vivrais joyeusement</span>
     </span>
-    <span id="music-status">&#9646;&#9646;</span>
+    <span id="music-status">&#9654;</span>
   </button>
 </div>
 
