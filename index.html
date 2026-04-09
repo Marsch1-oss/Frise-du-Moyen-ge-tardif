@@ -222,20 +222,11 @@
     #frise-container { min-width: 600px; position: relative; }
     /* ── Image décorative dans la frise (in-track) ── */
     /* ── Bandeau d'images de fond ── */
-    .frise-bg-strip {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      border-radius: var(--radius);
-      z-index: 0;
-    }
     .frise-bgf-wrap {
       position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
       pointer-events: auto;
       display: inline-block;
+      z-index: 1;
     }
     .frise-bgf-img {
       display: block;

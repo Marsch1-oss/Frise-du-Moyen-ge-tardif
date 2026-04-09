@@ -603,12 +603,17 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
-  /* Supprime les anciens fonds */
+  var IMG_W  = 110;   /* largeur image px */
+  var IMG_H  = 135;   /* hauteur image px */
+  var MARGIN = 12;    /* marge autour des chips */
+
+  /* Supprime les anciens placements */
   var card = document.querySelector('.frise-card');
   if (!card) return;
   card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
+  container.querySelectorAll('.frise-bgf-wrap').forEach(function(el) { el.remove(); });
 
-  /* Collecte candidats : événements de la période avec image, zones actives */
+  /* Collecte candidats */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
     if (!visibleAtLevel(e, level)) return false;
@@ -618,58 +623,108 @@ function injectBackgroundImages(container, start, end, level) {
   });
   if (candidates.length === 0) return;
 
-  /* Nombre d'images selon la largeur de la période */
-  var nImgs = level === 4 ? 2 : level === 3 ? 3 : 4;
-  if (candidates.length < nImgs) nImgs = candidates.length;
+  /* Pas d'image si frise trop chargée */
+  var chips = Array.prototype.slice.call(container.querySelectorAll('.evt-chip'));
+  var maxChips = level === 4 ? 8 : level === 3 ? 14 : 10;
+  if (chips.length > maxChips) return;
 
-  /* Répartition équitable : on trie par date et on échantillonne */
-  var sorted = candidates.slice().sort(function(a, b) { return a.date - b.date; });
-  var step   = Math.max(1, Math.floor(sorted.length / nImgs));
-  var picks  = [];
-  for (var i = 0; i < nImgs; i++) {
-    var idx = Math.min(i * step, sorted.length - 1);
-    /* Évite les doublons d'image */
-    var candidate = sorted[idx];
-    var alreadyUsed = picks.some(function(p) { return p.image === candidate.image; });
-    if (!alreadyUsed) picks.push(candidate);
+  /* Rectangles occupés par les chips */
+  var cr = container.getBoundingClientRect();
+  var occupied = chips.map(function(chip) {
+    var r = chip.getBoundingClientRect();
+    return {
+      x0: r.left  - cr.left - MARGIN,
+      x1: r.right - cr.left + MARGIN,
+      y0: r.top   - cr.top  - MARGIN,
+      y1: r.bottom- cr.top  + MARGIN
+    };
+  });
+
+  var friseW   = container.offsetWidth  || TRACK_PX;
+  var friseH   = container.offsetHeight || 200;
+  var labelW   = 90;
+
+  /* Exclut aussi la rulers-section */
+  var rulersH = 0;
+  var rs = container.querySelector('.rulers-section');
+  if (rs) rulersH = rs.offsetHeight || 0;
+
+  var evtTop = rulersH;
+  var evtH   = friseH - rulersH;
+
+  /* Cherche des slots libres par balayage horizontal (pas = IMG_W/2) */
+  var stepX  = Math.floor(IMG_W / 2);
+  var imgTop = evtTop + (evtH - IMG_H) / 2;
+  var imgBot = imgTop + IMG_H;
+
+  var slots = [];
+  for (var x = labelW; x + IMG_W <= friseW - 4; x += stepX) {
+    var x1 = x + IMG_W;
+    var free = occupied.every(function(o) {
+      return x1 <= o.x0 || x >= o.x1 || imgBot <= o.y0 || imgTop >= o.y1;
+    });
+    if (free) slots.push(x);
   }
-  if (picks.length === 0) return;
 
-  /* Crée un bandeau de fond DERRIÈRE la frise-card */
-  var strip = document.createElement('div');
-  strip.className = 'frise-bg-strip';
+  if (slots.length === 0) return;
 
-  picks.forEach(function(pick, pi) {
+  /* Dé-duplique les slots trop proches (distance min = IMG_W + 20px) */
+  var MIN_GAP = IMG_W + 20;
+  var filtered = [slots[0]];
+  for (var si = 1; si < slots.length; si++) {
+    if (slots[si] - filtered[filtered.length - 1] >= MIN_GAP) {
+      filtered.push(slots[si]);
+    }
+  }
+
+  /* Limite à 3 images max */
+  var maxImgs = Math.min(filtered.length, 3);
+
+  /* Pour chaque slot retenu, choisit l'image la plus proche temporellement */
+  var usedImages = {};
+  for (var fi = 0; fi < maxImgs; fi++) {
+    var slotX    = filtered[fi];
+    var centerDate = start + ((slotX + IMG_W / 2 - labelW) / (friseW - labelW)) * (end - start);
+
+    var pick = null;
+    var best = Infinity;
+    for (var ci = 0; ci < candidates.length; ci++) {
+      var c = candidates[ci];
+      if (usedImages[c.image]) continue;
+      var dist = Math.abs(c.date - centerDate);
+      if (dist < best) { best = dist; pick = c; }
+    }
+    if (!pick) continue;
+    usedImages[pick.image] = true;
+
+    /* Crée le wrapper positionné dans le container */
     var wrap = document.createElement('div');
-    wrap.className   = 'frise-bgf-wrap';
-    /* Position horizontale : distribue régulièrement */
-    wrap.style.left  = (10 + pi * (80 / Math.max(picks.length - 1, 1))) + '%';
+    wrap.className    = 'frise-bgf-wrap';
+    wrap.style.left   = slotX + 'px';
+    wrap.style.top    = imgTop + 'px';
+    wrap.style.width  = IMG_W + 'px';
+    wrap.style.height = IMG_H + 'px';
+    wrap.style.cursor = 'pointer';
 
     var img = document.createElement('img');
-    img.src             = pick.image;
-    img.alt             = '';
-    img.className       = 'frise-bgf-img';
-    img.draggable       = false;
+    img.src       = pick.image;
+    img.alt       = pick.legende || pick.titre;
+    img.className = 'frise-bgf-img';
+    img.draggable = false;
+    wrap.appendChild(img);
 
     var cap = document.createElement('span');
     cap.className   = 'frise-bg-caption';
     cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
-
-    wrap.appendChild(img);
     wrap.appendChild(cap);
 
-    /* Clic ouvre la fiche */
-    wrap.style.cursor = 'pointer';
     wrap.addEventListener('click', (function(e) {
       return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
     })(pick));
 
-    strip.appendChild(wrap);
-  });
-
-  card.appendChild(strip);
+    container.appendChild(wrap);
+  }
 }
-
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
 function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {
   var col  = COLORS[zone] || COLORS['France'];
