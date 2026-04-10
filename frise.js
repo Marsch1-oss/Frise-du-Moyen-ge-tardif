@@ -768,12 +768,24 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.style.cursor        = 'pointer';
 
   /* Texte selon niveau de zoom — centré */
+  chip.style.overflow = 'visible';  /* tooltip image visible */
   if (level > 1) {
+    /* Date de début du règne */
+    var MOIS_ABR_R = ['jan.','fév.','mar.','avr.','mai','jun.',
+                      'jul.','aoû.','sep.','oct.','nov.','déc.'];
+    var dateLblR = document.createElement('span');
+    dateLblR.className   = 'chip-date-label';
+    dateLblR.textContent = evt.mois
+      ? MOIS_ABR_R[evt.mois - 1] + ' ' + evt.date
+      : '' + evt.date;
+    chip.appendChild(dateLblR);
+
+    /* Titre du règne */
     var maxC = level === 4 ? 36 : level === 3 ? 26 : 18;
     var titre = evt.titre.length > maxC
       ? evt.titre.slice(0, maxC - 1) + '\u2026'
       : evt.titre;
-    chip.textContent = titre;
+    chip.appendChild(document.createTextNode(titre));
   }
   chip.title = '\u265b ' + evt.titre
     + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
@@ -863,33 +875,43 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
       chip.style.borderColor = col.bg;
     }
-    chip.style.color       = '#fff';
+    chip.style.color   = '#fff';
+    chip.style.overflow = 'visible';  /* permet le label date et tooltip */
     if (level > 1) {
       var titreP = evt.titre;
-      /* Calcule la largeur disponible en px pour adapter la fonte */
-      var chipPct = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
-      var chipPxApprox = chipPct * (TRACK_PX - 130);
-      var maxC = level === 3 ? 32 : 18;
-      /* Si très étroit (< 60px), tronque le texte */
+      var chipPct      = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
+      var chipPxApprox = chipPct * (TRACK_PX - 90);
+      var maxC         = level === 3 ? 32 : 18;
+
+      /* Label date au-dessus */
+      var MOIS_ABR_P = ['jan.','fév.','mar.','avr.','mai','jun.',
+                        'jul.','aoû.','sep.','oct.','nov.','déc.'];
+      var dateLblP = document.createElement('span');
+      dateLblP.className   = 'chip-date-label';
+      dateLblP.textContent = evt.mois
+        ? MOIS_ABR_P[evt.mois - 1] + ' ' + evt.date
+        : '' + evt.date;
+      chip.appendChild(dateLblP);
+
       if (chipPxApprox < 60) {
-        chip.style.fontSize   = '0.60rem';
-        chip.style.whiteSpace = 'nowrap';
-        chip.style.overflow   = 'hidden';
+        chip.style.fontSize     = '0.60rem';
+        chip.style.whiteSpace   = 'nowrap';
         chip.style.textOverflow = 'ellipsis';
-        chip.textContent = titreP;
+        chip.style.overflow     = 'hidden';
+        chip.appendChild(document.createTextNode(titreP));
       } else {
         chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
         chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
-        chip.style.overflow   = 'hidden';
         chip.style.lineHeight = '1.2';
-        chip.textContent = titreP;
+        chip.appendChild(document.createTextNode(titreP));
       }
     }
     var zonesLabel = isShared ? ' [' + evt.zones.join(' • ') + ']' : '';
     chip.title = evt.titre + zonesLabel + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
 
   } else {
-    chip.style.height    = ROW_H + 'px';
+    /* Hauteur auto pour les chip-full (s'adapte au texte long) */
+    chip.style.minHeight = ROW_H + 'px';
     var evtDateF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
     /* Évite le débordement en fin de période : plafonne à 97% */
     var rawPct = (evtDateF - start) / (end - start) * 100;
