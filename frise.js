@@ -294,6 +294,12 @@ function renderLevel(level, rangeStart) {
       evts.push(e);
     }
     container.appendChild(buildTrack(zone, evts, start, end, level));
+
+    /* Galerie d'illustrations sous la piste (niveaux décennie et annuelle) */
+    if (level >= 3) {
+      var illusRow = buildIllusRow(zone, evts, start, end, level);
+      if (illusRow) container.appendChild(illusRow);
+    }
   }
 
   var hint = document.createElement('div');
@@ -554,6 +560,75 @@ function buildRulersSection(start, end, level) {
   }
 
   return section;
+}
+
+function buildIllusRow(zone, evts, start, end, level) {
+  /* Construit une galerie d'images sous la piste, positionnées sur l'axe temporel */
+  var ILLUS_H = 68;   /* hauteur des vignettes en px */
+  var ILLUS_W = 56;
+
+  /* Événements de la zone avec image, dans la plage */
+  var withImg = evts.filter(function(e) {
+    return e.image && e.image.trim() &&
+           e.date <= end &&
+           (e.date_fin ? e.date_fin : e.date) >= start;
+  });
+  if (withImg.length === 0) return null;
+
+  /* Évite les doublons d'image */
+  var seen = {};
+  withImg = withImg.filter(function(e) {
+    if (seen[e.image]) return false;
+    seen[e.image] = true;
+    return true;
+  });
+
+  var galleryRow = document.createElement('div');
+  galleryRow.className = 'illus-row';
+
+  /* Spacer label (même largeur que zone-label) */
+  var spacer = document.createElement('div');
+  spacer.className = 'zone-label illus-spacer';
+  galleryRow.appendChild(spacer);
+
+  /* Zone de placement */
+  var band = document.createElement('div');
+  band.className = 'illus-band';
+  band.style.height = (ILLUS_H + 8) + 'px';
+
+  withImg.forEach(function(evt) {
+    /* Position horizontale = date sur l'axe */
+    var dateF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
+    var leftPct = Math.max(0, Math.min(98, (dateF - start) / (end - start) * 100));
+
+    var wrap = document.createElement('div');
+    wrap.className = 'illus-wrap';
+    wrap.style.left = leftPct + '%';
+
+    var img = document.createElement('img');
+    img.src       = evt.image;
+    img.alt       = evt.legende || evt.titre;
+    img.className = 'illus-img';
+    img.draggable = false;
+    wrap.appendChild(img);
+
+    /* Légende au survol */
+    var cap = document.createElement('span');
+    cap.className   = 'illus-cap';
+    cap.textContent = (evt.legende || evt.titre) + ' (' + evt.date + ')';
+    wrap.appendChild(cap);
+
+    /* Clic → fiche */
+    wrap.style.cursor = 'pointer';
+    wrap.addEventListener('click', (function(e) {
+      return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
+    })(evt));
+
+    band.appendChild(wrap);
+  });
+
+  galleryRow.appendChild(band);
+  return galleryRow;
 }
 
 function buildTrack(zone, evts, start, end, level) {

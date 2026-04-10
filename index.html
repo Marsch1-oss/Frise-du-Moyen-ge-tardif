@@ -939,6 +939,72 @@
     #music-toggle.muted #music-status::before { content: '\25BA'; letter-spacing: 0; }
     #music-toggle:not(.muted) #music-status { content: '\9646\9646'; }
 
+  
+    /* ══ Galerie d'illustrations sous les pistes ══ */
+    .illus-row {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 0.5rem;
+      border-top: 1px dashed var(--border);
+    }
+    .illus-spacer {
+      /* même largeur que .zone-label, aucun contenu */
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .illus-band {
+      flex: 1;
+      position: relative;
+      overflow: visible;
+    }
+    .illus-wrap {
+      position: absolute;
+      top: 4px;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: inline-block;
+    }
+    .illus-img {
+      display: block;
+      width: 56px;
+      height: 68px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px;
+      border: 1.5px solid rgba(154,107,26,0.4);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      transition: width 0.2s, height 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .illus-wrap:hover .illus-img {
+      width: 120px;
+      height: 145px;
+      transform: translateX(-50%) translateY(-20%) scale(1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.32);
+      z-index: 20;
+    }
+    .illus-cap {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(28,20,10,0.88);
+      color: #f5edd8;
+      font-size: 0.63rem;
+      font-style: italic;
+      white-space: normal;
+      width: 140px;
+      text-align: center;
+      padding: 4px 7px;
+      border-radius: 4px;
+      line-height: 1.3;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.16s;
+      z-index: 25;
+    }
+    .illus-wrap:hover .illus-cap { opacity: 1; }
+
   </style>
 </head>
 <body>
