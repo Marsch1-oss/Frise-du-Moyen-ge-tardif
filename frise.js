@@ -98,7 +98,7 @@ var currentMatchIdx = -1; /* index courant dans matchedIds */
 function initActiveZones() {
   activeZones = {};
   for (var i = 0; i < ZONES.length; i++) activeZones[ZONES[i]] = false;
-  activeZones['France'] = true;  /* Seule la France active par défaut */
+  /* Aucune zone active par défaut — l'utilisateur choisit dans le wizard */
 }
 
 function normalizeZone(z) {
@@ -219,12 +219,12 @@ function renderLevel(level, rangeStart) {
     start = 1290; end = 1510; tickStep = 25;
   } else if (level === 2) {
     currentCentury = rangeStart;
-    start = rangeStart; end = rangeStart + 100; tickStep = 10;
+    start = rangeStart; end = rangeStart + 102; tickStep = 10; /* 2 ans de marge droite */
   } else if (level === 3) {
     currentDecade = rangeStart;
     /* end = +10 pour laisser de la place visuellement après l'année 9
        Les événements sont filtrés à +9 dans la boucle de rendu */
-    start = rangeStart; end = rangeStart + 10; tickStep = 1;
+    start = rangeStart; end = rangeStart + 10.5; tickStep = 1; /* 0.5 de marge droite */
   } else {
     currentYear = rangeStart;
     currentDecade = Math.floor(rangeStart / 10) * 10;
@@ -775,9 +775,12 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
                       'jul.','aoû.','sep.','oct.','nov.','déc.'];
     var dateLblR = document.createElement('span');
     dateLblR.className   = 'chip-date-label';
-    dateLblR.textContent = evt.mois
-      ? MOIS_ABR_R[evt.mois - 1] + ' ' + evt.date
-      : '' + evt.date;
+    var lblTxtR = evt.mois ? MOIS_ABR_R[evt.mois - 1] + '\u00a0' + evt.date : '' + evt.date;
+    if (evt.date_fin && evt.date_fin > evt.date) {
+      var finTxtR = evt.mois_fin ? MOIS_ABR_R[evt.mois_fin - 1] + '\u00a0' + evt.date_fin : '' + evt.date_fin;
+      lblTxtR += '\u2013' + finTxtR;
+    }
+    dateLblR.textContent = lblTxtR;
     chip.appendChild(dateLblR);
 
     /* Titre du règne */
@@ -888,9 +891,12 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
                         'jul.','aoû.','sep.','oct.','nov.','déc.'];
       var dateLblP = document.createElement('span');
       dateLblP.className   = 'chip-date-label';
-      dateLblP.textContent = evt.mois
-        ? MOIS_ABR_P[evt.mois - 1] + ' ' + evt.date
-        : '' + evt.date;
+      var lblTxtP = evt.mois ? MOIS_ABR_P[evt.mois - 1] + '\u00a0' + evt.date : '' + evt.date;
+      if (evt.date_fin && evt.date_fin > evt.date) {
+        var finTxtP = evt.mois_fin ? MOIS_ABR_P[evt.mois_fin - 1] + '\u00a0' + evt.date_fin : '' + evt.date_fin;
+        lblTxtP += '\u2013' + finTxtP;
+      }
+      dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
       if (chipPxApprox < 60) {
@@ -1385,7 +1391,7 @@ function wzClose() {
 function goHome() {
   /* Remet France seule active et rouvre le wizard */
   for (var z in activeZones) activeZones[z] = false;
-  activeZones['France'] = true;
+  /* Revient au wizard sans présélection */
   var inp = document.getElementById('search-input');
   if (inp) inp.value = '';
   clearSearch();
