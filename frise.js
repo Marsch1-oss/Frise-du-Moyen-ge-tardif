@@ -284,7 +284,8 @@ function renderLevel(level, rangeStart) {
         ? e.date_fin + (e.mois_fin ? (e.mois_fin - 1) / 12 : 0)
         : eDateF;
       if (level === 4) {
-        if (eDateF > end || fin < start) continue;
+        /* Filtre strict : seulement l'année sélectionnée (pas l'année suivante) */
+        if (eDateF >= start + 1 || fin < start) continue;
       } else if (level === 3) {
         /* Événements limités à l'année 9 de la décennie (pas l'année tampon) */
         if (e.date > start + 9 || (e.date_fin ? e.date_fin : e.date) < start) continue;
