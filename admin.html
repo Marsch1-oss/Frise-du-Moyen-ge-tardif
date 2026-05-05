@@ -427,9 +427,9 @@ function resetForm() {
     updateZoneTag(inp.closest('.zone-tag'), false, inp.value);
   });
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
-    var first = parseInt(lbl.dataset.val) === 1;
-    lbl.classList.toggle('selected', first);
-    lbl.querySelector('input').checked = first;
+    var isDefault = parseInt(lbl.dataset.val) === 2;  /* Niveau 2 par défaut */
+    lbl.classList.toggle('selected', isDefault);
+    lbl.querySelector('input').checked = isDefault;
   });
   document.getElementById('form-title').textContent = 'Nouvel événement';
   document.getElementById('btn-delete').style.display = 'none';
