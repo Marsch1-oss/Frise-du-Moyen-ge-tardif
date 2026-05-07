@@ -1,22 +1,24 @@
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
 var ZONES = [
-  'France', 'Angleterre', 'St Empire', 'Papaute',
-  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Hongrie',
-  'Europe C. & Or.', 'Pologne', 'Russie', 'Scandinavie',
-  'Byzance', 'Ottomans', 'Monde islamique', 'Orient',
-  'Afrique', 'Amerique',
-  'Japon', 'Chine', 'Inde', 'Monde',
-  'Alsace',
-  'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'
+  'France', 'Angleterre', 'St Empire',
+  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace',
+  'Scandinavie', 'Pologne', 'Russie',
+  'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
+  'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
+  'Afrique', 'Amerique', 'Monde',
+  'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
 ];
 
 var ZONES_GROUPS = {
-  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Papaute', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Alsace', 'Scandinavie'],
-  'Europe orientale': ['Hongrie', 'Europe C. & Or.', 'Pologne', 'Russie', 'Byzance', 'Ottomans'],
-  'Monde': ['Monde islamique', 'Orient', 'Afrique', 'Amerique', 'Japon', 'Chine', 'Inde', 'Monde'],
-  'Thèmes': ['Art', 'Techniques', 'Sciences', 'Idees', 'Litterature'],
-};
+  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'],
+  'Europe du Nord':     ['Scandinavie'],
+  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
+  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
+  'Afrique & Amérique': ['Afrique', 'Amerique'],
+  'Monde':              ['Monde'],
+  'Thèmes':             ['Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas']
+}
 
 var COLORS = {
   'France':              { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
@@ -48,7 +50,8 @@ var COLORS = {
   'Litterature':         { bg: '#2A5C2A', light: '#E0F0E0', text: '#163316' },
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
-  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
+  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' },
+  'Atlas':               { bg: '#1A5C7A', light: '#D8EEF5', text: '#0A2E40' }
 };
 
 var ZONE_ALIASES = {
@@ -76,7 +79,9 @@ var ZONE_ALIASES = {
   'Literature':          'Litterature',
   'Amérique':            'Amerique',
   'America':             'Amerique',
-  'Africa':              'Afrique'
+  'Africa':              'Afrique',
+  'Cartes':             'Atlas',
+  'Maps':               'Atlas'
 };
 
 var ROW_H    = 32;
@@ -1418,7 +1423,7 @@ function wzBuildPeriodSelect() {
       sel.appendChild(opt);
     }
   } else {
-    sub.textContent = "Sélectionnez l’année à afficher.";
+    sub.textContent = "Sélectionnez l'année à afficher.";
     for (var y = 1300; y < 1500; y++) {
       var opt = document.createElement('option');
       opt.textContent = y;

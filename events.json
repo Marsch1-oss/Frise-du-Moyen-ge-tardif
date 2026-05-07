@@ -4794,6 +4794,19 @@
     "legende": "Armoiries de la famille Bucheck"
   },
   {
+    "id": 1035,
+    "titre": "Luigi Ier Gonzaga capitaine du peuple à Mantoue",
+    "date": 1328,
+    "date_fin": 1360,
+    "mois_fin": 1,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Luigi Ier Gonzaga (également Ludovico Ier Gonzaga ) (* 1267 ; † 18 janvier 1360 ) de la famille Gonzaga était le dirigeant de Mantoue depuis le meurtre de Rinaldo dei Bonacolsi en 1328. L'année suivante, en 1329, l'empereur Louis IV le nomma vicaire impérial de Mantoue.\nLudovico Ier était issu de la Maison de Gonzaga , une ancienne famille d'origine rurale lombarde, remontant au XIIe siècle. Ils s'appelaient à l'origine Corradi, puis, d'après leur domaine foncier Gonzaga, « Corradi di Gonzaga », et enfin simplement Gonzaga. [ 1 ]\n\nLudovico était le petit-fils d'Antonio Corradi (mort en 1283 à Mantoue), qui, en 1259, était l'un des « Anziani del Popolo » (conseillers municipaux) de Mantoue et avait épousé la riche héritière Richilde Pedroni, qui apporta avec elle une grande partie du domaine des Gonzague. Ce domaine donna son nom à la famille Gonzague et constitua le fondement de son ascension au rang des familles les plus célèbres et les plus puissantes d'Italie. [ 2 ] Il se situe à la frontière sud de la province de Mantoue, à environ 29 km de Mantoue et à 34 km de Reggio nell'Emilia .\n\nSon père, Guido (également appelé Corrado) Corradi da Gonzaga (mort en 1318 à Mantoue), était un riche propriétaire terrien qui, en 1287, obtint le fief du château de Gonzaga et sa seigneurie associée du monastère bénédictin de San Benedetto di Polirone . La mère de Ludovico était la fille de Strambino di San Martino, seigneur de San Martino dall'Argine (situé à environ 31 kilomètres au sud-ouest de Mantoue, sur le fleuve Oglio ). \nLudovico Gonzaga épousa d'abord Richilda Ramberti (1269-1319) de Brescia , fille du condottiere Ramberto Ramberti, podestat de Modène ; deuxième Caterina Malatesta (décédée en  1340), fille de Pandolfo I Malatesta, seigneur de Rimini (1317-1326) ; et la troisième Giovanna Novella Malaspina , de la branche Spino Fiorito, fille du condottiere Spinetta Malaspina, dite « la Grande » (morte en 1352), marquis de Verrucola, et de Béatrice Visconti .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Luigi_Gonzaga_primo_Capitano_del_popolo.jpg/500px-Luigi_Gonzaga_primo_Capitano_del_popolo.jpg"
+  },
+  {
     "id": 454,
     "titre": "Insurrection à Chio contre Martino Zaccaria",
     "date": 1329,
@@ -8732,6 +8745,7 @@
     "titre": "Jean Visconti",
     "date": 1349,
     "date_fin": 1354,
+    "mois_fin": 10,
     "zones": [
       "Italie"
     ],
@@ -9294,6 +9308,17 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Retable_ouverture_simple.jpg",
     "legende": "Retable ouverture des jours de fête : douze scènes de la Passion du Christ et douze scènes de son enfance.",
     "sources": "https://fr.wikipedia.org/wiki/Retable_des_Clarisses"
+  },
+  {
+    "id": 1046,
+    "titre": "Jacopo da Bologna Non al suo amante",
+    "date": 1350,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Jacopo da Bologna (né avant 1340, mort en 1386) était un compositeur italien de l' école Ars Nova , surtout connu pour ses madrigaux . Ses œuvres figurent en bonne place dans le Codex Squarcialupi et sont également présentes dans le manuscrit de Londres . L'un de ses madrigaux, Non al suo amante (vers 1350), est la seule composition contemporaine de Pétrarque qui mette en musique un texte du poète italien. Son œuvre la plus célèbre, Fenice fu , a été composée vers 1360.\n\nOn ne connaît que peu de détails sur sa vie, et on ignore s'il a été éduqué dans une école monastique ou à l' Université de Bologne . [ 1 ] Il travailla pour la famille Visconti à Milan dans les années 1340 et, la décennie suivante, pour Mastino II della Scala à Vérone .\n\nJacopo da Bologna a également écrit un traité sur la théorie musicale : L'arte del discanto misurato , où il montre des influences de la théorie de la notation française. [ 2 ] Il était aussi poète, comme on peut le déduire des textes autobiographiques de ses madrigaux Io me sun un che , Oselleto salvazo ou Vestìse la cornachia",
+    "image": ""
   },
   {
     "id": 780,
@@ -11293,6 +11318,18 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg/1280px-Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg"
   },
   {
+    "id": 1031,
+    "titre": "Lorenzo Veneziano  Polyptyque Lion",
+    "date": 1357,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Lorenzo Veneziano né à Venise est un peintre italien actif dans la deuxième partie du Trecento (XIVe siècle italien) entre 1357 et 1372.\nLorenzo Veneziano est un des premiers suiveurs de Paolo Veneziano, à l'origine de l'école vénitienne.\n\nLié initialement au style byzantin, il a été influencé par Barnaba et Tommaso da Modena.\n\nIl a travaillé surtout à Venise mais il se déplaça aussi à Vérone, Vicence et Bologne.\n\nIl devint adepte du gothique en accordant une importance accrue aux détails naturalistes jusqu'à atteindre le seuil du gothique international, devenant un des artistes vénitiens majeurs de son époque.\n\nSon œuvre plus ancienne, datée de 1356, conservée initialement dans une collection privée de Vérone, est aujourd'hui perdue.\nParmi les premières œuvres répertoriées figure le Polyptyque Lion (1357), peint en collaboration avec Francesco Bissolo, pour le maître-autel de l'église Sant'Antonio Abate de Venise, dont le panneau central comporte l'Annonciation avec, représenté sur le bas, agenouillé et en petite dimension, le donateur Domenico Lion.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Lorenzo_veneziano%2C_polittico_lion_01.jpg",
+    "legende": "Le Polyptyque Lion (1357), Gallerie dell'Accademia de Venise."
+  },
+  {
     "id": 10,
     "titre": "Grande Jacquerie",
     "date": 1358,
@@ -11886,6 +11923,316 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Altarpiece_of_Saint_Stephen.jpg"
   },
   {
+    "id": 1018,
+    "titre": "Traité de Guillon",
+    "date": 1360,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Le traité de Guillon, ou traité des moutons d'or, est un traité signé le 10 mars 1360 entre Édouard III, roi d’Angleterre, et Philippe de Rouvres, duc de Bourgogne, à Guillon dans l'actuel département de l'Yonne[1]. Il prévoit une trêve de trois ans, contre le versement d'une forte somme par le duc de Bourgogne.\nEn octobre 1359, il débarque à Calais et chevauche jusqu'à Reims. Mais la chevauchée anglaise échoue devant la ville du sacre (janvier 1360).\n\nÉdouard conduit alors son armée par Châlons, prend Tonnerre, épargne Noyers mais ravage Montréal dont une partie des habitants est massacrée. Tandis que son lieutenant s'empare de la place forte de Flavigny et que ses troupes pillent l'avallonnais, Édouard s'installe dans l'ancien château de Guillon.\nInformé de la situation, le jeune duc de Bourgogne Philippe de Rouvres se rend à Guillon, accompagné de ses principaux vassaux.\nLes négociations entre les Anglais et les Bourguignons[2] aboutissent le 10 mars 1360 à la signature d'un traité, qui établit une trêve de trois ans.\n\nVaincus, les Bourguignons s'engagent à verser une somme importante de 200 000 deniers d'or au mouton (d'où le nom de Traité des moutons d'or) en trois versements. Ils acceptent de laisser circuler librement les sujets du roi d'Angleterre. Édouard III, de son côté, s'engage à rendre Flavigny, à lever la rançon des villes conquises et des prisonniers, à quitter la Bourgogne pacifiquement et rapidement.\nLe paiement des 200 000 deniers d'or est garanti par dix-sept abbés et prélats, quinze nobles, sept bourgeois et six villes. Les bourgeois et nobles promettent de se livrer en otage à Londres ou Calais, en cas de retard supérieur à un mois. \nLes Anglais quittent enfin la Bourgogne et se dirigent vers Paris. Après avoir échoué à prendre la ville, Édouard regagne l'Angleterre. Sa chevauchée se solde par un échec : il ne sera pas roi de France.\n\nAnglais et Français sont alors contraints à une négociation qui aboutit au traité de Brétigny en mai 1360. Ce traité de paix s'avère désastreux pour la Bourgogne : les mercenaires congédiés par les anciens belligérants se regroupent en Grandes Compagnies et pillent la région, qui n'a plus les moyens de se défendre.",
+    "image": ""
+  },
+  {
+    "id": 1019,
+    "titre": "Raid normand sur le port de Winchelsea",
+    "date": 1360,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "On s’est souvent demandé pourquoi la Ville de Paris possédait un navire dans ses armoiries “Fluctuat nec Mergitur”; on a dit, à ce sujet, que ce navire rappelait l’ancienne barque des nautonniers, ou plus simplement, le bateau des porteurs d'eau. A la vérité, jadis le bateau placé dans le scel de Paris, fut celui des porteurs d’eau ; il prit place, plus tard, dans le blason de la capitale, quand, par édit royal, Paris fut pourvu d’armoiries.\n\n \n\nMais ce bateau fut transformé en navire de guerre par un autre édit royal, qui remonte à l’an 1361.\n\n \n\n Il s’agissait de récompenser les Parisiens, qui avaient équipé un navire de combat ; les milices parisiennes, montées sur ce navire, sous les ordres de Pépin des Essarts, prirent une part glorieuse à la bataille navale qui fut livrée aux Anglais en face de Winchelsea, en mars 1360.\n\n \n\n La flotte anglaise fut cernée, les vaisseaux ennemis furent brûlés et la flotte française rentra en triomphe à Boulogne.\n\n \n\n C’est en souvenir de la participation des Parisiens à cette bataille que le blason de Paris est orné d’un navire de guerre et non d’un bateau de porteurs d’eau.\n\n \n\n \n\nDans les premiers mois de cette dernière année 1360, les principaux nobles de la Picardie, à la tête desquels étaient le connétable, le comte de St-Pol et le chevalier Jean de Neuville, résolurent de tenter une descente en Angleterre.\n\n \n\nCe projet avait été formé par Louis d’Harcourt, avant qu’il ne fût fait prisonnier au combat de Préaux ; et, à ce moment, il avait quelques chances de succès.\n\n \n\n \n\nLe 14 mars de l'année 1360, les forces françaises se lancent dans une expédition en Angleterre, probablement dans le but de mener des raids, déstabiliser les positions anglaises et/ou affirmer leur présence militaire dans la région.\n\n \n\nLa ville de Paris s’est engagée à fournir deux mille deniers d’or pour cette expédition, à la condition qu’un des navires de la flotte d’invasion sera monté par ses bourgeois et portera ses armoiries.\n\n \n\nLe chef de ce contingent parisien n’est autre que Pépin des Essarts, le fidèle chevalier qui, dans la nuit du 31 juillet 1358, a si puissamment contribué, avec Jean Maillart, à renverser Marcel et à faire rentrer la capitale du royaume sous l’obéissance du régent.\n\n \n\nLes bourgeois d’Amiens, et entre autres Fremin Andeluye, écuyer d’écurie du duc de Normandie, prennent également une part importante à l’affaire de Winchelsea dont l’effet moral est immense.\n\n \n\nLa guerre contre l’Angleterre dure depuis vingt ans, et c’est la première fois que l’on ose tenter une entreprise aussi hardie, pour ne pas dire aussi téméraire.\n\n \n\n Le dauphin en a pris résolument l’initiative au moment même où la France est envahie par une innombrable armée; et telle a été sa politique que deux villes, révoltées un an et demi auparavant contre son autorité, lui ont fourni les hommes et l’argent pour mener à bien cette croisade du patriotisme.\n\n \n\n \n\n Le rôle de Jean de Neuville et la structure du commandement\n\nJean de Neuville,  un noble picard, neveu du maréchal d'Audrehem,\n\nUn grand nombre de navires et 1,500 combattants, sans compter probablement les équipages, se trouvaient rassemblés (1).\n\nJean de Neuville s'étant occupé du recrutement de la flotte et des troupes était mieux connu d'elles : il fut choisi pour capitaine par les marins, les communes et les hommes d'armes.\n\nCette préférence inspira une certaine jalousie au connétable et au comte de Saint-Pol que leur rang plus élevé dans la hiérarchie féodale et les services rendus semblaient désigner pour le commandement.\n\n \n\nLe 14 mars (2) on mit à la voile sur la côte de Picardie et on alla débarquer dans le comté de Sussex au petit port de Winchelsea alors l'une des cinq grandes villes maritimes anglaises ; dont son importance faisait le but véritable de l'expédition. On aborda sans rencontrer de résistance.\n\nPuis une fois à terre, les troupes rangées en bataille furent divisées en trois corps.\n\n \n\n Jean de Neuville commanda le premier où les Normands prirent place ; les deux autres qui comprenaient la noblesse sans doute peu désireuse d'obéir à un simple chevalier, furent mis sous les ordres du connétable et du comte de Saint-Pol.\n\n \n\nCe passage met en lumière l'affection et le respect qu'il inspirait, ce qui explique pourquoi il fut choisi capitaine malgré sa position inférieure dans la hiérarchie féodale.\n\n \n\nMalheureusement, comme le dit le chroniqueur, « fortune estoit pour le temps contre le royaume et contre les François, premièrement en chief et puis es membres ».\n\n \n\n Les Picards, réduits à un trop faible nombre et n’ayant que quelques Normands avec eux, réussirent cependant à prendre le port et la ville de Winchelsea et à les piller.\n\n \n\n Ils n’épargnèrent ni l’âge ni le sexe. Ils entrèrent dans l’église, au moment où l’on disait la messe, et y violèrent une femme, qui expira sous leurs outrages.\n\n \n\n \n\nJalousie des autres chefs\n\nLe texte souligne une jalousie de la part du connétable et du comte de Saint-Pol, deux seigneurs plus élevés dans la hiérarchie féodale, qui auraient pu être des candidats logiques pour commander l'expédition.\nCela montre une tension interne, fréquente dans les armées médiévales, où les nobles de haut rang étaient souvent réticents à se voir commander par un chevalier de moindre rang.\n\n \n\nDivisions des troupes\n\nLes troupes furent divisées en trois corps distincts :\nJean de Neuville commande les Normands (probablement une troupe d’élite),\nLe connétable et le comte de Saint-Pol commandent les autres troupes, probablement composées de nobles français.\n \n\nCela est révélateur des stratégies militaires de l'époque, où la composition des troupes était souvent marquée par des divisions en fonction du rôle social et politique des commandants, ce qui influençait leur autorité sur le terrain.\n\n \n\nCe port avait une grande importance stratégique et commerciale, ce qui en faisait une cible de choix pour les raids maritimes.\n\n L’attaque semble s’être passée sans grande résistance, ce qui suggère que les défenses anglaises étaient faibles ou mal préparées à cet instant.\n\n \n\n \n\n \n\nAu même moment, une compagnie de cavaliers du ban du Sussex arriva.\n\n \n\nCela déclencha une tentative de repli par les Français, qui savaient que d’autres Anglais étaient en route.\n\n \n\nAlors que les Français marchaient en formation vers leurs navires, d’autres cavaliers anglais arrivèrent.\n\n \n\nPour embarquer, les Français durent rompre leur formation afin de patauger dans l’eau.\n\n \n\nLes Anglais les chassèrent bientôt et leur tuèrent au moins cent-soixante hommes ; quelques-uns se noyèrent en se hâtant de se rembarquer.\n\n \n\nCette brèche dans leur défense suffit aux Anglais à cheval pour les charger. Le résultat fut la perte de 2 navires et de plusieurs centaines d’hommes pour les Français.\n\n \n\nCette expédition irrita vivement Édouard III, roi d’Angleterre; elle eut pour résultat de faire ordonner, des mesures générales de défense.\n\n \n\nConcernant l’invasion susmentionnée et la garde des prisonniers…\n\n \n\nAttendu que nos ennemis de France, en très grande multitude d’hommes armés, avec leurs chevaux, sont arrivés à Winchelsea le dimanche tout récemment passé, qu’ils ont pris la ville de Winchelsea, ont tué sans humanité les hommes qu’ils y ont trouvés, et ont ensuite parcouru la campagne environnante à cheval, commettant meurtres, incendies et destructions ;\n\n \n\nEn conséquence de quoi il est nécessaire que nos prisonniers… soient maintenus sous bonne et sûre garde,\n\n \n\nNous vous ordonnons [ordre adressé à une personne nommée dans la lettre originale] de garder ledit [prisonnier] de telle sorte que personne de sa suite ne demeure ni dans ce même château, ni dans ladite ville avec lui, à l’exception d’une seule personne chargée de lui fournir et préparer ses vivres, à ses propres frais…\n\n \n\n \n\n \n\nTous les navires des Cinq- Ports furent armés; et chaque « gros navire » dut être monté par quarante marins, quarante hommes d’armes et soixante arbalétriers.\n\nOn réquisitionna, en outre, tous les navires marchands qui étaient dans les ports.\n\n \n\nThomas de Holland fut nommé gardien du château et du port de Barfleur, le 6 octobre 1359, et, quelques jours plus tard, le 28, lieutenant du roi en Normandie, avec Philippe de Navarre.\n\n \n\nCe même jour, Édouard arriva à Calais et commença cette rude campagne d’hiver qui se termina; le 8 mai 1360, par le traité de Brétigny.\n\nNous ne dirons rien de cet acte si tristement célèbre, qui témoigne du degré d’abaissement où la France était descendue ; il était nécessaire, quoi qu’en dise une chronique, et il fut accueilli avec joie par la population de Paris elle-même, qui, peu de temps auparavant, se croyait invincible et voulait tout réformer.\n\n \n\nL’état de désorganisation et de démoralisation de la société française était tel, qu’on apprit avec un certain étonnement que le vainqueur se contentait de garder le quart du royaume et consentait à laisser le reste à un gouvernement ruiné et impuissant.\n\n \n\n \n\n \n\nEffectif : Environ 1 500 à 2 000 hommes (chiffres cohérents avec les sources ; certaines mentionnent jusqu'à 2 000 fantassins, archers, marins et mercenaires).\n\nCe raid est souvent décrit comme l'un des derniers grands coups français sur la côte anglaise avant la paix de 1360. Il visait à venger les ravages anglais et à peser sur les négociations.\n\n \n\nLes sources anglaises insistent parfois sur l'horreur (massacre dans les églises, viols, incendies généralisés), tandis que les chroniques françaises (Froissart notamment) le présentent plus comme une opération limitée et réussie sur le plan du pillage.\n\nLe chef est parfois nommé Enguerrand Ringoes (ou une variante) dans certaines sources secondaires anglaises, mais les références françaises et plus précises confirment Jean de Neuville comme organisateur principal.\n\n \n\n \n\n Les sources historiques mentionnées\n\nHenri de Knyghton (qui a écrit vers la fin du XIVe siècle) est cité pour donner une estimation d'un nombre de 20 000 hommes, ce qui semble être une exagération.\nLa Chronique Normande, une source plus proche des événements, mentionne seulement 1 500 combattants, une estimation plus modeste mais qui semble plus réaliste.\nThomas Walsingham et Guillaume de Nangis, deux autres chroniqueurs médiévaux, font mention de l'expédition, mais les chiffres varient.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Armoiries_de_la_ville_de_Paris_%281949%29.svg/langfr-250px-Armoiries_de_la_ville_de_Paris_%281949%29.svg.png",
+    "sources": "https://www.lesportesdutemps.com/2025/12/15-mars-1360-raid-francais-des-parisiens-picards-et-normands-sur-le-port-de-winchelsea-angleterre.html"
+  },
+  {
+    "id": 1020,
+    "titre": "Le Parlement section spécialisée du Conseil chargée de la Justice",
+    "date": 1360,
+    "mois": 3,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "En France, le Parlement devient la section spécialisée du Conseil qui s’occupe de la justice. \nLe Parlement de Paris est une institution française de l'Ancien Régime, proche d'un tribunal, qui fait partie des cours souveraines (rebaptisées cours supérieures à partir de 1661, début du règne de Louis XIV). Il s'agit de l'une des institutions les plus importantes, bien que l'une des plus méconnues, de la monarchie.\nLe Parlement bénéficie de la justice déléguée, qui lui permet de rendre ses arrêts au nom du roi. Représentant le roi au plus haut niveau dans ses prérogatives judiciaires, il jouit d'une compétence étendue à tout le royaume. En 1278 est ainsi créée au sein du Parlement de Paris une section chargée des causes venues « de la terre qui est gouvernée par droit écrit », c'est-à-dire le Midi de la France.\n\nLe Parlement est une cour souveraine, c'est-à-dire que ses décisions ne sont pas susceptibles d'appel. Mais le roi peut présider la cour, en modifier les sentences, interrompre une procédure ou évoquer une affaire devant son Conseil. Sur requête d'un plaideur, présentée par un des maîtres des requêtes de l'hôtel, il peut casser l'arrêt pour erreur et renvoyer l'affaire devant la cour pour que celle-ci statue à nouveau ; cette procédure est l'ancêtre de la cassation.\n\n\nSéance royale du Parlement de Paris pour la majorité de Louis XV, tenue dans la Grand-chambre en 1723. Tableau de Nicolas Lancret, musée du Louvre.\nLe Parlement juge en première instance les causes concernant les vassaux du roi. À partir de 1278, néanmoins, la plupart de ces causes sont portées devant les bailliages et les sénéchaussées, et seuls les grands féodaux ou ceux qui jouissent d'un privilège personnel reçu du roi relèvent du Parlement.\nLe Parlement juge en appel des décisions des juridictions royales inférieures (bailliages, prévôtés) et des justices seigneuriales de son ressort (près de la moitié du royaume).\nLe Parlement conserve des attributions proprement administratives : surveillance des administrateurs locaux, participation à l'édiction de certaines ordonnances. Le roi le consulte fréquemment sur sa politique, notamment en période de crise, l'invite à participer aux réformes judiciaires ou administratives qu'il met en œuvre.\n\nPour combler les lacunes de la loi ou fixer les règles de procédure applicables devant lui, le Parlement peut rendre des arrêts de règlement.\n\nEnfin, à partir du XIVe siècle, il prend l'habitude d'enregistrer les ordonnances et édits royaux, ce qui les rend opposables dans les décisions de la Cour (cette formalité équivaut en quelque sorte à la publication au Journal officiel). Ce simple enregistrement se transforme, peu à peu, en une sorte d'approbation donnée à la volonté royale ; tant et si bien qu'un édit n'a force de loi que lorsque le Parlement l'a transcrit sur ses registres. Si le Parlement juge la loi non conforme à l'intérêt de l'État, il dispose d'un droit de remontrance, qui lui permet de refuser de l'enregistrer et de présenter des observations au roi.\n\nIl existe trois degrés : la « remontrance » proprement dite, la « représentation » et le plus simple, la lettre. Pour imposer sa volonté au Parlement, le roi peut en premier lieu émettre une lettre de jussion qui ordonne expressément au Parlement d'enregistrer. Si l'assemblée s'obstine encore par des « remontrances itératives », le roi peut forcer l'enregistrement par la tenue d'un lit de justice. Entre 1673 et 1715, le droit de remontrance des Parlements est limité, de fait, par Louis XIV, qui exige l'enregistrement de ses décisions avant que le Parlement n'émette d'éventuelles remontrances.\nJusqu'à la fin du XIIIe siècle, les membres du Parlement incluent des prélats et barons du royaume, des officiers palatins et des agents locaux du roi, baillis ou sénéchaux, autour d'officiers professionnels, les maîtres et conseillers du Parlement, recrutés pour l'essentiel parmi les légistes du Conseil du roi. Progressivement, ces derniers éclipsent les autres catégories de membres et assurent seuls le fonctionnement du Parlement.\n\nLa Chambre au Plaid, devenue ensuite la Grand'Chambre, est le cœur du Parlement. Elle juge en appel les sentences des juridictions inférieures de son ressort. Les cas de crime de lèse-majesté lui sont soumis, ainsi que les procès concernant les pairs, les apanages, les parlementaires et les affaires de la régale. Au total y siègent plus de cent magistrats (premier président nommé par le roi, présidents à mortier, conseillers) et les princes du sang, ducs et pairs, qui tiennent particulièrement à ce grand privilège. Le roi vient y tenir ses lits de justice. Le Parlement y siège « toutes chambres assemblées » pour les décisions importantes.\n\nMais très tôt, le parlement se spécialise dans ses structures. L'ordonnance de 1278 distingue déjà plusieurs chambres. On distingue en plus de la Grand'Chambre :\n\nles Chambres des Enquêtes, chargées des enquêtes judiciaires (il en exista jusqu'à cinq au XVIe siècle), où près de soixante-quinze magistrats instruisent les affaires ;\nla Chambre des Requêtes (unique sauf de 1580 à 1771), juridiction chargée de juger les personnes bénéficiant de lettres de Committimus (privilège de juridiction) et les établissements ecclésiastiques bénéficiant de lettres de garde-gardienne avec environ une quinzaine de magistrats (président et conseillers) ;\nla Chambre de la Tournelle, ou chambre criminelle, créée en 1515, chargée des affaires de grande criminalité entraînant la peine de mort, la condamnation aux galères ou le bannissement. Elle est formée des présidents et conseillers de la Grand'Chambre siégeant à tour de rôle pendant six mois ;\nla Chambre de la Marée, chargée des affaires relatives au commerce du poisson, tâche importante dans un pays catholique qui pratique assidûment le jeûne du carême ;\nle Parquet composé de près de cinquante personnes comprenait le procureur général et ses substituts, des avocats généraux, qui reçoivent leurs ordres du roi et les décisions royales pour l'enregistrement. S'y adjoignent deux greffiers en chef, les greffiers ainsi que les huissiers.\n\nIssue de la Curia regis médiévale, la Curia in Parlamento s'en détache au milieu du XIIIe siècle et prend progressivement son autonomie pour juger le contentieux sous forme d'un organe spécialisé aux sessions régulières, le Parlement, que Saint Louis établit sur l'île de la Cité (dans le palais de la Cité) et qui reçoit sa première réglementation générale avec une ordonnance de Philippe III, dit le Hardi, en 1278.\n\nÀ partir du XVe siècle, treize autres parlements sont établis, certains ex nihilo mais d'autres à partir d'institutions locales parfois beaucoup plus prestigieuses, comme l'Échiquier de Normandie, ou beaucoup plus anciennes, comme les États de Provence. Néanmoins, le Parlement de Paris, cour de justice du roi (ultime suzerain) et donc d'ultime recours, devient prééminent et était souvent désigné simplement comme « le Parlement ».",
+    "image": ""
+  },
+  {
+    "id": 1021,
+    "titre": "Siège de Paris",
+    "date": 1360,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "31 mars :  Édouard III installe son quartier général au château de Chanteloup à Saint-Germain-lès-Arpajon et dirige l'investissement de Paris. Longjumeau, Montlhéry, Corbeil et Orly sont occupés et pillés dans la foulée. Puis entre le 5 et le 7 avril c'est au tour de Châtillon, Montrouge, Gentilly, Cachan, Issy, Vanves et Vaugirard.\n12 avril : Édouard III lève le siège de Paris et prend la direction de la Beauce.\n13 avril : c'est le fameux « Black Monday »; Alors que l'armée anglaise est quelque part dans le territoire des actuelles Yvelines, une terrible tempête éclate. Un orage de grêle qui tue les bêtes et les gens, détruit les chariots, les vivres et l'armement",
+    "image": ""
+  },
+  {
+    "id": 1022,
+    "titre": "Black Monday",
+    "date": 1360,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "13 avril : c'est le fameux « Black Monday »; Alors que l'armée anglaise est quelque part dans le territoire des actuelles Yvelines, une terrible tempête éclate. Un orage de grêle qui tue les bêtes et les gens, détruit les chariots, les vivres et l'armement",
+    "image": ""
+  },
+  {
+    "id": 1023,
+    "titre": "Traité de Brétigny",
+    "date": 1360,
+    "mois": 5,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "8 mai : la paix franco-anglaise de Brétigny met fin à la première partie de la guerre de Cent Ans[2] :\nLe 8 mai, l'Angleterre, sous le règne d'Édouard III, et la France , avec la participation du pape Innocent VI, concluent un traité détaillé, la paix de Brétigny , mettant fin à la première phase de la guerre de Cent Ans et instaurant une trêve de près de dix ans. Une rançon est négociée et versée pour le roi de France Jean II, détenu par les Anglais depuis quatre ans. Plusieurs otages, dont trois des fils du roi, sont livrés, ce qui permet la libération de Jean. De plus, le roi d'Angleterre reçoit la Gascogne , le Limousin , Calais et d'autres territoires du nord et de l'ouest de la France, la France renonçant à sa souveraineté sur ces régions. En contrepartie, Édouard III renonce à ses prétentions au trône de France.\nLa France perd l’Aquitaine (Guyenne, Gascogne, Quercy, Rouergue, Limousin et Poitou), le Ponthieu, Guînes et Calais au profit des Anglais.\nJean le Bon est libéré contre trois millions d’écus d’or de rançon (ses fils les ducs de Berry et d’Anjou le remplacent comme otage en Angleterre).\nÉdouard III renonce à la couronne de France.\nLe Prince Noir repousse de Guyenne les grandes compagnies qu’il avait engagées une fois signée la paix avec Jean le Bon. Ce dernier, incapable de les contrôler, doit supporter leurs pillages en Poitou et Berry.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Trait%C3%A9_de_Bretigny.svg/960px-Trait%C3%A9_de_Bretigny.svg.png",
+    "legende": "1365 : la France après les traités de Brétigny et de Guérande. Rouge : Territoires contrôlés par Édouard III avant le traité de Brétigny . Rose : Territoires cédés par la France à l'Angleterre par le traité de Brétigny . Blanc : Territoire du duché de Bretagne, allié aux Anglais",
+    "video": "https://www.youtube.com/watch?v=-e68qZ65Fx0",
+    "sources": "https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Br%C3%A9tigny"
+  },
+  {
+    "id": 1024,
+    "titre": "Libération de Jean le Bon à Calais.",
+    "date": 1360,
+    "mois": 10,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "25 octobre : libération de Jean le Bon à Calais.\nLe versement de l'immense rançon négociée à Brétigny pose un problème : le pays est exsangue. Pour libérer le roi, Édouard III exige un acompte de 600 000 écus et le roi doit en verser 400 000 supplémentaires avant un an. Le dauphin ne réussit à collecter que 400 000 écus aux prix d'efforts considérables de la population dans son ensemble. Cependant, Jean le Bon parvient à trouver de l'argent pour le premier versement de sa rançon : il marie sa fille Isabelle, avec Jean Galéas Visconti, le fils de Blanche de Savoie et de Galéas Visconti, qui règne sur la Lombardie avec son frère Barnabé. Son rang est insuffisant pour entrer dans la famille du plus grand roi de la chrétienté, mais Galéas a offert 600 000 écus d'or. Le premier acompte doit être versé en juillet, le solde à la célébration du mariage. Pris à la gorge, Jean le Bon accepte la proposition et peut ainsi être libéré[140].\n26 octobre - 29 octobre : Jean le Bon est à Boulogne\nLouis, deuxième fils de Jean le Bon et frère du futur Charles V, reçoit le droit d'hérédité sur son apanage d'Anjou, ainsi que le titre de duc et pair, son budget propre, sa Chambre des Comptes et le droit de nommer les hauts officiers royaux[11].\nPhilippe II le Hardi devient duc de Touraine.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Retours_de_Jean_le_bon.jpg/500px-Retours_de_Jean_le_bon.jpg",
+    "legende": "Retour de Jean le Bon, enluminure tirée des Grandes Chroniques de France."
+  },
+  {
+    "id": 1025,
+    "titre": "Création du Franc à cheval",
+    "date": 1360,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "5 décembre : ordonnance de création du Franc à cheval à Compiègne. \nPrisonniers à Londres, Jean le Bon et ses conseillers constatent les bienfaits d’une monnaie forte. Ils préparent donc les réformes nécessaires et Jean le Bon crée le franc, le 5 décembre 1360, sur le chemin du retour à Paris[141]. Il s’agit d’une monnaie à très forte teneur en or (3,88 grammes d'or fin), valant une livre et dont le nom indique qu’il ne s’agit pas d’une monnaie au titre dévalué[142]. Il montre le roi chargeant à cheval dans la droite ligne de l’idéal chevaleresque : l’objectif est de restaurer l’autorité royale en mettant fin aux mutations monétaires qui ont entraîné de nombreuses dévaluations pendant toute la première moitié du XIVe siècle[143]. Une monnaie forte constitue la demande principale des états généraux, illustrée par la théorie élaborée par Nicolas Oresme.\nÀ côté des éléments purement économiques qui conduisent à la décision de la création d'une nouvelle monnaie pour le royaume, le choix de son nom, le franc, est avant tout un geste politique, à usage intérieur, pour répondre au besoin d'affirmation nationale naissant pendant la guerre de Cent Ans[144]. Il s'agit clairement d'une évocation de l'ascendance (partielle) franque du peuple français — ce terme de Francs par ailleurs également employé pour désigner les chevaliers chrétiens partis en croisade — et de la légitimité de son roi (le Rex Francorum), légitimité dont la défense constitue une des principales préoccupations des Valois.\nLe roi, même s'il doit ménager les états généraux qui ont gouverné en 1358, n’entend pas laisser les rênes du pouvoir et le conseil est tenu par le parti royal, Guillaume de Melun en tête. Il applique donc une politique proche de celle prônée par les états généraux sans toutefois leur rendre de comptes, ni au parlement. Après la création du franc, il réduit le nombre de fonctionnaires, épure et met sous pression le personnel financier qui est très impopulaire[145]. La plupart des proches du dauphin sont évincés et celui-ci retourne gérer son duché de Normandie. \nLe royaume est saigné pour payer le premier versement de la rançon tel qu'organisé par le dauphin et les états généraux avant le retour de Jean le Bon[147]. L’abandon des mutations monétaires, prive l’État d’une source importante de revenus. Pour payer la rançon, le conseil du roi compte sur la fiscalité indirecte : l’ordonnance de Compiègne du 5 décembre 1360 institue une taxe de 5 %, prélevée sur tous les échanges[148]. Ce choix favorise la noblesse qui n’est pas touchée par cet impôt et plus généralement les propriétaires fonciers dont les revenus sont calculés en monnaie de compte. En revanche, le commerce, l’agriculture et l’industrie sont durement pénalisés et l’économie est ralentie par cette mesure.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Franc_%C3%A0_cheval.jpg",
+    "legende": "Le Franc à cheval représente le roi Jean le Bon sur un destrier, armé d'un écu à fleur de lys et brandissant l'épée, avec le terme « Francorum Rex » (Roi des Francs)."
+  },
+  {
+    "id": 1026,
+    "titre": "Les Tard-Venus  prennent  Pont-Saint-Esprit",
+    "date": 1360,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "Nuit du 27 au 28 décembre : les Grandes compagnies prennent la ville de Pont-Saint-Esprit. Les compagnies de mercenaires recrutées du XIIe siècle au XIVe siècle, privées d'employeurs pendant les périodes de paix, se regroupaient en bandes appelées grandes compagnies, et vivaient au détriment des populations. Ces mercenaires étaient désignés comme « routiers », car appartenant à une « route » (une « troupe armée » en ancien et moyen français), et aussi « ribauds », « cottereaux » [1],[2]ou « brabançons »\nLe nom de Tard-Venus est le nom donné aux bandes de routiers qui ravagèrent le Lyonnais et l'Auvergne dans les dernières années du règne du roi Jean II le Bon.\nLorsque le traité de Brétigny est signé le 8 mai 1360 durant la guerre de Cent Ans, la paix qui s'installe ne fait pas les affaires des gens qui vivaient grâce à la guerre. La trêve n'arrête pas l'action des mercenaires des deux armées[1].\n\nLe roi d'Angleterre fait évacuer les forteresses occupées en France par des hommes d'armes à sa solde. Parmi les capitaines de garnisons, quelques chevaliers et écuyers anglais, obéissent aux ordres du roi, mais d'autres résistent prétextant guerroyer pour le roi de Navarre. Toutefois les mercenaires allemands, brabançons, gascons, flamands, hainuyers, bretons... et des français aventuriers ou ruinés par les guerres ne se dispersent pas et continuent leur vie de pillage. Congédiés, ils se forment en nouvelles bandes prenant comme capitaine les pires d'entre eux.\nIls prennent le nom de Tard-Venus car, pense-t-on, ils sont venus après les autres à la curée de France. En Champagne, ils s'emparent du château de Joinville où ils font un butin considérable[3] et consentent à le rendre moyennant une rançon[2]. Ils parcourent et pillent la Champagne et dévastent les évêchés de Langres, Toul et Verdun puis pénètrent en Bourgogne soutenus par certains chevaliers et écuyers bourguignons.\nAprès s'être installés aux alentours de Besançon, de Dijon et de Beaune, ils prennent et pillent Vergy, Gevrey-en-Beaunois et ravagent la région. Ils tentent de surprendre Chalon à la fin de 1361 et en janvier et février de 1362..\nLa compagnie Blanche est formée après la paix de Brétigny du 8 mai 1360 sous les ordres de John Hawkwood.\nLa réunion de l'ensemble de bandes s'élève à 15 000 combattants vers le Carême de 1362[2]. Le plus puissant des capitaines, Seguin de Badefol, est à la tête de 2 000 mercenaires. Fils de Seguin Gontaut de Badefols et de Marguerite de Bérail, périgourdin comme Arnaud de Cervole, on lui donna le sobriquet de Chopi ou Chopin, sobriquet qui signifie « boiteux », très certainement à la suite d'une anomalie physiqueParmi les autres chefs de bandes, Froissart cite Talbart Talbardon, Guiot du Pin, Espiote, le Petit Meschin, Bataillé, Frank Hennequin, le Bour Camus, le Bour de Lesparre, le Bour de Breteuil, Naudon de Bageran, Lamit, Hagre de l'Escot, Albrest, Ourri l'Allemand, Bourdeille, Bernardon de la Salle, Hortingo de la Salle, Robert Briquet, Creswey, Amanieu d'Ortigue, Garciot du Castel, Guyonnet de Pau. À la mi-Carême l'ensemble de ses Compagnies se met en marche en direction de la riche cité d'Avignon en passant par le comté de Mâcon, le Lyonnais et le Forez et occupent le prieuré d'Estivareilles.",
+    "image": ""
+  },
+  {
+    "id": 1027,
+    "titre": "Arrestation du trésorier juif  Samuel ha-Levi",
+    "date": 1360,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Le trésorier juif Samuel ha-Levi est arrêté et ramené de Tolède à Séville par le roi Pierre le Cruel  Il meurt sous la torture en 1361.\nSamuel ha-Levi (nom à la naissance Samuel ha-Leví Abulafia), juif séfarade de la famille des Abulafia de Tolède, trésorier et almojarife en Castille sous le règne de Pierre le Cruel. Le roi l’autorise à construire une synagogue à Tolède en 1357. En 1360, accusé de détourner des fonds publics, il est arrêté et ramené de Tolède à Séville par le roi Pierre le Cruel. Il meurt sous la torture en 1361.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Samuel_ha_Lev%C3%AD_Abulafia.jpg/330px-Samuel_ha_Lev%C3%AD_Abulafia.jpg",
+    "legende": "Samuel ha Leví Abulafia (Toledo)"
+  },
+  {
+    "id": 1028,
+    "titre": "Guariento di Arpo",
+    "date": 1360,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Guariento di Arpo né à Padoue ou Venise entre 1310 et 1320, et mort dans la même ville entre 1368 et 1370, probablement originaire de Piove di Sacco, est un peintre anonyme italien.\nIl est nommé ainsi pour avoir peint le Cycle des anges de Guariento de la chapelle privée des Carraresi de Padoue, des figures longilignes et sinueuses typiques de l'angéologie médiévale, encore gothique, à la charnière du style byzantin et de l'école giottesque, et influencée également par Venise.\nGuariento di Arpo se forme probablement à l'école des peintres de Rimini, présents à Padoue à partir de 1324. Actif surtout dans sa ville natale où il est attesté de 1338 à 1364, il travaille pour des milieux liés à la cour de Carrare et dans l'église des Eremitani.\nEn 1365-1366, à l'invitation du doge Marco Cornaro, il vient s'installer à Venise pour décorer la salle du grand Conseil au palais Ducal, avec un monumental Couronnement de la Vierge au Paradis, gravement endommagé par l'incendie de 1577[1].",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Angels%27_army_by_Guariento.jpg/960px-Angels%27_army_by_Guariento.jpg?utm_source=commons.wikimedia.org&utm_campaign=gallery&utm_content=thumbnail",
+    "legende": "L'armée des Anges Musei Civici di Padova Cycle des anges de la chapelle privée des Carraresi de Padoue"
+  },
+  {
+    "id": 1029,
+    "titre": "Giovanni da Milano  Couronnement de la Vierge Polyptique Ognissanti",
+    "date": 1360,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Giovanni da Milano est un peintre italien de la période gothique italienne, qui a été actif à Florence et Milan entre 1350 et 1369.\nPar sa synthèse entre l'art gothique français et la peinture italienne, on doit à Giovanni da Milano les innovations de l'art post-giottesque à Florence. Il fut l'élève de Taddeo Gaddi.\nOeuvres : \nPolyptyque d'Ognissanti, musée des Offices, Florence\nMadonna e i santi (1355), polyptyque, museo civico de Prato\nSan Francesco d'Assisi (1360), musée du Louvre, Paris\nCrucifixion (1360), Rijksmuseum, Amsterdam.\nFragment dun retable, National Gallery de Londres\nCristo in trono adorato dagli angeli, pinacothèque de Brera, Milan\nLamentation sur le Christ mort (1365), détrempe sur bois, 122 × 58 cm, (provenance : église San Girolamo della Costa à Florence), Galleria dell'Accademia de Florence\nMadonna col Bambino, fresque à l'église San Bartolomeo in Tuto, Scandicci.\nFresques (1365) de la chapelle Rinuccini de la Basilique Santa Croce de Florence : scènes des Vie de Marie-Madeleine et Vie de la Vierge\nGloria di San Tommaso (attribution incertaine avec Anovelo da Imbonate), chapelle Visconti, basilique Sant'Eustorgio, Milan.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Giovanni_da_Milano_-_Coronaci%C3%B3n_de_la_Virgen.JPG",
+    "legende": "Couronnement de la Vierge Polyptique Ognissanti tempera sur panneau musée national des Beaux-Arts Buenos Aires",
+    "sources": "https://fr.wikipedia.org/wiki/Giovanni_da_Milano?uselang=fr"
+  },
+  {
+    "id": 1032,
+    "titre": "Lorenzo Veneziano Mariage mystique de sainte Catherine d'Alexandrie",
+    "date": 1360,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Lorenzo Veneziano né à Venise est un peintre italien actif dans la deuxième partie du Trecento (XIVe siècle italien) entre 1357 et 1372.\nLorenzo Veneziano est un des premiers suiveurs de Paolo Veneziano, à l'origine de l'école vénitienne.\nLié initialement au style byzantin, il a été influencé par Barnaba et Tommaso da Modena.\n\nIl a travaillé surtout à Venise mais il se déplaça aussi à Vérone, Vicence et Bologne.\nIl devint adepte du gothique en accordant une importance accrue aux détails naturalistes jusqu'à atteindre le seuil du gothique international, devenant un des artistes vénitiens majeurs de son époque.\n\nSon œuvre plus ancienne, datée de 1356, conservée initialement dans une collection privée de Vérone, est aujourd'hui perdue.\nParmi les premières œuvres répertoriées figure le Polyptyque Lion (1357), peint en collaboration avec Francesco Bissolo, pour le maître-autel de l'église Sant'Antonio Abate de Venise, dont le panneau central comporte l'Annonciation avec, représenté sur le bas, agenouillé et en petite dimension, le donateur Domenico Lion.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Lorenzo_veneziano%2C_sposalizio_mistico_di_santa_caterina_d%27alessandria.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original&uselang=fr",
+    "legende": "Galeries de l'Académie de Venise"
+  },
+  {
+    "id": 1033,
+    "titre": "Zou Fulei - Un souffle de printemps",
+    "date": 1360,
+    "zones": [
+      "Chine",
+      "Art"
+    ],
+    "type": 2,
+    "description": "Zou Fulei ou Tsou Fu-Lei ou Tsou Fou-Lei (chinois : 邹复雷) est un peintre chinois du XIVe siècle. Ses dates de naissance et de décès ainsi que ses origines ne sont pas connues, mais il est actif vers le milieu du XIVe siècle.\nZou Fulei est poète et peintre de fleurs de prunier dans le style de Zhongren. La (Freer Gallery of Art) de Washington DC conserve de lui un rouleau horizontal accompagné d'un poème du peintre daté 1360, Le souffle du printemps[1].\nLes chapitres consacrés aux périodes pré-Song et Song, retracent le développement de trois vastes catégories thématiques de la peinture chinoise: les personnages, les paysages et une troisième catégorie incluant divers sujets puisés dans la nature, les animaux et les oiseaux, les insectes et les plantes. Les peintures d'oiseaux, de fleurs et d'animaux des maîtres de la période Song atteignent des sommets d'intelligence et de raffinement technique auxquelles on ne parvient plus jamais. Le prunier en fleur, est l'un des thèmes favoris des peintres lettrés sous la dynastie des Yuan comme on peut le constater avec Souffle printanier ou Souffle du printemps de Zou Felei[2].\n\nCe célèbre tableau est la seule œuvre qui nous reste de ce maître moins connu mais extrêmement accompli de la peinture de pruniers à l'encre. On ne sait rien de lui hormis ce que disent les inscriptions sur la peinture, c'est-à-dire qu'il est médecin taoïste et peintre de pruniers en fleur. Il vit à l'écart du monde avec son frère aîné, artiste lui aussi, spécialisé dans les bambous. La peinture est datée 1360. Zou Fulei est probablement l'un de ces nombreux hommes cultivés qui deviennent « ermites » pendant les troubles de la fin des Yuan, vivant de leur savoir et de leurs talents artistiques. Dans le poème qui figure sur la peinture, il décrit ce moment où l'on est assis, par une nuit d'automne, à souhaiter le retour du printemps, tandis que la lune brille sur les pruniers dénudés; sa peinture, dit-il, préservera pour lui les ombres que les branches en fleur réfléchissent au printemps sur la cloison en papier. On peut lire dans cette déclaration l'expression voilée d'un désir ardent de retour à la paix et à un gouvernement stable. \nLa branche de prunier de Zou est l'une des réalisations au pinceau et à l'encre les plus parfaitement maîtrisées de toute la peinture chinoise. De même que Rochers élégants et arbres épars de Zhao Mengfu, elle montre comment des traits de pinceau apparemment spontanés, « calligraphiques », peuvent assumer une fonction figurative à l'intérieur de la structure d'une image, en rendant l'ombre et la lumière, la rugosité de l'écorce, le jaillissement des jeunes pousses et le sentiment de vigoureuse croissance de l'ensemble. Des pointillés noirs insistants, de taille variées, représentent la mousse du tronc, les calices des fleurs, les bourgeons encore fermés à l'extrémité des ramilles, et donnent en outre un vibrant frémissement à toute la peinture. Encore plus impressionnants, quand on étudie cette œuvre extraordinaire, sont la parfaite courbe ascendante du long trait qui termine la branche, le motif dessiné par l'élan vertical ou incurvé des jeunes pousses, et la façon de peindre les fleurs: chaque pétale, parfaitement rond et de ton uniforme, semble être obtenu en permettant à une gouttelette d'encre diluée de sécher sans toucher la surface du papier[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Zou_Fulei_-_A_Breath_of_Spring_-_Google_Art_Project.jpg/1920px-Zou_Fulei_-_A_Breath_of_Spring_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=gallery&utm_content=thumbnail",
+    "legende": "Zou Fulei - Un souffle de printemps encre sur papier Washington DC (Freer Gallery of Art)"
+  },
+  {
+    "id": 1034,
+    "titre": "Guido Gonzaga capitaine du peuple à Mantoue",
+    "date": 1360,
+    "mois": 1,
+    "date_fin": 1369,
+    "mois_fin": 9,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "18 janvier : À la mort de Luigi Ier Gonzaga, son fils aîné, Guido Gonzaga, devient souverain de Mantoue . Il est le deuxième souverain issu de la seigneurie des Gonzaga .\nGuy, second fils de Louis Ier et de Richilde Ramberti, a 70 ans lorsqu'il succède à son père qui meurt en 1360. Selon les historiens, il a un visage plutôt blême et peu incisif. Cependant, son aspect cache un homme d'expérience formé aux affaires politiques depuis longtemps sous la houlette de son père.\n\nIl fut d'abord podestat de Reggio d'Émilie en 1328, puis en fut seigneur tutélaire pour son père en 1335.\n\nDepuis 1353, un conflit rongeait le nord de l'Italie : d'un côté les guelfes, c'est-à-dire les tenants du Pape, les Visconti seigneurs de Milan appuyés par Vérone et Gênes et même aidés sur mer par les Turcs, s'opposaient à une ligue gibeline (dite « anti-viscontienne ») formée des seigneuries et duchés soumis à l'empereur, et d'effectifs variables : tantôt Carrare, Florence, Sienne, Venise ou Mantoue en faisaient partie, sans oublier les troupes papales. Premier avatar mantouan : en février 1354, donc sous le règne de Louis Ier, pour avoir soutenu un « bâtard viscontien » qui s'était emparé de Vérone, les mantoue sont faits prisonniers et incarcérés jusqu'à ce que les Vénitiens les libèrent un mois plus tard. D'escarmouches en petits affrontements, le conflit continue de couver ou de flamber brièvement jusqu'au 14 octobre 1362 où Ugolino de Mantoue, fils de Guy et époux de la milanaise Catherine Visconti, est assassiné par des gibelins (peut-être son ou ses frères Louis et Francesco) lui reprochant son mariage « hérétique ». Barnabé Visconti, co-seigneur de Milan avec Galéas II, va nourrir une haine féroce contre la famille mantoue et « rapatrie » Catherine. Le territoire de Mantoue va être envahi par les troupes de Barnabé en avril 1368 puis la ville sera libérée de son siège, par l'empereur Charles IV, en mai. De défaite en déconfiture, Barnabé se voit contraint de signer la paix de Bologne, le 11 février 1369. Pour Mantoue et son capitaine général, Guy, le principal acquis de cette paix sera l'agrandissement de la seigneurie par le rattachement des fiefs de Cavriana, Castiglione delle Stiviere, Solférino, Volta, Medole et Ceresara.\nGuy est décédé en 1369, dans sa 79e année, deux mois et demi après son fils Francesco mort assassiné[1].\nCertains historiens pensent que Guy a été assassiné par son fils Louis qui serait aussi l'auteur du meurtre de Francesco. Il semble par contre avéré que Louis et Francesco sont les auteurs du meurtre de leur frère aîné Ugolino (d'où la fureur de Barnabé Visconti, seigneur de Milan et oncle de Catherine Visconti mariée à Ugolino).",
+    "image": ""
+  },
+  {
+    "id": 1036,
+    "titre": "Grenade : Abou Saïd fait assassiner Ismaïl II",
+    "date": 1360,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 4,
+    "description": "Abou Saïd fit assassiner Ismaïl II , qu'il avait élevé au rang d'émir de Grenade l'année précédente , et monta lui-même sur le trône de l' empire nasride , prenant le nom de Muhammad VI. Pendant ce temps, Muhammad V, qui avait été renversé l'année précédente, chercha le soutien de la dynastie mérinide au Maroc et du royaume chrétien de Castille .",
+    "image": ""
+  },
+  {
+    "id": 1037,
+    "titre": "Guillaume de Machaut Messe de Nostre Dame",
+    "date": 1360,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Guillaume de Machaut composa la Messe de Nostre Dame . C’est l’une des plus anciennes mises en musique polyphoniques de l’ ordinaire de la messe , et la plus ancienne connue pour avoir été composée par un seul compositeur identifié.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Machaut_pisici.jpg/250px-Machaut_pisici.jpg"
+  },
+  {
+    "id": 1038,
+    "titre": "William Langland entreprend la rédaction du conte  La Vision de William de Piers le Laboureur",
+    "date": 1360,
+    "zones": [
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "William Langland entreprend la rédaction du conte en moyen anglais *Visio Willelmi de Petro Ploughman* ( La Vision de William de Piers le Laboureur ), une œuvre qui lui occupera une quarantaine d’années et qui mêle allégorie et satire . *Piers le Laboureur* , au même titre que les *Contes de Canterbury* de Chaucer , est considéré comme l’un des premiers grands chefs-d’œuvre de la littérature anglaise .",
+    "image": ""
+  },
+  {
+    "id": 1039,
+    "titre": "Rédaction de la Chronique illustrée hongroise ou Chronicom Pictum .",
+    "date": 1360,
+    "zones": [
+      "Hongrie",
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "La Chronique illustrée hongroise , également connue sous le nom de Chronica (Hungariae) Pictum , Chronica Hungarorum , Chronica Picta , Képes Krónika ou Chronica de Gestis Hungarorum , et parfois appelée Chronique illustrée de Vienne en raison de son emplacement temporaire , est un ouvrage du XIVe siècle qui décrit l'histoire du royaume de Hongrie en latin . Son titre complet est Chronicon pictum, Marci de Kalt, Chronica de gestis Hungarorum , qui se traduit par Chronique illustrée, la Chronique des actes des Hongrois de Mark von Kalt .\n\nCette chronique, richement illustrée de 147 illustrations, relate en latin l'histoire politique et militaire, le mode de vie, la culture, les traditions et les légendes de la Hongrie médiévale . Elle se compose de feuilles de parchemin d'environ 300 × 210  mm et est reliée en cuir blanc.\n\nL'œuvre fut créée vers 1360 sous le règne de Louis le Grand . Le récit s'interrompt brusquement lors de la défaite du roi hongrois Charles Robert face aux Valaques de Basarab Ier à la bataille de Posada en novembre 1330. L' œuvre de l'enlumineur demeura également inachevée.\nLa chronique fut conservée à la Bibliothèque de la Cour de Vienne jusqu'en 1932 , d'où son autre nom : la Chronique illustrée de Vienne . Suite à l'Accord culturel de Venise de 1932, l'ouvrage fut restitué à la Hongrie. Il est aujourd'hui conservé à la Bibliothèque nationale Széchényi de Budapest .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/K%C3%A9pes_Kr%C3%B3nika_1360.jpg/960px-K%C3%A9pes_Kr%C3%B3nika_1360.jpg",
+    "legende": "La première page du Chronicon Pictum"
+  },
+  {
+    "id": 1040,
+    "titre": "Rédaction du manuscrit Poppleton , principale source de la Chronique picte",
+    "date": 1360,
+    "zones": [
+      "Litterature"
+    ],
+    "type": 3,
+    "description": "Vers 1360 : Rédaction du manuscrit Poppleton , principale source de la Chronique picte .\nLe manuscrit de Poppleton est un manuscrit médiéval , vraisemblablement réalisé vers 1360 au monastère carmélite d' York . Robert de Poppleton le transporta de là au monastère carmélite de Hulne , près d'Alnwick , où il devint prieur . Ce manuscrit est la principale source de la chronique pseudo-historique des Pictes . Aujourd'hui, il est conservé à la Bibliothèque nationale de France à Paris sous la cote MS Latin 4126. Il comprend 296 pages et compile des récits antérieurs.\n\nLe manuscrit contient, entre autres  , sept textes sur l'histoire ancienne de l'Écosse , dont...\n\nDe Situ Albanie\nfol. 27r-28v Cronica de origine antiquorum Pictorum\nfol. 28v-29v Chronique des rois d'Albe\nfol. 29v-31r Cronica regum Scotorum Trecenti Quatuordecim Annorum",
+    "image": ""
+  },
+  {
+    "id": 1041,
+    "titre": "Fondation de l'ordre laïc des Jésuates",
+    "date": 1360,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "Les Jésuates, ou Pauvres Jésuates ou (plus tard) Clercs apostoliques de saint Jérôme, formaient un groupe de religieux laïcs mendiants. Fondé au XIVe siècle par Jean Colombini et approuvé en 1367 par Urbain V, l'ordre religieux fut supprimé en 1668 par Clément IX.\nLe bienheureux Jean Colombini (1304-1367), riche marchand de Sienne (Italie), après avoir abandonné toutes ses possessions, expulsé de la cité car manifestant trop ostensiblement son besoin d'expiation[1] rassembla ses adeptes dans une fraternité de type franciscain (vie errante, pauvreté religieuse radicale, refus des études et du sacerdoce).\n\nRappelés en ville à l'arrivée de la peste de 1363 et parce qu'ils invoquaient régulièrement le nom de Jésus aux débuts et fins de leurs prières, ses disciples furent populairement appelés les Jésuates. Ce sobriquet inspira le nom officiel de l’ordre religieux lorsqu’il fut fondé en 1367, par Urbain V à Viterbe : les « Pauvres Jésuates ». Ils furent aussi appelés « Jésuates de saint Jérôme » du nom du saint préféré de leur fondateur, ou encore « clercs apostoliques de Saint Jérôme ».\n\nLes Jésuates s’établirent à Venise vers 1390, à Santa Giustina, puis à Santa Agnese et enfin à San Gerolamo où, grâce à une donation du Marquis François I Gonzague, ils purent ériger un couvent dès 1423 et recevoir l’investiture officielle du pape Alexandre VI.\n\nPour venir en aide aux malades pauvres et indigents ils s'occupaient de pharmacie et faisaient le métier de bouilleurs de cru. Utilisant volontiers de l'eau-de-vie de leur fabrication comme traitement pour soulager les douleurs ils étaient parfois appelés « pères de l'eau-de-vie ».\n\nLe cheminement qui amena les Jésuites à se transformer d'une compagnie libre de laïcs en un ordre mendiant s'effectua ainsi : le pape Alexandre VI leur donna le titre de « Frères jésuites de Saint Jérôme » (22 août 1499) ; le pape Jules II leur imposa les vœux de religion (23 janvier 1511) et le pape Clément VII leur accorda les privilèges des ermites (3 janvier 1532).[11] Les Jésuites furent inclus parmi les ordres mendiants par le pape Pie V le 19 novembre 1567.[12] En 1606, Paul V autorisa l'intégration d'une petite proportion de clercs parmi ses membres.\n\nLeur règle de vie, initialement composée d'éléments bénédictins et franciscains, fut par la suite modifiée selon les principes augustiniens (règle de saint augustin), mais des traces de l'idée pénitentielle primitive subsistèrent.\n\nCes religieux eurent un certain succès surtout en Italie du nord et en France, mais ils succombèrent à leurs contradictions internes : tentation intellectuelle et sacerdotale, en opposition avec la pauvreté radicale des origines. Le choix du sacerdoce par certains créa de graves tensions et controverses qui obligèrent les autorités religieuses à intervenir.\n\nL’ordre fut finalement supprimé par le pape Clément IX comme « désormais inutiles et irréformables » (bulle Romanus Pontifex 6 décembre 1668).\n\nLeur plus grand poète fut Bianco da Siena, accueilli parmi les Jésuates en 1367. Son poème Discendi Amor Santo, a été repris par les anglicans. \nLa branche féminine, appelée également les Jésuates ou Pauvres Sœurs de la Visitation de la Vierge Marie, fut fondée par Catherine Colombini (it), cousine de Jean (décédée en 1387). Renonçant à sa fortune, elle commença une vie évangélique, recevant dans sa maison d'autres femmes où elles priaient et ne sortaient que pour accomplir des œuvres de charité et mendier, observant une vie pénitentielle.\n\nEn 1367, Catherine fonda un couvent à S. Sebastiano in Vallepiatta (ou Valpiana, à Sienne), qui adopta la clôture et la règle de saint Augustin.\nAprès la mort de la fondatrice, la supérieure, Simona Galleroni, expandit la branche : Florence et Pistoia, puis Lucques, Pise, Bologne. Ensuite, elle subsista en petites communautés jusqu'à sa disparition en 1872.",
+    "image": ""
+  },
+  {
+    "id": 1042,
+    "titre": "Retour de la peste à Venise",
+    "date": 1360,
+    "zones": [
+      "Italie",
+      "Sciences"
+    ],
+    "type": 4,
+    "description": "La peste revient à Venise environ sept ans après la fin de la Peste noire . Elle fait des victimes principalement parmi les enfants et entraîne la disparition de dix familles nobles. Le 25 juillet, le doge Giovanni Dolfin rédige son testament après la mort de son fils aîné et de son épouse, Caterina Giustinian, des suites de l’épidémie.",
+    "image": ""
+  },
+  {
+    "id": 1043,
+    "titre": "Paix entre la Suède et le Danemark",
+    "date": 1360,
+    "mois": 8,
+    "zones": [
+      "Scandinavie"
+    ],
+    "type": 3,
+    "description": "La paix est conclue entre la Suède et le Danemark à l'issue d'un arbitrage à Helsingborg. Magnus IV Eriksson cède les territoires de Scanie, à l'exception du nord du Halland, au Danemark. En contrepartie, Valdemar IV Atterdag doit aider Magnus contre ses ennemis intérieurs. \nLe roi Valdemar IV Atterdag du Danemark reconquiert la Scanie , qui est en possession suédoise depuis 1332",
+    "image": ""
+  },
+  {
+    "id": 1044,
+    "titre": "Chen Youliang assassine Xu Shouhui et se proclame empereur Han",
+    "date": 1360,
+    "zones": [
+      "Chine"
+    ],
+    "type": 3,
+    "description": "Rébellions des Turbans Rouges : Chen Youliang assassine Xu Shouhui et se proclame empereur de Han à Wuchang avant de tenter sans succès de s'emparer de Nanjing, détenue par Zhu Yuanzhang .",
+    "image": ""
+  },
+  {
+    "id": 1047,
+    "titre": "Retour de la peste en Angleterre",
+    "date": 1360,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "La peste en Angleterre (perte de plus de 20 % de sa population)",
+    "image": ""
+  },
+  {
     "id": 189,
     "titre": "Mourad Ier",
     "date": 1362,
@@ -11979,6 +12326,18 @@
     "description": "Sultan mérinide succédant à son père Abû al-Hasan ben `Uthmân en 1366.\nAbû Fâris est un homme malade, d'où son surnom de \"dolent\", mais volontaire et soutenu par sa mère. Le vizir `Omar, qui l'a mis au pouvoir, voyant que ce nouveau souverain échappe à son contrôle, projette de le tuer. Le souverain qui en est informé, fait capturer le vizir et le condamne à être haché à coups de sabre.\n\n`Abd al-`Azîz reprend en mains les régions en dissidence et le royaume mérinide retrouve son étendue. En 1368, il envoie des troupes pour soutenir le roi Pierre Ier de Castille et les Anglais contre le demi-frère de ce roi, le roi Henri II de Castille et les Français conduits par Bertrand Du Guesclin et Guillaume Boitel.\n\nIl meurt en 1372, laissant le trône à un très jeune enfant.",
     "image": "",
     "regne": true
+  },
+  {
+    "id": 1030,
+    "titre": "Giovanni da Milano Fresques de la chapelle Rinuccini de la Basilique Santa Croce de Florence",
+    "date": 1366,
+    "zones": [
+      "Art"
+    ],
+    "type": 2,
+    "description": "Giovanni da Milano est un peintre italien de la période gothique italienne, qui a été actif à Florence et Milan entre 1350 et 1369.\nPar sa synthèse entre l'art gothique français et la peinture italienne, on doit à Giovanni da Milano les innovations de l'art post-giottesque à Florence. Il fut l'élève de Taddeo Gaddi.\nOeuvres : \nPolyptyque d'Ognissanti, musée des Offices, Florence\nMadonna e i santi (1355), polyptyque, museo civico de Prato\nSan Francesco d'Assisi (1360), musée du Louvre, Paris\nCrucifixion (1360), Rijksmuseum, Amsterdam.\nFragment dun retable, National Gallery de Londres\nCristo in trono adorato dagli angeli, pinacothèque de Brera, Milan\nLamentation sur le Christ mort (1365), détrempe sur bois, 122 × 58 cm, (provenance : église San Girolamo della Costa à Florence), Galleria dell'Accademia de Florence\nMadonna col Bambino, fresque à l'église San Bartolomeo in Tuto, Scandicci.\nFresques (1365) de la chapelle Rinuccini de la Basilique Santa Croce de Florence : scènes des Vie de Marie-Madeleine et Vie de la Vierge\nGloria di San Tommaso (attribution incertaine avec Anovelo da Imbonate), chapelle Visconti, basilique Sant'Eustorgio, Milan.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/GiovanniDaMilano.jpg",
+    "legende": "Naissance de la Vierge"
   },
   {
     "id": 287,
@@ -12708,6 +13067,18 @@
     "regne": true
   },
   {
+    "id": 1048,
+    "titre": "Retable du Saint-Esprit par Pere Serra cathédrale de Manresa",
+    "date": 1394,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Pere Serra était un peintre catalan de style italo-gothique qui a été actif entre 1357 et 1406 .\nIl était le fils de Berenguer Serra i Constança. Malgré les origines artisanales de son père, tailleur de profession [ 1 ], les quatre ou cinq frères de la famille étaient des peintres actifs en Catalogne au XIVe siècle [ 2 ] . Jaume , Francesc et Joan se distinguent particulièrement : tous cultivaient le style italo-gothique, fortement influencé par le style siennois , caractéristique de la Catalogne du XIVe siècle . Ils peignaient de petites figures stylisées, aux yeux en amande et à la bouche menue.  \n\nDes quatre frères, Pere Serra était le plus doué et celui qui a eu la plus longue carrière. Il entra dans l'atelier de Ramon Destorrents en 1357. [ 3 ] Il s'intéressait davantage à la couleur qu'aux concepts spatiaux et développa un travail d'atelier, comme en témoigne la répétition des mêmes modèles picturaux.\n\nLes frères Serra travaillèrent pour la Cour d'Aragon et dominèrent le marché de la peinture barcelonaise durant la seconde moitié du XIVe siècle . Bien que le style de leur atelier soit italianisant, inspiré de la peinture siennoise, nombre de leurs disciples devinrent des initiateurs du gothique international en Principauté . Jaume Cabrera , Pere Vall , Joan Mates et Jaubert Gaucelm furent formés dans l'atelier de Pere Serrà . [ 4 ] \n\nPère travailla à partir de 1363 avec son frère Jaume , avec lequel il créa la Vierge de Tobed et le retable du Saint-Sépulcre à Saragosse dédié à Sainte Lucie et à Saint Guillaume.\non style est plus élaboré et raffiné que celui de ses frères. Il accorde une plus grande attention aux détails secondaires, à la représentation de l'environnement, et applique une esthétique plus rationnelle. Dans les scènes narratives, d'une qualité lyrique indéniable, le calme et la justesse dominent, avec des solutions résolument bidimensionnelles. Il ne manifeste aucun souci de saisir la profondeur ou la perspective, une caractéristique qui se développera avec l'avènement du gothique international . [ 2 ]\n\nSon chef-d'œuvre est le Retable du Saint-Esprit , conservé dans la cathédrale de Manresa , peint vers 1394. Le panneau central du banc est l'œuvre de Lluís Borrassà (1411). Ce retable, de grande taille et d'une iconographie remarquable, présente 22 scènes différentes (sans compter les 36 figures de saints peintes sur les six montants). Il fut commandé à Pere Serra par la Confrérie du Saint-Esprit de Manresa.\n\nOutre le retable du Saint-Esprit de Manresa, les œuvres suivantes sont attribuées à Pere Serra (liste non exhaustive) :\n\nRetable du Saint-Esprit de l'église paroissiale de Sant Llorenç de Morunys . [ 5 ]\nRetable de la Toussaint du monastère de Sant Cugat .\nRetable des Joies de la Vierge d' Abella de la Conca .\nRetable de la Vierge de Sixena du monastère de Sixena ( Huesca ), aujourd'hui au Musée national d'art de Catalogne à Barcelone . [ 6 ]\nPanneau central du retable dédié aux saints Barthélemy et Bernard de Clairvaux pour le couvent de Sant Domènec (1395), actuellement conservé au musée épiscopal de Vic .\nPanneau latéral d'un retable représentant Jésus devant Pilate, actuellement conservé au musée épiscopal de Vic .\nNotre-Dame des Anges , trois panneaux de Tortosa , conservés au Musée national d'art de Catalogne . Elle s'inspire de la Madone angélique.\nTable de la Cène , Galerie régionale de Palerme .\nAnnonciation , à la Pinacothèque de Brera, Milan .\nCrucifixion de saint Pierre, provenant de l'église Saint-Pierre de Cubells .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/DetallSantEsperit.JPG/1280px-DetallSantEsperit.JPG",
+    "legende": "Détail du retable du Saint-Esprit , par Jaume Serra, dans la cathédrale de Manresa"
+  },
+  {
     "id": 902,
     "titre": "Soustraction d'obédience",
     "date": 1395,
@@ -12892,6 +13263,19 @@
     "type": 2,
     "description": "Le roi Robert III d'Écosse ayant été sévèrement blessé par une ruade, c'est son frère cadet Robert comte de Fife qui exerce la réalité du pouvoir. Mais il doit le partager à partir de 1399 avec le duc David Stuart, le fils aîné de Robert III, héritier du trône. L'oncle et le neveu ne s'entendent pas et le second trouve la mort dans des circonstances troublantes en 1402 au château de Falkland[1].\n\nÀ la mort de son frère aîné, Jacques devient héritier du royaume à l'âge de huit ans. Robert III prend la décision de l'envoyer en France en 1406 pour garantir sa sécurité.\n\nPendant ce voyage, son navire est capturé en février par des pirates anglais et il est amené à Henri IV d'Angleterre qui le met en résidence surveillée et demande une rançon à son père. Robert III, dit-on, serait mort de chagrin à cette nouvelle. L'oncle du jeune Jacques, Robert, duc d'Albany, devient donc régent d'Écosse, mais ne se presse pas pour payer la rançon du jeune roi, conservant ainsi son pouvoir sur le royaume. Jacques Ier reste dix-huit ans détenu à la cour de Windsor. Pendant cette captivité, il reçoit une excellente éducation, se familiarise avec l'administration et le gouvernement et accompagne même Henri V lors de campagnes militaires en France. Il compose également des poèmes et s'éprend de Jeanne Beaufort, une princesse anglaise avec qui il se fiance.\n\nRobert d'Albany meurt en 1420 et la régence passe à son fils Murdoch. C'est pendant la régence des deux ducs d'Albany que le roi de France Charles VII obtint de l'allié écossais l'envoi d'un corps expéditionnaire qui lui est fort utile pour combattre les Anglais pendant la période de la guerre de Cent Ans comprise entre le traité de Troyes et l'intervention de Jeanne d'Arc[2]. La rançon de 40 000 £ est enfin payée. Jacques épouse alors Jeanne, fille de Jean Beaufort, comte de Somerset, le 2 février 1424 à Southwark près de Londres, dont il a huit enfants. Le couple retourne ensuite en Écosse où il trouve le pays dans le chaos.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Blason_Robert_Stuart_d%27Albany.svg/330px-Blason_Robert_Stuart_d%27Albany.svg.png"
+  },
+  {
+    "id": 1045,
+    "titre": "Ulrich von Jungingen , grand maître  des chevaliers teutoniques",
+    "date": 1407,
+    "date_fin": 1410,
+    "zones": [
+      "St Empire",
+      "Europe C. & Or."
+    ],
+    "type": 3,
+    "description": "8 janvier – Ulrich von Jungingen , grand maître allemand des chevaliers teutoniques (mort en 1410 )\nUlrich von Jungingen (1360 – 15 juillet 1410) fut le 26e Grand Maître des Chevaliers Teutoniques , en fonction de 1407 à 1410. Sa politique de confrontation avec le Grand-Duché de Lituanie et le Royaume de Pologne allait déclencher la guerre polono-lituanienne-teutonique et conduire à un désastre pour son Ordre, et à sa propre mort, à la bataille de Grunwald .\nDescendant de la maison noble souabe de Jungingen, il naquit probablement au château de Hohenfels , près de Stockach , le siège ancestral de Jungingen ayant été dévasté en 1311. Ulrich et son frère aîné, Konrad von Jungingen , cadets exclus de la succession, prêtèrent serment chez les Chevaliers teutoniques et s'installèrent dans l' État prussien de l'Ordre . Ulrich résida à Schlochau ( Człuchów ) et fut comte de Balga (1396-1404). Sa carrière bénéficia du patronage de son frère aîné, Konrad, élu grand maître en 1393. Après l'expulsion des Frères Victuaux de Gotland par les Chevaliers en 1398, Ulrich se distingua lors des négociations pour la possession de l'île avec la reine Marguerite Ire de Danemark , ainsi que lors de missions diplomatiques en Pologne et en Lituanie à l'occasion de la conclusion du traité de Salynas de 1398 concernant le duché de Samogitie .\n\nEn 1404, Ulrich fut nommé maréchal de l'Ordre (c'est-à-dire chef militaire) et comte de Königsberg . Il dut faire face à plusieurs soulèvements samogitiens , qu'il réprima avec une extrême fermeté et en corrompant les nobles locaux. À la mort subite du grand maître Konrad von Jungingen en 1407, Ulrich fut désigné pour lui succéder le 26 juin.\n\nContrairement à son frère, les capacités diplomatiques d'Ulrich étaient limitées. La situation en Samogitie demeurait tendue, attisée par le grand-duc Vytautas le Grand de Lituanie, qui entendait profiter des troubles pour reconquérir les territoires cédés. De plus, le nouveau grand maître avait hérité du conflit grandissant avec le cousin de Vytautas, le roi Jagiełło de Pologne, au sujet du Dobrzyń et de la région de Neumark , mise en gage . L'ambassadeur polonais, l'archevêque Mikołaj Kurowski, déclara que toute attaque contre la Lituanie entraînerait inévitablement un conflit armé avec la Pologne. Malgré la menace d'une guerre sur deux fronts , Ulrich prépara une attaque préventive . Il forgea une alliance avec le roi Sigismond de Hongrie , leva des mercenaires dans le Saint-Empire romain germanique et, le 6 août 1409, déclara la guerre à la Pologne.\n\nBien qu'Ulrich n'ait reçu aucune aide de son allié, le roi Sigismond, empêtré dans le conflit qui l'opposait à son cousin Jobst de Moravie pour l'élection au trône des Romains , les forces de l'Ordre remportèrent d'abord des victoires en Dobrzyń et en Couïavie et assiégèrent Bydgoszcz . Le frère de Sigismond, le roi Venceslas IV de Bohême, négocia une trêve temporaire et tenta une médiation entre les belligérants, sans succès. Le 2 juillet 1410, le Grand Maître, à la tête de son armée, quitta le château de Malbork pour la bataille finale contre les forces polono-lituaniennes unies. Les deux camps s'affrontèrent le 15 juillet entre les villages de Grunwald ( Grünfelde ) et de Stębark ( Tannenberg ). À l'approche de midi, aucune des armées ne bougea, jusqu'à ce qu'Ulrich, selon les annales de Jan Długosz , fasse livrer deux épées au roi Jagiełło avec la remarque que lui et Vytautas pourraient vivre ou mourir par elles.\n\n\nMort d'Ulrich von Jungingen, détail du tableau de Jan Matejko , 1878\nCet acte, perçu comme une provocation audacieuse, déclencha l'attaque polono-lituanienne, d'abord repoussée par les Chevaliers, mais bientôt suivie d'une seconde offensive des forces de Jagiełło. Le cours de la bataille tourna lorsqu'Ulrich, certain de la victoire, décida de mener personnellement ses régiments restants contre les troupes polonaises. Il faillit capturer le roi, mais perdit du même coup le contrôle des opérations militaires de l'Ordre. Après la défection des forces prussiennes alliées de l' Union du Lézard , commandées par Nicolas von Renys , le Grand Maître dut affronter la supériorité numérique de l'union polono-lituanienne. Attaqué par les Lituaniens à l'arrière, les troupes d'Ulrich furent mises en déroute et il fut tué au combat . Selon le chroniqueur polonais Jan Długosz, il fut affronté et vaincu par le chevalier polonais Mszczuj de Skrzynno . Le roi Jagiełło fit transporter sa dépouille au château de Malbork avant d'entamer le siège de Marienburg .\nD'après la description de Długosz, les générations suivantes ont attribué à Ulrich von Jungingen un caractère impulsif et arrogant. Le tableau « Bataille de Grunwald » de Jan Matejko illustrerait le moment où Ulrich, vêtu de blanc et portant une croix noire, tente d'attaquer le grand-duc Vytautas et est tué par deux fantassins polonais, armés d'une hache de bourreau et d'une réplique de la Sainte Lance, rappelant le Congrès de Gniezno . Cette tradition fut reprise par Henryk Sienkiewicz dans son roman « Les Chevaliers de la Croix » (1900) , inspiré des récits des occupants russes en Terre de Vistule , qui décrit Ulrich comme un commandant impulsif et agressif. Le livre a été adapté au cinéma par Aleksander Ford en 1960. Par ailleurs, l'historiographie allemande du XIXe siècle dépeignait Ulrich comme un homme aux vertus chevaleresques, qui a succombé à la ruse de ses ennemis, comme le décrit l'auteur Ernst Wichert dans son roman Heinrich von Plauen .\n\nLe successeur d'Ulrich, Heinrich von Plauen, fit ériger une chapelle dédiée à la Vierge Marie sur l'ancien champ de bataille en 1413. Celle-ci fut probablement détruite par les forces tatares de Lipka ou de Crimée lors d'une campagne dans la région en 1656. En 1901, un bloc erratique ( Jungingenstein ), commémorant la « mort héroïque dans la lutte pour l'esprit et le droit allemands », fut installé à la demande des autorités allemandes de Prusse-Orientale . La pierre est toujours en place, mais elle s'est effondrée, rendant l'inscription illisible. Une seconde stèle commémorative, plus récente, située à proximité, marque le lieu de la mort de Jungingen (« Miejsce śmierci Wielkiego Mistrza Ulricha von Jungingena »). Les environs accueillent aujourd'hui une reconstitution historique annuelle .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Arms_of_the_house_of_Jungingen_as_Grand_Master_of_the_Teutonic_Order.svg/250px-Arms_of_the_house_of_Jungingen_as_Grand_Master_of_the_Teutonic_Order.svg.png"
   },
   {
     "id": 953,
