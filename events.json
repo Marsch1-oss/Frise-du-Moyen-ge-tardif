@@ -11193,6 +11193,22 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Italy_-_Verona_-_Ponte_Scaligero.jpg/1280px-Italy_-_Verona_-_Ponte_Scaligero.jpg"
   },
   {
+    "id": 1088,
+    "titre": "Giovanni Dolfin doge de Venise",
+    "date": 1356,
+    "mois": 8,
+    "date_fin": 1361,
+    "mois_fin": 7,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": ", né vers 1303 à Venise et mort en 1361, fut le 57e doge de la République de Venise. Avant son élection en 1356, il mena une importante carrière politique, diplomatique et militaire. Issu de la puissante famille Dolfin, il participa à de nombreuses missions liées aux conflits entre Venise, la Hongrie et Gênes. Il occupa plusieurs fonctions importantes, notamment procureur de Saint-Marc et commandant militaire lors des guerres contre les Génois et les Hongrois.\n\nPendant son règne, Venise traversa une période difficile. La République perdit la Dalmatie au profit du royaume de Hongrie après le traité de paix de 1358, ce qui affaiblit son influence en Adriatique. Malgré cela, Dolfin réussit à maintenir la stabilité de l’État et à renforcer le commerce maritime, notamment avec l’Égypte. Il dut aussi faire face à des crises financières et à une nouvelle épidémie de peste en 1360, qui emporta plusieurs membres de sa famille.\n\nSon élection comme doge est célèbre car il était alors bloqué dans la ville assiégée de Trévise. Après une sortie audacieuse avec ses soldats, il réussit à rejoindre Venise où il fut accueilli triomphalement. Homme cultivé, il possédait une bibliothèque contenant des œuvres de Dante Alighieri et de Boèce. À sa mort, il fut enterré dans l’église Basilique San Zanipolo, où se trouve encore son tombeau.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Chapel_of_Pius_V_Santi_Giovanni_e_Paolo_%28Venice%29_-_Monument_to_the_doge_Giovanni_Dolfin.jpg/1920px-Chapel_of_Pius_V_Santi_Giovanni_e_Paolo_%28Venice%29_-_Monument_to_the_doge_Giovanni_Dolfin.jpg",
+    "legende": "Andrea da San Felice : Tombeau du Doge à San Zanipolo , Cappella Cavalli, achevé en 1362",
+    "sources": "https://de.wikipedia.org/wiki/Giovanni_Dolfin_(Doge)"
+  },
+  {
     "id": 286,
     "titre": "Pierre Ier de Portugal, dit « le Cruel »",
     "date": 1357,
@@ -12401,20 +12417,7 @@
       "Aragon"
     ],
     "type": 2,
-    "description": "Réapparition de la Peste à Paris, à Avignon et à Londres au début de l'année. Les troupes de mercenaires apportent avec elles la peste en Lombardie (1362)et en Aragon (peste des enfants)\nLa peste provoqua des ravages terribles dans toute la population.\nLes enfants, les personnes âgées, les couches les plus pauvres de la population, les plus faibles physiquement, les plus mal nourris étaient les plus touchés.\nEn 1361, ce fut une terrible peste des enfants. Elle s’acharna à décimer les générations nées pendant les premières épidémies de peste.\nAprès chaque épidémie, quand on pensait la peste terminée, elle réapparaissait de façon endémique. Plus que des vagues générales touchant toute la population, ici où là, apparaissaient des foyers.",
-    "image": ""
-  },
-  {
-    "id": 1063,
-    "titre": "Paix de Terrer",
-    "date": 1361,
-    "mois": 5,
-    "zones": [
-      "Castille",
-      "Aragon"
-    ],
-    "type": 2,
-    "description": "13 mai : la paix de Terrer met fin au conflit entre les couronnes de Castille et d'Aragon.\nLa Paix de Terrer, connue également comme la Paix de Deza ou Paix de Deça[1] est un accord est signé à Deza[2] (royaume de Castille) et à Terrer (royaume d'Aragon) les 13 et 14 mai 1361[3], entre Pierre Ier de Castille le Cruel et Pierre IV d'Aragon le Cérémonieux à la fin de la guerre des Deux Pierre.\nPierre Ier de Castille accède aux demandes de Guy de Boulogne et des négociations s'ouvrent entre Bernat II de Cabrera qui représente la couronne d'Aragon et Juan Alfonso de Mayorga et Men Rodríguez de Biedmade qui représentent la couronne de Castille.\nLes châteaux et places conquises sont restitués, les prisonniers sont libérés et les contentieux sur Alicante et Almazán levés.\nL'accord ne fut finalement qu'une trêve, car l'exil forcé d'Henri de Trastamare en France, loin d'éteindre le conflit, l'aida à obtenir de nouveaux soutiens et à reprendre le combat en septembre 1362 lorsque la Couronne de Castille reprit les hostilités.",
+    "description": "Réapparition de la Peste à Paris, à Avignon et à Londres au début de l'année. Les troupes de mercenaires apportent avec elles la peste en Lombardie (1362)et en Aragon (peste des enfants)\nLa deuxième grande épidémie de peste fait rage en Europe depuis 1360; parmi ses victimes figure le doge vénitien Giovanni Dolfin , qui a déjà perdu sa femme et son fils aîné le 22 juillet. Dix autres familles nobles vénitiennes succombent à la maladie.\nLa peste provoqua des ravages terribles dans toute la population.\nLes enfants, les personnes âgées, les couches les plus pauvres de la population, les plus faibles physiquement, les plus mal nourris étaient les plus touchés.\nEn 1361, ce fut une terrible peste des enfants. Elle s’acharna à décimer les générations nées pendant les premières épidémies de peste.\nAprès chaque épidémie, quand on pensait la peste terminée, elle réapparaissait de façon endémique. Plus que des vagues générales touchant toute la population, ici où là, apparaissaient des foyers.",
     "image": ""
   },
   {
@@ -12461,19 +12464,8 @@
     "legende": "Crâne d'une des victimes de l'invasion de Waldemar Atterdag en 1361, exposé au musée Gotlands Fornsal à Visby (Gotland)."
   },
   {
-    "id": 1067,
-    "titre": "Volterra est annexée par Florence",
-    "date": 1361,
-    "mois": 10,
-    "zones": [
-      "Italie"
-    ],
-    "type": 4,
-    "image": ""
-  },
-  {
     "id": 1068,
-    "titre": "Dècès de Philippe de Rouvre  de Duc de Bourgogne Jean II le Bon récupère le duché",
+    "titre": "Dècès de Philippe de Rouvre  Jean II le Bon récupère le duché de Bourgogne",
     "date": 1361,
     "mois": 12,
     "zones": [
@@ -12493,29 +12485,8 @@
     ],
     "type": 2,
     "description": "Le nom de Tard-Venus est le nom donné aux bandes de routiers qui ravagèrent le Lyonnais et l'Auvergne dans les dernières années du règne du roi Jean II le Bon.\nLorsque le traité de Brétigny est signé le 8 mai 1360 durant la guerre de Cent Ans, la paix qui s'installe ne fait pas les affaires des gens qui vivaient grâce à la guerre. La trêve n'arrête pas l'action des mercenaires des deux armées[1].\n\nLe roi d'Angleterre fait évacuer les forteresses occupées en France par des hommes d'armes à sa solde. Parmi les capitaines de garnisons, quelques chevaliers et écuyers anglais, obéissent aux ordres du roi, mais d'autres résistent prétextant guerroyer pour le roi de Navarre. Toutefois les mercenaires allemands, brabançons, gascons, flamands, hainuyers, bretons... et des français aventuriers ou ruinés par les guerres ne se dispersent pas et continuent leur vie de pillage. Congédiés, ils se forment en nouvelles bandes prenant comme capitaine les pires d'entre eux[2].\n\nIls prennent le nom de Tard-Venus car, pense-t-on, ils sont venus après les autres à la curée de France. En Champagne, ils s'emparent du château de Joinville où ils font un butin considérable[3] et consentent à le rendre moyennant une rançon[2]. Ils parcourent et pillent la Champagne et dévastent les évêchés de Langres, Toul et Verdun puis pénètrent en Bourgogne soutenus par certains chevaliers et écuyers bourguignons.\n\nAprès s'être installés aux alentours de Besançon, de Dijon et de Beaune, ils prennent et pillent Vergy, Gevrey-en-Beaunois et ravagent la région. Ils tentent de surprendre Chalon à la fin de 1361 et en janvier et février de 1362.\n\nLa réunion de l'ensemble de bandes s'élève à 15 000 combattants vers le Carême de 1362[2]. Le plus puissant des capitaines, Seguin de Badefol, est à la tête de 2 000 mercenaires. Parmi les autres chefs de bandes, Froissart cite Talbart Talbardon, Guiot du Pin, Espiote, le Petit Meschin, Bataillé, Frank Hennequin, le Bour Camus, le Bour de Lesparre, le Bour de Breteuil, Naudon de Bageran, Lamit, Hagre de l'Escot, Albrest, Ourri l'Allemand, Bourdeille, Bernardon de la Salle, Hortingo de la Salle, Robert Briquet, Creswey, Amanieu d'Ortigue, Garciot du Castel, Guyonnet de Pau. À la mi-Carême l'ensemble de ses Compagnies se met en marche en direction de la riche cité d'Avignon en passant par le comté de Mâcon, le Lyonnais et le Forez et occupent le prieuré d'Estivareilles.",
-    "image": ""
-  },
-  {
-    "id": 1070,
-    "titre": "Décret sur les juifs",
-    "date": 1361,
-    "zones": [
-      "Portugal"
-    ],
-    "type": 4,
-    "description": "Décret royal ordonnant le regroupement de tous les Juifs du Portugal dans des quartiers obligatoires et délimités",
-    "image": ""
-  },
-  {
-    "id": 1071,
-    "titre": "Création des juges de paix",
-    "date": 1361,
-    "zones": [
-      "Angleterre"
-    ],
-    "type": 4,
-    "description": "Création en Angleterre des juges de paix (Justices of the Peace), chargés de rendre la basse justice et d’expédier les affaires courantes dans les comtés.",
-    "image": ""
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Brigniais.jpg/960px-Brigniais.jpg",
+    "legende": "Bataille de Brignais (1362). L'armée française est vaincue par les Grandes Compagnies, bandes de mercenaires ravageant la France pendant la guerre de Cent Ans"
   },
   {
     "id": 1072,
@@ -12531,20 +12502,6 @@
     "legende": "Mamai du monument du millénaire de la Russie à Novgorod"
   },
   {
-    "id": 1073,
-    "titre": "Réapparition de la Peste (Peste des enfants)",
-    "date": 1361,
-    "zones": [
-      "France",
-      "Angleterre",
-      "Italie",
-      "Aragon"
-    ],
-    "type": 2,
-    "description": "Réapparition de la Peste à Paris, à Avignon et à Londres au début de l'année. Les troupes de mercenaires apportent avec elles la peste en Lombardie (1362) et en Aragon (peste des enfants)",
-    "image": ""
-  },
-  {
     "id": 1074,
     "titre": "Fondation de l'université de Pavie",
     "date": 1361,
@@ -12552,7 +12509,7 @@
       "Italie"
     ],
     "type": 2,
-    "description": "13 avril : fondation de l'université de Pavie",
+    "description": "13 avril : Galeazzo II Visconti fonda l' Université de Pavie par décret de l'empereur Charles IV de Luxembourg . Cette université obtient le statut de studium generale , à laquelle le pape Boniface IX accorda les mêmes droits qu’à l’ université de Bologne et à la Sorbonne à Paris .",
     "image": ""
   },
   {
@@ -12566,56 +12523,6 @@
     ],
     "type": 2,
     "description": "13 mai : la paix de Terrer met fin au conflit entre les couronnes de Castille et d'Aragon.\nLa Paix de Terrer, connue également comme la Paix de Deza ou Paix de Deça[1] est un accord est signé à Deza[2] (royaume de Castille) et à Terrer (royaume d'Aragon) les 13 et 14 mai 1361[3], entre Pierre Ier de Castille le Cruel et Pierre IV d'Aragon le Cérémonieux à la fin de la guerre des Deux Pierre.\nLe 24 avril 1360 eut lieu la première bataille de Nájera, où les troupes aragonaises soutenant la cause d'Henri de Trastamare furent défaites par l'armée de Pierre Ier. [ 7 ] Le royaume de Navarre, gouverné par Louis de Navarre , lieutenant du roi Charles II de Navarre , afin de maintenir autant que possible sa neutralité, s'était érigé en médiateur avec l'accord des deux parties. [ 4 ] [ 8 ]\n\nPedro Ier de Castille accéda aux demandes du légat pontifical Guy de Boulogne , et des négociations eurent lieu entre Bernardo II de Cabrera , représentant la Couronne d'Aragon , et les Castillans Juan Alfonso de Mayorga et Men Rodríguez de Biedma. Il fut convenu que les châteaux et territoires conquis seraient restitués, les prisonniers libérés, et le différend concernant Alicante et Almazán soumis au légat pontifical.\nL'accord ne fut finalement qu'une trêve, car l'exil forcé d'Henri de Trastamare en France, loin d'éteindre le conflit, l'aida à obtenir de nouveaux soutiens et à reprendre le combat en septembre 1362 lorsque la Couronne de Castille reprit les hostilités.",
-    "image": ""
-  },
-  {
-    "id": 1076,
-    "titre": "Paix de Terrer",
-    "date": 1361,
-    "zones": [
-      "Castille",
-      "Aragon"
-    ],
-    "type": 2,
-    "description": "13 mai : la paix de Terrer met fin au conflit entre les couronnes de Castille et d'Aragon.\nLa Paix de Terrer, connue également comme la Paix de Deza ou Paix de Deça[1] est un accord est signé à Deza[2] (royaume de Castille) et à Terrer (royaume d'Aragon) les 13 et 14 mai 1361[3], entre Pierre Ier de Castille le Cruel et Pierre IV d'Aragon le Cérémonieux à la fin de la guerre des Deux Pierre.\nLe 24 avril 1360 eut lieu la première bataille de Nájera, où les troupes aragonaises soutenant la cause d'Henri de Trastamare furent défaites par l'armée de Pierre Ier. [ 7 ] Le royaume de Navarre, gouverné par Louis de Navarre , lieutenant du roi Charles II de Navarre , afin de maintenir autant que possible sa neutralité, s'était érigé en médiateur avec l'accord des deux parties. [ 4 ] [ 8 ]\n\nPedro Ier de Castille accéda aux demandes du légat pontifical Guy de Boulogne , et des négociations eurent lieu entre Bernardo II de Cabrera , représentant la Couronne d'Aragon , et les Castillans Juan Alfonso de Mayorga et Men Rodríguez de Biedma. Il fut convenu que les châteaux et territoires conquis seraient restitués, les prisonniers libérés, et le différend concernant Alicante et Almazán soumis au légat pontifical.\nL'accord ne fut finalement qu'une trêve, car l'exil forcé d'Henri de Trastamare en France, loin d'éteindre le conflit, l'aida à obtenir de nouveaux soutiens et à reprendre le combat en septembre 1362 lorsque la Couronne de Castille reprit les hostilités.",
-    "image": ""
-  },
-  {
-    "id": 1077,
-    "titre": "Lorenzo Celsi doge de Venise",
-    "date": 1361,
-    "mois": 8,
-    "date_fin": 1365,
-    "zones": [
-      "Italie"
-    ],
-    "type": 3,
-    "description": "16 juillet : Lorenzo Celsi est élu doge de Venise\nLorenzo Celsi (né v. 1310 à Venise et mort dans la même ville le 18 juillet 1365) est le 58e doge de Venise élu en 1361.\n\nIl devient doge jeune et se distingue par son arrogance s'aliénant rapidement la sympathie du peuple et de la noblesse.\n\nPendant les quatre ans de son règne, il ne se produit pas d'évènement important et les historiens se sont concentrés plutôt sur sa mort officiellement pour cause de maladie mentale mais qui pourrait être due aussi à un empoisonnement.\nLorenzo Celsi est le fils de Marco, issu d'une famille riche, il fait une petite carrière politico-militaire sans erreur ni panache. Il est marié à une certaine Maria, de maison incertaine.\n\nAprès plusieurs charges en Dalmatie il prend le commandement de la flotte, son rôle étant de devancer les Génois en cas d'attaque surprise. Sans être de grande notoriété, à la surprise générale, il est élu alors que de manière erronée, la nouvelle de la rupture de la trêve par Gênes se répand et que Celsi a combattu l'ennemi et l'a défait avec un grand courage.\nIl semble que cela soit une tactique électorale astucieusement planifiée ce qui lui permet donc d'être élu le 16 juillet 1361.\nHomme de gout, dangereusement princier selon certains, il décide d'élever le niveau de vie de la cour ducale. Son dogat s'accompagne d'importantes fêtes qui s'enchainent pour les motifs les plus divers : son élection, la visite du duc d'Autriche d'abord puis celle du roi de Chypre puis la fin de la guerre en Crète.",
-    "image": ""
-  },
-  {
-    "id": 1078,
-    "titre": "Bataille de Visby les troupes danoises de Valdemar Attertag s'emparent du Gotland",
-    "date": 1361,
-    "mois": 7,
-    "zones": [
-      "Scandinavie"
-    ],
-    "type": 2,
-    "description": "27 juillet : les troupes danoises de Valdemar Attertag, victorieuses à la Bataille de Visby sur les Suédois[6], s’emparent de Gotland puis d’Öland. Menacée, la Ligue Hanséatique se mobilise contre le Danemark (fin en 1370)[",
-    "image": ""
-  },
-  {
-    "id": 1079,
-    "titre": "1ere Guerre Hanséatique",
-    "date": 1361,
-    "mois": 9,
-    "date_fin": 1370,
-    "zones": [
-      "Scandinavie"
-    ],
-    "type": 2,
-    "description": "27 juillet : les troupes danoises de Valdemar Attertag, victorieuses à la Bataille de Visby sur les Suédois[6], s’emparent de Gotland puis d’Öland. Menacée, la Ligue Hanséatique se mobilise contre le Danemark (fin en 1370)\n7 septembre : traité de Greifswald entre le roi Magnus IV de Suède, son fil le roi Håkon VI de Norvège et la Hanse contre Valdemar Attertag[8].\nMagnus VII se rétablit sur le trône de Suède mais doit associer au pouvoir son fils Haakon VI, qui rétablit l’Union (fin de règne en 1365).",
     "image": ""
   },
   {
@@ -12642,30 +12549,6 @@
     "image": ""
   },
   {
-    "id": 1082,
-    "titre": "Mort du duc de Bourgogne de Philippe de Rouvres le duché est récupéré par Jean le Bon",
-    "date": 1361,
-    "mois": 12,
-    "zones": [
-      "France"
-    ],
-    "type": 3,
-    "description": "23 décembre, Dijon : à la mort de Philippe de Rouvres, duc de Bourgogne (21 novembre), le duché est récupéré par Jean le Bon au profit de son fils cadet Philippe le Hardi (septembre 1363)[",
-    "image": ""
-  },
-  {
-    "id": 1083,
-    "titre": "Les Tard-Venus ravagent la Champagne et la Bourgogne, puis les régions riveraines de la Saône et du Rhôn",
-    "date": 1361,
-    "date_fin": 1362,
-    "zones": [
-      "France"
-    ],
-    "type": 2,
-    "description": "Le nom de Tard-Venus est le nom donné aux bandes de routiers qui ravagèrent le Lyonnais et l'Auvergne dans les dernières années du règne du roi Jean II le Bon.\nLorsque le traité de Brétigny est signé le 8 mai 1360 durant la guerre de Cent Ans, la paix qui s'installe ne fait pas les affaires des gens qui vivaient grâce à la guerre. La trêve n'arrête pas l'action des mercenaires des deux armées[1].",
-    "image": ""
-  },
-  {
     "id": 1084,
     "titre": "Décret royal ordonnant le regroupement de tous les Juifs du Portugal",
     "date": 1361,
@@ -12689,16 +12572,93 @@
   },
   {
     "id": 1086,
-    "titre": "Le chef militaire Mamaï dirige la Horde d'or",
+    "titre": "Didymoticho en Macédoine et Karesi conquise par les Ottomans",
     "date": 1361,
-    "date_fin": 1380,
+    "mois": 11,
+    "zones": [
+      "Byzance",
+      "Ottomans"
+    ],
+    "type": 2,
+    "description": "La ville de Didymoticho en Macédoine orientale est conquise par les Ottomans et remplace brièvement Bursa comme capitale.\nLes Ottomans conquièrent Karesi , leur premier beylik anatolien .",
+    "image": ""
+  },
+  {
+    "id": 1087,
+    "titre": "Nikolaus Faber orgue de Halberstadt",
+    "date": 1361,
+    "zones": [
+      "St Empire",
+      "Art",
+      "Techniques"
+    ],
+    "type": 3,
+    "description": "L'orgue du moine et facteur d'orgues de Halberstadt, Nikolaus Faber, est consacré dans la cathédrale de Halberstadt .\nC'est le plus ancien instrument à clavier connu , avec la disposition de touches noires et blanches qui deviendra la norme.\nFaber est le plus ancien fabricant d'orgues allemand dont le nom nous soit parvenu[1]. On lui doit l'orgue d'Halberstadt (1359-1361) qui est rénové en 1495 par Grégoire Kleng[.\nJules Verne le mentionne au chapitre V de sa nouvelle M. Ré-Dièze et Mlle Mi-Bémol. \n l'un des plus anciens facteurs d'orgues d'Allemagne, était un ecclésiastique. De 1359 à 1361, il construisit un grand orgue pour la cathédrale d'Halberstadt, dont Praetorius donne une description dans la seconde partie de son Syntagma musicum . Cette description présente un grand intérêt historique, car elle offre un aperçu précis de la construction d'un grand orgue à cette époque.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Syntagma14.png",
+    "legende": "Claviers de l'orgue de la cathédrale d'Halberstadt , illustration de Praetorius"
+  },
+  {
+    "id": 1089,
+    "titre": "An-Nasir Hasan , sultan mamelouk d'Égypte, est assassiné",
+    "date": 1361,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "17 mars – An-Nasir Hasan , sultan mamelouk d'Égypte, est tué par l'un de ses propres mamelouks , Yalbugha al-Umari , qui, avec les émirs mamelouks supérieurs, fait installer al-Mansur Muhammad comme nouveau sultan.\n(1334/35-1361) fut un sultan mamelouk d’Égypte qui régna à deux reprises, de 1347 à 1351 puis de 1354 à 1361. Fils du puissant sultan Al-Nasir Muhammad, il monta sur le trône à seulement douze ans. Durant son premier règne, il ne détenait qu’un pouvoir symbolique, tandis que les grands émirs mamelouks dirigeaient réellement le sultanat. Lorsqu’il tenta d’affirmer son autorité, il fut renversé et placé en résidence surveillée. Pendant cette période, il se consacra à l’étude de la théologie et acquit une réputation d’homme cultivé et érudit.\n\nRétabli au pouvoir en 1354 grâce à un coup d’État, al-Nasir Hasan chercha à réduire l’influence des puissants émirs mamelouks. Il fit emprisonner ou exiler plusieurs d’entre eux et remplaça de nombreux hauts responsables par des awlad al-nas, c’est-à-dire les descendants de mamelouks, qu’il jugeait plus loyaux et plus proches du peuple. Cette politique originale renforça temporairement son autorité mais suscita l’hostilité d’une partie des militaires mamelouks.\n\nSon règne est également marqué par une importante activité architecturale. Il fit construire au Caire la célèbre Mosquée-madrasa du Sultan Hassan, considérée comme l’un des plus grands chefs-d’œuvre de l’architecture mamelouke. Il finança aussi des bâtiments religieux et des travaux à Le Caire, Jérusalem, Gaza et Damas.\nEn 1361, al-Nasir Hasan fut assassiné à l’âge de 27 ans par l’un de ses propres mamelouks, Yalbugha al-Umari, opposé à sa politique. Malgré la brièveté de son règne, les chroniqueurs le considérèrent comme l’un des souverains les plus influents et remarquables de la dynastie mamelouke.",
+    "image": ""
+  },
+  {
+    "id": 1090,
+    "titre": "Maroc : Abou Salim Ibrahim est renversé par Abou Umar",
+    "date": 1361,
+    "mois": 3,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 4,
+    "description": "Dans l' empire mérinide , dans le Maroc actuel , Abou Salim Ibrahim est renversé par Abou Umar, qui est à son tour renversé par Abou Zayyan.",
+    "image": ""
+  },
+  {
+    "id": 1091,
+    "titre": "La Horde bleue sombre dans l’anarchie",
+    "date": 1361,
+    "date_fin": 1378,
     "zones": [
       "Russie"
     ],
     "type": 2,
-    "description": "Mamaï (tatar : Мамай, Mamay) est un émir de la Horde bleue, qui détient le pouvoir effectif sur la Horde d'or entre 1361 et 1380.\nContrairement aux khans de la Horde d'Or, Mamaï n'était pas un descendant de Gengis Khan et de son fils Jochi, mais appartenait à la famille des Changshi'ud, descendant de Mönggetü Qiyan (Mūngdū Qayān), un frère ainé de Yesügei. Alors qu'ils servaient les dirigeants de la Horde d'Or depuis au moins Batu Khan, les Kiyats ont peut-être pris de l'importance après la chute du khan rival Nogaï en 1299. Abandonnant Nogaï au profit du khan légitime, Toqtaï, Aq-Buqa Kiyat jouit du pouvoir. faveur du khan et de son successeur, et fut l'un des principaux émirs. Un autre Kiyat, Isatai, fut chargé de gouverner l'ancien ulus d'Orda dans la partie orientale de la Horde d'Or, par Öz Beg Khan. Le fils d'Isatai, Jir-Qutluq, et le fils de ce dernier, Tingiz-Buqa, jouissaient de la même position sous les khans suivants, Jani Beg et Berdi Beg. Les informations spécifiques sur les origines immédiates de Mamai sont très limitées, mais son père s'appelle Alash Beg (peut-être Ali Beg), probablement le fils de Tuluq-Timur Kiyat, et donc peut-être le frère d'Isatai susmentionné. Au moins une partie de ses parents était peut-être installée en Crimée, peut-être depuis le début du XIVe siècle, avant que plusieurs Kiyats n'apparaissent comme gouverneurs de la périphérie orientale de la Horde d'Or. La date de naissance de Mamai ne peut être estimée que de manière générale, quelque part entre le milieu et la fin des années 1320. À la naissance, il semble avoir reçu le nom musulman Muḥammad, parfois associé au surnom de Kičik (« petit »), peut-être en raison de sa petite taille. On ne sait pas si « Mamai » est une variante de ce nom ou un nom « populaire » supplémentaire.\nAprès l'assassinat du khan Djanibeg en 1357, le khanat de la Horde d’Or se disloque sous Berdibeg et ses successeurs et sombre dans l'anarchie. En 1361, Mamaï s'impose parmi les seigneurs féodaux mongols. À partir de 1371, profitant de la guerre civile, les princes russes cessent de se rendre à Saraï pour faire reconnaître leur règne par le khan et refusent de payer tribut à la Horde d'Or. Le grand-prince de Moscou Dimitri Donskoï résiste à une expédition punitive des Mongols en 1373 puis attaque Kazan en 1376. Le 11 août 1378 il est victorieux de Mamaï sur la Voja et cherche à liguer les princes russes contre l’occupant mongol. Le 8 septembre 1380, Dimitri Donskoï défait à nouveau les Mongols de Mamaï à la bataille de Koulikovo (le « Champ des Bécasses »), au confluent du Don et de la Népriavda. Mamaï, affaibli, est vaincu la même année sur la Khalkha par Tokhtamych, khan de la Horde Blanche (steppes du Syr-Daria), général de Tamerlan, qui se proclame khan de la Horde d'or. Mamaï se réfugie à Caffa en Crimée où il sera assassiné par des commerçants génois.\nMamaï\n\nArticle\nDiscussion\nLire\nModifier\nModifier le code\nVoir l’historique\n\nOutils\nApparence masquer\nTaille du texte\n\nPetite\n\nStandard\n\nGrande\nLargeur\n\nStandard\n\nLarge\nCouleur (bêta)\n\nAutomatique\n\nClair\n\nSombre\n\t\nCet article est une ébauche concernant l’histoire de la Russie.\n\nVous pouvez partager vos connaissances en l’améliorant (comment ?) selon les recommandations des projets correspondants.\nMamaï\n\nBiographie\nNaissance\t\n1335\nStaryï Krym\nDécès\t\n1380\nThéodosie\nSépulture\t\nAivazovs'ke (d)\nActivité\t\nChef militaire\nFamille\t\nMaison Qiyad\nConjoint\t\nTulunbeg (en)\nEnfant\t\nMansur-Kijat (d)\nmodifier - modifier le code - modifier WikidataDocumentation du modèle\n\n\nLa bataille de Koulikovo (loubok des années 1890)\nMamaï (tatar : Мамай, Mamay) est un émir de la Horde bleue, qui détient le pouvoir effectif sur la Horde d'or entre 1361 et 1380.\n\nBiographie\nOrigine\nContrairement aux khans de la Horde d'Or, Mamaï n'était pas un descendant de Gengis Khan et de son fils Jochi, mais appartenait à la famille des Changshi'ud, descendant de Mönggetü Qiyan (Mūngdū Qayān), un frère ainé de Yesügei. Alors qu'ils servaient les dirigeants de la Horde d'Or depuis au moins Batu Khan, les Kiyats ont peut-être pris de l'importance après la chute du khan rival Nogaï en 1299. Abandonnant Nogaï au profit du khan légitime, Toqtaï, Aq-Buqa Kiyat jouit du pouvoir. faveur du khan et de son successeur, et fut l'un des principaux émirs. Un autre Kiyat, Isatai, fut chargé de gouverner l'ancien ulus d'Orda dans la partie orientale de la Horde d'Or, par Öz Beg Khan. Le fils d'Isatai, Jir-Qutluq, et le fils de ce dernier, Tingiz-Buqa, jouissaient de la même position sous les khans suivants, Jani Beg et Berdi Beg. Les informations spécifiques sur les origines immédiates de Mamai sont très limitées, mais son père s'appelle Alash Beg (peut-être Ali Beg), probablement le fils de Tuluq-Timur Kiyat, et donc peut-être le frère d'Isatai susmentionné. Au moins une partie de ses parents était peut-être installée en Crimée, peut-être depuis le début du XIVe siècle, avant que plusieurs Kiyats n'apparaissent comme gouverneurs de la périphérie orientale de la Horde d'Or. La date de naissance de Mamai ne peut être estimée que de manière générale, quelque part entre le milieu et la fin des années 1320. À la naissance, il semble avoir reçu le nom musulman Muḥammad, parfois associé au surnom de Kičik (« petit »), peut-être en raison de sa petite taille. On ne sait pas si « Mamai » est une variante de ce nom ou un nom « populaire » supplémentaire[1].\n\nConquête du pouvoir\nAprès l'assassinat du khan Djanibeg en 1357, le khanat de la Horde d’Or se disloque sous Berdibeg et ses successeurs et sombre dans l'anarchie. En 1361, Mamaï s'impose parmi les seigneurs féodaux mongols. À partir de 1371, profitant de la guerre civile, les princes russes cessent de se rendre à Saraï pour faire reconnaître leur règne par le khan et refusent de payer tribut à la Horde d'Or. Le grand-prince de Moscou Dimitri Donskoï résiste à une expédition punitive des Mongols en 1373 puis attaque Kazan en 1376. Le 11 août 1378 il est victorieux de Mamaï sur la Voja et cherche à liguer les princes russes contre l’occupant mongol. Le 8 septembre 1380, Dimitri Donskoï défait à nouveau les Mongols de Mamaï à la bataille de Koulikovo (le « Champ des Bécasses »), au confluent du Don et de la Népriavda. Mamaï, affaibli, est vaincu la même année sur la Khalkha par Tokhtamych, khan de la Horde Blanche (steppes du Syr-Daria), général de Tamerlan, qui se proclame khan de la Horde d'or. Mamaï se réfugie à Caffa en Crimée où il sera assassiné par des commerçants génois.\n\nDescendance\nLe fils de Mamai, Mansur Kiyat, entra au service de Tokhtamysh ; son fils Alexandre, converti au christianisme, entra au service de Vytautas de Lituanie et fut nommé prince de Glinsk avec de multiples domaines autour de la ville moderne de Poltava (Ukraine). Cela se serait produit au début du XVe siècle, bien que la première mention documentée des princes Glinski date de 1437. Mihail L'vovič Glinskij était le membre le plus illustre de la famille : il étudia à l'université allemande, participa en tant que chevalier des guerres d'Italie, était l'homme le plus puissant de Lituanie au XVIe siècle, mais s'est ensuite rebellé et s'est enfui avec ses frères en Moscovie et a aidé les Russes à reprendre la ville de Smolensk. Sa nièce Elena Glinskaya était mariée à Vasilij III de Moscou et Ivan le Terrible était leur fils.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Mamai.jpg",
-    "legende": "Mamai du monument du millénaire de la Russie à Novgorod."
+    "description": "la Horde bleue sombre dans l’anarchie. Entre 1361 et 1378 , plus de vingt khans se succèdent à la tête de différentes parties du territoire de la Horde bleue. La Horde bleue ( en tatar : Күк Урда/Kük Urda ) était une composante essentielle de l' Empire mongol établi après la mort de Gengis Khan en 1227. Fonctionnant comme la partie orientale de la Horde d'or divisée , elle contrastait avec la partie occidentale de la Horde blanche (voir le système cardinal turc ), adhérant à la tradition mongole et turque des couleurs des directions cardinales.\na Horde bleue demeura puissante depuis sa fondation (vers 1240) jusqu'aux années 1350. Des troubles à l'ouest de la Horde entraînèrent la perte de la Valachie, de la Dobroudja, de la Moldavie et de l'ouest de l'Ukraine, ainsi que des principautés vassales à l'ouest de Kiev . Ces territoires furent cédés à la Lituanie après la défaite de son armée lors de la bataille des Eaux Bleues en 1362, et à la Pologne . La mort de Jani Beg plongea la Horde bleue dans une longue guerre civile, marquée par des luttes intestines entre khans qui se disputaient le pouvoir. Parallèlement, Mamai devint faiseur de rois au sein de la Horde bleue. Durant cette période, Vassili Ier de Moscou profita des luttes intestines et cessa de verser un tribut à la Horde, bien que celle-ci continuât de mener des attaques contre Moscou, comme un raid en 1408. [ 8 ]\n\nCe n'est qu'avec l'avènement de Tokhtamysh que les khans concurrents furent destitués. Il unifia la Horde Bleue à sa propre Horde Blanche et créa la Horde d'Or en 1380. La Horde Bleue fusionna avec les deux autres hordes, mais ne disparut jamais vraiment jusqu'à la défaite finale de la Horde d'Or.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Golden_Horde_2.png/1920px-Golden_Horde_2.png",
+    "legende": "Carte de la Horde d'Or avec ses parties constituantes, y compris la Horde Bleue (ouest), la Horde Blanche (est) et les vassaux russes.",
+    "sources": "https://en.wikipedia.org/wiki/Blue_Horde"
+  },
+  {
+    "id": 1092,
+    "titre": "Batalla de Linuesa",
+    "date": 1361,
+    "mois": 12,
+    "zones": [
+      "Castille",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "21 décembre - Bataille de Linuesa , au cours de laquelle les troupes du royaume de Castille et León ont vaincu celles du royaume nasride de Grenade .\nLa bataille de Linuesa fut une bataille livrée le 21 décembre 1361 dans la municipalité de Huesa , située dans la province de Jaén (alors, l'ancien royaume de Jaén ), entre les troupes de la Couronne de Castille et les troupes du royaume nasride de Grenade , qui furent vaincues par les forces castillanes.\nLes troupes castillanes étaient commandées par les chevaliers Diego García de Padilla , maître de l'ordre de Calatrava , Enrique Enríquez le Jeune , gouverneur principal de la frontière andalouse et arrière-petit-fils du roi Ferdinand III de Castille , et Men Rodríguez de Biedma , chef de l' évêché de Jaén .\nÀ la fin de l'année 1361 , des troupes musulmanes du royaume nasride de Grenade envahirent les terres du district de Cazorla et incendièrent la ville de Peal de Becerro, dans la province de Jaén . Ces forces musulmanes comptaient six cents chevaliers et deux mille fantassins ; elles firent également de nombreux prisonniers, hommes et femmes, ainsi qu'une importante quantité de bétail.\nLorsque Diego García de Padilla, maître de l'Ordre de Calatrava, Enrique Enríquez le Jeune, magistrat en chef de la frontière andalouse, et Men Rodríguez de Biedma, magistrat en chef de l'évêché de Jaén, apprirent que les musulmans avaient envahi le district de Cazorla et incendié la ville de Peal de Becerro, ils rassemblèrent leurs troupes et se mirent en route à la poursuite des musulmans. [ 1 ]\n\nLes troupes castillanes s'emparèrent d'un point de passage sur le Guadiana Menor , profitant du passage prévu de l'armée musulmane sur le chemin du retour. La bataille eut lieu le 21 décembre 1361 dans la commune de Huesa , province de Jaén .\nLes troupes musulmanes atteignirent le point de passage du fleuve Guadiana Menor, occupé par les troupes chrétiennes, et tentèrent de les déloger. Mais les chrétiens attaquèrent les musulmans et les vainquirent complètement à un endroit appelé Linuesa, selon la soi-disant Chronique du roi Pedro , qui indique également que peu de musulmans survécurent à cette confrontation.\nLorsque le roi Pierre Ier de Castille apprit que ses armées avaient vaincu les forces musulmanes à la bataille de Linuesa, il en fut très heureux, bien qu'il ait ordonné à Diego García de Padilla, Enrique Enríquez le Jeune et Men Rodríguez de Biedma de lui remettre les captifs qu'ils avaient pris, et leur avait promis de leur donner en échange de chacun d'eux la somme de trois cents maravédis .\n\nCependant, le roi prit possession des captifs mais ne donna pas la somme promise à ceux qui les avaient capturés, ce qui mit en colère Diego García de Padilla, Enrique Enríquez le Jeune et Men Rodríguez de Biedma, qui avaient été les commandants chrétiens lors de la bataille de Linuesa. [ 3 ]\nPeu de temps après, ces mêmes commandants furent vaincus par les troupes musulmanes lors de la bataille de Guadix , qui se déroula sur les terres de Grenade en janvier 1362.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Reino_de_Granada.svg/1920px-Reino_de_Granada.svg.png",
+    "legende": "Royaume de Grenade."
+  },
+  {
+    "id": 1093,
+    "titre": "Buda devient la capitale de la Hongrie",
+    "date": 1361,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 2,
+    "description": "L'ancienne ville de Buda, sur la colline du même nom, forme avec Óbuda et l'ancienne Pest (sur l'autre rive du Danube) la ville de Budapest. Buda est situé sur la rive droite du Danube (partie occidentale de la capitale) et comporte des lieux emblématiques tels le Palais de Budavár, la citadelle et le palais Sándor.\nMalgré la destruction presque totale de la ville, à la suite d'une invasion mongole en 1241, Béla IV rompt avec la dynastie des Árpád qui avait dirigé leur royaume depuis d'autres cités, et installe la capitale à Buda en 1247 où il fait construire un château. La ville ne commence toutefois à se développer réellement qu'avec l'arrivée sur le trône des princes angevins. Durant cette période, des colons allemands furent invités à reconstruire et à repeupler Buda et Pest, représentant la majorité de la population[20]. Après le déplacement de la résidence royale à Visegrád en 1308, la ville devient la capitale du pays en 1361. Sigismond de Luxembourg introduit le style gothique à Buda où, à l'instar du palais d'été de Visegrád, le Palais royal connaît une importante reconstruction. La ville atteint son âge d'or au XVe siècle pendant le règne de Mathias Corvin, dont l'épouse Béatrice de Naples, fait de la Hongrie un des foyers actifs de la Renaissance. Siège du Parlement à partir de 1298, Pest, sur l'autre rive du fleuve, affirme sa vocation commerçante.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Buda_1493.jpg/960px-Buda_1493.jpg",
+    "legende": "La cité de Buda dans les Chroniques de Nuremberg (1493)."
   },
   {
     "id": 189,
@@ -12739,6 +12699,175 @@
     "type": 1,
     "description": "Petit-fils d'Abû al-Hasan ben `Uthmân réfugié à la cour de Castille. Il a pris le titre de sultan mérinide en 1362 après la période dite du « règne des vizirs ». Il est mort en 1366.\nAu début du règne d'Abû Ziyân Muhammad, le royaume était amputé du Sud, de la façade saharienne et de l'ouest algérien. Abû Ziyân Muhammad essaya d'échapper à la tutelle de son vizir et envisagea de le mettre à mort. Ce dernier prévenu du complot fit étrangler son maître en 1366. Le vizir remplaça le Sultan par Abû Fâris `Abd al-`Azîz, un des fils Abû al-Hasan qui jusque-là, avait été tenu enfermé dans le palais de Fès.",
     "image": ""
+  },
+  {
+    "id": 1094,
+    "titre": "Pierre runique de Kensington canular du XIXe",
+    "date": 1362,
+    "zones": [
+      "Scandinavie",
+      "Amerique"
+    ],
+    "type": 4,
+    "description": "La Pierre runique de Kensington est une pierre couverte de runes découverte en 1898 près de Kensington par un fermier d’origine suédoise, Olof Öhman. Selon l’inscription gravée, une expédition de Scandinaves composée de Suédois et de Norvégiens aurait exploré l’intérieur de l’Amérique du Nord en 1362, bien avant l’arrivée de Christophe Colomb. Le texte évoque un groupe venu du Vinland qui aurait subi une attaque meurtrière pendant son voyage.\nDès sa découverte, la pierre provoqua une grande controverse. À cette époque, les récits des voyages vikings au Vinland suscitaient un fort intérêt en Scandinavie et aux États-Unis. Plusieurs spécialistes étudièrent l’inscription, mais la majorité des linguistes et runologues conclurent qu’il s’agissait probablement d’un faux. Les critiques portent surtout sur la langue utilisée, certaines runes inhabituelles, des formes grammaticales anachroniques et l’usage de chiffres qui ne correspondent pas aux pratiques du XIVe siècle. Beaucoup pensent qu’Öhman ou des habitants de la région auraient fabriqué l’artefact à la fin du XIXe siècle.\nCependant, quelques chercheurs ont défendu son authenticité. Certains ont avancé que les anomalies linguistiques pourraient provenir de dialectes scandinaves anciens ou régionaux. D’autres études géologiques ont affirmé que l’usure de la pierre semblait ancienne. Ces débats ont entretenu le mystère pendant plus d’un siècle.\n\nLa pierre est aussi liée à l’idée qu’une expédition nordique partie du Groenland au XIVe siècle aurait pu atteindre l’intérieur du continent nord-américain en utilisant les voies fluviales du Canada et du Minnesota. Même si cette hypothèse reste discutée, les historiens considèrent aujourd’hui majoritairement la pierre de Kensington comme un canular historique plutôt qu’une preuve authentique de présence viking au cœur de l’Amérique du Nord.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kensington-runestone_flom-1910.jpg/960px-Kensington-runestone_flom-1910.jpg",
+    "legende": "Images des deux faces sculptées de la pierre runique de Kensington, tirées du court ouvrage de George Flom intitulé « La pierre runique de Kensington"
+  },
+  {
+    "id": 1095,
+    "titre": "Chandos s'empare de  Cahors",
+    "date": 1362,
+    "mois": 1,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "La ville de Cahors se rend au lieutenant du roi d'Angleterre, Chandos, en présence du maréchal français Boucicaut. \nLe traité de Brétigny, définitivement signé à Calais, le 24 octobre 1360, par le roi Jean et le prince de Galles, prévoyait contre la remise en liberté du monarque français captif la cession à l’Angleterre d’un grand nombre de provinces dont le Rouergue. La rançon royale s’élevait, en outre, à trois millions d’écus d’or et, pour garantir le paiement intégral de cette somme fabuleuse, un certain nombre de princes et de grands barons devaient être livrés en otages.\nEn exécution du traité, Jehan Chandos, vicomte de Saint-Sauveur et lieutenant général en France du roi d’Angleterre, vient prendre possession, au nom de son souverain, des terres et cités passant dans la mouvance anglaise.\nLes consuls de Cahors ont profité de leur nouvelle position pour négocier avec Chandos non seulement le maintien de leurs droits, les prérogatives de leur évêque, mais aussi l’assurance de nouveaux avantages sécuritaires, monétaires, judiciaires, fiscaux et commerciaux visant à garantir la paix et la prospérité de la cité et de ses habitants.\nJean Chandos arriva à Cahors, venant de Gourdon.\n\nLorsqu'il se présenta à l'entrée de la Barre, devant la porte Saint-Michel, si on s'en rapporte au procès-verbal anglais, ou bien devant la porte dite vulgairement des Anciens Augustins, d'après le procès-verbal cadurcien, le samedi après la fête de l'Epiphanie, c'est-à-dire le 8 janvier 1362, il était attendu par le maréchal de Boucicaut, les consuls et une grande multitude de peuple. (79).\n\n \n\nLes consuls se montrèrent fort mécontents. Ils lurent un acte d'opposition où ils protestaient de leur fidélité et de leur attachement au roi de France et de leur peine de servir un souverain étranger.\n\n« Nous déclarons, dirent-ils, que ce n'est pas nous qui abandonnons le roi de France, mais lui qui nous livre à un maître étranger ».\n\n \n\nLe maréchal de Boucicaut, en vertu de ses lettres de pouvoir, et sur leur demande, déclara les consuls de Cahors complètement dégagés à l'égard du roi de France.\n\n« Ayant de prêter le serment de fidélité, écrit M. Albe, dans son Cahors, ils dirent qu'ils avaient des privilèges et des coutumes, les uns écrits, les autres de tradition, et ils en demandèrent la confirmation ». Chandos le leur promit.\n\n \n\nAprès avoir lu les lettres du roi de France, le lieutenant d'Edouard III déclara que son maître ajouterait d'autres privilèges.\n\nC'est ce qui explique pourquoi les consuls remirent à Chandos une cédule de demandes auxquelles il répondit, pour les unes, par l'affirmative, pour d'autres, d'une manière vague en disant que le roi « ordonnerait à sa venue », pour quelques-unes, d'une manière négative.\n\n \n\nLes barrières furent alors enlevées, les clefs de la porte Saint-Michel furent données au maréchal de Boucicaut qui les remit à Chandos et celui-ci les rendit aux consuls.\n\n \n\nLe lendemain, 9 janvier, Jean Chandos prêta serment dans la chapelle Saint-Martin et Boucicaut lui remit la possession de la ville.\n\n \n\nLes consuls firent entendre alors une dernière protestation dans laquelle ils réservaient les droits de l'évêque et du Chapitre, ne reconnaissant au roi d'Angleterre que le droit du roi de France.\n\nLe même jour, de concert avec le sénéchal anglais, Hélie de Paumiers, Chandos nomma juge-mage de la sénéchaussée Galhard Alquier, qui était juge du pariage; juge ordinaire de Cahors et de Montauban, Me Jean de Peirat et laissa les autres officiers dans leurs fonctions.\n\n \n\nVoici la copie du procès-verbal de la prise de, possession de Cahors, d'après le manuscrit du Musée britannique :\n\n \n\n « Le samedi, huitième jour de janvier, 1362, ledit Monseigneur (Chandos)  vint à Cahours, à la porte appelée la barre Saint-Michel.\n\n \n\nEt icel trouva ledit maréchal (Boucicault) et ledit messire Giraud de Joli (sénéchal du Quercy pour le roi de France), et les consuls et plusieurs des autres  habitants de ladite ville.\n\n \n\n Lesquieux, consuls, emprez le commande« ment dudit maréchal et emprez plusieurs requêtes faites par lesdits consuls, tant sur la confirmation de leurs privilèges que l'ordonnance de ladite ville et du pays, délivrance d'Anglais, gascons et pilleurs et autres, baillèrent et délivrèrent ladite ville audit maréchal, lequel la bailla audit Monseigneur le lieuteuant, par le consentement desdits  consuls et entra dedans et incontinent, fit faire le cri général, à trompes par la ville, de par notre Sire, le roi d'Angleterre, que tous fussent, le dimanche, de dans une heure de présence au grand mostier de Saint-Etienne (cathédrale).\n\n \n\n« Le dimanche, neuvième jour de janvier, furent lesdits consuls audit mostier et proposèrent et obligèrent plusieurs privilèges et raisons qu'ils se disaient avoir et offrirent enseigner par escrit desdits privilèges, par quoi ils n'étaient tenus à faire serment, et si tenus y étaient, qu'il le devait suffire que lesdits consuls le fassent pour eux et pour tous les autres.\n\n \n\nAuxquelles choses leur fût répondu, par ledit Monseigneur le lieutenant, plusieurs causes et raisons pourquoi ils devaient faire ledit serment, et aussi tout le commun, tout gent d'église comme nobles et autres, nonobstant leurs dits privilèges et raisons.\n\n \n\nEt à la parfois, lesdits consuls et autres de ladite ville le firent, desquels les noms arrivent »\n\n \n\nLes documents municipaux nous donnent quelques détails sur le patriotique refus des consuls à prêter ce serment.\n\n \n\nIls prétendirent que, d'après le pariage de 1306, le roi de France ne pouvait aliéner ladite ville au préjudice de l'évêque qui en était seul seigneur ; que ledit évêque n'avait appelé en pariage le roi Philippe-le-Bel qu'à la condition que la ville ne changerait point de maître, ce qu'ils déclarèrent publiquement et que c'était avec regret et une grande douleur, qu'ils obéissaient au roi de France dans cette occasion ; et que ce n'était pas eux qui se donnaient au roi d'Angleterre, mais que c'était le roi de France qui les abandonnait à un maître étranger.\n\n \n\nCe qu'ils firent insérer sur l'acte conservé dans les archives de l'hôtel de ville. (1, III, p. 170—5, p. 391—12, II, p. 578.)\n\n \n\nEntre la porte Saint-Michel et la tour de Saint-Mary, il y avait une petite tour carrée, puis une seconde pareille, puis une plus haute, dite Crotade ou de Morlas, surmontée d'une salle voûtée ; elle était gardée par cinquante hommes.\n\n \n\nEt puis, enfin, deux autres petites tours carrées.\n\n \n\nOn les voit encore toutes, extérieurement, dans le cimetière.\n\n \n\nLe document de 1605 nous apprend que les toitures et les planchers de ces tours avaient grand besoin de réparation. (1, III, p. 242—5, p. 466—50—63.) 4° La grosse tour carrée de Saint-Mary (la poudrière actuelle).\n\n \n\nElle est à l'extrémité de la plaine et domine la rivière. Elle était munie d'un corps de garde et d'un pont-levis et était gardée par soixante-dix hommes.\n\n \n\nLe 13 janvier, Chandos confirma les privilèges, par lettres datées de Cahors et adressées au sénéchal de Quercy.\n\n \n\nDe Cahors, Chandos se rendit à Montauban pour prendre possession de la ville.\n\nDe là, il alla à Moissac, où il arriva le 15 janvier.\n\nIl était attendu, à la première barrière de la ville, par Giraud de JoJv, commissaire du roi de France, les consuls, plusieurs religieux cil de nombreux habitants.\n\n \n\nChandos jura de respecter les privilèges, les grâces et les libertés de la ville et la barrière fut ouverte. Le lieutenant du roi d'Angleterre entra aussitôt dans Moissac.\n\n \n\nLe lendemain il se trouvait au mostier de l’abaye ou les habitants devaient faire les serementz.\n\nIl eut quelques difficultés avec l'abbé Ratier de Lautrec. Celui-ci voulait que Jean Chandos lui rendit, pour la juridiction de la ville, l'hommage auquel s'étaient assujettis les comtes de Toulouse et plus tard les rois de France.\n\nLe commissaire anglais refusa et l'abbé de Moissac se démit de ses fonctions.\n\n \n\nLe 20 janvier il prit possession de Montauban (1),\n\n \n\nLe 6 février 1362, Chandos prit possession de Figeac dans l'église des Frères Mineurs.\n\n \n\nLe 8 février de Villefranche-de-Rouergue (2)\n\n \n\nLe 13 du même mois, il prit possession de la ville de Saint-Antonin.\n\n \n\nLe 17 de Millau (3).\n\n \n\nIl ne semble pas que le lieutenant du roi d'Angleterre soit allé recevoir le serment des autres villes du Quercy.\n\n \n\nElles durent le prêter entre les mains du sénéchal ou d'autres officiers royaux.\n\n \n\nL'évêque de Cahors finit par quitter sa ville d'Albas. Il se relira au château familial de Brengues, d'où il gouverna le diocèse.\nC'est de là qu'il data une ordonnance pour remettre en vigueur la discipline ecclésiastique. Il devait y finir ses jours.",
+    "image": ""
+  },
+  {
+    "id": 1096,
+    "titre": "Violente tempête en mer du Nord (Grote Mandrenke)",
+    "date": 1362,
+    "mois": 1,
+    "zones": [
+      "St Empire",
+      "Scandinavie",
+      "Sciences"
+    ],
+    "type": 4,
+    "description": "16 janvier violente tempête en mer du Nord, causant au moins 25 000 morts (Grote Mandrenke)\nLa seconde inondation de la Saint Marcel aussi appelée Grote Mandrenke (la grande noyade) en Allemagne et au Danemark eut lieu les 15 et 16 janvier 1362. Elle frappa les régions sud de la mer du Nord.\n\nLe chroniqueur allemand Anton Heimreich (de) a écrit que l'eau dans le Schleswig-Holstein est passée à plus de quatre coudées (environ 2,4 mètres) au-dessus des barrages et des digues. Dans la cathédrale de Ribe, le niveau de l'eau est indiqué sur un mur.\n\nLa ville de Rungholt et sept autres paroisses ont disparu dans les flots et plus de 7 600 personnes se sont noyées. La côte allemande a été modifiée, l'île Nordstrand s'est scindée en trois, la baie Leybucht s'est formée.\n\nAux Pays-Bas, les effets ont été aussi désastreux. Des digues se sont rompues et de grandes étendues ont été inondées.\nL'Angleterre semble avoir subi moins de dégâts, aucune source connue n'en fait mention.\nLe nombre total de victimes n'est pas connu. Les estimations vont de 25 000 à 40 000. Certaines sources parlent de 100 000 victimes, mais cela est probablement exagéré.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/JBAM_068.JPG/1280px-JBAM_068.JPG",
+    "legende": "Carte des terres avant 1362 (à droite) et après 1634 (à gauche) selon Johannes Mejer (de) 1652."
+  },
+  {
+    "id": 1097,
+    "titre": "Bataille de Brignais",
+    "date": 1362,
+    "mois": 4,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "6 avril : les Tard-Venus écrasent l'ost royal français commandé par Jacques de Bourbon à la bataille de Brignais près de Lyon. \n\nLa bataille de Brignais est une bataille de la guerre de Cent Ans qui eut lieu le 6 avril 1362. Les Grandes Compagnies mercenaires battent l'armée royale française commandée par Jacques Ier de Bourbon, comte de la Marche et connétable de France.\nDepuis le début de la guerre de Cent Ans, la France a été battue à Crécy (1346) et à Poitiers (1356), où le roi Jean II le Bon a été fait prisonnier. Il n’est libéré qu’en 1360. Depuis la trêve, les Grandes Compagnies de mercenaires (aussi appelés Routiers), qui ne sont plus payés, ravagent et pillent les campagnes françaises. En décembre 1360, les voici en Bourgogne, dévastant les environs de Beaune, Dijon, Gevrey. Ils atteignent le Mâconnais en janvier 1361 puis en 1362. Le péril devenant imminent pour la région lyonnaise, les efforts se coordonnèrent enfin. Le chapitre métropolitain sollicite le roi. Un lieutenant du bailli de Mâcon vient visiter les fortifications de la ville de Lyon[1]. Les châteaux de St Genis-Laval, Givors, Soucieu-en-Jarrest, Rochefort, Ste-Foy-lès-Lyon et bien d'autres renforcent leur défense[2].\n\nVers le milieu du mois de mars, les Tard-Venus sont devant le château de Rive-de-Gier puis une compagnie de Routiers s'empare du bourg fortifié de Brignais, ces deux places fortes n'ayant pas la garnison nécessaire pour assurer leur défense. Le chapitre de Saint-Just et le sénéchal de Lyon demandent de l'aide à Jean II de Melun, qui demande lui-même le soutien du roi[3]. Les milices de Lyon et les forces des seigneurs féodaux locaux sont placées sous la bannière de Jacques de Bourbon, comte de La Marche, connétable de France. Une seconde armée doit la rejoindre, en provenance de Bourgogne[4]. Apprenant que l'on cherche à les déloger, les Tard-Venus des alentours s’unissent pour mieux résister.\nL'armée royale avance vers Brignais le 6 avril 1362, en venant de Saint-Genis-Laval.\n\nDeux versions existent concernant le déroulement de cette bataille[5].\n\nD'après Matteo Villani, Jacques de Bourbon, n'attendant pas les renforts, chercha à reprendre Brignais. Voyant ses assauts repoussés, il dut camper avec ses troupes devant la ville. Une partie de l'armée des Tard-Venus s'était alors séparée du reste pour piller le Forez. Apprenant que la garnison de Brignais était en difficulté, ils revinrent à marche forcée pour les secourir. Profitant de l'effet de surprise et de la hauteur du terrain des Barolles, ces Routiers que Villani dit commandés par Petit Meschin attaquèrent le camp de l'armée de Jacques de Bourbon en pleine nuit, pendant que ceux fortifiés dans le bourg firent une sortie.\n'après Jean Froissart, les Routiers, sous l'impulsion de Seguin de Badefol, se seraient séparés en deux groupes : le premier rangé sur la route liant Saint-Genis-Laval à Brignais (aux environs du Bois Goyet selon Denis Sauvage[6]), et le second caché dans les hauteurs d'une colline voisine. L'armée royale, n'ayant pas d'éclaireurs efficaces les informant des positions ennemies, attaqua frontalement le groupe de mercenaires visible. Elle subit une forte résistance et fut repoussée deux fois. C'est alors que les Routiers dissimulés sortirent et prirent l'armée royale en tenaille. La victoire fut totale[7].\n\nPlusieurs nobles y trouvèrent la mort, parmi lesquels Jacques de Bourbon et Louis d'Albon, comte de Forez. En outre, beaucoup de seigneurs furent capturés.\nLes Routiers se contentèrent de rançonner des prisonniers, et n'attaquèrent pas Lyon.\nLa défaite de l'armée royale provoqua une nouvelle panique dans le royaume[8]. Cependant, l’unité des mercenaires ne dura pas, et le roi de France organisa des campagnes jusqu'en Espagne et en Hongrie pour s'en débarrasser.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Carte_de_la_bataille_de_Brignais.jpg/960px-Carte_de_la_bataille_de_Brignais.jpg"
+  },
+  {
+    "id": 1098,
+    "titre": "La flotte  de la Hanse attaque Copenhague mais est détruite à Helsingborg par Valdemar Atterdag",
+    "date": 1362,
+    "mois": 4,
+    "zones": [
+      "St Empire",
+      "Scandinavie"
+    ],
+    "type": 2,
+    "description": "Avril : la flotte de la Hanse attaque Copenhague mais est détruite à Helsingborg par Valdemar Atterdag. La Hanse déclare la guerre au Danemark en représailles de la prise de Visby, sur l’île de Gotland en 1361. Le conflit dure jusqu'en 1370",
+    "image": ""
+  },
+  {
+    "id": 1099,
+    "titre": "Guerre entre Pise et Florence",
+    "date": 1362,
+    "mois": 5,
+    "date_fin": 1364,
+    "zones": [
+      "Italie"
+    ],
+    "type": 2,
+    "description": "18 mai : reprise de la guerre entre Pise et Florence. Les Pisans s'emparent de la forteresse de Piétrabona le 5 juin et menacent Pescia (fin en 1364)\nLa situation générale à Pise au milieu du XIVe siècle était critique ; en particulier, les désaccords et les conflits avec Florence se multipliaient, une situation de communication qui reste inchangée à ce jour.\n\nLa guerre entre les deux villes toscanes entraîna la fermeture des voies de communication et l'interruption du commerce vers l'arrière-pays péninsulaire du centre commercial pisan, pourtant essentiel à sa vitalité, Pise étant avant tout un centre de transit. Au plus fort de ces tensions eut lieu la bataille de Cascina, qui se solda par une défaite pour les Pisans. La République de Pise avait engagé pour l'occasion le condottiere Giovanni Acuto ( John Hawkwood ), qui combattit aux côtés d'Hanneken von Baumgarten (Anichino Bongarden).3 000 ou « barbu », cet homme avait récemment traversé le Valdinievole , atteint Prato et était même apparu près de Florence, pour continuer la dévastation et les raids lucratifs dans les régions du Mugello et de Pistoia .\n\nFlorence fut alors défendue par Enrico di Monforte, afin de dissuader la bande pisane de Hawkwood et d'Anichino de poursuivre son action offensive.\nQuelques mois plus tard, Florence a embauché11 000 fantassins et4 000 chevaliers , confiés à Galeotto I Malatesta.\nAu XIVe siècle, la guerre occupe une place centrale dans l’histoire et dans l’identité politique de Florence. Les chroniqueurs florentins présentent la cité comme une puissance née du conflit, destinée à imposer son autorité sur la Toscane. Cette vision repose sur une interprétation idéologique du passé : les Florentins seraient issus de deux peuples guerriers, les Romains et les Fésulans, et leur ville aurait été placée sous la protection de Mars. Ainsi, les guerres menées par Florence apparaissent, dans les récits des auteurs florentins, comme naturelles et nécessaires à la grandeur de la cité.\n\nLe conflit qui oppose Florence à Pise entre 1362 et 1364 illustre parfaitement cette conception. Toutefois, cette guerre ne débute pas directement par des affrontements militaires. Dès 1355, les deux communes s’engagent dans une véritable guerre économique. Lorsque les Pisans imposent une taxe sur les marchandises florentines transitant par leur port, Florence réagit en détournant son commerce vers le port de Talamone et en interdisant le transit des marchandises pisanes sur son territoire. Les chroniqueurs montrent que cette stratégie affaiblit considérablement l’économie de Pise : le port se vide progressivement de ses marchands et la ville connaît une grave crise commerciale. Le conflit révèle ainsi l’apparition d’une nouvelle forme de guerre au XIVe siècle, dans laquelle le contrôle des échanges économiques devient aussi important que les batailles elles-mêmes.\n\nLes sources florentines insistent fortement sur la responsabilité des Pisans dans le déclenchement du conflit. Ceux-ci sont constamment décrits comme rusés, perfides et manipulateurs. Cette image négative permet aux chroniqueurs de présenter Florence comme une cité pacifique, contrainte de prendre les armes pour se défendre. En réalité, la guerre répond aussi aux ambitions territoriales et politiques de Florence, qui cherche à renforcer son influence régionale et à construire un État puissant capable de dominer la Toscane.\n\nLe conflit met également en évidence les profondes transformations de la guerre au XIVe siècle. Les anciennes milices communales laissent progressivement place à des armées professionnelles composées de mercenaires et commandées par des condottieri. Florence fait appel à plusieurs compagnies célèbres, tandis que Pise engage notamment la redoutable Compagnie blanche de John Hawkwood. Ces soldats professionnels constituent une force militaire efficace mais aussi dangereuse. Les chroniqueurs dénoncent fréquemment leur cupidité, leur violence et leur absence de loyauté. Franco Sacchetti souligne notamment que les mercenaires vivent de la guerre alors que les peuples prospèrent grâce à la paix. Le recours massif aux compagnies révèle donc une contradiction : les États italiens ont besoin de ces soldats pour assurer leur puissance militaire, mais leur présence menace l’équilibre politique et économique des cités.\n\nLa guerre de Pise montre enfin comment Florence construit progressivement une idéologie politique fondée sur la Libertas. Les auteurs florentins présentent la cité comme la défenseuse de la liberté contre les tyrannies et les ennemis de la paix. Pourtant, cette image masque une réalité plus complexe : Florence mène des guerres de conquête et cherche à imposer son hégémonie sur la Toscane. Après la victoire de Cascina en 1364 et le traité favorable qui suit, Florence apparaît renforcée économiquement et politiquement. Les chroniqueurs transforment alors ce succès militaire en preuve de la mission historique de la cité.\nAinsi, les récits consacrés à la guerre entre Florence et Pise ne se limitent pas à raconter des événements militaires. Ils participent à la construction d’une mémoire officielle destinée à glorifier Florence, à justifier son expansion territoriale et à faire de la cité le symbole de la liberté et de la puissance politique en Italie.",
+    "image": "",
+    "sources": "https://books.openedition.org/pup/6072"
+  },
+  {
+    "id": 1100,
+    "titre": "Décès de Louis de Terente",
+    "date": 1362,
+    "mois": 5,
+    "zones": [
+      "Naples"
+    ],
+    "type": 3,
+    "description": "Louis de Tarente, ayant pris froid en prenant un bain, tomba malade. Son état empira durant un mois et il mourut le 25 mai 1362 au décès de Louis de Tarente[8], Jeanne de Naples, résolue à régner par elle-même, cache sa mort pendant plusieurs jours\nLa mort de Louis de Tarente (1320-1362), mari autoritaire et brutal, rendait à la reine un pouvoir dont elle n'avait jamais pu disposer. Ce décès faisait disparaître un élément de discorde. Pendant trois ans, la reine allait prendre une série de mesures qui la rendirent populaire : pardon accordé à Raymond des Baux 20 mars 1363, remplacement du sénéchal de Provence Roger de San-Severino par Fouques d'Agoult ainsi que divers édits pour éviter les désordres.\n\nLe 14 décembre 1362, elle se maria pour la troisième fois avec un prince d'une bonne dizaine d'années plus jeune qu'elle, Jacques IV de Majorque, (1336 † 1375), roi titulaire de Majorque et prince titulaire d'Achaïe, mais n'eut pas d'enfants. Malheureusement ce troisième époux, qui avait été maintenu en prison pendant quatorze ans dans une cage de fer par son oncle Pierre IV, était pratiquement fou[28]. À toutes les tares physiques qui accablaient le pauvre prince, s'ajoutaient des prétentions à être associé au gouvernement[29]. Devant l'opposition résolue de la reine, Jacques IV finit par s'éloigner et partit pour l'Espagne soutenir Henri de Trastamare contre Pierre le Cruel, roi de Castille. Emprisonné puis libéré il finit par mourir en février 1375",
+    "image": ""
+  },
+  {
+    "id": 1101,
+    "titre": "Edouard de Woodstock  prince d'Aquitaine",
+    "date": 1362,
+    "mois": 7,
+    "date_fin": 1371,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "description": "19 juillet : le roi d'Angleterre Édouard III érige la Guyenne en principauté d'Aquitaine et nomme à sa tête le prince de Galles, son fils Édouard « le Prince Noir »\nEn 1360, le traité de Brétigny accorde au roi Édouard III d'Angleterre des terres en plus de son duché d'Aquitaine « traditionnel » qui s'étend approximativement de Saintes à Bayonne, en passant par sa capitale, Bordeaux : le Quercy, le Périgord, l'Angoumois, le nord de la Saintonge, le Limousin, le Rouergue, la Bigorre, le comté d'Armagnac, l'Agenais et le Poitou. Ces territoires — cédés par la France sous la contrainte lors de la captivité du roi Jean II le Bon à l'issue du second traité de Londres (1359), qui aggrave encore les clauses du premier traité de Londres (1358) — constituent une principauté (1362) qu'il gouverne sur place jusqu'au début de 1371. Édouard est nommé prince d'Aquitaine par son père le 19 juillet 1362, et le reste jusqu'à son abdication le 5 octobre 1372.\nÀ Bordeaux, le luxe et l'extravagance règnent à leur cour[réf. nécessaire]. Les taxes qu'il impose sur le territoire de sa principauté pour les financer étant considérables, une partie de la noblesse et de la bourgeoisie commencent à montrer des signes de mécontentement ; l'un des plus puissants seigneurs de la région, le comte d'Armagnac, fidèle à la maison capétienne, prend la tête d'une révolte contre l'héritier anglais.",
+    "image": ""
+  },
+  {
+    "id": 1102,
+    "titre": "Prise d’Andrinople  par les Ottomans",
+    "date": 1362,
+    "mois": 7,
+    "zones": [
+      "Byzance",
+      "Ottomans"
+    ],
+    "type": 2,
+    "description": "Juillet : prise d’Andrinople (Edirne) par les Ottomans[10]. Le sultan ottoman Murat Ier installe sa capitale à Andrinople, en Europe. Après la prise de Philippopoli (Plovdiv), la Thrace presque entière est entre ses mains. Des milliers de captifs sont faits (loi du pentchik : 1/5e des rançons des prisonniers reviennent au trésor).",
+    "image": ""
+  },
+  {
+    "id": 1103,
+    "titre": "Bataille des Eaux Bleues",
+    "date": 1362,
+    "mois": 10,
+    "zones": [
+      "Pologne",
+      "Russie"
+    ],
+    "type": 2,
+    "description": "victoire du prince lituanien Olgierd sur la Horde d'or à la bataille des Eaux Bleues (sur la rivière Syni Vody, aujourd'hui Synioukha, affluent du Boug méridional). Kiev et la Podolie passent à la Lituanie.\nLa bataille des Eaux-Bleues (lituanien : Mūšis prie Mėlynųjų Vandenų, biélorusse : Бітва на Сініх Водах, ukrainien : Битва на Синіх Водах) est une bataille livrée lors de l'automne 1362 ou 1363 sur les rives de la rivière Sinioukha, affluent de gauche du Boug méridional, entre les armées du grand-duché de Lituanie et de la Horde d'or. Les Lituaniens ont remporté une victoire décisive et achevé leur conquête de la principauté de Kiev.\nAprès la mort de son souverain, le khan Berdi Beg, en 1359, la Horde d'Or connaît une série de conflits de succession et de guerres, qui dure deux décennies (1359-1381). La Horde commence à se scinder dans des entités distinctes (ulus). Profitant de ces troubles internes, le grand-duc Olgierd de Lituanie organise une campagne dans les territoires tatares[1]. Son but est de sécuriser et d'étendre au sud les territoires du grand-duché de Lituanie, en particulier de la principauté de Kiev. Kiev était déjà passée sous un semi-contrôle lituanien après la bataille de la rivière Irpin au début des années 1320, mais payait encore un tribut à la Horde. \nEn 1362 ou 1363, Olgierd s'avance entre le Dniepr et Boug méridional[3]. Il s'empare tout d'abord de ce qui reste des territoires de la principauté de Tchernigov, la plupart, y compris la capitale Briansk, étant tombés sous le contrôle lituanien autour de 1357-1358. Les Lituaniens attaquent ensuite Korchov (Коршов), une forteresse inconnue située dans la partie haute de la Sosna, affluent du Don[4], et se seraient aussi emparés des territoires de l'ancienne principauté de Pereïaslavl. Cette zone appartenait à l'ulus de Crimée, engagé dans une campagne contre Sarai Berke, qui ne peut pas opposer une résistance efficace.\n\nEn automne, l'armée lituanienne traverse le Don en Podolie. Trois beys tatars de Podolie rassemblent une armée pour résister à l'invasion[4]. Il est admis aujourd'hui que les armées se sont rencontrées à Torhovytsia (ukrainien : Торговиці). À l'époque, la ville était connue sous le nom turc de Yabgu, ou ville du vice-roi, ou de Sinie Vody (russe : Синие Воды, littéralement Eaux Bleues) en russe[4].\n\nLa seule courte description de la bataille qui subsiste est celle de Mathias Strykowski, dans un texte peu fiable publié en 1582. Selon Strykowski, Olgierd a organisé son armée en six groupes, disposés en demi-cercle[4]. Les Tatars commencent par cribler de flèches les flancs de la formation lituanienne. Ce harcèlement a peu de résultats, et les Lituaniens et les Ruthènes, armés de lances et d'épées, s'avancent et brisent les lignes de l'armée tatare. Les fils de Karijotas, avec des unités de Navahroudak, attaquent les flancs tatars à l'arbalète. Les Tatars ne peuvent maintenir leur formation et battent en retraite dans le désordre[4]. Olgierd obtient une victoire décisive. \nCette victoire fait passer la ville de Kiev et une grande partie de l'actuelle Ukraine, y compris les zones faiblement peuplées de Podolie et de Dykra, sous le contrôle du grand-duché de Lituanie, qui continue ainsi de s'étendre. Il a aussi gagné un accès à la mer Noire. Olgierd laisse son fils Vladimir à Kiev[3]. Après la prise de Kiev, la Lituanie devient un voisin direct et rival de la grande-principauté de Moscou[5]. La Podolie est confiée à Aleksandr, Iouri, Konstantin, et Fedir – fils de Karijotas, et neveux d'Olgierd, commandants lors de la bataille. \nLa bataille apparaît relativement peu dans les écrits des historiens, en raison de l'absence de sources historiques[6]. Elle est mentionnée de façon fragmentaire dans les chroniques ruthènes et russes. La source la plus riche est l'Histoire de Podolie, qui a été incorporée dans les Chroniques lituaniennes (en). Elle a été écrite par les Lituaniens aux alentours de la guerre civile de 1432-38 (en), lorsque la Lituanie disputait le contrôle de la Podolie à la Pologne. Il s'agit d'un texte politique, écrit pour soutenir les prétentions lituaniennes sur la Podolie et exalter les vertus des fils de Karijotas, plutôt que pour donner un compte rendu précis de la campagne militaire[7]. \n\nLes historiens slaves ont eu tendance à minimiser l'importance de la bataille[6]. L'historien Tomas Baranauskas prétend que les historiens russes ont choisi de mettre l'accent sur leur victoire contre les Tatars en 1380 à la bataille de Koulikovo, tandis que les Polonais ne veulent pas donner des arguments aux Lituaniens dans la revendication de la Podolie[7]. Jan Długosz, par exemple, ne fait pas mention de la bataille[8].\n\nL'intérêt dans la bataille a cependant augmenté dans la période récente. L'historien polonais Stefan Maria Kuczyński (pl) lui a consacré une étude, Sine Wody en 1935, le lituanien Romas Batūra (lt) publié Lietuva tautų kovoje prieš Aukso ordą. Nuo Batu antplūdžio iki mūšio prie Mėlynųjų Vandenų en 1975, et l'Ukrainien Felix Shabuldo l'a abordée dans plusieurs articles[8]. Les historiens ukrainiens tiennent deux conférences à Kropyvnytsky en 1995 et 1997. Ces articles ont été regroupés dans un recueil de l'Institut de l'histoire de l'Ukraine[9]. En 2012, pour le 650e anniversaire de la bataille, une conférence a été organisée par l'université Vytautas-Magnus de Lituanie",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Stamp_2012_Bytva_Syni_Vody_%281%29.jpg",
+    "legende": "Timbre postal ukrainien imprimé en 2012, dédié à la bataille des Eaux-Bleues.",
+    "sources": "https://fr.wikipedia.org/wiki/Bataille_des_Eaux-Bleues"
+  },
+  {
+    "id": 1104,
+    "titre": "Le dauphin Charles le Sage  nommé  « lieutenant général en toutes les parties de la langue d'oyl\"",
+    "date": 1362,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "17 décembre : le dauphin Charles le Sage est nommé par son père « lieutenant général en toutes les parties de la langue d'oyl »[14]. Le dauphin quitte le palais de la Cité pour s’installer à l’hôtel Saint-Pol sur la rive droite.",
+    "image": ""
+  },
+  {
+    "id": 1105,
+    "titre": "Dimitri Donskoï, (12 ans) grand-prince de Moscou",
+    "date": 1362,
+    "zones": [
+      "Russie"
+    ],
+    "type": 2,
+    "description": "Dimitri Donskoï, âgé de 12 ans, se fait investir du titre de grand-prince de Moscou par la Horde d'or au détriment de Dimitri III Constantinovitch (fin en 1389)[15]. L'État russe commence à se construire autour de la principauté de Moscou sous son règne. Il gouverne avec l’appui du métropolite Alexis et des boyards moscovites. La règle de succession directe de père en fils s’impose dans la Russie du nord-est. Sous le règne de Dimitri IV, la principauté s’agrandit considérablement (Kostroma, Galitch, Ouglitch, Dmitrov, Starodoub, Medyne et Kalouga).",
+    "image": ""
+  },
+  {
+    "id": 1106,
+    "titre": "Vierge à l'Enfant avec des saints. Luca di Tomme",
+    "date": 1362,
+    "zones": [
+      "Art"
+    ],
+    "type": 4,
+    "description": "Luca di Tommè (ou Luca Thome ) (vers 1330-1389) était un peintre italien actif à Sienne entre 1356 et 1389. Il travailla dans le style établi par les peintres siennois précédents tels que Duccio , Simone Martini , Pietro Lorenzetti et Ambrogio Lorenzetti . Plus de cinquante œuvres lui sont attribuées. Cette production abondante contribua à la pérennité du style décoratif siennois jusqu'au XVe siècle.\nEn 1389, il travailla avec Bartolo di Fredi et Andrea di Bartolo à une importante commande de retable pour l'une des chapelles de la cathédrale de Sienne. [ 1 ] Il réalisa ses images à la tempera sur panneaux de bois, selon une technique typique du XIVe siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Luca_di_Tomme._Virgin_and_Child_with_Saints.1362.Siena%2CPinacoteca.jpg",
+    "legende": "Vierge à l'Enfant avec des saints. Luca di Tomme . 1362."
   },
   {
     "id": 142,
@@ -12902,6 +13031,18 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Seguace_genovese_di_barnaba_da_modena%2C_madonna_col_bambino_tra_i_ss._giovanni_battista_e_michele_arcangelo%2C_1390_ca._01.jpg/1280px-Seguace_genovese_di_barnaba_da_modena%2C_madonna_col_bambino_tra_i_ss._giovanni_battista_e_michele_arcangelo%2C_1390_ca._01.jpg",
     "legende": "La Vierge et l'Enfant entourés de saint Jean Baptiste et saint Michel, musée du Petit Palais (Avignon)[",
     "sources": "https://fr.wikipedia.org/wiki/Barnaba_da_Modena"
+  },
+  {
+    "id": 1107,
+    "titre": "Luca di Tommè  Vierge à l'Enfant St Nicolas et St Paul",
+    "date": 1370,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Luca di Tommè (ou Luca Thome ) (vers 1330-1389) était un peintre italien actif à Sienne entre 1356 et 1389. Il travailla dans le style établi par les peintres siennois précédents tels que Duccio , Simone Martini , Pietro Lorenzetti et Ambrogio Lorenzetti . Plus de cinquante œuvres lui sont attribuées. Cette production abondante contribua à la pérennité du style décoratif siennois jusqu'au XVe siècle.\nEn 1389, il travailla avec Bartolo di Fredi et Andrea di Bartolo à une importante commande de retable pour l'une des chapelles de la cathédrale de Sienne. [ 1 ] Il réalisa ses images à la tempera sur panneaux de bois, selon une technique typique du XIVe siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/WLA_lacma_Luca_di_Tomme_Madonna_and_Child.jpg/960px-WLA_lacma_Luca_di_Tomme_Madonna_and_Child.jpg",
+    "legende": "Tableau de Luca di Tommè représentant la Vierge à l'Enfant , tempera sur panneau"
   },
   {
     "id": 452,
