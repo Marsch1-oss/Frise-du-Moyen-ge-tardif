@@ -153,6 +153,13 @@
           <input type="text" id="f-titre" placeholder="ex. Peste noire en Europe">
         </div>
       </div>
+      
+      <div class="field-row single">
+        <div class="field">
+          <label>Série / Fil rouge <small>(optionnel)</small></label>
+          <input type="text" id="f-serie" placeholder="ex. Guerre de Cent Ans">
+        </div>
+      </div>
 
       <div class="field" style="margin-bottom:1rem">
         <label>Zones géographiques <span class="req">*</span></label>
@@ -263,18 +270,15 @@
 
 <script>
 const ZONES = [
-  /* Zones géographiques */
   'France', 'Angleterre', 'St Empire',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
   'Afrique', 'Amerique', 'Monde',
-  /* Thèmes */
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
 ];
 
-/* Groupes pour l'affichage dans l'admin */
 const ZONE_GROUPS = [
   { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'] },
   { label: 'Europe du Nord',      zones: ['Scandinavie'] },
@@ -330,16 +334,12 @@ function validateEvents() {
 
 function initZones() {
   var grid = document.getElementById('zones-grid');
-
-  /* Construction par groupes avec titres */
   ZONE_GROUPS.forEach(function(group) {
-    /* Titre de groupe */
     var sep = document.createElement('div');
     sep.className = 'zones-group-sep';
     sep.textContent = group.label;
     grid.appendChild(sep);
 
-    /* Chips de la zone */
     var groupWrap = document.createElement('div');
     groupWrap.className = 'zones-group-wrap';
 
@@ -398,8 +398,11 @@ function readForm() {
   var fVideoEl = document.getElementById('f-video');
   var rawVideo = fVideoEl ? fVideoEl.value.trim() : '';
   var isRegne  = !!(document.getElementById('f-regne') && document.getElementById('f-regne').checked);
+  
+  var serie = document.getElementById('f-serie').value.trim(); // AJOUT SERIE
 
   var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
+  if (serie) evt.serie = serie; // AJOUT SERIE
   if (mois)                    evt.mois     = mois;
   if (dateFin && dateFin > date) evt.date_fin = dateFin;
   if (moisFin && dateFin)       evt.mois_fin = moisFin;
@@ -423,6 +426,7 @@ function nextId() {
 function fillForm(evt) {
   editingId = evt.id;
   document.getElementById('f-titre').value    = evt.titre    || '';
+  document.getElementById('f-serie').value    = evt.serie    || ''; // AJOUT SERIE
   document.getElementById('f-date').value     = evt.date     || '';
   document.getElementById('f-mois').value     = evt.mois     || '';
   document.getElementById('f-date-fin').value = evt.date_fin || '';
@@ -453,7 +457,7 @@ function fillForm(evt) {
 function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
-  ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
+  ['f-titre','f-serie','f-date','f-mois','f-date-fin','f-mois-fin', // AJOUT f-serie
    'f-desc','f-image','f-legende','f-video','f-sources'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
@@ -462,7 +466,7 @@ function resetForm() {
     updateZoneTag(inp.closest('.zone-tag'), false, inp.value);
   });
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
-    var isDefault = parseInt(lbl.dataset.val) === 2;  /* Niveau 2 par défaut */
+    var isDefault = parseInt(lbl.dataset.val) === 2;
     lbl.classList.toggle('selected', isDefault);
     lbl.querySelector('input').checked = isDefault;
   });
@@ -518,11 +522,15 @@ function renderList() {
     var zonesHtml = (evt.zones || []).map(function(z) {
       return '<span class="ec-zone" style="background:' + (COLORS[z] || '#888') + '">' + z + '</span>';
     }).join('');
+    
+    // Affichage visuel de la série dans la liste
+    var serieHtml = evt.serie ? '<span class="ec-zone" style="background:var(--red);margin-left:5px;">🏷️ ' + evt.serie + '</span>' : '';
+    
     card.innerHTML =
       '<button class="ec-del" title="Supprimer" onclick="quickDelete(' + evt.id + ', event)">&times;</button>'
       + '<div class="ec-header">'
       + '<span class="ec-date">' + evt.date + (evt.date_fin ? '–' + evt.date_fin : '') + '</span>'
-      + '<span class="ec-title">' + evt.titre + '</span>'
+      + '<span class="ec-title">' + evt.titre + serieHtml + '</span>'
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
       + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span></div>';
@@ -548,6 +556,7 @@ function updateJSON() {
     if (e.mois_fin) o.mois_fin = e.mois_fin;
     o.zones = e.zones;
     o.type  = e.type || 1;
+    if (e.serie)       o.serie       = e.serie; // AJOUT SERIE
     if (e.description) o.description = e.description;
     o.image = e.image || '';
     if (e.legende) o.legende = e.legende;
