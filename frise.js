@@ -988,10 +988,10 @@ function openModal(evt, zone) {
     descEl.appendChild(p);
   }
 
-  /* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
-  if (evt.sequence) {
+/* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
+  if (evt.serie) {
     var sequenceEvents = allEvents.filter(function(e) {
-      return e.sequence === evt.sequence;
+      return e.serie === evt.serie;
     }).sort(function(a, b) {
       return a.date - b.date;
     });
@@ -1002,7 +1002,7 @@ function openModal(evt, zone) {
       
       var seqTitle = document.createElement('h4');
       seqTitle.className = 'sequence-title';
-      seqTitle.textContent = 'Épisode de : ' + evt.sequence;
+      seqTitle.textContent = 'Épisode de : ' + evt.serie;
       seqContainer.appendChild(seqTitle);
 
       var seqList = document.createElement('ul');
@@ -1024,6 +1024,7 @@ function openModal(evt, zone) {
       descEl.appendChild(seqContainer);
     }
   }
+  /* --- FIN DU BLOC SÉQUENCES --- */
   /* --- FIN DU BLOC SÉQUENCES --- */
 
   document.getElementById('modal-sources').textContent = evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
