@@ -19,6 +19,61 @@
     html { font-size: 15px; }
     body { background: var(--parchment-dk); color: var(--ink); font-family: 'Crimson Pro', Georgia, serif; min-height: 100vh; line-height: 1.6; }
 
+    /* ---- Séquences d'événements longs ---- */
+.sequence-container {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(139, 26, 26, 0.04); /* Un fond très légèrement rouge */
+  border-left: 3px solid var(--red);
+  border-radius: var(--radius);
+}
+
+.sequence-title {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+
+.sequence-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  font-family: 'Crimson Pro', serif;
+}
+
+.sequence-list li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.sequence-list li::before {
+  content: '♦';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  top: 2px;
+}
+
+.sequence-list li.current-step {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sequence-list a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border-dark);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.sequence-list a:hover {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+}
+
     /* ── En-tête ── */
     header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); }
     .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.9rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.2rem; }
