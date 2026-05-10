@@ -2160,11 +2160,13 @@ function updateMusicBtn() {
 
 document.addEventListener('DOMContentLoaded', function() {
   initActiveZones();
+  
   document.getElementById('modal-overlay').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
+  
   document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeLightbox(); closeZonesModal(); }
+    if (e.key === 'Escape') { closeLightbox(); closeZonesModal(); }
     if (e.key === 'Escape') {
       closeModal();
       if (searchTerm) clearSearch();
@@ -2173,13 +2175,16 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'ArrowLeft')  navigateDecade(-1);
       if (e.key === 'ArrowRight') navigateDecade(1);
     }
-    function openLightboxById(id) {
+  });
+  
+  loadEvents();
+});
+
+/* --- NOUVELLE FONCTION DES ÉVÉNEMENTS LONGS --- */
+function openLightboxById(id) {
   var evt = allEvents.find(function(e) { return e.id === id; });
   if (evt) {
-    // Si votre fonction pour ouvrir la fenêtre s'appelle autrement (ex: openModal), modifiez le nom ci-dessous
-    openLightbox(evt); 
+    // On utilise ici openModal, qui est votre vraie fonction d'ouverture, avec la zone de l'événement
+    openModal(evt, evt.zones[0]); 
   }
 }
-
-loadEvents();
-});
