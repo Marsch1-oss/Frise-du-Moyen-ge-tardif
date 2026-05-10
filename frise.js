@@ -1161,6 +1161,38 @@ function closeLightbox() {
 
 /* ── Modale ──────────────────────────────────────────────────────────*/
 function openModal(evt, zone) {
+  // (À insérer là où vous construisez le code HTML de votre événement)
+
+if (evt.sequence) {
+  // Récupérer tous les événements de la même séquence, triés par date
+  var sequenceEvents = allEvents.filter(function(e) {
+    return e.sequence === evt.sequence;
+  }).sort(function(a, b) {
+    return a.date - b.date;
+  });
+
+  // Ne l'afficher que s'il y a plus d'une étape
+  if (sequenceEvents.length > 1) {
+    html += '<div class="sequence-container">';
+    html += '<h4 class="sequence-title">Épisode de : ' + evt.sequence + '</h4>';
+    html += '<ul class="sequence-list">';
+    
+    sequenceEvents.forEach(function(seqEvt) {
+      var isCurrent = (seqEvt.id === evt.id);
+      html += '<li class="' + (isCurrent ? 'current-step' : '') + '">';
+      
+      if (isCurrent) {
+        html += '<span>' + seqEvt.date + ' — ' + seqEvt.titre + ' (Actuel)</span>';
+      } else {
+        // Lien cliquable vers les autres étapes
+        html += '<a href="#" onclick="openLightboxById(' + seqEvt.id + '); return false;">' + seqEvt.date + ' — ' + seqEvt.titre + '</a>';
+      }
+      
+      html += '</li>';
+    });
+    
+    html += '</ul></div>';
+  }
   var col = COLORS[zone] || COLORS['France'];
   document.getElementById('modal-zone').textContent      = zone;
   document.getElementById('modal-zone').style.background = col.light;
@@ -2141,6 +2173,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'ArrowLeft')  navigateDecade(-1);
       if (e.key === 'ArrowRight') navigateDecade(1);
     }
+    function openLightboxById(id) {
+  var evt = allEvents.find(function(e) { return e.id === id; });
+  if (evt) {
+    // Remplacez 'openLightbox' par le nom exact de votre fonction d'ouverture de modale
+    openLightbox(evt); 
+  }
   });
   loadEvents();
 });
