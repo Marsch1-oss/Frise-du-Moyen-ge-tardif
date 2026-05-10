@@ -1161,38 +1161,6 @@ function closeLightbox() {
 
 /* ── Modale ──────────────────────────────────────────────────────────*/
 function openModal(evt, zone) {
-  // (À insérer là où vous construisez le code HTML de votre événement)
-
-if (evt.sequence) {
-  // Récupérer tous les événements de la même séquence, triés par date
-  var sequenceEvents = allEvents.filter(function(e) {
-    return e.sequence === evt.sequence;
-  }).sort(function(a, b) {
-    return a.date - b.date;
-  });
-
-  // Ne l'afficher que s'il y a plus d'une étape
-  if (sequenceEvents.length > 1) {
-    html += '<div class="sequence-container">';
-    html += '<h4 class="sequence-title">Épisode de : ' + evt.sequence + '</h4>';
-    html += '<ul class="sequence-list">';
-    
-    sequenceEvents.forEach(function(seqEvt) {
-      var isCurrent = (seqEvt.id === evt.id);
-      html += '<li class="' + (isCurrent ? 'current-step' : '') + '">';
-      
-      if (isCurrent) {
-        html += '<span>' + seqEvt.date + ' — ' + seqEvt.titre + ' (Actuel)</span>';
-      } else {
-        // Lien cliquable vers les autres étapes
-        html += '<a href="#" onclick="openLightboxById(' + seqEvt.id + '); return false;">' + seqEvt.date + ' — ' + seqEvt.titre + '</a>';
-      }
-      
-      html += '</li>';
-    });
-    
-    html += '</ul></div>';
-  }
   var col = COLORS[zone] || COLORS['France'];
   document.getElementById('modal-zone').textContent      = zone;
   document.getElementById('modal-zone').style.background = col.light;
@@ -1230,6 +1198,44 @@ if (evt.sequence) {
     descEl.appendChild(p);
   }
 
+  /* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
+  if (evt.sequence) {
+    var sequenceEvents = allEvents.filter(function(e) {
+      return e.sequence === evt.sequence;
+    }).sort(function(a, b) {
+      return a.date - b.date;
+    });
+
+    if (sequenceEvents.length > 1) {
+      var seqContainer = document.createElement('div');
+      seqContainer.className = 'sequence-container';
+      
+      var seqTitle = document.createElement('h4');
+      seqTitle.className = 'sequence-title';
+      seqTitle.textContent = 'Épisode de : ' + evt.sequence;
+      seqContainer.appendChild(seqTitle);
+
+      var seqList = document.createElement('ul');
+      seqList.className = 'sequence-list';
+
+      sequenceEvents.forEach(function(seqEvt) {
+        var li = document.createElement('li');
+        var isCurrent = (seqEvt.id === evt.id);
+        if (isCurrent) {
+          li.className = 'current-step';
+          li.innerHTML = '<span>' + seqEvt.date + ' — ' + seqEvt.titre + ' (Actuel)</span>';
+        } else {
+          li.innerHTML = '<a href="#" onclick="openLightboxById(' + seqEvt.id + '); return false;">' + seqEvt.date + ' — ' + seqEvt.titre + '</a>';
+        }
+        seqList.appendChild(li);
+      });
+
+      seqContainer.appendChild(seqList);
+      descEl.appendChild(seqContainer);
+    }
+  }
+  /* --- FIN DU BLOC SÉQUENCES --- */
+
   document.getElementById('modal-sources').textContent =
     evt.sources ? '\uD83D\uDCD6 ' + evt.sources : '';
 
@@ -1244,7 +1250,6 @@ if (evt.sequence) {
       captionEl.textContent  = evt.legende || '';
       captionEl.style.display = evt.legende ? 'block' : 'none';
     }
-    /* Bouton loupe */
     var zoomBtn = imgWrap.querySelector('.img-zoom-btn');
     if (!zoomBtn) {
       zoomBtn = document.createElement('button');
@@ -1256,7 +1261,6 @@ if (evt.sequence) {
     zoomBtn.onclick = (function(src, cap) {
       return function(e) { e.stopPropagation(); openLightbox(src, cap); };
     })(evt.image, evt.legende || evt.titre);
-    /* Clic sur l'image aussi */
     imgEl.style.cursor = 'zoom-in';
     imgEl.onclick = (function(src, cap) {
       return function() { openLightbox(src, cap); };
@@ -1269,7 +1273,6 @@ if (evt.sequence) {
     imgEl.style.cursor = '';
   }
 
-  /* ── Vidéo YouTube ── */
   var videoWrap = document.getElementById('modal-video-wrap');
   if (videoWrap) {
     var ytId = extractYouTubeId(evt.video || '');
@@ -1288,14 +1291,6 @@ if (evt.sequence) {
 
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-  /* Arrête la vidéo YouTube en vidant l'iframe */
-  var vw = document.getElementById('modal-video-wrap');
-  if (vw) { vw.innerHTML = ''; vw.style.display = 'none'; }
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────*/
@@ -2184,7 +2179,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function openLightboxById(id) {
   var evt = allEvents.find(function(e) { return e.id === id; });
   if (evt) {
-    // On utilise ici openModal, qui est votre vraie fonction d'ouverture, avec la zone de l'événement
     openModal(evt, evt.zones[0]); 
   }
-};
+}
