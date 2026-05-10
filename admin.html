@@ -473,9 +473,14 @@ function resetForm() {
   document.getElementById('form-title').textContent = 'Nouvel événement';
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
+   });document.getElementById('ev-sequence').value = '';
 }
 
-function saveEvent() {
+function saveEvent() 
+{
+  ev.sequence = document.getElementById('ev-sequence').value.trim();
+  }
+{
   var evt = readForm();
   if (!evt) return;
   if (editingId !== null) {
@@ -490,6 +495,10 @@ function saveEvent() {
   resetForm();
   updateJSON();
 }
+
+  function saveEvent() {
+    document.getElementById('ev-sequence').value = ev.sequence || '';
+    }
 
 function deleteEvent() {
   if (editingId === null) return;
