@@ -2176,8 +2176,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function openLightboxById(id) {
   var evt = allEvents.find(function(e) { return e.id === id; });
   if (evt) {
-    // Remplacez 'openLightbox' par le nom exact de votre fonction d'ouverture de modale
+    // Si votre fonction pour ouvrir la fenêtre s'appelle autrement (ex: openModal), modifiez le nom ci-dessous
     openLightbox(evt); 
   }
-  loadEvents();
+}
+
+loadEvents();
 });
