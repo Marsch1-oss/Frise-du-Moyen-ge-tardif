@@ -3,7 +3,9 @@
 <head>
   <div class="field-row">
   <label for="ev-sequence">Séquence (Événement long)</label>
-  <input type="text" id="ev-sequence" placeholder="Ex: Guerre de Cent Ans, Succession de Bretagne...">
+  <input type="text" id="ev-sequence" list="sequence-suggestions" placeholder="Ex: Guerre de Cent Ans...">
+  
+  <datalist id="sequence-suggestions"></datalist>
 </div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -266,6 +268,30 @@
 <div id="toast"></div>
 
 <script>
+  function updateSequenceDatalist() {
+  var datalist = document.getElementById('sequence-suggestions');
+  if (!datalist) return;
+
+  // 1. Extraire toutes les séquences uniques (en ignorant les vides)
+  var sequences = [];
+  events.forEach(function(ev) {
+    if (ev.sequence && ev.sequence.trim() !== "") {
+      if (sequences.indexOf(ev.sequence.trim()) === -1) {
+        sequences.push(ev.sequence.trim());
+      }
+    }
+  });
+
+  // 2. Trier par ordre alphabétique
+  sequences.sort();
+
+  // 3. Mettre à jour le HTML du datalist
+  var html = "";
+  sequences.forEach(function(s) {
+    html += '<option value="' + s + '">';
+  });
+  datalist.innerHTML = html;
+}
 const ZONES = [
   /* Zones géographiques */
   'France', 'Angleterre', 'St Empire',
