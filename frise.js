@@ -1821,6 +1821,14 @@ function goToMatch(idx) {
     if (cent !== currentCentury) { currentCentury = cent; renderLevel(2, cent); }
   }
 
+  function openLightboxById(id) {
+  var evt = allEvents.find(function(e) { return e.id === id; });
+  if (evt) {
+    // Remplacez 'openLightbox' par le nom exact de votre fonction d'ouverture de modale
+    openLightbox(evt); 
+  }
+}
+
   /* Met à jour le compteur */
   applySearch();
 
