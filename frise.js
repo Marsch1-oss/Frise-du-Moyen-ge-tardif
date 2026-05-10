@@ -2187,4 +2187,4 @@ function openLightboxById(id) {
     // On utilise ici openModal, qui est votre vraie fonction d'ouverture, avec la zone de l'événement
     openModal(evt, evt.zones[0]); 
   }
-}
+};
