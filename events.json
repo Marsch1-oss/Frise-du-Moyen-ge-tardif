@@ -13904,6 +13904,20 @@
     "image": ""
   },
   {
+    "id": 1223,
+    "titre": "Charles V organise une armée moderne",
+    "date": 1364,
+    "mois": 1,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "serie": "Guerre de Cent ans",
+    "description": "Charles V, qui prépare la reconquête, a mis à profit les années de répit obtenues en profitant du conflit castillan : ses finances sont redressées grâce à l’instauration d’un impôt permanent. Il faut à présent mettre sur pied l’armée de la reconquête.\n\nLa lutte contre les Grandes Compagnies permet de mettre au point une nouvelle organisation des troupes et de repérer des capitaines fiables et fidèles, comme Bertrand Du Guesclin et son cousin Olivier de Mauny, nommé chambellan par le roi, ou Olivier de Clisson. On organise autour d’eux de petites armées composées de routiers d'une centaine d'hommes[118]. On solde ainsi une armée permanente de 5 000 à 6 000 hommes, dont on est sûr qu’ils ne deviendront pas des pillards pendant les périodes de trêve. Ces effectifs sont largement suffisants pour mener la guerre faite de coups de main et de sièges nécessaires pour mettre au pas les Grandes Compagnies. Les effectifs sont composés de volontaires français (souvent de petite noblesse) et d'arbalétriers italiens[118]. Il faut combler le retard pris sur les Anglais en archerie. Charles V encourage les concours de tir à l’arc comme l’ont fait les rois d’Angleterre, et engage de nombreux arbalétriers entre 1364 et 1369[119].\n\nCette armée peut être levée en janvier 1364 grâce à l'impôt consenti par les états généraux réunis à Amiens. Menée par Bertrand du Guesclin, elle remporte immédiatement sa première grande victoire à Cocherel. Son efficacité doit être prouvée pour justifier son financement par des impôts : le nombre de combattants et la qualité de leur équipement sont contrôlés par des fonctionnaires, et la solde n’est versée qu'une fois par mois, lors de la montre, uniquement si l’équipement est satisfaisant. Il faut que ces armées soient extrêmement mobiles et très réactives : elles sont montées bien que combattant à pied. Elles sont informées par des chevaucheurs et messagers qui font la liaison entre le roi et le front.\nPour prendre rapidement les forteresses, une artillerie importante est formée : en 1375, le château de Geoffroy de Harcourt capitule sous le feu de 40 canons",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Olivier_de_Clisson_tomb.jpg/960px-Olivier_de_Clisson_tomb.jpg",
+    "legende": "Détail du tombeau d'Olivier de Clisson (château de Josselin)."
+  },
+  {
     "id": 1163,
     "titre": "Croisade du roi de Chypre Pierre Ier contre Alexandrie",
     "date": 1365,
@@ -14438,8 +14452,9 @@
       "Portugal"
     ],
     "type": 1,
-    "description": "Ferdinand est le second enfant du roi Pierre Ier (1320-1367), dit Pierre le Justicier, roi de Portugal (1357-1367), et de Constance de Castille, morte trois semaines après sa naissance. \nIl devient roi en 1367, à l'âge de 21 ans, après la mort de son père, Pierre Ier. Il hérite d'un royaume en paix et avec un trésor public bien fourni [3].\n\nLe règne de Ferdinand Ier est marqué par la politique étrangère. Quand Pierre Ier de Castille, dit Pierre le Cruel meurt en 1369 sans héritier mâle direct, Ferdinand Ier, en tant qu'arrière-petit–fils de Sanche IV par la ligne féminine, se déclare héritier du trône de Castille. Les autres candidats à la succession sont les rois d'Aragon et de Navarre ainsi que Jean de Gand, duc de Lancastre marié avec Constance, la fille aînée de Pierre le Cruel. Entretemps, Henri de Trastamare, frère bâtard de Pierre, s'est déclaré roi. Après deux campagnes militaires sans succès, les parties acceptent l'intervention du pape Grégoire XI.",
-    "image": "",
+    "description": "Ferdinand est le second enfant du roi Pierre Ier (1320-1367), dit Pierre le Justicier, roi de Portugal (1357-1367), et de Constance de Castille, morte trois semaines après sa naissance. \nIl devient roi en 1367, à l'âge de 21 ans, après la mort de son père, Pierre Ier. Il hérite d'un royaume en paix et avec un trésor public bien fourni [3].\nLe règne de Ferdinand Ier est marqué par la politique étrangère. Quand Pierre Ier de Castille, dit Pierre le Cruel meurt en 1369 sans héritier mâle direct, Ferdinand Ier, en tant qu'arrière-petit–fils de Sanche IV par la ligne féminine, se déclare héritier du trône de Castille. Les autres candidats à la succession sont les rois d'Aragon et de Navarre ainsi que Jean de Gand, duc de Lancastre marié avec Constance, la fille aînée de Pierre le Cruel. Entretemps, Henri de Trastamare, frère bâtard de Pierre, s'est déclaré roi. Après deux campagnes militaires sans succès, les parties acceptent l'intervention du pape Grégoire XI.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ferdinand_I_of_Portugal_-_Chronique_d%27_Angleterre_%28Volume_III%29_%28late_15th_C%29%2C_f.201v_-_BL_Royal_MS_14_E_IV_%28cropped%29.png/500px-Ferdinand_I_of_Portugal_-_Chronique_d%27_Angleterre_%28Volume_III%29_%28late_15th_C%29%2C_f.201v_-_BL_Royal_MS_14_E_IV_%28cropped%29.png",
+    "legende": "Les armées portugaise et anglaise défaisant une avant-garde française du roi de Castille. Chronique d' Angleterre (Volume III) fin XV",
     "regne": true
   },
   {
@@ -14456,6 +14471,173 @@
     "image": ""
   },
   {
+    "id": 1219,
+    "titre": "Barnaba da Modena Vierge à l'enfant",
+    "date": 1367,
+    "zones": [
+      "Art"
+    ],
+    "type": 3,
+    "description": "Signé et daté de 1367, ce panneau est l'une des premières œuvres de son créateur, un artiste actif à Gênes. Il constituait à l'origine le panneau central d'un retable à plusieurs volets dont les autres parties ont disparu. Son emplacement d'origine demeure inconnu. Comme en témoignent la sous-couche verte des carnations et la dorure de la robe de la Vierge, l'artiste s'inscrivait encore dans la tradition italo-byzantine des icônes. Parallèlement, sa représentation de la tendre intimité entre la mère et l'enfant révèle sa connaissance de la peinture siennoise et florentine de l'époque.\nBarnaba Agocchiari dit Barnaba da Modena (Modène, v. 1328 – v. 1386) est un peintre italien de style byzantin qui fut actif en Ligurie et dans le Piémont au Trecento.\nBarnaba da Modena est noté présent à Gênes de 1353 à 1383, et citoyen de la ville en 1363 (soit après 10 ans de résidence) et il est payé pour des œuvres (perdues aujourd'hui) destinées au palais ducal, et une restauration de tableau pour la Loggia de' Banchi en 1370.\n\nInvité à Pise en 1380, il complète les fresques d'Andrea di Firenze relatant des scènes de la Vie de saint Ranieri au Camposanto monumentale, qui seront terminées par Antonio Veneziano, ce qui prouve son départ de la ville ensuite.\nIl retourne à Gênes en 1383, obtient des commandes pour la Sicile avec son assistant et disciple Nicolò da Voltri, qui perpétuera son style en Ligurie au Quattrocento.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Barnaba_da_Modena_001.jpg/960px-Barnaba_da_Modena_001.jpg",
+    "legende": "Städel Museum  Francfort",
+    "video": "https://www.youtube.com/watch?v=sTKs5D2xhrA"
+  },
+  {
+    "id": 1220,
+    "titre": "Expédition vers le Sud Zhu Yuanzhang",
+    "date": 1367,
+    "mois": 11,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "13 novembre : en Chine, Zhu Yuanzhang, maître de Nankin, lance une expédition de 250 000 hommes vers le Sud qui s'empare facilement du Fujian, du Guangdong et du Guangxi, puis envahit le Shandong en décembre.",
+    "image": ""
+  },
+  {
+    "id": 1221,
+    "titre": "Tezozomochtli, roi des Tépanèques",
+    "date": 1367,
+    "date_fin": 1426,
+    "mois_fin": 3,
+    "zones": [
+      "Amerique"
+    ],
+    "type": 3,
+    "description": "Règne de Tezozomochtli, roi des Tépanèques (fin en 1426)\nTezozomochtli (ou Tezozomoc) est le plus grand des souverains tépanèques, peuple de Mésoamérique, dont la capitale est Azcapotzalco.\nIl nait au milieu du XIVe siècle d'un roi tépanèque nommé Acolnahuacatzin et règne sur la cité d'Azcapotzalco de 1367 à 1427. Grand chef de guerre, il agrandit considérablement son royaume et s'empare de la zone ouest de la vallée de Mexico. Il conquiert les cités de Chalco (1392), Cuautitlán (1408), Colhuacan (1413). Ses relations avec les Aztèques qui lui sont soumis semblent bonnes puisqu'il offre sa fille en mariage à leur souverain Huitzilihuitl. De cette union nait un fils, Chimalpopoca, adoré, selon les récits aztèques, par Tezozomochtli.\nLa fin de sa vie et sa succession sont confuses. Les relations se dégradent semble-t-il avec les Acolhuas de la ville de Texcoco qui est prise, provisoirement, en 1418. Les Acolhuas forment une culture très proche de celle des Aztèques et sont alliés à ces derniers. Son fils et héritier, Tayauh, est assassiné par son frère Maxclatl qui semble exercer la réalité du pouvoir à la fin de la vie de Tezozomochtli, accentue la pression fiscale sur les Aztèques, et emprisonne son neveu Chimalpopoca lequel finit par se suicider en 1426.\nTezozomochtli meurt le 27 mars 1427[1] et n'assiste pas ainsi à l'écroulement de son royaume sous la force combinée des Aztèques et des Acolhuas.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Tezozomoc.jpg",
+    "legende": "Tezozomoc, seigneur d'Azcapotzalco, sur le Codex Xolotl"
+  },
+  {
+    "id": 1222,
+    "titre": "Bataille de Najera",
+    "date": 1367,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Angleterre",
+      "Castille"
+    ],
+    "type": 2,
+    "serie": "Guerre des deux Pierre",
+    "description": "La bataille de Nájera (parfois appelée bataille de Navarrete, bataille de Nazree, bataille de Nadirs[2]ou bataille de Nadres) eut lieu le 3 avril 1367, pendant la première guerre civile de Castille.\nLors de la de Nájera, le roi Henri II de Castille , à la tête de son armée franco -castillane numériquement supérieure , et son demi-frère Tello Alphonse de Castille sont défaits en rase campagne par les troupes anglaises commandées par Édouard de Woodstock et Sir John Chandos , après la reddition d'une aile de leur armée au plus fort des combats, pour des raisons qui demeurent inconnues. Pierre Ier , demi-frère d'Henri et allié d'Édouard, parvient ainsi à reconquérir temporairement le trône de Castille. Le dernier bataillon à résister aux Anglais est l'unité de Bertrand du Guesclin . Sa résistance acharnée couvre également la retraite d'Henri II, lui permettant d'échapper vivant au carnage.\nDu Guesclin est fait prisonnier  au cours de son expédition menée contre le roi de Castille, Pierre Ier le Cruel, soutenu par le Prince Noir et Jean de Gand. Pierre remonte sur le trône de Castille\nEn application du traité de Libourne signé avec Pierre le Cruel et Charles le Mauvais, le Prince Noir pénètre par la Navarre en Castille avec son armée et la certitude de remporter la victoire sur les troupes franco-castillanes.\nBertrand Du Guesclin possède l'expérience nécessaire pour vaincre le Prince Noir : il l'a combattu à plusieurs reprises, il connaît parfaitement la valeur des tactiques employées par le prince de Galles. De plus se trouve à ses côtés Arnoul d'Audrehem, qui participa à la bataille de Poitiers où il fut fait prisonnier.\nMais Henri de Trastamare refuse d'écouter leurs conseils avisés, qui consistent à harceler l'adversaire et à tendre des pièges à cet ennemi talentueux en matière de stratégie et de tactique militaire. Pour Henri II de Castille, la victoire sera acquise par une unique bataille.\nLe 3 avril 1367, Henri II de Castille dispose son armée et livre bataille aux Anglais. C'est une déconfiture totale. Au plus fort de la bataille, une aile de l'armée franco-castillane lâche subitement prise : trahison ou lâcheté, la question n'est pas tranchée. L'effondrement des troupes franco-castillanes commandées par don Tello débouche sur la capture de Bertrand du Guesclin et de ses lieutenants.\nParmi les combattants figure le routier Hagre de l'Escot.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Battle_najera_froissart.jpg/960px-Battle_najera_froissart.jpg",
+    "legende": "enluminure tirée des chroniques de Jean Froissart, Paris, Bibliothèque nationale de France"
+  },
+  {
+    "id": 1224,
+    "titre": "Henri de Trastamare repasse les Pyrénées",
+    "date": 1367,
+    "mois": 9,
+    "zones": [
+      "Castille"
+    ],
+    "type": 2,
+    "description": "Septembre : Henri de Trastamare, qui s'est réfugié en Aquitaine après sa défaite à Najera, repasse les Pyrénées avec une armée. La plupart des villes de Vieille-Castille lui ouvrent leurs portes. \nBattu à Nájera l'année suivante, il se replie en Aquitaine puis repasse les Pyrénées avec l'armée française. La plupart des villes de Vieille-Castille lui ouvrent leurs portes[3]. Le 14 mars 1369, le capitaine français Pierre le Bègue de Villaines capture son demi-frère le roi Pierre Ier le Cruel pendant le siège du château de Montiel près de Ciudad Real. Après s'être précipité dans la tente de l'état-major français où Pierre est prisonnier, Henri taillade le visage de son frère puis le fait décapiter après que celui-ci eut tenté de le poignarder avec une arme cachée dans ses vêtements, le 23 mars 1369[4]. Henri fait promener la tête de Pierre au bout d'une pique devant les cités dont il veut reprendre possession.",
+    "image": ""
+  },
+  {
+    "id": 1225,
+    "titre": "Obligation pour les mendiants de curer les fossés de Paris",
+    "date": 1367,
+    "mois": 9,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "9 septembre : le prévôt de Paris prend une ordonnance pour obliger les mendiants à curer les fossés de la ville",
+    "image": ""
+  },
+  {
+    "id": 1226,
+    "titre": "Urbain V tente un retour à  Rome",
+    "date": 1367,
+    "mois": 10,
+    "date_fin": 1370,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 2,
+    "description": "Le 16 octobre , le pape Urbain V tente une première fois de transférer la papauté d' Avignon à Rome . Cette décision est annulée en 1370 , lorsqu'il est contraint de retourner à Avignon, et il meurt peu après..\nLe pape Urbain V , qui résidait à Avignon , arrive à Rome accompagné de l'empereur Charles IV. De là, il entend poursuivre ses projets politiques contre les Visconti à Milan , contre lesquels il avait précédemment appelé à la croisade . Il est accueilli à Viterbe par le cardinal Gil Álvarez Carillo de Albornoz , administrateur des États pontificaux . À Rome, le pape couronne impératrice Élisabeth de Poméranie , épouse de l'empereur Charles ..\nUrbain V avait, bien avant son élection, considéré que le pape devait siéger à Rome et non ailleurs. Au cours de ce printemps 1367, le mercenaire John Hawkwood et sa compagnie de Saint-Georges, passés du côté pontifical, défirent les troupes à la solde de Pérouse. Ce qui permit au cardinal Gil Albornoz d’enlever à cette cité les villes d’Assise, Nocera et Galdo[N 54], « terres d’Église »[59]. Un calme relatif étant apparu en Italie à la suite de ses succès militaires, le pape estima pouvoir s'installer à Rome. Cela imposa un déplacement complet de la cour avec ses services, ses archives et son approvisionnement.\n\nLe temps du départ pontifical approchant, le roi Charles, opposé par principe au retour à Rome, fit une dernière tentative en envoyant une ambassade conduite par le comte d’Étampes. Après avoir descendu la Saône et le Rhône, elle fut reçue par Urbain V le 22 avril 1367. Le pape notifia aux Français que son départ aurait lieu dans une semaine. Le chancelier de l'Université de Paris se lance alors, dans la salle du consistoire, dans un dialogue non improvisé dans lequel il mit en scène le roi et le pape.\n\n« Seigneur, où allez-vous ?\n- Je vais à Rome.\n- Pour vous faire crucifier une seconde fois[60] ? »\n\nLe 30 avril, tenant sa promesse, en dépit de ces pressions, le pape quitta Avignon pour retourner à Rome[61]. Son cortège s’arrêta d'abord à Pont-de-Sorgues où il coucha deux nuits au château pontifical[54].\n\nUrbain V quitta cette cité le 1er mai 1367, pour passer la Durance à Bonpas et coucher à Noves. De là, le 2 mai, il se dirigea avec toute sa Cour vers le port de Marseille. Il fit étape à Orgon, le lendemain, puis entra à Aix-en-Provence, le 4 mai. Deux jours plus tard, le cortège pontifical arriva au grand port où l’attendaient les galères venues de Naples, de Rhodes, de Gênes, d’Ancône et de Pise[54].\n\nLe 6 mai 1367, en attendant de s'embarquer, le pape consacra cardinal un jeune homme de vingt-huit ans, Guillaume d'Aigrefeuille, homonyme de son oncle. La flotte quitta Marseille le 19 mai 1367. En tête du convoi se trouvait le Grand Maître de l’Hôpital, Raymond Béranger, sur sa célèbre galère noire. Urbain V, en compagnie des cardinaux Pierre Roger de Beaufort et Guillaume de la Jugie, était monté sur une galère vénitienne, envoyée par le doge Marco Cornero[N 55]. Il était protégé par cinq galères rouges des chevaliers de Rhodes.\n\nLe 25 mai, la galère pontificale fit escale à Gênes[62]. Puis le 2 juin, le convoi relâcha à Porto-Pisano. Le pape fut accueilli le 3 juin à Corneto par Albornoz, cardinal-évêque de Sabine, qui le conduisit ensuite à Viterbe au milieu d'une foule enthousiaste[N 56]. Albornoz ne survit guère à ce jour de gloire et mourut deux mois plus tard le 24 août 1367[54]. Le pape arrivait à Orvieto où il fut salué par Nicola Orsini, comte de Nola et Recteur de la cité, qu’accompagnait Nicola Spinelli da Giovinazzo, le Garde des Sceaux du royaume de Naples[N 57].\n\nL’entrée triomphale d’Urbain V dans Rome ne se fit que le 16 octobre[62]. Nicolas d'Este, marquis de Ferrare, ouvrait le cortège à la tête de mille cavaliers. Amédée VI de Savoie tenait la bride du cheval du pape et derrière lui, à cheval, Rudolphe de Camerino tenait l'étendard de l'Église déployé au-dessus de la tête d'Urbain V[54]. Le pape et ses cardinaux étaient aussi accompagnés par Nicola Spinelli et Nicola Orsini. Ce dernier, en cette occasion, avait été nommé Recteur du Patrimoine. En dépit de la satisfaction d’avoir atteint son but, la différence avec Avignon était trop criante et Urbain V ressentit comme un malaise[63]. Les cardinaux maugréaient.\n\nLe seul à afficher une joie sans détour fut Pétrarque. Il en fit part à son ami Francisco Bruni :\n\n« Jamais mes paroles n’ont égalé ce que je pense de ce pontife. Je lui ai fait des reproches que je croyais justes, mais je ne l’ai pas loué comme je voulais. Mon style a été vaincu par ses mérites. Ce n’est point l’homme que je célèbre, c’est cette vertu que j’aime et que j’admire avec étonnement. »\n\nUne des premières personnes à demander audience au pape fut Brigitte Birgersdotter, comtesse de Suède, devenue religieuse (elle sera canonisée en 1391) [64]. Urbain V ne put que lui accorder l’entrevue demandée. Mais pour diminuer la rudesse prévisible de cet entretien, il sollicita la présence à ses côtés du cardinal de Beaufort plus armé que lui, par son séjour italien, pour répliquer à cette religieuse. En fait, elle venait réclamer au pape la reconnaissance pontificale pour l’ordre du Saint-Sauveur qu’elle avait fondé en 1346, deux ans après la mort de son mari. Il promit à Brigitte de l’autoriser à fonder deux monastères distincts, pour les femmes et les hommes, à Vadstena, suivant la règle de saint Augustin[N 58].\n\nLe 17 mars, la reine Jeanne se rendit à Rome auprès du pape. Et pour Lætare, le quatrième dimanche de Carême, tandis que Nicola Spinelli était armé chevalier par le roi de Chypre, Urbain V lui remit la rose d'or[65],[N 59], distinction attribuée pour la première fois à une femme. Le pape lui dit : « Je te donne, ma chère fille, cette rose à la couleur pleine de joie, au parfum exaltant et dont la forme est l’image même de la félicité. »\n\nCertains prirent pour un geste de galanterie ecclésiastique cet acte politique qui marquait le soutien pontifical à la reine-comtesse dont les États de Provence étaient menacés par le frère du roi de France. Aux membres du Sacré et Antique Collège qui s’étonnaient de cette distinction remise à une Dame et qui vantaient les mérites de roi de Chypre, victorieux en croisade, Urbain V répliqua : « On n’avait jamais vu non plus l’abbé de Marseille devenir pape ! »",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/UrbainV_Rome.jpg",
+    "legende": "Enluminure dans Miscellanea historica représentant le Pape (le blason sur le bateau est le sien) et ses deux cardinaux lors du voyage vers Rome."
+  },
+  {
+    "id": 1227,
+    "titre": "Paix entre Pierre Ier de Castille et Pierre IV d' Aragon",
+    "date": 1367,
+    "mois": 8,
+    "zones": [
+      "Castille",
+      "Aragon"
+    ],
+    "type": 3,
+    "serie": "Guerre des deux Pierre",
+    "image": ""
+  },
+  {
+    "id": 1228,
+    "titre": "Confédération hanséatique de Cologne contre le Danemark",
+    "date": 1367,
+    "mois": 11,
+    "zones": [
+      "St Empire",
+      "Scandinavie"
+    ],
+    "type": 3,
+    "description": "19 novembre : La Ligue hanséatique se réunit dans la Longue Salle (aujourd'hui la Salle Hansa ) de l'Hôtel de Ville de Cologne , forme une confédération et décide d'entrer en guerre contre le roi danois Waldemar IV. Outre les 57 villes hanséatiques, trois villes néerlandaises n'appartenant pas à la Ligue hanséatique – Amsterdam , Brielle et Harderwijk – rejoignent également la Confédération de Cologne .",
+    "image": ""
+  },
+  {
+    "id": 1229,
+    "titre": "Château d'eau de Lucerne",
+    "date": 1367,
+    "zones": [
+      "Techniques"
+    ],
+    "type": 3,
+    "description": "Le château d'eau de Lucerne, situé au milieu du pont de la Chapelle, est mentionné pour la première fois dans un document.",
+    "image": ""
+  },
+  {
+    "id": 1230,
+    "titre": "Fondation de l'université de Pécs",
+    "date": 1367,
+    "zones": [
+      "Hongrie"
+    ],
+    "type": 4,
+    "description": "L' université de Pécs a été fondée par le roi Louis Ier le Grand de Hongrie . \nLa première université de Pécs fut fondée en 1367 [ 6 ] par le roi Louis Ier le Grand et comptait parmi les plus anciennes d'Europe centrale ; elle cessa d'exister durant la domination ottomane. En 1921, l' ancienne université hongroise Élisabeth de Bratislava (en allemand : Pressburg, en hongrois : Pozsony) (active de 1914 à 1918), dissoute dans la Tchécoslovaquie nouvellement créée, fut transférée à Pécs par le nouveau gouvernement hongrois (elle y est en activité depuis 1923) ; à partir de 1982, elle porte le nom d'université Janus Pannonius (Janus Pannonius Tudományegyetem, JPTE).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/University_of_P%C3%A9cs%2C_logo_from_2025.svg/1920px-University_of_P%C3%A9cs%2C_logo_from_2025.svg.png"
+  },
+  {
+    "id": 1231,
+    "titre": "Otthon le maléfique duc de Göttingen",
+    "date": 1367,
+    "mois": 4,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "24 avril – Otton Ier, « le Maléfique » , devient duc de la ville indépendante de Göttingen (dans l’ Allemagne actuelle ) à la mort de son père, Ernst Ier ..\nOtton le Mauvais ( vers  1340 – 13 décembre 1394, Hardegsen ) était membre de la maison de Guelfe . Il fut duc de Brunswick-Lunebourg , puis duc de la principauté de Göttingen à partir de 1367 .\n\nVie\nSon père, Ernest Ier (1305-1367), accéda au pouvoir dans la principauté de Göttingen en 1345. Après plusieurs années de corégence, en 1367, Otton prit les rênes de cette petite principauté économiquement fragile. Il résida d'abord à Göttingen , où il organisa également plusieurs grands tournois de joutes. Cependant, au fil du temps, il eut de nombreux différends avec les habitants de la ville.\n\nLes contemporains d'Otto le surnommaient « der Quade » , ce qui signifie « le maléfique » en bas allemand . Il reçut ce surnom en raison des nombreuses querelles auxquelles il participa. Otto est considéré comme un représentant éminent de l'ancienne chevalerie. Il s'alliait souvent à des chevaliers nobles pour combattre d'autres princes ou les cités, dont la puissance grandissante lui était insupportable. Au cours de ces affrontements, Otto changeait fréquemment de camp. Il lui arrivait même de mener plusieurs querelles simultanément.\n\nÀ partir de 1367, il revendiqua le landgraviat de Hesse . Il tenta de faire valoir ses droits par une alliance militaire avec les chevaliers de la Ligue stellaire . Parallèlement, il participa à la guerre de Succession de Lunebourg . Dans un premier temps, il combattit aux côtés de Magnus II contre la maison d'Ascanie . Il parvint à s'emparer du trône de Brunswick de 1374 à 1381. Finalement, il échoua en Hesse et à Brunswick et dut se retirer en échange d'une compensation financière.\nEn 1387, il tenta d'étendre son influence sur la ville de Göttingen, mais sans grand succès. En avril, les habitants de Göttingen prirent d'assaut le château ducal situé à l'intérieur des remparts. En représailles, Otton ravagea les villages et les fermes des environs. En juillet, les citoyens, sous le commandement du capitaine Moritz von Uslar, le vainquirent lors d'une bataille rangée entre Rosdorf et Grone. En août, Otton fut contraint de reconnaître la souveraineté des possessions de Göttingen dans la région.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Otto_der_Quade_001.JPG/250px-Otto_der_Quade_001.JPG",
+    "legende": "Tombeau d'Otton le Quade, prince de Göttingen, au couvent de Wiebrechtshausen, en Allemagne"
+  },
+  {
+    "id": 1236,
+    "titre": "Charles IV signe la paix avec les Visconti",
+    "date": 1367,
+    "mois": 8,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "27 août : l'empereur Charles IV signe la paix avec les Visconti de Milan",
+    "image": ""
+  },
+  {
     "id": 743,
     "titre": "Hongwu (Dynastie Ming)",
     "date": 1368,
@@ -14468,6 +14650,259 @@
     "type": 1,
     "image": "",
     "regne": true
+  },
+  {
+    "id": 1232,
+    "titre": "Débuts de la dynastie Ming",
+    "date": 1368,
+    "mois": 1,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "Xu Da , général des Turbans Rouges , rebelles contre la domination mongole en Chine , attaqua la capitale chinoise Dadu et, après sa victoire, contraignit l'empereur Timur de la dynastie mongole Yuan à fuir vers le nord. Durant cette poursuite, il parvint à rallier à sa cause le général coréen Yi Seong-gye , futur fondateur de la dynastie coréenne Joseon , qui était en réalité allié aux Mongols.\n\nLe 14 septembre, le chef rebelle suprême Zhu Yuanzhang se proclama premier empereur de la dynastie Ming, prenant le nom de Hongwu . Son règne fut axé sur la reconstruction économique et l'établissement d'une nouvelle structure administrative absolutiste et centralisée. Il entreprit également de déplacer la capitale vers le sud. Hongwu explora d'abord Kaifeng , l'ancienne capitale de la dynastie Song , et Chang'an , capitale des dynasties Han et Tang . Il choisit ensuite Fengyang , son lieu de naissance , à plusieurs centaines de kilomètres au nord-ouest de Nankin , comme nouvelle capitale . Il projeta d'y établir sa nouvelle résidence, la Capitale du Milieu ( Zhongdu ), qui était alors la capitale impériale la plus méridionale de tout l'empire chinois.  \nZhu Yuanzhang est proclamé empereur de Chine par son armée sous le nom de Hongwu et fonde la dynastie des Ming avec Nankin pour capitale. La nouvelle dynastie régnera jusqu’en 1644. L’empereur ordonne immédiatement à chaque magistrat de comté de construire quatre greniers et abolit la taxation des livres. [ 1 ] Les travaux de reconstruction de la Grande Muraille de Chine débutent cette année-là .\n14 septembre : maître de toute la Chine méridionale, Hongwu marche triomphalement sur Pékin. La dynastie mongole Yuan est renversée et est remplacée par la dynastie chinoise Ming (1368-1644)[1].\nLe grand khan Toghan Tèmur s’enfuit de Pékin. Il mourra pendant sa retraite le 23 mai 1370. Les Mongols, divisés, sont chassés du pays.\nHongwu gouverne avec l’aide d’un Grand Conseil de cinq ou six membres et d’une administration recrutée par concours et étroitement surveillée.\nLe Tibet reprend son indépendance après la chute de la dynastie Yuan[3]. Des monastères rivaux s’efforcent de s’emparer du pouvoir détenu par les lamas qui occupaient les fonctions de vice-rois.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Xu_Da.jpg/500px-Xu_Da.jpg",
+    "legende": "Général Xu Da"
+  },
+  {
+    "id": 1233,
+    "titre": "La Basse-Lusace qui est rattachée à la Bohême",
+    "date": 1368,
+    "mois": 1,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "13 janvier : Venceslas, fils de l’empereur Charles IV achète la Basse-Lusace qui est rattachée à la Bohême",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Location_LUS2.svg/960px-Location_LUS2.svg.png"
+  },
+  {
+    "id": 1234,
+    "titre": "Prise de Copenhague par la Hanse",
+    "date": 1368,
+    "mois": 5,
+    "zones": [
+      "St Empire",
+      "Scandinavie"
+    ],
+    "type": 3,
+    "description": "2 mai : prise de Copenhague par la Hanse en guerre contre Valdemar IV de Danemark\nLors de la seconde guerre de Valdemar, une flotte hanséatique forte de 2 000 guerriers s'empare de Copenhague , la capitale danoise , et la détruit. Durant l'été, les troupes suédoises et hanséatiques reprennent la province de Scanie, dans le sud de la Suède. Le sud du Jutland et la Norvège sont également occupés, contraignant le roi Valdemar IV à la fuite. Helsingborg est la seule ville à résister aux attaques hanséatiques, obligeant les assiégeants, sous le commandement de Bruno von Warendorp, à y passer l'hiver.\nUn traité de paix est signé entre la Norvège et la Ligue hanséatique .",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Eroberung_Kopenhagens_durch_die_Hanse_1368_II.jpg/500px-Eroberung_Kopenhagens_durch_die_Hanse_1368_II.jpg",
+    "legende": "Conquête de Copenhague par la Ligue hanséatique, illustration du XIXe  siècle"
+  },
+  {
+    "id": 1235,
+    "titre": "Charles V relance  la guerre contre les Anglais",
+    "date": 1368,
+    "mois": 6,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "serie": "Guerre de Cent ans",
+    "description": "Charles V de France décide de reprendre la guerre contre les Anglais à l’appel du comte Jean Ier d’Armagnac et du sire d’Albret",
+    "image": ""
+  },
+  {
+    "id": 1237,
+    "titre": "Charles IV établit un vicaire d'empire à Pise, Lucques et Sienne",
+    "date": 1368,
+    "mois": 8,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Octobre : l'empereur Charles IV établit un vicaire d'empire à Pise, Lucques et Sienne",
+    "image": ""
+  },
+  {
+    "id": 1238,
+    "titre": "Alliance contre l'Angleterre signé à Tolède par Henri de Trastamare et les envoyés de Charles V",
+    "date": 1368,
+    "mois": 11,
+    "zones": [
+      "France",
+      "Castille"
+    ],
+    "type": 3,
+    "serie": "Guerre de Cent ans",
+    "description": "20 novembre : traité d'alliance contre l'Angleterre signé à Tolède entre les ambassadeur du roi de France et Henri de Trastamare",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Promesse_du_roi_de_Castille_1_-_Archives_Nationales_-_J-603-60.JPG/960px-Promesse_du_roi_de_Castille_1_-_Archives_Nationales_-_J-603-60.JPG",
+    "legende": "Promesse du roi de Castille et Leon Henri de Trastamare, de se conformer à l’arbitrage du roi de France Charles V rendu sur son conflit avec le roi d’Aragon à Tolède en novembre 1368. Archives nationales J//603/60"
+  },
+  {
+    "id": 1239,
+    "titre": "Olgierd de Lituanie allié à Michel II de Tver bat les forces de Dimitri IV de Russie",
+    "date": 1368,
+    "mois": 11,
+    "zones": [
+      "Pologne",
+      "Russie"
+    ],
+    "type": 2,
+    "description": "21 novembre[12] : Moscou attaque Tver , qui contre-attaque avec l'aide de la Lituanie et de la Horde bleue .. Olgierd de Lituanie, allié à Michel II de Tver, qui a reçu le titre de grand-prince, bat les forces de Dimitri IV de Russie. Il ravage les environs de Moscou, mais ne parvient pas à prendre la ville.",
+    "image": ""
+  },
+  {
+    "id": 1240,
+    "titre": "Fribourg-en-Brisgau passe aux Habsbourg",
+    "date": 1368,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Les relations entre les Fribourgeois et leurs comtes sont souvent mauvaises et le règne d'Egon II est particulièrement mouvementé. En 1273, celui-ci s'oppose à Rodolphe de Habsbourg qui vient d'être couronné empereur du Saint-Empire. Il persuade les Fribourgeois à lancer une insurrection contre l'empereur, mais ce dernier envoie son armée à Fribourg. La ville capitule après un siège lourd en conséquences financières. En 1299, Egon II décide d'augmenter les impôts mais les Fribourgeois attaquent le château avec des catapultes. Le comte fait alors appel à son beau-frère, évêque de Strasbourg, qui envoie son armée à Fribourg et mate la rébellion[5].\n\nEn 1327, le comte Konrad II octroie à la ville le droit de battre monnaie. Elle forme alors une union monétaire avec Bâle, Colmar et Brisach. En 1348 et 1349, la ville est touchée par la peste et les juifs subissent la fausse accusation d'empoisonnement des puits. Le 30 janvier 1349, tous les juifs de la ville sont massacrés à l'exception des douze plus fortunés. Les plus riches survivent le temps de pouvoir transmettre tous leurs biens[réf. souhaitée]. C'est dans le même contexte qu'ont lieu le pogrom de Bâle et celui de Strasbourg.\n\nAu même moment, les relations entre la ville et ses comtes se dégradent et les Fribourgeois se plaignent à Strasbourg, Berne et Bâle. En 1366, la tension est telle que le comte Egon III doit envahir la ville pour en reprendre le contrôle. Finalement, elle achète son indépendance en 1368 contre 15 000 marks. Elle ne peut toutefois pas exister sans protection extérieure et se place volontairement sous la suzeraineté de la maison de Habsbourg, l'une des plus puissantes familles du Saint-Empire[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Burg_Freiburg_Merian_%28cropped%29.jpg",
+    "legende": "Le château de Fribourg sur une gravure du XVIIe siècle. Mérian"
+  },
+  {
+    "id": 1241,
+    "titre": "Andrea Contarini Doge de Vensie",
+    "date": 1368,
+    "mois": 1,
+    "date_fin": 1382,
+    "mois_fin": 6,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Andrea Contarini (né en 1300 ou 1302 à Venise ; mort le 5 juin 1382 à Venise) fut, selon les archives historiques officielles de la République de Venise, son 60e doge . Il régna pendant près de quatorze ans, du 27 janvier 1368, date de son entrée solennelle à Venise, jusqu'à sa mort.\n\nContarini, après avoir été juge et co-condamné Marino Falier , mit fin au soulèvement de Trieste – restée autrichienne de 1382 à 1918 – et à celui de l'île de Crète . Il conclut également un traité de paix avec le duché d'Autriche .\nDès 1361, lors de l'élection de Lorenzo Celsi , le nom d'Andrea Contarini figurait parmi les candidats potentiels. Aux alentours du décès du doge Marco Corner, le 13 janvier 1368, Contarini séjournait dans une propriété à Gambarare , près de Mira . C'est là qu'il apprit son élection au doge le soir du 20 janvier 1368, décision rendue publique le lendemain. Contarini tenta un temps de se soustraire à ses fonctions, au risque de l'exil et de la ruine. Finalement, le 27 janvier, il fut conduit avec les honneurs, via Chioggia , à Venise où il fut reçu.\n\nUne querelle avec François de Carrare, seigneur de Padoue , dégénéra en guerre contre Gênes , communément appelée guerre de Chioggia . Ce conflit prit une tournure très défavorable jusqu'à ce que Contarini prenne lui-même le commandement suprême et contraigne Chioggia à capituler en 1380. Ainsi, la paix de Turin fut conclue avec Gênes en 1381. Elle mit fin à une série de quatre guerres entre les principales puissances commerciales maritimes de la Méditerranée, un conflit qui avait duré près d'un siècle et demi. Contarini fut le premier doge à recevoir un éloge funèbre officiel .\n\nCes violents conflits se déroulèrent dans un contexte de grave crise d'approvisionnement et financière, exacerbée par les contraintes considérables du financement de la guerre et alimentée simultanément par de féroces luttes intestines au sein de l'aristocratie urbaine dominante. Ces conflits furent, du moins temporairement, apaisés.\n\nCe processus a entraîné la perte progressive de pouvoir du doge, qui avait depuis longtemps cessé d'être souverain . À l'instar de la plupart des nobles, il était devenu davantage un fonctionnaire, à la différence près que le doge était élu à vie et siégeait dans plusieurs instances clés. Le doge acquit ainsi un statut particulier et devint peu à peu l'incarnation de l'ensemble de la communauté.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Coat_of_Arms_of_the_House_of_Contarini.svg/langfr-960px-Coat_of_Arms_of_the_House_of_Contarini.svg.png"
+  },
+  {
+    "id": 1242,
+    "titre": "2e campagne d'Italie de Charles IV  pour soutenir Urbain V",
+    "date": 1368,
+    "mois": 4,
+    "zones": [
+      "St Empire",
+      "Italie",
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "2 avril : Charles IV part pour sa deuxième campagne d'Italie . Cet empereur du Saint-Empire romain germanique envoie une importante armée pour soutenir le pape Urbain V, rentré à Rome en 1367.\n1er novembre : Élisabeth de Poméranie , quatrième épouse de l'empereur Charles  IV , est couronnée impératrice du Saint-Empire romain germanique par le pape à Rome. Elle traverse ensuite la vieille ville à cheval jusqu'au palais du Latran , coiffée de sa couronne et de sa mitre, sous les acclamations de la foule. Elle assiste alors à un banquet donné en son honneur et adoube plusieurs personnes. Le couple impérial, qui séjourne au Vatican pendant plusieurs semaines après la cérémonie du couronnement, trouve un hôpital à Rome pour soigner et accueillir les pèlerins bohémiens.",
+    "image": ""
+  },
+  {
+    "id": 1243,
+    "titre": "Augsbourg, soulèvement des artisans  contre les familles patriciennes",
+    "date": 1368,
+    "mois": 8,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "À Augsbourg, un soulèvement des artisans de la ville contre les familles patriciennes au pouvoir a conduit à l'introduction d'une constitution de guilde .",
+    "image": ""
+  },
+  {
+    "id": 1244,
+    "titre": "Plus grand billet de banque de l'histoire",
+    "date": 1368,
+    "zones": [
+      "Chine",
+      "Techniques"
+    ],
+    "type": 4,
+    "description": "Sous la dynastie Ming, le plus grand billet de banque de l'histoire mondiale a été émis en Chine impériale . Il mesurait 32 × 23 centimètres",
+    "image": ""
+  },
+  {
+    "id": 1245,
+    "titre": "Peter Stromer  1er forêt artificielle au monde.",
+    "date": 1368,
+    "zones": [
+      "St Empire",
+      "Techniques"
+    ],
+    "type": 3,
+    "description": "9 avril : Peter Stromer commence ses expériences de semis forestier dans la forêt impériale de Nuremberg , ce qui conduit à la création de la première forêt artificielle au monde.\nPierre Stromer (également orthographié Pierre Stromeir l'Ancien , Pierre Stromair l'Ancien ; né vers 1315 ; décédé le 3 décembre 1388 ) était un conseiller municipal , marchand et entrepreneur minier de Nuremberg . Il a mis au point les semis de conifères dits de Nuremberg. Grâce à cette technique de reboisement systématique, la forêt impériale de Nuremberg est devenue la première forêt artificielle au monde, et Stromer est considéré comme le « père de la foresterie ».\nPierre Stromer l'Ancien appartenait à une famille qui comptait parmi les plus importantes familles patriciennes de la ville impériale de Nuremberg au Moyen Âge . Plusieurs membres de la famille Stromer (également orthographié Stromeir, Stromair et Stromeyer) occupèrent les fonctions de trésorier principal et de maire de Nuremberg. Dès leur arrivée à Nuremberg, la famille fut représentée au Conseil intérieur de la ville pendant presque tout le Moyen Âge, tout comme Pierre Stromer. Ses parents étaient Heinrich Stromer, dit « du Marché au Sel » (vers 1268-1347), et Kunigunde Glasnapf (Glatznapf) (décédée en 1329). Après le décès de cette dernière, son père se remaria. Parmi ses dix-sept frères et sœurs cadets figuraient sa sœur Gerhaus, prieure du monastère Sainte-Catherine de Nuremberg [ 1 ] , et son demi-frère Ulman Stromer (1329-1407), auteur du premier ouvrage d'historiographie sur Nuremberg et fondateur et exploitant de la première papeterie d'Allemagne.\nPeter Stromer était conseiller municipal de Nuremberg, marchand et entrepreneur minier. Actionnaire de la maison de commerce Stromeir, l'une des plus importantes entreprises mondiales de l'époque [ 2 ], il s'intéressait à un approvisionnement durable en bois pour les mines , les fonderies et les moulins à marteaux liés à sa maison de commerce . Nuremberg, l'une des villes les plus industrialisées d'Europe à la fin du Moyen Âge, souffrait alors d'une grave pénurie de bois et de charbon de bois , ressources essentielles au fonctionnement de son économie. Au fil du temps, de vastes étendues de terres arides s'étaient formées dans la forêt impériale de Nuremberg en raison de la surexploitation et du défrichement par brûlis . Le roi Henri VII avait donc déjà exigé, par un mandat de 1309, que cette situation soit résolue. Pendant deux générations, les efforts en ce sens furent vains ; seul Peter Stromer parvint à une avancée significative grâce à l' ensemencement systématique de graines , principalement de conifères . Stromer reconnut que la transition vers les conifères, notamment le pin sylvestre , offrait une possibilité pour la mise en culture des sols appauvris, et pouvait également remplacer le chêne pour le bois d'œuvre . Cependant, Stromer n'était pas un expert forestier et n'était pas un parent direct des deux célèbres familles impériales de maîtres forestiers de Nuremberg, les Koler et les Waldstromer (également appelés Waldstromeir), mais seulement apparenté à elles par le sang et par alliance. [ 3 ]\n\nÀ partir de Pâques (9 avril) 1368, Peter Stromer entreprit des expériences approfondies de sylviculture systématique sur plusieurs centaines d' hectares de la forêt impériale de Saint-Laurent (Lorenzer Reichswald ). Des graines de pin et de sapin , et probablement aussi d'épicéa et d'arbres feuillus, furent semées délibérément. Les graines de sapin et de pin, en particulier, se révélèrent prometteuses. Ces expériences et leur datation sont documentées. Par exemple, le demi-frère de Peter Stromer, Ulman Stromer, les mentionne dans son ouvrage « Püchel von meim geslecht und von abentekr » (Livre de ma famille et de mes aventures ), écrit vers 1390/1400 , le plus ancien document historique conservé de Nuremberg. Il y écrit, entre autres :\n\n« Pierre, mon frère, a veillé à ce que la forêt et les bois soient défrichés, d’où provient aujourd’hui une grande quantité de bois (…) En l’an de grâce 1368, à Pâques, ils commencèrent par le premier défrichage de la forêt près de Lichtenhoff, puis par celui de 1500 acres qui furent aménagés ; et c’est lui qui fut à l’origine de tout cela et qui découvrit le terrain en premier, Pierre Stromeir, mon frère, que Dieu lui fasse miséricorde. [ 4 ] »\n\nCela peut paraître anodin, mais il s'agissait en réalité d'un bond en avant considérable, marquant une rupture avec la vision médiévale du monde. Dans cette vision, les conifères et leurs fruits apparemment sans valeur, les « ananas », étaient considérés comme des « arbores malae et nonfructiferae », c'est-à-dire de mauvais arbres ne portant pas de fruits, et donc comme faisant partie d'un monde parallèle créé par le diable pour se moquer de Dieu et de l'humanité. De plus, la planification économique et la préservation de l'avenir des générations futures – et donc, par l'abandon de la surexploitation des forêts, les prémices d' une sylviculture durable – étaient totalement étrangères à la pensée médiévale, sans parler des expérimentations systématiques. Les jeunes plants de conifères de Nuremberg représentent donc une avancée extraordinaire, non seulement en sylviculture , mais aussi dans les techniques de production primaire en général. [ 5 ] Ils constituent également un exemple précoce du lien entre sylviculture et exploitation minière, lien qui deviendra plus manifeste par la suite dans la réglementation forestière et à travers les travaux de Hans Carl von Carlowitz .\n\nStromer fit récolter des cônes de sapin et de pin, en extraire les graines et les semer dans les sols forestiers et les champs en jachère . Pour préparer les semis, ces zones furent profondément labourées à l'aide d'une charrue forestière. Probablement pour protéger les jeunes conifères du gel et de la végétation envahissante , et pour favoriser l'enracinement, il fit également semer des bouleaux . Par une observation attentive et des expérimentations, Stromer et ses successeurs – des forestiers de Nuremberg issus de sa famille – mirent au point les techniques les plus adaptées à la récolte et au tri des graines, déterminèrent la période optimale de semis (le printemps), la profondeur de semis appropriée et les distances de plantation idéales. Grâce à une expérience accumulée sur plusieurs générations, ils apprirent également à distinguer les sols les mieux adaptés à chaque essence d'arbre. Très tôt, ils se penchèrent sur la question de la protection de la forêt lors du stockage des graines, notamment en les protégeant des souris domestiques omniprésentes. [ 6 ]\n\nLa nouvelle méthode de création de forêts suscita immédiatement un vif intérêt et fut encouragée par le conseil municipal de Nuremberg. Après que la ville impériale, grâce à l'implication de Peter Stromer, eut acquis la charge de maître forestier impérial auprès de la famille Koler en 1372, Stromer poursuivit les vastes travaux de plantation de forêts pour le compte de la ville jusqu'à sa mort, le 3 décembre 1388. La forêt impériale de Nuremberg devint ainsi la première forêt artificielle connue au monde, et Stromer lui-même le « père de la foresterie ». La foresterie de Nuremberg, à laquelle aucun effort financier n'était épargné, jouissait alors d'un niveau exceptionnel dans le monde connu et contribua de manière décisive à la capacité de la ville impériale de conserver sa place parmi les principaux centres économiques, même au début de l' époque moderne [ 7 ] (voir aussi Histoire de la ville de Nuremberg ).\n\nRapidement, d'autres villes et propriétaires fonciers , tant nationaux qu'étrangers, s'intéressèrent à ce type de sylviculture . Des semeurs de graines de sapin , formés par les administrateurs forestiers de la forêt impériale, entreprirent de diffuser leur savoir-faire et, par là même, la renommée de Nuremberg à travers l'Europe . Dès 1420, les frères Hülpüchel possédaient déjà un commerce de semences à Nuremberg. [ 8 ] Dès 1426, la forêt de la ville de Francfort fut ensemencée avec des semences de la forêt de Nuremberg, grâce aux semeurs et aux techniques de Nuremberg , et en 1457, la forêt de Steinfeld, près de Wiener Neustadt, fut également ensemencée. Peu après, les semeurs de graines de sapin étaient actifs dans toute l'Europe centrale, notamment dans la Forêt-Noire de Bade avant 1483 , en Hongrie en 1485 et dans la région minière de Saxe, en Allemagne centrale, en 1496. [ 9 ]\n\nLeur technique de récolte, de traitement et de semis des semences est consignée dans des archives. Le premier document de ce type fut commandé par le conseil de Francfort dès 1426 ; celui-ci avait tout simplement surpris une conversation entre Kunz Hülpüchel, un semeur de graines de sapin envoyé de Nuremberg. La ville impériale de Nuremberg transmit ensuite ce savoir à d’autres villes et princes. Grâce aux ouvrages de Noé Meurer, *Jag vnd Forstrecht* (1576), et de Hans Carl von Carlowitz, * Sylvicultura oeconomica , oder haußwirthliche Nachricht und Naturmäßig Anweisung zur wilden Baum-Zucht * (1713), cette technique s’intégra finalement aux pratiques et théories forestières générales. [ 9 ] [ 10 ]\n\nAu cours des siècles suivants, les techniques de semis forestier furent constamment perfectionnées, et les spécialistes de Nuremberg conservèrent leur position de leader jusqu'à la guerre de Trente Ans (1618-1648). Dès 1485, les petits-neveux de Peter Stromer, Ulrich Grunther et Bartholomeus Groland, importèrent des graines de mélèze d'Europe de Füssen et les semèrent avec succès dans la forêt impériale de Nuremberg. Cela marqua le début de la culture d'essences d'arbres non indigènes dans les forêts allemandes. [ 6 ]\nMême ses contemporains et la postérité ont reconnu l'invention de Peter Stromer comme une grande réussite et ont dûment honoré son travail de pionnier. [ 8 ] [ 11 ] Le poète et humaniste Conrad Celtis a commémoré les réalisations de Stromer dans son portrait de la ville de Nuremberg , De origine, situ, moribus et institutis Norimbergae libellus (1502). [ 8 ] En l'honneur du « père de la foresterie » et de sa contribution à la Forêt impériale, la Maison Peter Stromer, un bâtiment thématique du Centre d'expérience forestière de Tennenlohe consacré à l'histoire de la Forêt impériale de Nuremberg, a été nommée en 1996",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Peter_Stromer.jpg/250px-Peter_Stromer.jpg",
+    "legende": "Peter Stromer (vers 1315-1388), marchand allemand, propriétaire de mines et conseiller municipal de Nuremberg, connu comme le « Père de la sylviculture »"
+  },
+  {
+    "id": 1246,
+    "titre": "Karl Thopia  prend Durres",
+    "date": 1368,
+    "zones": [
+      "Hongrie",
+      "Europe C. & Or."
+    ],
+    "type": 4,
+    "description": "Durrës , la deuxième plus grande ville de l'Albanie actuelle (connue à cette époque sous le nom de Dyrrhachium), est prise aux Angevins par Karl Thopia , un puissant prince féodal et chef de guerre.",
+    "image": ""
+  },
+  {
+    "id": 1247,
+    "titre": "Tamerlan monte sur le trône de Samarcande ( Ouzbékistan actuel )",
+    "date": 1368,
+    "zones": [
+      "Monde islamique",
+      "Orient"
+    ],
+    "type": 3,
+    "description": "Issu de la dynastie mongolo-turcique des Barlas, lointainement apparentée aux Bordjiguines de Gengis Khan, Tamerlan prend le contrôle du khanat de Djaghataï vers 1370. Il mène des campagnes militaires à travers le Moyen-Orient et l'Asie centrale, battant la Horde d'or, le sultanat mamelouk d'Égypte, l'Empire ottoman émergent, ainsi que le sultanat de Delhi en Inde, et tente même de restaurer la dynastie Yuan en Chine. Se désignant comme « l'Épée de l'islam », il devient le dirigeant le plus puissant du monde musulman. À partir de ses conquêtes, il fonde l'Empire timouride, dont la capitale est Samarcande et qui se fragmente peu après sa mort.\nCommandant militaire invaincu, il est généralement considéré comme l'un des plus grands chefs militaires et tacticiens de l'histoire, ainsi que comme l'un des plus brutaux et des plus meurtriers.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Timur_forensic_reconstruction_%28Gerasimov%2C_1941%29%2C_with_natural_colorization.png/500px-Timur_forensic_reconstruction_%28Gerasimov%2C_1941%29%2C_with_natural_colorization.png",
+    "legende": "La reconstitution médico-légale de Timour (Gerasimov, 1941), avec colorisation naturelle, a suscité des interrogations : « Lors de la réalisation des portraits des Timourides, la question de savoir si Shah-Rukh était un fils légitime de Timour s'est posée. Timour était, d'un point de vue anthropologique, un mongoloïde typique, tandis que Shah-Rukh présentait des caractéristiques europoïdes marquées. Les historiens de l'Asie centrale font souvent référence à l'aversion du père pour son fils. De là est née la légende selon laquelle Shah-Rukh ne pouvait être le fils biologique de Timour. » [ 1 ] « Timour était un mongoloïde typique . Ses petits-fils Ulugh-Beg et Mohammed Sultan étaient des hybrides, dont le physique ressemblait fortement à celui des Ouzbeks citadins actuels. Les fils Shah-Rukh et Miran-Shah possédaient des traits caractéristiques du type tadjik (europoïde d'Asie centrale). Malgré toutes ces différences, ces cinq hommes appartenaient tous, par le sang, à une même famille. Ce fait est incontestable. » [ 2 ]…"
+  },
+  {
+    "id": 1248,
+    "titre": "Création de librairie du roi",
+    "date": 1368,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "La Bibliothèque nationale de France tire son origine de la bibliothèque (librairie) du roi , installée en 1368 au Louvre par Charles V (1364-1380), dans la tour de la Fauconnerie, et dont l'inventaire, dressé par Gilles Mallet[5] en 1373, premier libraire du roi, comprenait 917 manuscrits. Conçue pour la première fois comme une véritable institution transmissible à son successeur[6], elle est privée de quelques belles pièces par les oncles de Charles VI (1380-1422) profitant de sa folie, puis disparaît sous l'occupation anglaise, après la mort du roi. Alors que Charles VII (1422-1461) est réfugié à Bourges, ce qu'il en reste est en effet prisé en bloc en 1424 pour 1 220 livres par le duc de Bedford, régent du royaume, qui l'emporte ensuite en Angleterre, où elle est dispersée à sa mort en 1435. Sur les 120 volumes retrouvés, 69 sont conservés au département des manuscrits[7].\n\nC'est donc seulement à partir du règne de Louis XI (1461-1483) que la bibliothèque du roi connaît une certaine continuité, sans dispersion des collections.",
+    "image": ""
+  },
+  {
+    "id": 1249,
+    "titre": "Il Canzoniere Pétrarque",
+    "date": 1368,
+    "zones": [
+      "Litterature"
+    ],
+    "type": 2,
+    "description": "Pétrarque termine l'écriture de la série de sonnets italiens et d'autres poèmes connue sous le nom d' Il Canzoniere \nLe Canzoniere (Chansonnier) ou Rerum vulgarium fragmenta (Fragments composés en langue vulgaire)[1] est un recueil de 366 poèmes composés en italien par Pétrarque et consacrés à son amour intemporel : Laure, que Pétrarque avait aperçue le 6 avril 1327, dans l'église Sainte-Claire à Avignon. Cette œuvre eut un retentissement phénoménal dans les siècles qui suivirent son élaboration et sa diffusion paneuropéenne, et son style laissera sa marque sur la poésie lyrique des générations suivantes sous la forme d'une esthétique du chant amoureux que l'on nomme « pétrarquisme ».\nDe l'italien canzone (chanson), terme employé dès le XVe siècle pour désigner l'œuvre poétique de Pétrarque consacrée à Laure, cette œuvre est à la fois une auto-contemplation et une méditation autour de l'image de l'aimée, qui devient une figure idéale. Le Canzoniere se présente tantôt comme une élégie passionnée, tantôt comme une confession des états d'âme du poète.\nLe Canzoniere laisse apparaître une division assez nette entre deux parties. Cette rupture est incarnée par la mort de Laure, l'inspiratrice de toute l'œuvre. La première partie est imprégnée par la douce évocation de Laure ; dans la seconde partie, Pétrarque, maintenant seul, rappelle dans un dialogue intérieur la défunte aimée à ses souvenirs. Pourtant, on ne doit pas interpréter le Canzoniere comme un journal poétique : il est difficile d'établir une chronologie exacte de la composition des divers poèmes, bien que ne manquent pas des textes avec indications sur l'époque de création[3]. La division entre les « Rime in vita » et les « Rime in morte » prit forme pendant la longue élaboration de l'œuvre, et parfois Pétrarque transporta une pièce de l'une à l'autre partie. Les poèmes sont souvent liés par des liens symboliques, ou thématiques, par opposition ou par ressemblance.\n\nThématiques\nL'amour est lié aux thèmes les plus profonds de Pétrarque : l'aspiration à la gloire, la méditation sur la caducité de la vie, la foi chrétienne souvent en conflit avec la recherche de joies terrestres. Bien que le thème de l'amour inspire toute l'œuvre, il n'est pas le seul présent. Les thèmes politiques, moraux et religieux transparaissent également et inspirent des poèmes qui ont eu beaucoup d'influence sur la poésie politique italienne, comme les chansons « Italia mia, benché 'l parlar sia indarno » (no. 128) ou « Spirto gentil, che quelle membra reggi » (no. 53).\n\nSymbolisme\nL'intention symbolique de ce recueil est confirmée par le nombre des poèmes  : 365, un pour chaque jour de l'année, plus la dernière chanson, dédiée à la Vierge: « Vergine bella, che di sol vestita ». Ces 366 poèmes représentent aussi le nombre de jours d'une année bissextile puisque Laure est morte durant une année bissextile.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Petrarca_-_Canzoniere%2C_MCCCCLXX_-_929090_Carta.jpeg",
+    "legende": "Bibliothèque européenne d'information et de culture Milan"
+  },
+  {
+    "id": 1250,
+    "titre": "Charles II de Navarre conquiert des villes castillanes",
+    "date": 1368,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Charles II de Navarre conquiert les villes castillanes de Contrasta et Santa Cruz de Campezo .",
+    "image": ""
+  },
+  {
+    "id": 1251,
+    "titre": "Mohammed V de Grenade dévaste Úbeda",
+    "date": 1368,
+    "zones": [
+      "Castille",
+      "Monde islamique"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
+    "id": 1252,
+    "titre": "Casimir III de Pologne voit son mariage avec Adélaïde de Hesse annulé.",
+    "date": 1368,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 4,
+    "description": "Elle est mariée à Casimir III de Pologne le 29 septembre 1341 à Poznań. Ce mariage scellait l'alliance entre Casimir III et la maison des Luxembourg. Adélaïde est la seconde épouse de Casimir, la première (Aldona de Lituanie) étant décédée. Mais Casimir n'a que deux filles et pas d'héritier masculin. Adélaïde de Hesse est couronnée dans la cathédrale de Poznań le jour même de son mariage. Celui-ci n'est pas heureux : très vite, les deux époux vivent séparément.\n\nLe mariage dure cependant jusqu'en 1356, date à laquelle Casimir se sépare d'Adélaïde de Hesse et épouse sa maîtresse Christina Rokiczana. Celle-ci est la veuve d'un riche marchand, Miklusz Rokiczani. La bigamie de Casimir et ses propensions séductrices font réagir le clergé. Bien que le cas d'Adélaïde soit plaidé devant le pape Innocent VI, Casimir continue de vivre maritalement avec Christina. Le mariage dure jusqu'en 1363/1364, quand Casimir se déclare à nouveau délié de ses liens conjugaux. Le couple n'ayant pas d'enfants, le mariage est annulé en 1368. Casimir se remarie alors pour la quatrième fois avec Edwige de Sagan. 3 filles naissent de cette union.\n\nAdélaïde étant toujours vivante, ainsi que Christina, le mariage entre Casimir et Edwige est également considéré comme bigame. La légitimité des 3 filles nées du mariage est contestée, mais Casimir réussit à en faire reconnaître deux par le pape Urbain V le 5 décembre 1369. Edwige la Jeune est reconnue légitime par le pape Grégoire XI le 1er octobre 1371.\nAprès l'annulation de son mariage, Adélaïde retourne en Hesse, où elle vit jusqu'à son décès. Après la mort de Casimir, elle réclame ses droits de propriété : elle porte l'affaire devant le pape Grégoire XI qui, le 26 mai 1371, ordonne au roi Louis de lui rendre l'usufruit de ses biens.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Jan_Matejko_-_Adelajda_Heska_1865.jpg/500px-Jan_Matejko_-_Adelajda_Heska_1865.jpg",
+    "legende": "Adélaïde de Hesse, épouse de Casimir le Grand Jan Matejko 1865"
   },
   {
     "id": 177,
