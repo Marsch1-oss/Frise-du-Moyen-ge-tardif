@@ -1,5 +1,17 @@
 [
   {
+    "id": 1281,
+    "titre": "Afrique du nord",
+    "date": 1244,
+    "date_fin": 1465,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Carte_Zianides_au_Maghreb.png/1280px-Carte_Zianides_au_Maghreb.png",
+    "legende": "Carte du royaume zianide et son environnement méditerranéen basé sur : Sluglett, Peter; Currie, Andrew. Atlas of Islamic History (p. 49). Muslim Rule in North Africa and Spain at the End of the Reconquista c.1250–c.1550 et Carte du médieviste Lynn H. Nelson (Professor Emeritus, Medieval History University of Kansas)"
+  },
+  {
     "id": 31,
     "titre": "Edouard 1er Longues Jambes",
     "date": 1272,
@@ -190,6 +202,20 @@
     "description": "Jean Balliol (vers 1249 – 1314) est roi d’Écosse de 1292 à 1296, choisi après la crise de succession qui suit la disparition de la dynastie des Dunkeld. Son accession au trône est décidée par le roi d’Angleterre Édouard Ier, dont il reconnaît la suzeraineté, ce qui limite fortement son autorité.\n\nRapidement, Balliol entre en conflit avec Édouard Ier, notamment lorsqu’il refuse de soutenir ses campagnes militaires. En 1295, il conclut une alliance avec la France (Auld Alliance), provoquant la réaction anglaise. En 1296, Édouard envahit l’Écosse, remporte la bataille de Dunbar et contraint Balliol à se rendre.\n\nLe roi écossais abdique peu après et est dépouillé de ses insignes royaux. Emprisonné en Angleterre, il est ensuite libéré et envoyé en France, où il vit retiré jusqu’à sa mort.\n\nSon règne bref et marqué par la domination anglaise fait de lui une figure faible, souvent considérée comme un roi sans réel pouvoir, dont la chute déclenche les guerres d’indépendance écossaise.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/John_Balliol.jpg",
     "legende": "Jean Balliol dans l'armorial de Forman (1562). Son sceptre et sa couronne sont brisés, et son blason vierge reflète son surnom de « tabard vide »."
+  },
+  {
+    "id": 1304,
+    "titre": "Trần Anh Tông Empereur du Dai Viet",
+    "date": 1293,
+    "date_fin": 1314,
+    "zones": [
+      "Orient"
+    ],
+    "type": 2,
+    "description": "Trần Anh Tông, né sous le nom Trần Thuyên en 1276 et mort en 1320, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1293 à 1314 et le quatrième représentant de la dynastie Trần.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tr%E1%BA%A7n_Anh_T%C3%B4ng_TL%C4%90SXS%C4%90.jpg",
+    "legende": "Tran Anh Tong dans le tableau « Truc Lam Dai Si Xuat Son Do » (Le grand maître Truc Lam quittant la montagne).",
+    "regne": true
   },
   {
     "id": 45,
@@ -2694,6 +2720,19 @@
     "description": "Fresques du Château de la Rocca di Angera (Varèse) salle de Justice. \nLa Rocca Borromea d'Angera se dresse près d'Angera et domine l'extrémité sud du lac Majeur . Les salles historiques de la forteresse abritent des fresques, des peintures et des décorations d'époque. La forteresse abrite également le Musée de la Poupée et du Jouet .\nAppartenant à l’origine aux archevêques de Milan , [ 1 ] la forteresse comprend une série de bâtiments, érigés à différentes époques entre le XIe et le XVIIe siècle .\n\nLa tour carrée située dans la partie ouest de la forteresse appartient au noyau le plus ancien, datant de la période lombarde . Les premiers agrandissements de cette structure primitive ont été entrepris dans les décennies entre les XIIIe et XIVe siècles . [ 1 ]\nAprès avoir été octroyée par Clément VI à la famille de Bernabò Visconti (1350), la forteresse devint définitivement la propriété de la famille Borromeo avec Vitaliano qui, par un acte signé le 18 janvier 1449, ratifia l'achat d'Angera, de la forteresse et de son église paroissiale au Conseil des Neuf Cents de la République Ambrosienne Dorée\nLa salle de justice abrite le cycle de fresques [ 1 ] créé au XIIIe siècle par un peintre anonyme connu sous le nom de « Maître d’Angera ». La représentation narre des événements liés à la vie de l’archevêque Ottone Visconti et, en particulier, illustre sa victoire sur les Torriani à la bataille de Desio en 1277.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rocca_di_Angera_-_Sala_di_Giustizia_Fresco_Visconti_1b.jpg/960px-Rocca_di_Angera_-_Sala_di_Giustizia_Fresco_Visconti_1b.jpg?utm_source=commons.wikimedia.org&utm_campaign=gallery&utm_content=thumbnail",
     "legende": "Château d'Angera (Varèse). Salle de Justice - Fresque représentant Ottone Visconti, archevêque de Milan, et son armée en 1277 (détail)."
+  },
+  {
+    "id": 1305,
+    "titre": "Trần Minh Tông empereur du Dai Viet",
+    "date": 1314,
+    "date_fin": 1329,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "1314-1329 : Trần Minh Tông\nTrần Minh Tông, né sous le nom Trần Mạnh en 1300 et mort en 1357, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1314 à 1329 et le cinquième représentant de la dynastie Trần.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/CDVTranMinhTongjpg1333297930.jpg",
+    "regne": true
   },
   {
     "id": 261,
@@ -5210,6 +5249,17 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Luigi_Gonzaga_primo_Capitano_del_popolo.jpg/500px-Luigi_Gonzaga_primo_Capitano_del_popolo.jpg"
   },
   {
+    "id": 1282,
+    "titre": "Europe 1328",
+    "date": 1328,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Europe_in_1328.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "sources": "https://commons.wikimedia.org/wiki/File:Europe_in_1328.png"
+  },
+  {
     "id": 454,
     "titre": "Insurrection à Chio contre Martino Zaccaria",
     "date": 1329,
@@ -5365,6 +5415,19 @@
     "type": 4,
     "description": "6 août : traité de Haguenau entre Louis IV de Bavière et Albert le Sage. \nLes deux frères héritiers de la dynastie des Habsbourg, Frédéric le Bel et Albert le Sage  par le traité de Haguenau, renoncent à toute prétention au royaume de Germanie et reconnaissent Louis IV de Wittelsbach comme empereur. En échange, ce dernier leur reconnaît des droits sur l'héritage à venir sur la maison de Goritz : l'État de Carinthie avec la marche de Carniole. Leur patrimoine s'accroît donc en 1335 après la mort d'Henri de Goritz[1]. L'héritière d'Henri, Marguerite de Goritz, n'a pu garder que le comté de Tyrol.\nÀ la suite de son élection au trône du Saint-Empire en 1273, Rodolphe Ier accorde à Haguenau une charte de franchises le 8 décembre 1275[1. Le statut de « ville d'Empire » est définitivement reconnu à la cité qui dispose ainsi de l'immédiateté impériale avec droit de siéger à la Diète d'Empire : elle n'est désormais plus un bien personnel du souverain mais un état du Saint-Empire à part entière comme le confirme à nouveau Albert Ier en 1299. Elle intègre le Grand-Bailliage d'Alsace (Reichslandvogtei im Elsass) qui administre les biens impériaux de la région, notamment la forêt de Haguenau (Hagenauer Reichswald) et les villages d'Empire avoisinants. Les institutions municipales sont définitivement établies au milieu du XIVe siècle avec l'adoption de la Lettre des Vingt-Quatre comme constitution le 26 octobre 1331. Celle-ci permet à vingt-quatre représentants des corporations d'intégrer le conseil aux côtés des douze échevins afin d'associer la bourgeoisie au gouvernement de la ville. Le texte est approuvé par Louis IV le 6 mars 1332, et à nouveau confirmé par Venceslas Ier en 1379. Avec les autres villes impériales de la plaine d'Alsace, Haguenau forme en 1354 une alliance connue sous le nom de Décapole qui doit garantir une assistance réciproque entre ses dix membres face aux menaces extérieures. Accueillant le siège administratif du Grand-Bailliage d'Alsace, la cité devient par conséquent la capitale de l'alliance. Lorsque la ville est assiégée en 1359 par le prince-évêque de Strasbourg, Jean II de Lichtenberg, ses alliées viennent à son secours et lui permettent de régler la situation sans dommage pour elle[. La cité devient un foyer artistique important grâce au talent des copistes et des enlumineurs qu'elle accueille, notamment Diebold Lauber",
     "image": ""
+  },
+  {
+    "id": 1306,
+    "titre": "Trần Hiến Tông empereur du Đại Việt",
+    "date": 1329,
+    "date_fin": 1340,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "1329-1341 : Trần Hiến Tông\nTrần Hiến Tông, né sous le nom Trần Vượng en 1319 et mort en 1341, est l'empereur du Đại Việt de 1329 à 1341 et le sixième représentant de la dynastie Trần.\nFils de l'empereur Trần Minh Tông qui abdique en sa faveur en 1329, alors qu'il n'a que dix ans, Trần Hiến Tông dirige le pays avec son père qui garde le contrôle sur la cour.\nSon règne est marqué par les conflits avec le Laos et le royaume de Champā durant lesquels l'armée du Đại Việt essuie plusieurs défaites et perd des généraux importants. Le pays, toujours en bons termes avec l'empire mongol, reste malgré tout prospère.\nTrần Hiến Tông meurt en 1341 sans laisser d'héritier. Son père confie alors le trône à son frère Trần Dụ Tông.",
+    "image": "",
+    "regne": true
   },
   {
     "id": 455,
@@ -7285,6 +7348,19 @@
     "serie": "Guerres écossaises",
     "description": "Le retour en Écosse de David II d'Écosse en juin 1341 marque une tentative de restauration de l’autorité monarchique après une période d’instabilité profonde liée aux interventions anglaises et aux divisions internes. Accueilli favorablement, le jeune roi hérite néanmoins d’un royaume politiquement fragmenté, économiquement affaibli et institutionnellement désorganisé. L’occupation partielle par l’Angleterre, la coexistence d’administrations concurrentes et les compromissions d’une partie de la noblesse avec Édouard Balliol témoignent de l’ampleur de la crise.\n\nMalgré ces difficultés, David II parvient à réactiver les structures de gouvernement. Sous l’impulsion du chambellan William Bullock, les finances sont restaurées et les mécanismes administratifs relancés, notamment par l’émission de chartes et la convocation régulière des parlements. Toutefois, la consolidation du pouvoir royal se heurte à l’autonomie acquise par les grands seigneurs durant l’absence du roi. Les tensions avec William Douglas de Liddesdale illustrent ces résistances nobiliaires : ce dernier, figure majeure de la lutte contre l’Angleterre, n’hésite pas à défier l’autorité royale en éliminant son rival Alexandre Ramsay, sans que le roi puisse réellement intervenir. Cet épisode révèle la faiblesse relative du pouvoir monarchique face à une aristocratie militarisée et indépendante.\n\nParallèlement, David II poursuit une politique extérieure hostile à l’Angleterre, dans la continuité de l’« Auld Alliance » avec la France. Encouragé par Philippe VI de Valois, il engage plusieurs incursions en territoire anglais, culminant avec l’expédition de 1346 destinée à soutenir la France contre Édouard III d'Angleterre. Toutefois, cette campagne révèle les divisions internes de l’armée écossaise, affaiblie par des rivalités entre chefs, comme l’assassinat de Ranald MacRuairi par le comte de Ross.\nLa défaite décisive lors de la Bataille de Neville's Cross constitue un tournant majeur. L’armée écossaise est écrasée, une grande partie de son élite capturée ou tuée, et David II lui-même est fait prisonnier. Cet échec met en lumière les limites de la restauration monarchique et prolonge la crise politique en Écosse, puisque la régence est à nouveau confiée à Robert Stuart.",
     "image": ""
+  },
+  {
+    "id": 1307,
+    "titre": "Trần Dụ Tông empereur du Đại Việt",
+    "date": 1341,
+    "date_fin": 1369,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Trần Dụ Tông, né sous le nom Trần Hạo en 1336 et mort en 1369, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1341 à 1369 et le septième représentant de la dynastie Trần.\nDixième et plus jeune fils de l'empereur Trần Minh Tông, Trần Dụ Tông succède à son frère Trần Hiến Tông à sa mort en 1341, alors qu'il n'a que cinq ans, car ce dernier n'a pas d'héritier. Il dirige le pays avec son père jusqu'à la mort de celui-ci en 1357, puis règne seul jusqu'à sa propre mort douze ans plus tard.\n\nComme celui de son frère ainé, son règne est marqué par les conflits avec le Laos et le royaume de Champā durant lesquels l'armée du Đại Việt essuie plusieurs défaites et perd des généraux importants. L'économie du pays se porte moins bien et des révoltes surviennent.\n\nÀ la mort de Trần Minh Tông, les mécontentements et départs de personnages importants se multiplient, laissant la cour sous l'influence d'officiels corrompus.\n\nSouffrant d'impuissance, Trần Dụ Tông meurt en 1369 sans avoir de fils, après avoir désigné son neveu Dương Nhật Lễ pour successeur, bien que celui-ci ne fasse pas partie de la famille Trần.",
+    "image": "",
+    "regne": true
   },
   {
     "id": 585,
@@ -12459,6 +12535,16 @@
     "image": ""
   },
   {
+    "id": 1283,
+    "titre": "Europe en 1360",
+    "date": 1360,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Europe_en_1360.svg/1280px-Europe_en_1360.svg.png"
+  },
+  {
     "id": 742,
     "titre": "Dissolution de l'Empire Serbe",
     "date": 1360,
@@ -12796,6 +12882,17 @@
     "type": 2,
     "description": "La peste en Angleterre (perte de plus de 20 % de sa population)",
     "image": ""
+  },
+  {
+    "id": 1284,
+    "titre": "Europe 1360 B",
+    "date": 1360,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/AtHistEur1360.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "legende": "Carte historique de l'Europe en 1360, d'après Putzgers Historischer Schul-Atlas & Anne Le Fur"
   },
   {
     "id": 1062,
@@ -14638,6 +14735,20 @@
     "image": ""
   },
   {
+    "id": 1287,
+    "titre": "Campagne de Louis d'Anjou en Provence",
+    "date": 1367,
+    "date_fin": 1368,
+    "zones": [
+      "France",
+      "Naples"
+    ],
+    "type": 2,
+    "description": "À partir des années 1360, la Provence devient un enjeu indirect de la rivalité franco-anglaise. En 1367, Urbain V décide de transférer la papauté de nouveau à Rome, affaiblissant ainsi le contrôle pontifical sur le sud-est de la France.\nDans le même temps, Jean de Gand, fils du roi d’Angleterre Édouard III, revendique la Provence au nom de son ascendance issue d’Éléonore de Provence. Cette prétention provoque l’inquiétude des Valois : voir la Provence passer sous influence anglaise représenterait une menace stratégique majeure pour le royaume de France.\nLouis d’Anjou, frère du roi Charles V et gouverneur du Languedoc, possède lui aussi des droits dynastiques indirects sur la Provence par les alliances capétiennes. Il apparaît alors comme le principal instrument de la politique française dans la région.\nPlusieurs facteurs poussent Louis d’Anjou à intervenir :\nempêcher une implantation anglaise en Provence ;\nprofiter de l’affaiblissement politique de Jeanne de Naples ;\nétendre l’influence française vers la Méditerranée ;\ndétourner les compagnies de mercenaires qui ravagent le Languedoc après la bataille de Nájera (1367).\n\nAvec l’appui de Charles V, Louis obtient même de l’empereur Charles IV l’application du traité de Fontainebleau, qui permet théoriquement aux Valois de revendiquer les anciens droits impériaux sur le royaume d’Arles, dont dépendait historiquement la Provence.\nL’entrée des troupes françaises en Provence\n\nLe 26 février 1368, Louis d’Anjou ordonne officiellement l’invasion de la Provence. Les troupes sont placées sous le commandement de Bertrand du Guesclin, récemment libéré après sa captivité à la suite de la bataille de Nájera.\n\nLe 4 mars 1368, du Guesclin met le siège devant Tarascon, position stratégique contrôlant la basse vallée du Rhône. Le contrôle du fleuve est essentiel à une époque où le commerce dépend largement des voies fluviales.\n\nLouis d’Anjou organise alors un véritable blocus :\n\nponts de bateaux sur le Rhône ;\ncontrôle des communications ;\nisolement des villes provençales.\nLe rôle de Bertrand du Guesclin\n\nLe siège de Tarascon révèle les talents militaires de du Guesclin. Il rationalise l’usage des machines de guerre et comprend l’importance stratégique de l’artillerie dans les sièges.\n\nCette expérience influence durablement la stratégie française pendant la guerre de Cent Ans : l’artillerie devient progressivement un instrument essentiel de conquête territoriale et de réduction rapide des places fortes.\n\nCependant, les méthodes des routiers bretons provoquent une forte hostilité locale :\n\npillages ;\ndestructions ;\nlevées forcées de contributions.\nMême Avignon préfère négocier avec les mercenaires et leur verser une forte indemnité afin d’éviter un siège.\nLa mobilisation provençale\n\nFace à l’avancée française, la Provence organise sa défense autour du sénéchal Raymond d'Agoult. Les États de Provence se réunissent à Aix-en-Provence en avril 1368 afin de coordonner la résistance.\n\nMalgré plusieurs défaites militaires — notamment devant Arles en avril 1368 —, la mobilisation de la noblesse, des villes et de l’ost féodal permet progressivement de contenir l’invasion.\n\nLes Provençaux reprennent notamment Tarascon après une vaste levée militaire soutenue par Aix et Marseille.\n\nLe retournement diplomatique de Jeanne de Naples\n\nL’échec final de Louis d’Anjou est surtout diplomatique. Jeanne de Naples réalise une manœuvre habile en laissant entendre qu’elle pourrait adopter Louis comme héritier du royaume de Naples.\n\nCette promesse transforme radicalement la situation :\n\nLouis peut espérer obtenir Naples légalement ;\nune conquête militaire devient inutile et risquée ;\nle danger d’excommunication demeure réel.\n\nFace à cette nouvelle perspective, Louis d’Anjou renonce progressivement à la campagne provençale.\n\nAprès dix-neuf jours de siège infructueux devant Arles durant l’été 1368, les troupes françaises se retirent et repassent le Rhône.\n\nV. Les conséquences de la campagne\n\nL’expédition de 1368 laisse la Provence profondément dévastée :\n\ndestructions dues aux routiers ;\ncrise économique ;\nrévoltes paysannes sévèrement réprimées ;\naffaiblissement durable de certaines villes.\n\nSur le plan politique, l’échec militaire de Louis d’Anjou ne met pas fin à ses ambitions italiennes. Au contraire, le rapprochement avec Jeanne prépare son intervention future dans le royaume de Naples.\n\nPour la papauté, la crise montre les limites de son autorité politique après le retour à Rome.\n\nEnfin, l’expédition illustre l’évolution de la guerre au XIVe siècle :\nusage croissant de l’artillerie ;\nrôle central des compagnies de mercenaires ;\nimportance stratégique des sièges et des réseaux fluviaux.\nCette justification juridique masque en réalité une entreprise d’expansion politique opportuniste.\nFace à cette menace, Urbain V mène une intense activité diplomatique. Il parvient à convaincre Édouard III de freiner les ambitions de Jean de Gand, mais échoue à arrêter Louis d’Anjou.\n\nLe pape multiplie alors les mesures défensives :\n\nfortification du Comtat Venaissin ;\nappels à la fidélité envers Jeanne de Naples ;\nexcommunication des routiers et de leurs soutiens ;\ndénonciation de l’agression française.\nPar une bulle du 30 juillet 1367, Urbain V condamne explicitement les préparatifs militaires angevins contre la Provence.\nLes luttes pour le contrôle de la Provence entre 1343 et 1368 révèlent l’imbrication des crises dynastiques méditerranéennes avec les grands conflits européens du XIVe siècle. La Provence devient un espace stratégique disputé entre Angevins, Valois, papauté et puissances étrangères.\nDans cette confrontation, Louis d’Anjou apparaît comme un acteur majeur de l’expansion politique française vers la Méditerranée. Son intervention militaire en Provence, bien que finalement infructueuse, préfigure son engagement futur dans le royaume de Naples et l’affirmation des ambitions angevines françaises en Italie.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Louis-I-Anjou.jpg/960px-Louis-I-Anjou.jpg",
+    "legende": "Portrait de Louis Ier de France, duc d'Anjou, de profil, portant une tunique bleue fleurdelisée au lambel de gueules. Paris, Bibliothèque nationale de France, Fonds Roger de Gaignières, XVIIe siècle, copie d'un original disparu ?"
+  },
+  {
     "id": 743,
     "titre": "Hongwu (Dynastie Ming)",
     "date": 1368,
@@ -14905,6 +15016,17 @@
     "legende": "Adélaïde de Hesse, épouse de Casimir le Grand Jan Matejko 1865"
   },
   {
+    "id": 1271,
+    "titre": "L' Empire ottoman envahit la Bulgarie",
+    "date": 1368,
+    "zones": [
+      "Europe C. & Or.",
+      "Ottomans"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
     "id": 177,
     "titre": "Henri II de Trastamare,  « le Fratricide »",
     "date": 1369,
@@ -14940,9 +15062,324 @@
       "Byzance"
     ],
     "type": 3,
-    "description": "À Rome, Pierre Ier de Lusignan, reçoit un appel des barons de l'Arménie, le nommant comme roi et le suppliant de délivrer leur patrie. Il revient dans le royaume de Chypre pour répondre à leur demande d'aide. Son royaume, en son absence, a été secoué par les intrigues et les complots dus en partie à l'infidélité de la reine Aliénor durant ses longues absences en Europe. De plus, son incapacité à galvaniser les seigneurs européens pour lancer une nouvelle croisade le rend instable mentalement. A son retour il décide alors de se venger en faisant des avances aux épouses, filles et autres femmes de l'entourage des seigneurs chypriotes. Il fait aussi emprisonner l'intendant royal pour « n'avoir pas fourni d'huile pour les asperges », emprisonna un autre fonctionnaire qui avait signalé que la femme de Pierre avait des liaisons, et emprisonna également un autre noble qui avait refusé de vendre des chiens au fils de Pierre. Sa réaction lui met à dos sa noblesse. Après avoir libérés certains des prisonniers, 3 chevaliers se rendirent dans la chambre de Pierre et le tue puis mutilent son corps notamment en lui coupant la tête et le pénis. Il est assassiné au palais de La Cava, à Nicosie, par Jean de Gaurelle, Philippe d'Ibelin, descendant de la célèbre famille d'Ibelin de Jérusalem et de Chypre, et Henri de Jubail le 17 janvier 1369, probablement sur ordre de ses propres frères Jean de Lusignan, prince d'Antioche, et Jacques de Lusignan[réf. nécessaire].\nIl est enterré dans l'église de Saint-Dominique de Nicosie, le lieu de sépulture traditionnelle des rois de Chypre. Son successeur est son fils Pierre II de Lusignan.",
+    "description": "Le 16 janvier, Pierre Ier , roi de Chypre , est assassiné avec sa maîtresse Jeanne l'Aléman par des barons chypriotes rebelles. Son fils, Pierre II, lui succède à Chypre et comme roi titulaire de Jérusalem . Étant encore mineur, son oncle Jean de Lusignan, prince titulaire d' Antioche , assure la régence, et sa mère, Aliénor d'Aragon , devient corégente..\nÀ Rome, Pierre Ier de Lusignan, reçoit un appel des barons de l'Arménie, le nommant comme roi et le suppliant de délivrer leur patrie. Il revient dans le royaume de Chypre pour répondre à leur demande d'aide. Son royaume, en son absence, a été secoué par les intrigues et les complots dus en partie à l'infidélité de la reine Aliénor durant ses longues absences en Europe. De plus, son incapacité à galvaniser les seigneurs européens pour lancer une nouvelle croisade le rend instable mentalement. A son retour il décide alors de se venger en faisant des avances aux épouses, filles et autres femmes de l'entourage des seigneurs chypriotes. Il fait aussi emprisonner l'intendant royal pour « n'avoir pas fourni d'huile pour les asperges », emprisonna un autre fonctionnaire qui avait signalé que la femme de Pierre avait des liaisons, et emprisonna également un autre noble qui avait refusé de vendre des chiens au fils de Pierre. Sa réaction lui met à dos sa noblesse. Après avoir libérés certains des prisonniers, 3 chevaliers se rendirent dans la chambre de Pierre et le tue puis mutilent son corps notamment en lui coupant la tête et le pénis. Il est assassiné au palais de La Cava, à Nicosie, par Jean de Gaurelle, Philippe d'Ibelin, descendant de la célèbre famille d'Ibelin de Jérusalem et de Chypre, et Henri de Jubail le 17 janvier 1369, probablement sur ordre de ses propres frères Jean de Lusignan, prince d'Antioche, et Jacques de Lusignan[réf. nécessaire].\nIl est enterré dans l'église de Saint-Dominique de Nicosie, le lieu de sépulture traditionnelle des rois de Chypre. Son successeur est son fils Pierre II de Lusignan.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Assassinat_Pierre_de_Lusignan%2C_roi_de_Chypre.jpg/960px-Assassinat_Pierre_de_Lusignan%2C_roi_de_Chypre.jpg",
     "legende": "Assassinat de Pierre de Lusignan, roi de Chypre Jean Froissart, Chroniques, Brugges, XVe siècle (BNF, FR 2645)"
+  },
+  {
+    "id": 1253,
+    "titre": "Yoshimitsu Ashikaga shogun",
+    "date": 1369,
+    "mois": 12,
+    "date_fin": 1394,
+    "zones": [
+      "Japon"
+    ],
+    "type": 2,
+    "description": "30 décembre : Yoshimitsu Ashikaga (1358-1408) devient shogun au Japon (fin en 1394)[1]. Le plus efficace des shoguns Ashikaga, il parvient à maîtriser les principaux daimyôs (seigneurs féodaux) et assure la puissance de sa maison. Il abdique ensuite, se fait moine et construit le « Kinkaku-ji » (Pavillon d’Or).\nAshikaga devient shogun dans l'année qui suit la mort de son père, le shogun Ashikaga Yoshiakira, en 1367. En 1378, il fait construire sa résidence dans le quartier Muromachi de la capitale de l'époque, Kyōto, ce qui fait qu'on se réfère souvent aujourd'hui au shogunat Ashikaga et à la période résultante de l'histoire du Japon en disant « shogunat Muromachi » et « période Muromachi ».\n\nAshikaga unit les cours du Nord et du Sud en 1392, mettant fin à la période de près de soixante ans appelée « Nanboku-chō ». Cela établit fermement le shogunat Muromachi et supprime le pouvoir des daimyōs régionaux.\n\nIl échange des ambassades avec la Chine des Ming[1] qui cherche à lutter contre les pirates wakô. Il accepte le titre de guowang (japonais : kokuô), roi vassal de la Chine, qui lui permet de commercer avec elle sous couvert de paiement de tribut et de réception de cadeaux[2].\n\nEn 1394, il quitte son poste de shogun et obtient le plus haut titre de daijō-daijin (ministre d'Affaires suprêmes). À sa mort, en 1408, la cour impériale propose officiellement de lui attribuer le titre posthume d'empereur retiré, mais son fils Yoshimochi refuse alors d'accepter cette attribution, à cause des mauvaises relations qu'il entretenait avec son père. Sa villa devient le Kinkaku-ji, le temple du Pavillon d'or.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Yoshimitsu_Ashikaga_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original&uselang=fr",
+    "legende": "portrait de Yoshimitsu Ashikaga du début du XVe siècle (image de Yoshimitsu Ashikaga, temple Rokuon-ji).",
+    "regne": true
+  },
+  {
+    "id": 1254,
+    "titre": "Les Thaïs envahissent le Cambodge et prennent Angkor",
+    "date": 1369,
+    "zones": [
+      "Orient"
+    ],
+    "type": 3,
+    "description": "Le royaume thaïlandais d'Ayutthaya conquiert le Cambodge pour la deuxième fois.. Les Thaïs envahissent le Cambodge et prennent une première fois Angkor",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Templo_de_Angkor_Wat_en_Camboya.JPG/960px-Templo_de_Angkor_Wat_en_Camboya.JPG",
+    "legende": "Angkor Vat, l'un des temples d'Angkor."
+  },
+  {
+    "id": 1255,
+    "titre": "Récurrence de la peste",
+    "date": 1369,
+    "zones": [
+      "France",
+      "Angleterre",
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Récurrence de la peste en Europe. L’Angleterre perd 13,1 % de sa population",
+    "image": ""
+  },
+  {
+    "id": 1256,
+    "titre": "Cahors se soulève contre l'occupation anglaise[",
+    "date": 1369,
+    "mois": 1,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
+    "serie": "Guerre de Cent ans",
+    "description": "15 janvier : Cahors se soulève contre l'occupation anglaise\n5 février : les consuls de Cahors jurent de porter secours au roi de France Charles V déclarant que, « même sous la domination anglaise, ils n'avaient jamais cessé d'avoir le cœur français »",
+    "image": ""
+  },
+  {
+    "id": 1257,
+    "titre": "Révolte à Sienne contre l'empereur Charles IV",
+    "date": 1369,
+    "mois": 1,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 3,
+    "description": "18 janvier : révolte à Sienne contre l'empereur Charles IV qui doit rendre ses privilèges à la ville (diplôme du 6 avril)\nLa première campagne italienne de Charles , tout comme sa seconde en 1368-1369 (durant laquelle il collabora avec le pape Urbain V , dont il espérait le retour de la papauté d' Avignon à Rome), eut peu d'impact. Sa politique italienne fut largement inefficace, Charles se contentant de la couronne impériale. Il collecta des fonds auprès des communes et accorda des privilèges en échange, mais n'intervint guère davantage dans les affaires italiennes ; son comportement fut qualifié de celui d'un marchand (voir Matteo Villani et Pétrarque ). Charles abandonna ainsi la politique universaliste de son grand-père Henri VII au profit d'une politique impériale fondée sur le pouvoir dynastique . Il obtint néanmoins la reconnaissance de son titre d'empereur par Florence et Milan et ne renonça à aucun droit impérial en Italie.",
+    "image": ""
+  },
+  {
+    "id": 1258,
+    "titre": "Bataille de Montiel",
+    "date": 1369,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre",
+      "Castille"
+    ],
+    "type": 2,
+    "description": "La bataille de Montiel, livrée le 14 mars 1369 dans le sud-est de la Castille, constitue l’épisode décisif de la première guerre civile castillane et un tournant majeur dans l’équilibre politique de l’Europe occidentale au XIVe siècle. Elle oppose les partisans du roi Pierre Ier de Castille, dit « Pierre le Cruel », soutenus par des alliés pro-anglais et portugais, aux forces franco-castillanes d’Henri de Trastamare, commandées notamment par Bertrand Du Guesclin et Olivier de Mauny. La victoire d’Henri marque non seulement la fin de la guerre civile castillane, mais aussi un succès stratégique important pour la monarchie française dans le contexte plus large de la guerre de Cent Ans.\n\nLe contexte : la guerre civile castillane et les rivalités européennes\n\nDepuis son accession au trône, Pierre Ier de Castille se heurte à l’hostilité d’une partie de la haute noblesse castillane ainsi qu’aux nombreux enfants illégitimes de son père, Alphonse XI. Son demi-frère Henri de Trastamare devient progressivement le chef de l’opposition nobiliaire. Cette lutte dynastique prend rapidement une dimension internationale en raison du contexte de la guerre de Cent Ans.\n\nEn 1365, la France et l’Angleterre observent une trêve relative. Le roi de France Charles V saisit alors l’occasion d’intervenir indirectement dans le conflit castillan. Son objectif est double : se débarrasser des « grandes compagnies » de mercenaires qui ravagent le royaume en temps de paix, et installer en Castille un souverain allié capable de soutenir la France contre l’Angleterre. Avec l’appui financier du pape, présenté officiellement comme destiné à préparer une croisade contre le royaume musulman de Grenade, Charles V soutient Henri de Trastamare.\n\nÀ l’inverse, le Prince Noir, Édouard de Woodstock, apporte son soutien à Pierre Ier, sans toutefois engager officiellement l’Angleterre afin de respecter les termes de la trêve franco-anglaise. La guerre civile castillane devient ainsi un prolongement indirect de la rivalité franco-anglaise.\n\nLe déroulement de la bataille\n\nLa campagne militaire débute en décembre 1365 et connaît plusieurs retournements de situation. Après avoir bénéficié un temps de l’aide anglaise, Pierre Ier se retrouve progressivement isolé lorsque le Prince Noir abandonne son soutien actif.\n\nLa confrontation décisive a lieu sous les remparts du château de l’Étoile, à Montiel, le 14 mars 1369. Les forces d’Henri de Trastamare, renforcées par les troupes françaises commandées par Bertrand Du Guesclin, affrontent les partisans de Pierre Ier, soutenus par des contingents portugais et grenadins.\n\nLa bataille se solde par une victoire écrasante des Franco-Castillans. Pierre Ier est capturé quelques jours plus tard et meurt dans la nuit du 22 au 23 mars 1369 lors d’une altercation avec son demi-frère Henri de Trastamare, qui l’assassine personnellement selon plusieurs chroniques. Henri accède alors au trône sous le nom d’Henri II de Castille.\n\nLes conséquences politiques et militaires\n\nLa bataille de Montiel met définitivement fin à la première guerre civile castillane et fonde la dynastie des Trastamare en Castille. Le nouveau roi Henri II devient un allié fidèle de la France, ce qui modifie durablement les rapports de force dans la guerre de Cent Ans. La Castille apporte notamment un soutien naval précieux aux Français contre l’Angleterre.\n\nPour Charles V, la victoire représente un succès diplomatique et stratégique considérable. Elle lui donne la confiance nécessaire pour reprendre les hostilités contre les Anglais. En outre, l’expérience militaire acquise lors de cette campagne contribue à l’évolution de la stratégie française : les Français, marqués par les défaites de Crécy et de Poitiers, réduisent progressivement le rôle traditionnel de la chevalerie lourde au profit de l’infanterie et de l’artillerie. La bataille de Montiel est parfois considérée comme l’un des premiers grands déploiements d’artillerie de l’histoire militaire française.\n\nCependant, le conflit ibérique ne s’achève pas complètement. Le roi Ferdinand Ier du Portugal, soutenu par l’Angleterre et l’Aragon, poursuit la lutte contre Henri II dans l’espoir de conquérir la Castille.\n\nLa mémoire de la bataille\n\nLa bataille de Montiel a profondément marqué les chroniqueurs médiévaux. Les Grandes Chroniques de France évoquent la « déconfiture » du roi Pierre et sa mort. Jean Froissart consacre plusieurs passages de ses Chroniques à l’affrontement et à l’assassinat de Pierre Ier. D’autres auteurs, comme Jean de Wavrin ou les rédacteurs de la Chronique de Flandre, reprennent également cet épisode, soulignant souvent la dimension dramatique du fratricide.\n\nLa bataille inspire aussi la littérature postérieure. Alexandre Dumas en fait le point culminant de son roman historique Le Bâtard de Mauléon.\n\nConclusion\n\nLa bataille de Montiel apparaît comme un événement majeur du XIVe siècle européen. Au-delà de la simple rivalité dynastique castillane, elle illustre l’internationalisation des conflits médiévaux et l’imbrication entre la guerre civile espagnole et la guerre de Cent Ans. La victoire d’Henri II de Trastamare assure à la France un allié stratégique essentiel et contribue à la transformation des pratiques militaires occidentales. Enfin, l’assassinat de Pierre Ier par son propre demi-frère donne à l’événement une portée symbolique durable dans les mémoires et les récits historiques médiévaux.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Battle_of_Montiel.jpg/960px-Battle_of_Montiel.jpg",
+    "legende": "La bataille de Montiel d'après une miniature du XVe siècle réalisée par Loyset Liédet. BnF Ms 2643."
+  },
+  {
+    "id": 1259,
+    "titre": "Soulèvement de l'Aquitaine contre l'occupation anglaise",
+    "date": 1369,
+    "mois": 3,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "serie": "Guerre de Cent ans",
+    "description": "18 mars : plus de huit cents villes ou châteaux de la principauté d'Aquitaine en ont appelé au roi de France et se sont soustraits à la domination anglaise",
+    "image": ""
+  },
+  {
+    "id": 1260,
+    "titre": "Assassinat de Pierre le Cruel",
+    "date": 1369,
+    "mois": 3,
+    "zones": [
+      "Castille"
+    ],
+    "type": 2,
+    "description": "Informé que Pierre est retenu dans la tente de Pierre de Villaines où l'état-major français est réuni, Henri de Trastamare s'y précipite.\n\nMalgré les protestations des généraux français, il taillade le visage du prisonnier et tente de percer sa cotte de mailles avec son poignard. L'autre cherchant à se défendre, les deux demi-frères roulent à terre, remplis de haine et de fureur.\nRelevé par un de ses fidèles (le bâtard d'Anisse), Henri fait signe à l'un de ses cavaliers de trancher la tête de Pierre. Plantée au bout d'une pique, la tête est promenée de ville en ville pour obtenir la reddition de celles qui lui sont encore loyales.\nLes restes de Pierre restent au château de Montiel pendant plusieurs années, puis sont transférés dans l'église de Puebla de Alcocer en Estrémadure. En 1446, le roi Jean II les fait amener au couvent de Saint-Dominique à Madrid.\n\nIls se trouvent aujourd'hui dans la chapelle royale de la cathédrale de Séville.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Pedro_Castile_beheading2.jpg/960px-Pedro_Castile_beheading2.jpg",
+    "legende": "Décapitation de Pierre le Cruel (manuscrit du XVe siècle)."
+  },
+  {
+    "id": 1261,
+    "titre": "Lucques achète sa liberté à l'empereur Charles IV",
+    "date": 1369,
+    "mois": 4,
+    "zones": [
+      "St Empire",
+      "Italie"
+    ],
+    "type": 4,
+    "description": "6 avril : Lucques achète sa liberté à l'empereur Charles IV. Le cardinal Gui de Montfort est nommé vicaire impérial en attendant que la ville solde sa dette (fin le 26 mars 1370)[9].",
+    "image": ""
+  },
+  {
+    "id": 1262,
+    "titre": "Les États généraux réunis à Paris approuvent les hostilités contre l'Angleterre",
+    "date": 1369,
+    "mois": 5,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "serie": "Guerre de Cent ans",
+    "description": "9 mai : les États généraux de France réunis à Paris approuvent les hostilités contre l'Angleterre[7]. Reprise de la guerre de Cent Ans : la France reprend la majeure partie de l'Aquitaine et de la Normandie.\n30 novembre : Charles V prononce la confiscation de l’Aquitaine\n7 décembre : nouvelle convocation des États généraux à Paris qui permet la levée de nouveaux impôts pour faire face à la guerre contre les Anglais.",
+    "image": ""
+  },
+  {
+    "id": 1263,
+    "titre": "Philippe II le Hardi épouse Marguerite de Mâle, héritière du comte de Flandre",
+    "date": 1369,
+    "mois": 6,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "19 juin : Philippe II le Hardi, duc de Bourgogne, épouse Marguerite de Mâle, héritière du comte de Flandre Louis de Mâle et veuve de Philippe de Rouvres. \nce qui, en 1384, lui donna la domination sur les Flandres , l'Artois , Nevers , Rethel et le comté libre de Bourgogne .\nPhilippe II le Hardi combat les Anglais en Normandie et dans le Poitou (jusqu'en 1373)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Lille_Margueritte_de_Flandre.JPG/960px-Lille_Margueritte_de_Flandre.JPG",
+    "legende": "Margueritte III de Flandre 16e siècle  Musée de l'Hospice Comtesse Lille"
+  },
+  {
+    "id": 1264,
+    "titre": "Traité de Schärding",
+    "date": 1369,
+    "mois": 9,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "28 septembre : traité de Schärding (de) entre les Habsbourg et les Wittelsbach de Bavière qui sont écartés de la succession du Tyrol moyennant un dédommagement financier. \nLa paix de Schärding, signée entre Étienne  II de Bavière-Landshut et le duc autrichien Albrecht  III, met fin aux différends entre la Bavière et l'Autriche concernant la souveraineté sur le Tyrol . La Bavière renonce à ses prétentions sur le Tyrol en échange d'une compensation financière ; seuls les districts de Kufstein , Kitzbühel et Rattenberg restent bavarois, et la ville de Schärding elle-même, auparavant sous la domination des Habsbourg , retourne à la Bavière.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sch%C3%A4rding%2C_Tafel_Friede_von_Sch%C3%A4rding%2C_2.jpeg/1280px-Sch%C3%A4rding%2C_Tafel_Friede_von_Sch%C3%A4rding%2C_2.jpeg",
+    "legende": "Plaque commémorative marquant la paix de Schärding"
+  },
+  {
+    "id": 1265,
+    "titre": "Jean V Paléologue à Rome",
+    "date": 1369,
+    "mois": 10,
+    "zones": [
+      "Papaute",
+      "Byzance"
+    ],
+    "type": 2,
+    "description": "18 octobre : Jean V Paléologue se rend à Rome pour trouver de l’aide et accepte en contrepartie une profession de foi conforme au dogme catholique; il reconnaît le pape comme chef de toute la chrétienté[12]. L'union religieuse entre Rome et Constantinople est traitée par l’ambassadeur et savant Démétrios Chrysoloras (°v.1350-1415).",
+    "image": ""
+  },
+  {
+    "id": 1266,
+    "titre": "Soulèvement des tisserands de Cologne",
+    "date": 1369,
+    "mois": 5,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "20 mai Début du soulèvement des tisserands de Cologne . Le jour de la Pentecôte, ils prennent d'assaut la prison de Cologne et lynchent un homme arrêté pour vol, estimant que le procès s'éternise.",
+    "image": ""
+  },
+  {
+    "id": 1267,
+    "titre": "Louis II de Mantoue",
+    "date": 1369,
+    "mois": 9,
+    "date_fin": 1382,
+    "mois_fin": 10,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Louis II Gonzague, en italien Luigi II ou Ludovico II Gonzaga (né en 1334 et mort le 4 octobre 1382 à Mantoue) est un noble italien du XIVe siècle, qui fut le troisième capitaine du peuple (capitano del Popolo) de la ville de Mantoue (dans l'actuelle région de Lombardie en Italie).\nLouis, fils cadet de Guy de Mantoue et de Béatrice de Bar, a 35 ans lorsque son père meurt en 1369. Certains historiens pensent que le père a été assassiné et que Louis en est l'auteur. Il semble cependant avéré que Louis et son frère benjamin, Francesco, sont les meurtriers de leur frère aîné Ugolino, en 1362, de même que Louis s'est débarrassé de Francesco, le 7 juillet 1369 (soit deux mois et demi avant son père).\n\nEt pourtant, il s'agit d'un homme plutôt renfermé et d'apparence insignifiante mais, en fait, il est rusé et machiavélique au possible. En raison des bruits qui courent sur son implication dans le parricide et pour montrer qu'il n'est pas aussi avide de pouvoir qu'on veut bien le dire, il a la finesse de ne pas réclamer de suite la succession de son père et préfère se laisser désirer par les mantouans dont les conseillers hésitent entre la politique « gonzaguienne » et le régime antérieur. Six mois plus tard, le désordre et la discorde sociale contraignent le conseil de Mantoue à faire appel à lui pour perpétuer la fonction de capitaine du peuple.\n\nDans son ouvrage I Gonzaga a Mantova (Les Gonzague à Mantoue) (1975), l'historien italien Ercolano Marani le décrit ainsi :\n\n« Il y a de toute façon un fort contraste entre les mémoires qui concernent la jeunesse de ce Gonzague et celles qui concernent la courte période de son gouvernement. D'une part, on condamne l'ambition féroce du cadet, peut-être adaptée aux intrigues politiques externes, en tout cas ayant conduit à la réalisation des crimes que l'on sait ; d'autre part, on reconnaît la clémence, la libéralité et la rectitude du seigneur qui, en louvoyant avec sagesse et discrétion entre les embûches des conflits de l'époque, sut servir avec dignité les intérêts de l'État et se gagner la reconnaissance de la population. Il semble que l'homme ait fini par considérer le pouvoir comme le moyen de se racheter des méthodes louches avec lesquelles il l'avait conquis.[1] »\n\nFort impliqué dans les conflits entre guelfes et gibelins qui émaillèrent le règne de son grand-père Louis et surtout celui de son père (cf. l'article sur Guy de Mantoue), Louis II mettra un point d'honneur (et d'intrigue) à marier son fils François à Agnès Visconti, fille de son (ex-) ennemi juré, le seigneur milanais Barnabé Visconti. Ceci eut quand même pour effet d'apaiser les inimitiés entre Milan et Mantoue et mit en valeur son habileté diplomatique.\n\nLouis II aura comme épouse, en 1365, Alda d'Este qui lui donnera deux enfants :\nFrançois qui lui succédera en qualité de capitaine du peuple et qui perpétuera la dynastie,\nÉlisabeth qui épousera Carlo I Malatesta, seigneur de Rimini.\nLouis est décédé en 1382, dans sa 48e année.",
+    "image": ""
+  },
+  {
+    "id": 1268,
+    "titre": "Vladislav Ier de Valachie libère Vidin des Hongrois",
+    "date": 1369,
+    "mois": 2,
+    "zones": [
+      "Hongrie",
+      "Europe C. & Or."
+    ],
+    "type": 4,
+    "description": "Vladislav Ier de Valachie libère Vidin des Hongrois, ce qui entraîne la restauration d' Ivan Sratsimir sur le trône de Bulgarie , à l'automne.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Baba_Vida_Castle_%2827379217451%29.jpg/1920px-Baba_Vida_Castle_%2827379217451%29.jpg"
+  },
+  {
+    "id": 1269,
+    "titre": "Les Français incendient Portsmouth",
+    "date": 1369,
+    "mois": 9,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "serie": "Guerre de Cent ans",
+    "description": "Les Français incendient Portsmouth , en Angleterre ;  les Anglais pillent la Picardie et la Normandie .",
+    "image": ""
+  },
+  {
+    "id": 1270,
+    "titre": "Le Gallois Owain Lawgoch tente une invasion",
+    "date": 1369,
+    "mois": 12,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 4,
+    "serie": "Guerre de Cent ans",
+    "description": "Financé par Charles Quint de France, le Gallois Owain Lawgoch lance une flotte d'invasion contre les Anglais, dans le but de revendiquer le trône du Pays de Galles . [ 3 ] Une tempête oblige Owain à abandonner l'invasion.",
+    "image": ""
+  },
+  {
+    "id": 1272,
+    "titre": "Venise repousse une invasion hongroise .",
+    "date": 1369,
+    "zones": [
+      "Italie",
+      "Hongrie"
+    ],
+    "type": 4,
+    "image": ""
+  },
+  {
+    "id": 1274,
+    "titre": "L' empereur Hongwu ordonne l'ouverture d'écoles confucéennes.",
+    "date": 1369,
+    "zones": [
+      "Chine"
+    ],
+    "type": 3,
+    "description": "L' empereur Hongwu de la dynastie Ming chinoise promulgue un décret ordonnant à chaque magistrat de campagne de l'empire d'ouvrir une école confucéenne .\nLa production officielle de porcelaine de Jingdezhen sous la dynastie Ming en Chine est documentée.",
+    "image": ""
+  },
+  {
+    "id": 1275,
+    "titre": "Siège de Zamora",
+    "date": 1369,
+    "mois": 6,
+    "date_fin": 1371,
+    "mois_fin": 2,
+    "zones": [
+      "Castille"
+    ],
+    "type": 3,
+    "description": "Synthèse universitaire : le siège de Zamora (1369-1371)\n\nLe siège de Zamora, qui se déroule de juin 1369 au 26 février 1371, constitue l’un des épisodes majeurs des guerres fernandines opposant Ferdinand Ier du Portugal à Henri II de Castille. Cependant, cet affrontement ne peut être compris qu’à la lumière de la première guerre civile castillane, qui avait opposé Pierre Ier de Castille à son demi-frère Henri de Trastamare. Le siège apparaît ainsi comme le prolongement direct de la crise dynastique castillane après la bataille de Montiel et l’assassinat de Pierre Ier en 1369.\n\nLe contexte : la survie du parti « pétriste »\n\nDepuis 1367, la ville de Zamora s’était solidement ralliée à la cause de Pierre Ier et représentait l’un des bastions les plus fidèles du camp « pétriste », c’est-à-dire des partisans du roi défunt. Après la victoire d’Henri de Trastamare à Montiel et le meurtre de Pierre Ier, une partie de la noblesse castillane refusa de reconnaître le nouveau souverain.\n\nLa figure centrale de cette résistance est Fernando Alfonso de Valencia, arrière-petit-fils des rois Alphonse X et Sanche IV de Castille. Présent à Montiel lors de la mort de Pierre Ier, il parvient à s’échapper et rejoint Zamora, où il organise la révolte contre Henri II. Il contrôle alors plusieurs villes stratégiques, notamment Zamora, Ciudad Rodrigo, Alcántara et Tuy.\n\nFernando Alfonso cherche rapidement à internationaliser le conflit en sollicitant l’aide du Portugal. Il pousse le roi Ferdinand Ier à revendiquer la couronne de Castille en invoquant l’illégitimité d’Henri II, considéré comme un usurpateur et un fratricide. Cette revendication dynastique déclenche les guerres fernandines (1369-1382), au cours desquelles le Portugal tente d’exploiter la crise castillane pour imposer ses prétentions.\n\nLe déclenchement du siège\n\nEn juillet 1369, Ferdinand Ier entre en Galice avec ses troupes et reçoit le soutien de nombreuses villes et nobles pétristes. Plusieurs cités reconnaissent même le souverain portugais comme roi légitime de Castille, parmi lesquelles Zamora, La Corogne, Lugo ou Ciudad Rodrigo. Le parti pétriste se reconstitue ainsi autour de la cour portugaise.\n\nFace à cette menace, Henri II décide d’écraser les foyers de résistance castillans. Dès juin 1369, Zamora est assiégée par les forces royales castillanes appuyées par des mercenaires bretons commandés par Bertrand du Guesclin. Le camp d’Henri II s’établit sur la rive gauche du Douro, près du pont de la ville.\n\nToutefois, le siège est temporairement interrompu lorsque Henri II apprend l’entrée des Portugais en Galice. Il mène alors une contre-offensive afin d’empêcher Ferdinand Ier de consolider son implantation dans le nord-ouest de la péninsule. Malgré quelques succès militaires, le Portugal ne parvient pas à fournir une aide suffisante aux insurgés castillans, qui restent relativement isolés.\n\nLa résistance de Zamora\n\nLa défense de Zamora repose autant sur des considérations politiques que juridiques. Les habitants affirment demeurer fidèles au serment prêté à Pierre Ier et considèrent qu’après la mort du roi légitime, la couronne ne peut revenir à Henri II. Ils soutiennent au contraire les droits dynastiques de Ferdinand Ier du Portugal, descendant de Sanche IV.\n\nLa ville organise une résistance particulièrement acharnée sous la direction de Fernando Alfonso de Valencia et du chevalier salmantin Alfonso López de Tejeda. Les assiégés multiplient les sorties contre les troupes royales. Lors de l’une de ces opérations, Fernando Alfonso est capturé par le chambellan royal Pedro Fernández de Velasco, bien que les circonstances exactes de son arrestation demeurent obscures.\n\nMalgré cette perte, Zamora poursuit sa résistance. Henri II confie alors la direction du siège à son épouse, Jeanne Manuel de Villena, ainsi qu’à Pedro Fernández de Velasco. La ville souffre progressivement de la famine, du manque de renforts portugais et de l’épuisement de ses ressources.\n\nLa chute de Zamora et le drame du château\n\nLe 26 février 1371, après de longues négociations menées notamment par le religieux Pedro Tenorio, futur archevêque de Tolède, Zamora capitule et ouvre ses portes aux troupes d’Henri II.\n\nCependant, le château de Zamora refuse de se rendre. Son défenseur, Alfonso López de Tejeda, poursuit la lutte avec son épouse Inés Álvarez de Sotomayor, leur fils aîné et plusieurs nobles fidèles à la cause pétriste. Selon les chroniques portugaises, la reine Jeanne Manuel menace alors d’exécuter trois des enfants d’Alfonso López si celui-ci ne capitule pas. Malgré cette menace, le commandant refuse de céder, et les enfants sont décapités.\n\nCet épisode tragique marque durablement les mémoires médiévales. Les chroniqueurs présentent tantôt l’intransigeance d’Alfonso López comme un acte héroïque, tantôt comme une obstination inutile. Finalement, accablés par la faim et la peste, les défenseurs abandonnent le château et se réfugient au Portugal afin de poursuivre la lutte contre Henri II.\n\nPortée historique du siège\n\nLe siège de Zamora représente l’un des derniers grands foyers de résistance pétriste après Montiel. Sa chute consolide définitivement le pouvoir d’Henri II en Castille et affaiblit considérablement les ambitions portugaises sur le trône castillan.\n\nL’épisode illustre également l’internationalisation croissante des conflits ibériques au XIVe siècle. La guerre civile castillane se transforme en affrontement entre plusieurs puissances européennes : la Castille trastamare, soutenue par la France, s’oppose au Portugal allié à l’Angleterre dans le contexte général de la guerre de Cent Ans.\n\nEnfin, le siège de Zamora témoigne de la violence politique et symbolique des guerres dynastiques médiévales. Le meurtre des enfants d’Alfonso López de Tejeda, rapporté par les chroniques postérieures, devient un symbole de cruauté et de fidélité extrême à la cause pétriste. La mémoire de ces événements perdure longtemps dans la tradition historique castillane et portugaise.\n\nConclusion\n\nLe siège de Zamora constitue un épisode essentiel de la consolidation de la dynastie des Trastamare. Par la résistance obstinée de ses habitants, la ville incarne la survivance du camp pétriste après la mort de Pierre Ier. Sa chute en 1371 permet à Henri II d’affermir définitivement son autorité sur la Castille tout en réduisant les ambitions portugaises. Plus largement, l’événement révèle l’imbrication des conflits dynastiques ibériques avec les grands affrontements européens du XIVe siècle, notamment la guerre de Cent Ans.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Catedral_zamora.JPG"
+  },
+  {
+    "id": 1278,
+    "titre": "Réforme du système de recrutement du mandarinat",
+    "date": 1369,
+    "mois": 6,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "réforme du système de recrutement du mandarinat (concours) et rétablissement des titres de noblesse. Interdit sur les sociétés secrètes du Lotus Blanc et du Nuage Blanc à la fin du mois.\nL’existence de fonctionnaires en Chine est attestée dès l’époque de la dynastie Zhou. Sous les Qin (221-207 av. J.-C.), des formes de recrutement sur la base du mérite personnel apparaissent déjà. Par la suite, durant l’ère des Han (202 av. J.-C. - 220 apr. J.-C.) est mis en place le système dit du xiaolian qui définit les critères de mérites nécessaires aux fins de nominations et affectations aux postes publics, en particulier aux emplois militaires. Après la chute de la dynastie Han, la part du mérite régresse dans le recrutement de la bureaucratie chinoise, en évoluant vers le Système des neuf rangs (chinois : 九品官人法). Ce modèle de nomination aux postes civils fut en vogue durant la période des Trois Royaumes de Chine et des Dynasties du Nord et du Sud mais, corruptible et renforçant les clans locaux et la noblesse guerrière, il fut abandonné au profit du plus efficace système des examens impériaux, en 605, sous la courte dynastie Sui (581-618).\nLa sélection des candidats (pré-Sui) se fait par les autorités locales. Les candidats sont classés en neuf rangs de capacité, selon le niveau géographique de pouvoir, mais le processus tend à favoriser les familles riches et puissantes, sans réels égards à la valeur des candidats. Le « carré de mandarin » brodé sur leur manteau permettait de les distinguer, au niveau du rang et de la fonction.\nLes fonctionnaires proches de l'Empereur et à la tête des trois départements et six ministères appartiennent au Premier rang (chinois : 第一品 ; pinyin : díyìpǐn) ; ceux qui ne sont responsables que d'un comté judiciaire relèvent du Neuvième rang, lui-même subdivisé en 正, zhèng, « régulier », 從, cóng, « député », 上, shàng, « supérieur » et 下, xià, « inférieur ».\nSous les Ming s’achève la compilation par Hu Guang (1370–1418) et d’autres membres de l’Académie Hanlin des textes néoconfucéens destinés à la préparation des examens mandarinaux : La Grande Somme sur la nature et le principe, la Grande Somme sur les Cinq Classiques et la Grande Somme sur les Quatre Livres qui devint le texte de base des compositions d’examen « en huit parties » (bagu wen) et qui consistait à développer en huit paragraphes une citation tirée d’un texte classique. Au début de la dynastie Ming, les examens duraient entre 24 et 72 heures, les candidats étant isolés dans des pièces séparées. Pour maintenir l’objectivité de la correction, les candidats sont identifiés par un chiffre plutôt que par leur nom et les copies d’examens sont recopiées avant d’être corrigées. Le formalisme sera encore plus poussé sous les Ming (1368–1644) et les Qing (1644–1911), par l’introduction de sévères contraintes tenant au style et au nombre de caractères permis dans les dissertations.\nUn système similaire fut appliqué au Vietnam qui formait ses mandarins dans les différentes académies impériales et dans ses temples de la Littérature, dont le plus fameux est celui de Hanoï.\nDécrite dans des ouvrages en Europe dès la fin du XVIe siècle[2], la pratique chinoise du recrutement des fonctionnaires par concours est adoptée progressivement par les États occidentaux. Expérimenté en Prusse au XVIIIe siècle, puis en 1832 pour l'Indian Civil Service de l'Inde britannique, le système est instauré en Grande-Bretagne même, pour le Home Civil Service, et dans d'autres pays d'Europe[3],[4].\n\nQuant à la Chine, le principe méritocratique, remis en cause sous Mao Zedong, a été réintroduit à partir de la fin des années 1970 et depuis 1993, le recrutement des fonctionnaires se fait à nouveau systématiquement sur concours[5]. Les concepts d'élites et d'élitisme ont pleinement retrouvé droit de cité dans le discours politique",
+    "image": ""
+  },
+  {
+    "id": 1299,
+    "titre": "Guerre de Succession de Lunebourg",
+    "date": 1369,
+    "date_fin": 1389,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "La guerre de Succession de Lunebourg (1369-1389) : une lutte dynastique et politique dans le nord du Saint-Empire\n\nLa guerre de Succession de Lunebourg éclate à la mort du duc Guillaume II de Lunebourg, le 23 novembre 1369, sans héritier mâle direct. Ce conflit oppose pendant près de vingt ans deux grandes maisons princières du Saint-Empire : les Welfs de Brunswick-Lunebourg et les Ascaniens de Saxe-Wittenberg, soutenus par l’empereur Charles IV. Derrière la querelle successorale se joue également l’affirmation des villes du nord de l’Empire, notamment Lunebourg et Hanovre, qui cherchent à accroître leur autonomie face au pouvoir princier.\n\n1. Les origines du conflit (1355-1369)\n\nEn 1355, le duc Guillaume de Lunebourg fiance sa fille Mathilde au jeune Louis, fils du duc Magnus Ier de Brunswick. L’objectif est alors de réunir les possessions welfes de Brunswick et de Lunebourg. Louis devient rapidement associé au gouvernement du duché.\n\nMais la situation se complique lorsque l’empereur Charles IV accorde la même année aux ducs ascaniens de Saxe-Wittenberg — Rodolphe Ier, Rodolphe II, Venceslas et Albert — un droit éventuel de succession sur Lunebourg si Guillaume venait à mourir sans héritier masculin. L’empereur considère en effet que le duché est un fief impérial susceptible de revenir à la couronne.\n\nLa mort prématurée de Louis en 1367 pousse Guillaume à désigner comme héritier son frère Magnus II de Brunswick-Lunebourg. À la disparition de Guillaume en novembre 1369, Charles IV refuse cependant de reconnaître cette succession et investit officiellement les Ascaniens du duché de Lunebourg. Cette décision provoque immédiatement la guerre.\n\n2. L’insurrection des villes et le début de la guerre (1370-1373)\n\nDès 1370, la ville de Lunebourg se rapproche des Ascaniens afin d’obtenir des privilèges et d’échapper à l’autorité des Welfs. Le 1er février 1371, les habitants s’emparent par surprise du château du Kalkberg, symbole du pouvoir ducal, et le détruisent. Magnus II doit alors transférer sa résidence à Celle.\n\nLes Ascaniens reçoivent ensuite l’hommage de Lunebourg et de Hanovre, auxquelles ils promettent de nouveaux privilèges politiques et commerciaux. Hanovre obtient notamment le droit de détruire le château de Lauenrode, qui dominait la ville.\n\nMagnus II tente de reprendre Lunebourg par la force lors de la « nuit de la Sainte-Ursule », dans la nuit du 20 au 21 octobre 1371. Ses troupes pénètrent dans la ville mais sont repoussées après de violents combats de rue. Cette défaite affaiblit durablement les Welfs.\n\nLes années suivantes voient une succession de sièges, de raids et d’alliances fluctuantes dans toute la région. Les Welfs s’appuient sur plusieurs nobles saxons et sur les villes de Brunswick et Celle, tandis que les Ascaniens obtiennent le soutien du Brandebourg, de Magdebourg et du Mecklembourg.\n\nLe conflit connaît un tournant lorsque Magnus II est tué au combat près de Leveste le 25 juillet 1373.\n\n3. Le traité de Hanovre et le partage du pouvoir (1373-1385)\n\nAprès la mort de Magnus II, aucun camp n’est capable d’imposer une victoire décisive. Le traité de Hanovre, conclu en 1373, établit donc un compromis inédit entre les deux dynasties.\n\nLe gouvernement du duché doit désormais être partagé entre les Ascaniens et les fils de Magnus II, notamment Bernard Ier de Brunswick-Lunebourg et Frédéric. Le pouvoir doit alterner entre les deux familles. Pour garantir cet accord, plusieurs mariages dynastiques sont organisés entre Welfs et Ascaniens.\n\nCependant, cette paix reste fragile. Les frères cadets, surtout Henri de Brunswick-Lunebourg, se considèrent lésés et poursuivent la lutte. Dans le même temps, les rivalités locales se multiplient autour des droits commerciaux, des forteresses et de la navigation fluviale entre Hanovre et Brême.\n\nDurant les années 1370 et 1380, le conflit prend ainsi la forme d’une série de guerres privées et d’affrontements entre nobles, villes et princes. Les villes profitent de cette instabilité pour renforcer leur autonomie politique.\n\n4. La reprise de la guerre et la victoire définitive des Welfs (1385-1389)\n\nLa mort du duc ascanien Albert de Saxe en 1385 rouvre la question successorale. Son oncle Venceslas tente de maintenir l’autorité ascane sur Lunebourg, mais les tensions avec les Welfs reprennent rapidement.\n\nEn 1387, Henri et Bernard reprennent les armes. La guerre culmine avec la bataille de Winsen, le 28 mai 1388, au cours de laquelle les forces welfes remportent une victoire décisive sur les partisans ascaniens. De nombreux nobles et bourgeois de Lunebourg sont capturés.\n\nÀ la suite de cette défaite, les Ascaniens doivent reconnaître la domination des Welfs sur la principauté. Le traité conclu en 1389 met définitivement fin à la guerre : les Ascaniens renoncent à leurs prétentions immédiates sur Lunebourg, ne conservant qu’un droit théorique de succession en cas d’extinction des Welfs.\n\n5. Conséquences politiques\n\nLa guerre de Succession de Lunebourg transforme profondément l’équilibre politique du nord de l’Empire :\n\nles Welfs conservent finalement la principauté de Lunebourg ;\nles villes de Lunebourg et Hanovre obtiennent d’importants privilèges et renforcent leur autonomie ;\nle pouvoir princier sort affaibli financièrement, les ducs ayant dû hypothéquer de nombreuses terres et forteresses ;\nl’empereur Charles IV échoue à imposer durablement les Ascaniens, révélant les limites du pouvoir impérial dans les principautés allemandes de la fin du XIVe siècle.\n\nCette guerre illustre ainsi les tensions caractéristiques du Saint-Empire à la fin du Moyen Âge : rivalités dynastiques, affirmation des villes et difficulté de l’autorité impériale à contrôler les grands princes territoriaux.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/DEU_Fuerstentum_Lueneburg_COA.svg/250px-DEU_Fuerstentum_Lueneburg_COA.svg.png"
+  },
+  {
+    "id": 1308,
+    "titre": "Duong Nhât Lê usurpateur",
+    "date": 1369,
+    "date_fin": 1370,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Hôn Đức Công né sous le nom Dương Nhật Lễ, mort en 1370, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1369 à 1370 et un usurpateur de la dynastie Trần.",
+    "image": "",
+    "regne": true
   },
   {
     "id": 208,
@@ -14969,7 +15406,9 @@
       "Papaute"
     ],
     "type": 1,
-    "image": "",
+    "description": "Pierre Roger de Beaufort, né en 1329 ou en 1331 dans l'actuelle commune de Maumont en Corrèze et mort le 25 ou le 27 mars 1378 à Rome, est le 201e pape du 30 décembre 1370 à sa mort sous le nom de Grégoire XI[1]. Il est à ce jour le dernier pape français, reconnu par Rome.Pierre Roger, fils de Marie de Chambon et de Guillaume Roger, comte de Beaufort, neveu du pape Clément VI, naît en 1329, dans une famille de neuf frères et sœurs.\nIl accède immédiatement au sommet de la hiérarchie ecclésiastique : à dix-neuf ans, son oncle Clément VI le nomme cardinal le 28 mai 1348. Le jeune homme se rend à Pérouse pour suivre les cours de droit de Pietro Baldo degli Ubaldi. Il devient docteur en droit canonique et théologien, fort habile d’après ses pairs. « Là, il gagna l’estime de tous par son humilité et sa grande pureté de cœur »[4].\n\nDe 1357 à 1364, il est prieur du prieuré Saint-Martin de Mesvres, poste qu'avait occupé son oncle Hugues Roger en 1344.\n\nLe 23 juin 1364, grâce à ses nombreuses relations, il réunit la rançon pour faire libérer Brioude[5].\n\n\nLe cardinal Guy de Boulogne couronnant Grégoire XI.\nCet homme habile et de grandes qualités morales est de faible constitution physique. À la mort d'Urbain V, les cardinaux se réunissent en conclave à Avignon le 29 décembre 1370 et, dès le lendemain matin l'élisent pape à l'unanimité des voix. Il faut l'ordonner prêtre le 4 janvier 1371 pour l'ordonner évêque, et le couronner comme pape, le jour suivant. Il choisit le nom de Grégoire XI.\nLa méditation l’a habitué à la compagnie des livres, dont il est un amateur éclairé, ce qui le porte à la recherche de manuscrits précieux. Ces livres le poussent aux autres formes d'art auxquelles il n'est pas indifférent. Il est également connu pour ses tableaux de diplomates.\n\nIl poursuit la réforme de l'Église entreprise par ses prédécesseurs. Il apporte tous ses soins à ramener les Hospitaliers dans la discipline et dans l’observation de leurs règles. Il entreprend la réforme intérieure de l'ordre des Dominicains. Devant la recrudescence des hérésies, il relance l'Inquisition et fait poursuivre les pauvres de Lyon (Vaudois), les béguins et les flagellants en Allemagne.\n\nDès son accession, il tente de réconcilier les rois de France et d’Angleterre, mission vouée à l’échec. Il pacifie la Castille, l’Aragon, la Navarre, la Sicile et Naples. Il déploie également beaucoup d’efforts pour réunir les églises grecque et romaine, pour entreprendre une nouvelle croisade et pour réformer le clergé.\nDernier pape français de la période avignonnaise, il doit affronter une situation italienne extrêmement instable : ambitions des princes lombards, révoltes des villes italiennes contre l’administration pontificale, montée des compagnies de mercenaires et affaiblissement du pouvoir pontifical dans la péninsule.\n\nEntre 1372 et 1378, Grégoire XI tente simultanément de restaurer l’autorité temporelle du Saint-Siège en Italie et de préparer le retour définitif de la papauté à Rome. Ces efforts débouchent cependant sur une crise profonde qui aboutit, après sa mort, au Grand Schisme d’Occident.\n\nI. La lutte contre les Visconti et la restauration de l’autorité pontificale (1372-1374)\nLa menace des Visconti\n\nÀ la mort du marquis de Montferrat en mars 1372, Barnabé Visconti cherche à étendre son influence sur le Piémont et l’Italie du Nord. Déjà hostile à la papauté, il s’est emparé en 1371 de plusieurs territoires relevant théoriquement du Saint-Siège, notamment autour de Reggio.\n\nFace à cette expansion, Grégoire XI organise une vaste coalition politique et militaire réunissant :\n\nOthon de Brunswick ;\nAmédée VI de Savoie ;\nPhilippe de Cabassolle ;\nle condottiere anglais John Hawkwood, ancien allié des Visconti ;\nNicola Spinelli.\n\nLorsque les négociations échouent, le pape excommunie Barnabé Visconti. Celui-ci répond par une provocation spectaculaire en contraignant les envoyés pontificaux à avaler la bulle d’excommunication.\n\nLa guerre de 1372-1374\n\nGrégoire XI déclare officiellement la guerre aux Visconti en 1372. Après quelques succès initiaux des Milanais, la situation se retourne en faveur de la Ligue pontificale grâce :\n\nau soutien de l’empereur ;\nà l’appui de la reine de Naples et du roi de Hongrie ;\nau recrutement de John Hawkwood contre une forte somme.\n\nLes troupes pontificales remportent plusieurs victoires importantes, notamment la prise de Verceil. Barnabé Visconti est finalement contraint d’accepter une trêve favorable au pape le 6 juin 1374.\n\nCes succès renforcent considérablement la confiance de Grégoire XI et l’encouragent à envisager sérieusement le retour de la papauté à Rome.\n\nII. La crise florentine et la guerre des Huit Saints (1375-1378)\nLes causes de la révolte florentine\n\nLe principal problème de Grégoire XI réside dans son administration des États pontificaux. Comme ses prédécesseurs avignonnais, il confie de nombreuses charges à des prélats et gouverneurs français, très impopulaires en Italie.\n\nCette politique suscite un profond mécontentement dans les villes italiennes, notamment à Florence, qui craint qu’un retour durable de la papauté à Rome ne renforce excessivement le pouvoir pontifical en Italie centrale au détriment de son influence économique et politique.\n\nEn juillet 1375, Florence s’allie à Barnabé Visconti et encourage des soulèvements dans les États pontificaux. Entre octobre 1375 et mars 1376, la plupart des territoires de l’Église se révoltent contre l’autorité pontificale.\n\nCette insurrection prend le nom de « guerre des Huit Saints », en référence aux magistrats florentins chargés de diriger la rébellion.\n\nLa réaction de Grégoire XI\n\nLe pape réagit avec une extrême fermeté. Le 31 mars 1376, il :\n\nexcommunie tous les habitants de Florence ;\nplace la ville sous interdit ;\nordonne aux souverains européens d’expulser les marchands florentins et de confisquer leurs biens.\n\nCette politique vise autant à punir Florence qu’à préserver les conditions du retour pontifical à Rome.\n\nMalgré plusieurs tentatives de médiation — notamment de Catherine de Sienne — le conflit se poursuit.\n\nIII. Catherine de Sienne et la décision du retour à Rome\nLe rôle de Catherine de Sienne\n\nLa tradition a longtemps attribué à Catherine de Sienne un rôle décisif dans le retour du pape à Rome. En réalité, les historiens modernes nuancent fortement cette interprétation.\n\nGrégoire XI avait déjà exprimé dès 1372 son intention de quitter Avignon et avait confirmé cette décision au consistoire de février 1374. Lorsque Catherine arrive à Avignon en juin 1376 avec son confesseur Raymond de Capoue, la décision pontificale est pratiquement arrêtée.\n\nSon influence semble surtout avoir consisté à conforter spirituellement le pape dans une orientation déjà décidée.\n\nIV. Le retour de la papauté à Rome (1376-1377)\nLe voyage\n\nLe départ officiel d’Avignon a lieu le 13 septembre 1376. Le voyage maritime du pape est minutieusement organisé et documenté par Pierre Amiel de Brénac.\n\nLa flotte pontificale effectue plusieurs escales :\n\nMarseille ;\nSaint-Tropez ;\nNice ;\nGênes ;\nLivourne ;\nPiombino.\n\nLe pape atteint finalement Ostie en janvier 1377 avant de remonter le Tibre jusqu’à Rome.\n\nLe 17 janvier 1377, Grégoire XI entre officiellement dans Rome, entouré notamment des troupes de son neveu Raymond de Turenne.\n\nCet événement marque officiellement la fin de la papauté avignonnaise commencée en 1309.\n\nV. Le séjour romain et les dernières crises (1377-1378)\nLes difficultés du gouvernement romain\n\nLe retour à Rome ne résout pas les problèmes politiques du Saint-Siège. Grégoire XI doit faire face :\n\naux révoltes persistantes ;\nà l’instabilité romaine ;\nà l’indiscipline des compagnies mercenaires.\n\nL’épisode le plus dramatique est le massacre de Césène du 1er février 1377, durant lequel environ 4 000 habitants sont tués par les troupes bretonnes dirigées par Robert de Genève avec le soutien des hommes de John Hawkwood.\n\nCe massacre ternit profondément l’image du pouvoir pontifical.\n\nL’affaiblissement final du pape\n\nL’agitation romaine pousse Grégoire XI à quitter temporairement Rome pour Anagni en mai 1377. Bien que certaines régions, comme la Romagne et Bologne, se soumettent progressivement, le pape demeure inquiet pour sa sécurité et envisage même un retour à Avignon.\n\nPendant ce temps, les négociations de paix progressent avec Florence sous la médiation de Barnabé Visconti.\n\nMais Grégoire XI meurt dans la nuit du 26 au 27 mars 1378 avant l’aboutissement définitif des négociations.\n\nVI. Les conséquences : vers le Grand Schisme d’Occident\n\nLa mort de Grégoire XI ouvre immédiatement une crise majeure. Son décès à Rome place les cardinaux sous la pression de la population romaine qui exige un pape italien.\n\nL’élection contestée d’Urbain VI entraîne rapidement la contestation d’une partie du Sacré Collège, qui élit ensuite l’antipape Clément VII.\n\nCommence alors le Grand Schisme d’Occident (1378-1417), qui divise durablement la chrétienté latine entre papauté romaine et papauté avignonnaise.\n\nConclusion\n\nLe pontificat de Grégoire XI marque une transition fondamentale dans l’histoire de la papauté médiévale. Son action en Italie vise à restaurer l’autorité temporelle du Saint-Siège tout en mettant fin à la parenthèse avignonnaise.\n\nCependant, les conflits avec les Visconti, Florence et les villes italiennes révèlent la fragilité du pouvoir pontifical dans une Italie profondément morcelée et hostile à l’administration française. Le retour à Rome, loin d’apaiser les tensions, contribue finalement à ouvrir l’une des plus grandes crises religieuses et politiques du Moyen Âge : le Grand Schisme d’Occident.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Duke_of_Anjou_leading_Pope_Gregory_XI_to_the_palace_at_Avignon%2C_while_cardinals_follow_%28cropped%29.png",
+    "legende": "Le duc d'Anjou conduisant le pape Grégoire XI au palais d'Avignon, tandis que les cardinaux suivent. Miniature extraite des \"Chroniques de France ou de Saint Denis\". Atelier du Maître de Virgile. XIVe siècle. Manuscrits royaux de la British Library. Londres.",
     "regne": true
   },
   {
@@ -14996,6 +15435,280 @@
     "description": "Luca di Tommè (ou Luca Thome ) (vers 1330-1389) était un peintre italien actif à Sienne entre 1356 et 1389. Il travailla dans le style établi par les peintres siennois précédents tels que Duccio , Simone Martini , Pietro Lorenzetti et Ambrogio Lorenzetti . Plus de cinquante œuvres lui sont attribuées. Cette production abondante contribua à la pérennité du style décoratif siennois jusqu'au XVe siècle.\nEn 1389, il travailla avec Bartolo di Fredi et Andrea di Bartolo à une importante commande de retable pour l'une des chapelles de la cathédrale de Sienne. [ 1 ] Il réalisa ses images à la tempera sur panneaux de bois, selon une technique typique du XIVe siècle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/WLA_lacma_Luca_di_Tomme_Madonna_and_Child.jpg/960px-WLA_lacma_Luca_di_Tomme_Madonna_and_Child.jpg",
     "legende": "Tableau de Luca di Tommè représentant la Vierge à l'Enfant , tempera sur panneau"
+  },
+  {
+    "id": 1273,
+    "titre": "Construction de la Bastille",
+    "date": 1370,
+    "zones": [
+      "France"
+    ],
+    "type": 2,
+    "description": "Charles V de France ordonne à Hugues Aubriot de construire la forteresse de la Bastille à Paris . \nLa bastille Saint-Antoine, souvent appelée simplement la Bastille, et anciennement les fort et bastide Saint-Anthoine lez Paris[1],[2], est une forteresse construite au XIVe siècle, à l'emplacement du débouché de la rue Saint-Antoine sur l’actuelle place de la Bastille à Paris. Devenue une prison, considérée comme le symbole du despotisme monarchique, elle fut totalement détruite lors de la Révolution française dont elle fut un des évènements déclencheurs.\nInitialement, la Bastille était une bastide[3] (châtelet à deux tours) de la porte Saint-Antoine de l'enceinte de Charles V, élevée en hâte de 1356 à 1358 pendant la prévôté d'Étienne Marcel[4]. En 1367, le roi Charles V décida de pourvoir le revers de cette porte d’une enceinte formant un véritable château urbain (une bastille formant un réduit indépendant et disposant de sa propre garnison) en rehaussant les deux tours et en en construisant six autres. Ce fort était destiné à défendre la porte Saint-Antoine et les remparts de l’Est de Paris devenus plus vulnérables. Il servait aussi à protéger le roi en cas de révolte du peuple parisien car il pouvait sécuriser la route reliant la résidence du roi à l'hôtel Saint-Pol au château de Vincennes où le roi Charles V veut établir le centre administratif du royaume[4].\n\nLa « Bastille » ou « Bastille Saint-Antoine » ou encore « fort et bastide Saint Antoine lez Paris » était initialement un véritable château et un arsenal. La construction ordonnée en 1367 eut lieu durant le règne de Charles V, de 1370 à 1383, et fut établie sous la direction du prévôt de Paris Hugues Aubriot qui posa la première pierre le 22 avril 1370[5],[6], sur le modèle à quatre tours courant à l’époque. Les autres tours furent ajoutées ultérieurement. Elle faisait 66 mètres de long pour 34 mètres de large et 24 mètres de hauteur au niveau des tours, et était entourée d’un fossé de 25 mètres de largeur sur 8 mètres de profondeur alimenté par les eaux de la Seine. \nL’entrée se faisait par la rue Saint-Antoine et donnait sur la Cour de l’Avancée qui abritait des boutiques et une caserne. Son premier capitaine gouverneur fut nommé par Charles VI, dès 1386, en la personne de son chambellan Jehan de La Personne, vicomte d'Acy, ancien compagnon de Bertrand du Guesclin et qui avait été déjà chambellan sous les deux règnes précédents[7]. À la même époque fut édifié le donjon de Vincennes. Le château de Montagu, édifié par le surintendant des finances de Charles VI, Jean de Montagu, à Marcoussis, est un exemple proche des choix d'architecture retenus pour la forteresse de la Bastille.\n\nAprès une courte période durant laquelle la circulation entre la rue Saint-Antoine et l'extérieur de la ville s'effectuait en traversant la forteresse et son avant-cour, ce passage fut condamné au début du XVe siècle et détourné par une nouvelle porte construite au nord de la Bastille se prolongeant par un pont enjambant le fossé du rempart et donnant accès à la rue du Faubourg-Saint-Antoine. Le débouché de la rue Saint-Antoine fut alors élargi pour permettre l'accès à cette porte. Le pont sur le fossé de l'ancien parcours public devint une sortie privée. \nElle appartenait au système défensif de l'enceinte de Charles V mais très vite, son utilité militaire s’avère médiocre, car, assiégée, elle s’est toujours rendue[9].\nDurant la guerre de Cent Ans, qui fut en grande partie une guerre civile française, la Bastille se rendit en 1413[10] aux Armagnacs pendant la révolte des Cabochiens, puis en 1418 aux Bourguignons, en 1436 au Roi, en 1565 au Prince de Condé, en 1591 aux Ligueurs, en 1594 aux troupes royales, en 1649 et 1652 pendant la Fronde.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bastille_Exterior_1790_or_1791.jpg/1280px-Bastille_Exterior_1790_or_1791.jpg",
+    "legende": "Bastille. Façade orientale, dessin de 1790 ou 1791. Dessin à la mine de plomb et lavis à l'encre brune; 7,5 x 10,2 cm."
+  },
+  {
+    "id": 1276,
+    "titre": "Tamerlan roi de Balkh",
+    "date": 1370,
+    "mois": 4,
+    "zones": [
+      "Orient"
+    ],
+    "type": 2,
+    "description": "L’année 1370 marque une étape décisive dans l’histoire de l’Asie centrale avec l’ascension de Tamerlan, également connu sous le nom de Timour Lenk (« Timour le Boiteux »). Après l’assassinat de son rival et beau-frère Amir Husayn, Tamerlan se fait proclamer souverain à Balkh le 10 avril 1370. Cet événement inaugure la construction progressive d’un vaste empire centré sur la Transoxiane et le Khârezm, et fait de Tamerlan l’un des principaux conquérants du monde islamique médiéval.\n\nUn contexte de fragmentation politique en Asie centrale\n\nL’ascension de Tamerlan s’inscrit dans le contexte de la désintégration progressive de l’Empire mongol issu de Gengis Khan. Après la mort du puissant émir Kazgan, la Transoxiane connaît une période d’instabilité politique marquée par les rivalités entre chefs tribaux et prétendants au pouvoir.\n\nCette situation favorise l’intervention de Tughlugh Timur, souverain du Mogholistan et descendant direct de Gengis Khan, qui envahit la région afin de restaurer l’autorité djaghataïde. Tamerlan, membre de la tribu turco-mongole des Barlas, est initialement chargé de négocier avec lui, mais choisit finalement de se rallier au conquérant. En récompense, il reçoit le gouvernement de la Transoxiane.\n\nToutefois, lorsque Tughlugh Timur tente d’imposer son fils Ilyas Khodja comme dirigeant effectif de la région, Tamerlan entre en résistance et parvient à repousser cette domination malgré des forces inférieures. Cette période révèle déjà ses qualités militaires et politiques.\n\nLa rivalité entre Tamerlan et Amir Husayn\n\nAu cours des années 1360, Tamerlan s’allie à son beau-frère Amir Husayn, avec lequel il partage d’abord une situation précaire d’exil et de lutte contre les envahisseurs djaghataïdes. Cependant, leur coopération se transforme progressivement en rivalité.\n\nLes tensions s’expliquent autant par des divergences politiques que par des oppositions personnelles. Husayn refuse notamment de suivre certaines stratégies militaires proposées par Tamerlan contre Ilyas Khodja. Surtout, les deux hommes adoptent des styles de gouvernement radicalement différents.\n\nTamerlan développe une politique de redistribution et de générosité envers les marchands, les chefs tribaux, les religieux musulmans et les paysans. Cette attitude lui permet de gagner l’appui d’une large partie des élites et de la population. À l’inverse, Husayn devient impopulaire en raison d’une fiscalité lourde et de dépenses jugées excessives pour la construction de monuments prestigieux.\n\nCette opposition favorise progressivement le basculement des soutiens politiques vers Tamerlan.\n\nLa prise du pouvoir à Balkh\n\nVers 1370, la rivalité atteint son point culminant. Husayn finit par se rendre à Tamerlan, mais il est assassiné peu après dans des circonstances qui renforcent directement le pouvoir de son ancien allié.\n\nLe 10 avril 1370, Tamerlan est proclamé souverain à Balkh. Toutefois, son accession au pouvoir soulève une difficulté majeure : selon la tradition politique mongole, seul un descendant direct de Gengis Khan peut porter le titre de « khan » et exercer la souveraineté suprême sur l’héritage mongol.\n\nOr, Tamerlan n’appartient pas à la lignée gengiskhanide. Pour contourner cet obstacle, il adopte une stratégie de légitimation particulièrement habile. Il place sur le trône un khan djaghataïde fantoche, Soyurgatmish, qui exerce un pouvoir nominal, tandis que lui-même gouverne effectivement l’État sous le titre d’« amir » ou « amir al-kabir » (« grand prince »).\n\nCette solution lui permet de respecter formellement les traditions mongoles tout en concentrant le pouvoir réel entre ses mains.\n\nLa légitimation gengiskhanide et le mariage avec Bibi Khanoum\n\nPour renforcer davantage sa légitimité, Tamerlan épouse la veuve de Husayn, Saray Mulk Khanum, également connue sous le nom de Bibi Khanoum. Celle-ci est issue de la descendance directe de Gengis Khan.\n\nGrâce à cette union, Tamerlan acquiert le titre mongol de « güregen » (« gendre royal »), ce qui lui permet de se rattacher symboliquement à la dynastie gengiskhanide sans en être membre par le sang. Cette alliance matrimoniale joue un rôle central dans la construction idéologique de son pouvoir.\n\nLe prestige de Bibi Khanoum demeure important dans la mémoire timouride ; Tamerlan lui dédiera plus tard une célèbre mosquée monumentale à Samarcande.\n\nUn pouvoir fondé sur l’héritage turco-mongol et islamique\n\nL’ascension de Tamerlan repose sur une double identité politique et culturelle. D’une part, il s’inscrit dans l’héritage militaire et impérial mongol ; d’autre part, il se présente comme un souverain musulman protecteur de l’ordre islamique.\n\nSon pouvoir combine ainsi les traditions nomades turco-mongoles et les structures politiques du monde islamique persanisé. Polyglotte, Tamerlan maîtrise notamment le tchaghataï — ancêtre de l’ouzbek moderne —, le mongol et le persan, langue dans laquelle il mène sa correspondance diplomatique.\n\nCette synthèse culturelle contribue largement à la solidité de son autorité et à l’expansion future de son empire.\n\nConclusion\n\nLa proclamation de Tamerlan comme souverain à Balkh en 1370 représente l’aboutissement d’un long processus de conquête politique au sein d’une Asie centrale fragmentée par l’effondrement de l’ordre mongol. Grâce à ses talents militaires, à son habileté diplomatique et à une stratégie de légitimation fondée sur les traditions gengiskhanides, Tamerlan parvient à établir un pouvoir personnel durable.\nSon accession inaugure la formation de l’Empire timouride, qui deviendra l’un des plus puissants États du monde islamique à la fin du XIVe siècle et exercera une influence durable sur l’histoire politique, culturelle et artistique de l’Asie centrale et du Moyen-Orient.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Timur_during_attack_on_Balkh_1370.jpg/960px-Timur_during_attack_on_Balkh_1370.jpg",
+    "legende": "Timour recevant l'émissaire d'Amir Hussein lors de son attaque contre Balkh (1370). Miniature extraite d'un manuscrit du XVIe siècle de la Rawzat al-Safa de Mirkhvand (Turquie, 1599)."
+  },
+  {
+    "id": 1277,
+    "titre": "Ayourchiridhara prend le titre d’empereur à Karakorum",
+    "date": 1370,
+    "mois": 5,
+    "zones": [
+      "Chine"
+    ],
+    "type": 4,
+    "description": "23 mai : à la mort du grand khan des Mongols Toghan Tèmur, son fils Ayourchiridhara prend le titre d’empereur à Karakorum, sans renoncer au projet de reconquérir la Chine (fin de règne en 1378)",
+    "image": ""
+  },
+  {
+    "id": 1279,
+    "titre": "Prise de Tlemcen par les Mérinides",
+    "date": 1370,
+    "mois": 8,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 4,
+    "description": "7 août : prise de Tlemcen par le Maroc Mérinides",
+    "image": ""
+  },
+  {
+    "id": 1280,
+    "titre": "L'émir Hafside Abul-Abbas s'empare de Tunis",
+    "date": 1370,
+    "mois": 11,
+    "zones": [
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "9 novembre : l'émir Hafside Abul-Abbas s'empare de Tunis et se fait proclamer calife.\nAbû al-`Abbâs Ahmad al-Mustansir (arabe : أبو العباس المستنصر) est le sultan hafside de Tunis de 1371 à sa mort le 6 juin 1394.\nSuccédant à Abû al-Baqâ' Khâlid, il restaure le pouvoir hafside en Ifriqiya avec l'aide des tribus ; il chasse les Arabes de Bougie, de Bône en 1366, de Tunis le 9 novembre 1370 et les repousse vers le sud. Grâce à ses efforts de remise en ordre à l'intérieur et à l'efficacité de ses défenses contre les Latins, il assure au pays un siècle de stabilité.\nSous son règne, le port de Bougie devient le port d'attache de corsaires qui écument la mer Méditerranée.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Carte_Zianides_au_Maghreb.png/1280px-Carte_Zianides_au_Maghreb.png",
+    "legende": "Carte du royaume zianide et son environnement méditerranéen basé sur : Sluglett, Peter; Currie, Andrew. Atlas of Islamic History (p. 49). Muslim Rule in North Africa and Spain at the End of the Reconquista c.1250–c.1550 et Carte du médieviste Lynn H. Nelson (Professor Emeritus, Medieval History University of Kansas) File:Europe_in_1328.png publiée sur wikimédia"
+  },
+  {
+    "id": 1286,
+    "titre": "Trêve entre Jeanne Ire de Naples et Louis d'Anjou négociée par le pape Urbain V.",
+    "date": 1370,
+    "zones": [
+      "France",
+      "Naples"
+    ],
+    "type": 3,
+    "serie": "Guerre de Cent ans",
+    "description": "2 janvier : trêve entre Jeanne Ire de Naples et Louis d'Anjou négociée par le pape Urbain V. Jeanne désigne Charles Duras comme héritier. \nDepuis 1367, les ambitions de Louis d'Anjou en Provence sont claires. Son grand-père paternel Philippe VI avait monnayé son soutien aux ambitions italiennes de son grand-père maternel Jean l'Aveugle contre des droits sur la Provence et sur la ville de Lucques.[réf. nécessaire] Il les fait valoir une première fois en lançant en 1368 une attaque sur la Provence : ainsi du 11 avril au 1er mai 1368, Arles est assiégée sans succès par des troupes conduites par Bertrand Du Guesclin qui représente ses intérêts en Provence[N 2]. Tarascon est prise le 22 mai 1368. Les troupes du sénéchal Raymond d'Agoult sont battues à Céreste. L'intervention du pape Urbain V auprès de Charles V, l'excommunication de du Guesclin le Ier septembre 1368, amènent la retraite de ce dernier et la signature d'un traité de paix le 13 avril 1369 qui est suivi d'une trêve signée le 2 janvier 1370. Mais il y a surtout, grâce à la médiation de Grégoire XI qui a succédé à Urbain V, le traité de paix définitive du 11 avril 1371 par lequel Louis d'Anjou abandonne ses prétentions sur Tarascon.",
+    "image": ""
+  },
+  {
+    "id": 1288,
+    "titre": "Jean V Paléologue signe un traité avec la république de Venise",
+    "date": 1370,
+    "mois": 2,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 3,
+    "description": "1er février : Jean V Paléologue signe à Rome un traité avec les envoyés de la république de Venise.\nEn 1369, Jean V se rend à Rome (premier voyage d'un empereur byzantin en Italie depuis celui de Constant II en 663), confiant Constantinople à son fils aîné Andronic IV Paléologue et Thessalonique à son deuxième fils Manuel II Paléologue. En octobre, il fait sa soumission personnelle au pape Urbain V, et recueille en conséquence l'argent promis par Amédée VI de Savoie. Au printemps 1370, il se rend de Rome à Venise ; il y négocie l'annulation de ses dettes et le versement de 50 000 hyperpérions contre la cession à la république de Venise de l'île de Ténédos. Mais à Constantinople, Andronic IV refuse de céder Ténédos aux Vénitiens, et Jean V est retenu prisonnier à Venise jusqu'à ce que son deuxième fils Manuel II le rachète l'année suivante. L'empereur rentre à Constantinople en octobre 1371 sans avoir rien obtenu en Occident. Pratiquement au même moment, en septembre 1371, les Turcs écrasent les Serbes à la bataille de la Maritsa et étendent considérablement leur domination dans les Balkans.",
+    "image": ""
+  },
+  {
+    "id": 1289,
+    "titre": "Bataille de Rudau",
+    "date": 1370,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "17 février[9] : les Chevaliers teutoniques défont les Lituaniens à la bataille de Rudau (de) en Sambie ( péninsule de Kaliningrad )\n17 février : Les Chevaliers teutoniques remportent une victoire décisive contre la Lituanie à la bataille de Rudau . Malgré de lourdes pertes, les forces de l'Ordre repoussent les Lituaniens et leurs troupes auxiliaires. La légende raconte que durant la bataille, un apprenti cordonnier de Königsberg nommé Hans Sagan accourut au secours du porte-étendard du maréchal de l'Ordre , Henning Schindekopf , qui s'effondrait, afin de maintenir l'étendard de l'Ordre hissé jusqu'à la victoire.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Teutonic_state_1455_with_Battle_of_Rudau_%282%29.png",
+    "legende": "Carte historique de l'État de l'Ordre Teutonique (1308-1455), incluant la localisation de Rudau ( allemand) . Carte politique russe de l'Ordre teutonique de 1308 à 1455"
+  },
+  {
+    "id": 1290,
+    "titre": "1ere  horloge publique de Paris",
+    "date": 1370,
+    "zones": [
+      "France",
+      "Techniques"
+    ],
+    "type": 4,
+    "description": "25 mars : installation au Palais Royal de Paris de la première horloge publique de Paris",
+    "image": ""
+  },
+  {
+    "id": 1291,
+    "titre": "Paix de Stralsund",
+    "date": 1370,
+    "mois": 5,
+    "zones": [
+      "St Empire",
+      "Scandinavie"
+    ],
+    "type": 2,
+    "description": "24 mai : signature de la paix de Stralsund à la suite de la victoire de la Hanse sur le Danemark. les Danois accordent à la Hanse Teutonique (70 villes) d’importants privilèges militaires et financiers sur le Sund (libre passage dans les Détroits). La puissance de la Hanse est à son apogée et elle domine la Baltique.\n24 mai : La paix de Stralsund met fin à la seconde guerre de Valdemar entre le roi Valdemar IV de Danemark et les villes hanséatiques allemandes de la mer Baltique. Les négociateurs sont les maires de Stralsund et de Lübeck, respectivement Bertram Wulflam et Jakob Pleskow , ainsi que le bailli danois , Henning Podebusk . Les villes hanséatiques, ne recherchant pas d'expansion territoriale mais principalement des avantages commerciaux, cèdent les territoires conquis en Scanie au Danemark et recouvrent leurs anciens privilèges. Elles reçoivent les forteresses d'Helsingborg , de Malmö , de Skanør et de Falsterbo pour quinze ans, payables en échange de 12 000 marks d'argent pur. Ce traité transfère les droits de passage de l' Øresund du Danemark à la Ligue hanséatique. De plus, le Conseil privé danois est désormais interdit d'élire un roi sans l'accord préalable de la Ligue hanséatique. La paix est conclue sans le duc Albrecht II de Mecklembourg , qui se sent lésé et conclut sa propre paix séparée.\nLe traité de Stralsund (24 mai 1370) met fin à la guerre opposant la ligue Hanséatique, au sein de la confédération de Cologne, et le royaume du Danemark.\nLe traité est négocié par le sénéchal (drost) Henning Podebusk pour le Danemark et le bourgmestre Jakob Pleskow de Lübeck et Bertram Wulflam de Stralsund pour la confédération de Cologne. Grâce aux privilèges accordés par traité, le pouvoir commercial et politique de la Hanse est à son apogée[1],[2],[3].\n\nCe traité est l'aboutissement d'une guerre commencée en 1361 par le roi danois Valdemar Atterdag qui conquit les régions de la Scanie, du Öland, et l'île de Gotland dont la principale ville Visby était une ville importante de la Ligue Hanséatique. La Hanse répliqua et perdit cette première guerre à la bataille d'Helsingborg (en). Le traité de paix fut signé à Vordingborg en 1365 et entraina la perte de nombreux privilèges. En 1367, les villes de la Hanse quelques villes néerlandaises s'unirent pour former la Confédération de Cologne contre le Danemark et la Norvège dans le but de récupérer les privilèges perdus lors de la première guerre. Cette deuxième guerre se termina par la victoire de la ligue hanséatique et la signature du traité de Stralsund en 1370. En plus d'imposer une présence sur le territoire du Danemark, la libération de Visby, de donner à la Ligue un quasi-monopole sur le commerce du poisson entre la Baltique et la mer du Nord[4], le libre passage du détroit du Sund (entre Copenhague et Malmö)[5], le traité de Stralsund accordé en 1370 par le roi du Danemark, Valdemar IV de Danemark et son gendre Håkon VI de Norvège donne également à la Hanse un droit de veto sur la succession au trône du Danemark.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Stralsund%2C_KHM%2C_Urkunde_Friede_von_Stralsund_%282007-03-10%29.JPG",
+    "legende": "Kulturhistorischen Museum Stralsund"
+  },
+  {
+    "id": 1292,
+    "titre": "Sac de Limoges par le Prince Noir",
+    "date": 1370,
+    "mois": 9,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "serie": "Guerre de Cent ans",
+    "description": "24 août : Limoges se rend au roi Charles V de France\n19 septembre : sac de Limoges par le Prince Noir qui reprend la ville : massacre de la garnison « française[16]. »\nLe sac de Limoges est un épisode de la guerre de Cent Ans s'étant déroulé au mois de septembre 1370. Après un court siège, une partie de la ville de Limoges (la Cité), qui a ouvert peu avant ses portes aux armées françaises du roi Charles V, est mise à sac par les armées d'Édouard de Woodstock, prince d'Aquitaine, en représailles à ce que les Anglo-Aquitains considèrent comme un acte de félonie.\nAu Moyen Âge, la ville de Limoges était clairement séparée en deux parties, la Cité (en occitan La Citat) et le château (Lo Chatèu). Autour de la cité fut construite une nouvelle enceinte qui atteignait la Vienne, pour protéger l'accès au pont Saint-Étienne construit par l'évêque.\n\nSelon l'historien Louis Guibert dans son livre Coup d'œil sur l'Histoire de Limoges, la construction de cette nouvelle enceinte serait l'une des causes de la réussite du sac et donc de l'échec de la protection de la ville. Lors de sa conception, les décideurs n'auraient pas tenu compte des crues puissantes du fleuve favorisées par les orages violents. Ce phénomène rare mais pas exceptionnel se produit lors des rencontres de masses d'air chaudes et chargées en humidité provenant de la Méditerranée et celles provenant de l'Atlantique (à ne pas confondre avec le phénomène « Cévenol » plus marqué, violent et surtout plus connu mais n'affectant pas cette partie de la France). Les orages violents se concentrent sur le plateau de Millevaches (vaches signifiant les cours d'eau et non les bovins). Le plateau se comporte comme une éponge qui à saturation déverse le trop plein dans les rivières tributaires et ainsi la Vienne. Contrairement à ce qui a été avancé à la fin du XIXe siècle, la cité n'était pas défendue par une petite garnison laissée par les Français mais par une armée importante. En effet, l'historiographie traditionnelle française - teintée fortement de nationalisme - a exagéré les causes de la défaite de cet évènement (à rapprocher du contexte de la défaite de 1870). La tour de l'enceinte, la tour Alérésia, ne fut pas minée par les Anglo-Aquitains, qui n'en avaient pas les moyens techniques (en raison de la masse trop importante à détruire) mais effondrée par la crue avant l'attaque ennemie. Charles V s'attendait à des représailles et n'aurait pas laissé cette ville stratégique sans défense face aux Anglais. Ce concours de circonstances explique la facilité avec laquelle la cité fut prise.\n\nLors de la reconstruction des remparts endommagés, ceux-ci ont été légèrement déplacés en amont. La version, paradoxalement à l'avantage des Anglais, ne fut remise en cause qu'au début du XXe siècle par Louis Guibert et ses successeurs. La Première Guerre mondiale, puis l'entente avec le Royaume-Uni et des questions de diplomatie ont retardé l'acceptation de cette nouvelle explication[1].\n\nComme tout le Limousin, la cité de Limoges fut incluse dans la principauté d'Aquitaine créée en 1362 pour le Prince noir (surnom donné au XVIe siècle à Édouard de Woodstock, prince d'Aquitaine (1362-1372) et de Galles) par son père, le roi d'Angleterre Édouard III.\n\nJohan de Cros, évêque de Limoges, réputé comme étant un des proches du Prince noir, fut contacté par les émissaires du roi de France, Charles V. Le 23 août 1370, il ouvrit les portes de la cité aux troupes françaises, commandées par Jean de Berry, déclenchant la colère d’Édouard de Woodstock, qui se trouvait alors à Angoulême.\nLe Prince noir et son frère Jean de Gand formèrent une armée composée de 1 200 armures, 1 000 archers et 3 000 hommes de pied et prirent la direction de Limoges[2].\n\nLe Prince noir, bien que malade, vint assiéger en personne la cité. Le 19 septembre 1370, la cité fut mise à sac destiné à punir ce qu’Édouard de Woodstock considérait comme une trahison.\n\nLe chroniqueur Froissart affirme dans sa Chronique que la population de la cité fut alors massacrée faisant 3 000 victimes. En réalité, une chronique contemporaine de Saint-Martial de Limoges rétablit la vérité : le nombre de victimes ne fut « que » de trois-cents personnes : « En l'an mil CCC LXX a XIX de septembre fut preise et ardude (brûlée) la Citat et meis a mort may de IIIc personas a cause de la rébellion qu'avian fach contre mossen Oudouart, duc d'Aquitaine »[3]. Le Héraut Chandos précise bien dans son poème que les membres de la garnison installée par les Français étaient au nombre de trois-cents[4] :\n\nQuar la fut Rogier de Beaufort,\nQui de tenir se faisait fort,\nEt monsieur Johan de Villemur,\nQui dist qu’il garderait le mur,\nEt des gentz d’armes bien iii. centz,\nSans les burgeis de par dedenz,\nMais tous y furent mortz ou pris.\n\nFroissart a donc fortement exagéré le nombre de victimes du sac (il n'était pas sur place et écrivait pour flatter ses protecteurs anglo-flamands et non pour donner un compte rendu des événements[5]). Une chronique de Limoges, très postérieure à l'événement, indique même le chiffre de 18 000 victimes, ce qui est plus que la population entière de Limoges. \nÀ partir du XIXe siècle, l'historiographie traditionnelle française - teintée fortement de nationalisme - a, elle aussi, exagéré cet évènement en développant une réputation négative autour du Prince Noir. Plus récemment, certains auteurs ont même tenté un rapprochement avec le massacre d'Oradour-sur-Glane (10 juin 1944)[7].\n\nSelon Jean Tricard, professeur d'histoire médiévale à l'université de Tours, le récit du chroniqueur Froissart n'est pas fiable et chargé d'exagération. la Cité ne désigne qu'une partie de Limoges, l'autre partie, le Château, étant une agglomération plus considérable qui n'eut pas à souffrir du passage du Prince Noir[",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Siege_of_Limoges.jpg"
+  },
+  {
+    "id": 1293,
+    "titre": "Retour du pape Urbain V à Avignon",
+    "date": 1370,
+    "mois": 9,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "27 septembre : retour du pape Urbain V à Avignon\n2 septembre : Après trois ans à Rome, le pape Urbain V, sous la pression des cardinaux français, embarque à nouveau de Corneto pour Avignon , où il arrive le 24 septembre.",
+    "image": ""
+  },
+  {
+    "id": 1294,
+    "titre": "Du Guesclin est nommé connétable",
+    "date": 1370,
+    "mois": 10,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "2 octobre : Bertrand Du Guesclin est nommé connétable, au service du roi Charles V[18]. Il est chargé de chasser les Anglais, parvenant ainsi à ramener le Poitou, la Saintonge, la Guyenne et la Normandie sous l’autorité du roi.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Guesclin_retrato.JPG",
+    "legende": "Du Guesclin est fait connétable par le roi de France"
+  },
+  {
+    "id": 1295,
+    "titre": "Fin de la dynastie des Piast",
+    "date": 1370,
+    "mois": 11,
+    "zones": [
+      "Pologne"
+    ],
+    "type": 2,
+    "description": "5 novembre :  Casimir III le Grand , roi de Pologne , meurt des suites d'un accident de chasse et est remplacé conjointement par sa sœur, Élisabeth de Cujavie , et son fils, Louis Ier de Hongrie , inaugurant ainsi le règne du pays par la famille capétienne-anjou .Sans laisser d’héritier direct. Il a désigné pour lui succéder son neveu Louis d’Anjou, roi de Hongrie.\nLa dynastie Piast est une lignée de rois et de ducs qui ont gouverné la Pologne depuis son apparition en tant qu’État indépendant, de 960 jusqu’en 1370. Les descendants des Piast ont continué à régner sur les différents duchés provenant de la fragmentation du territoire polonais, en Mazovie jusqu’en 1526 et en Silésie jusqu’en 1675.\nPiast est l’ancêtre légendaire de cette dynastie. Son nom est mentionné pour la première fois dans la Gesta principum Polonorum (en) de Gallus Anonymus, écrite vers 1113. Bien que très tôt dans l’histoire, les ducs et les rois se considèrent eux-mêmes comme les descendants de Piast, ce sont des historiens du XVIIe siècle, travaillant pour les souverains des duchés de Silésie, qui parlent les premiers de dynastie Piast.\nEn 1370, la branche cadette des Piast s'éteint et avec elle la lignée royale. La couronne polonaise échoit à Louis Ier, roi de Hongrie, fils d'Élisabeth Piast. La branche des Piast de Mazovie disparaît avec la mort de Janusz III, en 1526. Georges Guillaume de Legnica est le dernier des Piast de Silésie à régner. Il meurt en 1675. Son oncle, le comte Auguste de Legnica, le dernier descendant mâle de la dynastie Piast, meurt en 1679. La dernière héritière légitime, la duchesse Caroline de Legnica-Brieg (en), meurt en 1707. Elle est inhumée dans l'abbaye de Trzebnica. De nombreuses familles, comme celles des descendants illégitimes du duc de Silésie, Venceslas de Cieszyn, lient encore leur généalogie à la dynastie Piast.\n17 novembre : le roi Louis Ier de Hongrie héritier de la couronne de Pologne, entre à Cracovie pour son couronnement[20]. Il est élu roi par la diète de Pologne. Il reçoit une Pologne restaurée mais privée de débouchés maritimes, toujours menacée de l’extérieur par l’ordre Teutonique et de l’intérieur par l’indépendance de la haute noblesse. Il parvient à maintenir l’unité du royaume, mais ne gouverne pas personnellement la Pologne, et laisse le pouvoir à un conseil de régence présidé par l’évêque et qui siège à Cracovie.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/COA_polish_king_Piast.svg/langfr-500px-COA_polish_king_Piast.svg.png"
+  },
+  {
+    "id": 1296,
+    "titre": "Bataille de Pontvallain (Anjou)",
+    "date": 1370,
+    "mois": 12,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 2,
+    "serie": "Guerre de Cent ans",
+    "description": "4 décembre : victoire de Du Guesclin sur les Anglais, à la bataille de Pontvallain (Anjou), au cours de laquelle il bat Robert Knolles après que celui-ci eut ravagé l'Île-de-France, l'Ouest et la Bretagne.\nLa bataille de Pontvallain est une victoire de l'armée française contre les Anglais, le 4 décembre 1370, pendant la guerre de Cent Ans, à Pontvallain, dans le comté du Maine.\nAu cours de l'automne 1370, la guerre de Cent Ans a été relancée depuis un an par Charles V. Après avoir donné un nouvel essor à l'économie en débarrassant le pays des Grandes Compagnies, il a instauré des impôts durables qui lui permettent de financer une armée permanente afin de reconquérir méthodiquement les territoires concédés au traité de Brétigny. Les Anglais, ruinés par leur participation à la Première Guerre civile de Castille[2], n'ont plus les moyens de se lancer dans des chevauchées qui pourtant ont le mérite de s'autofinancer. Le roi Édouard III d'Angleterre envoie donc Robert Knolles dans le Nord de la France, espérant ainsi détourner des troupes françaises pour soulager la Guyenne et leur infliger une défaite similaire à celles de Crécy ou de Poitiers.\n\nCharles V n'est pas dupe et applique la stratégie de la terre déserte. De ce fait, Robert Knolles et Thomas Granson ne trouvent devant eux que le vide ou des villes solidement défendues et portes closes. Après avoir pillé le Nord de la France et la Beauce, l'armée anglaise arrive dans le Maine. Mais les pillages ne laissent pas les Français indifférents, les troupes sont massées dans les villes, et les citadins, voyant les fumées des faubourgs incendiés, grondent.\n\nCharles V doit donner le change pour justifier les impôts prélevés : le 2 octobre 1370, il nomme comme connétable de France Bertrand du Guesclin, tout auréolé de ses victoires à Cocherel et en Castille. Accompagné par Olivier de Clisson et Jean de Vienne, Du Guesclin est envoyé aux trousses des Anglais, après le sac de La Rochelle.\nAu mois de novembre, la situation évolue. Forts de leurs succès et las de leurs chevauchées, les soldats anglais commencent à relâcher leurs efforts. Les chefs de l'armée anglaise se querellent entre eux. Le 1er décembre 1370, après avoir levé une armée en Bretagne et en Normandie, Du Guesclin se lance à l'attaque de l'armée anglaise.\n\nAyant appris que Robert Knolles et Thomas Granson étaient avec 3 000 hommes sur les bords du Loir, entre Vendôme et Château-du-Loir, le connétable dirige ses troupes vers Le Mans, aux mains des Anglais. La ville ouvre ses portes à l'arrivée des Français. Du Guesclin se dirige ensuite sur Viré-en-Champagne ou Vire (selon les sources[3]) où il reçoit un héraut d'armes envoyé par Thomas Granson qui, certain de la supériorité tactique de l'arc long anglais, voulait profiter de l'absence de Robert Knolles pour demander bataille et récupérer seul les rançons prélevées sur les prisonniers. Le connétable remet à l'envoyé quatorze marcs d'argent, le fait boire[4] et le fait retenir le plus longtemps possible par quelques hommes, afin de prendre les devants avec le gros des troupes. Le soir même, par une pluie battante, il franchit à marche forcée les quarante-huit kilomètres qui le séparent de l'ennemi : l'armée française se dirige vers le sud, traverse la Sarthe au-dessous de Parcé, s'avance vers le sud-ouest, passe entre La Fontaine-Saint-Martin et Courcelles et arrive le lendemain matin dans la plaine du Rigalet, près du bourg de Pontvallain.\nDu Guesclin sait qu'il ne faut pas laisser les archers se retrancher, sinon ils seront en mesure de décimer leurs assaillants. À l'aube du 4 décembre, après une heure de repos donnée à ses soldats, Bertrand du Guesclin et ses compagnons chargent, à pied et par surprise, le camp anglais (les chevaux non protégés sont des cibles faciles particulièrement vulnérables aux flèches de l'arc long) et mettent en déroute les troupes de Knolles et Granson. Cependant une centaine d'entre eux résistent pendant qu'un des leurs, Orsèle, rassemble les fuyards dans le bois de Fautreau. Il est surpris par le maréchal d'Audrehem, et les Anglais sont de nouveau bousculés. Le soir, 2 000 Anglais arrivent en soutien et il faut reprendre le combat. L'arrivée opportune d'Olivier de Clisson avec 500 hommes fait tourner l'affrontement à l'avantage des Français. L'armée commandée par le Maréchal de Sancerre, venue de Vendôme, est encore à quelques heures de là quand ce dernier apprend le succès de Pontvallain, il file alors au sud vers le corps anglais de Fitz-Walter, qui se replie au château de Vaas. Fitz-Walter n'a pas le temps de placer son armée, et est sèchement battu par Sancerre[5].\n\nBertrand du Guesclin fait soigneusement enterrer ses morts et placer sur leur tombe une croix de bois que les habitants ont toujours renouvelée jusqu'en 1828, époque à laquelle un châtelain voisin des lieux, M. Dubignon d'Angers fait élever un obélisque en pierre qui porte l'inscription suivante :\n\n« Ici, après le combat de Pontvallain, en novembre 1370, Bertrand du Guesclin de glorieuse mémoire, fit reposer ses fidèles Bretons. Un ormeau voisin, sous lequel on éleva une cabane pour les blessés, une croix de bois plantée sur les morts ont donné à ce lieu le nom d'Ormeau ou de Croix-Brette. Français, que les dissensions intestines, que les invasions étrangères ne souillent plus désormais le sol de notre belle France. »\n\nCette défaite des Anglais est due en grande partie à la valeur de Guy XII de Laval ; et le roi Charles V le reconnut lui-même par le don qu'il lui fit de quatre mille livres d'or avec une pension de trois cents livres par mois pour son État. \nLe 5 décembre, Du Guesclin arrive sur la fin des combats pour compléter la victoire de Louis de Sancerre sur les Anglais retranchés à Vaas et[5], faisant un grand nombre de prisonniers. Granson lui-même est pris par Olivier de Clisson. Le 6, il enlève Saumur : le Maine est libéré. L'armée anglaise est défaite. Parmi les chefs anglais, certains se sont enfuis pour retourner sur leurs terres, d'autres, capturés au combat, ont été libérés contre rançon. Les garnisons d'Anjou sont dissoutes.\n6 décembre : Bertrand Du Guesclin entre dans Saumur pour mettre ses troupes au repos ; il y fait célébrer une cérémonie en l'honneur du vieux maréchal de France Arnoul d'Audrehem, qui a repris du service actif",
+    "image": ""
+  },
+  {
+    "id": 1297,
+    "titre": "Ordre teutonique",
+    "date": 1370,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Teutonic_state_1455_with_Battle_of_Rudau_%282%29.png",
+    "legende": "Carte historique de l'État de l'Ordre Teutonique (1308-1455), incluant la localisation de Rudau ( allemand) . Carte politique russe de l'Ordre teutonique de 1308 à 1455"
+  },
+  {
+    "id": 1298,
+    "titre": "Traité du Pfaffenbrief",
+    "date": 1370,
+    "mois": 10,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Le 7 octobre, les six cantons suisses de Zurich , Lucerne , Zoug , Uri , Schwyz et Unterwald concluent un traité, le Pfaffenbrief (Lettre des prêtres ). Ce traité stipule que les personnes, laïques et religieuses, se trouvant sur le territoire des parties contractantes doivent obéissance aux autorités locales. De plus, l' interdiction des féodalités est instaurée.",
+    "image": ""
+  },
+  {
+    "id": 1300,
+    "titre": "Gabriele Adorno déchu de son poste de doge de Gênes",
+    "date": 1370,
+    "mois": 8,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "13 août : Gabriele Adorno, détesté pour sa politique fiscale inflexible , est contraint d'abdiquer de son poste de doge de la République de Gênes . Le riche Domenico di Campofregoso est élu à sa place. Adorno prend la fuite, mais est rapidement capturé et emprisonné au château de Voltaggio .\nGabriele Adorno et la République de Gênes (1363-1370)\n\nGabriele Adorno est le quatrième doge populaire de la République de Gênes. Son gouvernement, de 1363 à 1370, s’inscrit dans une période de fortes tensions entre les familles aristocratiques génoises, les factions guelfes et gibelines, et les ambitions des puissances italiennes voisines comme les Visconti de Milan.\n\n1. Origines et ascension politique\n\nNé vers 1320 à Gênes, Gabriele Adorno appartient à la famille Adorno, riche lignée de marchands récemment enrichie mais non issue de l’ancienne noblesse féodale. Comme beaucoup de familles marchandes génoises du XIVe siècle, les Adorno soutiennent le parti gibelin, favorable à l’Empire.\n\nIl commence sa carrière politique comme Anziano (magistrat communal) en 1350. Il participe ensuite à des négociations diplomatiques avec la couronne d’Aragon en 1360, preuve de son importance croissante dans la vie politique génoise.\n\nAprès la mort du doge Simone Boccanegra — probablement empoisonné — Adorno est élu doge le 14 mars 1363.\n\n2. Un doge des « populaires » contre l’aristocratie\n\nLe gouvernement d’Adorno cherche à consolider la domination politique des familles marchandes et populaires sur les grandes lignées aristocratiques traditionnelles comme les Spinola ou les Doria.\n\nIl promulgue plusieurs lois réglementant l’accès aux fonctions publiques afin de limiter l’influence des anciennes familles nobles. Cette politique provoque une forte opposition des aristocrates exilés, soutenus par les Visconti de Milan.\n\nEntre 1363 et 1370, Gênes connaît donc une quasi-guerre civile ponctuée de conspirations, d’émeutes et d’expéditions militaires. Certains vassaux génois, notamment les marquis de Carretto, tentent aussi de profiter de l’instabilité pour retrouver leur indépendance.\n\nParallèlement, le parti guelfe cherche à remplacer Adorno par Leonardo Montaldo, sans succès immédiat.\n\n3. Diplomatie et politique extérieure\n\nMalgré ces troubles internes, le dogat d’Adorno connaît plusieurs succès diplomatiques.\n\nIl conclut des accords avec :\n\nPierre Ier de Chypre en 1365 ;\nFerdinand Ier d'Aragon en 1366 ;\nFerdinand Ier de Portugal en 1367.\n\nCes traités visent à maintenir les intérêts commerciaux génois en Méditerranée occidentale et orientale.\n\nSous son gouvernement, Gênes reprend également la ville de Soldaia en Crimée, importante place commerciale de la mer Noire.\n\nEn 1368, l’empereur Charles IV lui accorde le titre de vicaire impérial, renforçant le prestige du doge et des Gibelins génois.\n\n4. Les difficultés financières et la chute (1367-1370)\n\nLa guerre contre les nobles exilés et les accords coûteux conclus avec les Visconti entraînent une grave crise financière. Pour financer la défense de la République, Adorno impose de lourdes taxes qui deviennent très impopulaires.\n\nÀ partir de 1367, son autorité s’affaiblit fortement. Les tensions sociales augmentent dans une ville déjà divisée entre factions politiques et intérêts commerciaux concurrents.\n\nFinalement, le 13 août 1370, une révolte populaire le contraint à abdiquer. Le riche marchand Domenico di Campofregoso est alors élu doge.\n\nAdorno tente de fuir mais il est capturé et emprisonné au château de Voltaggio. Grâce à l’intervention du cardinal Stefano Teobaldeschi, il est libéré et se retire définitivement de la vie politique.\n\nIl meurt à Gênes en 1383.\n\n5. Gabriele Adorno dans l’opéra Simon Boccanegra\n\nGabriele Adorno apparaît également dans l’opéra Simon Boccanegra de Giuseppe Verdi.\n\nVerdi transforme le personnage historique en héros romantique :\n\nAdorno y est un jeune patricien idéaliste ;\nil aime Amelia Grimaldi, fille de Simone Boccanegra ;\nà la fin de l’œuvre, Boccanegra le désigne comme son successeur avant de mourir.\n\nL’opéra reflète les luttes politiques entre factions génoises du XIVe siècle, mais prend de nombreuses libertés avec la réalité historique.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Coa_fam_ITA_adorno.jpg"
+  },
+  {
+    "id": 1301,
+    "titre": "Pierre Roger de Beaufort est élu pape",
+    "date": 1370,
+    "mois": 12,
+    "zones": [
+      "Papaute"
+    ],
+    "type": 3,
+    "description": "30 décembre : Suite au décès d'Urbain V le 19 décembre à Avignon , Pierre Roger de Beaufort est élu pape à l'unanimité le deuxième jour du conclave . Neveu du pape Clément VI, il prend le nom de Grégoire XI . Ce n'est qu'après son élection qu'il devient prêtre et reçoit la consécration épiscopale. Il est le dernier pape à résider en France .",
+    "image": ""
+  },
+  {
+    "id": 1302,
+    "titre": "1ere bibliothèque municipale du monde germanophone.",
+    "date": 1370,
+    "zones": [
+      "St Empire",
+      "Litterature"
+    ],
+    "type": 4,
+    "description": "1ere Première mention de la bibliothèque du conseil municipal de Nuremberg , la plus ancienne bibliothèque municipale du monde germanophone.",
+    "image": ""
+  },
+  {
+    "id": 1303,
+    "titre": "Trần Nghệ Tông dépose Dương Nhật Lễ comme empereur du Đại Việt",
+    "date": 1370,
+    "mois": 11,
+    "zones": [
+      "Chine"
+    ],
+    "type": 2,
+    "description": "15 novembre – Trần Nghệ Tông dépose Dương Nhật Lễ comme empereur du Đại Việt , le Vietnam moderne .\nTrần Nghệ Tông, né sous le nom Trần Phủ en 1321 et mort en 1394, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1370 à 1372 et le huitième représentant de la dynastie Trần.\nTroisième fils de l'empereur Trần Minh Tông, Trần Nghệ Tông succède à ses frères Trần Hiến Tông et Trần Dụ Tông et à son cousin Dương Nhật Lễ qu'il renverse en 1370 sur les conseils de son frère Trần Duệ Tông, rétablissant la famille Trần qui n'avait pas règné depuis la mort de Trần Dụ Tông deux ans plus tôt.\n\nUne fois sur le trône, il tente de rétablir l'ordre au sein de la cour, qui s'était fortement dégradé sous les règnes successifs de Trần Dụ Tông et Dương Nhật Lễ, mais sa position est affaiblie par le manque de soutiens forts, ceux-ci ayant soit disparu lors des conflits contre le Laos et le royaume de Champā, ou s'étant écartés de la cour, mécontentés par les empereurs précédents et la corruption grandissante.\n\nEn 1371, il doit abandonner Thăng Long (actuelle Hanoï), la capitale du Đại Việt, face au roi de Champā Chế Bồng Nga. En 1372, il abdique en faveur de son frère cadet Trần Duệ Tông, avec lequel il continue de diriger le pays, comme il le fait ensuite avec le fils de dernier, Trần Phế Đế, puis son propre fils Trần Thuận Tông. Durant cette période, le Đại Việt continue d'essuyer des défaites contre le royaume de Champā, jusqu'en 1390 et la mort de Chế Bồng Nga.\n\nLe vieil empereur meurt en 1394, laissant le pays à Trần Thuận Tông, mais aussi sous le contrôle du général Hồ Quý Ly qui renversera six ans plus tard la dynastie Trần.",
+    "image": ""
+  },
+  {
+    "id": 1314,
+    "titre": "À Bruxelles, six Juifs sont brûlés vifs",
+    "date": 1370,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "À Bruxelles, six Juifs sont brûlés vifs, accusés d'avoir percé plusieurs hosties consacrées avec un couteau, les faisant saigner. Un culte du Sacrement des Miracles se développe .",
+    "image": ""
   },
   {
     "id": 452,
@@ -15034,6 +15747,19 @@
     ],
     "type": 1,
     "description": "Muhammad Abu Zayyan monte sur le trône, alors qu'il est encore mineur, à la mort de son père, le sultan Abu Faris Abd al-Aziz. Ce dernier s'était lié d'amitié avec Lisan al-Din bin al-Khatib, ancien vizir de Mohammed V de Grenade, et pendant le règne de Muhammad bin Abd al-Aziz, al-Khatib est en sécurité.\n\nMohammed III envoie en actuelle Maroc deux princes mérinides qu'il retenait captifs à Grenade : Ahmad ibn Abd al-Aziz et Abdul Rahman bin Yaflusin, et les soutient dans la prise de contrôle du nord du Maroc. Muhammad Abu Zayyan est remplacé en 1374 par Abul Abbas Ahmad et Abd-al-Rahman. Abul-Abbas Ahmad (Mustanzir) devient le sultan de Fès, tandis qu'Abdul Rahman devient le sultan indépendant de Marrakech. Al-Khatib est emprisonné et exécuté par étranglement en 1375 alors qu'il était en captivité.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 1309,
+    "titre": "Trần Duệ Tông",
+    "date": 1372,
+    "date_fin": 1377,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Trần Duệ Tông, né sous le nom Trần Kính en 1337 et mort en 1377, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1373 à 1377 et le neuvième représentant de la dynastie Trần.\nOnzième fils de l'empereur Trần Minh Tông, Trần Duệ Tông succède à son frère Trần Nghệ Tông lorsque celui-ci abdique en sa faveur en 1373.\n\nUne fois sur le trône, il combat le royaume de Champā alors que la révolte gronde au sein du pays.\n\nLorsqu'il meurt en 1377 en combattant le roi de Champā Chế Bồng Nga, Trần Nghệ Tông confie le trône à son fils Trần Phế Đế.",
     "image": "",
     "regne": true
   },
@@ -15119,6 +15845,34 @@
     "regne": true
   },
   {
+    "id": 1310,
+    "titre": "Trần Phế Đế empereur du Đại Việt",
+    "date": 1377,
+    "mois": 5,
+    "date_fin": 1388,
+    "mois_fin": 9,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Trần Phế Đế, né sous le nom Trần Hiện en 1361 et mort en 1388, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1377 à 1388 et le dixième représentant de la dynastie Trần.\nTrần Phế Đế est désigné par son oncle Trần Nghệ Tông pour succéder à son père Trần Duệ Tông, à la mort de ce dernier en 1377, tué lors de combats contre le royaume de Champā mené par Chế Bồng Nga.",
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 1311,
+    "titre": "Trần Phế Đế empereur du Đại Việt",
+    "date": 1377,
+    "date_fin": 1388,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "1377-1388 : Trần Phế Đế, son fils, abdique ;11e Empereur\nTrần Phế Đế, né sous le nom Trần Hiện en 1361 et mort en 1388, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1377 à 1388 et le dixième représentant de la dynastie Trần.\nTrần Phế Đế est désigné par son oncle Trần Nghệ Tông pour succéder à son père Trần Duệ Tông, à la mort de ce dernier en 1377, tué lors de combats contre le royaume de Champā mené par Chế Bồng Nga.",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 13,
     "titre": "Grand Schisme d'Occident",
     "date": 1378,
@@ -15169,6 +15923,21 @@
       "Papaute"
     ],
     "type": 1,
+    "image": "",
+    "regne": true
+  },
+  {
+    "id": 1312,
+    "titre": "empereur du Đại Việt",
+    "date": 1378,
+    "mois": 5,
+    "date_fin": 1398,
+    "mois_fin": 9,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Trần Thuận Tông, né sous le nom Trần Ngung en 1378 et mort en 1399, est l'empereur du Đại Việt (ancêtre du Viêt Nam) de 1388 à 1398 et le onzième représentant de la dynastie Trần.Trần Thuận Tông est désigné par son père Trần Nghệ Tông pour succéder à son cousin Trần Phế Đế, qu'il détrône en 1388.",
     "image": "",
     "regne": true
   },
@@ -15748,6 +16517,19 @@
     "regne": true
   },
   {
+    "id": 1313,
+    "titre": "Trần Thiếu Đế empereur du Đại Việt",
+    "date": 1398,
+    "date_fin": 1400,
+    "zones": [
+      "Orient"
+    ],
+    "type": 1,
+    "description": "Trần Thiếu Đế, né sous le nom Trần Yên en 1396, est l'empereur de l'Annam de 1398 à 1400 et le douzième et dernier représentant de la dynastie Trần.\nFils de l'empereur Trần Thuận Tông à qui il succède en 1398, Trần Thiếu Đế ne règne que deux ans avant d'être écarté du pouvoir en 1400 par son grand-père maternel Hồ Quý Ly qui régnait déjà de fait depuis la mort de son grand-père paternel Trần Nghệ Tông en 1394.\nLa prise du pouvoir par Hồ Quý Ly marque la fin de la dynastie Trần et le début de la dynastie Hồ qui ne compte que deux Empereurs.",
+    "image": "",
+    "regne": true
+  },
+  {
     "id": 15,
     "titre": "Avènement de la maison de Lancastre",
     "date": 1399,
@@ -16013,6 +16795,16 @@
     "description": "Jeanne d'Arc lève le siège d'Orléans en neuf jours, renversant le cours de la guerre de Cent Ans. Elle fait ensuite sacrer Charles VII à Reims. Capturée en 1430, brûlée vive à Rouen en 1431, elle sera réhabilitée en 1456.",
     "image": "",
     "sources": "Procès de condamnation de Jeanne d'Arc (1431)"
+  },
+  {
+    "id": 1285,
+    "titre": "Europe XVe",
+    "date": 1450,
+    "zones": [
+      "Atlas"
+    ],
+    "type": 2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Europe_in_the_14th_Century.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 20,
