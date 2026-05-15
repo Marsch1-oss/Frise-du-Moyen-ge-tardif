@@ -58,6 +58,19 @@
 
     /* ADMIN LOGIN */
     #login-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 4000; align-items: center; justify-content: center; }
+    .search-bar { position: relative; width: 100%; max-width: 500px; display: flex; align-items: center; }
+    #clear-search {
+      position: absolute;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--ink-muted);
+      cursor: pointer;
+      display: none;
+      line-height: 1;
+    }
+    #clear-search:hover { color: var(--red); }
   </style>
 </head>
 <body>
@@ -76,9 +89,11 @@
     <button class="nav-btn" onclick="openAdminLogin()" style="margin-left: auto; font-size: 0.8rem;">⚙️ Admin</button>
   </div>
 
-  <div class="control-bar">
+<div class="control-bar">
     <div class="search-bar">
-      <input type="text" id="search-input" placeholder="Rechercher un événement (ex: Peste noire, Azincourt...)" onkeyup="applySearch()">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher un événement ou une date..." onkeyup="applySearch()">
+      <button id="clear-search" onclick="clearSearch()" style="display:none;">&times;</button>
       <div id="search-results-list"></div>
     </div>
   </div>
