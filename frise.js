@@ -1683,14 +1683,22 @@ function applySearch() {
       matches.sort(function(a, b) { return a.date - b.date; });
 
       var html = "";
+      
       matches.forEach(function(e) {
         var zoneTxt = e.zones && e.zones.length > 0 ? e.zones[0] : '';
-        html += '<div style="padding: 10px; border-bottom: 1px solid var(--border-dark); cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s;" ';
-        html += 'onmouseover="this.style.background=\'rgba(255,255,255,0.4)\'" onmouseout="this.style.background=\'transparent\'" ';
-        // Utilisation de votre fonction openLightboxById existante
+        
+        html += '<div class="search-result-item" style="padding: 12px 15px; cursor: pointer; display: flex; align-items: baseline; gap: 15px;" ';
         html += 'onclick="openLightboxById(' + e.id + ')">';
-        html += '<span style="background: var(--ink); color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; min-width: 45px; text-align: center;">' + e.date + '</span>';
-        html += '<span style="font-size: 0.95rem; color: var(--ink);"><strong>' + e.titre + '</strong> <small style="color: var(--ink-muted);">(' + zoneTxt + ')</small></span>';
+        
+        // Date stylisée façon "Enluminure"
+        html += '<span style="font-family: \'IM Fell English\', serif; color: var(--red); font-weight: bold; font-size: 1.1rem; min-width: 60px; border-right: 1px solid var(--gold); padding-right: 10px;">' + e.date + '</span>';
+        
+        // Titre et Zone
+        html += '<div style="display: flex; flex-direction: column;">';
+        html += '  <span style="font-family: \'Crimson Pro\', serif; font-size: 1.1rem; color: var(--ink); font-weight: 600;">' + e.titre + '</span>';
+        html += '  <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: bold;">' + zoneTxt + '</span>';
+        html += '</div>';
+        
         html += '</div>';
       });
       resultsList.innerHTML = html;
