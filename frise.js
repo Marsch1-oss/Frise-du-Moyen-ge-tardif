@@ -1612,60 +1612,6 @@ function eventMatchesSearch(evt) {
   return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
 }
 
-function applySearch() {
-  var chips   = document.querySelectorAll('.evt-chip');
-  var countEl = document.getElementById('search-count');
-  if (!searchTerm) {
-    chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
-    document.querySelectorAll('.track-row').forEach(function(r) { r.classList.remove('search-hidden'); });
-    document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-      lbl.style.opacity       = '1';
-      lbl.style.pointerEvents = '';
-    });
-    if (countEl) countEl.textContent = '';
-    return;
-  }
-  var matchByZone = {};
-  var totalMatch  = 0;
-  chips.forEach(function(chip) {
-    var id  = parseInt(chip.dataset.evtId, 10);
-    var evt = allEvents.find(function(e) { return e.id === id; });
-    if (evt && eventMatchesSearch(evt)) {
-      chip.classList.add('search-match');
-      chip.classList.remove('search-dim');
-      totalMatch++;
-      (evt.zones || []).forEach(function(z) { matchByZone[z] = true; });
-    } else {
-      chip.classList.add('search-dim');
-      chip.classList.remove('search-match');
-    }
-  });
-  document.querySelectorAll('.track-row').forEach(function(row) {
-    var zone = row.dataset.zone;
-    if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
-  });
-  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-    var zone = lbl.dataset.zone;
-    if (!zone) return;
-    var hasMatch = !!matchByZone[zone];
-    lbl.style.opacity    = hasMatch ? '1' : '0.3';
-    lbl.style.pointerEvents = hasMatch ? '' : 'none';
-  });
-  matchedIds = allEvents.filter(function(e) { return eventMatchesSearch(e); }).map(function(e) { return e.id; });
-  if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
-    currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
-  }
-  if (countEl) {
-    if (matchedIds.length > 0) {
-      var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
-      countEl.innerHTML = '<span class="match-nav" onclick="prevMatch()" title="Résultat précédent">&#8249;</span>'
-        + '<span class="match-pos">' + pos + '&thinsp;/&thinsp;' + matchedIds.length + '</span>'
-        + '<span class="match-nav" onclick="nextMatch()" title="Résultat suivant">&#8250;</span>';
-    } else {
-      countEl.textContent = 'Aucun résultat';
-    }
-  }
-}
 
 function updatePeriodBanner(level, rangeStart) {
   var lbl     = document.getElementById('pb-label');
@@ -1693,6 +1639,72 @@ function updatePeriodBanner(level, rangeStart) {
     lbl.textContent = 'Année ' + rangeStart;
     sub.textContent = rom3 + ' siècle';
   }
+}
+function applySearch() {
+  searchTerm = document.getElementById('search-input').value.toLowerCase();
+  var resultsContainer = document.getElementById('search-results-list');
+  
+  if (!searchTerm) {
+    if (resultsContainer) resultsContainer.style.display = 'none';
+    refreshFrise();
+    return;
+  }
+
+  // 1. Filtrer et trier chronologiquement
+  var matches = allEvents.filter(function(e) {
+    var inTitle = e.titre.toLowerCase().indexOf(searchTerm) !== -1;
+    var inDesc = e.texte && e.texte.toLowerCase().indexOf(searchTerm) !== -1;
+    return inTitle || inDesc;
+  }).sort(function(a, b) {
+    return a.date - b.date;
+  });
+
+  // 2. Afficher la liste des résultats
+  displaySearchResults(matches);
+  
+  // 3. Mettre à jour la frise visuellement
+  matchedIds = matches.map(function(m) { return m.id; });
+  refreshFrise();
+}
+function displaySearchResults(matches) {
+  var container = document.getElementById('search-results-list');
+  if (!container) return;
+
+  container.innerHTML = '<h3>' + matches.length + ' résultats trouvés</h3>';
+  container.style.display = 'block';
+
+  var list = document.createElement('ul');
+  list.className = 'search-list-items';
+
+  matches.forEach(function(e) {
+    var li = document.createElement('li');
+    li.className = 'search-item';
+    
+    // Déterminer la zone pour la couleur
+    var zone = e.zones[0];
+    var col = COLORS[zone] || { bg: '#666' };
+
+    li.innerHTML = `
+      <span class="search-item-date" style="background:${col.bg}">${e.date}</span>
+      <span class="search-item-title">${e.titre}</span>
+    `;
+
+    // Action au clic : Zoomer sur l'événement
+    li.onclick = function() {
+      // On bascule sur le niveau de zoom approprié (ex: niveau 3 pour la décennie)
+      var decade = Math.floor(e.date / 10) * 10;
+      renderLevel(3, decade);
+      
+      // On ouvre la fiche de l'événement après un court délai
+      setTimeout(function() {
+        openModal(e, zone);
+      }, 200);
+    };
+
+    list.appendChild(li);
+  });
+
+  container.appendChild(list);
 }
 
 function updateFilterCheckboxes() {
