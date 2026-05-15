@@ -1615,6 +1615,9 @@ function eventMatchesSearch(evt) {
 function applySearch() {
   var chips   = document.querySelectorAll('.evt-chip');
   var countEl = document.getElementById('search-count');
+  var resultsContainer = document.getElementById('search-results-container');
+  var resultsList      = document.getElementById('search-results-list');
+
   if (!searchTerm) {
     chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
     document.querySelectorAll('.track-row').forEach(function(r) { r.classList.remove('search-hidden'); });
@@ -1623,8 +1626,11 @@ function applySearch() {
       lbl.style.pointerEvents = '';
     });
     if (countEl) countEl.textContent = '';
+    // Cacher la liste sous la frise si la recherche est vide
+    if (resultsContainer) resultsContainer.style.display = 'none';
     return;
   }
+
   var matchByZone = {};
   var totalMatch  = 0;
   chips.forEach(function(chip) {
@@ -1640,6 +1646,7 @@ function applySearch() {
       chip.classList.remove('search-match');
     }
   });
+
   document.querySelectorAll('.track-row').forEach(function(row) {
     var zone = row.dataset.zone;
     if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
@@ -1651,10 +1658,12 @@ function applySearch() {
     lbl.style.opacity    = hasMatch ? '1' : '0.3';
     lbl.style.pointerEvents = hasMatch ? '' : 'none';
   });
+
   matchedIds = allEvents.filter(function(e) { return eventMatchesSearch(e); }).map(function(e) { return e.id; });
   if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
     currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
   }
+
   if (countEl) {
     if (matchedIds.length > 0) {
       var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
@@ -1665,8 +1674,32 @@ function applySearch() {
       countEl.textContent = 'Aucun résultat';
     }
   }
-}
 
+  // NOUVEAU : Affichage de la liste chronologique sous la frise
+  if (resultsContainer && resultsList) {
+    if (matchedIds.length > 0) {
+      // On récupère les événements qui matchent et on les trie par date
+      var matches = allEvents.filter(function(e) { return matchedIds.includes(e.id); });
+      matches.sort(function(a, b) { return a.date - b.date; });
+
+      var html = "";
+      matches.forEach(function(e) {
+        var zoneTxt = e.zones && e.zones.length > 0 ? e.zones[0] : '';
+        html += '<div style="padding: 10px; border-bottom: 1px solid var(--border-dark); cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s;" ';
+        html += 'onmouseover="this.style.background=\'rgba(255,255,255,0.4)\'" onmouseout="this.style.background=\'transparent\'" ';
+        // Utilisation de votre fonction openLightboxById existante
+        html += 'onclick="openLightboxById(' + e.id + ')">';
+        html += '<span style="background: var(--ink); color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; min-width: 45px; text-align: center;">' + e.date + '</span>';
+        html += '<span style="font-size: 0.95rem; color: var(--ink);"><strong>' + e.titre + '</strong> <small style="color: var(--ink-muted);">(' + zoneTxt + ')</small></span>';
+        html += '</div>';
+      });
+      resultsList.innerHTML = html;
+    } else {
+      resultsList.innerHTML = '<div style="padding: 10px; font-style: italic; color: var(--ink-muted);">Aucun événement trouvé pour cette recherche.</div>';
+    }
+    resultsContainer.style.display = 'block';
+  }
+}
 function updatePeriodBanner(level, rangeStart) {
   var lbl     = document.getElementById('pb-label');
   var sub     = document.getElementById('pb-sub');
