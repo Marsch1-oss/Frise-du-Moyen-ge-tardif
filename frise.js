@@ -1612,6 +1612,60 @@ function eventMatchesSearch(evt) {
   return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
 }
 
+function applySearch() {
+  var chips   = document.querySelectorAll('.evt-chip');
+  var countEl = document.getElementById('search-count');
+  if (!searchTerm) {
+    chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
+    document.querySelectorAll('.track-row').forEach(function(r) { r.classList.remove('search-hidden'); });
+    document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+      lbl.style.opacity       = '1';
+      lbl.style.pointerEvents = '';
+    });
+    if (countEl) countEl.textContent = '';
+    return;
+  }
+  var matchByZone = {};
+  var totalMatch  = 0;
+  chips.forEach(function(chip) {
+    var id  = parseInt(chip.dataset.evtId, 10);
+    var evt = allEvents.find(function(e) { return e.id === id; });
+    if (evt && eventMatchesSearch(evt)) {
+      chip.classList.add('search-match');
+      chip.classList.remove('search-dim');
+      totalMatch++;
+      (evt.zones || []).forEach(function(z) { matchByZone[z] = true; });
+    } else {
+      chip.classList.add('search-dim');
+      chip.classList.remove('search-match');
+    }
+  });
+  document.querySelectorAll('.track-row').forEach(function(row) {
+    var zone = row.dataset.zone;
+    if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
+  });
+  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
+    var zone = lbl.dataset.zone;
+    if (!zone) return;
+    var hasMatch = !!matchByZone[zone];
+    lbl.style.opacity    = hasMatch ? '1' : '0.3';
+    lbl.style.pointerEvents = hasMatch ? '' : 'none';
+  });
+  matchedIds = allEvents.filter(function(e) { return eventMatchesSearch(e); }).map(function(e) { return e.id; });
+  if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
+    currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
+  }
+  if (countEl) {
+    if (matchedIds.length > 0) {
+      var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
+      countEl.innerHTML = '<span class="match-nav" onclick="prevMatch()" title="Résultat précédent">&#8249;</span>'
+        + '<span class="match-pos">' + pos + '&thinsp;/&thinsp;' + matchedIds.length + '</span>'
+        + '<span class="match-nav" onclick="nextMatch()" title="Résultat suivant">&#8250;</span>';
+    } else {
+      countEl.textContent = 'Aucun résultat';
+    }
+  }
+}
 
 function updatePeriodBanner(level, rangeStart) {
   var lbl     = document.getElementById('pb-label');
@@ -1640,87 +1694,7 @@ function updatePeriodBanner(level, rangeStart) {
     sub.textContent = rom3 + ' siècle';
   }
 }
-function applySearch() {
-  searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
-  var resultsContainer = document.getElementById('search-results-list');
-  
-  if (searchTerm.length < 2) { // On ne cherche qu'à partir de 2 caractères
-    if (resultsContainer) resultsContainer.style.display = 'none';
-    return;
-  }
 
-  // Filtrage rapide sans toucher à la frise
-  var matches = allEvents.filter(function(e) {
-    return e.titre.toLowerCase().includes(searchTerm) || 
-           (e.texte && e.texte.toLowerCase().includes(searchTerm));
-  }).sort(function(a, b) { return a.date - b.date; });
-
-  displaySearchResults(matches);
-}
-function displaySearchResults(matches) {
-  var container = document.getElementById('search-results-list');
-  if (!container) return;
-
-  container.style.display = matches.length > 0 ? 'block' : 'none';
-  
-  // On ajoute un en-tête avec un bouton de fermeture
-  container.innerHTML = `
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid #ddd; padding-bottom:5px;">
-      <strong style="font-size:0.9em;">${matches.length} résultats</strong>
-      <button onclick="document.getElementById('search-results-list').style.display='none'" 
-              style="background:none; border:none; cursor:pointer; font-size:1.2em; line-height:1;">&times;</button>
-    </div>
-  `;
-
-  var list = document.createElement('ul');
-  list.className = 'search-list-items';
-  // ... (reste du code pour créer les <li>)
-    
-    // On récupère la couleur de la première zone de l'événement
-    var zoneName = e.zones && e.zones.length > 0 ? e.zones[0] : 'Monde';
-    var col = COLORS[zoneName] || { bg: '#666' };
-
-    li.innerHTML = `
-      <span class="search-item-date" style="background:${col.bg}">${e.date}</span>
-      <span class="search-item-title">${e.titre}</span>
-    `;
-
-    // AU CLIC : Mise à jour de la frise + Ouverture modale
-    // AU CLIC : On ouvre la fiche sans fermer la liste
-    li.onclick = function(event) {
-      event.preventDefault();
-      
-      // 1. On déplace la frise sur la période (Zoom niveau 3)
-      var decade = Math.floor(e.date / 10) * 10;
-      renderLevel(3, decade);
-      
-      // 2. On ouvre la fiche (Modal)
-      if (typeof openModal === "function") {
-        openModal(e, zoneName);
-      }
-      
-      // NOTE : On ne cache plus le container et on ne vide plus l'input ici !
-    };
-      
-      // 1. On déplace la frise sur la période de l'événement (Zoom niveau 3)
-      var decade = Math.floor(e.date / 10) * 10;
-      renderLevel(3, decade);
-      
-      // 2. On ferme la liste de recherche
-      container.style.display = 'none';
-      document.getElementById('search-input').value = '';
-
-      // 3. On ouvre la fiche (Modal)
-      if (typeof openModal === "function") {
-        openModal(e, zoneName);
-      }
-    };
-
-    list.appendChild(li);
-  });
-
-  container.appendChild(list);
-}
 function updateFilterCheckboxes() {
   document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
     var inp  = lbl.querySelector('input');
