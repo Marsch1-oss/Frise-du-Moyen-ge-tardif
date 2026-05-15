@@ -1,90 +1,132 @@
-font-size: 0.9rem;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frise chronologique — Moyen Âge tardif (1300–1500)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* TOUT VOTRE STYLE ORIGINAL EST ICI */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --parchment: #F5EDD8; --parchment-dk: #E8D9BA; --ink: #1C140A;
+      --ink-soft: #4A3B28; --ink-muted: #7A6A52; --red: #8B1A1A; --gold: #9A6B1A;
+      --border: rgba(100,80,40,0.25); --border-dark: rgba(100,80,40,0.5);
+      --radius: 6px; --label-w: 90px;
     }
+    body { background: var(--parchment-dk); color: var(--ink); font-family: 'Crimson Pro', serif; min-height: 100vh; line-height: 1.6; }
 
-    .help-sep { 
-      color: var(--border-dark); 
-      margin: 0 0.4rem; 
+    header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); }
+    .site-title { font-family: 'IM Fell English', serif; font-size: 1.9rem; color: var(--parchment); }
+    
+    main { padding: 1.4rem 1.8rem 3rem; }
+
+    .nav-bar { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .nav-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.28rem 0.9rem; border: 1px solid var(--border-dark); border-radius: 20px; background: rgba(245,237,216,0.6); cursor: pointer; transition: all 0.18s; }
+    .nav-btn:hover { background: var(--ink); color: var(--parchment); }
+    .nav-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
+    .nav-btn-zones { background: rgba(42,74,107,0.1); border-color: rgba(42,74,107,0.4); color: #2A4A6B; font-weight: 600; }
+
+    /* RECHERCHE DESIGN */
+    .control-bar { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 0.5rem 1rem; background: rgba(245,237,216,0.5); border: 1px solid var(--border); border-radius: 24px; }
+    .search-bar { position: relative; flex: 1; max-width: 400px; display: flex; align-items: center; gap: 8px; }
+    #search-input { width: 100%; font-family: inherit; padding: 0.3rem 0.8rem; border: 1px solid var(--border-dark); border-radius: 5px; background: var(--parchment); }
+    
+    #search-results-list {
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: white; border: 1px solid #ccc; border-radius: 0 0 8px 8px;
+        max-height: 400px; overflow-y: auto; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none;
     }
+    .search-item { padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+    .search-item:hover { background: #f5f5f5; }
+    .search-item-date { background: var(--ink); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 
+    /* STRUCTURE FRISE */
+    .frise-card { background: rgba(245,237,216,0.85); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem; overflow-x: auto; box-shadow: 0 2px 12px rgba(50,30,10,0.12); }
+    #frise-container { min-width: 800px; position: relative; }
+
+    /* MODALE ZONES */
+    #zones-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,6,2,0.55); z-index: 200; align-items: center; justify-content: center; }
+    #zones-modal-overlay.open { display: flex; }
+    .zones-modal { background: var(--parchment); border: 1.5px solid var(--border-dark); border-radius: var(--radius); width: min(680px, 94vw); max-height: 82vh; display: flex; flex-direction: column; overflow: hidden; }
+    .zones-modal-header { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.2rem; background: var(--parchment-dk); font-family: 'IM Fell English', serif; }
+    .zones-modal-body { overflow-y: auto; padding: 1rem; }
+    .zone-modal-chip { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.8rem; margin: 3px; border-radius: 16px; border: 1px solid var(--border-dark); cursor: pointer; font-size: 0.85rem; }
+    .zone-modal-chip.active { background: var(--gold); color: white; border-color: var(--gold); }
+
+    /* MODALE DETAIL */
+    #modal-overlay { display: none; position: fixed; inset: 0; background: rgba(15,8,3,0.72); z-index: 300; align-items: center; justify-content: center; }
+    #modal-overlay.open { display: flex; }
+    #modal-box { background: var(--parchment); border-left: 4px solid var(--gold); width: 90%; max-width: 800px; padding: 2rem; border-radius: 8px; position: relative; }
   </style>
 </head>
 <body>
 
 <header>
   <h1 class="site-title">Frise du Moyen Âge tardif</h1>
-  <p class="site-sub">1300 — 1500 · France · Angleterre · etc. · <span style="cursor:pointer; text-decoration:underline;" onclick="openAdminLogin()">Admin</span></p>
+  <p style="font-size: 0.8rem; opacity: 0.6; font-style: italic;">Édition Archiviste · 1300 — 1500</p>
 </header>
 
 <main>
   <div class="nav-bar">
-    <button class="nav-btn nav-btn-home" onclick="goHome()">🏠 Accueil</button>
-    <span class="nav-sep"></span>
+    <button class="nav-btn" onclick="goHome()">🏠 Accueil</button>
     <button class="nav-btn" onclick="goLevel(1)">Vue d’ensemble</button>
     <button class="nav-btn" id="btn-level2" onclick="goLevel(2)">Vue siècle</button>
-    <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue décennale</button>
-    <span class="nav-sep"></span>
     <button class="nav-btn nav-btn-zones" onclick="openZonesModal()">🌍 Zones & thèmes</button>
+    <button class="nav-btn" onclick="openAdminLogin()" style="margin-left: auto;">⚙️ Admin</button>
   </div>
 
-  <div id="breadcrumb"></div>
+  <div id="breadcrumb" style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 0.8rem;"></div>
 
   <div class="control-bar">
-    <div class="search-bar" style="position: relative;">
-      <label for="search-input">🔍</label>
-      <input type="text" id="search-input" placeholder="Rechercher..." autocomplete="off" onkeyup="applySearch()">
-      <div id="search-results-list" style="display:none;"></div>
+    <div class="search-bar">
+      <span>🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher un événement ou une date..." onkeyup="applySearch()">
+      <div id="search-results-list"></div>
     </div>
   </div>
 
-  <div id="frise-container"></div>
+  <div class="frise-card">
+    <div id="frise-container"></div>
+  </div>
 </main>
 
 <div id="zones-modal-overlay">
   <div class="zones-modal">
     <div class="zones-modal-header">
       <span>Sélectionner les zones et thèmes</span>
-      <button class="zones-modal-close" onclick="closeZonesModal()">×</button>
+      <button onclick="closeZonesModal()" style="background:none; border:none; cursor:pointer; font-size:1.2rem;">×</button>
     </div>
-    <div class="zones-modal-body" id="zones-modal-content"></div>
-    <div class="zones-modal-footer">
-      <button class="zones-modal-btn" onclick="selectAllZones()">Tout cocher</button>
-      <button class="zones-modal-btn" onclick="deselectAllZones()">Tout décocher</button>
-      <button class="zones-modal-btn zones-modal-ok" onclick="closeZonesModal()">Terminer</button>
+    <div class="zones-modal-body" id="zones-modal-content">
+      </div>
+    <div style="padding: 1rem; border-top: 1px solid var(--border); display: flex; gap: 10px;">
+      <button class="nav-btn" onclick="selectAllZones()">Tout cocher</button>
+      <button class="nav-btn" onclick="deselectAllZones()">Tout décocher</button>
+      <button class="nav-btn active" onclick="closeZonesModal()" style="margin-left:auto;">Terminer</button>
     </div>
   </div>
 </div>
 
 <div id="modal-overlay">
   <div id="modal-box">
-    <button id="modal-close" onclick="closeModal()">Fermer [Esc]</button>
-    <div id="modal-zone"></div>
-    <div id="modal-date"></div>
-    <h2 id="modal-title"></h2>
-    <div id="modal-body">
-      <div id="modal-img-wrap"></div>
-      <div id="modal-desc"></div>
+    <button onclick="closeModal()" style="position:absolute; top:1rem; right:1rem; cursor:pointer;">Fermer [Esc]</button>
+    <div id="modal-date" style="font-style:italic; color:var(--ink-muted); margin-bottom:10px;"></div>
+    <h2 id="modal-title" style="font-family:'IM Fell English', serif; font-size:2rem; margin-bottom:15px;"></h2>
+    <div id="modal-body" style="display:flex; gap:20px;">
+      <div id="modal-img-wrap" style="flex:1; max-width:300px;"></div>
+      <div id="modal-desc" style="flex:2; font-size:1.1rem; text-align:justify;"></div>
     </div>
-  </div>
-</div>
-
-<div id="login-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
-  <div style="background:var(--parchment); padding:2rem; border-radius:8px; width:320px; text-align:center; border: 2px solid var(--gold);">
-    <h3 style="font-family:'IM Fell English', serif; margin-bottom:1rem;">Accès Archiviste</h3>
-    <input type="password" id="login-code" placeholder="Code secret" style="width:100%; padding:0.6rem; border:1px solid var(--border-dark); border-radius:4px; margin-bottom:1rem;">
-    <button onclick="checkAdminCode()" class="nav-btn active">Valider</button>
-    <button onclick="closeAdminLogin()" class="nav-btn">Fermer</button>
-    <div id="login-error" style="color:var(--red); margin-top:10px; font-size:0.8rem;"></div>
   </div>
 </div>
 
 <script src="frise.js"></script>
 
 <script>
-function openAdminLogin() { document.getElementById('login-overlay').style.display = 'flex'; }
-function closeAdminLogin() { document.getElementById('login-overlay').style.display = 'none'; }
-function checkAdminCode() {
-  if (document.getElementById('login-code').value === '1402') { window.location.href = 'admin.html'; }
-  else { document.getElementById('login-error').textContent = 'Code erroné'; }
+/* Fonctions rapides */
+function openAdminLogin() {
+    const code = prompt("Code d'accès :");
+    if(code === "1402") window.location.href = "admin.html";
 }
 </script>
 
