@@ -1086,15 +1086,8 @@ function openModal(evt, zone) {
 /* ── Fermeture de la modale ── */
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-  var videoWrap = document.getElementById('modal-video-wrap');
-  if (videoWrap) {
-    videoWrap.innerHTML = ''; /* Coupe la vidéo */
-    videoWrap.style.display = 'none';
-  }
-  if (searchTerm) {
-    if (matchedIds.length === 0) clearSearch();
-  }
+  // On ne touche pas à la liste de recherche ici, 
+  // ainsi elle reste affichée derrière la modale.
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────*/
@@ -1613,60 +1606,46 @@ function eventMatchesSearch(evt) {
 }
 
 function applySearch() {
-  var chips   = document.querySelectorAll('.evt-chip');
-  var countEl = document.getElementById('search-count');
-  if (!searchTerm) {
-    chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
-    document.querySelectorAll('.track-row').forEach(function(r) { r.classList.remove('search-hidden'); });
-    document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-      lbl.style.opacity       = '1';
-      lbl.style.pointerEvents = '';
-    });
-    if (countEl) countEl.textContent = '';
+  var input = document.getElementById('search-input');
+  var list  = document.getElementById('search-results-list');
+  var val   = input.value.toLowerCase().trim();
+
+  if (val.length < 2) {
+    list.style.display = 'none';
     return;
   }
-  var matchByZone = {};
-  var totalMatch  = 0;
-  chips.forEach(function(chip) {
-    var id  = parseInt(chip.dataset.evtId, 10);
-    var evt = allEvents.find(function(e) { return e.id === id; });
-    if (evt && eventMatchesSearch(evt)) {
-      chip.classList.add('search-match');
-      chip.classList.remove('search-dim');
-      totalMatch++;
-      (evt.zones || []).forEach(function(z) { matchByZone[z] = true; });
-    } else {
-      chip.classList.add('search-dim');
-      chip.classList.remove('search-match');
-    }
-  });
-  document.querySelectorAll('.track-row').forEach(function(row) {
-    var zone = row.dataset.zone;
-    if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
-  });
-  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-    var zone = lbl.dataset.zone;
-    if (!zone) return;
-    var hasMatch = !!matchByZone[zone];
-    lbl.style.opacity    = hasMatch ? '1' : '0.3';
-    lbl.style.pointerEvents = hasMatch ? '' : 'none';
-  });
-  matchedIds = allEvents.filter(function(e) { return eventMatchesSearch(e); }).map(function(e) { return e.id; });
-  if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
-    currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
-  }
-  if (countEl) {
-    if (matchedIds.length > 0) {
-      var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
-      countEl.innerHTML = '<span class="match-nav" onclick="prevMatch()" title="Résultat précédent">&#8249;</span>'
-        + '<span class="match-pos">' + pos + '&thinsp;/&thinsp;' + matchedIds.length + '</span>'
-        + '<span class="match-nav" onclick="nextMatch()" title="Résultat suivant">&#8250;</span>';
-    } else {
-      countEl.textContent = 'Aucun résultat';
-    }
-  }
-}
 
+  // Filtrage et Tri chronologique
+  var matches = allEvents.filter(function(e) {
+    return e.titre.toLowerCase().includes(val) || (e.desc && e.desc.toLowerCase().includes(val));
+  });
+
+  matches.sort(function(a, b) { return a.date - b.date; });
+
+  if (matches.length === 0) {
+    list.innerHTML = '<div class="search-item">Aucun résultat</div>';
+  } else {
+    list.innerHTML = matches.map(function(e) {
+      return `
+        <div class="search-item" onclick="viewSearchResult(${e.id})">
+          <span class="search-item-date">${e.date}</span>
+          <span class="search-item-title"><strong>${e.titre}</strong> <small>(${e.zone})</small></span>
+        </div>`;
+    }).join('');
+  }
+  list.style.display = 'block';
+}
+function viewSearchResult(eventId) {
+  var ev = allEvents.find(function(item) { return item.id === eventId; });
+  if (!ev) return;
+  
+  // On ouvre la fiche de l'événement
+  openModal(ev);
+  
+  // Optionnel : on peut aussi déplacer la frise en arrière-plan vers l'événement
+  // currentYear = ev.date; 
+  // render(); 
+}
 function updatePeriodBanner(level, rangeStart) {
   var lbl     = document.getElementById('pb-label');
   var sub     = document.getElementById('pb-sub');
