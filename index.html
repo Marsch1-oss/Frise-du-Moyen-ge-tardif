@@ -209,6 +209,22 @@
     /* .type-legend supprimée (usage éditeur uniquement) */
     .type-legend span { display: flex; align-items: center; gap: 0.3rem; }
 
+    /* Style de la barre de défilement pour la liste */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: var(--parchment-dk); }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
+
+/* Animation d'apparition des lignes */
+.search-result-item {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--border);
+}
+.search-result-item:hover {
+    background: var(--parchment-dk) !important;
+    transform: translateX(5px);
+}
+
     /* ── Filtre zones ── */
     /* ── Barre de détail (niveau affichage) ── */
     #detail-bar {
@@ -1135,10 +1151,16 @@
     </div>
   </div>
 
-  <div id="search-results-container" style="display: none; margin-top: 1.5rem; background: var(--parchment-dk); border: 1.5px solid var(--border-dark); border-radius: var(--radius); padding: 1.2rem; box-shadow: var(--shadow);">
-    <h3 style="font-family: 'IM Fell English', serif; font-size: 1.3rem; margin-bottom: 0.8rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; color: var(--ink);">Résultats de la recherche</h3>
-    <div id="search-results-list" style="display: flex; flex-direction: column; max-height: 350px; overflow-y: auto; background: var(--parchment); border-radius: 4px; border: 1px solid var(--border);"></div>
+<div id="search-results-container" style="display: none; margin-top: 2rem; background: var(--parchment); border: 3px double var(--border-dark); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); position: relative;">
+  <h3 style="font-family: 'IM Fell English', serif; font-size: 1.6rem; margin-bottom: 1rem; color: var(--red); border-bottom: 1px solid var(--gold); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;">
+    <span style="font-size: 1.2rem;">📜</span> Chronologie des résultats
+  </h3>
+  <div id="search-results-list" class="custom-scrollbar" style="display: flex; flex-direction: column; max-height: 400px; overflow-y: auto; background: rgba(255,255,255,0.2); border-radius: 4px;">
+    </div>
+  <div style="text-align: center; margin-top: 10px; font-family: 'IM Fell English', serif; opacity: 0.3; font-size: 0.8rem; letter-spacing: 2px;">
+    ***
   </div>
+</div>
    <div id="detail-bar" style="display:none;">
     <span class="detail-title">&#128270; Zoom &eacute;v&eacute;nements&nbsp;:</span>
     <button class="detail-btn active" data-level="1" onclick="setDetailLevel(1)">Essentiel</button>
