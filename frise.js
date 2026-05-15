@@ -1641,37 +1641,28 @@ function updatePeriodBanner(level, rangeStart) {
   }
 }
 function applySearch() {
-  searchTerm = document.getElementById('search-input').value.toLowerCase();
+  searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
   var resultsContainer = document.getElementById('search-results-list');
   
-  if (!searchTerm) {
+  if (searchTerm.length < 2) { // On ne cherche qu'à partir de 2 caractères
     if (resultsContainer) resultsContainer.style.display = 'none';
-    refreshFrise();
     return;
   }
 
-  // 1. Filtrer et trier chronologiquement
+  // Filtrage rapide sans toucher à la frise
   var matches = allEvents.filter(function(e) {
-    var inTitle = e.titre.toLowerCase().indexOf(searchTerm) !== -1;
-    var inDesc = e.texte && e.texte.toLowerCase().indexOf(searchTerm) !== -1;
-    return inTitle || inDesc;
-  }).sort(function(a, b) {
-    return a.date - b.date;
-  });
+    return e.titre.toLowerCase().includes(searchTerm) || 
+           (e.texte && e.texte.toLowerCase().includes(searchTerm));
+  }).sort(function(a, b) { return a.date - b.date; });
 
-  // 2. Afficher la liste des résultats
   displaySearchResults(matches);
-  
-  // 3. Mettre à jour la frise visuellement
-  matchedIds = matches.map(function(m) { return m.id; });
-  refreshFrise();
 }
 function displaySearchResults(matches) {
   var container = document.getElementById('search-results-list');
   if (!container) return;
 
-  container.innerHTML = '<h3>' + matches.length + ' résultats trouvés</h3>';
-  container.style.display = 'block';
+  container.innerHTML = '';
+  container.style.display = matches.length > 0 ? 'block' : 'none';
 
   var list = document.createElement('ul');
   list.className = 'search-list-items';
@@ -1680,25 +1671,31 @@ function displaySearchResults(matches) {
     var li = document.createElement('li');
     li.className = 'search-item';
     
-    // Déterminer la zone pour la couleur
-    var zone = e.zones[0];
-    var col = COLORS[zone] || { bg: '#666' };
+    // On récupère la couleur de la première zone de l'événement
+    var zoneName = e.zones && e.zones.length > 0 ? e.zones[0] : 'Monde';
+    var col = COLORS[zoneName] || { bg: '#666' };
 
     li.innerHTML = `
       <span class="search-item-date" style="background:${col.bg}">${e.date}</span>
       <span class="search-item-title">${e.titre}</span>
     `;
 
-    // Action au clic : Zoomer sur l'événement
-    li.onclick = function() {
-      // On bascule sur le niveau de zoom approprié (ex: niveau 3 pour la décennie)
+    // AU CLIC : Mise à jour de la frise + Ouverture modale
+    li.onclick = function(event) {
+      event.preventDefault();
+      
+      // 1. On déplace la frise sur la période de l'événement (Zoom niveau 3)
       var decade = Math.floor(e.date / 10) * 10;
       renderLevel(3, decade);
       
-      // On ouvre la fiche de l'événement après un court délai
-      setTimeout(function() {
-        openModal(e, zone);
-      }, 200);
+      // 2. On ferme la liste de recherche
+      container.style.display = 'none';
+      document.getElementById('search-input').value = '';
+
+      // 3. On ouvre la fiche (Modal)
+      if (typeof openModal === "function") {
+        openModal(e, zoneName);
+      }
     };
 
     list.appendChild(li);
@@ -1706,7 +1703,6 @@ function displaySearchResults(matches) {
 
   container.appendChild(list);
 }
-
 function updateFilterCheckboxes() {
   document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
     var inp  = lbl.querySelector('input');
