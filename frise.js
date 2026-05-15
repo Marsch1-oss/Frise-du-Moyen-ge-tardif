@@ -1661,15 +1661,20 @@ function displaySearchResults(matches) {
   var container = document.getElementById('search-results-list');
   if (!container) return;
 
-  container.innerHTML = '';
   container.style.display = matches.length > 0 ? 'block' : 'none';
+  
+  // On ajoute un en-tête avec un bouton de fermeture
+  container.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid #ddd; padding-bottom:5px;">
+      <strong style="font-size:0.9em;">${matches.length} résultats</strong>
+      <button onclick="document.getElementById('search-results-list').style.display='none'" 
+              style="background:none; border:none; cursor:pointer; font-size:1.2em; line-height:1;">&times;</button>
+    </div>
+  `;
 
   var list = document.createElement('ul');
   list.className = 'search-list-items';
-
-  matches.forEach(function(e) {
-    var li = document.createElement('li');
-    li.className = 'search-item';
+  // ... (reste du code pour créer les <li>)
     
     // On récupère la couleur de la première zone de l'événement
     var zoneName = e.zones && e.zones.length > 0 ? e.zones[0] : 'Monde';
@@ -1681,8 +1686,21 @@ function displaySearchResults(matches) {
     `;
 
     // AU CLIC : Mise à jour de la frise + Ouverture modale
+    // AU CLIC : On ouvre la fiche sans fermer la liste
     li.onclick = function(event) {
       event.preventDefault();
+      
+      // 1. On déplace la frise sur la période (Zoom niveau 3)
+      var decade = Math.floor(e.date / 10) * 10;
+      renderLevel(3, decade);
+      
+      // 2. On ouvre la fiche (Modal)
+      if (typeof openModal === "function") {
+        openModal(e, zoneName);
+      }
+      
+      // NOTE : On ne cache plus le container et on ne vide plus l'input ici !
+    };
       
       // 1. On déplace la frise sur la période de l'événement (Zoom niveau 3)
       var decade = Math.floor(e.date / 10) * 10;
