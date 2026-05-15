@@ -1109,6 +1109,15 @@
     }
     .illus-wrap:hover .illus-cap { opacity: 1; }
 
+    .search-item:active {
+    background-color: #e8f0fe;
+}
+/* Pour marquer l'élément sélectionné si besoin */
+.search-item.active-result {
+    border-left: 4px solid #1A4A6B;
+    background: #f0f7ff;
+}
+
   </style>
 </head>
 <body>
@@ -1130,6 +1139,7 @@
     <span class="nav-sep"></span>
     <button class="nav-btn nav-btn-zones" onclick="openZonesModal()" title="Choisir les zones et th&egrave;mes affich&eacute;s">&#127757; Zones &amp; th&egrave;mes</button>
   </div>
+ 
 
   <div class="help-inline">
     <span class="help-tip">
@@ -1149,7 +1159,7 @@
       Recherche par mot-cl&eacute; possible
     </span>
   </div>
-
+   
   <div id="period-banner">
     <span class="pb-label" id="pb-label">XIVe si&egrave;cle</span>
     <span class="pb-sub" id="pb-sub">1300 &mdash; 1400</span>
