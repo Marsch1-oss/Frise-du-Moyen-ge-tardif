@@ -1463,259 +1463,66 @@ function pct(year, start, end) {
 }
 
 /* ── Recherche ──────────────────────────────────────────────────────*/
-var savedActiveZones = null;
-var savedCurrentLevel   = null;
-var savedCurrentCentury = null;
-var savedCurrentDecade  = null;
-var savedCurrentYear    = null;
-
-function onSearch(val) {
-  searchTerm = (val || '').trim().toLowerCase();
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
-  if (searchTerm) {
-    if (!savedActiveZones) {
-      savedActiveZones    = {};
-      for (var z in activeZones) savedActiveZones[z] = activeZones[z];
-      savedCurrentLevel   = currentLevel;
-      savedCurrentCentury = currentCentury;
-      savedCurrentDecade  = currentDecade;
-      savedCurrentYear    = currentYear;
-    }
-    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
-    if (matches.length === 0) {
-      updateFilterCheckboxes();
-      refreshFrise();
-      applySearch();
-      return;
-    }
-    ZONES.forEach(function(z) {
-      activeZones[z] = matches.some(function(e) { return e.zones.indexOf(z) !== -1; });
-    });
-    updateFilterCheckboxes();
-    var maxType = 1;
-    matches.forEach(function(e) { var t = e.type || 1; if (t > maxType) maxType = t; });
-    var neededLevel = maxType;
-    var earliest = matches.reduce(function(min, e) { return e.date < min ? e.date : min; }, matches[0].date);
-    if (neededLevel === 1) {
-      renderLevel(1);
-    } else if (neededLevel === 2) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      renderLevel(2, currentCentury);
-    } else if (neededLevel === 3) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      renderLevel(3, currentDecade);
-    } else {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      currentYear    = earliest;
-      renderLevel(4, earliest);
-    }
-  } else {
-    if (savedActiveZones) {
-      activeZones = savedActiveZones;
-      savedActiveZones = null;
-      if (savedCurrentLevel !== null) {
-        currentLevel   = savedCurrentLevel;
-        currentCentury = savedCurrentCentury;
-        currentDecade  = savedCurrentDecade;
-        currentYear    = savedCurrentYear;
-        savedCurrentLevel = null;
-        if      (currentLevel === 1) renderLevel(1);
-        else if (currentLevel === 2) renderLevel(2, currentCentury);
-        else if (currentLevel === 3) renderLevel(3, currentDecade);
-        else                         renderLevel(4, currentYear);
-      } else {
-        updateFilterCheckboxes();
-        refreshFrise();
-      }
-    }
-  }
-  applySearch();
-}
-
-function goToMatch(idx) {
-  if (matchedIds.length === 0) return;
-  idx = ((idx % matchedIds.length) + matchedIds.length) % matchedIds.length;
-  currentMatchIdx = idx;
-  var id  = matchedIds[idx];
-  var evt = allEvents.find(function(e) { return e.id === id; });
-  if (!evt) return;
-
-  var date = evt.date;
-  if (currentLevel === 4) {
-    if (date !== currentYear) { currentYear = date; renderLevel(4, date); }
-  } else if (currentLevel === 3) {
-    var dec = Math.floor(date / 10) * 10;
-    if (dec !== currentDecade) { currentDecade = dec; currentCentury = Math.floor(dec/100)*100; renderLevel(3, dec); }
-  } else if (currentLevel === 2) {
-    var cent = Math.floor(date / 100) * 100;
-    if (cent !== currentCentury) { currentCentury = cent; renderLevel(2, cent); }
-  }
-
-  applySearch();
-  setTimeout(function() {
-    var chip = document.querySelector('.evt-chip[data-evt-id="' + id + '"]');
-    if (chip) chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 150);
-}
-
-function prevMatch() { goToMatch(currentMatchIdx - 1); }
-function nextMatch() { goToMatch(currentMatchIdx + 1); }
-
-function clearSearch() {
-  var input = document.getElementById('search-input');
-  if (input) input.value = '';
-  searchTerm = '';
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = 'none';
-  var countEl = document.getElementById('search-count');
-  if (countEl) countEl.textContent = '';
-  matchedIds = []; currentMatchIdx = -1;
-  if (savedActiveZones) {
-    activeZones = savedActiveZones;
-    savedActiveZones = null;
-    if (savedCurrentLevel !== null) {
-      currentLevel   = savedCurrentLevel;
-      currentCentury = savedCurrentCentury;
-      currentDecade  = savedCurrentDecade;
-      currentYear    = savedCurrentYear;
-      savedCurrentLevel = null;
-      if      (currentLevel === 1) renderLevel(1);
-      else if (currentLevel === 2) renderLevel(2, currentCentury);
-      else if (currentLevel === 3) renderLevel(3, currentDecade);
-      else                         renderLevel(4, currentYear);
-    } else {
-      updateFilterCheckboxes();
-      refreshFrise();
-    }
-  }
-  applySearch();
-}
-
-function eventMatchesSearch(evt) {
-  if (!searchTerm) return true;
-  var haystack = [
-    evt.titre || '',
-    evt.description || '',
-    evt.sources || '',
-    (evt.zones || []).join(' ')
-  ].join(' ').toLowerCase();
-  return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
-}
-
+// 1. Recherche et affichage chronologique
 function applySearch() {
   var input = document.getElementById('search-input');
   var list  = document.getElementById('search-results-list');
+  var clearBtn = document.getElementById('clear-search');
   var val   = input.value.toLowerCase().trim();
 
   if (val.length < 2) {
     list.style.display = 'none';
+    clearBtn.style.display = 'none';
     return;
   }
 
-  // Filtrage et Tri chronologique
+  // Affiche le bouton "X"
+  clearBtn.style.display = 'block';
+
+  // Filtrage dans la base de données
   var matches = allEvents.filter(function(e) {
     return e.titre.toLowerCase().includes(val) || (e.desc && e.desc.toLowerCase().includes(val));
   });
 
+  // TRI CHRONOLOGIQUE (du plus ancien au plus récent)
   matches.sort(function(a, b) { return a.date - b.date; });
 
   if (matches.length === 0) {
-    list.innerHTML = '<div class="search-item">Aucun résultat</div>';
+    list.innerHTML = '<div class="search-item">Aucun résultat trouvé</div>';
   } else {
     list.innerHTML = matches.map(function(e) {
       return `
         <div class="search-item" onclick="viewSearchResult(${e.id})">
-          <span class="search-item-date">${e.date}</span>
-          <span class="search-item-title"><strong>${e.titre}</strong> <small>(${e.zone})</small></span>
+          <span class="search-item-date" style="background:var(--ink); color:white; padding:2px 6px; border-radius:4px; font-weight:bold; font-size:0.8rem;">${e.date}</span>
+          <span style="margin-left:10px;"><strong>${e.titre}</strong> <small>(${e.zone})</small></span>
         </div>`;
     }).join('');
   }
   list.style.display = 'block';
 }
+
+// 2. Visualisation (clic sur un résultat)
 function viewSearchResult(eventId) {
   var ev = allEvents.find(function(item) { return item.id === eventId; });
   if (!ev) return;
   
-  // On ouvre la fiche de l'événement
+  // Ouvre la fiche
   openModal(ev);
   
-  // Optionnel : on peut aussi déplacer la frise en arrière-plan vers l'événement
-  // currentYear = ev.date; 
-  // render(); 
-}
-function updatePeriodBanner(level, rangeStart) {
-  var lbl     = document.getElementById('pb-label');
-  var sub     = document.getElementById('pb-sub');
-  var banner  = document.getElementById('period-banner');
-  if (!lbl || !sub) return;
-  if (banner) banner.classList.toggle('pb-decade', level === 3);
-  var ROMAN = { 1000:'XIe', 1100:'XIIe', 1200:'XIIIe', 1300:'XIVe', 1400:'XVe', 1500:'XVIe' };
-  if (level === 1) {
-    lbl.textContent = 'XIVe et XVe siècle';
-    sub.textContent = '1300 — 1500';
-  } else if (level === 2) {
-    var cent = Math.floor(rangeStart / 100) * 100;
-    var rom  = ROMAN[cent] || (cent + 1) + 'e';
-    lbl.textContent = rom + ' siècle';
-    sub.textContent = rangeStart + ' — ' + (rangeStart + 100);
-  } else if (level === 3) {
-    var cent2 = Math.floor(rangeStart / 100) * 100;
-    var rom2  = ROMAN[cent2] || (cent2 + 1) + 'e';
-    lbl.textContent = rangeStart + ' – ' + (rangeStart + 9);
-    sub.textContent = rom2 + ' siècle — décennie ' + rangeStart;
-  } else if (level === 4) {
-    var cent3 = Math.floor(rangeStart / 100) * 100;
-    var rom3  = ROMAN[cent3] || (cent3 + 1) + 'e';
-    lbl.textContent = 'Année ' + rangeStart;
-    sub.textContent = rom3 + ' siècle';
-  }
+  // Note : La liste de recherche reste ouverte en arrière-plan
 }
 
-function updateFilterCheckboxes() {
-  document.querySelectorAll('.zone-checkbox').forEach(function(lbl) {
-    var inp  = lbl.querySelector('input');
-    if (!inp) return;
-    var zone = inp.value || lbl.dataset.zone;
-    if (!zone) return;
-    inp.checked = !!activeZones[zone];
-    lbl.classList.toggle('checked',   !!activeZones[zone]);
-    lbl.classList.toggle('unchecked', !activeZones[zone]);
-    lbl.style.opacity       = '';
-    lbl.style.pointerEvents = '';
-  });
+// 3. Effacer la recherche
+function clearSearch() {
+  var input = document.getElementById('search-input');
+  var list  = document.getElementById('search-results-list');
+  var clearBtn = document.getElementById('clear-search');
+  
+  input.value = '';
+  list.style.display = 'none';
+  clearBtn.style.display = 'none';
+  input.focus();
 }
-
-function highlightText(text) {
-  if (!text) return '';
-  var escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  if (!searchTerm) return escaped;
-  var words = searchTerm.split(/\s+/).filter(Boolean);
-  words.forEach(function(word) {
-    var safe = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    try {
-      var re = new RegExp('(' + safe + ')', 'gi');
-      escaped = escaped.replace(re, '<mark style="background:#FFE066;color:#1C140A;border-radius:2px;padding:0 2px;">$1</mark>');
-    } catch(e) {}
-  });
-  return escaped;
-}
-
-function extractYouTubeId(url) {
-  if (!url || !url.trim()) return '';
-  var m;
-  m = url.match(/[?&]v=([A-Za-z0-9_-]{11})/);
-  if (m) return m[1];
-  m = url.match(/youtu\.be\/([A-Za-z0-9_-]{11})/);
-  if (m) return m[1];
-  m = url.match(/embed\/([A-Za-z0-9_-]{11})/);
-  if (m) return m[1];
-  if (/^[A-Za-z0-9_-]{11}$/.test(url.trim())) return url.trim();
-  return '';
-}
-
 /* ── Init ────────────────────────────────────────────────────────────*/
 var MUSIC_TRACKS  = [
   'audio/Guillaume_de_Machaut_Je_vivroie_liementLiement_me_deport.mp3',
