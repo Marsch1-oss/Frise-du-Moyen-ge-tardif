@@ -123,22 +123,18 @@
 <div id="modal-overlay">
   <div id="modal-box">
     <button id="modal-close" onclick="closeModal()">×</button>
-    <div id="modal-date" style="font-weight: bold; color: var(--red); margin-bottom: 5px;"></div>
-    <h2 id="modal-title" style="font-family: 'IM Fell English', serif; font-size: 2rem; margin-bottom: 1rem;"></h2>
+    
+    <div id="modal-zone" style="font-weight: bold; color: var(--gold); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;"></div>
+    <div id="modal-date" style="font-style: italic; color: var(--ink-muted); margin-bottom: 10px;"></div>
+    
+    <h2 id="modal-title" style="font-family: 'IM Fell English', serif; font-size: 2rem; margin-bottom: 1rem; color: var(--ink);"></h2>
+    
     <div id="modal-body" style="display: flex; gap: 20px; flex-wrap: wrap;">
-      <div id="modal-img-wrap" style="flex: 1; min-width: 250px;"></div>
-      <div id="modal-desc" style="flex: 2; font-size: 1.1rem; line-height: 1.7; text-align: justify;"></div>
+      <div id="modal-img-wrap" style="flex: 1; min-width: 250px;">
+         </div>
+      <div id="modal-desc" style="flex: 2; font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+         </div>
     </div>
-  </div>
-</div>
-
-<div id="login-overlay">
-  <div style="background: var(--parchment); padding: 2rem; border-radius: 8px; text-align: center; border: 2px solid var(--gold);">
-    <h3 style="margin-bottom: 1rem;">Accès Archiviste</h3>
-    <input type="password" id="login-code" placeholder="Code" style="padding: 0.5rem; margin-bottom: 1rem; width: 100%;">
-    <br>
-    <button class="nav-btn active" onclick="checkAdminCode()">Valider</button>
-    <button class="nav-btn" onclick="document.getElementById('login-overlay').style.display='none'">Annuler</button>
   </div>
 </div>
 
