@@ -452,13 +452,23 @@
     .chip-dot { border-radius: 50%; border: 2px solid rgba(245,237,216,0.7); }
     /* type 1 = plus grand, type 3 = plus petit — géré en JS via style.width/height */
 
-    .chip-medium { font-size: 0.76rem; padding: 3px 8px; border-radius: 10px; border: 1.5px solid; white-space: normal;      /* Autorise le retour à la ligne */
-        word-wrap: break-word;    /* Coupe les mots longs */
-        overflow-wrap: break-word;/* Support moderne */
-        max-width: 250px;         /* Limite la largeur */
+    ..chip-medium { 
+        font-size: 0.76rem; 
+        padding: 3px 8px; 
+        border-radius: 10px; 
+        border: 1.5px solid; 
+        
+        /* Propriétés pour forcer le retour à la ligne */
+        white-space: normal;      
+        overflow-wrap: break-word; 
+        word-wrap: break-word;    
+        word-break: break-word;   /* Plus intelligent que break-all */
+        
+        max-width: 200px;         /* Réduit légèrement pour tester */
         line-height: 1.25; 
         font-style: italic; 
-        box-sizing: border-box;}
+        box-sizing: border-box; 
+    }
     .chip-medium.chip-type1 { font-weight: 600; font-size: 0.75rem; border-width: 2px; }
     .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
 
