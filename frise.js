@@ -638,7 +638,66 @@ function buildTrack(zone, evts, start, end, level) {
     if (chip) track.appendChild(chip);
   }
   row.appendChild(track);
+
+  /* Légende Art : affichée sous la piste quand zone === 'Art' */
+  if (zone === 'Art' && visible.length > 0) {
+    var legend = buildArtLegend(evts, start, end);
+    if (legend) row.appendChild(legend);
+  }
+
   return row;
+}
+
+function buildArtLegend(evts, start, end) {
+  /* Détecte quelles régions sont présentes dans les événements Art visibles */
+  var present = {};
+  evts.forEach(function(e) {
+    var c = getArtColor(e);
+    if (c && c.regionName && !present[c.regionName]) {
+      present[c.regionName] = c;
+    }
+  });
+
+  var regions = Object.keys(present);
+  if (regions.length === 0) return null;
+
+  var legend = document.createElement('div');
+  legend.className = 'art-legend-bar';
+
+  /* Label */
+  var lbl = document.createElement('span');
+  lbl.className = 'art-legend-lbl';
+  lbl.textContent = 'Origines :';
+  legend.appendChild(lbl);
+
+  /* Une pastille par région détectée */
+  regions.sort().forEach(function(name) {
+    var col  = present[name];
+    var item = document.createElement('span');
+    item.className = 'art-legend-item';
+
+    var dot = document.createElement('span');
+    dot.className = 'art-legend-dot';
+    dot.style.background = col.bg;
+    item.appendChild(dot);
+    item.appendChild(document.createTextNode(name));
+    legend.appendChild(item);
+  });
+
+  /* Pastille pour les événements sans région identifiée */
+  var hasGeneric = evts.some(function(e) { return !getArtColor(e); });
+  if (hasGeneric) {
+    var item2 = document.createElement('span');
+    item2.className = 'art-legend-item';
+    var dot2 = document.createElement('span');
+    dot2.className = 'art-legend-dot';
+    dot2.style.background = '#A0522D';
+    item2.appendChild(dot2);
+    item2.appendChild(document.createTextNode('Autre'));
+    legend.appendChild(item2);
+  }
+
+  return legend;
 }
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
