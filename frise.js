@@ -1327,8 +1327,8 @@ var PARCOURS_PALETTE = [
 function getAllParcours() {
   var seen = {}, list = [];
   allEvents.forEach(function(e) {
-    if (!e.parcours) return;
-    var tags = Array.isArray(e.parcours) ? e.parcours : [e.parcours];
+    if (!e.serie || !e.serie.trim()) return;
+    var tags = [e.serie.trim()];
     tags.forEach(function(p) {
       var key = p.trim();
       if (!key || seen[key]) return;
@@ -1343,7 +1343,7 @@ function getAllParcours() {
 
 function getParcoursSteps(p) {
   return allEvents.filter(function(e) {
-    var tags = Array.isArray(e.parcours) ? e.parcours : (e.parcours ? [e.parcours] : []);
+    var tags = e.serie ? [e.serie.trim()] : [];
     return tags.indexOf(p) !== -1;
   }).sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
 }
