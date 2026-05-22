@@ -10,6 +10,47 @@ var ZONES = [
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
 ];
 
+/* ── Couleurs Art par région géographique (détection automatique) ── */
+var ART_REGIONS = [
+  { name: 'Italie',     bg: '#C0392B', light: '#FDECEA', text: '#7B241C',
+    keys: ['Florence','Florentin','Giotto','Duccio','Sienne','Siennois','Pisano',
+           'Venise','Venezia','Milan','Milanese','Padoue','Vérone','Verona',
+           'Orcagna','Martini','Lorenzetti','Cimabue','Gaddi','Traini',
+           'Italie','Italian','Toscane','Toscan','Lombard'] },
+  { name: 'France',     bg: '#2471A3', light: '#D6EAF8', text: '#1A5276',
+    keys: ['Paris','Parisien','Avignon','Bourgogne','Berry','France','Française',
+           'Gothique','cathédrale','Duc de Berry','Limbourg','Fouquet',
+           'Illumin','manuscrit','tapisserie','Île-de-France'] },
+  { name: 'Flandres',   bg: '#1E8449', light: '#D5F5E3', text: '#145A32',
+    keys: ['Flamand','Flandre','Bruges','Gand','Ghent','Bruxelles','Cologne',
+           'Prague','Bohème','Rhin','Empire','Basse-Rhénanie','Westphalie',
+           'Van Eyck','Van der Weyden','Memling','Bouts','Goes'] },
+  { name: 'Espagne',    bg: '#8E44AD', light: '#EAD9F7', text: '#5B2C6F',
+    keys: ['Castille','Aragon','Hispano','Mudéjar','Espagne','Ibérique',
+           'Catalane','Catalogne','Barcelone','Tolède','Séville'] },
+  { name: 'Angleterre', bg: '#2E86C1', light: '#D4E6F1', text: '#1A5276',
+    keys: ['Anglais','Angleterre','Londres','Westminster','Winchester',
+           'Gloucester','Ely','Lincoln','Canterbury'] },
+  { name: 'Orient',     bg: '#B7950B', light: '#FCF3CF', text: '#7D6608',
+    keys: ['Byzantin','Constantinople','Persan','Ottoman','Mamlouk','Islam',
+           'Mongol','Timouride','Iran','Arabe','Mosaïque','dorée'] },
+];
+
+function getArtColor(evt) {
+  /* Retourne la couleur de région pour un événement Art, ou la couleur Art par défaut */
+  if (evt.zones.indexOf('Art') === -1) return null;
+  var text = ((evt.titre || '') + ' ' + (evt.description || '') + ' ' + (evt.legende || '')).toLowerCase();
+  for (var i = 0; i < ART_REGIONS.length; i++) {
+    var r = ART_REGIONS[i];
+    for (var k = 0; k < r.keys.length; k++) {
+      if (text.indexOf(r.keys[k].toLowerCase()) !== -1) {
+        return { bg: r.bg, light: r.light, text: r.text, regionName: r.name };
+      }
+    }
+  }
+  return null; /* couleur Art générique */
+}
+
 var ZONES_GROUPS = {
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'],
   'Europe du Nord':     ['Scandinavie'],
@@ -786,8 +827,10 @@ function adaptFontSize(titre, basePx, maxChars) {
 
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var isShared = evt.zones && evt.zones.length > 1;
-  var col      = COLORS[zone] || COLORS['France'];
-  var col2     = isShared && evt.zones.length >= 2 ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col) : col;
+  /* Couleur géographique pour les événements Art */
+  var artCol = (zone === 'Art') ? getArtColor(evt) : null;
+  var col    = artCol || COLORS[zone] || COLORS['France'];
+  var col2   = isShared && evt.zones.length >= 2 ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col) : col;
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
@@ -1273,6 +1316,289 @@ function wzClose() {
   renderLevel(scale, period);
 }
 
+/* ══════════ PARCOURS THÉMATIQUES ══════════ */
+var activeParcours = null;
+var parcoursColors = {};
+var PARCOURS_PALETTE = [
+  '#C0392B','#2471A3','#1E8449','#D68910','#7D3C98',
+  '#148F77','#BA4A00','#1A5276','#6D4C41','#2D6A4F'
+];
+
+function getAllParcours() {
+  var seen = {}, list = [];
+  allEvents.forEach(function(e) {
+    if (!e.parcours) return;
+    var tags = Array.isArray(e.parcours) ? e.parcours : [e.parcours];
+    tags.forEach(function(p) {
+      var key = p.trim();
+      if (!key || seen[key]) return;
+      seen[key] = true;
+      list.push(key);
+      if (!parcoursColors[key])
+        parcoursColors[key] = PARCOURS_PALETTE[(list.length - 1) % PARCOURS_PALETTE.length];
+    });
+  });
+  return list.sort();
+}
+
+function getParcoursSteps(p) {
+  return allEvents.filter(function(e) {
+    var tags = Array.isArray(e.parcours) ? e.parcours : (e.parcours ? [e.parcours] : []);
+    return tags.indexOf(p) !== -1;
+  }).sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
+}
+
+function openParcoursPanel() {
+  var overlay = document.getElementById('parcours-overlay');
+  var listEl  = document.getElementById('parcours-list');
+  if (!overlay || !listEl) return;
+
+  var all = getAllParcours();
+  listEl.innerHTML = '';
+
+  if (all.length === 0) {
+    listEl.innerHTML = '<p class="parcours-empty">Aucun parcours défini.</p>';
+  } else {
+    all.forEach(function(p) {
+      var col   = parcoursColors[p];
+      var steps = getParcoursSteps(p);
+
+      /* Groupe les étapes par niveau */
+      var byLevel = {1:[], 2:[], 3:[], 4:[]};
+      steps.forEach(function(e) { (byLevel[e.type || 1] || byLevel[4]).push(e); });
+
+      var btn = document.createElement('button');
+      btn.className = 'parcours-item' + (activeParcours === p ? ' active' : '');
+      btn.style.borderLeftColor = col;
+      if (activeParcours === p) btn.style.background = col + '18';
+      btn.innerHTML =
+        '<span class="parcours-dot" style="background:' + col + '"></span>' +
+        '<span class="parcours-name">' + p.replace(/_/g,' ') + '</span>' +
+        '<span class="parcours-count">' + steps.length + ' étape' + (steps.length > 1 ? 's' : '') + '</span>';
+
+      btn.addEventListener('click', (function(pk) {
+        return function() {
+          closeParcoursPanel();
+          activeParcours === pk ? clearParcours() : setParcours(pk);
+        };
+      })(p));
+      listEl.appendChild(btn);
+    });
+  }
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeParcoursPanel() {
+  var overlay = document.getElementById('parcours-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function setParcours(p) {
+  activeParcours = p;
+  updateParcoursBtn();
+  showParcoursResults(p);
+}
+
+function clearParcours() {
+  activeParcours = null;
+  updateParcoursBtn();
+  var panel = document.getElementById('search-results-panel');
+  if (panel) panel.style.display = 'none';
+}
+
+function updateParcoursBtn() {
+  var btn = document.getElementById('btn-parcours');
+  if (!btn) return;
+  if (activeParcours) {
+    var col = parcoursColors[activeParcours] || '#888';
+    btn.style.cssText = 'background:' + col + '22;border-color:' + col + ';color:' + col + ';font-weight:700;';
+    btn.textContent   = '◆ ' + activeParcours.replace(/_/g,' ') + ' ×';
+  } else {
+    btn.style.cssText = '';
+    btn.textContent   = '◆ Parcours';
+  }
+}
+
+function showParcoursResults(p) {
+  var panel   = document.getElementById('search-results-panel');
+  var listEl  = document.getElementById('search-results-list');
+  var titleEl = document.getElementById('sr-title');
+  if (!panel || !listEl) return;
+
+  var col   = parcoursColors[p] || '#888';
+  var steps = getParcoursSteps(p);
+
+  if (titleEl) {
+    titleEl.innerHTML = '<span style="color:' + col + '">◆ ' + p.replace(/_/g,' ') + '</span>'
+      + ' — ' + steps.length + ' étape' + (steps.length > 1 ? 's' : '');
+  }
+
+  listEl.innerHTML = '';
+  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
+                  'jul.','àu.','sep.','oct.','nov.','déc.'];
+  var LEVEL_LABELS = {
+    1: { label: 'Niveau 1 — Majeur', border: '3px solid' },
+    2: { label: 'Niveau 2 — Important', border: '2px solid' },
+    3: { label: 'Niveau 3 — Détaillé', border: '1.5px solid' },
+    4: { label: 'Niveau 4 — Local', border: '1px dashed' }
+  };
+
+  /* Groupe par niveau */
+  var byLevel = { 1:[], 2:[], 3:[], 4:[] };
+  steps.forEach(function(e, i) {
+    (byLevel[e.type || 1] || byLevel[4]).push({ evt: e, globalIdx: i + 1 });
+  });
+
+  [1, 2, 3, 4].forEach(function(lvl) {
+    var items = byLevel[lvl];
+    if (!items.length) return;
+
+    /* En-tête de groupe */
+    var header = document.createElement('div');
+    header.className = 'sr-level-header';
+    header.style.borderLeftColor = col;
+    header.textContent = LEVEL_LABELS[lvl].label + ' (' + items.length + ')';
+    listEl.appendChild(header);
+
+    items.forEach(function(obj) {
+      var evt = obj.evt;
+      var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
+      if (evt.zones && evt.zones.indexOf('Art') !== -1) {
+        var artC = getArtColor(evt);
+        if (artC) evtCol = artC;
+      }
+
+      var dateStr = evt.mois ? MOIS_ABR[evt.mois-1] + ' ' + evt.date : '' + evt.date;
+      if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
+
+      var item = document.createElement('div');
+      item.className = 'sr-item sr-level-' + lvl;
+      item.style.borderLeft = LEVEL_LABELS[lvl].border + ' ' + col;
+
+      item.innerHTML =
+        '<span class="sr-step-num" style="background:' + col + '">' + obj.globalIdx + '</span>' +
+        '<span class="sr-date">' + dateStr + '</span>' +
+        '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
+        '<span class="sr-body">' +
+          '<span class="sr-titre">' + evt.titre + '</span>' +
+          '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
+        '</span>';
+
+      if (evt.image && evt.image.trim()) {
+        var thumb = document.createElement('img');
+        thumb.src = evt.image; thumb.alt = evt.legende || '';
+        thumb.className = 'sr-thumb';
+        item.appendChild(thumb);
+      }
+
+      item.style.cursor = 'pointer';
+      item.addEventListener('click', (function(e) {
+        return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+      })(evt));
+      listEl.appendChild(item);
+    });
+  });
+
+  panel.style.display = 'flex';
+}
+
+/* ══════════ RECHERCHE EN LISTE ══════════ */
+function showSearchResults() {
+  var panel   = document.getElementById('search-results-panel');
+  var listEl  = document.getElementById('search-results-list');
+  var titleEl = document.getElementById('sr-title');
+  var countEl = document.getElementById('search-count');
+  if (!panel || !listEl) return;
+
+  var results = allEvents
+    .filter(function(e) { return eventMatchesSearch(e); })
+    .sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
+
+  if (countEl) countEl.textContent = results.length
+    ? results.length + ' résultat' + (results.length > 1 ? 's' : '')
+    : 'Aucun résultat';
+
+  if (titleEl) titleEl.textContent = searchTerm
+    ? 'Recherche : « ' + searchTerm + ' »'
+    : 'Résultats';
+
+  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
+                  'jul.','àu.','sep.','oct.','nov.','déc.'];
+  var LEVEL_LABELS = {1:'Niveau 1 — Majeur', 2:'Niveau 2 — Important',
+                      3:'Niveau 3 — Détaillé', 4:'Niveau 4 — Local'};
+
+  listEl.innerHTML = '';
+  if (results.length === 0) {
+    listEl.innerHTML = '<p class="sr-empty">Aucun événement ne correspond.</p>';
+  } else {
+    /* Groupe par niveau */
+    var byLevel = {1:[], 2:[], 3:[], 4:[]};
+    results.forEach(function(e) { (byLevel[e.type || 1] || byLevel[4]).push(e); });
+
+    [1, 2, 3, 4].forEach(function(lvl) {
+      var items = byLevel[lvl];
+      if (!items.length) return;
+
+      var header = document.createElement('div');
+      header.className = 'sr-level-header';
+      header.textContent = LEVEL_LABELS[lvl] + ' (' + items.length + ')';
+      listEl.appendChild(header);
+
+      items.forEach(function(evt) {
+        var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
+        if (evt.zones && evt.zones.indexOf('Art') !== -1) {
+          var artC = getArtColor(evt);
+          if (artC) evtCol = artC;
+        }
+        var dateStr = evt.mois ? MOIS_ABR[evt.mois-1] + ' ' + evt.date : '' + evt.date;
+        if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
+
+        var item = document.createElement('div');
+        item.className = 'sr-item sr-level-' + lvl;
+
+        item.innerHTML =
+          '<span class="sr-date">' + dateStr + '</span>' +
+          '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
+          '<span class="sr-body">' +
+            '<span class="sr-titre">' + evt.titre + '</span>' +
+            '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
+          '</span>';
+
+        if (evt.image && evt.image.trim()) {
+          var thumb = document.createElement('img');
+          thumb.src = evt.image; thumb.alt = evt.legende || '';
+          thumb.className = 'sr-thumb';
+          item.appendChild(thumb);
+        }
+
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', (function(e) {
+          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+        })(evt));
+        listEl.appendChild(item);
+      });
+    });
+  }
+
+  panel.style.display = 'flex';
+}
+
+function closeSearchResults() {
+  var panel   = document.getElementById('search-results-panel');
+  var countEl = document.getElementById('search-count');
+  if (panel)   panel.style.display = 'none';
+  if (countEl) countEl.textContent = '';
+  searchTerm = '';
+  var inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+}
+
+
 function goHome() {
   for (var z in activeZones) activeZones[z] = false;
   var inp = document.getElementById('search-input');
@@ -1477,147 +1803,23 @@ var savedCurrentDecade  = null;
 var savedCurrentYear    = null;
 
 function onSearch(val) {
-  searchTerm = (val || '').trim().toLowerCase();
+  searchTerm = (val || '').trim();
   var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
   if (searchTerm) {
-    if (!savedActiveZones) {
-      savedActiveZones    = {};
-      for (var z in activeZones) savedActiveZones[z] = activeZones[z];
-      savedCurrentLevel   = currentLevel;
-      savedCurrentCentury = currentCentury;
-      savedCurrentDecade  = currentDecade;
-      savedCurrentYear    = currentYear;
-    }
-    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
-    if (matches.length === 0) {
-      updateFilterCheckboxes();
-      refreshFrise();
-      applySearch();
-      return;
-    }
-    ZONES.forEach(function(z) {
-      activeZones[z] = matches.some(function(e) { return e.zones.indexOf(z) !== -1; });
-    });
-    updateFilterCheckboxes();
-    var maxType = 1;
-    matches.forEach(function(e) { var t = e.type || 1; if (t > maxType) maxType = t; });
-    var neededLevel = maxType;
-    var earliest = matches.reduce(function(min, e) { return e.date < min ? e.date : min; }, matches[0].date);
-    if (neededLevel === 1) {
-      renderLevel(1);
-    } else if (neededLevel === 2) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      renderLevel(2, currentCentury);
-    } else if (neededLevel === 3) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      renderLevel(3, currentDecade);
-    } else {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      currentYear    = earliest;
-      renderLevel(4, earliest);
-    }
+    showSearchResults();
   } else {
-    if (savedActiveZones) {
-      activeZones = savedActiveZones;
-      savedActiveZones = null;
-      if (savedCurrentLevel !== null) {
-        currentLevel   = savedCurrentLevel;
-        currentCentury = savedCurrentCentury;
-        currentDecade  = savedCurrentDecade;
-        currentYear    = savedCurrentYear;
-        savedCurrentLevel = null;
-        if      (currentLevel === 1) renderLevel(1);
-        else if (currentLevel === 2) renderLevel(2, currentCentury);
-        else if (currentLevel === 3) renderLevel(3, currentDecade);
-        else                         renderLevel(4, currentYear);
-      } else {
-        updateFilterCheckboxes();
-        refreshFrise();
-      }
-    }
+    closeSearchResults();
   }
-  applySearch();
 }
 
-function goToMatch(idx) {
-  if (matchedIds.length === 0) return;
-  idx = ((idx % matchedIds.length) + matchedIds.length) % matchedIds.length;
-  currentMatchIdx = idx;
-  var id  = matchedIds[idx];
-  var evt = allEvents.find(function(e) { return e.id === id; });
-  if (!evt) return;
 
-  var date = evt.date;
-  if (currentLevel === 4) {
-    if (date !== currentYear) { currentYear = date; renderLevel(4, date); }
-  } else if (currentLevel === 3) {
-    var dec = Math.floor(date / 10) * 10;
-    if (dec !== currentDecade) { currentDecade = dec; currentCentury = Math.floor(dec/100)*100; renderLevel(3, dec); }
-  } else if (currentLevel === 2) {
-    var cent = Math.floor(date / 100) * 100;
-    if (cent !== currentCentury) { currentCentury = cent; renderLevel(2, cent); }
-  }
 
-  applySearch();
-  setTimeout(function() {
-    var chip = document.querySelector('.evt-chip[data-evt-id="' + id + '"]');
-    if (chip) chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 150);
-}
-
-function prevMatch() { goToMatch(currentMatchIdx - 1); }
-function nextMatch() { goToMatch(currentMatchIdx + 1); }
-
-function clearSearch() {
-  var input = document.getElementById('search-input');
-  if (input) input.value = '';
-  searchTerm = '';
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = 'none';
-  var countEl = document.getElementById('search-count');
-  if (countEl) countEl.textContent = '';
-  matchedIds = []; currentMatchIdx = -1;
-  if (savedActiveZones) {
-    activeZones = savedActiveZones;
-    savedActiveZones = null;
-    if (savedCurrentLevel !== null) {
-      currentLevel   = savedCurrentLevel;
-      currentCentury = savedCurrentCentury;
-      currentDecade  = savedCurrentDecade;
-      currentYear    = savedCurrentYear;
-      savedCurrentLevel = null;
-      if      (currentLevel === 1) renderLevel(1);
-      else if (currentLevel === 2) renderLevel(2, currentCentury);
-      else if (currentLevel === 3) renderLevel(3, currentDecade);
-      else                         renderLevel(4, currentYear);
-    } else {
-      updateFilterCheckboxes();
-      refreshFrise();
-    }
-  }
-  applySearch();
-}
-
-function eventMatchesSearch(evt) {
-  if (!searchTerm) return true;
-  var haystack = [
-    evt.titre || '',
-    evt.description || '',
-    evt.sources || '',
-    (evt.zones || []).join(' ')
-  ].join(' ').toLowerCase();
-  return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
-}
+function clearSearch() { closeSearchResults(); }
 
 function applySearch() {
   var chips   = document.querySelectorAll('.evt-chip');
   var countEl = document.getElementById('search-count');
-  var resultsContainer = document.getElementById('search-results-container');
-  var resultsList      = document.getElementById('search-results-list');
-
   if (!searchTerm) {
     chips.forEach(function(c) { c.classList.remove('search-match','search-dim'); });
     document.querySelectorAll('.track-row').forEach(function(r) { r.classList.remove('search-hidden'); });
@@ -1626,11 +1828,8 @@ function applySearch() {
       lbl.style.pointerEvents = '';
     });
     if (countEl) countEl.textContent = '';
-    // Cacher la liste sous la frise si la recherche est vide
-    if (resultsContainer) resultsContainer.style.display = 'none';
     return;
   }
-
   var matchByZone = {};
   var totalMatch  = 0;
   chips.forEach(function(chip) {
@@ -1646,7 +1845,6 @@ function applySearch() {
       chip.classList.remove('search-match');
     }
   });
-
   document.querySelectorAll('.track-row').forEach(function(row) {
     var zone = row.dataset.zone;
     if (zone) row.classList.toggle('search-hidden', !matchByZone[zone]);
@@ -1658,12 +1856,10 @@ function applySearch() {
     lbl.style.opacity    = hasMatch ? '1' : '0.3';
     lbl.style.pointerEvents = hasMatch ? '' : 'none';
   });
-
   matchedIds = allEvents.filter(function(e) { return eventMatchesSearch(e); }).map(function(e) { return e.id; });
   if (currentMatchIdx < 0 || currentMatchIdx >= matchedIds.length) {
     currentMatchIdx = matchedIds.length > 0 ? 0 : -1;
   }
-
   if (countEl) {
     if (matchedIds.length > 0) {
       var pos = currentMatchIdx >= 0 ? (currentMatchIdx + 1) : 1;
@@ -1674,40 +1870,8 @@ function applySearch() {
       countEl.textContent = 'Aucun résultat';
     }
   }
-
-  // NOUVEAU : Affichage de la liste chronologique sous la frise
-  if (resultsContainer && resultsList) {
-    if (matchedIds.length > 0) {
-      // On récupère les événements qui matchent et on les trie par date
-      var matches = allEvents.filter(function(e) { return matchedIds.includes(e.id); });
-      matches.sort(function(a, b) { return a.date - b.date; });
-
-      var html = "";
-      
-      matches.forEach(function(e) {
-        var zoneTxt = e.zones && e.zones.length > 0 ? e.zones[0] : '';
-        
-        html += '<div class="search-result-item" style="padding: 12px 15px; cursor: pointer; display: flex; align-items: baseline; gap: 15px;" ';
-        html += 'onclick="openLightboxById(' + e.id + ')">';
-        
-        // Date stylisée façon "Enluminure"
-        html += '<span style="font-family: \'IM Fell English\', serif; color: var(--red); font-weight: bold; font-size: 1.1rem; min-width: 60px; border-right: 1px solid var(--gold); padding-right: 10px;">' + e.date + '</span>';
-        
-        // Titre et Zone
-        html += '<div style="display: flex; flex-direction: column;">';
-        html += '  <span style="font-family: \'Crimson Pro\', serif; font-size: 1.1rem; color: var(--ink); font-weight: 600;">' + e.titre + '</span>';
-        html += '  <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: bold;">' + zoneTxt + '</span>';
-        html += '</div>';
-        
-        html += '</div>';
-      });
-      resultsList.innerHTML = html;
-    } else {
-      resultsList.innerHTML = '<div style="padding: 10px; font-style: italic; color: var(--ink-muted);">Aucun événement trouvé pour cette recherche.</div>';
-    }
-    resultsContainer.style.display = 'block';
-  }
 }
+
 function updatePeriodBanner(level, rangeStart) {
   var lbl     = document.getElementById('pb-label');
   var sub     = document.getElementById('pb-sub');
