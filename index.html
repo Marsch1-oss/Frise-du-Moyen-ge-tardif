@@ -1154,29 +1154,40 @@
     .art-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
 
   
-    /* ── Légende Art (sous la piste) ── */
+    /* ── Légende Art (sous la piste, pleine largeur) ── */
     .art-legend-bar {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
-      padding: 0.22rem 0.5rem 0.22rem var(--label-w);
-      background: rgba(160,82,45,0.06);
-      border-top: 1px dashed rgba(160,82,45,0.2);
+      padding: 0.28rem 0.8rem 0.28rem var(--label-w);
+      background: rgba(26,107,60,0.06);
+      border-top: 1px solid rgba(26,107,60,0.18);
+      border-bottom: 1px solid rgba(26,107,60,0.10);
       font-size: 0.68rem;
       font-style: italic;
       color: var(--ink-muted);
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 0.2rem;
     }
     .art-legend-lbl {
-      font-weight: 600;
+      font-weight: 700;
       font-style: normal;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--ink-soft);
-      margin-right: 0.2rem;
+      margin-right: 0.3rem;
     }
     .art-legend-item {
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.3rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.5);
     }
     .art-legend-dot {
       width: 9px;

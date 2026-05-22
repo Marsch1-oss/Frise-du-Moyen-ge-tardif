@@ -12,26 +12,27 @@ var ZONES = [
 
 /* ── Couleurs Art par région géographique (détection automatique) ── */
 var ART_REGIONS = [
-  { name: 'Italie',     bg: '#C0392B', light: '#FDECEA', text: '#7B241C',
+  /* Couleurs proches des zones géographiques correspondantes */
+  { name: 'Italie',     bg: '#1A6B3C', light: '#D5F5E3', text: '#0E3D22',
     keys: ['Florence','Florentin','Giotto','Duccio','Sienne','Siennois','Pisano',
            'Venise','Venezia','Milan','Milanese','Padoue','Vérone','Verona',
            'Orcagna','Martini','Lorenzetti','Cimabue','Gaddi','Traini',
            'Italie','Italian','Toscane','Toscan','Lombard'] },
-  { name: 'France',     bg: '#2471A3', light: '#D6EAF8', text: '#1A5276',
+  { name: 'France',     bg: '#1A3A6B', light: '#D6EAF8', text: '#0E1F40',
     keys: ['Paris','Parisien','Avignon','Bourgogne','Berry','France','Française',
            'Gothique','cathédrale','Duc de Berry','Limbourg','Fouquet',
            'Illumin','manuscrit','tapisserie','Île-de-France'] },
-  { name: 'Flandres',   bg: '#1E8449', light: '#D5F5E3', text: '#145A32',
+  { name: 'Flandres',   bg: '#5D4E37', light: '#EDE8E0', text: '#2E2418',
     keys: ['Flamand','Flandre','Bruges','Gand','Ghent','Bruxelles','Cologne',
            'Prague','Bohème','Rhin','Empire','Basse-Rhénanie','Westphalie',
            'Van Eyck','Van der Weyden','Memling','Bouts','Goes'] },
-  { name: 'Espagne',    bg: '#8E44AD', light: '#EAD9F7', text: '#5B2C6F',
+  { name: 'Espagne',    bg: '#7B2D8B', light: '#EAD9F7', text: '#4A1756',
     keys: ['Castille','Aragon','Hispano','Mudéjar','Espagne','Ibérique',
            'Catalane','Catalogne','Barcelone','Tolède','Séville'] },
-  { name: 'Angleterre', bg: '#2E86C1', light: '#D4E6F1', text: '#1A5276',
+  { name: 'Angleterre', bg: '#1F5C8B', light: '#D4E6F1', text: '#0D2E47',
     keys: ['Anglais','Angleterre','Londres','Westminster','Winchester',
            'Gloucester','Ely','Lincoln','Canterbury'] },
-  { name: 'Orient',     bg: '#B7950B', light: '#FCF3CF', text: '#7D6608',
+  { name: 'Orient',     bg: '#8B6914', light: '#FCF3CF', text: '#4A380A',
     keys: ['Byzantin','Constantinople','Persan','Ottoman','Mamlouk','Islam',
            'Mongol','Timouride','Iran','Arabe','Mosaïque','dorée'] },
 ];
@@ -329,6 +330,12 @@ function renderLevel(level, rangeStart) {
       evts.push(e);
     }
     container.appendChild(buildTrack(zone, evts, start, end, level));
+
+    /* Légende Art sous la piste — pleine largeur, hors du track-row */
+    if (zone === 'Art' && evts.length > 0) {
+      var artLegRow = buildArtLegendRow(evts, start, end);
+      if (artLegRow) container.appendChild(artLegRow);
+    }
 
     if (level >= 3) {
       var illusRow = buildIllusRow(zone, evts, start, end, level);
@@ -639,13 +646,13 @@ function buildTrack(zone, evts, start, end, level) {
   }
   row.appendChild(track);
 
-  /* Légende Art : affichée sous la piste quand zone === 'Art' */
-  if (zone === 'Art' && visible.length > 0) {
-    var legend = buildArtLegend(evts, start, end);
-    if (legend) row.appendChild(legend);
-  }
-
   return row;
+}
+
+/* Appelé depuis renderLevel pour insérer la légende Art SOUS la piste */
+function buildArtLegendRow(evts, start, end) {
+  var legend = buildArtLegend(evts, start, end);
+  return legend || null;
 }
 
 function buildArtLegend(evts, start, end) {
@@ -1487,163 +1494,134 @@ function showParcoursResults(p) {
   var titleEl = document.getElementById('sr-title');
   if (!panel || !listEl) return;
 
-  var col   = parcoursColors[p] || '#888';
+  var col   = parcoursColors[p] || '#C0392B';
   var steps = getParcoursSteps(p);
 
   if (titleEl) {
-    titleEl.innerHTML = '<span style="color:' + col + '">◆ ' + p.replace(/_/g,' ') + '</span>'
-      + ' — ' + steps.length + ' étape' + (steps.length > 1 ? 's' : '');
+    titleEl.innerHTML =
+      '<span style="color:' + col + '">◆ ' + p.replace(/_/g,' ') + '</span>' +
+      ' — ' + steps.length + ' étape' + (steps.length > 1 ? 's' : '');
   }
 
   listEl.innerHTML = '';
+  if (steps.length === 0) {
+    listEl.innerHTML = '<p class="sr-empty">Aucune étape trouvée.</p>';
+    panel.style.display = 'flex';
+    return;
+  }
+
   var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
-                  'jul.','àu.','sep.','oct.','nov.','déc.'];
-  var LEVEL_LABELS = {
-    1: { label: 'Niveau 1 — Majeur', border: '3px solid' },
-    2: { label: 'Niveau 2 — Important', border: '2px solid' },
-    3: { label: 'Niveau 3 — Détaillé', border: '1.5px solid' },
-    4: { label: 'Niveau 4 — Local', border: '1px dashed' }
+                  'jul.','aoû.','sep.','oct.','nov.','déc.'];
+
+  /* Config visuelle par niveau :
+     point + opacité + taille de fonte + couleur texte */
+  var LVL = {
+    1: { dot: 10, opacity: 1.0,  fs: '14px', fw: '500', tc: 'var(--color-text-primary)',   indent: 0  },
+    2: { dot: 7,  opacity: 0.75, fs: '13px', fw: '400', tc: 'var(--color-text-primary)',   indent: 0  },
+    3: { dot: 5,  opacity: 0.45, fs: '12px', fw: '400', tc: 'var(--color-text-secondary)', indent: 0  },
+    4: { dot: 3,  opacity: 0.28, fs: '11px', fw: '400', tc: 'var(--color-text-tertiary)',  indent: 0  }
   };
 
-  /* Groupe par niveau */
-  var byLevel = { 1:[], 2:[], 3:[], 4:[] };
-  steps.forEach(function(e, i) {
-    (byLevel[e.type || 1] || byLevel[4]).push({ evt: e, globalIdx: i + 1 });
+  /* Ligne verticale contenante */
+  var timeline = document.createElement('div');
+  timeline.style.cssText =
+    'position:relative;padding-left:22px;' +
+    'border-left:2px solid ' + col + '33;' +
+    'display:flex;flex-direction:column;gap:2px;';
+
+  steps.forEach(function(evt, idx) {
+    var lvl     = Math.min(Math.max(parseInt(evt.type) || 1, 1), 4);
+    var cfg     = LVL[lvl];
+    var evtCol  = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
+    if (evt.zones && evt.zones.indexOf('Art') !== -1) {
+      var artC = getArtColor(evt);
+      if (artC) evtCol = artC;
+    }
+
+    var dateStr = evt.mois ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
+    if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
+
+    var row = document.createElement('div');
+    row.style.cssText =
+      'display:flex;align-items:flex-start;gap:8px;' +
+      'position:relative;padding:3px 0;cursor:pointer;' +
+      'border-radius:5px;transition:background 0.12s;';
+    row.addEventListener('mouseenter', function() { this.style.background = 'var(--color-background-secondary)'; });
+    row.addEventListener('mouseleave', function() { this.style.background = ''; });
+
+    /* Point sur la ligne */
+    var dot = document.createElement('span');
+    var dotSz = cfg.dot;
+    var dotLeft = -22 - dotSz / 2 + 1;
+    dot.style.cssText =
+      'position:absolute;' +
+      'left:' + dotLeft + 'px;' +
+      'top:' + (8 - dotSz / 2) + 'px;' +
+      'width:' + dotSz + 'px;height:' + dotSz + 'px;' +
+      'border-radius:50%;' +
+      'background:' + col + ';' +
+      'opacity:' + cfg.opacity + ';' +
+      'border:' + (lvl <= 2 ? '1.5px solid var(--color-background-primary)' : 'none') + ';' +
+      'flex-shrink:0;';
+    row.appendChild(dot);
+
+    /* Date */
+    var dateEl = document.createElement('span');
+    dateEl.style.cssText =
+      'font-size:10px;color:var(--color-text-tertiary);' +
+      'min-width:38px;text-align:right;padding-top:2px;flex-shrink:0;';
+    dateEl.textContent = dateStr;
+    row.appendChild(dateEl);
+
+    /* Pastille zone */
+    var zoneDot = document.createElement('span');
+    zoneDot.style.cssText =
+      'width:7px;height:7px;border-radius:50%;' +
+      'background:' + evtCol.bg + ';flex-shrink:0;margin-top:5px;';
+    row.appendChild(zoneDot);
+
+    /* Corps texte */
+    var body = document.createElement('span');
+    body.style.cssText = 'display:flex;flex-direction:column;flex:1;min-width:0;';
+
+    var titre = document.createElement('span');
+    titre.style.cssText =
+      'font-size:' + cfg.fs + ';font-weight:' + cfg.fw + ';' +
+      'color:' + cfg.tc + ';font-style:italic;' +
+      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;';
+    titre.textContent = evt.titre;
+    body.appendChild(titre);
+
+    if (evt.zones && evt.zones.length) {
+      var zones = document.createElement('span');
+      zones.style.cssText = 'font-size:10px;color:var(--color-text-tertiary);';
+      zones.textContent = evt.zones.join(', ');
+      body.appendChild(zones);
+    }
+    row.appendChild(body);
+
+    /* Miniature si image */
+    if (evt.image && evt.image.trim()) {
+      var thumb = document.createElement('img');
+      thumb.src = evt.image; thumb.alt = '';
+      thumb.style.cssText =
+        'width:32px;height:38px;object-fit:cover;object-position:top;' +
+        'border-radius:3px;border:0.5px solid var(--color-border-tertiary);flex-shrink:0;';
+      row.appendChild(thumb);
+    }
+
+    /* Clic → fiche */
+    row.addEventListener('click', (function(e) {
+      return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+    })(evt));
+
+    timeline.appendChild(row);
   });
 
-  [1, 2, 3, 4].forEach(function(lvl) {
-    var items = byLevel[lvl];
-    if (!items.length) return;
-
-    /* En-tête de groupe */
-    var header = document.createElement('div');
-    header.className = 'sr-level-header';
-    header.style.borderLeftColor = col;
-    header.textContent = LEVEL_LABELS[lvl].label + ' (' + items.length + ')';
-    listEl.appendChild(header);
-
-    items.forEach(function(obj) {
-      var evt = obj.evt;
-      var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
-      if (evt.zones && evt.zones.indexOf('Art') !== -1) {
-        var artC = getArtColor(evt);
-        if (artC) evtCol = artC;
-      }
-
-      var dateStr = evt.mois ? MOIS_ABR[evt.mois-1] + ' ' + evt.date : '' + evt.date;
-      if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
-
-      var item = document.createElement('div');
-      item.className = 'sr-item sr-level-' + lvl;
-      item.style.borderLeft = LEVEL_LABELS[lvl].border + ' ' + col;
-
-      item.innerHTML =
-        '<span class="sr-step-num" style="background:' + col + '">' + obj.globalIdx + '</span>' +
-        '<span class="sr-date">' + dateStr + '</span>' +
-        '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
-        '<span class="sr-body">' +
-          '<span class="sr-titre">' + evt.titre + '</span>' +
-          '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
-        '</span>';
-
-      if (evt.image && evt.image.trim()) {
-        var thumb = document.createElement('img');
-        thumb.src = evt.image; thumb.alt = evt.legende || '';
-        thumb.className = 'sr-thumb';
-        item.appendChild(thumb);
-      }
-
-      item.style.cursor = 'pointer';
-      item.addEventListener('click', (function(e) {
-        return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
-      })(evt));
-      listEl.appendChild(item);
-    });
-  });
-
+  listEl.appendChild(timeline);
   panel.style.display = 'flex';
 }
 
-/* ══════════ RECHERCHE EN LISTE ══════════ */
-function showSearchResults() {
-  var panel   = document.getElementById('search-results-panel');
-  var listEl  = document.getElementById('search-results-list');
-  var titleEl = document.getElementById('sr-title');
-  var countEl = document.getElementById('search-count');
-  if (!panel || !listEl) return;
-
-  var results = allEvents
-    .filter(function(e) { return eventMatchesSearch(e); })
-    .sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
-
-  if (countEl) countEl.textContent = results.length
-    ? results.length + ' résultat' + (results.length > 1 ? 's' : '')
-    : 'Aucun résultat';
-
-  if (titleEl) titleEl.textContent = searchTerm
-    ? 'Recherche : « ' + searchTerm + ' »'
-    : 'Résultats';
-
-  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
-                  'jul.','àu.','sep.','oct.','nov.','déc.'];
-  var LEVEL_LABELS = {1:'Niveau 1 — Majeur', 2:'Niveau 2 — Important',
-                      3:'Niveau 3 — Détaillé', 4:'Niveau 4 — Local'};
-
-  listEl.innerHTML = '';
-  if (results.length === 0) {
-    listEl.innerHTML = '<p class="sr-empty">Aucun événement ne correspond.</p>';
-  } else {
-    /* Groupe par niveau */
-    var byLevel = {1:[], 2:[], 3:[], 4:[]};
-    results.forEach(function(e) { (byLevel[e.type || 1] || byLevel[4]).push(e); });
-
-    [1, 2, 3, 4].forEach(function(lvl) {
-      var items = byLevel[lvl];
-      if (!items.length) return;
-
-      var header = document.createElement('div');
-      header.className = 'sr-level-header';
-      header.textContent = LEVEL_LABELS[lvl] + ' (' + items.length + ')';
-      listEl.appendChild(header);
-
-      items.forEach(function(evt) {
-        var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
-        if (evt.zones && evt.zones.indexOf('Art') !== -1) {
-          var artC = getArtColor(evt);
-          if (artC) evtCol = artC;
-        }
-        var dateStr = evt.mois ? MOIS_ABR[evt.mois-1] + ' ' + evt.date : '' + evt.date;
-        if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
-
-        var item = document.createElement('div');
-        item.className = 'sr-item sr-level-' + lvl;
-
-        item.innerHTML =
-          '<span class="sr-date">' + dateStr + '</span>' +
-          '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
-          '<span class="sr-body">' +
-            '<span class="sr-titre">' + evt.titre + '</span>' +
-            '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
-          '</span>';
-
-        if (evt.image && evt.image.trim()) {
-          var thumb = document.createElement('img');
-          thumb.src = evt.image; thumb.alt = evt.legende || '';
-          thumb.className = 'sr-thumb';
-          item.appendChild(thumb);
-        }
-
-        item.style.cursor = 'pointer';
-        item.addEventListener('click', (function(e) {
-          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
-        })(evt));
-        listEl.appendChild(item);
-      });
-    });
-  }
-
-  panel.style.display = 'flex';
-}
 
 function closeSearchResults() {
   var panel   = document.getElementById('search-results-panel');
