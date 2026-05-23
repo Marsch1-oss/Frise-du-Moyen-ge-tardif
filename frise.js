@@ -162,12 +162,9 @@ function visibleAtLevel(evt, level) {
   /* Vue siècle : niveau 1 uniquement */
   if (level === 2) return t === 1;
 
-  /* Vue décennale : selon le filtre Affichage */
-  if (t === 1) return true;
-  if (t === 2) return detailLevel >= 1;
-  if (t === 3) return detailLevel >= 2;
-  if (t === 4) return detailLevel >= 3;
-  return true;
+  /* Vue décennale : 4 niveaux de détail
+     1=Essentiel (t≤1)  2=Important (t≤2)  3=Précis (t≤3)  4=Complet (t≤4) */
+  return t <= detailLevel;
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
@@ -838,18 +835,20 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.style.overflow = 'visible';
   if (level > 1) {
     var MOIS_ABR_R = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
-    var dateLblR = document.createElement('span');
-    dateLblR.className   = 'chip-date-label';
-    var lblTxtR = evt.mois ? MOIS_ABR_R[evt.mois - 1] + '\u00a0' + evt.date : '' + evt.date;
+    /* Date compacte intégrée dans le chip (pas au-dessus) pour ne pas masquer le texte voisin */
+    var dateCompact = evt.mois ? MOIS_ABR_R[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
     if (evt.date_fin && evt.date_fin > evt.date) {
-      var finTxtR = evt.mois_fin ? MOIS_ABR_R[evt.mois_fin - 1] + '\u00a0' + evt.date_fin : '' + evt.date_fin;
-      lblTxtR += '\u2013' + finTxtR;
+      dateCompact += '–' + evt.date_fin;
     }
-    dateLblR.textContent = lblTxtR;
-    chip.appendChild(dateLblR);
-    var maxC = level === 4 ? 36 : level === 3 ? 26 : 18;
-    var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '\u2026' : evt.titre;
-    chip.appendChild(document.createTextNode(titre));
+    var maxC  = level === 4 ? 36 : level === 3 ? 26 : 18;
+    var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '…' : evt.titre;
+
+    /* Span date inline (petit, à gauche du titre) */
+    var dateInline = document.createElement('span');
+    dateInline.className = 'ruler-date-inline';
+    dateInline.textContent = dateCompact;
+    chip.appendChild(dateInline);
+    chip.appendChild(document.createTextNode(' ' + titre));
   }
   chip.title = '\u265b ' + evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
   if (evt.image && evt.image.trim()) {
@@ -1741,7 +1740,13 @@ function updateDetailBar() {
   if (!bar) return;
   bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
   if (hint) {
-    hint.textContent = detailLevel === 1 ? '— niveaux 1 & 2' : detailLevel === 2 ? '— niveaux 1, 2 & 3' : '— tous les niveaux';
+    var labels = {
+      1: '— niveau 1 seulement',
+      2: '— niveaux 1 – 2',
+      3: '— niveaux 1 – 3',
+      4: '— tous les niveaux'
+    };
+    hint.textContent = labels[detailLevel] || '';
   }
 }
 

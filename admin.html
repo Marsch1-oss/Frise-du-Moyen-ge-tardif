@@ -153,14 +153,6 @@
           <input type="text" id="f-titre" placeholder="ex. Peste noire en Europe">
         </div>
       </div>
-      
-      <div class="field-row single">
-        <div class="field">
-          <label for="ev-serie">Série (Événement long / Séquence)</label>
-          <input type="text" id="ev-serie" list="serie-suggestions" placeholder="Ex: Guerre de Cent Ans...">
-          <datalist id="serie-suggestions"></datalist>
-        </div>
-      </div>
 
       <div class="field" style="margin-bottom:1rem">
         <label>Zones géographiques <span class="req">*</span></label>
@@ -172,19 +164,19 @@
         <div class="type-radios" id="type-radios">
           <label class="type-radio selected" data-val="1">
             <input type="radio" name="type" value="1">
-            <span class="stars">★★★★</span> Niveau 1 — visible dès la vue siècle
+            <span class="stars">★★★★</span> Niveau 1 — <strong>Essentiel</strong> — visible dès la vue siècle
           </label>
           <label class="type-radio" data-val="2">
             <input type="radio" name="type" value="2" checked>
-            <span class="stars">★★★</span> Niveau 2 — vue décennale Essentiel
+            <span class="stars">★★★</span> Niveau 2 — <strong>Important</strong> — vue décennale filtre Essentiel+
           </label>
           <label class="type-radio" data-val="3">
             <input type="radio" name="type" value="3">
-            <span class="stars">★★</span> Niveau 3 — vue décennale Détaillé
+            <span class="stars">★★</span> Niveau 3 — <strong>Précis</strong> — vue décennale filtre Important+
           </label>
           <label class="type-radio" data-val="4">
             <input type="radio" name="type" value="4">
-            <span class="stars">★</span> Niveau 4 — vue décennale Complet
+            <span class="stars">★</span> Niveau 4 — <strong>Complet</strong> — tous les niveaux activés
           </label>
         </div>
       </div>
@@ -383,28 +375,6 @@ function initTypeRadios() {
   });
 }
 
-function updateSequenceDatalist() {
-  var datalist = document.getElementById('serie-suggestions');
-  if (!datalist) return;
-
-  var series = [];
-  events.forEach(function(ev) {
-    if (ev.serie && ev.serie.trim() !== "") {
-      if (series.indexOf(ev.serie.trim()) === -1) {
-        series.push(ev.serie.trim());
-      }
-    }
-  });
-
-  series.sort();
-
-  var html = "";
-  series.forEach(function(s) {
-    html += '<option value="' + s + '">';
-  });
-  datalist.innerHTML = html;
-}
-
 function readForm() {
   var date  = parseInt(document.getElementById('f-date').value);
   var titre = document.getElementById('f-titre').value.trim();
@@ -429,17 +399,12 @@ function readForm() {
   var rawVideo = fVideoEl ? fVideoEl.value.trim() : '';
   var isRegne  = !!(document.getElementById('f-regne') && document.getElementById('f-regne').checked);
 
-  var serieInput = document.getElementById('ev-serie').value.trim();
-
   var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
   if (mois)                    evt.mois     = mois;
   if (dateFin && dateFin > date) evt.date_fin = dateFin;
   if (moisFin && dateFin)       evt.mois_fin = moisFin;
   evt.zones       = zones;
   evt.type        = type;
-  
-  if (serieInput) evt.serie = cleanText(serieInput);
-
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
   if (rawVideo)  evt.video = rawVideo;
@@ -468,9 +433,6 @@ function fillForm(evt) {
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
-  
-  document.getElementById('ev-serie').value   = evt.serie    || '';
-
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     var checked = (evt.zones || []).indexOf(inp.value) !== -1;
     inp.checked = checked;
@@ -492,7 +454,7 @@ function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
-   'f-desc','f-image','f-legende','f-video','f-sources', 'ev-serie'].forEach(function(id) {
+   'f-desc','f-image','f-legende','f-video','f-sources'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
@@ -539,8 +501,7 @@ function renderList() {
   var filtered = events.filter(function(e) {
     return !q || e.titre.toLowerCase().indexOf(q) !== -1
       || String(e.date).indexOf(q) !== -1
-      || (e.zones && e.zones.join(' ').toLowerCase().indexOf(q) !== -1)
-      || (e.serie && e.serie.toLowerCase().indexOf(q) !== -1);
+      || (e.zones && e.zones.join(' ').toLowerCase().indexOf(q) !== -1);
   });
   document.getElementById('list-count').textContent = '(' + events.length + ')';
   var list = document.getElementById('event-list');
@@ -557,14 +518,11 @@ function renderList() {
     var zonesHtml = (evt.zones || []).map(function(z) {
       return '<span class="ec-zone" style="background:' + (COLORS[z] || '#888') + '">' + z + '</span>';
     }).join('');
-    
-    var serieTag = evt.serie ? '<span style="font-size:0.7rem;color:var(--gold);margin-left:5px;">[' + evt.serie + ']</span>' : '';
-
     card.innerHTML =
       '<button class="ec-del" title="Supprimer" onclick="quickDelete(' + evt.id + ', event)">&times;</button>'
       + '<div class="ec-header">'
       + '<span class="ec-date">' + evt.date + (evt.date_fin ? '–' + evt.date_fin : '') + '</span>'
-      + '<span class="ec-title">' + evt.titre + serieTag + '</span>'
+      + '<span class="ec-title">' + evt.titre + '</span>'
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
       + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span></div>';
@@ -590,7 +548,6 @@ function updateJSON() {
     if (e.mois_fin) o.mois_fin = e.mois_fin;
     o.zones = e.zones;
     o.type  = e.type || 1;
-    if (e.serie)       o.serie       = e.serie;
     if (e.description) o.description = e.description;
     o.image = e.image || '';
     if (e.legende) o.legende = e.legende;
@@ -612,8 +569,6 @@ function updateJSON() {
     countEl.style.color = '';
     countEl.title = '';
   }
-  
-  updateSequenceDatalist();
   renderList();
 }
 
