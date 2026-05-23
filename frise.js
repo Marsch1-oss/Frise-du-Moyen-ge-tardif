@@ -153,18 +153,25 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
-  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  if (isNaN(t)) t = 1;
+  /* Les règnes sont forcés en type 1 (Siècle) quelle que soit leur valeur */
+  var t = evt.regne ? 1
+        : (evt.type === undefined || evt.type === null || evt.type === '') ? 2
+        : parseInt(evt.type, 10);
+  if (isNaN(t)) t = 2;
 
   /* Vue annuelle : tout visible */
   if (level === 4) return true;
 
-  /* Vue siècle : niveau 1 uniquement */
-  if (level === 2) return t === 1;
+  /* Vue ensemble (level 1) : types 1 seulement */
+  if (level === 1) return t === 1;
 
-  /* Vue décennale : 4 niveaux de détail
-     1=Essentiel (t≤1)  2=Important (t≤2)  3=Précis (t≤3)  4=Complet (t≤4) */
-  return t <= detailLevel;
+  /* Vue siècle (level 2) : types 1 + 2 */
+  if (level === 2) return t <= 2;
+
+  /* Vue décennale (level 3) : selon filtre
+     detailLevel 1=Essentiel(t≤2)  2=Important(t≤3)
+                 3=Précis(t≤4)     4=Complet(t≤5) */
+  return t <= (detailLevel + 1);
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
@@ -1741,10 +1748,10 @@ function updateDetailBar() {
   bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
   if (hint) {
     var labels = {
-      1: '— niveau 1 seulement',
-      2: '— niveaux 1 – 2',
-      3: '— niveaux 1 – 3',
-      4: '— tous les niveaux'
+      1: '— niveaux 1–2 (Essentiel)',
+      2: '— niveaux 1–3 (Important)',
+      3: '— niveaux 1–4 (Précis)',
+      4: '— tous les niveaux (Complet)'
     };
     hint.textContent = labels[detailLevel] || '';
   }

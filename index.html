@@ -1282,10 +1282,10 @@
 
   <div id="detail-bar" style="display:none;">
     <span class="detail-title">&#128270; Affichage&nbsp;:</span>
-    <button class="detail-btn active" data-level="1" onclick="setDetailLevel(1)" title="Niveau 1 uniquement">Essentiel</button>
-    <button class="detail-btn" data-level="2" onclick="setDetailLevel(2)" title="Niveaux 1 et 2">Important</button>
-    <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Niveaux 1, 2 et 3">Pr&eacute;cis</button>
-    <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les niveaux">Complet</button>
+    <button class="detail-btn active" data-level="1" onclick="setDetailLevel(1)" title="Types 1 et 2 — événements essentiels">Essentiel</button>
+    <button class="detail-btn" data-level="2" onclick="setDetailLevel(2)" title="Types 1, 2 et 3 — événements importants">Important</button>
+    <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Types 1 à 4 — vue précise">Pr&eacute;cis</button>
+    <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les types — vue complète">Complet</button>
     <span class="detail-hint" id="detail-hint"></span>
   </div>
 
@@ -1436,22 +1436,22 @@
         <label class="wz-detail-card">
           <input type="radio" name="wz-detail" value="1" checked>
           <span class="wz-detail-label">Essentiel</span>
-          <span class="wz-detail-desc">Niveau 1 uniquement &mdash; vue la plus épurée</span>
+          <span class="wz-detail-desc">Types 1&ndash;2 &mdash; r&egrave;gnes + év&eacute;nements majeurs</span>
         </label>
         <label class="wz-detail-card">
           <input type="radio" name="wz-detail" value="2">
           <span class="wz-detail-label">Détaillé</span>
-          <span class="wz-detail-desc">Niveaux 1 et 2 &mdash; événements importants</span>
+          <span class="wz-detail-desc">Types 1&ndash;3 &mdash; événements importants</span>
         </label>
         <label class="wz-detail-card">
           <input type="radio" name="wz-detail" value="3">
           <span class="wz-detail-label">Pr&eacute;cis</span>
-          <span class="wz-detail-desc">Niveaux 1, 2 et 3 &mdash; vue intermédiaire enrichie</span>
+          <span class="wz-detail-desc">Types 1&ndash;4 &mdash; vue d&eacute;taill&eacute;e</span>
         </label>
         <label class="wz-detail-card">
           <input type="radio" name="wz-detail" value="4">
           <span class="wz-detail-label">Complet</span>
-          <span class="wz-detail-desc">Tous les &eacute;v&eacute;nements disponibles</span>
+          <span class="wz-detail-desc">Types 1&ndash;5 &mdash; tous les événements</span>
         </label>
       </div>
 
