@@ -1851,6 +1851,116 @@ var savedCurrentCentury = null;
 var savedCurrentDecade  = null;
 var savedCurrentYear    = null;
 
+/* ══════════ RECHERCHE EN LISTE ══════════ */
+
+function eventMatchesSearch(evt) {
+  if (!searchTerm) return true;
+  var q = searchTerm.toLowerCase();
+  var haystack = [
+    evt.titre || '',
+    evt.description || '',
+    evt.sources || '',
+    (evt.zones || []).join(' ')
+  ].join(' ').toLowerCase();
+  return haystack.indexOf(q) !== -1;
+}
+
+function showSearchResults() {
+  var panel   = document.getElementById('search-results-panel');
+  var listEl  = document.getElementById('search-results-list');
+  var titleEl = document.getElementById('sr-title');
+  var countEl = document.getElementById('search-count');
+  if (!panel || !listEl) return;
+
+  var results = allEvents
+    .filter(function(e) { return eventMatchesSearch(e); })
+    .sort(function(a, b) {
+      return a.date !== b.date ? a.date - b.date : (a.mois || 0) - (b.mois || 0);
+    });
+
+  if (countEl) countEl.textContent = results.length
+    ? results.length + ' résultat' + (results.length > 1 ? 's' : '')
+    : 'Aucun résultat';
+
+  if (titleEl) titleEl.textContent = searchTerm
+    ? 'Recherche : « ' + searchTerm + ' »'
+    : 'Résultats';
+
+  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
+                  'jul.','aoû.','sep.','oct.','nov.','déc.'];
+  var LEVEL_LABELS = {
+    1: 'Niveau 1 — Siècle',
+    2: 'Niveau 2 — Essentiel',
+    3: 'Niveau 3 — Important',
+    4: 'Niveau 4 — Précis',
+    5: 'Niveau 5 — Complet'
+  };
+
+  listEl.innerHTML = '';
+
+  if (results.length === 0) {
+    listEl.innerHTML = '<p class="sr-empty">Aucun événement ne correspond.</p>';
+  } else {
+    /* Groupe par niveau */
+    var byLevel = { 1:[], 2:[], 3:[], 4:[], 5:[] };
+    results.forEach(function(e) {
+      var t = e.regne ? 1 : (parseInt(e.type) || 2);
+      (byLevel[t] || byLevel[2]).push(e);
+    });
+
+    [1, 2, 3, 4, 5].forEach(function(lvl) {
+      var items = byLevel[lvl];
+      if (!items.length) return;
+
+      var header = document.createElement('div');
+      header.className = 'sr-level-header';
+      header.textContent = LEVEL_LABELS[lvl] + ' (' + items.length + ')';
+      listEl.appendChild(header);
+
+      items.forEach(function(evt) {
+        var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
+        if (evt.zones && evt.zones.indexOf('Art') !== -1) {
+          var artC = getArtColor(evt);
+          if (artC) evtCol = artC;
+        }
+        var dateStr = evt.mois
+          ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date
+          : '' + evt.date;
+        if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
+
+        var item = document.createElement('div');
+        item.className = 'sr-item sr-level-' + lvl;
+
+        item.innerHTML =
+          '<span class="sr-date">' + dateStr + '</span>' +
+          '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
+          '<span class="sr-body">' +
+            '<span class="sr-titre">' + evt.titre + '</span>' +
+            '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
+          '</span>';
+
+        if (evt.image && evt.image.trim()) {
+          var thumb = document.createElement('img');
+          thumb.src = evt.image;
+          thumb.alt = evt.legende || '';
+          thumb.className = 'sr-thumb';
+          item.appendChild(thumb);
+        }
+
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', (function(e) {
+          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+        })(evt));
+
+        listEl.appendChild(item);
+      });
+    });
+  }
+
+  panel.style.display = 'flex';
+}
+
+
 function onSearch(val) {
   searchTerm = (val || '').trim();
   var clearBtn = document.getElementById('search-clear');
