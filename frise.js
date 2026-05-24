@@ -952,7 +952,18 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
         chip.appendChild(document.createTextNode(titreP));
       } else {
         chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
-        chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
+        chip.style.lineHeight = '1.25';
+        if (chipPxApprox < 80) {
+          /* Chip très étroit : une ligne avec ellipsis */
+          chip.style.whiteSpace   = 'nowrap';
+          chip.style.overflow     = 'hidden';
+          chip.style.textOverflow = 'ellipsis';
+        } else {
+          /* Chip assez large : retour à la ligne autorisé */
+          chip.style.whiteSpace = 'normal';
+          chip.style.overflow   = 'visible';
+          chip.style.wordBreak  = 'break-word';
+        }
         chip.appendChild(document.createTextNode(titreP));
       }
     }
