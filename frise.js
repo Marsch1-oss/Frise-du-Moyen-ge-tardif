@@ -909,9 +909,9 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
 
   /* Couleur de série/parcours (priorité maximale) */
   var serieCol = null;
-  if (evt.serie && evt.serie.trim() && parcoursColors[evt.serie.trim()]) {
-    var hex = parcoursColors[evt.serie.trim()];
-    serieCol = hexToCol(hex);
+  var evtSeries = parseSeries(evt.serie);
+  if (evtSeries.length > 0 && parcoursColors[evtSeries[0]]) {
+    serieCol = hexToCol(parcoursColors[evtSeries[0]]);
   }
 
   /* Couleur géographique pour les événements Art */
@@ -1168,20 +1168,20 @@ function openModal(evt, zone) {
   }
 
 /* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
-  if (evt.serie) {
-    var sequenceEvents = allEvents.filter(function(e) {
-      return e.serie === evt.serie;
-    }).sort(function(a, b) {
-      return a.date - b.date;
-    });
+  var evtSeriesModal = parseSeries(evt.serie);
+  if (evtSeriesModal.length > 0) {
+    evtSeriesModal.forEach(function(serieName) {
+      var sequenceEvents = allEvents.filter(function(e) {
+        return parseSeries(e.serie).indexOf(serieName) !== -1;
+      }).sort(function(a, b) { return a.date - b.date; });
 
-    if (sequenceEvents.length > 1) {
-      var seqContainer = document.createElement('div');
-      seqContainer.className = 'sequence-container';
-      
-      var seqTitle = document.createElement('h4');
-      seqTitle.className = 'sequence-title';
-      seqTitle.textContent = 'Épisode de : ' + evt.serie;
+      if (sequenceEvents.length > 1) {
+        var seqContainer = document.createElement('div');
+        seqContainer.className = 'sequence-container';
+
+        var seqTitle = document.createElement('h4');
+        seqTitle.className = 'sequence-title';
+        seqTitle.textContent = 'Épisode de : ' + serieName;
       seqContainer.appendChild(seqTitle);
 
       var seqList = document.createElement('ul');
@@ -1200,8 +1200,9 @@ function openModal(evt, zone) {
       });
 
       seqContainer.appendChild(seqList);
-      descEl.appendChild(seqContainer);
-    }
+        descEl.appendChild(seqContainer);
+      }
+    }); /* fin forEach series */
   }
   /* --- FIN DU BLOC SÉQUENCES --- */
   /* --- FIN DU BLOC SÉQUENCES --- */
@@ -1460,6 +1461,12 @@ var PARCOURS_PALETTE = [
   '#148F77','#BA4A00','#1A5276','#6D4C41','#2D6A4F'
 ];
 
+/* Parse le champ serie (peut contenir plusieurs séries séparées par |) */
+function parseSeries(serie) {
+  if (!serie || !serie.trim()) return [];
+  return serie.split('|').map(function(s) { return s.trim(); }).filter(Boolean);
+}
+
 /* Convertit un code hex en objet couleur compatible avec COLORS */
 function hexToCol(hex) {
   /* Décode R,G,B */
@@ -1484,8 +1491,8 @@ function hexToCol(hex) {
 function getAllParcours() {
   var seen = {}, list = [];
   allEvents.forEach(function(e) {
-    if (!e.serie || !e.serie.trim()) return;
-    var tags = [e.serie.trim()];
+    var tags = parseSeries(e.serie);
+    if (tags.length === 0) return;
     tags.forEach(function(p) {
       var key = p.trim();
       if (!key || seen[key]) return;
@@ -1500,7 +1507,7 @@ function getAllParcours() {
 
 function getParcoursSteps(p) {
   return allEvents.filter(function(e) {
-    var tags = e.serie ? [e.serie.trim()] : [];
+    var tags = parseSeries(e.serie);
     return tags.indexOf(p) !== -1;
   }).sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
 }

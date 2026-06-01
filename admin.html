@@ -221,6 +221,15 @@
           <label>Sources</label>
           <input type="text" id="f-sources" placeholder="ex. Jean Froissart, Chroniques">
         </div>
+        <div class="field">
+          <label>S&eacute;rie(s) / Parcours
+            <small style="font-weight:400;color:#888;">— s&eacute;parer par | si plusieurs</small>
+          </label>
+          <input type="text" id="f-serie"
+                 placeholder="ex. Guerre de Cent ans | Guerre de Succession de Bretagne"
+                 list="serie-suggestions" autocomplete="off">
+          <datalist id="serie-suggestions"></datalist>
+        </div>
       </div>
 
       <div class="btn-row">
@@ -416,6 +425,8 @@ function readForm() {
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
+  var serieEl = document.getElementById('f-serie');
+  evt.serie   = serieEl ? (cleanText(serieEl.value) || '') : '';
   return evt;
 }
 
@@ -437,6 +448,7 @@ function fillForm(evt) {
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
+  var _sEl = document.getElementById('f-serie'); if (_sEl) _sEl.value = evt.serie || '';
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     var checked = (evt.zones || []).indexOf(inp.value) !== -1;
     inp.checked = checked;
@@ -458,7 +470,7 @@ function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
-   'f-desc','f-image','f-legende','f-video','f-sources'].forEach(function(id) {
+   'f-desc','f-image','f-legende','f-video','f-sources','f-serie'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
@@ -574,6 +586,26 @@ function updateJSON() {
     countEl.title = '';
   }
   renderList();
+  buildSerieDatalist();
+}
+
+function buildSerieDatalist() {
+  var dl = document.getElementById('serie-suggestions');
+  if (!dl) return;
+  dl.innerHTML = '';
+  var series = {};
+  events.forEach(function(e) {
+    if (!e.serie) return;
+    e.serie.split('|').forEach(function(s) {
+      s = s.trim();
+      if (s) series[s] = true;
+    });
+  });
+  Object.keys(series).sort().forEach(function(s) {
+    var opt = document.createElement('option');
+    opt.value = s;
+    dl.appendChild(opt);
+  });
 }
 
 function downloadJSON() {
