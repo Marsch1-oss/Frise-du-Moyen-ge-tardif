@@ -1811,10 +1811,20 @@ function zonesModalAll(val) {
 }
 
 function goLevel(level) {
-  if      (level === 1)                             renderLevel(1);
-  else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
-  else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
-  else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
+  if (level === 1) {
+    renderLevel(1);
+  } else if (level === 2 && currentCentury !== null) {
+    renderLevel(2, currentCentury);
+  } else if (level === 3 && currentDecade !== null) {
+    renderLevel(3, currentDecade);
+  } else if (level === 4) {
+    /* Déduit l'année de départ depuis currentYear, currentDecade ou currentCentury */
+    var yr = currentYear
+          || (currentDecade  !== null ? currentDecade  : null)
+          || (currentCentury !== null ? currentCentury : 1300);
+    currentYear = yr;
+    renderLevel(4, yr);
+  }
 }
 
 function setDetailLevel(n) {
