@@ -1848,15 +1848,15 @@ function updateBreadcrumb() {
 }
 
 function updateNavButtons() {
-  document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
-    btn.classList.toggle('active', i + 1 === currentLevel);
-    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade  === null) || (i === 3 && currentDecade  === null);
+  /* Active le bouton de vue correspondant au niveau courant */
+  [1, 2, 3, 4].forEach(function(lvl) {
+    var btn = document.getElementById('btn-level' + lvl);
+    if (!btn) return;
+    btn.classList.toggle('active', lvl === currentLevel);
+    if (lvl === 2) btn.disabled = (currentCentury === null);
+    if (lvl === 3) btn.disabled = (currentDecade === null);
+    if (lvl === 4) btn.disabled = (currentDecade === null);
   });
-  var btn4 = document.getElementById('btn-level4');
-  if (btn4) {
-    btn4.disabled = (currentDecade === null);
-    btn4.classList.toggle('active', currentLevel === 4);
-  }
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
   var lbl  = document.getElementById('decade-label');
