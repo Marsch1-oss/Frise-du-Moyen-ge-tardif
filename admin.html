@@ -164,19 +164,19 @@
         <div class="type-radios" id="type-radios">
           <label class="type-radio" data-val="1">
             <input type="radio" name="type" value="1">
-            <span class="stars">★★★★★</span> Niveau 1 — <strong>Siècle</strong> — visible dès la vue siècle (règnes auto + choix manuel)
+            <span class="stars">★★★★★</span> Niveau 1 — <strong>Règne</strong> — barre de souverain, visible dans toutes les vues
           </label>
           <label class="type-radio" data-val="2">
-            <input type="radio" name="type" value="2" checked>
-            <span class="stars">★★★★</span> Niveau 2 — <strong>Essentiel</strong> — filtre Essentiel en vue décennale
+            <input type="radio" name="type" value="2">
+            <span class="stars">★★★★</span> Niveau 2 — <strong>Siècle</strong> — visible dès la vue siècle et à tous les niveaux décennaux
           </label>
           <label class="type-radio" data-val="3">
-            <input type="radio" name="type" value="3">
-            <span class="stars">★★★</span> Niveau 3 — <strong>Important</strong> — filtre Important en vue décennale
+            <input type="radio" name="type" value="3" checked>
+            <span class="stars">★★★</span> Niveau 3 — <strong>Important</strong> — vue décennale filtre Important, Détaillé, Complet
           </label>
           <label class="type-radio" data-val="4">
             <input type="radio" name="type" value="4">
-            <span class="stars">★★</span> Niveau 4 — <strong>Précis</strong> — filtre Précis en vue décennale
+            <span class="stars">★★</span> Niveau 4 — <strong>Détaillé</strong> — vue décennale filtre Détaillé et Complet
           </label>
           <label class="type-radio" data-val="5">
             <input type="radio" name="type" value="5">
@@ -466,7 +466,7 @@ function resetForm() {
     updateZoneTag(inp.closest('.zone-tag'), false, inp.value);
   });
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
-    var isDefault = parseInt(lbl.dataset.val) === 2;  /* Niveau 2 par défaut */
+    var isDefault = parseInt(lbl.dataset.val) === 3;  /* Niveau 3 Important par défaut */
     lbl.classList.toggle('selected', isDefault);
     lbl.querySelector('input').checked = isDefault;
   });

@@ -153,28 +153,29 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
-  var isRegne = !!evt.regne;
-  var t = isRegne ? 1
-        : (evt.type === undefined || evt.type === null || evt.type === '') ? 2
-        : parseInt(evt.type, 10);
+  /* Type 1=Règne  2=Siècle  3=Important  4=Détaillé  5=Complet
+     Les règnes (type 1) sont affichés via buildRulersSection,
+     pas dans la piste events — on les exclut ici             */
+  var t = (evt.type === undefined || evt.type === null || evt.type === '')
+        ? 2 : parseInt(evt.type, 10);
   if (isNaN(t) || t < 1) t = 2;
 
-  /* JSON actuel : type 1 = Siècle, type 2 = Essentiel,
-                   type 3 = Important, type 4 = Précis/Complet
+  /* Vue ensemble (level 1) : types 1 (règnes via RulersSection) → rien dans events */
+  if (level === 1) return false;   /* les règnes passent par buildRulersSection */
 
-     Vue ensemble  : règnes uniquement
-     Vue siècle    : règnes + types 1 et 2 (Essentiel)
-     Vue décennale/annuelle : selon filtre
-       detailLevel 1 = Essentiel : règnes + types 1+2
-       detailLevel 2 = Important : règnes + types 1+2+3
-       detailLevel 3 = Précis    : tout
-       detailLevel 4 = Complet   : tout                 */
+  /* Vue siècle (level 2) : types 2 (Siècle) dans la piste events */
+  if (level === 2) return t === 2;
 
-  if (level === 1) return isRegne;
-  if (level === 2) return isRegne || t <= 2;
-  if (detailLevel <= 1) return isRegne || t <= 2;
-  if (detailLevel === 2) return isRegne || t <= 3;
-  return true;
+  /* Vue décennale (level 3) et annuelle (level 4) : selon filtre
+     detailLevel 1 = Siècle    → types 2
+     detailLevel 2 = Important → types 2+3
+     detailLevel 3 = Détaillé  → types 2+3+4
+     detailLevel 4 = Complet   → tous (2+3+4+5)        */
+  if (t === 1) return false;   /* règnes toujours via RulersSection */
+  if (detailLevel === 1) return t === 2;
+  if (detailLevel === 2) return t <= 3;
+  if (detailLevel === 3) return t <= 4;
+  return true;   /* Complet : tout */
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
@@ -280,6 +281,13 @@ function renderLevel(level, rangeStart) {
     currentDecade = Math.floor(rangeStart / 10) * 10;
     currentCentury = Math.floor(rangeStart / 100) * 100;
     start = rangeStart; end = rangeStart + 1; tickStep = 0.0833;
+    /* Vue annuelle : détailLevel par défaut = 3 (Détaillé) */
+    if (detailLevel < 3) {
+      detailLevel = 3;
+      document.querySelectorAll('.detail-btn').forEach(function(b) {
+        b.classList.toggle('active', parseInt(b.dataset.level) === 3);
+      });
+    }
   }
 
   updateBreadcrumb();
@@ -1763,10 +1771,10 @@ function updateDetailBar() {
   bar.style.display = (currentLevel === 3 || currentLevel === 4) ? 'flex' : 'none';
   if (hint) {
     var labels = {
-      1: '— règnes + essentiels',
-      2: '— règnes + importants',
-      3: '— tout (Précis)',
-      4: '— tout (Complet)'
+      1: '— type 2 (Siècle)',
+      2: '— types 2–3 (Important)',
+      3: '— types 2–4 (Détaillé)',
+      4: '— tous les types (Complet)'
     };
     hint.textContent = labels[detailLevel] || '';
   }
