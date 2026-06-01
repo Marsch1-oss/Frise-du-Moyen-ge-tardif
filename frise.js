@@ -192,6 +192,8 @@ function loadEvents() {
           e.type  = Number(e.type) || 1;
           return e;
         });
+        /* Initialise les couleurs de toutes les séries dès le chargement */
+        getAllParcours();
         buildFilterBar();
         wzInit();
       } catch(err) {
@@ -904,9 +906,17 @@ function adaptFontSize(titre, basePx, maxChars) {
 
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var isShared = evt.zones && evt.zones.length > 1;
+
+  /* Couleur de série/parcours (priorité maximale) */
+  var serieCol = null;
+  if (evt.serie && evt.serie.trim() && parcoursColors[evt.serie.trim()]) {
+    var hex = parcoursColors[evt.serie.trim()];
+    serieCol = hexToCol(hex);
+  }
+
   /* Couleur géographique pour les événements Art */
-  var artCol = (zone === 'Art') ? getArtColor(evt) : null;
-  var col    = artCol || COLORS[zone] || COLORS['France'];
+  var artCol = (!serieCol && zone === 'Art') ? getArtColor(evt) : null;
+  var col    = serieCol || artCol || COLORS[zone] || COLORS['France'];
   var col2   = isShared && evt.zones.length >= 2 ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col) : col;
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
@@ -1449,6 +1459,27 @@ var PARCOURS_PALETTE = [
   '#C0392B','#2471A3','#1E8449','#D68910','#7D3C98',
   '#148F77','#BA4A00','#1A5276','#6D4C41','#2D6A4F'
 ];
+
+/* Convertit un code hex en objet couleur compatible avec COLORS */
+function hexToCol(hex) {
+  /* Décode R,G,B */
+  var r = parseInt(hex.slice(1,3),16);
+  var g = parseInt(hex.slice(3,5),16);
+  var b = parseInt(hex.slice(5,7),16);
+  /* Version claire : mélange avec blanc (85%) */
+  var lr = Math.round(r + (255-r)*0.82);
+  var lg = Math.round(g + (255-g)*0.82);
+  var lb = Math.round(b + (255-b)*0.82);
+  /* Texte sombre basé sur la couleur */
+  var dr = Math.round(r*0.45);
+  var dg = Math.round(g*0.45);
+  var db = Math.round(b*0.45);
+  return {
+    bg:    hex,
+    light: 'rgb('+lr+','+lg+','+lb+')',
+    text:  'rgb('+dr+','+dg+','+db+')'
+  };
+}
 
 function getAllParcours() {
   var seen = {}, list = [];
