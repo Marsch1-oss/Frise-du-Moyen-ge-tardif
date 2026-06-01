@@ -138,7 +138,7 @@ var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
 var activeZones    = null;
-var detailLevel    = 1;  /* 1=Essentiel, 2=Détaillé, 3=Complet */
+var detailLevel    = 2;  /* 1=Siècle, 2=Important, 3=Détaillé, 4=Complet */
 var matchedIds     = []; /* ids des événements correspondants, ordonnés par date */
 var currentMatchIdx = -1; /* index courant dans matchedIds */
 
@@ -1011,8 +1011,21 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background  = isShared ? 'repeating-linear-gradient(60deg,' + col.light + ' 0px,' + col.light + ' 7px,' + col2.light + ' 7px,' + col2.light + ' 14px)' : col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
-      chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, 18);
-      chip.style.whiteSpace = 'normal';
+      /* Calcule la largeur approximative du chip pour adapter le rendu */
+      var chipPxM = chipW(evt, start, end, level) / 100 * TRACK_PX;
+      chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, Math.floor(chipPxM / 7));
+      chip.style.lineHeight = '1.25';
+      chip.style.overflow   = 'visible';
+      if (chipPxM < 70) {
+        /* Chip étroit : tronque */
+        chip.style.whiteSpace   = 'nowrap';
+        chip.style.textOverflow = 'ellipsis';
+        chip.style.overflow     = 'hidden';
+      } else {
+        /* Chip assez large : retour à la ligne */
+        chip.style.whiteSpace = 'normal';
+        chip.style.wordBreak  = 'break-word';
+      }
       var dateLbl2 = document.createElement('span');
       dateLbl2.className   = 'chip-date-label';
       dateLbl2.textContent = evt.date;
@@ -1399,7 +1412,7 @@ function wzClose() {
   var period = parseInt(document.getElementById('wz-period-select').value || '1300');
   if (scale === 3) {
     var dr = document.querySelector('input[name="wz-detail"]:checked');
-    detailLevel = dr ? parseInt(dr.value) : 1;
+    detailLevel = dr ? parseInt(dr.value) : 2;
     document.querySelectorAll('.detail-btn').forEach(function(b) {
       b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
     });
