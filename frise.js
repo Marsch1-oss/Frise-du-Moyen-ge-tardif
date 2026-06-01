@@ -951,7 +951,13 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
-      if (chipPxApprox < 60) {
+      if (chipPxApprox < 30) {
+        /* Très étroit (vue siècle) : texte masqué, titre en tooltip */
+        chip.style.fontSize   = '0';
+        chip.style.overflow   = 'hidden';
+        chip.style.whiteSpace = 'nowrap';
+        /* pas de createTextNode — titre déjà dans chip.title */
+      } else if (chipPxApprox < 60) {
         chip.style.fontSize     = '0.60rem';
         chip.style.whiteSpace   = 'nowrap';
         chip.style.textOverflow = 'ellipsis';
@@ -1008,26 +1014,39 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background  = isShared ? 'repeating-linear-gradient(60deg,' + col.light + ' 0px,' + col.light + ' 7px,' + col2.light + ' 7px,' + col2.light + ' 14px)' : col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
-      /* Calcule la largeur approximative du chip pour adapter le rendu */
+      /* Largeur approximative du chip en px */
       var chipPxM = chipW(evt, start, end, level) / 100 * TRACK_PX;
-      chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, Math.floor(chipPxM / 7));
       chip.style.lineHeight = '1.25';
-      chip.style.overflow   = 'visible';
-      if (chipPxM < 70) {
-        /* Chip étroit : tronque */
-        chip.style.whiteSpace   = 'nowrap';
-        chip.style.textOverflow = 'ellipsis';
-        chip.style.overflow     = 'hidden';
-      } else {
-        /* Chip assez large : retour à la ligne */
-        chip.style.whiteSpace = 'normal';
-        chip.style.wordBreak  = 'break-word';
-      }
+      chip.style.height     = 'auto';
+      chip.style.minHeight  = (ROW_H - 4) + 'px';
+
       var dateLbl2 = document.createElement('span');
       dateLbl2.className   = 'chip-date-label';
       dateLbl2.textContent = evt.date;
       chip.appendChild(dateLbl2);
-      chip.appendChild(document.createTextNode(evt.titre));
+
+      if (chipPxM < 40) {
+        /* Trop étroit : affiche juste un point, titre en tooltip */
+        chip.style.fontSize   = '0';
+        chip.style.overflow   = 'hidden';
+        chip.style.whiteSpace = 'nowrap';
+        /* Le titre est déjà dans chip.title — pas de texte affiché */
+      } else if (chipPxM < 100) {
+        /* Étroit : une ligne tronquée */
+        chip.style.fontSize     = adaptFontSize(evt.titre, 0.72, Math.floor(chipPxM / 6.5));
+        chip.style.whiteSpace   = 'nowrap';
+        chip.style.overflow     = 'hidden';
+        chip.style.textOverflow = 'ellipsis';
+        chip.appendChild(document.createTextNode(evt.titre));
+      } else {
+        /* Large : retour à la ligne autorisé */
+        chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, Math.floor(chipPxM / 6.5));
+        chip.style.whiteSpace = 'normal';
+        chip.style.wordBreak  = 'break-word';
+        chip.style.hyphens    = 'auto';
+        chip.style.overflow   = 'visible';
+        chip.appendChild(document.createTextNode(evt.titre));
+      }
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
