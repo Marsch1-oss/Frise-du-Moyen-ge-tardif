@@ -924,7 +924,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     if (level === 1) chip.classList.add('chip-period-sm');
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
-    chip.style.height      = ROW_H + 'px';
+    chip.style.minHeight   = (ROW_H - 4) + 'px'; /* hauteur auto — permet retour ligne */
     if (isShared) {
       chip.style.background  = 'repeating-linear-gradient(60deg,' + col.bg + 'CC 0px,' + col.bg + 'CC 8px,' + col2.bg + 'CC 8px,' + col2.bg + 'CC 16px)';
     } else {
@@ -937,7 +937,9 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       var titreP = evt.titre;
       var chipPct      = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
       var chipPxApprox = chipPct * (TRACK_PX - 90);
-      var maxC         = level === 3 ? 32 : 18;
+      /* Calcule le nombre max de chars affichables sur 1 ligne */
+      var charPxW = 6.5;
+      var maxC    = Math.max(8, Math.floor(chipPxApprox / charPxW));
       var MOIS_ABR_P = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
       var dateLblP = document.createElement('span');
       dateLblP.className   = 'chip-date-label';
@@ -958,16 +960,17 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       } else {
         chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
         chip.style.lineHeight = '1.25';
-        if (chipPxApprox < 80) {
-          /* Chip très étroit : une ligne avec ellipsis */
+        if (chipPxApprox < 50) {
+          /* Chip très étroit : une ligne tronquée */
           chip.style.whiteSpace   = 'nowrap';
           chip.style.overflow     = 'hidden';
           chip.style.textOverflow = 'ellipsis';
         } else {
-          /* Chip assez large : retour à la ligne autorisé */
+          /* Chip assez large : retour à la ligne */
           chip.style.whiteSpace = 'normal';
           chip.style.overflow   = 'visible';
           chip.style.wordBreak  = 'break-word';
+          chip.style.hyphens    = 'auto';
         }
         chip.appendChild(document.createTextNode(titreP));
       }
