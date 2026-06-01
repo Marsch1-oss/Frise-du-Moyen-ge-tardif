@@ -281,13 +281,7 @@ function renderLevel(level, rangeStart) {
     currentDecade = Math.floor(rangeStart / 10) * 10;
     currentCentury = Math.floor(rangeStart / 100) * 100;
     start = rangeStart; end = rangeStart + 1; tickStep = 0.0833;
-    /* Vue annuelle : détailLevel par défaut = 3 (Détaillé) */
-    if (detailLevel < 3) {
-      detailLevel = 3;
-      document.querySelectorAll('.detail-btn').forEach(function(b) {
-        b.classList.toggle('active', parseInt(b.dataset.level) === 3);
-      });
-    }
+
   }
 
   updateBreadcrumb();
@@ -1109,10 +1103,11 @@ function openModal(evt, zone) {
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
     var t = Number(evt.type) || 1;
-    typeEl.textContent = t === 1 ? '⬛ Niveau 1 — visible dès la vue siècle'
-                       : t === 2 ? '🔲 Niveau 2 — vue décennale Essentiel'
-                       : t === 3 ? '▪ Niveau 3 — vue décennale Détaillé'
-                       :           '· Niveau 4 — vue décennale Complet';
+    typeEl.textContent = t === 1 ? '♛ Niveau 1 — Règne (toutes les vues)'
+                       : t === 2 ? '⬛ Niveau 2 — Siècle (vue siècle et inférieures)'
+                       : t === 3 ? '🔲 Niveau 3 — Important (décennale filtre Important+)'
+                       : t === 4 ? '▪ Niveau 4 — Détaillé (décennale filtre Détaillé+)'
+                       :           '· Niveau 5 — Complet (décennale filtre Complet)';
     typeEl.className = 'modal-type-badge type' + t;
   }
 
@@ -1925,10 +1920,10 @@ function showSearchResults() {
   var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
                   'jul.','aoû.','sep.','oct.','nov.','déc.'];
   var LEVEL_LABELS = {
-    1: 'Niveau 1 — Siècle',
-    2: 'Niveau 2 — Essentiel',
+    1: 'Niveau 1 — Règne',
+    2: 'Niveau 2 — Siècle',
     3: 'Niveau 3 — Important',
-    4: 'Niveau 4 — Précis',
+    4: 'Niveau 4 — Détaillé',
     5: 'Niveau 5 — Complet'
   };
 
