@@ -159,17 +159,19 @@ function visibleAtLevel(evt, level) {
         : parseInt(evt.type, 10);
   if (isNaN(t) || t < 1) t = 2;
 
-  /* Vue ensemble : règnes uniquement */
+  /* JSON actuel : type 1 = Siècle, type 2 = Essentiel,
+                   type 3 = Important, type 4 = Précis/Complet
+
+     Vue ensemble  : règnes uniquement
+     Vue siècle    : règnes + types 1 et 2 (Essentiel)
+     Vue décennale/annuelle : selon filtre
+       detailLevel 1 = Essentiel : règnes + types 1+2
+       detailLevel 2 = Important : règnes + types 1+2+3
+       detailLevel 3 = Précis    : tout
+       detailLevel 4 = Complet   : tout                 */
+
   if (level === 1) return isRegne;
-
-  /* Vue siècle : règnes + type 1 (Essentiel) */
-  if (level === 2) return isRegne || t === 1;
-
-  /* Vue décennale et annuelle : selon filtre de détail
-     detailLevel 1 = Essentiel : règnes + types 1+2
-     detailLevel 2 = Important : règnes + types 1+2+3
-     detailLevel 3 = Précis    : tout
-     detailLevel 4 = Complet   : tout                */
+  if (level === 2) return isRegne || t <= 2;
   if (detailLevel <= 1) return isRegne || t <= 2;
   if (detailLevel === 2) return isRegne || t <= 3;
   return true;
