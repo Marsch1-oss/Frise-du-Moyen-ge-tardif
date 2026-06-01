@@ -951,12 +951,14 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
-      if (chipPxApprox < 30) {
-        /* Très étroit (vue siècle) : texte masqué, titre en tooltip */
-        chip.style.fontSize   = '0';
-        chip.style.overflow   = 'hidden';
-        chip.style.whiteSpace = 'nowrap';
-        /* pas de createTextNode — titre déjà dans chip.title */
+      if (chipPxApprox < 80 && level === 2) {
+        /* Vue siècle, chip étroit : étiquette flottante au-dessus de la barre */
+        chip.style.fontSize   = '0';      /* cache le texte dans la barre */
+        chip.style.overflow   = 'visible';
+        var floatLbl = document.createElement('span');
+        floatLbl.className   = 'chip-period-float-label';
+        floatLbl.textContent = titreP;
+        chip.appendChild(floatLbl);
       } else if (chipPxApprox < 60) {
         chip.style.fontSize     = '0.60rem';
         chip.style.whiteSpace   = 'nowrap';
