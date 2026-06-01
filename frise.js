@@ -153,25 +153,26 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
-  /* Les règnes sont forcés en type 1 (Siècle) quelle que soit leur valeur */
-  var t = evt.regne ? 1
+  var isRegne = !!evt.regne;
+  var t = isRegne ? 1
         : (evt.type === undefined || evt.type === null || evt.type === '') ? 2
         : parseInt(evt.type, 10);
-  if (isNaN(t)) t = 2;
+  if (isNaN(t) || t < 1) t = 2;
 
-  /* Vue annuelle : tout visible */
-  if (level === 4) return true;
+  /* Vue ensemble : règnes uniquement */
+  if (level === 1) return isRegne;
 
-  /* Vue ensemble (level 1) : types 1 seulement */
-  if (level === 1) return t === 1;
+  /* Vue siècle : règnes + type 1 (Essentiel) */
+  if (level === 2) return isRegne || t === 1;
 
-  /* Vue siècle (level 2) : types 1 + 2 */
-  if (level === 2) return t <= 2;
-
-  /* Vue décennale (level 3) : selon filtre
-     detailLevel 1=Essentiel(t≤2)  2=Important(t≤3)
-                 3=Précis(t≤4)     4=Complet(t≤5) */
-  return t <= (detailLevel + 1);
+  /* Vue décennale et annuelle : selon filtre de détail
+     detailLevel 1 = Essentiel : règnes + types 1+2
+     detailLevel 2 = Important : règnes + types 1+2+3
+     detailLevel 3 = Précis    : tout
+     detailLevel 4 = Complet   : tout                */
+  if (detailLevel <= 1) return isRegne || t <= 2;
+  if (detailLevel === 2) return isRegne || t <= 3;
+  return true;
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
@@ -1756,13 +1757,14 @@ function updateDetailBar() {
   var bar  = document.getElementById('detail-bar');
   var hint = document.getElementById('detail-hint');
   if (!bar) return;
-  bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
+  /* Visible en vue décennale ET annuelle */
+  bar.style.display = (currentLevel === 3 || currentLevel === 4) ? 'flex' : 'none';
   if (hint) {
     var labels = {
-      1: '— niveaux 1–2 (Essentiel)',
-      2: '— niveaux 1–3 (Important)',
-      3: '— niveaux 1–4 (Précis)',
-      4: '— tous les niveaux (Complet)'
+      1: '— règnes + essentiels',
+      2: '— règnes + importants',
+      3: '— tout (Précis)',
+      4: '— tout (Complet)'
     };
     hint.textContent = labels[detailLevel] || '';
   }
