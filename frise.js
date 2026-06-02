@@ -1822,8 +1822,11 @@ function goLevel(level) {
     renderLevel(1);
   } else if (level === 2 && currentCentury !== null) {
     renderLevel(2, currentCentury);
-  } else if (level === 3 && currentDecade !== null) {
-    renderLevel(3, currentDecade);
+  } else if (level === 3) {
+    var dec = currentDecade !== null ? currentDecade : currentCentury;
+    if (dec === null) dec = 1300;
+    currentDecade = dec;
+    renderLevel(3, dec);
   } else if (level === 4) {
     /* Déduit l'année de départ depuis currentYear, currentDecade ou currentCentury */
     var yr = currentYear
@@ -1902,8 +1905,10 @@ function updateNavButtons() {
     if (!btn) return;
     btn.classList.toggle('active', lvl === currentLevel);
     if (lvl === 2) btn.disabled = (currentCentury === null);
-    if (lvl === 3) btn.disabled = (currentDecade === null);
-    if (lvl === 4) btn.disabled = (currentDecade === null);
+    /* Décennie activable si on a un siècle (on entre sur la 1re décennie) */
+    if (lvl === 3) btn.disabled = (currentCentury === null && currentDecade === null);
+    /* Annuelle activable si on a une décennie ou un siècle */
+    if (lvl === 4) btn.disabled = (currentCentury === null && currentDecade === null);
   });
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
