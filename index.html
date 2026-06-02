@@ -1242,6 +1242,14 @@
       border-top-color: rgba(28, 20, 10, 0.82);
     }
 
+  
+    /* ── Étape active dans la liste parcours ── */
+    .sr-item-active {
+      background: rgba(154,107,26,0.15) !important;
+      border-left-width: 4px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
   </style>
 </head>
 <body>
@@ -1312,6 +1320,15 @@
     <div id="frise-container">
       <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
     </div>
+  </div>
+
+  <!-- Barre navigation parcours active -->
+  <div id="parcours-nav-bar" style="display:none;flex-direction:row;align-items:center;gap:0.5rem;padding:0.4rem 0.8rem;margin-bottom:0.3rem;background:rgba(245,237,216,0.85);border:1.5px solid var(--border-dark);border-radius:24px;flex-wrap:wrap;">
+    <span class="pnav-title" style="font-family:'Crimson Pro',serif;font-size:0.88rem;font-style:italic;font-weight:600;flex:1;min-width:120px;"></span>
+    <button class="pnav-arrow" onclick="parcoursNavStep(-1)" title="Étape précédente" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&larr;</button>
+    <select class="pnav-select" style="font-family:'Crimson Pro',serif;font-size:0.82rem;padding:0.25rem 0.5rem;border:1px solid var(--border-dark);border-radius:6px;background:var(--parchment);color:var(--ink);max-width:300px;cursor:pointer;"></select>
+    <button class="pnav-arrow" onclick="parcoursNavStep(1)" title="Étape suivante" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&rarr;</button>
+    <button onclick="clearParcours()" style="font-size:0.78rem;padding:0.2rem 0.7rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(192,57,43,0.1);color:#922B21;cursor:pointer;" title="Quitter le parcours">&#10005; Quitter</button>
   </div>
 
   <div id="detail-bar" style="display:none;">

@@ -153,6 +153,11 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
+  /* Si un parcours est actif : seuls ses événements sont visibles */
+  if (activeParcours) {
+    return parseSeries(evt.serie).indexOf(activeParcours) !== -1;
+  }
+
   /* Type 1=Règne  2=Siècle  3=Important  4=Détaillé  5=Complet
      Les règnes (type 1) sont affichés via buildRulersSection,
      pas dans la piste events — on les exclut ici             */
@@ -1563,12 +1568,17 @@ function closeParcoursPanel() {
 function setParcours(p) {
   activeParcours = p;
   updateParcoursBtn();
+  refreshFrise();
+  updateParcoursNavBar(p);
   showParcoursResults(p);
 }
 
 function clearParcours() {
   activeParcours = null;
   updateParcoursBtn();
+  refreshFrise();
+  var bar = document.getElementById('parcours-nav-bar');
+  if (bar) bar.style.display = 'none';
   var panel = document.getElementById('search-results-panel');
   if (panel) panel.style.display = 'none';
 }
@@ -1731,6 +1741,71 @@ function closeSearchResults() {
   if (inp) inp.value = '';
   var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = 'none';
+}
+
+
+/* ── Barre de navigation parcours (select + flèches) ── */
+function updateParcoursNavBar(p) {
+  var bar = document.getElementById('parcours-nav-bar');
+  if (!bar) return;
+
+  var steps = getParcoursSteps(p);
+  var col   = parcoursColors[p] || '#C0392B';
+
+  /* Titre */
+  var titleEl = bar.querySelector('.pnav-title');
+  if (titleEl) {
+    titleEl.innerHTML = '<span style="color:' + col + '">◆ ' +
+      p.replace(/_/g,' ') + '</span> &mdash; ' +
+      steps.length + ' étape' + (steps.length > 1 ? 's' : '');
+  }
+
+  /* Select déroulant */
+  var sel = bar.querySelector('.pnav-select');
+  if (sel) {
+    sel.innerHTML = '';
+    var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
+                    'jul.','aoû.','sep.','oct.','nov.','déc.'];
+    steps.forEach(function(evt, i) {
+      var opt = document.createElement('option');
+      var dateStr = evt.mois ? MOIS_ABR[evt.mois-1]+' '+evt.date : ''+evt.date;
+      opt.value       = i;
+      opt.textContent = (i+1) + '. ' + dateStr + ' — ' + evt.titre;
+      sel.appendChild(opt);
+    });
+    sel.onchange = function() {
+      var idx = parseInt(this.value);
+      parcoursGoToStep(steps, idx);
+    };
+  }
+
+  bar.style.display = 'flex';
+  bar.style.borderColor = col;
+}
+
+function parcoursGoToStep(steps, idx) {
+  if (!steps || idx < 0 || idx >= steps.length) return;
+  var evt = steps[idx];
+
+  /* Met à jour le select */
+  var sel = document.querySelector('#parcours-nav-bar .pnav-select');
+  if (sel) sel.value = idx;
+
+  /* Met à jour la liste latérale */
+  var items = document.querySelectorAll('#search-results-list .sr-item');
+  items.forEach(function(item, i) { item.classList.toggle('sr-item-active', i === idx); });
+
+  /* Navigue vers la période contenant l'étape */
+  navigateToEvent(evt);
+}
+
+function parcoursNavStep(dir) {
+  if (!activeParcours) return;
+  var steps = getParcoursSteps(activeParcours);
+  var sel   = document.querySelector('#parcours-nav-bar .pnav-select');
+  var cur   = sel ? parseInt(sel.value) : 0;
+  var next  = Math.max(0, Math.min(steps.length - 1, cur + dir));
+  parcoursGoToStep(steps, next);
 }
 
 
