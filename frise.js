@@ -1765,9 +1765,34 @@ function showParcoursResults(p) {
       row.appendChild(thumb);
     }
 
-    /* Clic → fiche */
-    row.addEventListener('click', (function(e) {
-      return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+    /* Clic simple → navigue sur la frise + surligne l'étape */
+    row.addEventListener('click', (function(e, stepIdx) {
+      return function() {
+        /* Surligne cet item */
+        timeline.querySelectorAll('.parcours-row-active').forEach(function(r) {
+          r.classList.remove('parcours-row-active');
+          r.style.background = '';
+        });
+        this.classList.add('parcours-row-active');
+        this.style.background = 'rgba(154,107,26,0.12)';
+
+        /* Met à jour le select de la barre */
+        var sel = document.querySelector('#parcours-nav-bar .pnav-select');
+        if (sel) sel.value = stepIdx;
+
+        /* Navigue vers la décennie de cet événement */
+        var dec = Math.floor(e.date / 10) * 10;
+        currentDecade  = dec;
+        currentCentury = Math.floor(dec / 100) * 100;
+        currentYear    = null;
+        renderLevel(3, dec);
+        updateNavButtons();
+      };
+    })(evt, idx));
+
+    /* Double-clic → ouvre la fiche modale */
+    row.addEventListener('dblclick', (function(e) {
+      return function(ev) { ev.stopPropagation(); openModal(e, e.zones && e.zones[0] || ZONES[0]); };
     })(evt));
 
     timeline.appendChild(row);
@@ -1782,6 +1807,7 @@ function closeSearchResults() {
   var panel   = document.getElementById('search-results-panel');
   var countEl = document.getElementById('search-count');
   if (panel)   panel.style.display = 'none';
+  document.body.classList.remove('parcours-panel-open');
   if (countEl) countEl.textContent = '';
   searchTerm = '';
   var inp = document.getElementById('search-input');
@@ -2188,6 +2214,7 @@ function showSearchResults() {
   }
 
   panel.style.display = 'flex';
+  document.body.classList.add('parcours-panel-open');
 }
 
 

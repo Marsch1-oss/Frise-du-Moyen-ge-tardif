@@ -1063,12 +1063,25 @@
   
     /* ══ Panneau résultats / parcours ══ */
     #search-results-panel {
-      position: fixed; top: 0; right: 0; bottom: 0;
-      width: min(420px, 96vw);
-      background: var(--parchment);
+      position: fixed;
+      top: 56px;       /* sous la nav-bar */
+      right: 0;
+      bottom: 0;
+      width: 280px;
+      background: rgba(245,237,216,0.96);
       border-left: 1.5px solid var(--border-dark);
-      box-shadow: -4px 0 24px rgba(0,0,0,0.18);
-      z-index: 250; flex-direction: column; overflow: hidden;
+      box-shadow: -3px 0 16px rgba(0,0,0,0.14);
+      z-index: 200;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    /* La frise se décale à gauche quand le panneau est ouvert */
+    body.parcours-panel-open .frise-card,
+    body.parcours-panel-open .filter-bar,
+    body.parcours-panel-open #detail-bar,
+    body.parcours-panel-open #parcours-nav-bar {
+      margin-right: 284px;
+      transition: margin-right 0.2s;
     }
     .sr-header {
       display: flex; align-items: center; justify-content: space-between;
@@ -1585,7 +1598,7 @@
 <div id="search-results-panel" style="display:none;">
   <div class="sr-header">
     <span id="sr-title">R&eacute;sultats</span>
-    <button class="sr-close" onclick="closeSearchResults()">&#10005; Fermer</button>
+    <span style="font-size:0.65rem;color:var(--ink-muted);font-style:italic;">Clic=frise &bull; 2×clic=fiche</span> <button class="sr-close" onclick="closeSearchResults()">&#10005;</button>
   </div>
   <div id="search-results-list" class="sr-list"></div>
 </div>
