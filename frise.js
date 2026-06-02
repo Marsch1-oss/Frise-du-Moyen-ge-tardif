@@ -1526,7 +1526,12 @@ function openParcoursPanel() {
   listEl.innerHTML = '';
 
   if (all.length === 0) {
-    listEl.innerHTML = '<p class="parcours-empty">Aucun parcours défini.</p>';
+    /* Debug : affiche le nombre d'événements et les 3 premiers champs serie */
+    var dbg = 'Événements chargés : ' + allEvents.length + '<br>';
+    var withSerie = allEvents.filter(function(e){ return e.serie && e.serie.trim(); });
+    dbg += 'Avec serie : ' + withSerie.length;
+    if (withSerie.length > 0) dbg += '<br>Ex : ' + withSerie[0].serie;
+    listEl.innerHTML = '<p class="parcours-empty" style="font-size:0.75rem;">' + dbg + '</p>';
   } else {
     all.forEach(function(p) {
       var col   = parcoursColors[p];
