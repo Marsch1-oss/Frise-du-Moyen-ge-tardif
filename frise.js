@@ -1568,19 +1568,66 @@ function closeParcoursPanel() {
 function setParcours(p) {
   activeParcours = p;
   updateParcoursBtn();
-  refreshFrise();
+
+  /* 0. Sauvegarde les zones actives actuelles pour restauration */
+  _savedZones = {};
+  for (var zz in activeZones) _savedZones[zz] = activeZones[zz];
+
+  /* 1. Collecte les zones impliquées dans ce parcours */
+  var parcoursZones = {};
+  allEvents.forEach(function(e) {
+    if (parseSeries(e.serie).indexOf(p) === -1) return;
+    (e.zones || []).forEach(function(z) { parcoursZones[z] = true; });
+  });
+
+  /* 2. Active uniquement ces zones */
+  for (var z in activeZones) activeZones[z] = false;
+  for (var z in parcoursZones) activeZones[z] = true;
+  updateFilterCheckboxes();
+
+  /* 3. Trouve la 1re étape et navigue vers sa décennie */
+  var steps = getParcoursSteps(p);
+  var first = steps[0];
+  if (first) {
+    var dec = Math.floor(first.date / 10) * 10;
+    currentDecade  = dec;
+    currentCentury = Math.floor(dec / 100) * 100;
+    currentYear    = null;
+    currentLevel   = 3;
+    renderLevel(3, dec);
+  } else {
+    refreshFrise();
+  }
+
+  /* 4. Barre de navigation + panneau latéral */
   updateParcoursNavBar(p);
   showParcoursResults(p);
+
+  /* 5. Met à jour les boutons de vue */
+  updateNavButtons();
+  updateDetailBar();
 }
+
+var _savedZones = null; /* zones sauvegardées avant activation parcours */
 
 function clearParcours() {
   activeParcours = null;
   updateParcoursBtn();
+
+  /* Restaure les zones précédentes si elles ont été sauvegardées */
+  if (_savedZones) {
+    for (var z in activeZones) activeZones[z] = !!_savedZones[z];
+    _savedZones = null;
+    updateFilterCheckboxes();
+  }
+
   refreshFrise();
   var bar = document.getElementById('parcours-nav-bar');
   if (bar) bar.style.display = 'none';
   var panel = document.getElementById('search-results-panel');
   if (panel) panel.style.display = 'none';
+  updateNavButtons();
+  updateDetailBar();
 }
 
 function updateParcoursBtn() {
