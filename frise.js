@@ -1540,6 +1540,18 @@ function onSearch(val) {
   }
 }
 
+function navigateToEvent(evt) {
+  /* Navigue vers la décennie contenant l'événement */
+  var dec = Math.floor(evt.date / 10) * 10;
+  currentDecade  = dec;
+  currentCentury = Math.floor(dec / 100) * 100;
+  currentYear    = null;
+  currentLevel   = 3;
+  renderLevel(3, dec);
+  updateNavButtons();
+  updateDetailBar();
+}
+
 function showSearchResults() {
   var panel   = document.getElementById('search-results-panel');
   var listEl  = document.getElementById('search-results-list');
@@ -1601,8 +1613,19 @@ function showSearchResults() {
           item.appendChild(thumb);
         }
         item.style.cursor = 'pointer';
+        /* Clic simple → navigue sur la frise + surligne */
         item.addEventListener('click', (function(e) {
-          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+          return function() {
+            listEl.querySelectorAll('.sr-item-active').forEach(function(it) {
+              it.classList.remove('sr-item-active');
+            });
+            this.classList.add('sr-item-active');
+            navigateToEvent(e);
+          };
+        })(evt));
+        /* Double-clic → ouvre la fiche */
+        item.addEventListener('dblclick', (function(e) {
+          return function(ev) { ev.stopPropagation(); openModal(e, e.zones && e.zones[0] || ZONES[0]); };
         })(evt));
         listEl.appendChild(item);
       });
