@@ -799,14 +799,16 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     for (var si = 0; si < steps.length; si++) {
       if (steps[si].id === evt.id) { num = si + 1; break; }
     }
+    console.log('Badge: parcours='+activeParcours+' evt.id='+evt.id+' num='+num+' steps='+steps.length);
     if (num > 0) {
       var badge = document.createElement('span');
       badge.className = 'parcours-num-badge';
       badge.textContent = num;
       var pcol = parcoursColors[activeParcours] || '#7D3C98';
       badge.style.background = pcol;
-      chip.appendChild(badge);
+      chip.style.position = 'relative';   /* ancre le badge */
       chip.style.overflow = 'visible';
+      chip.appendChild(badge);
     }
   }
 
