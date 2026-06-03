@@ -479,6 +479,8 @@ function buildRulersSection(start, end, level) {
       var e = allEvents[j];
       if (!e.regne) continue;
       if (e.zones.indexOf(zone) === -1) continue;
+      /* Mode parcours : n'afficher que les règnes de la série */
+      if (activeParcours && parseSeries(e.serie).indexOf(activeParcours) === -1) continue;
       if (searchTerm && !eventMatchesSearch(e)) continue;
       var d0 = e.date, d1 = e.date_fin || e.date;
       if (level === 4) {
@@ -799,7 +801,6 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     for (var si = 0; si < steps.length; si++) {
       if (steps[si].id === evt.id) { num = si + 1; break; }
     }
-    console.log('Badge: parcours='+activeParcours+' evt.id='+evt.id+' num='+num+' steps='+steps.length);
     if (num > 0) {
       var badge = document.createElement('span');
       badge.className = 'parcours-num-badge';
