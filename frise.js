@@ -112,6 +112,10 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
+  /* Mode parcours actif : seuls les événements de la série sont visibles */
+  if (typeof activeParcours !== 'undefined' && activeParcours) {
+    return parseSeries(evt.serie).indexOf(activeParcours) !== -1;
+  }
   /* Mode recherche active : seuls les événements correspondants sont visibles */
   if (typeof searchFilterActive !== 'undefined' && searchFilterActive) {
     return eventMatchesSearch(evt);
@@ -787,6 +791,25 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.addEventListener('click', (function(e, z) {
     return function(ev) { ev.stopPropagation(); openModal(e, z); };
   })(evt, zone));
+
+  /* Badge numéroté en mode parcours (ordre chronologique global) */
+  if (activeParcours) {
+    var steps = getParcoursSteps(activeParcours);
+    var num = -1;
+    for (var si = 0; si < steps.length; si++) {
+      if (steps[si].id === evt.id) { num = si + 1; break; }
+    }
+    if (num > 0) {
+      var badge = document.createElement('span');
+      badge.className = 'parcours-num-badge';
+      badge.textContent = num;
+      var pcol = parcoursColors[activeParcours] || '#7D3C98';
+      badge.style.background = pcol;
+      chip.appendChild(badge);
+      chip.style.overflow = 'visible';
+    }
+  }
+
   return chip;
 }
 
