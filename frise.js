@@ -813,7 +813,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     if (level === 1) chip.classList.add('chip-period-sm');
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
-    chip.style.height      = ROW_H + 'px';
+    chip.style.minHeight   = (ROW_H - 4) + 'px';  /* hauteur auto pour retour ligne */
     if (isShared) {
       chip.style.background  = 'repeating-linear-gradient(60deg,' + col.bg + 'CC 0px,' + col.bg + 'CC 8px,' + col2.bg + 'CC 8px,' + col2.bg + 'CC 16px)';
     } else {
@@ -826,7 +826,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       var titreP = evt.titre;
       var chipPct      = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
       var chipPxApprox = chipPct * (TRACK_PX - 90);
-      var maxC         = level === 3 ? 32 : 18;
+      var maxC         = Math.max(8, Math.floor(chipPxApprox / 6.5));
       var MOIS_ABR_P = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
       var dateLblP = document.createElement('span');
       dateLblP.className   = 'chip-date-label';
@@ -838,15 +838,26 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
-      if (chipPxApprox < 60) {
-        chip.style.fontSize     = '0.60rem';
+      chip.style.lineHeight = '1.25';
+      if (chipPxApprox < 40) {
+        /* Très étroit : texte masqué, titre en tooltip */
+        chip.style.fontSize   = '0';
+        chip.style.overflow   = 'hidden';
+        chip.style.whiteSpace = 'nowrap';
+      } else if (chipPxApprox < 80) {
+        /* Étroit : une ligne tronquée avec ellipsis */
+        chip.style.fontSize     = adaptFontSize(titreP, 0.72, maxC);
         chip.style.whiteSpace   = 'nowrap';
-        chip.style.textOverflow = 'ellipsis';
         chip.style.overflow     = 'hidden';
+        chip.style.textOverflow = 'ellipsis';
         chip.appendChild(document.createTextNode(titreP));
       } else {
+        /* Large : retour à la ligne autorisé */
         chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
-        chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
+        chip.style.whiteSpace = 'normal';
+        chip.style.wordBreak  = 'break-word';
+        chip.style.hyphens    = 'auto';
+        chip.style.overflow   = 'visible';
         chip.appendChild(document.createTextNode(titreP));
       }
     }
