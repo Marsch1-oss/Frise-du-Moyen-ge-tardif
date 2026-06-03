@@ -1359,6 +1359,12 @@ function wzInit() {
   wzGoTo(1);
 }
 
+function wzScaleChanged(val) {
+  _wzScale = parseInt(val);
+  /* Si on est à l'étape 3, met à jour le select de période */
+  if (wzCurrentStep === 3) wzBuildPeriodSelect();
+}
+
 function wzGoTo(step) {
   wzCurrentStep = step;
   document.querySelectorAll('.wizard-step').forEach(function(el, i) {
@@ -1394,9 +1400,12 @@ function wzPrev() {
   wzGoTo(prev);
 }
 
+var _wzScale = 3; /* valeur par défaut : vue décennale */
+
 function wzGetScale() {
   var r = document.querySelector('input[name="wz-scale"]:checked');
-  return r ? parseInt(r.value) : 2;
+  if (r) _wzScale = parseInt(r.value);
+  return _wzScale;
 }
 
 function wzBuildPeriodSelect() {

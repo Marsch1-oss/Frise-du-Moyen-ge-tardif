@@ -1463,19 +1463,19 @@
 
       <div class="wz-scale-choices">
         <label class="wz-scale-card">
-          <input type="radio" name="wz-scale" value="2">
+          <input type="radio" name="wz-scale" value="2" onchange="wzScaleChanged(2)">
           <span class="wz-scale-icon">&#128198;</span>
           <span class="wz-scale-label">Vue siècle</span>
           <span class="wz-scale-desc">Vue d'ensemble sur 100 ans — événements majeurs</span>
         </label>
         <label class="wz-scale-card">
-          <input type="radio" name="wz-scale" value="3" checked>
+          <input type="radio" name="wz-scale" value="3" checked onchange="wzScaleChanged(3)">
           <span class="wz-scale-icon">&#128197;</span>
           <span class="wz-scale-label">Vue décennale</span>
           <span class="wz-scale-desc">Zoom sur une décennie — <strong>lecture la plus confortable</strong> — détail configurable</span>
         </label>
         <label class="wz-scale-card">
-          <input type="radio" name="wz-scale" value="4">
+          <input type="radio" name="wz-scale" value="4" onchange="wzScaleChanged(4)">
           <span class="wz-scale-icon">&#128196;</span>
           <span class="wz-scale-label">Vue annuelle</span>
           <span class="wz-scale-desc">Tous les événements d'une année</span>
