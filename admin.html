@@ -93,6 +93,16 @@
     .import-zone:hover { border-color: var(--gold); background: rgba(154,107,26,0.04); color: var(--ink); }
     #import-file { display: none; }
     .section-sep { border: none; border-top: 1px solid var(--border); margin: 1.2rem 0; }
+  
+    .serie-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .serie-input {
+      width: 100%;
+    }
+
   </style>
 </head>
 <body>
@@ -192,6 +202,22 @@
         </div>
       </div>
 
+      <div class="field">
+        <label>S&eacute;rie(s) / Parcours <small>(jusqu'à 3, optionnel)</small></label>
+        <div class="serie-fields">
+          <input type="text" id="f-serie-1" class="serie-input"
+                 placeholder="ex. Guerre de Cent ans"
+                 list="serie-suggestions" autocomplete="off">
+          <input type="text" id="f-serie-2" class="serie-input"
+                 placeholder="2e parcours (optionnel)"
+                 list="serie-suggestions" autocomplete="off">
+          <input type="text" id="f-serie-3" class="serie-input"
+                 placeholder="3e parcours (optionnel)"
+                 list="serie-suggestions" autocomplete="off">
+        </div>
+        <datalist id="serie-suggestions"></datalist>
+      </div>
+
       <div class="field-row">
         <div class="field">
           <label>Image <small>(chemin relatif ou URL)</small></label>
@@ -221,15 +247,7 @@
           <label>Sources</label>
           <input type="text" id="f-sources" placeholder="ex. Jean Froissart, Chroniques">
         </div>
-        <div class="field">
-          <label>S&eacute;rie(s) / Parcours
-            <small style="font-weight:400;color:#888;">— s&eacute;parer par | si plusieurs</small>
-          </label>
-          <input type="text" id="f-serie"
-                 placeholder="ex. Guerre de Cent ans | Guerre de Succession de Bretagne"
-                 list="serie-suggestions" autocomplete="off">
-          <datalist id="serie-suggestions"></datalist>
-        </div>
+
       </div>
 
       <div class="btn-row">
@@ -425,8 +443,12 @@ function readForm() {
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
-  var serieEl = document.getElementById('f-serie');
-  evt.serie   = serieEl ? (cleanText(serieEl.value) || '') : '';
+  var series = [];
+  ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && el.value.trim()) series.push(cleanText(el.value.trim()));
+  });
+  evt.serie = series.join('|');
   return evt;
 }
 
@@ -448,7 +470,11 @@ function fillForm(evt) {
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
-  var _sEl = document.getElementById('f-serie'); if (_sEl) _sEl.value = evt.serie || '';
+    var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
+  ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
+    var el = document.getElementById(id);
+    if (el) el.value = _sParts[i] || '';
+  });
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
     var checked = (evt.zones || []).indexOf(inp.value) !== -1;
     inp.checked = checked;
@@ -470,7 +496,7 @@ function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
-   'f-desc','f-image','f-legende','f-video','f-sources','f-serie'].forEach(function(id) {
+   'f-desc','f-image','f-legende','f-video','f-sources','f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
   document.querySelectorAll('#zones-grid input').forEach(function(inp) {
