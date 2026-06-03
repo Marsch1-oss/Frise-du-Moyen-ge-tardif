@@ -92,6 +92,7 @@ var TRACK_PX = 860;
 var currentLevel   = 1;
 var currentYear    = null;
 var searchTerm     = '';
+var searchFilterActive = false;
 var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
@@ -111,6 +112,10 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
+  /* Mode recherche active : seuls les événements correspondants sont visibles */
+  if (typeof searchFilterActive !== 'undefined' && searchFilterActive) {
+    return eventMatchesSearch(evt);
+  }
   /* Types : 1=Règne  2=Siècle  3=Important  4=Détaillé  5=Complet
      Les règnes (type 1) sont affichés via buildRulersSection, exclus ici */
   var t = (evt.type === undefined || evt.type === null || evt.type === '')
@@ -296,6 +301,7 @@ function renderLevel(level, rangeStart) {
       }
       evts.push(e);
     }
+    if (searchFilterActive && evts.length > 0) console.log('Zone '+zone+': '+evts.length+' events');
     container.appendChild(buildTrack(zone, evts, start, end, level));
 
     if (level >= 3) {
@@ -1541,6 +1547,15 @@ function onSearch(val) {
 }
 
 function navigateToEvent(evt) {
+  /* Si une recherche est active, active le filtre et les zones des résultats */
+  if (searchTerm) {
+    searchFilterActive = true;
+    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
+    ZONES.forEach(function(z) {
+      activeZones[z] = matches.some(function(e) { return e.zones.indexOf(z) !== -1; });
+    });
+    updateFilterCheckboxes();
+  }
   /* Navigue vers la décennie contenant l'événement */
   var dec = Math.floor(evt.date / 10) * 10;
   currentDecade  = dec;
@@ -1642,6 +1657,11 @@ function closeSearchResults() {
   if (countEl) countEl.textContent = '';
   document.body.classList.remove('parcours-panel-open');
   searchTerm = '';
+  /* Désactive le filtre recherche et restaure l'affichage */
+  if (searchFilterActive) {
+    searchFilterActive = false;
+    refreshFrise();
+  }
   var inp = document.getElementById('search-input');
   if (inp) inp.value = '';
   var clearBtn = document.getElementById('search-clear');
