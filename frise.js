@@ -1916,6 +1916,18 @@ function updateParcoursNavBar(p) {
   bar.style.borderColor = col;
 }
 
+function navigateToEvent(evt) {
+  /* Navigue vers la décennie contenant cet événement */
+  var dec = Math.floor(evt.date / 10) * 10;
+  currentDecade  = dec;
+  currentCentury = Math.floor(dec / 100) * 100;
+  currentYear    = null;
+  currentLevel   = 3;
+  renderLevel(3, dec);
+  updateNavButtons();
+  updateDetailBar();
+}
+
 function parcoursGoToStep(steps, idx) {
   if (!steps || idx < 0 || idx >= steps.length) return;
   var evt = steps[idx];
