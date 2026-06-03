@@ -1525,69 +1525,99 @@ var savedCurrentDecade  = null;
 var savedCurrentYear    = null;
 
 function onSearch(val) {
-  searchTerm = (val || '').trim().toLowerCase();
+  searchTerm = (val || '').trim();
   var clearBtn = document.getElementById('search-clear');
   if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
   if (searchTerm) {
-    if (!savedActiveZones) {
-      savedActiveZones    = {};
-      for (var z in activeZones) savedActiveZones[z] = activeZones[z];
-      savedCurrentLevel   = currentLevel;
-      savedCurrentCentury = currentCentury;
-      savedCurrentDecade  = currentDecade;
-      savedCurrentYear    = currentYear;
-    }
-    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
-    if (matches.length === 0) {
-      updateFilterCheckboxes();
-      refreshFrise();
-      applySearch();
-      return;
-    }
-    ZONES.forEach(function(z) {
-      activeZones[z] = matches.some(function(e) { return e.zones.indexOf(z) !== -1; });
-    });
-    updateFilterCheckboxes();
-    var maxType = 1;
-    matches.forEach(function(e) { var t = e.type || 1; if (t > maxType) maxType = t; });
-    var neededLevel = maxType;
-    var earliest = matches.reduce(function(min, e) { return e.date < min ? e.date : min; }, matches[0].date);
-    if (neededLevel === 1) {
-      renderLevel(1);
-    } else if (neededLevel === 2) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      renderLevel(2, currentCentury);
-    } else if (neededLevel === 3) {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      renderLevel(3, currentDecade);
-    } else {
-      currentCentury = Math.floor(earliest / 100) * 100;
-      currentDecade  = Math.floor(earliest / 10) * 10;
-      currentYear    = earliest;
-      renderLevel(4, earliest);
-    }
+    showSearchResults();
   } else {
-    if (savedActiveZones) {
-      activeZones = savedActiveZones;
-      savedActiveZones = null;
-      if (savedCurrentLevel !== null) {
-        currentLevel   = savedCurrentLevel;
-        currentCentury = savedCurrentCentury;
-        currentDecade  = savedCurrentDecade;
-        currentYear    = savedCurrentYear;
-        savedCurrentLevel = null;
-        if      (currentLevel === 1) renderLevel(1);
-        else if (currentLevel === 2) renderLevel(2, currentCentury);
-        else if (currentLevel === 3) renderLevel(3, currentDecade);
-        else                         renderLevel(4, currentYear);
-      } else {
-        updateFilterCheckboxes();
-        refreshFrise();
-      }
-    }
+    closeSearchResults();
   }
-  applySearch();
+}
+
+function showSearchResults() {
+  var panel   = document.getElementById('search-results-panel');
+  var listEl  = document.getElementById('search-results-list');
+  var titleEl = document.getElementById('sr-title');
+  var countEl = document.getElementById('search-count');
+  if (!panel || !listEl) return;
+
+  var results = allEvents
+    .filter(function(e) { return eventMatchesSearch(e); })
+    .sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
+
+  if (countEl) countEl.textContent = results.length
+    ? results.length + ' r\u00e9sultat' + (results.length > 1 ? 's' : '')
+    : 'Aucun r\u00e9sultat';
+  if (titleEl) titleEl.textContent = searchTerm
+    ? 'Recherche\u00a0: \u00ab\u00a0' + searchTerm + '\u00a0\u00bb'
+    : 'R\u00e9sultats';
+
+  var MOIS_ABR = ['jan.','f\u00e9v.','mar.','avr.','mai','jun.',
+                  'jul.','ao\u00fb.','sep.','oct.','nov.','d\u00e9c.'];
+  var LEVEL_LABELS = {
+    1: 'Niveau 1 \u2014 R\u00e8gne', 2: 'Niveau 2 \u2014 Si\u00e8cle',
+    3: 'Niveau 3 \u2014 Important', 4: 'Niveau 4 \u2014 D\u00e9taill\u00e9',
+    5: 'Niveau 5 \u2014 Complet'
+  };
+
+  listEl.innerHTML = '';
+  if (results.length === 0) {
+    listEl.innerHTML = '<p class="sr-empty">Aucun \u00e9v\u00e9nement ne correspond.</p>';
+  } else {
+    var byLevel = {1:[],2:[],3:[],4:[],5:[]};
+    results.forEach(function(e) {
+      var t = e.regne ? 1 : (parseInt(e.type) || 2);
+      (byLevel[t] || byLevel[2]).push(e);
+    });
+    [1,2,3,4,5].forEach(function(lvl) {
+      var items = byLevel[lvl];
+      if (!items.length) return;
+      var header = document.createElement('div');
+      header.className = 'sr-level-header';
+      header.textContent = LEVEL_LABELS[lvl] + ' (' + items.length + ')';
+      listEl.appendChild(header);
+      items.forEach(function(evt) {
+        var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
+        var dateStr = evt.mois ? MOIS_ABR[evt.mois-1] + '\u00a0' + evt.date : '' + evt.date;
+        if (evt.date_fin && evt.date_fin > evt.date) dateStr += '\u2013' + evt.date_fin;
+        var item = document.createElement('div');
+        item.className = 'sr-item sr-level-' + lvl;
+        item.innerHTML =
+          '<span class="sr-date">' + dateStr + '</span>' +
+          '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
+          '<span class="sr-body">' +
+            '<span class="sr-titre">' + evt.titre + '</span>' +
+            '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
+          '</span>';
+        if (evt.image && evt.image.trim()) {
+          var thumb = document.createElement('img');
+          thumb.src = evt.image; thumb.alt = ''; thumb.className = 'sr-thumb';
+          item.appendChild(thumb);
+        }
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', (function(e) {
+          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
+        })(evt));
+        listEl.appendChild(item);
+      });
+    });
+  }
+  panel.style.display = 'flex';
+  document.body.classList.add('parcours-panel-open');
+}
+
+function closeSearchResults() {
+  var panel   = document.getElementById('search-results-panel');
+  var countEl = document.getElementById('search-count');
+  if (panel) panel.style.display = 'none';
+  if (countEl) countEl.textContent = '';
+  document.body.classList.remove('parcours-panel-open');
+  searchTerm = '';
+  var inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
 }
 
 function goToMatch(idx) {
@@ -1620,33 +1650,7 @@ function prevMatch() { goToMatch(currentMatchIdx - 1); }
 function nextMatch() { goToMatch(currentMatchIdx + 1); }
 
 function clearSearch() {
-  var input = document.getElementById('search-input');
-  if (input) input.value = '';
-  searchTerm = '';
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = 'none';
-  var countEl = document.getElementById('search-count');
-  if (countEl) countEl.textContent = '';
-  matchedIds = []; currentMatchIdx = -1;
-  if (savedActiveZones) {
-    activeZones = savedActiveZones;
-    savedActiveZones = null;
-    if (savedCurrentLevel !== null) {
-      currentLevel   = savedCurrentLevel;
-      currentCentury = savedCurrentCentury;
-      currentDecade  = savedCurrentDecade;
-      currentYear    = savedCurrentYear;
-      savedCurrentLevel = null;
-      if      (currentLevel === 1) renderLevel(1);
-      else if (currentLevel === 2) renderLevel(2, currentCentury);
-      else if (currentLevel === 3) renderLevel(3, currentDecade);
-      else                         renderLevel(4, currentYear);
-    } else {
-      updateFilterCheckboxes();
-      refreshFrise();
-    }
-  }
-  applySearch();
+  closeSearchResults();
 }
 
 function eventMatchesSearch(evt) {
