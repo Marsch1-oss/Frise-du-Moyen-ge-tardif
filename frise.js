@@ -1890,8 +1890,26 @@ function updateParcoursNavBar(p) {
         openModal(e, e.zones && e.zones[0] || ZONES[0]);
       }
     };
-    /* Insère après le select */
-    sel.parentNode.insertBefore(ficheBtn, sel.nextSibling);
+
+    /* Bouton "Frise" : navigue vers l'étape sélectionnée */
+    var oldFriseBtn2 = bar.querySelector('.pnav-frise-btn');
+    if (oldFriseBtn2) oldFriseBtn2.remove();
+    var friseBtn2 = document.createElement('button');
+    friseBtn2.className   = 'pnav-frise-btn';
+    friseBtn2.textContent = 'Frise ↓';
+    friseBtn2.title       = 'Centrer la frise sur l’étape sélectionnée';
+    friseBtn2.style.cssText = 'font-size:0.78rem;padding:0.2rem 0.65rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;white-space:nowrap;';
+    friseBtn2.onclick = function() {
+      var selEl = bar.querySelector('.pnav-select');
+      if (!selEl) return;
+      var stepIdx = parseInt(selEl.value);
+      var stepsNow = getParcoursSteps(activeParcours);
+      parcoursGoToStep(stepsNow, stepIdx);
+    };
+
+    /* Insère après le select : Frise | Fiche */
+    sel.parentNode.insertBefore(friseBtn2, sel.nextSibling);
+    sel.parentNode.insertBefore(ficheBtn, friseBtn2.nextSibling);
   }
 
   bar.style.display = 'flex';
