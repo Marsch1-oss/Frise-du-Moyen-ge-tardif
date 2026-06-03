@@ -838,27 +838,32 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
-      chip.style.lineHeight = '1.25';
+      chip.style.overflow = 'hidden';
       if (chipPxApprox < 40) {
-        /* Très étroit : texte masqué, titre en tooltip */
-        chip.style.fontSize   = '0';
-        chip.style.overflow   = 'hidden';
-        chip.style.whiteSpace = 'nowrap';
-      } else if (chipPxApprox < 80) {
-        /* Étroit : une ligne tronquée avec ellipsis */
-        chip.style.fontSize     = adaptFontSize(titreP, 0.72, maxC);
-        chip.style.whiteSpace   = 'nowrap';
-        chip.style.overflow     = 'hidden';
-        chip.style.textOverflow = 'ellipsis';
-        chip.appendChild(document.createTextNode(titreP));
+        /* Très étroit : texte masqué, titre en tooltip (déjà dans chip.title) */
+        /* rien à afficher */
       } else {
-        /* Large : retour à la ligne autorisé */
-        chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
-        chip.style.whiteSpace = 'normal';
-        chip.style.wordBreak  = 'break-word';
-        chip.style.hyphens    = 'auto';
-        chip.style.overflow   = 'visible';
-        chip.appendChild(document.createTextNode(titreP));
+        /* Titre dans un span interne pour gérer ellipsis/retour ligne
+           (text-overflow ne marche pas sur un conteneur flex) */
+        var txtSpan = document.createElement('span');
+        txtSpan.textContent   = titreP;
+        txtSpan.style.display = 'block';
+        txtSpan.style.width   = '100%';
+        txtSpan.style.lineHeight = '1.2';
+        if (chipPxApprox < 80) {
+          /* Étroit : une ligne tronquée */
+          txtSpan.style.fontSize     = adaptFontSize(titreP, 0.72, maxC);
+          txtSpan.style.whiteSpace   = 'nowrap';
+          txtSpan.style.overflow     = 'hidden';
+          txtSpan.style.textOverflow = 'ellipsis';
+        } else {
+          /* Large : retour à la ligne */
+          txtSpan.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
+          txtSpan.style.whiteSpace = 'normal';
+          txtSpan.style.wordBreak  = 'break-word';
+          txtSpan.style.hyphens    = 'auto';
+        }
+        chip.appendChild(txtSpan);
       }
     }
     chip.title = evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
