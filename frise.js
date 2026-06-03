@@ -111,20 +111,29 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
-  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
-  if (isNaN(t)) t = 1;
+  /* Types : 1=Règne  2=Siècle  3=Important  4=Détaillé  5=Complet
+     Les règnes (type 1) sont affichés via buildRulersSection, exclus ici */
+  var t = (evt.type === undefined || evt.type === null || evt.type === '')
+        ? 2 : parseInt(evt.type, 10);
+  if (isNaN(t) || t < 1) t = 2;
 
-  /* Vue annuelle : tout visible */
-  if (level === 4) return true;
+  /* Vue ensemble : rien dans la piste events (règnes via RulersSection) */
+  if (level === 1) return false;
 
-  /* Vue siècle : niveau 1 uniquement */
-  if (level === 2) return t === 1;
+  /* Vue siècle : seulement les événements Siècle (type 2) */
+  if (level === 2) return t === 2;
 
-  /* Vue décennale : selon le filtre Affichage */
-  if (t === 1) return true;
-  if (t === 2) return detailLevel >= 1;
-  if (t === 3) return detailLevel >= 2;
-  if (t === 4) return detailLevel >= 3;
+  /* Règnes jamais dans la piste events */
+  if (t === 1) return false;
+
+  /* Vue décennale (3) et annuelle (4) : selon le zoom détail
+     detailLevel 1 = Siècle    : type 2
+     detailLevel 2 = Important : types 2+3
+     detailLevel 3 = Détaillé  : types 2+3+4
+     detailLevel 4 = Complet   : tous (2+3+4+5) */
+  if (detailLevel <= 1) return t === 2;
+  if (detailLevel === 2) return t <= 3;
+  if (detailLevel === 3) return t <= 4;
   return true;
 }
 
@@ -1123,7 +1132,7 @@ function zoomOut() {
 
 /* ── Accueil ─────────────────────────────────────────────────────────*/
 var wzCurrentStep = 1;
-var WZ_TOTAL_STEPS = 5;
+var WZ_TOTAL_STEPS = 2;
 
 function wzInit() {
   startMusic();
@@ -1174,6 +1183,11 @@ function wzInit() {
   wzGoTo(1);
 }
 
+function wzScaleChanged(val) {
+  _wzScale = parseInt(val);
+  if (wzCurrentStep === 2) wzBuildPeriodSelect();
+}
+
 function wzGoTo(step) {
   wzCurrentStep = step;
   document.querySelectorAll('.wizard-step').forEach(function(el, i) {
@@ -1183,11 +1197,8 @@ function wzGoTo(step) {
     d.classList.toggle('active', i + 1 === step);
     d.classList.toggle('done',   i + 1 < step);
   });
-  if (step === 3) wzBuildPeriodSelect();
-  if (step === 4) {
-    var scale = wzGetScale();
-    if (scale !== 3) { wzGoTo(5); return; }
-  }
+  /* Étape 2 : construit le select de période selon l'échelle choisie */
+  if (step === 2) wzBuildPeriodSelect();
 }
 
 function wzNext() {
@@ -1267,15 +1278,24 @@ function wzClose() {
   var q = (document.getElementById('wz-search-input').value || '').trim();
   if (q) { wzApplySearch(q); return; }
   updateFilterCheckboxes();
-  var scale  = _wzScale;  /* lu depuis la variable mémorisée */
+
+  /* Lit l'échelle mémorisée et la période choisie */
+  var rScale = document.querySelector('input[name="wz-scale"]:checked');
+  if (rScale) _wzScale = parseInt(rScale.value);
+  var scale  = _wzScale;
   var period = parseInt(document.getElementById('wz-period-select').value || '1300');
-  if (scale === 3) {
-    var dr = document.querySelector('input[name="wz-detail"]:checked');
-    detailLevel = dr ? parseInt(dr.value) : 1;
-    document.querySelectorAll('.detail-btn').forEach(function(b) {
-      b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
-    });
-  }
+
+  /* Niveau de détail par défaut selon la vue :
+     - vue siècle (2)  : detailLevel 1 (les autres niveaux non proposés)
+     - vue décennale(3): detailLevel 2 (Important par défaut, ajustable au zoom)
+     - vue annuelle (4): detailLevel 3 (Détaillé par défaut, ajustable au zoom) */
+  if (scale === 2)      detailLevel = 1;
+  else if (scale === 3) detailLevel = 2;
+  else                  detailLevel = 3;
+  document.querySelectorAll('.detail-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
+  });
+
   currentCentury = Math.floor(period / 100) * 100;
   currentDecade  = scale >= 3 ? Math.floor(period / 10) * 10 : null;
   currentYear    = scale === 4 ? period : null;
@@ -1385,9 +1405,17 @@ function updateDetailBar() {
   var bar  = document.getElementById('detail-bar');
   var hint = document.getElementById('detail-hint');
   if (!bar) return;
-  bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
+  /* Barre de zoom détail visible en vue décennale et annuelle uniquement
+     (en vue siècle, un seul niveau est proposé) */
+  bar.style.display = (currentLevel === 3 || currentLevel === 4) ? 'flex' : 'none';
   if (hint) {
-    hint.textContent = detailLevel === 1 ? '— niveaux 1 & 2' : detailLevel === 2 ? '— niveaux 1, 2 & 3' : '— tous les niveaux';
+    var labels = {
+      1: '— événements Siècle',
+      2: '— + Importants',
+      3: '— + Détaillés',
+      4: '— tous les événements'
+    };
+    hint.textContent = labels[detailLevel] || '';
   }
 }
 

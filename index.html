@@ -1420,11 +1420,11 @@
       <span class="wz-step-line"></span>
       <span class="wz-step-dot" data-step="2"></span>
       <span class="wz-step-line"></span>
-      <span class="wz-step-dot" data-step="3"></span>
+      
       <span class="wz-step-line"></span>
-      <span class="wz-step-dot" data-step="4"></span>
+      
       <span class="wz-step-line"></span>
-      <span class="wz-step-dot" data-step="5"></span>
+      
     </div>
 
     <!-- ── ÉTAPE 1 : Zones & Thèmes ou recherche ── -->
@@ -1453,26 +1453,26 @@
       </div>
     </div>
 
-    <!-- ── ÉTAPE 2 : Échelle ── -->
+    <!-- ── ÉTAPE 2 : Vue + Période ── -->
     <div class="wizard-step" id="wz-step-2">
       <div class="wz-header">
         <span class="wz-icon">&#128337;</span>
-        <h2 class="wz-title">Choisissez l&rsquo;échelle de temps</h2>
+        <h2 class="wz-title">Choisissez la vue</h2>
       </div>
-      <p class="wz-sub">À quelle granularité souhaitez-vous explorer la période&nbsp;?</p>
+      <p class="wz-sub">À quelle échelle souhaitez-vous explorer la période&nbsp;?</p>
 
       <div class="wz-scale-choices">
         <label class="wz-scale-card">
           <input type="radio" name="wz-scale" value="2" onchange="wzScaleChanged(2)">
           <span class="wz-scale-icon">&#128198;</span>
           <span class="wz-scale-label">Vue siècle</span>
-          <span class="wz-scale-desc">Vue d'ensemble sur 100 ans — événements majeurs</span>
+          <span class="wz-scale-desc">Vue d'ensemble sur 100 ans &mdash; événements majeurs</span>
         </label>
         <label class="wz-scale-card">
           <input type="radio" name="wz-scale" value="3" checked onchange="wzScaleChanged(3)">
           <span class="wz-scale-icon">&#128197;</span>
           <span class="wz-scale-label">Vue décennale</span>
-          <span class="wz-scale-desc">Zoom sur une décennie — <strong>lecture la plus confortable</strong> — détail configurable</span>
+          <span class="wz-scale-desc">Zoom sur une décennie &mdash; <strong>lecture la plus confortable</strong></span>
         </label>
         <label class="wz-scale-card">
           <input type="radio" name="wz-scale" value="4" onchange="wzScaleChanged(4)">
@@ -1482,20 +1482,7 @@
         </label>
       </div>
 
-      <div class="wz-footer">
-        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
-        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
-      </div>
-    </div>
-
-    <!-- ── ÉTAPE 3 : Période ── -->
-    <div class="wizard-step" id="wz-step-3">
-      <div class="wz-header">
-        <span class="wz-icon">&#128205;</span>
-        <h2 class="wz-title">Choisissez la période</h2>
-      </div>
-      <p class="wz-sub" id="wz-period-sub">Sélectionnez le siècle à afficher.</p>
-
+      <p class="wz-sub" id="wz-period-sub" style="margin-top:1rem;">Choisissez ensuite la période à afficher&nbsp;:</p>
       <div class="wz-select-wrap">
         <select id="wz-period-select" class="wz-select">
           <!-- rempli dynamiquement -->
@@ -1504,98 +1491,11 @@
 
       <div class="wz-footer">
         <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
-        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
+        <button class="wz-btn wz-btn-next" onclick="wzClose()">Voir la frise &#8250;</button>
       </div>
     </div>
 
-    <!-- ── ÉTAPE 4 : Précision (décennie seulement) ── -->
-    <div class="wizard-step" id="wz-step-4">
-      <div class="wz-header">
-        <span class="wz-icon">&#128270;</span>
-        <h2 class="wz-title">Niveau de détail</h2>
-      </div>
-      <p class="wz-sub">Combien d'événements souhaitez-vous afficher&nbsp;?</p>
-
-      <div class="wz-detail-choices">
-        <label class="wz-detail-card">
-          <input type="radio" name="wz-detail" value="1" checked>
-          <span class="wz-detail-label">Essentiel</span>
-          <span class="wz-detail-desc">Types 1&ndash;2 &mdash; r&egrave;gnes + év&eacute;nements majeurs</span>
-        </label>
-        <label class="wz-detail-card">
-          <input type="radio" name="wz-detail" value="2">
-          <span class="wz-detail-label">Détaillé</span>
-          <span class="wz-detail-desc">Types 1&ndash;3 &mdash; événements importants</span>
-        </label>
-        <label class="wz-detail-card">
-          <input type="radio" name="wz-detail" value="3">
-          <span class="wz-detail-label">Pr&eacute;cis</span>
-          <span class="wz-detail-desc">Types 1&ndash;4 &mdash; vue d&eacute;taill&eacute;e</span>
-        </label>
-        <label class="wz-detail-card">
-          <input type="radio" name="wz-detail" value="4">
-          <span class="wz-detail-label">Complet</span>
-          <span class="wz-detail-desc">Types 1&ndash;5 &mdash; tous les événements</span>
-        </label>
-      </div>
-
-      <div class="wz-footer">
-        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
-        <button class="wz-btn wz-btn-next" onclick="wzNext()">Suivant &#8250;</button>
-      </div>
-    </div>
-
-    <!-- ── ÉTAPE 5 : Guide de navigation ── -->
-    <div class="wizard-step" id="wz-step-5">
-      <div class="wz-header">
-        <span class="wz-icon">&#128218;</span>
-        <h2 class="wz-title">Bienvenue sur la Frise du Moyen Âge</h2>
-      </div>
-      <p class="wz-sub">Ces réglages peuvent être modifiés à tout moment grâce aux commandes de la frise,<br>ou en cliquant sur <strong>&#127968; Accueil</strong> pour revenir à cet assistant.</p>
-
-      <div class="wz-guide">
-        <div class="wz-guide-item">
-          <span class="wz-guide-icon">&#128269;</span>
-          <div>
-            <strong>Zoomer</strong>
-            Cliquez sur une période de l'axe pour descendre d'un niveau de détail.
-          </div>
-        </div>
-        <div class="wz-guide-item">
-          <span class="wz-guide-icon">&larr;&rarr;</span>
-          <div>
-            <strong>Naviguer</strong>
-            Les flèches <em>Période précédente / suivante</em> défilent dans le temps à l'échelle choisie.
-          </div>
-        </div>
-        <div class="wz-guide-item">
-          <span class="wz-guide-icon">&#128196;</span>
-          <div>
-            <strong>Fiche complète</strong>
-            Cliquez sur n'importe quel événement pour ouvrir sa fiche (description, illustration, vidéo).
-          </div>
-        </div>
-        <div class="wz-guide-item">
-          <span class="wz-guide-icon">&#128270;</span>
-          <div>
-            <strong>Recherche</strong>
-            Saisissez un mot-clé dans la barre de recherche pour filtrer les événements.
-          </div>
-        </div>
-        <div class="wz-guide-item">
-          <span class="wz-guide-icon">&#127757;</span>
-          <div>
-            <strong>Zones &amp; thèmes</strong>
-            Ajustez les zones affichées via le bouton <em>Zones &amp; thèmes</em> ou le filtre sous la frise.
-          </div>
-        </div>
-      </div>
-
-      <div class="wz-footer">
-        <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
-        <button class="wz-btn wz-btn-ok" onclick="wzClose()">Découvrir la frise &#10003;</button>
-      </div>
-    </div>
+    
 
   </div><!-- .wizard-box -->
 </div><!-- #wizard-overlay -->
