@@ -1454,6 +1454,9 @@ function wzClose() {
   updateFilterCheckboxes();
   var scale  = wzGetScale();
   var period = parseInt(document.getElementById('wz-period-select').value || '1300');
+  /* DEBUG temporaire */
+  console.log('wzClose: scale=' + scale + ' _wzScale=' + _wzScale + ' period=' + period);
+  alert('DEBUG: scale=' + scale + ' | _wzScale=' + _wzScale + ' | period=' + period);
   if (scale === 3) {
     var dr = document.querySelector('input[name="wz-detail"]:checked');
     detailLevel = dr ? parseInt(dr.value) : 2;
