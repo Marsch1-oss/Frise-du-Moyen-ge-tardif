@@ -1526,12 +1526,7 @@ function openParcoursPanel() {
   listEl.innerHTML = '';
 
   if (all.length === 0) {
-    /* Debug : affiche le nombre d'événements et les 3 premiers champs serie */
-    var dbg = 'Événements chargés : ' + allEvents.length + '<br>';
-    var withSerie = allEvents.filter(function(e){ return e.serie && e.serie.trim(); });
-    dbg += 'Avec serie : ' + withSerie.length;
-    if (withSerie.length > 0) dbg += '<br>Ex : ' + withSerie[0].serie;
-    listEl.innerHTML = '<p class="parcours-empty" style="font-size:0.75rem;">' + dbg + '</p>';
+    listEl.innerHTML = '<p class="parcours-empty">Aucun parcours défini dans les événements chargés.</p>';
   } else {
     all.forEach(function(p) {
       var col   = parcoursColors[p];
@@ -1661,6 +1656,27 @@ function showParcoursResults(p) {
     titleEl.innerHTML =
       '<span style="color:' + col + '">◆ ' + p.replace(/_/g,' ') + '</span>' +
       ' — ' + steps.length + ' étape' + (steps.length > 1 ? 's' : '');
+  }
+
+  /* Bouton "Voir sur la frise" dans le header */
+  var srHeader = document.querySelector('.sr-header');
+  if (srHeader) {
+    var oldBtn = srHeader.querySelector('.sr-frise-btn');
+    if (oldBtn) oldBtn.remove();
+    var friseBtn = document.createElement('button');
+    friseBtn.className   = 'sr-frise-btn';
+    friseBtn.textContent = 'Voir sur la frise →';
+    friseBtn.title       = 'Fermer ce panneau et naviguer sur la frise';
+    friseBtn.onclick = function() {
+      /* Ferme le panneau mais garde le parcours actif */
+      var panel = document.getElementById('search-results-panel');
+      if (panel) panel.style.display = 'none';
+      document.body.classList.remove('parcours-panel-open');
+    };
+    /* Insère avant le bouton Fermer */
+    var closeBtn = srHeader.querySelector('.sr-close');
+    if (closeBtn) srHeader.insertBefore(friseBtn, closeBtn);
+    else srHeader.appendChild(friseBtn);
   }
 
   listEl.innerHTML = '';
@@ -1855,6 +1871,27 @@ function updateParcoursNavBar(p) {
       var idx = parseInt(this.value);
       parcoursGoToStep(steps, idx);
     };
+
+    /* Bouton "Ouvrir la fiche" à côté du select */
+    var oldFicheBtn = bar.querySelector('.pnav-fiche-btn');
+    if (oldFicheBtn) oldFicheBtn.remove();
+    var ficheBtn = document.createElement('button');
+    ficheBtn.className   = 'pnav-fiche-btn';
+    ficheBtn.textContent = 'Fiche ↗';
+    ficheBtn.title       = 'Ouvrir la fiche de l’étape sélectionnée';
+    ficheBtn.style.cssText = 'font-size:0.78rem;padding:0.2rem 0.65rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;white-space:nowrap;';
+    ficheBtn.onclick = function() {
+      var selEl = bar.querySelector('.pnav-select');
+      if (!selEl) return;
+      var stepIdx = parseInt(selEl.value);
+      var stepsNow = getParcoursSteps(activeParcours);
+      if (stepsNow[stepIdx]) {
+        var e = stepsNow[stepIdx];
+        openModal(e, e.zones && e.zones[0] || ZONES[0]);
+      }
+    };
+    /* Insère après le select */
+    sel.parentNode.insertBefore(ficheBtn, sel.nextSibling);
   }
 
   bar.style.display = 'flex';
