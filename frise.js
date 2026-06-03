@@ -10,48 +10,6 @@ var ZONES = [
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
 ];
 
-/* ── Couleurs Art par région géographique (détection automatique) ── */
-var ART_REGIONS = [
-  /* Couleurs proches des zones géographiques correspondantes */
-  { name: 'Italie',     bg: '#1A6B3C', light: '#D5F5E3', text: '#0E3D22',
-    keys: ['Florence','Florentin','Giotto','Duccio','Sienne','Siennois','Pisano',
-           'Venise','Venezia','Milan','Milanese','Padoue','Vérone','Verona',
-           'Orcagna','Martini','Lorenzetti','Cimabue','Gaddi','Traini',
-           'Italie','Italian','Toscane','Toscan','Lombard'] },
-  { name: 'France',     bg: '#1A3A6B', light: '#D6EAF8', text: '#0E1F40',
-    keys: ['Paris','Parisien','Avignon','Bourgogne','Berry','France','Française',
-           'Gothique','cathédrale','Duc de Berry','Limbourg','Fouquet',
-           'Illumin','manuscrit','tapisserie','Île-de-France'] },
-  { name: 'Flandres',   bg: '#5D4E37', light: '#EDE8E0', text: '#2E2418',
-    keys: ['Flamand','Flandre','Bruges','Gand','Ghent','Bruxelles','Cologne',
-           'Prague','Bohème','Rhin','Empire','Basse-Rhénanie','Westphalie',
-           'Van Eyck','Van der Weyden','Memling','Bouts','Goes'] },
-  { name: 'Espagne',    bg: '#7B2D8B', light: '#EAD9F7', text: '#4A1756',
-    keys: ['Castille','Aragon','Hispano','Mudéjar','Espagne','Ibérique',
-           'Catalane','Catalogne','Barcelone','Tolède','Séville'] },
-  { name: 'Angleterre', bg: '#1F5C8B', light: '#D4E6F1', text: '#0D2E47',
-    keys: ['Anglais','Angleterre','Londres','Westminster','Winchester',
-           'Gloucester','Ely','Lincoln','Canterbury'] },
-  { name: 'Orient',     bg: '#8B6914', light: '#FCF3CF', text: '#4A380A',
-    keys: ['Byzantin','Constantinople','Persan','Ottoman','Mamlouk','Islam',
-           'Mongol','Timouride','Iran','Arabe','Mosaïque','dorée'] },
-];
-
-function getArtColor(evt) {
-  /* Retourne la couleur de région pour un événement Art, ou la couleur Art par défaut */
-  if (evt.zones.indexOf('Art') === -1) return null;
-  var text = ((evt.titre || '') + ' ' + (evt.description || '') + ' ' + (evt.legende || '')).toLowerCase();
-  for (var i = 0; i < ART_REGIONS.length; i++) {
-    var r = ART_REGIONS[i];
-    for (var k = 0; k < r.keys.length; k++) {
-      if (text.indexOf(r.keys[k].toLowerCase()) !== -1) {
-        return { bg: r.bg, light: r.light, text: r.text, regionName: r.name };
-      }
-    }
-  }
-  return null; /* couleur Art générique */
-}
-
 var ZONES_GROUPS = {
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'],
   'Europe du Nord':     ['Scandinavie'],
@@ -138,7 +96,7 @@ var currentCentury = null;
 var currentDecade  = null;
 var allEvents      = [];
 var activeZones    = null;
-var detailLevel    = 2;  /* 1=Siècle, 2=Important, 3=Détaillé, 4=Complet */
+var detailLevel    = 1;  /* 1=Essentiel, 2=Détaillé, 3=Complet */
 var matchedIds     = []; /* ids des événements correspondants, ordonnés par date */
 var currentMatchIdx = -1; /* index courant dans matchedIds */
 
@@ -153,34 +111,21 @@ function normalizeZone(z) {
 }
 
 function visibleAtLevel(evt, level) {
-  /* Si un parcours est actif : seuls ses événements sont visibles */
-  if (activeParcours) {
-    return parseSeries(evt.serie).indexOf(activeParcours) !== -1;
-  }
+  var t = (evt.type === undefined || evt.type === null || evt.type === '') ? 1 : parseInt(evt.type, 10);
+  if (isNaN(t)) t = 1;
 
-  /* Type 1=Règne  2=Siècle  3=Important  4=Détaillé  5=Complet
-     Les règnes (type 1) sont affichés via buildRulersSection,
-     pas dans la piste events — on les exclut ici             */
-  var t = (evt.type === undefined || evt.type === null || evt.type === '')
-        ? 2 : parseInt(evt.type, 10);
-  if (isNaN(t) || t < 1) t = 2;
+  /* Vue annuelle : tout visible */
+  if (level === 4) return true;
 
-  /* Vue ensemble (level 1) : types 1 (règnes via RulersSection) → rien dans events */
-  if (level === 1) return false;   /* les règnes passent par buildRulersSection */
+  /* Vue siècle : niveau 1 uniquement */
+  if (level === 2) return t === 1;
 
-  /* Vue siècle (level 2) : types 2 (Siècle) dans la piste events */
-  if (level === 2) return t === 2;
-
-  /* Vue décennale (level 3) et annuelle (level 4) : selon filtre
-     detailLevel 1 = Siècle    → types 2
-     detailLevel 2 = Important → types 2+3
-     detailLevel 3 = Détaillé  → types 2+3+4
-     detailLevel 4 = Complet   → tous (2+3+4+5)        */
-  if (t === 1) return false;   /* règnes toujours via RulersSection */
-  if (detailLevel === 1) return t === 2;
-  if (detailLevel === 2) return t <= 3;
-  if (detailLevel === 3) return t <= 4;
-  return true;   /* Complet : tout */
+  /* Vue décennale : selon le filtre Affichage */
+  if (t === 1) return true;
+  if (t === 2) return detailLevel >= 1;
+  if (t === 3) return detailLevel >= 2;
+  if (t === 4) return detailLevel >= 3;
+  return true;
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
@@ -197,8 +142,6 @@ function loadEvents() {
           e.type  = Number(e.type) || 1;
           return e;
         });
-        /* Initialise les couleurs de toutes les séries dès le chargement */
-        getAllParcours();
         buildFilterBar();
         wzInit();
       } catch(err) {
@@ -288,7 +231,6 @@ function renderLevel(level, rangeStart) {
     currentDecade = Math.floor(rangeStart / 10) * 10;
     currentCentury = Math.floor(rangeStart / 100) * 100;
     start = rangeStart; end = rangeStart + 1; tickStep = 0.0833;
-
   }
 
   updateBreadcrumb();
@@ -346,12 +288,6 @@ function renderLevel(level, rangeStart) {
       evts.push(e);
     }
     container.appendChild(buildTrack(zone, evts, start, end, level));
-
-    /* Légende Art sous la piste — pleine largeur, hors du track-row */
-    if (zone === 'Art' && evts.length > 0) {
-      var artLegRow = buildArtLegendRow(evts, start, end);
-      if (artLegRow) container.appendChild(artLegRow);
-    }
 
     if (level >= 3) {
       var illusRow = buildIllusRow(zone, evts, start, end, level);
@@ -661,66 +597,7 @@ function buildTrack(zone, evts, start, end, level) {
     if (chip) track.appendChild(chip);
   }
   row.appendChild(track);
-
   return row;
-}
-
-/* Appelé depuis renderLevel pour insérer la légende Art SOUS la piste */
-function buildArtLegendRow(evts, start, end) {
-  var legend = buildArtLegend(evts, start, end);
-  return legend || null;
-}
-
-function buildArtLegend(evts, start, end) {
-  /* Détecte quelles régions sont présentes dans les événements Art visibles */
-  var present = {};
-  evts.forEach(function(e) {
-    var c = getArtColor(e);
-    if (c && c.regionName && !present[c.regionName]) {
-      present[c.regionName] = c;
-    }
-  });
-
-  var regions = Object.keys(present);
-  if (regions.length === 0) return null;
-
-  var legend = document.createElement('div');
-  legend.className = 'art-legend-bar';
-
-  /* Label */
-  var lbl = document.createElement('span');
-  lbl.className = 'art-legend-lbl';
-  lbl.textContent = 'Origines :';
-  legend.appendChild(lbl);
-
-  /* Une pastille par région détectée */
-  regions.sort().forEach(function(name) {
-    var col  = present[name];
-    var item = document.createElement('span');
-    item.className = 'art-legend-item';
-
-    var dot = document.createElement('span');
-    dot.className = 'art-legend-dot';
-    dot.style.background = col.bg;
-    item.appendChild(dot);
-    item.appendChild(document.createTextNode(name));
-    legend.appendChild(item);
-  });
-
-  /* Pastille pour les événements sans région identifiée */
-  var hasGeneric = evts.some(function(e) { return !getArtColor(e); });
-  if (hasGeneric) {
-    var item2 = document.createElement('span');
-    item2.className = 'art-legend-item';
-    var dot2 = document.createElement('span');
-    dot2.className = 'art-legend-dot';
-    dot2.style.background = '#A0522D';
-    item2.appendChild(dot2);
-    item2.appendChild(document.createTextNode('Autre'));
-    legend.appendChild(item2);
-  }
-
-  return legend;
 }
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
@@ -854,20 +731,18 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.style.overflow = 'visible';
   if (level > 1) {
     var MOIS_ABR_R = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
-    /* Date compacte intégrée dans le chip (pas au-dessus) pour ne pas masquer le texte voisin */
-    var dateCompact = evt.mois ? MOIS_ABR_R[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
+    var dateLblR = document.createElement('span');
+    dateLblR.className   = 'chip-date-label';
+    var lblTxtR = evt.mois ? MOIS_ABR_R[evt.mois - 1] + '\u00a0' + evt.date : '' + evt.date;
     if (evt.date_fin && evt.date_fin > evt.date) {
-      dateCompact += '–' + evt.date_fin;
+      var finTxtR = evt.mois_fin ? MOIS_ABR_R[evt.mois_fin - 1] + '\u00a0' + evt.date_fin : '' + evt.date_fin;
+      lblTxtR += '\u2013' + finTxtR;
     }
-    var maxC  = level === 4 ? 36 : level === 3 ? 26 : 18;
-    var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '…' : evt.titre;
-
-    /* Span date inline (petit, à gauche du titre) */
-    var dateInline = document.createElement('span');
-    dateInline.className = 'ruler-date-inline';
-    dateInline.textContent = dateCompact;
-    chip.appendChild(dateInline);
-    chip.appendChild(document.createTextNode(' ' + titre));
+    dateLblR.textContent = lblTxtR;
+    chip.appendChild(dateLblR);
+    var maxC = level === 4 ? 36 : level === 3 ? 26 : 18;
+    var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '\u2026' : evt.titre;
+    chip.appendChild(document.createTextNode(titre));
   }
   chip.title = '\u265b ' + evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
   if (evt.image && evt.image.trim()) {
@@ -911,18 +786,8 @@ function adaptFontSize(titre, basePx, maxChars) {
 
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var isShared = evt.zones && evt.zones.length > 1;
-
-  /* Couleur de série/parcours (priorité maximale) */
-  var serieCol = null;
-  var evtSeries = parseSeries(evt.serie);
-  if (evtSeries.length > 0 && parcoursColors[evtSeries[0]]) {
-    serieCol = hexToCol(parcoursColors[evtSeries[0]]);
-  }
-
-  /* Couleur géographique pour les événements Art */
-  var artCol = (!serieCol && zone === 'Art') ? getArtColor(evt) : null;
-  var col    = serieCol || artCol || COLORS[zone] || COLORS['France'];
-  var col2   = isShared && evt.zones.length >= 2 ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col) : col;
+  var col      = COLORS[zone] || COLORS['France'];
+  var col2     = isShared && evt.zones.length >= 2 ? (COLORS[evt.zones[evt.zones.indexOf(zone) !== 0 ? 0 : 1]] || col) : col;
   var isPeriod = evt.date_fin && evt.date_fin > evt.date;
   var type     = Number(evt.type) || 1;
   var chip     = document.createElement('div');
@@ -939,7 +804,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     if (level === 1) chip.classList.add('chip-period-sm');
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
-    chip.style.minHeight   = (ROW_H - 4) + 'px'; /* hauteur auto — permet retour ligne */
+    chip.style.height      = ROW_H + 'px';
     if (isShared) {
       chip.style.background  = 'repeating-linear-gradient(60deg,' + col.bg + 'CC 0px,' + col.bg + 'CC 8px,' + col2.bg + 'CC 8px,' + col2.bg + 'CC 16px)';
     } else {
@@ -952,9 +817,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       var titreP = evt.titre;
       var chipPct      = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
       var chipPxApprox = chipPct * (TRACK_PX - 90);
-      /* Calcule le nombre max de chars affichables sur 1 ligne */
-      var charPxW = 6.5;
-      var maxC    = Math.max(8, Math.floor(chipPxApprox / charPxW));
+      var maxC         = level === 3 ? 32 : 18;
       var MOIS_ABR_P = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
       var dateLblP = document.createElement('span');
       dateLblP.className   = 'chip-date-label';
@@ -966,15 +829,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLblP.textContent = lblTxtP;
       chip.appendChild(dateLblP);
 
-      if (chipPxApprox < 80 && level === 2) {
-        /* Vue siècle, chip étroit : étiquette flottante au-dessus de la barre */
-        chip.style.fontSize   = '0';      /* cache le texte dans la barre */
-        chip.style.overflow   = 'visible';
-        var floatLbl = document.createElement('span');
-        floatLbl.className   = 'chip-period-float-label';
-        floatLbl.textContent = titreP;
-        chip.appendChild(floatLbl);
-      } else if (chipPxApprox < 60) {
+      if (chipPxApprox < 60) {
         chip.style.fontSize     = '0.60rem';
         chip.style.whiteSpace   = 'nowrap';
         chip.style.textOverflow = 'ellipsis';
@@ -982,19 +837,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
         chip.appendChild(document.createTextNode(titreP));
       } else {
         chip.style.fontSize   = adaptFontSize(titreP, 0.78, maxC);
-        chip.style.lineHeight = '1.25';
-        if (chipPxApprox < 50) {
-          /* Chip très étroit : une ligne tronquée */
-          chip.style.whiteSpace   = 'nowrap';
-          chip.style.overflow     = 'hidden';
-          chip.style.textOverflow = 'ellipsis';
-        } else {
-          /* Chip assez large : retour à la ligne */
-          chip.style.whiteSpace = 'normal';
-          chip.style.overflow   = 'visible';
-          chip.style.wordBreak  = 'break-word';
-          chip.style.hyphens    = 'auto';
-        }
+        chip.style.whiteSpace = chipPxApprox < 100 ? 'nowrap' : 'normal';
         chip.appendChild(document.createTextNode(titreP));
       }
     }
@@ -1031,39 +874,13 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.style.background  = isShared ? 'repeating-linear-gradient(60deg,' + col.light + ' 0px,' + col.light + ' 7px,' + col2.light + ' 7px,' + col2.light + ' 14px)' : col.light;
       chip.style.color       = col.text;
       chip.style.borderColor = col.bg;
-      /* Largeur approximative du chip en px */
-      var chipPxM = chipW(evt, start, end, level) / 100 * TRACK_PX;
-      chip.style.lineHeight = '1.25';
-      chip.style.height     = 'auto';
-      chip.style.minHeight  = (ROW_H - 4) + 'px';
-
+      chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, 18);
+      chip.style.whiteSpace = 'normal';
       var dateLbl2 = document.createElement('span');
       dateLbl2.className   = 'chip-date-label';
       dateLbl2.textContent = evt.date;
       chip.appendChild(dateLbl2);
-
-      if (chipPxM < 40) {
-        /* Trop étroit : affiche juste un point, titre en tooltip */
-        chip.style.fontSize   = '0';
-        chip.style.overflow   = 'hidden';
-        chip.style.whiteSpace = 'nowrap';
-        /* Le titre est déjà dans chip.title — pas de texte affiché */
-      } else if (chipPxM < 100) {
-        /* Étroit : une ligne tronquée */
-        chip.style.fontSize     = adaptFontSize(evt.titre, 0.72, Math.floor(chipPxM / 6.5));
-        chip.style.whiteSpace   = 'nowrap';
-        chip.style.overflow     = 'hidden';
-        chip.style.textOverflow = 'ellipsis';
-        chip.appendChild(document.createTextNode(evt.titre));
-      } else {
-        /* Large : retour à la ligne autorisé */
-        chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, Math.floor(chipPxM / 6.5));
-        chip.style.whiteSpace = 'normal';
-        chip.style.wordBreak  = 'break-word';
-        chip.style.hyphens    = 'auto';
-        chip.style.overflow   = 'visible';
-        chip.appendChild(document.createTextNode(evt.titre));
-      }
+      chip.appendChild(document.createTextNode(evt.titre));
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
@@ -1142,11 +959,10 @@ function openModal(evt, zone) {
   var typeEl = document.getElementById('modal-type');
   if (typeEl) {
     var t = Number(evt.type) || 1;
-    typeEl.textContent = t === 1 ? '♛ Niveau 1 — Règne (toutes les vues)'
-                       : t === 2 ? '⬛ Niveau 2 — Siècle (vue siècle et inférieures)'
-                       : t === 3 ? '🔲 Niveau 3 — Important (décennale filtre Important+)'
-                       : t === 4 ? '▪ Niveau 4 — Détaillé (décennale filtre Détaillé+)'
-                       :           '· Niveau 5 — Complet (décennale filtre Complet)';
+    typeEl.textContent = t === 1 ? '⬛ Niveau 1 — visible dès la vue siècle'
+                       : t === 2 ? '🔲 Niveau 2 — vue décennale Essentiel'
+                       : t === 3 ? '▪ Niveau 3 — vue décennale Détaillé'
+                       :           '· Niveau 4 — vue décennale Complet';
     typeEl.className = 'modal-type-badge type' + t;
   }
 
@@ -1173,20 +989,20 @@ function openModal(evt, zone) {
   }
 
 /* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
-  var evtSeriesModal = parseSeries(evt.serie);
-  if (evtSeriesModal.length > 0) {
-    evtSeriesModal.forEach(function(serieName) {
-      var sequenceEvents = allEvents.filter(function(e) {
-        return parseSeries(e.serie).indexOf(serieName) !== -1;
-      }).sort(function(a, b) { return a.date - b.date; });
+  if (evt.serie) {
+    var sequenceEvents = allEvents.filter(function(e) {
+      return e.serie === evt.serie;
+    }).sort(function(a, b) {
+      return a.date - b.date;
+    });
 
-      if (sequenceEvents.length > 1) {
-        var seqContainer = document.createElement('div');
-        seqContainer.className = 'sequence-container';
-
-        var seqTitle = document.createElement('h4');
-        seqTitle.className = 'sequence-title';
-        seqTitle.textContent = 'Épisode de : ' + serieName;
+    if (sequenceEvents.length > 1) {
+      var seqContainer = document.createElement('div');
+      seqContainer.className = 'sequence-container';
+      
+      var seqTitle = document.createElement('h4');
+      seqTitle.className = 'sequence-title';
+      seqTitle.textContent = 'Épisode de : ' + evt.serie;
       seqContainer.appendChild(seqTitle);
 
       var seqList = document.createElement('ul');
@@ -1205,9 +1021,8 @@ function openModal(evt, zone) {
       });
 
       seqContainer.appendChild(seqList);
-        descEl.appendChild(seqContainer);
-      }
-    }); /* fin forEach series */
+      descEl.appendChild(seqContainer);
+    }
   }
   /* --- FIN DU BLOC SÉQUENCES --- */
   /* --- FIN DU BLOC SÉQUENCES --- */
@@ -1359,12 +1174,6 @@ function wzInit() {
   wzGoTo(1);
 }
 
-function wzScaleChanged(val) {
-  _wzScale = parseInt(val);
-  /* Si on est à l'étape 3, met à jour le select de période */
-  if (wzCurrentStep === 3) wzBuildPeriodSelect();
-}
-
 function wzGoTo(step) {
   wzCurrentStep = step;
   document.querySelectorAll('.wizard-step').forEach(function(el, i) {
@@ -1374,11 +1183,6 @@ function wzGoTo(step) {
     d.classList.toggle('active', i + 1 === step);
     d.classList.toggle('done',   i + 1 < step);
   });
-  if (step === 2) {
-    /* Synchronise _wzScale avec le radio coché à l'affichage */
-    var checkedScale = document.querySelector('input[name="wz-scale"]:checked');
-    if (checkedScale) _wzScale = parseInt(checkedScale.value);
-  }
   if (step === 3) wzBuildPeriodSelect();
   if (step === 4) {
     var scale = wzGetScale();
@@ -1393,6 +1197,11 @@ function wzNext() {
     var anyZone = Object.values(activeZones).some(Boolean);
     if (!anyZone) { alert('Sélectionnez au moins une zone ou saisissez un mot-clé.'); return; }
   }
+  /* Mémorise le scale quand on quitte l'étape 2 (avant que la div soit masquée) */
+  if (wzCurrentStep === 2) {
+    var r = document.querySelector('input[name="wz-scale"]:checked');
+    if (r) _wzScale = parseInt(r.value);
+  }
   var next = wzCurrentStep + 1;
   if (next > WZ_TOTAL_STEPS) { wzClose(); return; }
   wzGoTo(next);
@@ -1405,9 +1214,10 @@ function wzPrev() {
   wzGoTo(prev);
 }
 
-var _wzScale = 3; /* valeur par défaut : vue décennale */
+var _wzScale = 3; /* Mémorise le choix d'échelle — défaut décennale */
 
 function wzGetScale() {
+  /* Tente d'abord de lire le DOM, sinon utilise _wzScale */
   var r = document.querySelector('input[name="wz-scale"]:checked');
   if (r) _wzScale = parseInt(r.value);
   return _wzScale;
@@ -1457,17 +1267,11 @@ function wzClose() {
   var q = (document.getElementById('wz-search-input').value || '').trim();
   if (q) { wzApplySearch(q); return; }
   updateFilterCheckboxes();
-  var scale  = _wzScale;  /* utilise la valeur mémorisée directement */
-  /* Reconstruit le select si nécessaire pour garantir sa cohérence */
-  wzBuildPeriodSelect();
-  var periodEl = document.getElementById('wz-period-select');
-  var period = periodEl && periodEl.value ? parseInt(periodEl.value) : 1300;
-  /* DEBUG temporaire */
-  console.log('wzClose: scale=' + scale + ' _wzScale=' + _wzScale + ' period=' + period);
-  alert('DEBUG: scale=' + scale + ' | _wzScale=' + _wzScale + ' | period=' + period);
+  var scale  = _wzScale;  /* lu depuis la variable mémorisée */
+  var period = parseInt(document.getElementById('wz-period-select').value || '1300');
   if (scale === 3) {
     var dr = document.querySelector('input[name="wz-detail"]:checked');
-    detailLevel = dr ? parseInt(dr.value) : 2;
+    detailLevel = dr ? parseInt(dr.value) : 1;
     document.querySelectorAll('.detail-btn').forEach(function(b) {
       b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
     });
@@ -1477,502 +1281,6 @@ function wzClose() {
   currentYear    = scale === 4 ? period : null;
   renderLevel(scale, period);
 }
-
-/* ══════════ PARCOURS THÉMATIQUES ══════════ */
-var activeParcours = null;
-var parcoursColors = {};
-var PARCOURS_PALETTE = [
-  '#C0392B','#2471A3','#1E8449','#D68910','#7D3C98',
-  '#148F77','#BA4A00','#1A5276','#6D4C41','#2D6A4F'
-];
-
-/* Parse le champ serie (peut contenir plusieurs séries séparées par |) */
-function parseSeries(serie) {
-  if (!serie || !serie.trim()) return [];
-  return serie.split('|').map(function(s) { return s.trim(); }).filter(Boolean);
-}
-
-/* Convertit un code hex en objet couleur compatible avec COLORS */
-function hexToCol(hex) {
-  /* Décode R,G,B */
-  var r = parseInt(hex.slice(1,3),16);
-  var g = parseInt(hex.slice(3,5),16);
-  var b = parseInt(hex.slice(5,7),16);
-  /* Version claire : mélange avec blanc (85%) */
-  var lr = Math.round(r + (255-r)*0.82);
-  var lg = Math.round(g + (255-g)*0.82);
-  var lb = Math.round(b + (255-b)*0.82);
-  /* Texte sombre basé sur la couleur */
-  var dr = Math.round(r*0.45);
-  var dg = Math.round(g*0.45);
-  var db = Math.round(b*0.45);
-  return {
-    bg:    hex,
-    light: 'rgb('+lr+','+lg+','+lb+')',
-    text:  'rgb('+dr+','+dg+','+db+')'
-  };
-}
-
-function getAllParcours() {
-  var seen = {}, list = [];
-  allEvents.forEach(function(e) {
-    var tags = parseSeries(e.serie);
-    if (tags.length === 0) return;
-    tags.forEach(function(p) {
-      var key = p.trim();
-      if (!key || seen[key]) return;
-      seen[key] = true;
-      list.push(key);
-      if (!parcoursColors[key])
-        parcoursColors[key] = PARCOURS_PALETTE[(list.length - 1) % PARCOURS_PALETTE.length];
-    });
-  });
-  return list.sort();
-}
-
-function getParcoursSteps(p) {
-  return allEvents.filter(function(e) {
-    var tags = parseSeries(e.serie);
-    return tags.indexOf(p) !== -1;
-  }).sort(function(a, b) { return a.date !== b.date ? a.date - b.date : (a.mois||0) - (b.mois||0); });
-}
-
-function openParcoursPanel() {
-  var overlay = document.getElementById('parcours-overlay');
-  var listEl  = document.getElementById('parcours-list');
-  if (!overlay || !listEl) return;
-
-  var all = getAllParcours();
-  listEl.innerHTML = '';
-
-  if (all.length === 0) {
-    listEl.innerHTML = '<p class="parcours-empty">Aucun parcours défini dans les événements chargés.</p>';
-  } else {
-    all.forEach(function(p) {
-      var col   = parcoursColors[p];
-      var steps = getParcoursSteps(p);
-
-      /* Groupe les étapes par niveau */
-      var byLevel = {1:[], 2:[], 3:[], 4:[]};
-      steps.forEach(function(e) { (byLevel[e.type || 1] || byLevel[4]).push(e); });
-
-      var btn = document.createElement('button');
-      btn.className = 'parcours-item' + (activeParcours === p ? ' active' : '');
-      btn.style.borderLeftColor = col;
-      if (activeParcours === p) btn.style.background = col + '18';
-      btn.innerHTML =
-        '<span class="parcours-dot" style="background:' + col + '"></span>' +
-        '<span class="parcours-name">' + p.replace(/_/g,' ') + '</span>' +
-        '<span class="parcours-count">' + steps.length + ' étape' + (steps.length > 1 ? 's' : '') + '</span>';
-
-      btn.addEventListener('click', (function(pk) {
-        return function() {
-          closeParcoursPanel();
-          activeParcours === pk ? clearParcours() : setParcours(pk);
-        };
-      })(p));
-      listEl.appendChild(btn);
-    });
-  }
-
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeParcoursPanel() {
-  var overlay = document.getElementById('parcours-overlay');
-  if (overlay) overlay.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function setParcours(p) {
-  activeParcours = p;
-  updateParcoursBtn();
-
-  /* 0. Sauvegarde les zones actives actuelles pour restauration */
-  _savedZones = {};
-  for (var zz in activeZones) _savedZones[zz] = activeZones[zz];
-
-  /* 1. Collecte les zones impliquées dans ce parcours */
-  var parcoursZones = {};
-  allEvents.forEach(function(e) {
-    if (parseSeries(e.serie).indexOf(p) === -1) return;
-    (e.zones || []).forEach(function(z) { parcoursZones[z] = true; });
-  });
-
-  /* 2. Active uniquement ces zones */
-  for (var z in activeZones) activeZones[z] = false;
-  for (var z in parcoursZones) activeZones[z] = true;
-  updateFilterCheckboxes();
-
-  /* 3. Trouve la 1re étape et navigue vers sa décennie */
-  var steps = getParcoursSteps(p);
-  var first = steps[0];
-  if (first) {
-    var dec = Math.floor(first.date / 10) * 10;
-    currentDecade  = dec;
-    currentCentury = Math.floor(dec / 100) * 100;
-    currentYear    = null;
-    currentLevel   = 3;
-    renderLevel(3, dec);
-  } else {
-    refreshFrise();
-  }
-
-  /* 4. Barre de navigation + panneau latéral */
-  updateParcoursNavBar(p);
-  showParcoursResults(p);
-
-  /* 5. Met à jour les boutons de vue */
-  updateNavButtons();
-  updateDetailBar();
-}
-
-var _savedZones = null; /* zones sauvegardées avant activation parcours */
-
-function clearParcours() {
-  activeParcours = null;
-  updateParcoursBtn();
-
-  /* Restaure les zones précédentes si elles ont été sauvegardées */
-  if (_savedZones) {
-    for (var z in activeZones) activeZones[z] = !!_savedZones[z];
-    _savedZones = null;
-    updateFilterCheckboxes();
-  }
-
-  refreshFrise();
-  var bar = document.getElementById('parcours-nav-bar');
-  if (bar) bar.style.display = 'none';
-  var panel = document.getElementById('search-results-panel');
-  if (panel) panel.style.display = 'none';
-  updateNavButtons();
-  updateDetailBar();
-}
-
-function updateParcoursBtn() {
-  var btn = document.getElementById('btn-parcours');
-  if (!btn) return;
-  if (activeParcours) {
-    var col = parcoursColors[activeParcours] || '#888';
-    btn.style.cssText = 'background:' + col + '22;border-color:' + col + ';color:' + col + ';font-weight:700;';
-    btn.textContent   = '◆ ' + activeParcours.replace(/_/g,' ') + ' ×';
-  } else {
-    btn.style.cssText = '';
-    btn.textContent   = '◆ Parcours';
-  }
-}
-
-function showParcoursResults(p) {
-  var panel   = document.getElementById('search-results-panel');
-  var listEl  = document.getElementById('search-results-list');
-  var titleEl = document.getElementById('sr-title');
-  if (!panel || !listEl) return;
-
-  var col   = parcoursColors[p] || '#C0392B';
-  var steps = getParcoursSteps(p);
-
-  if (titleEl) {
-    titleEl.innerHTML =
-      '<span style="color:' + col + '">◆ ' + p.replace(/_/g,' ') + '</span>' +
-      ' — ' + steps.length + ' étape' + (steps.length > 1 ? 's' : '');
-  }
-
-  /* Bouton "Voir sur la frise" dans le header */
-  var srHeader = document.querySelector('.sr-header');
-  if (srHeader) {
-    var oldBtn = srHeader.querySelector('.sr-frise-btn');
-    if (oldBtn) oldBtn.remove();
-    var friseBtn = document.createElement('button');
-    friseBtn.className   = 'sr-frise-btn';
-    friseBtn.textContent = 'Voir sur la frise →';
-    friseBtn.title       = 'Fermer ce panneau et naviguer sur la frise';
-    friseBtn.onclick = function() {
-      /* Ferme le panneau mais garde le parcours actif */
-      var panel = document.getElementById('search-results-panel');
-      if (panel) panel.style.display = 'none';
-      document.body.classList.remove('parcours-panel-open');
-    };
-    /* Insère avant le bouton Fermer */
-    var closeBtn = srHeader.querySelector('.sr-close');
-    if (closeBtn) srHeader.insertBefore(friseBtn, closeBtn);
-    else srHeader.appendChild(friseBtn);
-  }
-
-  listEl.innerHTML = '';
-  if (steps.length === 0) {
-    listEl.innerHTML = '<p class="sr-empty">Aucune étape trouvée.</p>';
-    panel.style.display = 'flex';
-    return;
-  }
-
-  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
-                  'jul.','aoû.','sep.','oct.','nov.','déc.'];
-
-  /* Config visuelle par niveau :
-     point + opacité + taille de fonte + couleur texte */
-  var LVL = {
-    1: { dot: 10, opacity: 1.0,  fs: '14px', fw: '500', tc: 'var(--color-text-primary)',   indent: 0  },
-    2: { dot: 7,  opacity: 0.75, fs: '13px', fw: '400', tc: 'var(--color-text-primary)',   indent: 0  },
-    3: { dot: 5,  opacity: 0.45, fs: '12px', fw: '400', tc: 'var(--color-text-secondary)', indent: 0  },
-    4: { dot: 3,  opacity: 0.28, fs: '11px', fw: '400', tc: 'var(--color-text-tertiary)',  indent: 0  }
-  };
-
-  /* Ligne verticale contenante */
-  var timeline = document.createElement('div');
-  timeline.style.cssText =
-    'position:relative;padding-left:22px;' +
-    'border-left:2px solid ' + col + '33;' +
-    'display:flex;flex-direction:column;gap:2px;';
-
-  steps.forEach(function(evt, idx) {
-    var lvl     = Math.min(Math.max(parseInt(evt.type) || 1, 1), 4);
-    var cfg     = LVL[lvl];
-    var evtCol  = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
-    if (evt.zones && evt.zones.indexOf('Art') !== -1) {
-      var artC = getArtColor(evt);
-      if (artC) evtCol = artC;
-    }
-
-    var dateStr = evt.mois ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
-    if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
-
-    var row = document.createElement('div');
-    row.style.cssText =
-      'display:flex;align-items:flex-start;gap:8px;' +
-      'position:relative;padding:3px 0;cursor:pointer;' +
-      'border-radius:5px;transition:background 0.12s;';
-    row.addEventListener('mouseenter', function() { this.style.background = 'var(--color-background-secondary)'; });
-    row.addEventListener('mouseleave', function() { this.style.background = ''; });
-
-    /* Point sur la ligne */
-    var dot = document.createElement('span');
-    var dotSz = cfg.dot;
-    var dotLeft = -22 - dotSz / 2 + 1;
-    dot.style.cssText =
-      'position:absolute;' +
-      'left:' + dotLeft + 'px;' +
-      'top:' + (8 - dotSz / 2) + 'px;' +
-      'width:' + dotSz + 'px;height:' + dotSz + 'px;' +
-      'border-radius:50%;' +
-      'background:' + col + ';' +
-      'opacity:' + cfg.opacity + ';' +
-      'border:' + (lvl <= 2 ? '1.5px solid var(--color-background-primary)' : 'none') + ';' +
-      'flex-shrink:0;';
-    row.appendChild(dot);
-
-    /* Date */
-    var dateEl = document.createElement('span');
-    dateEl.style.cssText =
-      'font-size:10px;color:var(--color-text-tertiary);' +
-      'min-width:38px;text-align:right;padding-top:2px;flex-shrink:0;';
-    dateEl.textContent = dateStr;
-    row.appendChild(dateEl);
-
-    /* Pastille zone */
-    var zoneDot = document.createElement('span');
-    zoneDot.style.cssText =
-      'width:7px;height:7px;border-radius:50%;' +
-      'background:' + evtCol.bg + ';flex-shrink:0;margin-top:5px;';
-    row.appendChild(zoneDot);
-
-    /* Corps texte */
-    var body = document.createElement('span');
-    body.style.cssText = 'display:flex;flex-direction:column;flex:1;min-width:0;';
-
-    var titre = document.createElement('span');
-    titre.style.cssText =
-      'font-size:' + cfg.fs + ';font-weight:' + cfg.fw + ';' +
-      'color:' + cfg.tc + ';font-style:italic;' +
-      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;';
-    titre.textContent = evt.titre;
-    body.appendChild(titre);
-
-    if (evt.zones && evt.zones.length) {
-      var zones = document.createElement('span');
-      zones.style.cssText = 'font-size:10px;color:var(--color-text-tertiary);';
-      zones.textContent = evt.zones.join(', ');
-      body.appendChild(zones);
-    }
-    row.appendChild(body);
-
-    /* Miniature si image */
-    if (evt.image && evt.image.trim()) {
-      var thumb = document.createElement('img');
-      thumb.src = evt.image; thumb.alt = '';
-      thumb.style.cssText =
-        'width:32px;height:38px;object-fit:cover;object-position:top;' +
-        'border-radius:3px;border:0.5px solid var(--color-border-tertiary);flex-shrink:0;';
-      row.appendChild(thumb);
-    }
-
-    /* Clic simple → navigue sur la frise + surligne l'étape */
-    row.addEventListener('click', (function(e, stepIdx) {
-      return function() {
-        /* Surligne cet item */
-        timeline.querySelectorAll('.parcours-row-active').forEach(function(r) {
-          r.classList.remove('parcours-row-active');
-          r.style.background = '';
-        });
-        this.classList.add('parcours-row-active');
-        this.style.background = 'rgba(154,107,26,0.12)';
-
-        /* Met à jour le select de la barre */
-        var sel = document.querySelector('#parcours-nav-bar .pnav-select');
-        if (sel) sel.value = stepIdx;
-
-        /* Navigue vers la décennie de cet événement */
-        var dec = Math.floor(e.date / 10) * 10;
-        currentDecade  = dec;
-        currentCentury = Math.floor(dec / 100) * 100;
-        currentYear    = null;
-        renderLevel(3, dec);
-        updateNavButtons();
-      };
-    })(evt, idx));
-
-    /* Double-clic → ouvre la fiche modale */
-    row.addEventListener('dblclick', (function(e) {
-      return function(ev) { ev.stopPropagation(); openModal(e, e.zones && e.zones[0] || ZONES[0]); };
-    })(evt));
-
-    timeline.appendChild(row);
-  });
-
-  listEl.appendChild(timeline);
-  panel.style.display = 'flex';
-}
-
-
-function closeSearchResults() {
-  var panel   = document.getElementById('search-results-panel');
-  var countEl = document.getElementById('search-count');
-  if (panel)   panel.style.display = 'none';
-  document.body.classList.remove('parcours-panel-open');
-  if (countEl) countEl.textContent = '';
-  searchTerm = '';
-  var inp = document.getElementById('search-input');
-  if (inp) inp.value = '';
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = 'none';
-}
-
-
-/* ── Barre de navigation parcours (select + flèches) ── */
-function updateParcoursNavBar(p) {
-  var bar = document.getElementById('parcours-nav-bar');
-  if (!bar) return;
-
-  var steps = getParcoursSteps(p);
-  var col   = parcoursColors[p] || '#C0392B';
-
-  /* Titre */
-  var titleEl = bar.querySelector('.pnav-title');
-  if (titleEl) {
-    titleEl.innerHTML = '<span style="color:' + col + '">◆ ' +
-      p.replace(/_/g,' ') + '</span> &mdash; ' +
-      steps.length + ' étape' + (steps.length > 1 ? 's' : '');
-  }
-
-  /* Select déroulant */
-  var sel = bar.querySelector('.pnav-select');
-  if (sel) {
-    sel.innerHTML = '';
-    var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
-                    'jul.','aoû.','sep.','oct.','nov.','déc.'];
-    steps.forEach(function(evt, i) {
-      var opt = document.createElement('option');
-      var dateStr = evt.mois ? MOIS_ABR[evt.mois-1]+' '+evt.date : ''+evt.date;
-      opt.value       = i;
-      opt.textContent = (i+1) + '. ' + dateStr + ' — ' + evt.titre;
-      sel.appendChild(opt);
-    });
-    sel.onchange = function() {
-      var idx = parseInt(this.value);
-      parcoursGoToStep(steps, idx);
-    };
-
-    /* Bouton "Ouvrir la fiche" à côté du select */
-    var oldFicheBtn = bar.querySelector('.pnav-fiche-btn');
-    if (oldFicheBtn) oldFicheBtn.remove();
-    var ficheBtn = document.createElement('button');
-    ficheBtn.className   = 'pnav-fiche-btn';
-    ficheBtn.textContent = 'Fiche ↗';
-    ficheBtn.title       = 'Ouvrir la fiche de l’étape sélectionnée';
-    ficheBtn.style.cssText = 'font-size:0.78rem;padding:0.2rem 0.65rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;white-space:nowrap;';
-    ficheBtn.onclick = function() {
-      var selEl = bar.querySelector('.pnav-select');
-      if (!selEl) return;
-      var stepIdx = parseInt(selEl.value);
-      var stepsNow = getParcoursSteps(activeParcours);
-      if (stepsNow[stepIdx]) {
-        var e = stepsNow[stepIdx];
-        openModal(e, e.zones && e.zones[0] || ZONES[0]);
-      }
-    };
-
-    /* Bouton "Frise" : navigue vers l'étape sélectionnée */
-    var oldFriseBtn2 = bar.querySelector('.pnav-frise-btn');
-    if (oldFriseBtn2) oldFriseBtn2.remove();
-    var friseBtn2 = document.createElement('button');
-    friseBtn2.className   = 'pnav-frise-btn';
-    friseBtn2.textContent = 'Frise ↓';
-    friseBtn2.title       = 'Centrer la frise sur l’étape sélectionnée';
-    friseBtn2.style.cssText = 'font-size:0.78rem;padding:0.2rem 0.65rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;white-space:nowrap;';
-    friseBtn2.onclick = function() {
-      var selEl = bar.querySelector('.pnav-select');
-      if (!selEl) return;
-      var stepIdx = parseInt(selEl.value);
-      var stepsNow = getParcoursSteps(activeParcours);
-      parcoursGoToStep(stepsNow, stepIdx);
-    };
-
-    /* Insère après le select : Frise | Fiche */
-    sel.parentNode.insertBefore(friseBtn2, sel.nextSibling);
-    sel.parentNode.insertBefore(ficheBtn, friseBtn2.nextSibling);
-  }
-
-  bar.style.display = 'flex';
-  bar.style.borderColor = col;
-}
-
-function navigateToEvent(evt) {
-  /* Navigue vers la décennie contenant cet événement */
-  var dec = Math.floor(evt.date / 10) * 10;
-  currentDecade  = dec;
-  currentCentury = Math.floor(dec / 100) * 100;
-  currentYear    = null;
-  currentLevel   = 3;
-  renderLevel(3, dec);
-  updateNavButtons();
-  updateDetailBar();
-}
-
-function parcoursGoToStep(steps, idx) {
-  if (!steps || idx < 0 || idx >= steps.length) return;
-  var evt = steps[idx];
-
-  /* Met à jour le select */
-  var sel = document.querySelector('#parcours-nav-bar .pnav-select');
-  if (sel) sel.value = idx;
-
-  /* Met à jour la liste latérale */
-  var items = document.querySelectorAll('#search-results-list .sr-item');
-  items.forEach(function(item, i) { item.classList.toggle('sr-item-active', i === idx); });
-
-  /* Navigue vers la période contenant l'étape */
-  navigateToEvent(evt);
-}
-
-function parcoursNavStep(dir) {
-  if (!activeParcours) return;
-  var steps = getParcoursSteps(activeParcours);
-  var sel   = document.querySelector('#parcours-nav-bar .pnav-select');
-  var cur   = sel ? parseInt(sel.value) : 0;
-  var next  = Math.max(0, Math.min(steps.length - 1, cur + dir));
-  parcoursGoToStep(steps, next);
-}
-
 
 function goHome() {
   for (var z in activeZones) activeZones[z] = false;
@@ -2058,23 +1366,10 @@ function zonesModalAll(val) {
 }
 
 function goLevel(level) {
-  if (level === 1) {
-    renderLevel(1);
-  } else if (level === 2 && currentCentury !== null) {
-    renderLevel(2, currentCentury);
-  } else if (level === 3) {
-    var dec = currentDecade !== null ? currentDecade : currentCentury;
-    if (dec === null) dec = 1300;
-    currentDecade = dec;
-    renderLevel(3, dec);
-  } else if (level === 4) {
-    /* Déduit l'année de départ depuis currentYear, currentDecade ou currentCentury */
-    var yr = currentYear
-          || (currentDecade  !== null ? currentDecade  : null)
-          || (currentCentury !== null ? currentCentury : 1300);
-    currentYear = yr;
-    renderLevel(4, yr);
-  }
+  if      (level === 1)                             renderLevel(1);
+  else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
+  else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
+  else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
 }
 
 function setDetailLevel(n) {
@@ -2090,16 +1385,9 @@ function updateDetailBar() {
   var bar  = document.getElementById('detail-bar');
   var hint = document.getElementById('detail-hint');
   if (!bar) return;
-  /* Visible en vue décennale ET annuelle */
-  bar.style.display = (currentLevel === 3 || currentLevel === 4) ? 'flex' : 'none';
+  bar.style.display = (currentLevel === 3) ? 'flex' : 'none';
   if (hint) {
-    var labels = {
-      1: '— type 2 (Siècle)',
-      2: '— types 2–3 (Important)',
-      3: '— types 2–4 (Détaillé)',
-      4: '— tous les types (Complet)'
-    };
-    hint.textContent = labels[detailLevel] || '';
+    hint.textContent = detailLevel === 1 ? '— niveaux 1 & 2' : detailLevel === 2 ? '— niveaux 1, 2 & 3' : '— tous les niveaux';
   }
 }
 
@@ -2139,17 +1427,15 @@ function updateBreadcrumb() {
 }
 
 function updateNavButtons() {
-  /* Active le bouton de vue correspondant au niveau courant */
-  [1, 2, 3, 4].forEach(function(lvl) {
-    var btn = document.getElementById('btn-level' + lvl);
-    if (!btn) return;
-    btn.classList.toggle('active', lvl === currentLevel);
-    if (lvl === 2) btn.disabled = (currentCentury === null);
-    /* Décennie activable si on a un siècle (on entre sur la 1re décennie) */
-    if (lvl === 3) btn.disabled = (currentCentury === null && currentDecade === null);
-    /* Annuelle activable si on a une décennie ou un siècle */
-    if (lvl === 4) btn.disabled = (currentCentury === null && currentDecade === null);
+  document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
+    btn.classList.toggle('active', i + 1 === currentLevel);
+    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade  === null) || (i === 3 && currentDecade  === null);
   });
+  var btn4 = document.getElementById('btn-level4');
+  if (btn4) {
+    btn4.disabled = (currentDecade === null);
+    btn4.classList.toggle('active', currentLevel === 4);
+  }
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
   var lbl  = document.getElementById('decade-label');
@@ -2199,131 +1485,141 @@ var savedCurrentCentury = null;
 var savedCurrentDecade  = null;
 var savedCurrentYear    = null;
 
-/* ══════════ RECHERCHE EN LISTE ══════════ */
+function onSearch(val) {
+  searchTerm = (val || '').trim().toLowerCase();
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
+  if (searchTerm) {
+    if (!savedActiveZones) {
+      savedActiveZones    = {};
+      for (var z in activeZones) savedActiveZones[z] = activeZones[z];
+      savedCurrentLevel   = currentLevel;
+      savedCurrentCentury = currentCentury;
+      savedCurrentDecade  = currentDecade;
+      savedCurrentYear    = currentYear;
+    }
+    var matches = allEvents.filter(function(e) { return eventMatchesSearch(e); });
+    if (matches.length === 0) {
+      updateFilterCheckboxes();
+      refreshFrise();
+      applySearch();
+      return;
+    }
+    ZONES.forEach(function(z) {
+      activeZones[z] = matches.some(function(e) { return e.zones.indexOf(z) !== -1; });
+    });
+    updateFilterCheckboxes();
+    var maxType = 1;
+    matches.forEach(function(e) { var t = e.type || 1; if (t > maxType) maxType = t; });
+    var neededLevel = maxType;
+    var earliest = matches.reduce(function(min, e) { return e.date < min ? e.date : min; }, matches[0].date);
+    if (neededLevel === 1) {
+      renderLevel(1);
+    } else if (neededLevel === 2) {
+      currentCentury = Math.floor(earliest / 100) * 100;
+      renderLevel(2, currentCentury);
+    } else if (neededLevel === 3) {
+      currentCentury = Math.floor(earliest / 100) * 100;
+      currentDecade  = Math.floor(earliest / 10) * 10;
+      renderLevel(3, currentDecade);
+    } else {
+      currentCentury = Math.floor(earliest / 100) * 100;
+      currentDecade  = Math.floor(earliest / 10) * 10;
+      currentYear    = earliest;
+      renderLevel(4, earliest);
+    }
+  } else {
+    if (savedActiveZones) {
+      activeZones = savedActiveZones;
+      savedActiveZones = null;
+      if (savedCurrentLevel !== null) {
+        currentLevel   = savedCurrentLevel;
+        currentCentury = savedCurrentCentury;
+        currentDecade  = savedCurrentDecade;
+        currentYear    = savedCurrentYear;
+        savedCurrentLevel = null;
+        if      (currentLevel === 1) renderLevel(1);
+        else if (currentLevel === 2) renderLevel(2, currentCentury);
+        else if (currentLevel === 3) renderLevel(3, currentDecade);
+        else                         renderLevel(4, currentYear);
+      } else {
+        updateFilterCheckboxes();
+        refreshFrise();
+      }
+    }
+  }
+  applySearch();
+}
+
+function goToMatch(idx) {
+  if (matchedIds.length === 0) return;
+  idx = ((idx % matchedIds.length) + matchedIds.length) % matchedIds.length;
+  currentMatchIdx = idx;
+  var id  = matchedIds[idx];
+  var evt = allEvents.find(function(e) { return e.id === id; });
+  if (!evt) return;
+
+  var date = evt.date;
+  if (currentLevel === 4) {
+    if (date !== currentYear) { currentYear = date; renderLevel(4, date); }
+  } else if (currentLevel === 3) {
+    var dec = Math.floor(date / 10) * 10;
+    if (dec !== currentDecade) { currentDecade = dec; currentCentury = Math.floor(dec/100)*100; renderLevel(3, dec); }
+  } else if (currentLevel === 2) {
+    var cent = Math.floor(date / 100) * 100;
+    if (cent !== currentCentury) { currentCentury = cent; renderLevel(2, cent); }
+  }
+
+  applySearch();
+  setTimeout(function() {
+    var chip = document.querySelector('.evt-chip[data-evt-id="' + id + '"]');
+    if (chip) chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 150);
+}
+
+function prevMatch() { goToMatch(currentMatchIdx - 1); }
+function nextMatch() { goToMatch(currentMatchIdx + 1); }
+
+function clearSearch() {
+  var input = document.getElementById('search-input');
+  if (input) input.value = '';
+  searchTerm = '';
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+  var countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = '';
+  matchedIds = []; currentMatchIdx = -1;
+  if (savedActiveZones) {
+    activeZones = savedActiveZones;
+    savedActiveZones = null;
+    if (savedCurrentLevel !== null) {
+      currentLevel   = savedCurrentLevel;
+      currentCentury = savedCurrentCentury;
+      currentDecade  = savedCurrentDecade;
+      currentYear    = savedCurrentYear;
+      savedCurrentLevel = null;
+      if      (currentLevel === 1) renderLevel(1);
+      else if (currentLevel === 2) renderLevel(2, currentCentury);
+      else if (currentLevel === 3) renderLevel(3, currentDecade);
+      else                         renderLevel(4, currentYear);
+    } else {
+      updateFilterCheckboxes();
+      refreshFrise();
+    }
+  }
+  applySearch();
+}
 
 function eventMatchesSearch(evt) {
   if (!searchTerm) return true;
-  var q = searchTerm.toLowerCase();
   var haystack = [
     evt.titre || '',
     evt.description || '',
     evt.sources || '',
     (evt.zones || []).join(' ')
   ].join(' ').toLowerCase();
-  return haystack.indexOf(q) !== -1;
+  return haystack.indexOf(searchTerm.toLowerCase()) !== -1;
 }
-
-function showSearchResults() {
-  var panel   = document.getElementById('search-results-panel');
-  var listEl  = document.getElementById('search-results-list');
-  var titleEl = document.getElementById('sr-title');
-  var countEl = document.getElementById('search-count');
-  if (!panel || !listEl) return;
-
-  var results = allEvents
-    .filter(function(e) { return eventMatchesSearch(e); })
-    .sort(function(a, b) {
-      return a.date !== b.date ? a.date - b.date : (a.mois || 0) - (b.mois || 0);
-    });
-
-  if (countEl) countEl.textContent = results.length
-    ? results.length + ' résultat' + (results.length > 1 ? 's' : '')
-    : 'Aucun résultat';
-
-  if (titleEl) titleEl.textContent = searchTerm
-    ? 'Recherche : « ' + searchTerm + ' »'
-    : 'Résultats';
-
-  var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.',
-                  'jul.','aoû.','sep.','oct.','nov.','déc.'];
-  var LEVEL_LABELS = {
-    1: 'Niveau 1 — Règne',
-    2: 'Niveau 2 — Siècle',
-    3: 'Niveau 3 — Important',
-    4: 'Niveau 4 — Détaillé',
-    5: 'Niveau 5 — Complet'
-  };
-
-  listEl.innerHTML = '';
-
-  if (results.length === 0) {
-    listEl.innerHTML = '<p class="sr-empty">Aucun événement ne correspond.</p>';
-  } else {
-    /* Groupe par niveau */
-    var byLevel = { 1:[], 2:[], 3:[], 4:[], 5:[] };
-    results.forEach(function(e) {
-      var t = e.regne ? 1 : (parseInt(e.type) || 2);
-      (byLevel[t] || byLevel[2]).push(e);
-    });
-
-    [1, 2, 3, 4, 5].forEach(function(lvl) {
-      var items = byLevel[lvl];
-      if (!items.length) return;
-
-      var header = document.createElement('div');
-      header.className = 'sr-level-header';
-      header.textContent = LEVEL_LABELS[lvl] + ' (' + items.length + ')';
-      listEl.appendChild(header);
-
-      items.forEach(function(evt) {
-        var evtCol = COLORS[evt.zones && evt.zones[0]] || COLORS['France'];
-        if (evt.zones && evt.zones.indexOf('Art') !== -1) {
-          var artC = getArtColor(evt);
-          if (artC) evtCol = artC;
-        }
-        var dateStr = evt.mois
-          ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date
-          : '' + evt.date;
-        if (evt.date_fin && evt.date_fin > evt.date) dateStr += '–' + evt.date_fin;
-
-        var item = document.createElement('div');
-        item.className = 'sr-item sr-level-' + lvl;
-
-        item.innerHTML =
-          '<span class="sr-date">' + dateStr + '</span>' +
-          '<span class="sr-dot" style="background:' + evtCol.bg + '"></span>' +
-          '<span class="sr-body">' +
-            '<span class="sr-titre">' + evt.titre + '</span>' +
-            '<span class="sr-zones">' + (evt.zones || []).join(', ') + '</span>' +
-          '</span>';
-
-        if (evt.image && evt.image.trim()) {
-          var thumb = document.createElement('img');
-          thumb.src = evt.image;
-          thumb.alt = evt.legende || '';
-          thumb.className = 'sr-thumb';
-          item.appendChild(thumb);
-        }
-
-        item.style.cursor = 'pointer';
-        item.addEventListener('click', (function(e) {
-          return function() { openModal(e, e.zones && e.zones[0] || ZONES[0]); };
-        })(evt));
-
-        listEl.appendChild(item);
-      });
-    });
-  }
-
-  panel.style.display = 'flex';
-  document.body.classList.add('parcours-panel-open');
-}
-
-
-function onSearch(val) {
-  searchTerm = (val || '').trim();
-  var clearBtn = document.getElementById('search-clear');
-  if (clearBtn) clearBtn.style.display = searchTerm ? 'inline-block' : 'none';
-  if (searchTerm) {
-    showSearchResults();
-  } else {
-    closeSearchResults();
-  }
-}
-
-
-
-function clearSearch() { closeSearchResults(); }
 
 function applySearch() {
   var chips   = document.querySelectorAll('.evt-chip');
