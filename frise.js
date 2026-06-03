@@ -1374,6 +1374,11 @@ function wzGoTo(step) {
     d.classList.toggle('active', i + 1 === step);
     d.classList.toggle('done',   i + 1 < step);
   });
+  if (step === 2) {
+    /* Synchronise _wzScale avec le radio coché à l'affichage */
+    var checkedScale = document.querySelector('input[name="wz-scale"]:checked');
+    if (checkedScale) _wzScale = parseInt(checkedScale.value);
+  }
   if (step === 3) wzBuildPeriodSelect();
   if (step === 4) {
     var scale = wzGetScale();
@@ -1452,8 +1457,11 @@ function wzClose() {
   var q = (document.getElementById('wz-search-input').value || '').trim();
   if (q) { wzApplySearch(q); return; }
   updateFilterCheckboxes();
-  var scale  = wzGetScale();
-  var period = parseInt(document.getElementById('wz-period-select').value || '1300');
+  var scale  = _wzScale;  /* utilise la valeur mémorisée directement */
+  /* Reconstruit le select si nécessaire pour garantir sa cohérence */
+  wzBuildPeriodSelect();
+  var periodEl = document.getElementById('wz-period-select');
+  var period = periodEl && periodEl.value ? parseInt(periodEl.value) : 1300;
   /* DEBUG temporaire */
   console.log('wzClose: scale=' + scale + ' _wzScale=' + _wzScale + ' period=' + period);
   alert('DEBUG: scale=' + scale + ' | _wzScale=' + _wzScale + ' | period=' + period);
