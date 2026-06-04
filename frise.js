@@ -655,14 +655,13 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
-  var MARGIN = 14;
   var card = document.querySelector('.frise-card');
   if (!card) return;
   card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
   container.querySelectorAll('.frise-bgf-wrap').forEach(function(el) { el.remove(); });
 
-  /* Candidates : images visibles à ce niveau, dans la plage, dans une zone active,
-     ET PAS déjà affichées en vignette sous une piste (évite le doublon) */
+  /* Candidates : images visibles, dans la plage, zone active,
+     PAS déjà affichées en vignette (anti-doublon) */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
     if (_shownImages[e.image]) return false;
@@ -673,108 +672,128 @@ function injectBackgroundImages(container, start, end, level) {
   });
   if (candidates.length === 0) return;
 
-  /* Rectangles occupés par les chips ET par les vignettes (illus-band) */
   var cr = container.getBoundingClientRect();
-  var occupied = [];
-  container.querySelectorAll('.evt-chip, .illus-wrap, .rulers-section').forEach(function(el) {
-    var r = el.getBoundingClientRect();
-    if (r.width === 0 && r.height === 0) return;
-    occupied.push({
-      x0: r.left  - cr.left - MARGIN,
-      x1: r.right - cr.left + MARGIN,
-      y0: r.top   - cr.top  - MARGIN,
-      y1: r.bottom- cr.top  + MARGIN
-    });
-  });
-
   var friseW = container.offsetWidth  || TRACK_PX;
   var friseH = container.offsetHeight || 200;
   var labelW = 90;
 
-  /* Détecte les colonnes (bandes verticales) entièrement libres de chips */
-  var COL = 14;                       /* résolution d'échantillonnage en px */
-  var freeCols = [];
-  for (var x = labelW; x + COL <= friseW - 4; x += COL) {
-    var colFree = true;
-    for (var oi = 0; oi < occupied.length; oi++) {
-      var o = occupied[oi];
-      /* la colonne chevauche-t-elle un chip horizontalement ? */
-      if (x + COL > o.x0 && x < o.x1) { colFree = false; break; }
-    }
-    freeCols.push({ x: x, free: colFree });
-  }
-
-  /* Regroupe les colonnes libres consécutives en plages (gaps) */
-  var gaps = [];
-  var cur = null;
-  freeCols.forEach(function(c) {
-    if (c.free) {
-      if (!cur) cur = { x0: c.x, x1: c.x + COL };
-      else cur.x1 = c.x + COL;
-    } else if (cur) { gaps.push(cur); cur = null; }
+  /* Rectangles occupés par TOUT le texte/contenu (chips, vignettes, règnes, légendes) */
+  var occupied = [];
+  container.querySelectorAll('.evt-chip, .illus-wrap, .chip-date-label, .ruler-chip').forEach(function(el) {
+    var r = el.getBoundingClientRect();
+    if (r.width === 0 && r.height === 0) return;
+    occupied.push({
+      x0: r.left   - cr.left,
+      x1: r.right  - cr.left,
+      y0: r.top    - cr.top,
+      y1: r.bottom - cr.top
+    });
   });
-  if (cur) gaps.push(cur);
 
-  /* Ne garde que les vrais espaces vides (largeur minimale) */
-  var MIN_GAP_W = 70;
-  gaps = gaps.filter(function(g) { return (g.x1 - g.x0) >= MIN_GAP_W; });
-  if (gaps.length === 0) return;
-
-  /* Trie les gaps du plus large au plus étroit (priorité aux grands espaces) */
-  gaps.sort(function(a, b) { return (b.x1 - b.x0) - (a.x1 - a.x0); });
-
-  var maxImgs = Math.min(gaps.length, 4);
-  var usedImages = {};
-  var verticalCenter = friseH / 2;
-
-  for (var gi = 0; gi < maxImgs; gi++) {
-    var g = gaps[gi];
-    var gapW = g.x1 - g.x0;
-
-    /* Taille adaptée à la largeur du gap : de 80px à 150px de large */
-    var imgW = Math.max(80, Math.min(150, gapW - 16));
-    var imgH = Math.round(imgW * 1.25);
-    if (imgH > friseH - 16) { imgH = friseH - 16; imgW = Math.round(imgH / 1.25); }
-
-    var slotCenterX = (g.x0 + g.x1) / 2;
-    var slotX = Math.round(slotCenterX - imgW / 2);
-    var imgTop = Math.round(verticalCenter - imgH / 2);
-    if (imgTop < 4) imgTop = 4;
-
-    /* Choisit l'image dont la date est la plus proche du centre du gap */
-    var centerDate = start + ((slotCenterX - labelW) / (friseW - labelW)) * (end - start);
-    var pick = null, best = Infinity;
-    for (var ci = 0; ci < candidates.length; ci++) {
-      var c = candidates[ci];
-      if (usedImages[c.image]) continue;
-      var dist = Math.abs(c.date - centerDate);
-      if (dist < best) { best = dist; pick = c; }
+  var PAD = 8;
+  function rectFree(x, y, w, h) {
+    if (x < labelW || x + w > friseW - 4) return false;
+    if (y < 4 || y + h > friseH - 4) return false;
+    for (var i = 0; i < occupied.length; i++) {
+      var o = occupied[i];
+      if (x + w + PAD > o.x0 && x - PAD < o.x1 &&
+          y + h + PAD > o.y0 && y - PAD < o.y1) return false;
     }
-    if (!pick) continue;
-    usedImages[pick.image] = true;
-
-    var wrap = document.createElement('div');
-    wrap.className    = 'frise-bgf-wrap';
-    wrap.style.left   = slotX + 'px';
-    wrap.style.top    = imgTop + 'px';
-    wrap.style.width  = imgW + 'px';
-    wrap.style.height = imgH + 'px';
-    wrap.style.cursor = 'pointer';
-    var img = document.createElement('img');
-    img.src       = pick.image;
-    img.alt       = pick.legende || pick.titre;
-    img.className = 'frise-bgf-img';
-    img.draggable = false;
-    wrap.appendChild(img);
-    var cap = document.createElement('span');
-    cap.className   = 'frise-bg-caption';
-    cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
-    wrap.appendChild(cap);
-    wrap.addEventListener('click', (function(e) {
-      return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
-    })(pick));
-    container.appendChild(wrap);
+    return true;
   }
+
+  /* Tailles testées, de la plus grande à la plus petite */
+  var SIZES = [
+    { w: 150, h: 188 },
+    { w: 120, h: 150 },
+    { w: 96,  h: 120 },
+    { w: 76,  h: 95  }
+  ];
+  /* Ajuste si la frise est peu haute */
+  SIZES = SIZES.filter(function(s){ return s.h <= friseH - 8; });
+  if (SIZES.length === 0) SIZES = [{ w: Math.round((friseH-12)*0.8), h: friseH-12 }];
+
+  var STEP_X = 24, STEP_Y = 20;
+  var placed = [];           /* rectangles des images déjà posées */
+  var usedImages = {};
+  var MAX_IMGS = 5;
+
+  /* Balaye la frise en cherchant des emplacements libres (grandes tailles d'abord) */
+  for (var s = 0; s < SIZES.length && placed.length < MAX_IMGS; s++) {
+    var sz = SIZES[s];
+    for (var y = 4; y + sz.h <= friseH - 4 && placed.length < MAX_IMGS; y += STEP_Y) {
+      for (var x = labelW; x + sz.w <= friseW - 4 && placed.length < MAX_IMGS; x += STEP_X) {
+        if (!rectFree(x, y, sz.w, sz.h)) continue;
+        /* Vérifie aussi qu'on ne chevauche pas une image déjà posée */
+        var clash = placed.some(function(p) {
+          return x + sz.w + 16 > p.x0 && x - 16 < p.x1 &&
+                 y + sz.h + 16 > p.y0 && y - 16 < p.y1;
+        });
+        if (clash) continue;
+
+        /* Choisit l'image dont la date est la plus proche du centre de l'emplacement */
+        var centerX = x + sz.w / 2;
+        var centerDate = start + ((centerX - labelW) / (friseW - labelW)) * (end - start);
+        var pick = null, best = Infinity;
+        for (var ci = 0; ci < candidates.length; ci++) {
+          var c = candidates[ci];
+          if (usedImages[c.image]) continue;
+          var dist = Math.abs(c.date - centerDate);
+          if (dist < best) { best = dist; pick = c; }
+        }
+        if (!pick) { s = SIZES.length; break; }  /* plus d'images disponibles */
+        usedImages[pick.image] = true;
+
+        var wrap = document.createElement('div');
+        wrap.className    = 'frise-bgf-wrap';
+        wrap.style.left   = x + 'px';
+        wrap.style.top    = y + 'px';
+        wrap.style.width  = sz.w + 'px';
+        wrap.style.height = sz.h + 'px';
+        wrap.style.cursor = 'pointer';
+        var img = document.createElement('img');
+        img.src       = pick.image;
+        img.alt       = pick.legende || pick.titre;
+        img.className = 'frise-bgf-img';
+        img.draggable = false;
+        wrap.appendChild(img);
+        var cap = document.createElement('span');
+        cap.className   = 'frise-bg-caption';
+        cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
+        wrap.appendChild(cap);
+        wrap.addEventListener('click', (function(e) {
+          return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
+        })(pick));
+        container.appendChild(wrap);
+
+        placed.push({ x0: x, x1: x + sz.w, y0: y, y1: y + sz.h });
+      }
+    }
+  }
+}
+
+function _drawBgImage(container, evt, x, y, w, h) {
+  var wrap = document.createElement('div');
+  wrap.className    = 'frise-bgf-wrap';
+  wrap.style.left   = x + 'px';
+  wrap.style.top    = y + 'px';
+  wrap.style.width  = w + 'px';
+  wrap.style.height = h + 'px';
+  wrap.style.cursor = 'pointer';
+  var img = document.createElement('img');
+  img.src       = evt.image;
+  img.alt       = evt.legende || evt.titre;
+  img.className = 'frise-bgf-img';
+  img.draggable = false;
+  wrap.appendChild(img);
+  var cap = document.createElement('span');
+  cap.className   = 'frise-bg-caption';
+  cap.textContent = (evt.legende || evt.titre) + ' (' + evt.date + ')';
+  wrap.appendChild(cap);
+  wrap.addEventListener('click', (function(e) {
+    return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
+  })(evt));
+  container.appendChild(wrap);
 }
 
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
