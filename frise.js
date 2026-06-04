@@ -84,8 +84,8 @@ var ZONE_ALIASES = {
   'Maps':                'Atlas'
 };
 
-var ROW_H    = 32;
-var ROW_GAP  = 10;
+var ROW_H    = 30;
+var ROW_GAP  = 18;
 var CHIP_PAD = 10;
 var TRACK_PX = 860;
 
@@ -657,7 +657,7 @@ function buildTrack(zone, evts, start, end, level) {
   });
   var rows = assignRows(visible, start, end, level);
   var maxR = visible.length > 0 ? Math.max.apply(null, rows) : -1;
-  var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 8;
+  var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 26;  /* +marge étiquettes */
   var track = document.createElement('div');
   track.className = 'track';
   track.style.height = evtH + 'px';
@@ -934,7 +934,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   chip.className      = isShared ? 'evt-chip chip-shared' : 'evt-chip';
   chip.dataset.evtId  = evt.id;
   chip.style.position = 'absolute';
-  chip.style.top      = (4 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
+  chip.style.top      = (18 + rowIndex * (ROW_H + ROW_GAP)) + 'px';
 
   if (isPeriod) {
     var d0 = Math.max(evt.date, start);
