@@ -612,9 +612,22 @@ function buildIllusRow(zone, evts, start, end, level) {
   var band = document.createElement('div');
   band.className = 'illus-band';
   band.style.height = (ILLUS_H + 8) + 'px';
+  /* Trie par date et répartit les vignettes sans chevauchement horizontal.
+     Largeur en % d'une vignette = ILLUS_W / TRACK_PX */
+  withImg.sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+  var vignWpct = (ILLUS_W + 6) / TRACK_PX * 100;  /* largeur + marge */
+  var lastRight = -Infinity;
   withImg.forEach(function(evt) {
     var dateF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
-    var leftPct = Math.max(0, Math.min(98, (dateF - start) / (end - start) * 100));
+    var idealLeft = Math.max(0, Math.min(98, (dateF - start) / (end - start) * 100));
+    /* Décale vers la droite si la vignette précédente déborde */
+    var leftPct = Math.max(idealLeft, lastRight);
+    if (leftPct + vignWpct > 100) leftPct = 100 - vignWpct;  /* ne dépasse pas le bord */
+    lastRight = leftPct + vignWpct;
     var wrap = document.createElement('div');
     wrap.className = 'illus-wrap';
     wrap.style.left = leftPct + '%';
@@ -675,6 +688,15 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
+  /* Pas de grandes images de fond en mode parcours ou recherche
+     (frise éparse : les vignettes sous les pistes suffisent et
+      évitent tout risque de recouvrement des cartouches) */
+  if (activeParcours || searchFilterActive) {
+    var card0 = document.querySelector('.frise-card');
+    if (card0) card0.querySelectorAll('.frise-bg-strip').forEach(function(el){ el.remove(); });
+    container.querySelectorAll('.frise-bgf-wrap').forEach(function(el){ el.remove(); });
+    return;
+  }
   var card = document.querySelector('.frise-card');
   if (!card) return;
   card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
