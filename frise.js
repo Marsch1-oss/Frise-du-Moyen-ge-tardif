@@ -660,8 +660,6 @@ function injectBackgroundImages(container, start, end, level) {
   card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
   container.querySelectorAll('.frise-bgf-wrap').forEach(function(el) { el.remove(); });
 
-  /* Candidates : images visibles, dans la plage, zone active,
-     PAS déjà affichées en vignette (anti-doublon) */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
     if (_shownImages[e.image]) return false;
@@ -677,21 +675,19 @@ function injectBackgroundImages(container, start, end, level) {
   var friseH = container.offsetHeight || 200;
   var labelW = 90;
 
-  /* Rectangles occupés par TOUT le texte/contenu (chips, vignettes, règnes, légendes) */
   var occupied = [];
   container.querySelectorAll('.evt-chip, .illus-wrap, .chip-date-label, .ruler-chip').forEach(function(el) {
     var r = el.getBoundingClientRect();
     if (r.width === 0 && r.height === 0) return;
     occupied.push({
-      x0: r.left   - cr.left,
-      x1: r.right  - cr.left,
-      y0: r.top    - cr.top,
-      y1: r.bottom - cr.top
+      x0: r.left - cr.left, x1: r.right - cr.left,
+      y0: r.top  - cr.top,  y1: r.bottom - cr.top
     });
   });
 
   var PAD = 8;
-  function rectFree(x, y, w, h) {
+  var placed = [];
+  function areaFree(x, y, w, h) {
     if (x < labelW || x + w > friseW - 4) return false;
     if (y < 4 || y + h > friseH - 4) return false;
     for (var i = 0; i < occupied.length; i++) {
@@ -699,76 +695,80 @@ function injectBackgroundImages(container, start, end, level) {
       if (x + w + PAD > o.x0 && x - PAD < o.x1 &&
           y + h + PAD > o.y0 && y - PAD < o.y1) return false;
     }
+    for (var p = 0; p < placed.length; p++) {
+      var q = placed[p];
+      if (x + w + 12 > q.x0 && x - 12 < q.x1 &&
+          y + h + 12 > q.y0 && y - 12 < q.y1) return false;
+    }
     return true;
   }
 
-  /* Tailles testées, de la plus grande à la plus petite */
-  var SIZES = [
-    { w: 150, h: 188 },
-    { w: 120, h: 150 },
-    { w: 96,  h: 120 },
-    { w: 76,  h: 95  }
-  ];
-  /* Ajuste si la frise est peu haute */
-  SIZES = SIZES.filter(function(s){ return s.h <= friseH - 8; });
-  if (SIZES.length === 0) SIZES = [{ w: Math.round((friseH-12)*0.8), h: friseH-12 }];
+  /* Convertit une date en position x */
+  function dateToX(d) {
+    return labelW + ((d - start) / (end - start)) * (friseW - labelW);
+  }
 
-  var STEP_X = 24, STEP_Y = 20;
-  var placed = [];           /* rectangles des images déjà posées */
+  var RATIO = 1.25;            /* h / w */
+  var MIN_W = 70, MAX_W = 240;
   var usedImages = {};
-  var MAX_IMGS = 5;
+  var MAX_IMGS = 6;
 
-  /* Balaye la frise en cherchant des emplacements libres (grandes tailles d'abord) */
-  for (var s = 0; s < SIZES.length && placed.length < MAX_IMGS; s++) {
-    var sz = SIZES[s];
-    for (var y = 4; y + sz.h <= friseH - 4 && placed.length < MAX_IMGS; y += STEP_Y) {
-      for (var x = labelW; x + sz.w <= friseW - 4 && placed.length < MAX_IMGS; x += STEP_X) {
-        if (!rectFree(x, y, sz.w, sz.h)) continue;
-        /* Vérifie aussi qu'on ne chevauche pas une image déjà posée */
-        var clash = placed.some(function(p) {
-          return x + sz.w + 16 > p.x0 && x - 16 < p.x1 &&
-                 y + sz.h + 16 > p.y0 && y - 16 < p.y1;
-        });
-        if (clash) continue;
+  /* Trie les candidates par date pour traiter la frise de gauche à droite */
+  var cands = candidates.slice().sort(function(a, b) { return a.date - b.date; });
 
-        /* Choisit l'image dont la date est la plus proche du centre de l'emplacement */
-        var centerX = x + sz.w / 2;
-        var centerDate = start + ((centerX - labelW) / (friseW - labelW)) * (end - start);
-        var pick = null, best = Infinity;
-        for (var ci = 0; ci < candidates.length; ci++) {
-          var c = candidates[ci];
-          if (usedImages[c.image]) continue;
-          var dist = Math.abs(c.date - centerDate);
-          if (dist < best) { best = dist; pick = c; }
+  for (var ci = 0; ci < cands.length && placed.length < MAX_IMGS; ci++) {
+    var pick = cands[ci];
+    if (usedImages[pick.image]) continue;
+
+    /* Position d'ancrage : la date de l'événement */
+    var anchorX = dateToX(pick.date);
+
+    /* Cherche la plus grande image possible centrée près de l'ancre,
+       en autorisant un débordement vers les vides voisins */
+    var bestRect = null;
+    for (var w = MAX_W; w >= MIN_W; w -= 10) {
+      var h = Math.round(w * RATIO);
+      if (h > friseH - 8) continue;
+
+      /* Essaie plusieurs décalages horizontaux autour de l'ancre
+         (l'image peut s'étendre à gauche ou à droite pour combler un vide) */
+      var offsets = [0, w*0.15, -w*0.15, w*0.35, -w*0.35, w*0.5, -w*0.5];
+      for (var oi = 0; oi < offsets.length && !bestRect; oi++) {
+        var cx = anchorX + offsets[oi];
+        var x  = Math.round(cx - w / 2);
+        /* Essaie plusieurs positions verticales */
+        for (var y = 4; y + h <= friseH - 4; y += 18) {
+          if (areaFree(x, y, w, h)) { bestRect = { x: x, y: y, w: w, h: h }; break; }
         }
-        if (!pick) { s = SIZES.length; break; }  /* plus d'images disponibles */
-        usedImages[pick.image] = true;
-
-        var wrap = document.createElement('div');
-        wrap.className    = 'frise-bgf-wrap';
-        wrap.style.left   = x + 'px';
-        wrap.style.top    = y + 'px';
-        wrap.style.width  = sz.w + 'px';
-        wrap.style.height = sz.h + 'px';
-        wrap.style.cursor = 'pointer';
-        var img = document.createElement('img');
-        img.src       = pick.image;
-        img.alt       = pick.legende || pick.titre;
-        img.className = 'frise-bgf-img';
-        img.draggable = false;
-        wrap.appendChild(img);
-        var cap = document.createElement('span');
-        cap.className   = 'frise-bg-caption';
-        cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
-        wrap.appendChild(cap);
-        wrap.addEventListener('click', (function(e) {
-          return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
-        })(pick));
-        container.appendChild(wrap);
-
-        placed.push({ x0: x, x1: x + sz.w, y0: y, y1: y + sz.h });
       }
+      if (bestRect) break;   /* la plus grande taille qui rentre est trouvée */
     }
+    if (!bestRect) continue;
+
+    usedImages[pick.image] = true;
+    var wrap = document.createElement('div');
+    wrap.className    = 'frise-bgf-wrap';
+    wrap.style.left   = bestRect.x + 'px';
+    wrap.style.top    = bestRect.y + 'px';
+    wrap.style.width  = bestRect.w + 'px';
+    wrap.style.height = bestRect.h + 'px';
+    wrap.style.cursor = 'pointer';
+    var img = document.createElement('img');
+    img.src       = pick.image;
+    img.alt       = pick.legende || pick.titre;
+    img.className = 'frise-bgf-img';
+    img.draggable = false;
+    wrap.appendChild(img);
+    var cap = document.createElement('span');
+    cap.className   = 'frise-bg-caption';
+    cap.textContent = (pick.legende || pick.titre) + ' (' + pick.date + ')';
+    wrap.appendChild(cap);
+    wrap.addEventListener('click', (function(e) {
+      return function(ev) { ev.stopPropagation(); openModal(e, e.zones[0]); };
+    })(pick));
+    container.appendChild(wrap);
+    placed.push({ x0: bestRect.x, x1: bestRect.x + bestRect.w,
+                  y0: bestRect.y, y1: bestRect.y + bestRect.h });
   }
 }
 
