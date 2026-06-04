@@ -311,7 +311,7 @@ function renderLevel(level, rangeStart) {
     }
     container.appendChild(buildTrack(zone, evts, start, end, level));
 
-    if (level >= 3) {
+    if (level >= 3 && !activeParcours && !searchFilterActive) {
       var illusRow = buildIllusRow(zone, evts, start, end, level);
       if (illusRow) container.appendChild(illusRow);
     }
@@ -329,6 +329,20 @@ function renderLevel(level, rangeStart) {
   container.appendChild(hint);
 
   setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 180);
+  if (activeParcours) {
+    requestAnimationFrame(function() {
+      container.querySelectorAll('.track-row').forEach(function(tr) {
+        var t = tr.querySelector('.track');
+        var chips = tr.querySelectorAll('.evt-chip');
+        if (chips.length > 1) {
+          console.log('PISTE ' + (tr.dataset.zone||'?') + ' : track h=' + (t?t.offsetHeight:'?') +
+            'px, ' + chips.length + ' chips, 1er top=' + chips[0].style.top +
+            ' dernier top=' + chips[chips.length-1].style.top +
+            ', 1er hauteur réelle=' + chips[0].offsetHeight + 'px');
+        }
+      });
+    });
+  }
 
   if (searchTerm) applySearch();
 }
