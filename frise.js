@@ -447,34 +447,51 @@ function assignRows(evts, start, end, level) {
   var majeurs     = regulars.filter(function(e){ return (Number(e.type)||2) <= 3; }).sort(sortByDate);
   var secondaires = regulars.filter(function(e){ return (Number(e.type)||2) >= 4; }).sort(sortByDate);
 
-  var rowEnds = [];
-  var rowMap  = {};
-
-  /* 1. Place les majeurs (lignes 0, 1, 2…) */
-  for (var mi = 0; mi < majeurs.length; mi++) {
-    var em = majeurs[mi];
-    var leftM = evtLeft(em);
-    var rightM = leftM + chipW(em, start, end, level);
-    var rowM = 0;
-    while (rowM < rowEnds.length && rowEnds[rowM] > leftM - gap) rowM++;
-    if (rowEnds[rowM] === undefined) rowEnds[rowM] = 0;
-    rowEnds[rowM] = rightM;
-    rowMap[em.id] = rowM;
+  /* Calcule les bornes RÉELLES gauche/droite d'un chip selon son centrage
+     (translateX -50% au centre, 0% au début, -100% en fin de frise) */
+  function chipBounds(evt) {
+    var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+    var w = chipW(evt, start, end, level);
+    if (isPeriod) {
+      var l = evtLeft(evt);
+      return { x0: l, x1: l + w };
+    }
+    var anchor = evtLeft(evt);
+    var finalPct = Math.min(Math.max(anchor, 3), 97);
+    if (finalPct > 88)      return { x0: finalPct - w, x1: finalPct };       /* translateX(-100%) */
+    else if (finalPct < 8)  return { x0: finalPct,     x1: finalPct + w };   /* translateX(0%) */
+    else                    return { x0: finalPct - w/2, x1: finalPct + w/2 };/* translateX(-50%) */
   }
 
-  /* 2. Les secondaires commencent SOUS la dernière ligne des majeurs */
-  var baseRowSecond = rowEnds.length;  /* 1re ligne libre après les majeurs */
-  var rowEnds2 = [];
-  for (var sj = 0; sj < secondaires.length; sj++) {
-    var es = secondaires[sj];
-    var leftS = evtLeft(es);
-    var rightS = leftS + chipW(es, start, end, level);
-    var rowS = 0;
-    while (rowS < rowEnds2.length && rowEnds2[rowS] > leftS - gap) rowS++;
-    if (rowEnds2[rowS] === undefined) rowEnds2[rowS] = 0;
-    rowEnds2[rowS] = rightS;
-    rowMap[es.id] = baseRowSecond + rowS;
+  /* Place une liste d'événements sur des lignes sans chevauchement.
+     rowsBounds[row] = liste des intervalles [x0,x1] occupés sur cette ligne */
+  function placeOn(list, rowsBounds, baseRow, rowMap) {
+    for (var i = 0; i < list.length; i++) {
+      var b = chipBounds(list[i]);
+      var row = 0;
+      while (row < rowsBounds.length) {
+        var collide = false;
+        var occ = rowsBounds[row];
+        for (var k = 0; k < occ.length; k++) {
+          if (b.x0 < occ[k].x1 + gap && b.x1 > occ[k].x0 - gap) { collide = true; break; }
+        }
+        if (!collide) break;
+        row++;
+      }
+      if (rowsBounds[row] === undefined) rowsBounds[row] = [];
+      rowsBounds[row].push(b);
+      rowMap[list[i].id] = baseRow + row;
+    }
+    return rowsBounds.length;
   }
+
+  var rowMap = {};
+  /* 1. Majeurs sur les lignes du haut */
+  var majBounds = [];
+  var nbMajRows = placeOn(majeurs, majBounds, 0, rowMap);
+  /* 2. Secondaires sous les majeurs */
+  var secBounds = [];
+  placeOn(secondaires, secBounds, nbMajRows, rowMap);
   var reignEnds = [];
   var reignMap  = {};
   for (var ri = 0; ri < reigns.length; ri++) {
