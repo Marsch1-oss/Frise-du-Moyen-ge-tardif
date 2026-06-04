@@ -1,4 +1,4 @@
-console.log('FRISE.JS DIAGNOSTIC ACTIF — si vous voyez ce message, le bon fichier est chargé');
+console.log('FRISE.JS — hauteur piste renforcee (minHeight+flexShrink)');
 
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
@@ -671,19 +671,15 @@ function buildTrack(zone, evts, start, end, level) {
     return evt.date <= end && fin >= start;
   });
   var rows = assignRows(visible, start, end, level);
-  if (activeParcours && visible.length > 0) {
-    console.log('=== Zone ' + zone + ' (' + visible.length + ' events) ===');
-    for (var dbgI = 0; dbgI < visible.length; dbgI++) {
-      console.log('  row=' + rows[dbgI] + ' type=' + visible[dbgI].type +
-        ' date=' + visible[dbgI].date + '.' + (visible[dbgI].mois||'') +
-        ' | ' + visible[dbgI].titre.slice(0,30));
-    }
-  }
   var maxR = visible.length > 0 ? Math.max.apply(null, rows) : -1;
   var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 26;  /* +marge étiquettes */
   var track = document.createElement('div');
   track.className = 'track';
-  track.style.height = evtH + 'px';
+  track.style.height    = evtH + 'px';
+  track.style.minHeight = evtH + 'px';
+  track.style.flexShrink = '0';
+  /* Force aussi la track-row à adopter cette hauteur */
+  row.style.minHeight = evtH + 'px';
   var line = document.createElement('div');
   line.className = 'track-line';
   line.style.top = (evtH / 2) + 'px';
@@ -692,10 +688,6 @@ function buildTrack(zone, evts, start, end, level) {
     var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
     if (chip) {
       track.appendChild(chip);
-      if (activeParcours) {
-        console.log('  CHIP row=' + rows[i] + ' style.top=' + chip.style.top +
-          ' offsetHeight=' + chip.offsetHeight + ' | ' + visible[i].titre.slice(0,25));
-      }
     }
   }
   row.appendChild(track);
