@@ -85,8 +85,8 @@ var ZONE_ALIASES = {
 };
 
 var ROW_H    = 32;
-var ROW_GAP  = 5;
-var CHIP_PAD = 6;
+var ROW_GAP  = 10;
+var CHIP_PAD = 10;
 var TRACK_PX = 860;
 
 var currentLevel   = 1;
@@ -326,7 +326,7 @@ function renderLevel(level, rangeStart) {
     : 'Vue mensuelle \u00b7 cliquez sur un evenement pour afficher sa fiche complete';
   container.appendChild(hint);
 
-  setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 60);
+  setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 180);
 
   if (searchTerm) applySearch();
 }
@@ -431,9 +431,12 @@ function assignRows(evts, start, end, level) {
      sans jamais réutiliser les lignes occupées par les majeurs */
   function evtLeft(evt) {
     var isPeriod = evt.date_fin && evt.date_fin > evt.date;
-    return isPeriod
-      ? (Math.max(evt.date, start) - start) / (end - start) * 100
-      : (evt.date - start) / (end - start) * 100;
+    if (isPeriod) {
+      return (Math.max(evt.date, start) - start) / (end - start) * 100;
+    }
+    /* Inclut le mois pour rester cohérent avec le rendu du chip */
+    var dF = evt.date + (evt.mois ? (evt.mois - 1) / 12 : 0);
+    return (dF - start) / (end - start) * 100;
   }
   function sortByDate(a, b) {
     var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
@@ -676,7 +679,7 @@ function injectBackgroundImages(container, start, end, level) {
   var labelW = 90;
 
   var occupied = [];
-  container.querySelectorAll('.evt-chip, .illus-wrap, .chip-date-label, .ruler-chip').forEach(function(el) {
+  container.querySelectorAll('.evt-chip, .illus-wrap, .chip-date-label, .ruler-chip, .parcours-num-badge, .illus-cap').forEach(function(el) {
     var r = el.getBoundingClientRect();
     if (r.width === 0 && r.height === 0) return;
     occupied.push({
@@ -685,7 +688,7 @@ function injectBackgroundImages(container, start, end, level) {
     });
   });
 
-  var PAD = 8;
+  var PAD = 12;
   var placed = [];
   function areaFree(x, y, w, h) {
     if (x < labelW || x + w > friseW - 4) return false;
