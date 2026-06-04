@@ -1,3 +1,5 @@
+console.log('FRISE.JS chargé — version v-1780587099 — empilement chipBounds + images OFF en parcours');
+
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
 var ZONES = [
