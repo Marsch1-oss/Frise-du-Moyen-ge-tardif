@@ -424,25 +424,52 @@ function assignRows(evts, start, end, level) {
   var gap = CHIP_PAD / TRACK_PX * 100;
   var reigns   = evts.filter(function(e) { return !!e.regne; });
   var regulars = evts.filter(function(e) { return !e.regne; });
-  var sorted = regulars.slice().sort(function(a, b) {
+  /* Tri par date puis répartition en 2 strates :
+     majeurs (type <= 3) placés en premier sur les lignes du haut,
+     secondaires (type >= 4) placés ensuite sur les lignes du dessous,
+     sans jamais réutiliser les lignes occupées par les majeurs */
+  function evtLeft(evt) {
+    var isPeriod = evt.date_fin && evt.date_fin > evt.date;
+    return isPeriod
+      ? (Math.max(evt.date, start) - start) / (end - start) * 100
+      : (evt.date - start) / (end - start) * 100;
+  }
+  function sortByDate(a, b) {
     var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
     var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
     return da - db;
-  });
+  }
+
+  var majeurs     = regulars.filter(function(e){ return (Number(e.type)||2) <= 3; }).sort(sortByDate);
+  var secondaires = regulars.filter(function(e){ return (Number(e.type)||2) >= 4; }).sort(sortByDate);
+
   var rowEnds = [];
   var rowMap  = {};
-  for (var si = 0; si < sorted.length; si++) {
-    var evt = sorted[si];
-    var isPeriod = evt.date_fin && evt.date_fin > evt.date;
-    var left = isPeriod
-      ? (Math.max(evt.date, start) - start) / (end - start) * 100
-      : (evt.date - start) / (end - start) * 100;
-    var right = left + chipW(evt, start, end, level);
-    var row = 0;
-    while (row < rowEnds.length && rowEnds[row] > left - gap) row++;
-    if (rowEnds[row] === undefined) rowEnds[row] = 0;
-    rowEnds[row] = right;
-    rowMap[evt.id] = row;
+
+  /* 1. Place les majeurs (lignes 0, 1, 2…) */
+  for (var mi = 0; mi < majeurs.length; mi++) {
+    var em = majeurs[mi];
+    var leftM = evtLeft(em);
+    var rightM = leftM + chipW(em, start, end, level);
+    var rowM = 0;
+    while (rowM < rowEnds.length && rowEnds[rowM] > leftM - gap) rowM++;
+    if (rowEnds[rowM] === undefined) rowEnds[rowM] = 0;
+    rowEnds[rowM] = rightM;
+    rowMap[em.id] = rowM;
+  }
+
+  /* 2. Les secondaires commencent SOUS la dernière ligne des majeurs */
+  var baseRowSecond = rowEnds.length;  /* 1re ligne libre après les majeurs */
+  var rowEnds2 = [];
+  for (var sj = 0; sj < secondaires.length; sj++) {
+    var es = secondaires[sj];
+    var leftS = evtLeft(es);
+    var rightS = leftS + chipW(es, start, end, level);
+    var rowS = 0;
+    while (rowS < rowEnds2.length && rowEnds2[rowS] > leftS - gap) rowS++;
+    if (rowEnds2[rowS] === undefined) rowEnds2[rowS] = 0;
+    rowEnds2[rowS] = rightS;
+    rowMap[es.id] = baseRowSecond + rowS;
   }
   var reignEnds = [];
   var reignMap  = {};
@@ -921,9 +948,12 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLbl.textContent = evt.mois ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
       chip.appendChild(dateLbl);
       var titreF = evt.titre;
-      chip.style.fontSize   = adaptFontSize(titreF, 0.83, level === 4 ? 48 : 40);
-      chip.style.whiteSpace = 'normal';
-      chip.appendChild(document.createTextNode(titreF));
+      chip.style.fontSize = adaptFontSize(titreF, 0.83, level === 4 ? 48 : 40);
+      /* Titre sur une seule ligne (span interne pour ellipsis sur flex) */
+      var titreSpan = document.createElement('span');
+      titreSpan.textContent = titreF;
+      titreSpan.style.cssText = 'display:inline-block;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:bottom;';
+      chip.appendChild(titreSpan);
     } else if (level === 2) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
