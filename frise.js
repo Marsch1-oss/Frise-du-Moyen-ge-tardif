@@ -671,6 +671,14 @@ function buildTrack(zone, evts, start, end, level) {
     return evt.date <= end && fin >= start;
   });
   var rows = assignRows(visible, start, end, level);
+  if (activeParcours && visible.length > 0) {
+    console.log('=== Zone ' + zone + ' (' + visible.length + ' events) ===');
+    for (var dbgI = 0; dbgI < visible.length; dbgI++) {
+      console.log('  row=' + rows[dbgI] + ' type=' + visible[dbgI].type +
+        ' date=' + visible[dbgI].date + '.' + (visible[dbgI].mois||'') +
+        ' | ' + visible[dbgI].titre.slice(0,30));
+    }
+  }
   var maxR = visible.length > 0 ? Math.max.apply(null, rows) : -1;
   var evtH = (maxR + 1) * ROW_H + maxR * ROW_GAP + 26;  /* +marge étiquettes */
   var track = document.createElement('div');
