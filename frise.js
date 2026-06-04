@@ -278,6 +278,7 @@ function renderLevel(level, rangeStart) {
   }
 
   var displayedIds = {};
+  _shownImages = {};  /* réinitialise le registre d'images à chaque rendu */
 
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
@@ -564,6 +565,8 @@ function buildRulersSection(start, end, level) {
   return section;
 }
 
+var _shownImages = {};  /* registre des images déjà affichées (vignettes) */
+
 function buildIllusRow(zone, evts, start, end, level) {
   var ILLUS_H = 68;
   var ILLUS_W = 56;
@@ -579,6 +582,8 @@ function buildIllusRow(zone, evts, start, end, level) {
     seen[e.image] = true;
     return true;
   });
+  /* Enregistre ces images comme déjà affichées */
+  withImg.forEach(function(e) { _shownImages[e.image] = true; });
   var galleryRow = document.createElement('div');
   galleryRow.className = 'illus-row';
   var spacer = document.createElement('div');
@@ -650,68 +655,95 @@ function buildTrack(zone, evts, start, end, level) {
 
 /* ── Illustrations de fond dans les espaces vides ───────────────────*/
 function injectBackgroundImages(container, start, end, level) {
-  var IMG_W  = 110;
-  var IMG_H  = 135;
-  var MARGIN = 12;
+  var MARGIN = 14;
   var card = document.querySelector('.frise-card');
   if (!card) return;
   card.querySelectorAll('.frise-bg-strip').forEach(function(el) { el.remove(); });
   container.querySelectorAll('.frise-bgf-wrap').forEach(function(el) { el.remove(); });
+
+  /* Candidates : images visibles à ce niveau, dans la plage, dans une zone active,
+     ET PAS déjà affichées en vignette sous une piste (évite le doublon) */
   var candidates = allEvents.filter(function(e) {
     if (!e.image || !e.image.trim()) return false;
+    if (_shownImages[e.image]) return false;
     if (!visibleAtLevel(e, level)) return false;
     if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
     var d0 = e.date, d1 = e.date_fin || e.date;
     return d0 <= end && d1 >= start;
   });
   if (candidates.length === 0) return;
-  var chips = Array.prototype.slice.call(container.querySelectorAll('.evt-chip'));
-  var maxChips = level === 4 ? 8 : level === 3 ? 14 : 10;
-  if (chips.length > maxChips) return;
+
+  /* Rectangles occupés par les chips ET par les vignettes (illus-band) */
   var cr = container.getBoundingClientRect();
-  var occupied = chips.map(function(chip) {
-    var r = chip.getBoundingClientRect();
-    return {
+  var occupied = [];
+  container.querySelectorAll('.evt-chip, .illus-wrap, .rulers-section').forEach(function(el) {
+    var r = el.getBoundingClientRect();
+    if (r.width === 0 && r.height === 0) return;
+    occupied.push({
       x0: r.left  - cr.left - MARGIN,
       x1: r.right - cr.left + MARGIN,
       y0: r.top   - cr.top  - MARGIN,
       y1: r.bottom- cr.top  + MARGIN
-    };
-  });
-  var friseW   = container.offsetWidth  || TRACK_PX;
-  var friseH   = container.offsetHeight || 200;
-  var labelW   = 90;
-  var rulersH = 0;
-  var rs = container.querySelector('.rulers-section');
-  if (rs) rulersH = rs.offsetHeight || 0;
-  var evtTop = rulersH;
-  var evtH   = friseH - rulersH;
-  var stepX  = Math.floor(IMG_W / 2);
-  var imgTop = evtTop + (evtH - IMG_H) / 2;
-  var imgBot = imgTop + IMG_H;
-  var slots = [];
-  for (var x = labelW; x + IMG_W <= friseW - 4; x += stepX) {
-    var x1 = x + IMG_W;
-    var free = occupied.every(function(o) {
-      return x1 <= o.x0 || x >= o.x1 || imgBot <= o.y0 || imgTop >= o.y1;
     });
-    if (free) slots.push(x);
-  }
-  if (slots.length === 0) return;
-  var MIN_GAP = IMG_W + 20;
-  var filtered = [slots[0]];
-  for (var si = 1; si < slots.length; si++) {
-    if (slots[si] - filtered[filtered.length - 1] >= MIN_GAP) {
-      filtered.push(slots[si]);
+  });
+
+  var friseW = container.offsetWidth  || TRACK_PX;
+  var friseH = container.offsetHeight || 200;
+  var labelW = 90;
+
+  /* Détecte les colonnes (bandes verticales) entièrement libres de chips */
+  var COL = 14;                       /* résolution d'échantillonnage en px */
+  var freeCols = [];
+  for (var x = labelW; x + COL <= friseW - 4; x += COL) {
+    var colFree = true;
+    for (var oi = 0; oi < occupied.length; oi++) {
+      var o = occupied[oi];
+      /* la colonne chevauche-t-elle un chip horizontalement ? */
+      if (x + COL > o.x0 && x < o.x1) { colFree = false; break; }
     }
+    freeCols.push({ x: x, free: colFree });
   }
-  var maxImgs = Math.min(filtered.length, 3);
+
+  /* Regroupe les colonnes libres consécutives en plages (gaps) */
+  var gaps = [];
+  var cur = null;
+  freeCols.forEach(function(c) {
+    if (c.free) {
+      if (!cur) cur = { x0: c.x, x1: c.x + COL };
+      else cur.x1 = c.x + COL;
+    } else if (cur) { gaps.push(cur); cur = null; }
+  });
+  if (cur) gaps.push(cur);
+
+  /* Ne garde que les vrais espaces vides (largeur minimale) */
+  var MIN_GAP_W = 70;
+  gaps = gaps.filter(function(g) { return (g.x1 - g.x0) >= MIN_GAP_W; });
+  if (gaps.length === 0) return;
+
+  /* Trie les gaps du plus large au plus étroit (priorité aux grands espaces) */
+  gaps.sort(function(a, b) { return (b.x1 - b.x0) - (a.x1 - a.x0); });
+
+  var maxImgs = Math.min(gaps.length, 4);
   var usedImages = {};
-  for (var fi = 0; fi < maxImgs; fi++) {
-    var slotX    = filtered[fi];
-    var centerDate = start + ((slotX + IMG_W / 2 - labelW) / (friseW - labelW)) * (end - start);
-    var pick = null;
-    var best = Infinity;
+  var verticalCenter = friseH / 2;
+
+  for (var gi = 0; gi < maxImgs; gi++) {
+    var g = gaps[gi];
+    var gapW = g.x1 - g.x0;
+
+    /* Taille adaptée à la largeur du gap : de 80px à 150px de large */
+    var imgW = Math.max(80, Math.min(150, gapW - 16));
+    var imgH = Math.round(imgW * 1.25);
+    if (imgH > friseH - 16) { imgH = friseH - 16; imgW = Math.round(imgH / 1.25); }
+
+    var slotCenterX = (g.x0 + g.x1) / 2;
+    var slotX = Math.round(slotCenterX - imgW / 2);
+    var imgTop = Math.round(verticalCenter - imgH / 2);
+    if (imgTop < 4) imgTop = 4;
+
+    /* Choisit l'image dont la date est la plus proche du centre du gap */
+    var centerDate = start + ((slotCenterX - labelW) / (friseW - labelW)) * (end - start);
+    var pick = null, best = Infinity;
     for (var ci = 0; ci < candidates.length; ci++) {
       var c = candidates[ci];
       if (usedImages[c.image]) continue;
@@ -720,12 +752,13 @@ function injectBackgroundImages(container, start, end, level) {
     }
     if (!pick) continue;
     usedImages[pick.image] = true;
+
     var wrap = document.createElement('div');
     wrap.className    = 'frise-bgf-wrap';
     wrap.style.left   = slotX + 'px';
     wrap.style.top    = imgTop + 'px';
-    wrap.style.width  = IMG_W + 'px';
-    wrap.style.height = IMG_H + 'px';
+    wrap.style.width  = imgW + 'px';
+    wrap.style.height = imgH + 'px';
     wrap.style.cursor = 'pointer';
     var img = document.createElement('img');
     img.src       = pick.image;
