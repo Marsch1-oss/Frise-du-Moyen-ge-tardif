@@ -1,4 +1,3 @@
-console.log('FRISE.JS — hauteur piste renforcee (minHeight+flexShrink)');
 
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
@@ -329,20 +328,6 @@ function renderLevel(level, rangeStart) {
   container.appendChild(hint);
 
   setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 180);
-  if (activeParcours) {
-    requestAnimationFrame(function() {
-      container.querySelectorAll('.track-row').forEach(function(tr) {
-        var t = tr.querySelector('.track');
-        var chips = tr.querySelectorAll('.evt-chip');
-        if (chips.length > 1) {
-          console.log('PISTE ' + (tr.dataset.zone||'?') + ' : track h=' + (t?t.offsetHeight:'?') +
-            'px, ' + chips.length + ' chips, 1er top=' + chips[0].style.top +
-            ' dernier top=' + chips[chips.length-1].style.top +
-            ', 1er hauteur réelle=' + chips[0].offsetHeight + 'px');
-        }
-      });
-    });
-  }
 
   if (searchTerm) applySearch();
 }
@@ -950,7 +935,7 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
       badge.textContent = num;
       var pcol = parcoursColors[activeParcours] || '#7D3C98';
       badge.style.background = pcol;
-      chip.style.position = 'relative';   /* ancre le badge */
+      /* chip déjà positionné en absolu : ne pas écraser sa position */
       chip.style.overflow = 'visible';
       chip.appendChild(badge);
     }
@@ -1143,7 +1128,9 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       pBadge.className = 'parcours-num-badge';
       pBadge.textContent = pNum;
       pBadge.style.background = parcoursColors[activeParcours] || '#7D3C98';
-      chip.style.position = 'relative';
+      /* NE PAS toucher chip.style.position : il est déjà 'absolute',
+         ce qui sert d'ancre au badge. Le passer en 'relative' casserait
+         tout le positionnement vertical (chips empilés au même endroit). */
       chip.style.overflow = 'visible';
       chip.appendChild(pBadge);
     }
