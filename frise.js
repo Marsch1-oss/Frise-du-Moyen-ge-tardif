@@ -1,4 +1,4 @@
-console.log('FRISE.JS chargé — version v-1780587099 — empilement chipBounds + images OFF en parcours');
+console.log('FRISE.JS DIAGNOSTIC ACTIF — si vous voyez ce message, le bon fichier est chargé');
 
 /* frise.js — Frise chronologique medievale 1300-1500 */
 
@@ -690,7 +690,13 @@ function buildTrack(zone, evts, start, end, level) {
   track.appendChild(line);
   for (var i = 0; i < visible.length; i++) {
     var chip = buildChip(visible[i], zone, start, end, level, rows[i]);
-    if (chip) track.appendChild(chip);
+    if (chip) {
+      track.appendChild(chip);
+      if (activeParcours) {
+        console.log('  CHIP row=' + rows[i] + ' style.top=' + chip.style.top +
+          ' offsetHeight=' + chip.offsetHeight + ' | ' + visible[i].titre.slice(0,25));
+      }
+    }
   }
   row.appendChild(track);
   return row;
