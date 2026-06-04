@@ -479,8 +479,8 @@ function buildRulersSection(start, end, level) {
       var e = allEvents[j];
       if (!e.regne) continue;
       if (e.zones.indexOf(zone) === -1) continue;
-      /* Mode parcours : n'afficher que les règnes de la série */
-      if (activeParcours && parseSeries(e.serie).indexOf(activeParcours) === -1) continue;
+      /* En mode parcours, tous les règnes des zones actives restent
+         affichés comme repères chronologiques pour le lecteur */
       if (searchTerm && !eventMatchesSearch(e)) continue;
       var d0 = e.date, d1 = e.date_fin || e.date;
       if (level === 4) {
@@ -984,6 +984,25 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
   chip.addEventListener('click', (function(e, z) {
     return function(ev) { ev.stopPropagation(); openModal(e, z); };
   })(evt, zone));
+
+  /* Badge numéroté en mode parcours (ordre chronologique global) */
+  if (activeParcours) {
+    var pSteps = getParcoursSteps(activeParcours);
+    var pNum = -1;
+    for (var psi = 0; psi < pSteps.length; psi++) {
+      if (pSteps[psi].id === evt.id) { pNum = psi + 1; break; }
+    }
+    if (pNum > 0) {
+      var pBadge = document.createElement('span');
+      pBadge.className = 'parcours-num-badge';
+      pBadge.textContent = pNum;
+      pBadge.style.background = parcoursColors[activeParcours] || '#7D3C98';
+      chip.style.position = 'relative';
+      chip.style.overflow = 'visible';
+      chip.appendChild(pBadge);
+    }
+  }
+
   return chip;
 }
 
@@ -1508,17 +1527,14 @@ function updateParcoursNavBar(p) {
     });
     sel.onchange = function() { parcoursGoToStep(steps, parseInt(this.value)); };
 
+    /* Bouton Fiche uniquement (le select navigue déjà sur la frise) */
     var oldF = bar.querySelector('.pnav-frise-btn'); if (oldF) oldF.remove();
     var oldFi = bar.querySelector('.pnav-fiche-btn'); if (oldFi) oldFi.remove();
     var bStyle = 'font-size:0.78rem;padding:0.2rem 0.65rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;white-space:nowrap;';
-    var friseBtn = document.createElement('button');
-    friseBtn.className='pnav-frise-btn'; friseBtn.textContent='Frise \u2193'; friseBtn.style.cssText=bStyle;
-    friseBtn.onclick=function(){ parcoursGoToStep(getParcoursSteps(activeParcours), parseInt(sel.value)); };
     var ficheBtn = document.createElement('button');
     ficheBtn.className='pnav-fiche-btn'; ficheBtn.textContent='Fiche \u2197'; ficheBtn.style.cssText=bStyle;
     ficheBtn.onclick=function(){ var s=getParcoursSteps(activeParcours)[parseInt(sel.value)]; if(s) openModal(s, s.zones&&s.zones[0]||ZONES[0]); };
-    sel.parentNode.insertBefore(friseBtn, sel.nextSibling);
-    sel.parentNode.insertBefore(ficheBtn, friseBtn.nextSibling);
+    sel.parentNode.insertBefore(ficheBtn, sel.nextSibling);
   }
   bar.style.display = 'flex';
   bar.style.borderColor = col;
