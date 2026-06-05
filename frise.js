@@ -1801,12 +1801,36 @@ function showParcoursResults(p) {
 
 
 function goHome() {
+  /* Réinitialise complètement la frise */
+
+  /* 1. Désactive un éventuel parcours actif */
+  if (activeParcours) {
+    activeParcours = null;
+    _savedZonesP = null;
+    if (typeof updateParcoursBtn === 'function') updateParcoursBtn();
+    var pbar = document.getElementById('parcours-nav-bar');
+    if (pbar) pbar.style.display = 'none';
+  }
+
+  /* 2. Désactive le filtre de recherche */
+  searchFilterActive = false;
+  searchTerm = '';
+
+  /* 3. Ferme les panneaux latéraux */
+  var panel = document.getElementById('search-results-panel');
+  if (panel) panel.style.display = 'none';
+  document.body.classList.remove('parcours-panel-open');
+
+  /* 4. Réinitialise zones, recherche, niveau de détail */
   for (var z in activeZones) activeZones[z] = false;
+  detailLevel = 2;
   var inp = document.getElementById('search-input');
   if (inp) inp.value = '';
   clearSearch();
   var wzInp = document.getElementById('wz-search-input');
   if (wzInp) wzInp.value = '';
+
+  /* 5. Rouvre l'assistant d'accueil */
   var overlay = document.getElementById('wizard-overlay');
   if (overlay) overlay.classList.remove('hidden');
   wzInit();
