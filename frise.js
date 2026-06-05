@@ -281,6 +281,41 @@ function renderLevel(level, rangeStart) {
   var displayedIds = {};
   _shownImages = {};  /* réinitialise le registre d'images à chaque rendu */
 
+  /* ── Numérotation globale des événements visibles ──
+     Tous les événements visibles de la période (toutes zones actives
+     confondues), triés chronologiquement. Dates identiques → suffixes a,b,c */
+  _globalNum = {};
+  var numList = allEvents.filter(function(e) {
+    if (e.regne) return false;
+    if (!visibleAtLevel(e, level)) return false;
+    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+    return e.date <= end && fin >= start;
+  }).sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+  /* Groupe les événements par date identique (année + mois) */
+  var groups = [];      /* chaque groupe = liste d'events de même date */
+  var lastKey = null;
+  numList.forEach(function(e) {
+    var key = e.date + '-' + (e.mois || 0);
+    if (key !== lastKey) { groups.push([]); lastKey = key; }
+    groups[groups.length - 1].push(e);
+  });
+  /* Attribue un numéro par groupe ; suffixe a,b,c si le groupe a >1 événement */
+  groups.forEach(function(grp, gi) {
+    var num = gi + 1;
+    if (grp.length === 1) {
+      _globalNum[grp[0].id] = '' + num;
+    } else {
+      grp.forEach(function(e, k) {
+        _globalNum[e.id] = num + String.fromCharCode(97 + k); /* 'a','b','c'... */
+      });
+    }
+  });
+
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
     if (!activeZones[zone]) continue;
@@ -587,6 +622,7 @@ function buildRulersSection(start, end, level) {
 }
 
 var _shownImages = {};  /* registre des images déjà affichées (vignettes) */
+var _globalNum = {};    /* numéro d'ordre global de chaque événement (id -> '3a') */
 
 function buildIllusRow(zone, evts, start, end, level) {
   var ILLUS_H = 68;
@@ -922,23 +958,27 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     return function(ev) { ev.stopPropagation(); openModal(e, z); };
   })(evt, zone));
 
-  /* Badge numéroté en mode parcours (ordre chronologique global) */
+  /* Badge numéroté :
+     - en mode parcours : numéro d'ordre dans la série (couleur du parcours)
+     - sinon : numéro d'ordre global de la période visible (couleur neutre) */
+  var badgeLabel = null, badgeColor = null;
   if (activeParcours) {
     var steps = getParcoursSteps(activeParcours);
-    var num = -1;
     for (var si = 0; si < steps.length; si++) {
-      if (steps[si].id === evt.id) { num = si + 1; break; }
+      if (steps[si].id === evt.id) { badgeLabel = '' + (si + 1); break; }
     }
-    if (num > 0) {
-      var badge = document.createElement('span');
-      badge.className = 'parcours-num-badge';
-      badge.textContent = num;
-      var pcol = parcoursColors[activeParcours] || '#7D3C98';
-      badge.style.background = pcol;
-      /* chip déjà positionné en absolu : ne pas écraser sa position */
-      chip.style.overflow = 'visible';
-      chip.appendChild(badge);
-    }
+    badgeColor = parcoursColors[activeParcours] || '#7D3C98';
+  } else if (_globalNum[evt.id]) {
+    badgeLabel = _globalNum[evt.id];
+    badgeColor = '#5A4A2F';  /* brun discret, neutre */
+  }
+  if (badgeLabel) {
+    var badge = document.createElement('span');
+    badge.className = 'parcours-num-badge';
+    badge.textContent = badgeLabel;
+    badge.style.background = badgeColor;
+    chip.style.overflow = 'visible';
+    chip.appendChild(badge);
   }
 
   return chip;
