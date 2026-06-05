@@ -315,6 +315,8 @@ function renderLevel(level, rangeStart) {
       });
     }
   });
+  console.log('NUMÉROTATION GLOBALE: ' + Object.keys(_globalNum).length +
+    ' événements numérotés (parcours actif: ' + (activeParcours||'non') + ')');
 
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
