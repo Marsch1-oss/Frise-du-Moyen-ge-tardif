@@ -917,18 +917,32 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
   chip.style.overflow = 'visible';
   if (level > 1) {
     var MOIS_ABR_R = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
-    var dateLblR = document.createElement('span');
-    dateLblR.className   = 'chip-date-label';
     var lblTxtR = evt.mois ? MOIS_ABR_R[evt.mois - 1] + '\u00a0' + evt.date : '' + evt.date;
     if (evt.date_fin && evt.date_fin > evt.date) {
       var finTxtR = evt.mois_fin ? MOIS_ABR_R[evt.mois_fin - 1] + '\u00a0' + evt.date_fin : '' + evt.date_fin;
       lblTxtR += '\u2013' + finTxtR;
     }
-    dateLblR.textContent = lblTxtR;
-    chip.appendChild(dateLblR);
-    var maxC = level === 4 ? 36 : level === 3 ? 26 : 18;
-    var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '\u2026' : evt.titre;
-    chip.appendChild(document.createTextNode(titre));
+    /* Largeur approximative du chip de règne en pixels */
+    var rChipPct = (Math.min(d1, end) - Math.max(d0, start)) / (end - start);
+    var rChipPx  = rChipPct * (TRACK_PX - 90);
+    /* Place pour le titre ? (≈ 6.5px par caractère + marge) */
+    var maxC = Math.max(0, Math.floor((rChipPx - 14) / 6.5));
+    var titreVisible = (maxC >= 4);  /* en dessous, le titre n'est pas lisible */
+
+    if (titreVisible) {
+      /* Chip assez large : date au-dessus (étiquette flottante) + titre dans le chip */
+      var dateLblR = document.createElement('span');
+      dateLblR.className   = 'chip-date-label';
+      dateLblR.textContent = lblTxtR;
+      chip.appendChild(dateLblR);
+      var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '\u2026' : evt.titre;
+      chip.appendChild(document.createTextNode(titre));
+    } else {
+      /* Chip trop étroit : pas de titre. On affiche la date À L'INTÉRIEUR du chip
+         (pas d'étiquette flottante qui déborderait et se superposerait au voisin) */
+      chip.style.fontSize = '0.6rem';
+      chip.appendChild(document.createTextNode(lblTxtR));
+    }
   }
   chip.title = '\u265b ' + evt.titre + ' (' + evt.date + (evt.date_fin ? '\u2013' + evt.date_fin : '') + ')';
   if (evt.image && evt.image.trim()) {
