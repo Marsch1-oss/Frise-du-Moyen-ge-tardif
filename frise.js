@@ -1953,15 +1953,22 @@ function updateBreadcrumb() {
 }
 
 function updateNavButtons() {
-  document.querySelectorAll('.nav-btn').forEach(function(btn, i) {
-    btn.classList.toggle('active', i + 1 === currentLevel);
-    btn.disabled = (i === 1 && currentCentury === null) || (i === 2 && currentDecade  === null) || (i === 3 && currentDecade  === null);
+  /* Surbrillance et activation par identifiant (évite le décalage d'index) */
+  var lvlBtns = [
+    { id: 'btn-level1', lvl: 1 },
+    { id: 'btn-level2', lvl: 2 },
+    { id: 'btn-level3', lvl: 3 },
+    { id: 'btn-level4', lvl: 4 }
+  ];
+  lvlBtns.forEach(function(b) {
+    var el = document.getElementById(b.id);
+    if (!el) return;
+    el.classList.toggle('active', currentLevel === b.lvl);
+    /* niveau 1 toujours dispo ; 2 si siècle connu ; 3 et 4 si siècle ou décennie connus */
+    if (b.lvl === 1)      el.disabled = false;
+    else if (b.lvl === 2) el.disabled = (currentCentury === null);
+    else                  el.disabled = (currentCentury === null && currentDecade === null);
   });
-  var btn4 = document.getElementById('btn-level4');
-  if (btn4) {
-    btn4.disabled = (currentDecade === null);
-    btn4.classList.toggle('active', currentLevel === 4);
-  }
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
   var lbl  = document.getElementById('decade-label');

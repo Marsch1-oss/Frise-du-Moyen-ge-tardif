@@ -249,11 +249,18 @@
     .control-bar {
       display: flex; align-items: center; justify-content: center;
       gap: 0.6rem; margin-bottom: 0.7rem;
-      padding: 0.3rem 1rem;
-      background: rgba(245,237,216,0.5);
-      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+      background: rgba(245,237,216,0.97);
+      border: 1.5px solid var(--border-dark);
       border-radius: 24px;
       flex-wrap: wrap;
+      /* Barre fixe : reste visible en haut au défilement */
+      position: sticky;
+      top: 8px;
+      z-index: 120;
+      box-shadow: 0 3px 14px rgba(60,42,20,0.16);
+      backdrop-filter: blur(3px);
+      transition: box-shadow 0.2s, top 0.2s;
     }
     .ctrl-nav-btn {
       font-family: 'Crimson Pro', serif; font-size: 0.88rem; font-style: italic;
@@ -1587,7 +1594,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1780649386"></script>
+<script src="frise.js?v=1780652285"></script>
 
 
 <!-- Modale login editeur -->
