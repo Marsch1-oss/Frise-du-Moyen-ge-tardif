@@ -315,8 +315,7 @@ function renderLevel(level, rangeStart) {
       });
     }
   });
-  console.log('NUMÉROTATION GLOBALE: ' + Object.keys(_globalNum).length +
-    ' événements numérotés (parcours actif: ' + (activeParcours||'non') + ')');
+
 
   for (var i = 0; i < ZONES.length; i++) {
     var zone = ZONES[i];
@@ -1158,24 +1157,28 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     return function(ev) { ev.stopPropagation(); openModal(e, z); };
   })(evt, zone));
 
-  /* Badge numéroté en mode parcours (ordre chronologique global) */
+  /* Badge numéroté :
+     - parcours actif : numéro d'ordre dans la série (couleur du parcours)
+     - sinon : numéro d'ordre global de la période visible (brun neutre) */
+  var badgeLabel = null, badgeColor = null;
   if (activeParcours) {
     var pSteps = getParcoursSteps(activeParcours);
-    var pNum = -1;
     for (var psi = 0; psi < pSteps.length; psi++) {
-      if (pSteps[psi].id === evt.id) { pNum = psi + 1; break; }
+      if (pSteps[psi].id === evt.id) { badgeLabel = '' + (psi + 1); break; }
     }
-    if (pNum > 0) {
-      var pBadge = document.createElement('span');
-      pBadge.className = 'parcours-num-badge';
-      pBadge.textContent = pNum;
-      pBadge.style.background = parcoursColors[activeParcours] || '#7D3C98';
-      /* NE PAS toucher chip.style.position : il est déjà 'absolute',
-         ce qui sert d'ancre au badge. Le passer en 'relative' casserait
-         tout le positionnement vertical (chips empilés au même endroit). */
-      chip.style.overflow = 'visible';
-      chip.appendChild(pBadge);
-    }
+    badgeColor = parcoursColors[activeParcours] || '#7D3C98';
+  } else if (_globalNum[evt.id]) {
+    badgeLabel = _globalNum[evt.id];
+    badgeColor = '#5A4A2F';
+  }
+  if (badgeLabel) {
+    var nBadge = document.createElement('span');
+    nBadge.className = 'parcours-num-badge';
+    nBadge.textContent = badgeLabel;
+    nBadge.style.background = badgeColor;
+    /* chip déjà en position absolute : sert d'ancre, ne pas modifier */
+    chip.style.overflow = 'visible';
+    chip.appendChild(nBadge);
   }
 
   return chip;
