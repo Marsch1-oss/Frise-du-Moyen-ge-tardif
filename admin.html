@@ -556,7 +556,7 @@ function renderList() {
     var card = document.createElement('div');
     card.className = 'event-card' + (editingId === evt.id ? ' active' : '');
     var t = evt.type || 1;
-    var stars = t === 1 ? '★★★★' : t === 2 ? '★★★' : t === 3 ? '★★' : '★';
+    var stars = t === 1 ? '★★★★★' : t === 2 ? '★★★★' : t === 3 ? '★★★' : t === 4 ? '★★' : '★';
     var zonesHtml = (evt.zones || []).map(function(z) {
       return '<span class="ec-zone" style="background:' + (COLORS[z] || '#888') + '">' + z + '</span>';
     }).join('');
