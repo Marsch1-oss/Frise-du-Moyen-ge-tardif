@@ -929,17 +929,25 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     var maxC = Math.max(0, Math.floor((rChipPx - 14) / 6.5));
     var titreVisible = (maxC >= 4);  /* en dessous, le titre n'est pas lisible */
 
+    /* Pour les règnes, la date est TOUJOURS affichée À L'INTÉRIEUR du chip
+       (jamais en étiquette flottante au-dessus, qui déborderait sur la ligne
+        du dessus et recouvrirait le règne voisin). */
     if (titreVisible) {
-      /* Chip assez large : date au-dessus (étiquette flottante) + titre dans le chip */
-      var dateLblR = document.createElement('span');
-      dateLblR.className   = 'chip-date-label';
-      dateLblR.textContent = lblTxtR;
-      chip.appendChild(dateLblR);
-      var titre = evt.titre.length > maxC ? evt.titre.slice(0, maxC - 1) + '\u2026' : evt.titre;
-      chip.appendChild(document.createTextNode(titre));
+      /* Chip large : « nom (date) » dans le chip */
+      var maxCName = Math.max(4, maxC - lblTxtR.length - 3);
+      var titre = evt.titre.length > maxCName ? evt.titre.slice(0, maxCName - 1) + '\u2026' : evt.titre;
+      var nameSpan = document.createElement('span');
+      nameSpan.textContent = titre;
+      nameSpan.style.fontWeight = '700';
+      chip.appendChild(nameSpan);
+      var dSpan = document.createElement('span');
+      dSpan.textContent = '\u00a0(' + lblTxtR + ')';
+      dSpan.style.fontWeight = '400';
+      dSpan.style.fontSize   = '0.9em';
+      dSpan.style.opacity    = '0.85';
+      chip.appendChild(dSpan);
     } else {
-      /* Chip trop étroit : pas de titre. On affiche la date À L'INTÉRIEUR du chip
-         (pas d'étiquette flottante qui déborderait et se superposerait au voisin) */
+      /* Chip étroit : seulement la date à l'intérieur */
       chip.style.fontSize = '0.6rem';
       chip.appendChild(document.createTextNode(lblTxtR));
     }
