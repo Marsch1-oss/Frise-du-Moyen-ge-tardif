@@ -231,6 +231,7 @@ function filterAll(checked) {
 function refreshFrise() {
   if      (currentLevel === 1) renderLevel(1);
   else if (currentLevel === 2) renderLevel(2, currentCentury);
+  else if (currentLevel === 4 && currentYear !== null) renderLevel(4, currentYear);
   else                         renderLevel(3, currentDecade);
 }
 
