@@ -237,7 +237,17 @@ function refreshFrise() {
 
 /* ── Rendu principal ─────────────────────────────────────────────────*/
 function renderLevel(level, rangeStart) {
+  var _prevLevel = currentLevel;
   currentLevel = level;
+  /* À la PREMIÈRE entrée en vue annuelle (depuis une autre échelle),
+     ouvrir au niveau de détail Complet pour ne pas afficher une vue vide.
+     (Si on était déjà en vue annuelle, on respecte le détail choisi par l'usager.) */
+  if (level === 4 && _prevLevel !== 4) {
+    detailLevel = 4;
+    document.querySelectorAll('.detail-btn').forEach(function(b) {
+      b.classList.toggle('active', parseInt(b.dataset.level) === 4);
+    });
+  }
   var start, end, tickStep;
   if (level === 1) {
     start = 1290; end = 1510; tickStep = 25;
@@ -1449,28 +1459,26 @@ function wzInit() {
       grid.appendChild(chipsEl);
     }
   }
+  wzUpdateNextHint();  /* reflète l'état initial des zones (bandeau masqué si aucune) */
   wzGoTo(1);
 }
 
 function wzUpdateNextHint() {
-  /* Met en évidence le bouton Suivant dès qu'une zone est choisie */
-  var step1 = document.getElementById('wz-step-1');
-  var nextBtn = step1 ? step1.querySelector('.wz-btn-next') : null;
-  if (!nextBtn) {
-    /* fallback : 1er bouton Suivant de la page */
-    nextBtn = document.querySelector('.wz-btn-next');
-  }
-  if (!nextBtn) return;
+  /* Affiche un bandeau d'invite centré dès qu'au moins une zone est choisie */
+  var prompt = document.getElementById('wz-next-prompt');
+  var countEl = document.getElementById('wz-zone-count');
+  if (!prompt) return;
   var nbZones = 0;
   for (var z in activeZones) if (activeZones[z]) nbZones++;
   if (nbZones > 0) {
-    nextBtn.classList.add('wz-next-ready');
-    nextBtn.innerHTML = (nbZones === 1)
-      ? 'Choisir la période \u203a'
-      : 'Choisir la période \u203a';
+    prompt.style.display = 'block';
+    if (countEl) {
+      countEl.textContent = nbZones === 1
+        ? '1 zone sélectionnée'
+        : nbZones + ' zones sélectionnées';
+    }
   } else {
-    nextBtn.classList.remove('wz-next-ready');
-    nextBtn.innerHTML = 'Suivant \u203a';
+    prompt.style.display = 'none';
   }
 }
 

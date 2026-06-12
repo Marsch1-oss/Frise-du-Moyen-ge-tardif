@@ -1317,6 +1317,54 @@
       0%, 100% { transform: scale(1); box-shadow: 0 2px 10px rgba(139,94,52,0.4); }
       50%      { transform: scale(1.06); box-shadow: 0 4px 16px rgba(139,94,52,0.55); }
     }
+
+    /* Bandeau d'invite centré après sélection d'une zone */
+    .wz-next-prompt {
+      margin: 0.8rem 1.5rem 0.2rem;
+      padding: 0.9rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(139,94,52,0.10), rgba(139,94,52,0.04));
+      border: 1.5px solid rgba(139,94,52,0.35);
+      border-radius: 14px;
+      animation: wzPromptIn 0.35s ease;
+    }
+    @keyframes wzPromptIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .wz-next-prompt-title {
+      margin: 0 0 0.15rem; font-weight: 700; color: var(--accent, #8B5E34);
+      font-size: 0.95rem;
+    }
+    .wz-next-prompt-sub {
+      margin: 0 0 0.7rem; font-size: 0.82rem; color: var(--ink-muted); font-style: italic;
+    }
+    .wz-next-options {
+      display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;
+    }
+    .wz-next-opt {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.55rem 1rem; border-radius: 10px;
+      border: 1.5px solid var(--border-dark, #b89b72);
+      background: rgba(245,237,216,0.9); cursor: pointer;
+      font-size: 0.88rem; color: var(--ink, #3a2a14);
+      transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+    }
+    .wz-next-opt:hover { transform: translateY(-2px); box-shadow: 0 3px 10px rgba(60,42,20,0.18); }
+    .wz-next-opt-primary {
+      background: var(--accent, #8B5E34); color: #fff; border-color: var(--accent, #8B5E34);
+      animation: wzPulse 1.5s ease-in-out infinite;
+    }
+    .wz-next-opt-primary:hover { background: #744d2a; }
+    .wz-opt-letter {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(255,255,255,0.25); font-weight: 700; font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+    .wz-next-opt:not(.wz-next-opt-primary) .wz-opt-letter {
+      background: var(--accent, #8B5E34); color: #fff;
+    }
 </style>
 </head>
 <body>
@@ -1471,6 +1519,21 @@
 
       <div id="wz-zones-grid" class="wz-zones-grid"></div>
 
+      <div id="wz-next-prompt" class="wz-next-prompt" style="display:none;">
+        <p class="wz-next-prompt-title">&#10003; <span id="wz-zone-count">1 zone s&eacute;lectionn&eacute;e</span></p>
+        <p class="wz-next-prompt-sub">Que faire ensuite&nbsp;?</p>
+        <div class="wz-next-options">
+          <button class="wz-next-opt wz-next-opt-primary" onclick="wzNext()">
+            <span class="wz-opt-letter">A</span>
+            <span class="wz-opt-text">Choisir une p&eacute;riode ou une date</span>
+          </button>
+          <button class="wz-next-opt" onclick="document.getElementById('wz-zones-grid').scrollIntoView({behavior:'smooth',block:'center'});">
+            <span class="wz-opt-letter">B</span>
+            <span class="wz-opt-text">Ajouter une zone ou un th&egrave;me</span>
+          </button>
+        </div>
+      </div>
+
       <div class="wz-divider"><span>ou</span></div>
 
       <div class="wz-search-row">
@@ -1599,7 +1662,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1781273949"></script>
+<script src="frise.js?v=1781282119"></script>
 
 
 <!-- Modale login editeur -->
