@@ -1441,6 +1441,7 @@ function wzInit() {
             chip.style.color      = on ? '#fff' : col.text;
             chip.style.background = on ? col.bg : col.light;
             dot.style.background  = on ? 'rgba(255,255,255,0.6)' : col.bg;
+            wzUpdateNextHint();
           });
           chipsEl.appendChild(chip);
         })(grpZones[zi]);
@@ -1449,6 +1450,28 @@ function wzInit() {
     }
   }
   wzGoTo(1);
+}
+
+function wzUpdateNextHint() {
+  /* Met en évidence le bouton Suivant dès qu'une zone est choisie */
+  var step1 = document.getElementById('wz-step-1');
+  var nextBtn = step1 ? step1.querySelector('.wz-btn-next') : null;
+  if (!nextBtn) {
+    /* fallback : 1er bouton Suivant de la page */
+    nextBtn = document.querySelector('.wz-btn-next');
+  }
+  if (!nextBtn) return;
+  var nbZones = 0;
+  for (var z in activeZones) if (activeZones[z]) nbZones++;
+  if (nbZones > 0) {
+    nextBtn.classList.add('wz-next-ready');
+    nextBtn.innerHTML = (nbZones === 1)
+      ? 'Choisir la période \u203a'
+      : 'Choisir la période \u203a';
+  } else {
+    nextBtn.classList.remove('wz-next-ready');
+    nextBtn.innerHTML = 'Suivant \u203a';
+  }
 }
 
 function wzScaleChanged(val) {
@@ -1557,9 +1580,9 @@ function wzClose() {
      - vue siècle (2)  : detailLevel 1 (les autres niveaux non proposés)
      - vue décennale(3): detailLevel 2 (Important par défaut, ajustable au zoom)
      - vue annuelle (4): detailLevel 3 (Détaillé par défaut, ajustable au zoom) */
-  if (scale === 2)      detailLevel = 1;
-  else if (scale === 3) detailLevel = 2;
-  else                  detailLevel = 3;
+  if (scale === 2)      detailLevel = 1;  /* siècle    → Siècle */
+  else if (scale === 3) detailLevel = 2;  /* décennale → Important */
+  else                  detailLevel = 4;  /* annuelle  → Complet (tous les événements) */
   document.querySelectorAll('.detail-btn').forEach(function(b) {
     b.classList.toggle('active', parseInt(b.dataset.level) === detailLevel);
   });

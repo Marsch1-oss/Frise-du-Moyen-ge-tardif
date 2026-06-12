@@ -1304,7 +1304,20 @@
       pointer-events: none;
     }
 
-  </style>
+  
+    /* Bouton Suivant mis en évidence après sélection d'une zone */
+    .wz-btn-next.wz-next-ready {
+      background: var(--accent, #8B5E34);
+      color: #fff;
+      border-color: var(--accent, #8B5E34);
+      animation: wzPulse 1.4s ease-in-out infinite;
+      box-shadow: 0 2px 10px rgba(139,94,52,0.4);
+    }
+    @keyframes wzPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 2px 10px rgba(139,94,52,0.4); }
+      50%      { transform: scale(1.06); box-shadow: 0 4px 16px rgba(139,94,52,0.55); }
+    }
+</style>
 </head>
 <body>
 
@@ -1586,7 +1599,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1781113353"></script>
+<script src="frise.js?v=1781273949"></script>
 
 
 <!-- Modale login editeur -->
