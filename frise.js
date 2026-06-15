@@ -1375,11 +1375,23 @@ function updateSyntheseBar() {
     if (!_syntheses[key]) return;   /* uniquement les synthèses rédigées à la main */
     found++;
     var col = COLORS[zone] || COLORS['France'];
+    var synth = _syntheses[key];
+    var titreSynth = (synth && synth.titre && synth.titre.trim())
+      ? synth.titre.trim()
+      : zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
     var b = document.createElement('button');
     b.className = 'synthese-bar-btn';
-    b.innerHTML = '\uD83D\uDCD6\u00a0' + zone;
+    /* Le bouton affiche le TITRE de la synthèse (double rôle : titre + lien) */
+    var icon = document.createElement('span');
+    icon.className = 'synthese-bar-btn-icon';
+    icon.textContent = '\uD83D\uDCD6';  /* 📖 */
+    var lbl = document.createElement('span');
+    lbl.className = 'synthese-bar-btn-text';
+    lbl.textContent = titreSynth;
+    b.appendChild(icon);
+    b.appendChild(lbl);
     b.style.background = col.bg;
-    b.title = 'Lire la synthèse de ' + zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
+    b.title = 'Lire la synthèse : ' + titreSynth;
     b.onclick = (function(z, d) {
       return function() { showSyntheseBanner(z, d); };
     })(zone, currentDecade);
