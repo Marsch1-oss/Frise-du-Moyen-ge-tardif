@@ -148,6 +148,69 @@ function visibleAtLevel(evt, level) {
 }
 
 /* ── Chargement ─────────────────────────────────────────────────────── */
+/* ── Synthèses décennales par zone ──────────────────────────────── */
+var _syntheses = {};   /* clé "Zone|décennie" -> { titre, texte, auto } */
+
+function loadSyntheses() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'syntheses.json', true);
+  xhr.onload = function() {
+    if (xhr.status === 200 || xhr.status === 0) {
+      try { _syntheses = JSON.parse(xhr.responseText) || {}; }
+      catch (e) { _syntheses = {}; }
+    }
+  };
+  xhr.onerror = function() { _syntheses = {}; };
+  xhr.send();
+}
+
+/* Génère un brouillon de synthèse à partir des fiches de la période */
+function generateSynthese(zone, dec) {
+  var evts = allEvents.filter(function(e) {
+    return !e.regne && e.zones.indexOf(zone) !== -1 &&
+           e.date >= dec && e.date < dec + 10;
+  }).sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+  if (evts.length === 0) return null;
+
+  /* Intro : les événements majeurs (types 2-3) en phrase */
+  var majeurs = evts.filter(function(e) { return (Number(e.type) || 3) <= 3; });
+  var intro = 'Au cours de la décennie ' + dec + '-' + (dec + 9) +
+              ', la zone « ' + zone + ' » compte ' + evts.length +
+              ' événement' + (evts.length > 1 ? 's' : '') + ' notable' +
+              (evts.length > 1 ? 's' : '') +
+              (majeurs.length ? ', dont ' + majeurs.length + ' majeur' +
+               (majeurs.length > 1 ? 's' : '') : '') + '.';
+
+  /* Corps : liste chronologique titre + début de description */
+  var lignes = evts.map(function(e) {
+    var d = e.date + (e.mois ? '' : '');
+    var desc = (e.description || '').replace(/\s+/g, ' ').trim();
+    if (desc.length > 160) desc = desc.slice(0, 157) + '…';
+    return d + ' — ' + e.titre + (desc ? ' : ' + desc : '');
+  });
+
+  return {
+    titre: zone + ' · ' + dec + '-' + (dec + 9),
+    texte: intro + '\n\n' + lignes.join('\n'),
+    auto: true,
+    nbFiches: evts.length
+  };
+}
+
+/* Renvoie la synthèse rédigée si elle existe, sinon le brouillon auto */
+function getSynthese(zone, dec) {
+  var key = zone + '|' + dec;
+  if (_syntheses[key]) {
+    var s = _syntheses[key];
+    return { titre: s.titre || (zone + ' · ' + dec), texte: s.texte || '', auto: false };
+  }
+  return generateSynthese(zone, dec);
+}
+
 function loadEvents() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'events.json', true);
@@ -163,6 +226,7 @@ function loadEvents() {
         });
         getAllParcours();
         buildFilterBar();
+        loadSyntheses();   /* charge les synthèses rédigées (optionnel) */
         wzInit();
       } catch(err) {
         document.getElementById('frise-container').innerHTML =
@@ -712,6 +776,17 @@ function buildTrack(zone, evts, start, end, level) {
   dot.style.background = col.bg;
   lbl.appendChild(dot);
   lbl.appendChild(document.createTextNode(zone));
+  /* Bouton de synthèse décennale (vue décennale uniquement) */
+  if (level === 3 && currentDecade !== null) {
+    var synthBtn = document.createElement('button');
+    synthBtn.className = 'zone-synth-btn';
+    synthBtn.innerHTML = '\uD83D\uDCCB';  /* 📋 */
+    synthBtn.title = 'Synthèse de ' + zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
+    synthBtn.onclick = (function(z, d) {
+      return function(ev) { ev.stopPropagation(); openSyntheseModal(z, d); };
+    })(zone, currentDecade);
+    lbl.appendChild(synthBtn);
+  }
   row.appendChild(lbl);
   var visible = evts.filter(function(evt) {
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
@@ -1237,6 +1312,53 @@ function closeLightbox() {
 }
 
 /* ── Modale ──────────────────────────────────────────────────────────*/
+function openSyntheseModal(zone, dec) {
+  var s = getSynthese(zone, dec);
+  if (!s) {
+    s = { titre: zone + ' · ' + dec + '-' + (dec + 9),
+          texte: 'Aucun événement enregistré pour cette zone à cette période.',
+          auto: true };
+  }
+  var col = COLORS[zone] || COLORS['France'];
+
+  /* En-tête : zone + période */
+  var zoneEl = document.getElementById('modal-zone');
+  zoneEl.textContent = zone;
+  zoneEl.style.background = col.light;
+  zoneEl.style.color = col.text;
+
+  var typeEl = document.getElementById('modal-type');
+  if (typeEl) {
+    typeEl.textContent = s.auto ? '\uD83D\uDCCB Synthèse (brouillon auto)'
+                                : '\uD83D\uDCCB Synthèse';
+    typeEl.className = 'modal-type-badge';
+  }
+  document.getElementById('modal-date').textContent = dec + ' \u2013 ' + (dec + 9);
+  document.getElementById('modal-title').innerHTML = highlightText(s.titre);
+
+  /* Corps : texte de la synthèse, paragraphes */
+  var descEl = document.getElementById('modal-desc');
+  descEl.innerHTML = '';
+  var paras = (s.texte || '').split(/\n\n+/);
+  for (var pi = 0; pi < paras.length; pi++) {
+    if (!paras[pi].trim()) continue;
+    var p = document.createElement('p');
+    /* conserve les sauts de ligne simples comme <br> pour la liste chronologique */
+    p.innerHTML = highlightText(paras[pi].trim()).replace(/\n/g, '<br>');
+    descEl.appendChild(p);
+  }
+
+  /* Masque les éléments propres aux fiches (image, vidéo, sources) */
+  document.getElementById('modal-sources').textContent = '';
+  var imgWrap = document.getElementById('modal-img-wrap');
+  if (imgWrap) imgWrap.style.display = 'none';
+  var videoWrap = document.getElementById('modal-video-wrap');
+  if (videoWrap) { videoWrap.innerHTML = ''; videoWrap.style.display = 'none'; }
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
 function openModal(evt, zone) {
   var col = COLORS[zone] || COLORS['France'];
   document.getElementById('modal-zone').textContent      = zone;

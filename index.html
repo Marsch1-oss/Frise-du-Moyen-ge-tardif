@@ -1365,6 +1365,20 @@
     .wz-next-opt:not(.wz-next-opt-primary) .wz-opt-letter {
       background: var(--accent, #8B5E34); color: #fff;
     }
+
+    /* Bouton de synthèse décennale dans le label de zone */
+    .zone-synth-btn {
+      margin-left: 5px; padding: 1px 5px;
+      font-size: 0.78rem; line-height: 1;
+      background: rgba(139,94,52,0.12);
+      border: 1px solid rgba(139,94,52,0.35);
+      border-radius: 6px; cursor: pointer;
+      transition: background 0.12s, transform 0.12s;
+      vertical-align: middle;
+    }
+    .zone-synth-btn:hover {
+      background: rgba(139,94,52,0.28); transform: scale(1.12);
+    }
 </style>
 </head>
 <body>
@@ -1662,7 +1676,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1781282119"></script>
+<script src="frise.js?v=1781475552"></script>
 
 
 <!-- Modale login editeur -->
