@@ -782,13 +782,20 @@ function synthUpdateStatus() {
   var st = document.getElementById('synth-status');
   if (!zSel || !dSel || !st) return;
   var key = zSel.value + '|' + dSel.value;
+  var titreEl = document.getElementById('synth-titre');
+  var texteEl = document.getElementById('synth-texte');
   if (_synthData[key]) {
-    st.innerHTML = '✓ Une synthèse existe déjà pour cette sélection ' +
-                   '<span style="color:#888;">(la regénérer écrasera le brouillon affiché ; ' +
-                   '« Ajouter » la mettra à jour)</span>';
+    /* Charge automatiquement la synthèse existante dans le formulaire */
+    var s = _synthData[key];
+    if (titreEl) titreEl.value = s.titre || '';
+    if (texteEl) texteEl.value = s.texte || '';
+    st.innerHTML = '✓ Synthèse existante chargée — modifiez puis « Ajouter / Mettre à jour ».';
     st.style.color = '#2e7d32';
   } else {
-    st.innerHTML = '○ Aucune synthèse pour cette sélection — générez puis ajoutez.';
+    /* Aucune synthèse : vide le formulaire pour éviter de garder l'ancien texte */
+    if (titreEl) titreEl.value = '';
+    if (texteEl) texteEl.value = '';
+    st.innerHTML = '○ Aucune synthèse pour cette sélection — générez un brouillon puis ajoutez.';
     st.style.color = '#999';
   }
 }

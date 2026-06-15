@@ -339,6 +339,7 @@ function renderLevel(level, rangeStart) {
 
   updateBreadcrumb();
   updateNavButtons();
+  updateSyntheseBar();
   updatePeriodBanner(level, rangeStart || 1300);
 
   var container = document.getElementById('frise-container');
@@ -783,24 +784,8 @@ function buildTrack(zone, evts, start, end, level) {
   var dot = document.createElement('span');
   dot.className = 'zone-dot';
   dot.style.background = col.bg;
-  /* Ligne 1 : pastille + nom de la zone */
-  var lblTop = document.createElement('div');
-  lblTop.className = 'zone-label-name';
-  lblTop.appendChild(dot);
-  lblTop.appendChild(document.createTextNode(zone));
-  lbl.appendChild(lblTop);
-  /* Ligne 2 (vue décennale) : bouton Synthèse sous le nom */
-  if (level === 3 && currentDecade !== null) {
-    var synthBtn = document.createElement('button');
-    synthBtn.className = 'zone-synth-btn';
-    synthBtn.innerHTML = '\uD83D\uDCD6\u00a0Synthèse';  /* 📖 Synthèse */
-    synthBtn.title = 'Lire la synthèse de ' + zone + ' pour ' + currentDecade + '-' + (currentDecade + 9);
-    synthBtn.onclick = (function(z, d) {
-      return function(ev) { ev.stopPropagation(); showSyntheseBanner(z, d); };
-    })(zone, currentDecade);
-    lbl.appendChild(synthBtn);
-  }
-  lbl.classList.add('zone-label-col');
+  lbl.appendChild(dot);
+  lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
   var visible = evts.filter(function(evt) {
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
@@ -1369,6 +1354,40 @@ function renderSyntheseParagraph(container, text) {
 }
 
 var _currentSynthese = null;   /* {zone, dec} de la synthèse affichée dans le bandeau */
+
+function updateSyntheseBar() {
+  var bar = document.getElementById('synthese-bar');
+  var btns = document.getElementById('synthese-bar-btns');
+  if (!bar || !btns) return;
+  btns.innerHTML = '';
+
+  /* Affichée seulement en vue décennale */
+  if (currentLevel !== 3 || currentDecade === null) {
+    bar.style.display = 'none';
+    return;
+  }
+
+  /* Un bouton par zone active possédant une synthèse RÉDIGÉE pour cette décennie */
+  var found = 0;
+  ZONES.forEach(function(zone) {
+    if (!activeZones[zone]) return;
+    var key = zone + '|' + currentDecade;
+    if (!_syntheses[key]) return;   /* uniquement les synthèses rédigées à la main */
+    found++;
+    var col = COLORS[zone] || COLORS['France'];
+    var b = document.createElement('button');
+    b.className = 'synthese-bar-btn';
+    b.innerHTML = '\uD83D\uDCD6\u00a0' + zone;
+    b.style.background = col.bg;
+    b.title = 'Lire la synthèse de ' + zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
+    b.onclick = (function(z, d) {
+      return function() { showSyntheseBanner(z, d); };
+    })(zone, currentDecade);
+    btns.appendChild(b);
+  });
+
+  bar.style.display = found > 0 ? 'flex' : 'none';
+}
 
 function showSyntheseBanner(zone, dec) {
   var s = getSynthese(zone, dec);
