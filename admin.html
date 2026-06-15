@@ -328,6 +328,15 @@
   <div id="synth-list" style="margin-top:0.8rem;font-size:0.82rem;"></div>
 </div>
 
+<div class="panel" style="margin-top:1.2rem;">
+  <div class="panel-title">📊 Tableau de bord</div>
+  <p style="font-size:0.85rem;color:#666;margin:0.3rem 0 0.8rem;">
+    Vue d'ensemble de la complétude et des points à corriger. Cliquez sur « Actualiser » après un import.
+  </p>
+  <button class="btn" onclick="dashRefresh()" style="padding:0.35rem 1rem;margin-bottom:0.8rem;">↻ Actualiser le tableau de bord</button>
+  <div id="dash-content"></div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -840,7 +849,132 @@ function synthSave() {
   if (!texte) { toast('\u26a0 Texte vide'); return; }
   _synthData[zone + '|' + dec] = { titre: titre, texte: texte, auto: false };
   synthRenderList();
-  synthInitControls();   /* rafraîchit les marqueurs ✓ */
+  
+/* ─── Tableau de bord : statistiques et validation ──────────────── */
+function dashRefresh() {
+  var el = document.getElementById('dash-content');
+  if (!el) return;
+  if (events.length === 0) {
+    el.innerHTML = '<p style="color:#c00;">Importez d\'abord votre events.json.</p>';
+    return;
+  }
+
+  var nonRegne = events.filter(function(e){ return !e.regne; });
+  var total = events.length;
+
+  /* 1. Complétude globale */
+  var sansDesc = nonRegne.filter(function(e){ return !(e.description||'').trim(); });
+  var sansImg  = nonRegne.filter(function(e){ return !(e.image||'').trim(); });
+  var sansSrc  = nonRegne.filter(function(e){ return !(e.sources||'').trim(); });
+
+  /* 2. Incohérences */
+  var pbDate = [], pbMois = [], pbZone = [], pbType = [];
+  events.forEach(function(e){
+    if (e.date_fin && e.date_fin < e.date) pbDate.push(e);
+    if (e.mois && (e.mois < 1 || e.mois > 12)) pbMois.push(e);
+    if (e.date && (e.date < 1000 || e.date > 1600)) pbDate.push(e);
+    if (!e.zones || e.zones.length === 0) pbZone.push(e);
+    (e.zones||[]).forEach(function(z){ if (ZONES.indexOf(z) === -1 && pbZone.indexOf(e) === -1) pbZone.push(e); });
+    if (e.type && (e.type < 1 || e.type > 5)) pbType.push(e);
+  });
+
+  /* 3. Répartition par type */
+  var byType = {1:0,2:0,3:0,4:0,5:0};
+  events.forEach(function(e){ var t = e.type||1; if (byType[t]!==undefined) byType[t]++; });
+
+  /* 4. Complétude par zone */
+  var zoneStat = {};
+  nonRegne.forEach(function(e){
+    (e.zones||[]).forEach(function(z){
+      if (!zoneStat[z]) zoneStat[z] = { total:0, img:0, desc:0 };
+      zoneStat[z].total++;
+      if ((e.image||'').trim()) zoneStat[z].img++;
+      if ((e.description||'').trim()) zoneStat[z].desc++;
+    });
+  });
+  var zoneRows = Object.keys(zoneStat).sort(function(a,b){ return zoneStat[b].total - zoneStat[a].total; });
+
+  /* 5. Synthèses : couverture */
+  var nbSynth = Object.keys(_synthData).length;
+
+  function bar(n, tot, color) {
+    var pct = tot ? Math.round(n / tot * 100) : 0;
+    return '<div style="background:#eee;border-radius:4px;height:14px;width:100px;display:inline-block;vertical-align:middle;overflow:hidden;">' +
+           '<div style="background:' + color + ';height:100%;width:' + pct + '%;"></div></div> ' + pct + '%';
+  }
+
+  var html = '';
+
+  /* Cartes de synthèse */
+  html += '<div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1rem;">';
+  function card(label, value, sub) {
+    return '<div style="flex:1;min-width:120px;background:#f7f3ea;border:1px solid #ddd;border-radius:8px;padding:0.7rem;text-align:center;">' +
+           '<div style="font-size:1.5rem;font-weight:700;color:#8B5E34;">' + value + '</div>' +
+           '<div style="font-size:0.78rem;color:#666;">' + label + '</div>' +
+           (sub ? '<div style="font-size:0.7rem;color:#999;">' + sub + '</div>' : '') + '</div>';
+  }
+  html += card('Événements', total, nonRegne.length + ' hors règnes');
+  html += card('Avec image', (nonRegne.length - sansImg.length), bar(nonRegne.length - sansImg.length, nonRegne.length, '#2e7d32'));
+  html += card('Avec description', (nonRegne.length - sansDesc.length), bar(nonRegne.length - sansDesc.length, nonRegne.length, '#1565c0'));
+  html += card('Synthèses', nbSynth, 'rédigées');
+  html += '</div>';
+
+  /* Répartition par type */
+  html += '<h4 style="margin:0.8rem 0 0.4rem;">Répartition par niveau</h4>';
+  var typeLabels = {1:'Règne',2:'Siècle',3:'Important',4:'Détaillé',5:'Complet'};
+  html += '<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">';
+  for (var t = 1; t <= 5; t++) {
+    html += '<tr><td style="padding:2px 8px;">Niveau ' + t + ' — ' + typeLabels[t] + '</td>' +
+            '<td style="padding:2px 8px;text-align:right;font-weight:600;">' + byType[t] + '</td>' +
+            '<td style="padding:2px 8px;">' + bar(byType[t], total, '#8B5E34') + '</td></tr>';
+  }
+  html += '</table>';
+
+  /* Problèmes à corriger */
+  html += '<h4 style="margin:1rem 0 0.4rem;">\u26A0 Points à vérifier</h4>';
+  function probLine(label, arr) {
+    if (arr.length === 0) return '<div style="color:#2e7d32;padding:2px 0;">\u2713 ' + label + ' : aucun</div>';
+    var ids = arr.slice(0, 12).map(function(e){
+      return '<a href="#" onclick="loadEvent(' + e.id + ');return false;" style="color:#c00;">#' + e.id + '</a>';
+    }).join(', ');
+    return '<div style="padding:2px 0;"><strong style="color:#c00;">' + arr.length + '</strong> ' + label + ' : ' +
+           ids + (arr.length > 12 ? '\u2026' : '') + '</div>';
+  }
+  html += probLine('sans description', sansDesc);
+  html += probLine('dates incohérentes', pbDate);
+  html += probLine('mois invalides', pbMois);
+  html += probLine('zone manquante/inconnue', pbZone);
+  html += probLine('niveau (type) invalide', pbType);
+
+  /* Complétude par zone */
+  html += '<h4 style="margin:1rem 0 0.4rem;">Complétude par zone</h4>';
+  html += '<table style="width:100%;border-collapse:collapse;font-size:0.82rem;">';
+  html += '<tr style="border-bottom:1px solid #ccc;"><th style="text-align:left;padding:3px 8px;">Zone</th>' +
+          '<th style="padding:3px 8px;">Fiches</th><th style="padding:3px 8px;">Images</th><th style="padding:3px 8px;">Descriptions</th></tr>';
+  zoneRows.forEach(function(z){
+    var s = zoneStat[z];
+    html += '<tr style="border-bottom:1px solid #eee;"><td style="padding:3px 8px;">' + z + '</td>' +
+            '<td style="padding:3px 8px;text-align:center;">' + s.total + '</td>' +
+            '<td style="padding:3px 8px;">' + bar(s.img, s.total, '#2e7d32') + '</td>' +
+            '<td style="padding:3px 8px;">' + bar(s.desc, s.total, '#1565c0') + '</td></tr>';
+  });
+  html += '</table>';
+
+  el.innerHTML = html;
+}
+
+/* Charge un événement dans le formulaire depuis le tableau de bord */
+function loadEvent(id) {
+  var e = events.filter(function(x){ return x.id === id; })[0];
+  if (e) {
+    fillForm(e);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    toast('Événement #' + id + ' chargé');
+  }
+}
+
+
+synthInitControls();   /* rafraîchit les marqueurs ✓ */
   toast('\u2713 Synthèse ' + zone + ' ' + dec + ' enregistrée');
 }
 
