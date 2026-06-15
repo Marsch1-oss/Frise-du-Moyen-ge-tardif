@@ -849,11 +849,15 @@ function synthSave() {
   if (!texte) { toast('\u26a0 Texte vide'); return; }
   _synthData[zone + '|' + dec] = { titre: titre, texte: texte, auto: false };
   synthRenderList();
-  
+  synthInitControls();   /* rafraîchit les marqueurs ✓ */
+  toast('\u2713 Synthèse ' + zone + ' ' + dec + ' enregistrée');
+}
+
 /* ─── Tableau de bord : statistiques et validation ──────────────── */
 function dashRefresh() {
   var el = document.getElementById('dash-content');
   if (!el) return;
+  el.innerHTML = '<p style="color:#999;">Génération du tableau de bord\u2026</p>';
   if (!events || events.length === 0) {
     el.innerHTML = '<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:1rem;color:#856404;">' +
       '<strong>\u26A0 Aucun événement chargé.</strong><br>' +
@@ -976,11 +980,6 @@ function loadEvent(id) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     toast('Événement #' + id + ' chargé');
   }
-}
-
-
-synthInitControls();   /* rafraîchit les marqueurs ✓ */
-  toast('\u2713 Synthèse ' + zone + ' ' + dec + ' enregistrée');
 }
 
 function synthDelete() {
