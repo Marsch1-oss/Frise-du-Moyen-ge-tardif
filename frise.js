@@ -1312,6 +1312,48 @@ function closeLightbox() {
 }
 
 /* ── Modale ──────────────────────────────────────────────────────────*/
+/* Transforme un paragraphe de synthèse en noeuds DOM :
+   les balises [[id]] deviennent des liens cliquables vers la fiche,
+   les sauts de ligne simples deviennent des <br>. */
+function renderSyntheseParagraph(container, text) {
+  /* Découpe le texte sur les balises [[id]] tout en les conservant */
+  var parts = text.split(/(\[\[\d+\]\])/);
+  parts.forEach(function(part) {
+    var m = part.match(/^\[\[(\d+)\]\]$/);
+    if (m) {
+      var id = parseInt(m[1]);
+      var evt = allEvents.filter(function(e) { return e.id === id; })[0];
+      if (evt) {
+        var a = document.createElement('a');
+        a.className = 'synth-link';
+        a.href = '#';
+        a.textContent = '\uD83D\uDD0E';  /* 🔎 loupe : ouvre la fiche */
+        a.title = 'Ouvrir la fiche : ' + evt.titre + ' (' + evt.date + ')';
+        a.onclick = (function(e) {
+          return function(ev) {
+            ev.preventDefault();
+            var z = (e.zones && e.zones[0]) || ZONES[0];
+            openModal(e, z);
+          };
+        })(evt);
+        container.appendChild(a);
+      } else {
+        /* id inconnu : on ignore la balise silencieusement */
+      }
+    } else if (part) {
+      /* Texte normal : applique le surlignage de recherche + <br> pour les retours ligne */
+      var lines = part.split('\n');
+      lines.forEach(function(line, li) {
+        if (li > 0) container.appendChild(document.createElement('br'));
+        var span = document.createElement('span');
+        span.innerHTML = highlightText(line);
+        /* déplie le span pour garder le texte inline */
+        while (span.firstChild) container.appendChild(span.firstChild);
+      });
+    }
+  });
+}
+
 function openSyntheseModal(zone, dec) {
   var s = getSynthese(zone, dec);
   if (!s) {
@@ -1343,8 +1385,7 @@ function openSyntheseModal(zone, dec) {
   for (var pi = 0; pi < paras.length; pi++) {
     if (!paras[pi].trim()) continue;
     var p = document.createElement('p');
-    /* conserve les sauts de ligne simples comme <br> pour la liste chronologique */
-    p.innerHTML = highlightText(paras[pi].trim()).replace(/\n/g, '<br>');
+    renderSyntheseParagraph(p, paras[pi].trim());
     descEl.appendChild(p);
   }
 

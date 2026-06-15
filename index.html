@@ -1379,6 +1379,25 @@
     .zone-synth-btn:hover {
       background: rgba(139,94,52,0.28); transform: scale(1.12);
     }
+
+    /* Liens vers les fiches dans les synthèses */
+    .synth-link {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 0.82em;
+      margin-right: 3px;
+      padding: 0 2px;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.12s, transform 0.12s, background 0.12s;
+      vertical-align: baseline;
+    }
+    .synth-link:hover {
+      opacity: 1;
+      background: rgba(139,94,52,0.18);
+      transform: scale(1.15);
+    }
 </style>
 </head>
 <body>
@@ -1676,7 +1695,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1781475552"></script>
+<script src="frise.js?v=1781514308"></script>
 
 
 <!-- Modale login editeur -->
