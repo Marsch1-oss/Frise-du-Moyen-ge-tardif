@@ -303,6 +303,15 @@ function refreshFrise() {
 function renderLevel(level, rangeStart) {
   var _prevLevel = currentLevel;
   currentLevel = level;
+  /* Gère le bandeau de synthèse : le masquer si on quitte la vue décennale
+     ou si l'on change de décennie (la synthèse ne correspondrait plus) */
+  if (typeof _currentSynthese !== 'undefined' && _currentSynthese) {
+    if (level !== 3 || rangeStart !== _currentSynthese.dec) {
+      var _sb = document.getElementById('synthese-banner');
+      if (_sb) _sb.style.display = 'none';
+      _currentSynthese = null;
+    }
+  }
   /* À la PREMIÈRE entrée en vue annuelle (depuis une autre échelle),
      ouvrir au niveau de détail Complet pour ne pas afficher une vue vide.
      (Si on était déjà en vue annuelle, on respecte le détail choisi par l'usager.) */
@@ -787,7 +796,7 @@ function buildTrack(zone, evts, start, end, level) {
     synthBtn.innerHTML = '\uD83D\uDCD6\u00a0Synthèse';  /* 📖 Synthèse */
     synthBtn.title = 'Lire la synthèse de ' + zone + ' pour ' + currentDecade + '-' + (currentDecade + 9);
     synthBtn.onclick = (function(z, d) {
-      return function(ev) { ev.stopPropagation(); openSyntheseModal(z, d); };
+      return function(ev) { ev.stopPropagation(); showSyntheseBanner(z, d); };
     })(zone, currentDecade);
     lbl.appendChild(synthBtn);
   }
@@ -1357,6 +1366,44 @@ function renderSyntheseParagraph(container, text) {
       });
     }
   });
+}
+
+var _currentSynthese = null;   /* {zone, dec} de la synthèse affichée dans le bandeau */
+
+function showSyntheseBanner(zone, dec) {
+  var s = getSynthese(zone, dec);
+  if (!s) {
+    s = { titre: zone + ' \u00b7 ' + dec + '-' + (dec + 9),
+          texte: 'Aucun événement enregistré pour cette zone à cette période.', auto: true };
+  }
+  _currentSynthese = { zone: zone, dec: dec };
+
+  var banner = document.getElementById('synthese-banner');
+  var titleEl = document.getElementById('synthese-banner-title');
+  var perEl = document.getElementById('synthese-banner-period');
+  var bodyEl = document.getElementById('synthese-banner-body');
+  if (!banner) return;
+
+  titleEl.textContent = s.titre || (zone + ' \u00b7 ' + dec);
+  perEl.textContent = (s.auto ? '(brouillon auto) ' : '') + zone + ' \u2014 ' + dec + '-' + (dec + 9);
+
+  bodyEl.innerHTML = '';
+  var paras = (s.texte || '').split(/\n\n+/);
+  paras.forEach(function(para) {
+    if (!para.trim()) return;
+    var p = document.createElement('p');
+    renderSyntheseParagraph(p, para.trim());
+    bodyEl.appendChild(p);
+  });
+
+  banner.style.display = 'block';
+  banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeSyntheseBanner() {
+  var banner = document.getElementById('synthese-banner');
+  if (banner) banner.style.display = 'none';
+  _currentSynthese = null;
 }
 
 function openSyntheseModal(zone, dec) {
