@@ -774,19 +774,24 @@ function buildTrack(zone, evts, start, end, level) {
   var dot = document.createElement('span');
   dot.className = 'zone-dot';
   dot.style.background = col.bg;
-  lbl.appendChild(dot);
-  lbl.appendChild(document.createTextNode(zone));
-  /* Bouton de synthèse décennale (vue décennale uniquement) */
+  /* Ligne 1 : pastille + nom de la zone */
+  var lblTop = document.createElement('div');
+  lblTop.className = 'zone-label-name';
+  lblTop.appendChild(dot);
+  lblTop.appendChild(document.createTextNode(zone));
+  lbl.appendChild(lblTop);
+  /* Ligne 2 (vue décennale) : bouton Synthèse sous le nom */
   if (level === 3 && currentDecade !== null) {
     var synthBtn = document.createElement('button');
     synthBtn.className = 'zone-synth-btn';
-    synthBtn.innerHTML = '\uD83D\uDCCB';  /* 📋 */
-    synthBtn.title = 'Synthèse de ' + zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
+    synthBtn.innerHTML = '\uD83D\uDCD6\u00a0Synthèse';  /* 📖 Synthèse */
+    synthBtn.title = 'Lire la synthèse de ' + zone + ' pour ' + currentDecade + '-' + (currentDecade + 9);
     synthBtn.onclick = (function(z, d) {
       return function(ev) { ev.stopPropagation(); openSyntheseModal(z, d); };
     })(zone, currentDecade);
     lbl.appendChild(synthBtn);
   }
+  lbl.classList.add('zone-label-col');
   row.appendChild(lbl);
   var visible = evts.filter(function(evt) {
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;

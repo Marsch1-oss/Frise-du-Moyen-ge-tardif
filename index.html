@@ -1368,16 +1368,19 @@
 
     /* Bouton de synthèse décennale dans le label de zone */
     .zone-synth-btn {
-      margin-left: 5px; padding: 1px 5px;
-      font-size: 0.78rem; line-height: 1;
-      background: rgba(139,94,52,0.12);
-      border: 1px solid rgba(139,94,52,0.35);
-      border-radius: 6px; cursor: pointer;
-      transition: background 0.12s, transform 0.12s;
-      vertical-align: middle;
+      display: inline-flex; align-items: center; gap: 3px;
+      padding: 3px 7px;
+      font-size: 0.68rem; font-weight: 600; line-height: 1;
+      color: #fff; background: var(--accent, #8B5E34);
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 10px; cursor: pointer; white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(60,42,20,0.25);
+      transition: background 0.12s, transform 0.12s, box-shadow 0.12s;
+      max-width: 100%;
     }
     .zone-synth-btn:hover {
-      background: rgba(139,94,52,0.28); transform: scale(1.12);
+      background: #6d4a28; transform: translateY(-1px) scale(1.04);
+      box-shadow: 0 2px 7px rgba(60,42,20,0.4);
     }
 
     /* Liens vers les fiches dans les synthèses */
@@ -1397,6 +1400,16 @@
       opacity: 1;
       background: rgba(139,94,52,0.18);
       transform: scale(1.15);
+    }
+
+    /* Label de zone sur 2 lignes (nom + bouton synthèse) en vue décennale */
+    .zone-label.zone-label-col {
+      flex-direction: column; align-items: flex-start;
+      justify-content: center; gap: 4px; overflow: visible;
+    }
+    .zone-label-name {
+      display: flex; align-items: center; gap: 0.35rem;
+      white-space: nowrap; overflow: hidden; max-width: 100%;
     }
 </style>
 </head>
@@ -1695,7 +1708,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1781514308"></script>
+<script src="frise.js?v=1781520835"></script>
 
 
 <!-- Modale login editeur -->
