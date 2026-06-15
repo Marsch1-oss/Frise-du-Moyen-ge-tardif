@@ -854,10 +854,15 @@ function synthSave() {
 function dashRefresh() {
   var el = document.getElementById('dash-content');
   if (!el) return;
-  if (events.length === 0) {
-    el.innerHTML = '<p style="color:#c00;">Importez d\'abord votre events.json.</p>';
+  if (!events || events.length === 0) {
+    el.innerHTML = '<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:1rem;color:#856404;">' +
+      '<strong>\u26A0 Aucun événement chargé.</strong><br>' +
+      'Le tableau de bord a besoin des données. Cliquez sur le bouton <strong>« Importer »</strong> en haut de la page ' +
+      'et sélectionnez votre fichier <strong>events.json</strong>, puis revenez ici et cliquez à nouveau sur « Actualiser ».' +
+      '</div>';
     return;
   }
+  el.innerHTML = '<p style="color:#666;">Calcul en cours\u2026</p>';
 
   var nonRegne = events.filter(function(e){ return !e.regne; });
   var total = events.length;
