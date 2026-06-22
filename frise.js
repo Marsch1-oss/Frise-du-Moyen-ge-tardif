@@ -345,6 +345,7 @@ function renderLevel(level, rangeStart) {
   var container = document.getElementById('frise-container');
   container.innerHTML = '';
   container.appendChild(buildAxis(start, end, tickStep, level));
+  updateStickyAxis(start, end, tickStep, level);   /* échelle fixe sous la barre nav */
 
   var rulersSection = buildRulersSection(start, end, level);
   if (rulersSection) container.appendChild(rulersSection);
@@ -454,6 +455,46 @@ function renderLevel(level, rangeStart) {
 }
 
 /* ── Axe ─────────────────────────────────────────────────────────────*/
+/* Remplit la bande d'échelle chronologique FIXE (sous la barre de navigation).
+   Reproduit les graduations de l'axe pour qu'elles restent visibles au défilement. */
+function updateStickyAxis(start, end, step, level) {
+  var wrap = document.getElementById('sticky-axis');
+  var bar = document.getElementById('sticky-axis-bar');
+  if (!wrap || !bar) return;
+  bar.innerHTML = '';
+
+  if (level === 4) {
+    /* Vue annuelle : graduations par mois */
+    var MOIS = ['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
+    for (var m = 0; m < 12; m++) {
+      var lp = (m / 12) * 100;
+      var t = document.createElement('div');
+      t.className = 'sticky-axis-tick';
+      t.style.left = lp + '%';
+      t.textContent = MOIS[m];
+      bar.appendChild(t);
+      var tlm = document.createElement('div');
+      tlm.className = 'sticky-axis-tickline';
+      tlm.style.left = lp + '%';
+      bar.appendChild(tlm);
+    }
+  } else {
+    for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
+      var lpct = (y - start) / (end - start) * 100;
+      var tick = document.createElement('div');
+      tick.className = 'sticky-axis-tick';
+      tick.style.left = lpct + '%';
+      tick.textContent = Math.round(y);
+      bar.appendChild(tick);
+      var tl = document.createElement('div');
+      tl.className = 'sticky-axis-tickline';
+      tl.style.left = lpct + '%';
+      bar.appendChild(tl);
+    }
+  }
+  wrap.style.display = 'block';
+}
+
 function buildAxis(start, end, step, level) {
   var axis = document.createElement('div');
   axis.className = 'axis-row';
@@ -2102,6 +2143,8 @@ function showParcoursResults(p) {
 
 function goHome() {
   /* Réinitialise complètement la frise */
+  var _sa = document.getElementById('sticky-axis');
+  if (_sa) _sa.style.display = 'none';
 
   /* 1. Désactive un éventuel parcours actif */
   if (activeParcours) {
