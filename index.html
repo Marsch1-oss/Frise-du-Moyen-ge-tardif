@@ -1514,6 +1514,59 @@
       position: absolute; bottom: 0; width: 1px; height: 6px;
       background: var(--border-dark, #b89b72);
     }
+
+    /* Fenêtre de choix d'année */
+    .year-picker-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(40,28,14,0.45);
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+    .year-picker-box {
+      position: relative;
+      background: var(--parchment, #f5edd8);
+      border: 1.5px solid var(--border-dark, #b89b72);
+      border-radius: 14px; padding: 1.4rem 1.6rem;
+      max-width: 420px; width: 90%;
+      box-shadow: 0 8px 30px rgba(40,28,14,0.4);
+    }
+    .year-picker-close {
+      position: absolute; top: 10px; right: 12px;
+      background: none; border: none; font-size: 1.2rem;
+      color: var(--ink-muted); cursor: pointer; padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .year-picker-close:hover { background: rgba(139,94,52,0.15); }
+    .year-picker-title {
+      margin: 0 0 0.3rem; font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem; color: var(--ink);
+    }
+    .year-picker-sub {
+      margin: 0 0 1rem; font-size: 0.85rem; color: var(--ink-muted); font-style: italic;
+    }
+    .year-picker-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;
+      margin-bottom: 1rem;
+    }
+    .year-picker-grid button {
+      padding: 8px 0; font-size: 0.9rem; font-weight: 600;
+      background: rgba(245,237,216,0.9);
+      border: 1px solid var(--border-dark, #b89b72);
+      border-radius: 8px; cursor: pointer; color: var(--ink);
+      transition: background 0.12s, transform 0.1s;
+    }
+    .year-picker-grid button:hover {
+      background: var(--accent, #8B5E34); color: #fff; transform: translateY(-1px);
+    }
+    .year-picker-manual {
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+      border-top: 1px solid var(--border); padding-top: 0.8rem;
+    }
+    .year-picker-manual label { font-size: 0.85rem; color: var(--ink-soft); }
+    .year-picker-manual input {
+      width: 90px; padding: 0.35rem 0.5rem;
+      border: 1px solid var(--border-dark); border-radius: 6px;
+    }
 </style>
 </head>
 <body>
@@ -1827,7 +1880,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782135525"></script>
+<script src="frise.js?v=1782146258"></script>
 
 
 <!-- Modale login editeur -->
@@ -1881,5 +1934,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+  <div id="year-picker-overlay" class="year-picker-overlay" style="display:none;" onclick="if(event.target===this)closeYearPicker()">
+    <div class="year-picker-box">
+      <button class="year-picker-close" onclick="closeYearPicker()">&#10005;</button>
+      <h3 class="year-picker-title">&#128197; Choisir une ann&eacute;e</h3>
+      <p id="year-picker-sub" class="year-picker-sub"></p>
+      <div id="year-picker-grid" class="year-picker-grid"></div>
+      <div class="year-picker-manual">
+        <label for="year-picker-input">Autre ann&eacute;e&nbsp;:</label>
+        <input type="number" id="year-picker-input" min="1192" max="1494" placeholder="ex. 1347"
+               onkeydown="if(event.key==='Enter')yearPickerGo()">
+        <button class="btn" onclick="yearPickerGo()">Voir &#8250;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

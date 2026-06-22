@@ -2254,7 +2254,63 @@ function goLevel(level) {
   if      (level === 1)                             renderLevel(1);
   else if (level === 2 && currentCentury !== null)  renderLevel(2, currentCentury);
   else if (level === 3 && currentDecade  !== null)  renderLevel(3, currentDecade);
-  else if (level === 4 && currentYear    !== null)  renderLevel(4, currentYear);
+  else if (level === 4) {
+    /* Vue annuelle : si une année est déjà définie, on y va directement ;
+       sinon on ouvre la fenêtre de choix d'année */
+    if (currentYear !== null) renderLevel(4, currentYear);
+    else openYearPicker();
+  }
+}
+
+/* ── Fenêtre de choix d'année ─────────────────────────────────────── */
+function openYearPicker() {
+  var overlay = document.getElementById('year-picker-overlay');
+  var grid = document.getElementById('year-picker-grid');
+  var sub = document.getElementById('year-picker-sub');
+  var input = document.getElementById('year-picker-input');
+  if (!overlay || !grid) return;
+  grid.innerHTML = '';
+
+  /* Décennie de référence : la décennie active, sinon 1340 par défaut */
+  var baseDec = (currentDecade !== null) ? currentDecade
+              : (currentCentury !== null ? currentCentury + 40 : 1340);
+
+  if (sub) sub.textContent = 'Années de la décennie ' + baseDec + '-' + (baseDec + 9) +
+    ' (ou saisissez une autre année ci-dessous).';
+
+  for (var y = baseDec; y < baseDec + 10; y++) {
+    (function(year) {
+      var b = document.createElement('button');
+      b.textContent = year;
+      b.onclick = function() { yearPickerSelect(year); };
+      grid.appendChild(b);
+    })(y);
+  }
+  if (input) input.value = '';
+  overlay.style.display = 'flex';
+  if (input) setTimeout(function() { input.focus(); }, 50);
+}
+
+function closeYearPicker() {
+  var overlay = document.getElementById('year-picker-overlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
+function yearPickerSelect(year) {
+  closeYearPicker();
+  currentYear = year;
+  renderLevel(4, year);
+}
+
+function yearPickerGo() {
+  var input = document.getElementById('year-picker-input');
+  if (!input) return;
+  var y = parseInt(input.value);
+  if (isNaN(y) || y < 1192 || y > 1494) {
+    input.style.borderColor = '#c00';
+    return;
+  }
+  yearPickerSelect(y);
 }
 
 function setDetailLevel(n) {
@@ -2334,7 +2390,8 @@ function updateNavButtons() {
     /* niveau 1 toujours dispo ; 2 si siècle connu ; 3 et 4 si siècle ou décennie connus */
     if (b.lvl === 1)      el.disabled = false;
     else if (b.lvl === 2) el.disabled = (currentCentury === null);
-    else                  el.disabled = (currentCentury === null && currentDecade === null);
+    else if (b.lvl === 3) el.disabled = (currentCentury === null && currentDecade === null);
+    else                  el.disabled = false;  /* Vue annuelle : toujours active (ouvre le choix d'année) */
   });
   var prev = document.getElementById('btn-prev');
   var next = document.getElementById('btn-next');
