@@ -1696,6 +1696,31 @@
     .eli-filter-btn.active {
       background: var(--accent, #8B5E34); color: #fff; border-color: var(--accent, #8B5E34);
     }
+
+    /* Bouton et panneau Légende des thèmes */
+    .ctrl-legend-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 0.5rem 1rem; font-size: 0.88rem; font-weight: 600;
+      color: var(--ink); background: rgba(245,237,216,0.9);
+      border: 1px solid var(--border-dark, #b89b72); border-radius: 10px;
+      cursor: pointer; white-space: nowrap;
+      transition: background 0.12s;
+    }
+    .ctrl-legend-btn:hover { background: rgba(139,94,52,0.15); }
+    .theme-legend {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem;
+      justify-content: center;
+      margin: 0 0 0.8rem; padding: 0.7rem 1rem;
+      background: rgba(245,237,216,0.85);
+      border: 1px solid var(--border-dark, #b89b72);
+      border-radius: 12px;
+      animation: synthBannerIn 0.3s ease;
+    }
+    .theme-legend-item {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.85rem; color: var(--ink-soft, #5a4a30);
+    }
+    .theme-legend-item .ic { font-size: 1.05rem; }
 </style>
 </head>
 <body>
@@ -1753,6 +1778,7 @@
     <span id="decade-label" class="period-label"></span>
     <button class="ctrl-nav-btn" id="btn-next" onclick="navigatePeriod(1)" style="display:none;">P&eacute;riode suivante &rarr;</button>
     <button class="ctrl-list-btn" id="btn-list" onclick="openEventList()">&#9776; Liste des &eacute;v&eacute;nements</button>
+    <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="Légende des thèmes">&#127991; Légende</button>
     <span class="nav-sep"></span>
     <div class="search-bar">
       <label for="search-input">&#128269;</label>
@@ -1762,6 +1788,8 @@
       <button id="search-clear" onclick="clearSearch()">&#10005;</button>
     </div>
   </div>
+
+  <div id="theme-legend" class="theme-legend" style="display:none;"></div>
 
   <div id="sticky-axis" class="sticky-axis" style="display:none;">
     <span id="sticky-axis-hint" class="sticky-axis-hint" style="display:none;">▸ Cliquez une ann&eacute;e pour zoomer</span>
@@ -2011,7 +2039,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782231195"></script>
+<script src="frise.js?v=1782235255"></script>
 
 
 <!-- Modale login editeur -->

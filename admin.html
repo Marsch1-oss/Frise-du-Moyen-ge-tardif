@@ -220,6 +220,10 @@
 
       <div class="field-row">
         <div class="field">
+          <label>Thème <small>(icône thématique)</small></label>
+          <select id="f-theme" style="width:100%;padding:0.4rem;margin-bottom:0.6rem;box-sizing:border-box;">
+            <option value="">— Détection automatique —</option>
+          </select>
           <label>Image <small>(chemin relatif ou URL)</small></label>
           <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
         </div>
@@ -351,6 +355,52 @@ const ZONES = [
   /* Thèmes */
   'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
 ];
+
+/* ── Thèmes iconographiques ──────────────────────────────────────── */
+var THEME_DEFS = {
+  'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
+  'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
+  'religion':    { icon: '\u271D\uFE0F',     label: 'Religion' },
+  'diplomatie':  { icon: '\uD83E\uDD1D',     label: 'Diplomatie' },
+  'economie':    { icon: '\uD83E\uDE99',     label: 'Économie' },
+  'societe':     { icon: '\uD83E\uDDD1',     label: 'Société' },
+  'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
+  'litterature': { icon: '\uD83D\uDCDC',     label: 'Littérature' },
+  'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
+  'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+};
+var THEME_ORDER = ['catastrophe','sciences','art','litterature','economie','religion','diplomatie','societe','guerre','politique'];
+var THEME_KEYWORDS = {
+  'catastrophe': ['inondation','tremblement de terre','séisme','tempête','incendie ','éruption','sécheresse','peste noire','grande peste','épidémie','famine'],
+  'sciences':    ['astronom','mathémat','médecine','science','invention','horloge mécan'],
+  'art':         ['peintre','peinture','sculpture','fresque','retable','cathédrale','architecture','basilique','giotto','construction de la'],
+  'litterature': ['poète','poème','roman ','conte','écrivain','divine comédie','pétrarque','boccace','dante','chaucer','chronique de'],
+  'economie':    ['monnaie','florin','commerce','marchand','impôt','taxe','foire','banque','grande compagnie'],
+  'religion':    ['pape','antipape','concile','évêque','schisme','cardinal','excommuni','jubilé','canonis','ordre des frères','grand schisme'],
+  'diplomatie':  ['traité','paix de','trêve de','mariage de','alliance'],
+  'societe':     ['jacquerie','révolte des','soulèvement','émeute','révolte populaire'],
+  'guerre':      ['bataille','siège','guerre','assaut','combat','conquête','chevauchée','prise de','reconquête','croisade'],
+  'politique':   ['roi','reine','couronn','sacre','empereur','duc ','comte ','succession','trône','régence','dynastie','avènement','élection','règne','seigneur']
+};
+/* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
+function detectTheme(evt) {
+  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
+  var txt = ((evt.titre || '') + ' ' + (evt.description || '')).toLowerCase();
+  for (var i = 0; i < THEME_ORDER.length; i++) {
+    var theme = THEME_ORDER[i];
+    var kws = THEME_KEYWORDS[theme];
+    for (var k = 0; k < kws.length; k++) {
+      if (txt.indexOf(kws[k]) !== -1) return theme;
+    }
+  }
+  return 'politique';
+}
+function themeIcon(evt) {
+  var t = detectTheme(evt);
+  return THEME_DEFS[t] ? THEME_DEFS[t].icon : '';
+}
+
 
 /* Groupes pour l'affichage dans l'admin */
 const ZONE_GROUPS = [
@@ -485,6 +535,8 @@ function readForm() {
   evt.type        = type;
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
+  var fTheme = document.getElementById('f-theme').value;
+  if (fTheme) evt.theme = fTheme;   /* thème manuel (sinon détection auto à l'affichage) */
   if (rawVideo)  evt.video = rawVideo;
   if (isRegne)   evt.regne = true;
   var leg = document.getElementById('f-legende').value.trim();
@@ -512,6 +564,7 @@ function fillForm(evt) {
   document.getElementById('f-date-fin').value = evt.date_fin || '';
   document.getElementById('f-mois-fin').value = evt.mois_fin || '';
   document.getElementById('f-desc').value     = evt.description || '';
+  document.getElementById('f-theme').value    = evt.theme    || '';
   document.getElementById('f-image').value    = evt.image    || '';
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
@@ -1048,6 +1101,28 @@ function synthImport(input) {
 synthInitControls();
 synthRenderList();
 
+
+function initThemeSelect() {
+  var sel = document.getElementById('f-theme');
+  if (!sel) return;
+  /* garde la 1re option (détection auto) et ajoute les thèmes */
+  THEME_ORDER.slice().reverse().forEach(function(t) {
+    var d = THEME_DEFS[t];
+    var o = document.createElement('option');
+    o.value = t; o.textContent = d.icon + ' ' + d.label;
+    sel.appendChild(o);
+  });
+  for (var key in THEME_DEFS) {
+    if (THEME_ORDER.indexOf(key) === -1) {
+      var dd = THEME_DEFS[key];
+      var oo = document.createElement('option');
+      oo.value = key; oo.textContent = dd.icon + ' ' + dd.label;
+      sel.appendChild(oo);
+    }
+  }
+}
+
+initThemeSelect();
 initZones();
 initTypeRadios();
 resetForm();
