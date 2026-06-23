@@ -1583,6 +1583,90 @@
       font-size: 0.7rem; color: var(--accent, #8B5E34); font-style: italic;
       font-weight: 600; margin-left: 90px; display: block; margin-bottom: 2px;
     }
+
+    /* Bouton Liste des événements */
+    .nav-btn-list { background: rgba(139,94,52,0.12); }
+
+    /* Panneau Liste des événements */
+    .event-list-overlay {
+      position: fixed; inset: 0; z-index: 250;
+      background: var(--parchment, #f5edd8);
+      overflow-y: auto; padding: 0 0 2rem;
+    }
+    .event-list-header {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 1rem 1.5rem;
+      background: rgba(245,237,216,0.97);
+      border-bottom: 1.5px solid var(--border-dark, #b89b72);
+      box-shadow: 0 2px 8px rgba(60,42,20,0.12);
+      backdrop-filter: blur(3px);
+    }
+    .event-list-title {
+      margin: 0; font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem; color: var(--ink);
+    }
+    .event-list-back {
+      flex-shrink: 0; padding: 0.5rem 1.1rem;
+      font-size: 0.9rem; font-weight: 600;
+      background: var(--accent, #8B5E34); color: #fff;
+      border: none; border-radius: 10px; cursor: pointer;
+      box-shadow: 0 1px 4px rgba(60,42,20,0.3);
+      transition: transform 0.12s, filter 0.12s;
+    }
+    .event-list-back:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .event-list-body {
+      max-width: 900px; margin: 1.2rem auto 0; padding: 0 1rem;
+    }
+    /* Carte d'un événement dans la liste */
+    .eli-card {
+      display: flex; gap: 0.9rem; align-items: flex-start;
+      padding: 0.8rem 1rem; margin-bottom: 0.7rem;
+      background: rgba(255,255,255,0.5);
+      border: 1px solid var(--border, #d8c9a8);
+      border-left: 5px solid var(--zone-color, #8B5E34);
+      border-radius: 10px; cursor: pointer;
+      transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+    }
+    .eli-card:hover {
+      transform: translateX(2px);
+      box-shadow: 0 3px 12px rgba(60,42,20,0.18);
+      background: rgba(255,255,255,0.8);
+    }
+    .eli-thumb {
+      width: 70px; height: 70px; flex-shrink: 0;
+      object-fit: cover; border-radius: 8px;
+      border: 1px solid var(--border-dark, #b89b72);
+    }
+    .eli-content { flex: 1; min-width: 0; }
+    .eli-head {
+      display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
+      margin-bottom: 0.3rem;
+    }
+    .eli-date {
+      font-weight: 700; color: var(--accent, #8B5E34); font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .eli-zone {
+      font-size: 0.72rem; font-weight: 600; padding: 1px 8px;
+      border-radius: 10px; color: #fff;
+    }
+    .eli-title {
+      font-weight: 600; color: var(--ink); font-size: 1rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .eli-desc {
+      font-size: 0.86rem; color: var(--ink-soft, #5a4a30);
+      line-height: 1.45; margin-top: 0.2rem;
+    }
+    .eli-empty {
+      text-align: center; color: var(--ink-muted); font-style: italic;
+      padding: 2rem;
+    }
+    .eli-count {
+      font-size: 0.82rem; color: var(--ink-muted); font-weight: normal;
+      font-style: italic; margin-left: 0.5rem;
+    }
 </style>
 </head>
 <body>
@@ -1601,6 +1685,7 @@
     <button class="nav-btn" id="btn-level2" onclick="goLevel(2)">Vue si&egrave;cle</button>
     <button class="nav-btn" id="btn-level3" onclick="goLevel(3)" disabled>Vue d&eacute;cennale</button>
     <button class="nav-btn" id="btn-level4" onclick="goLevel(4)" disabled>Vue annuelle</button>
+    <button class="nav-btn nav-btn-list" id="btn-list" onclick="openEventList()">&#9776; Liste des &eacute;v&eacute;nements</button>
     <span class="nav-sep"></span>
     <button class="nav-btn nav-btn-zones" onclick="openZonesModal()" title="Choisir les zones et th&egrave;mes affich&eacute;s">&#127757; Zones &amp; th&egrave;mes</button>
     <span class="nav-sep"></span>
@@ -1897,7 +1982,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782209939"></script>
+<script src="frise.js?v=1782219940"></script>
 
 
 <!-- Modale login editeur -->
@@ -1965,6 +2050,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <button class="btn" onclick="yearPickerGo()">Voir &#8250;</button>
       </div>
     </div>
+  </div>
+
+  <div id="event-list-overlay" class="event-list-overlay" style="display:none;">
+    <div class="event-list-header">
+      <h2 id="event-list-title" class="event-list-title">Liste des événements</h2>
+      <button class="event-list-back" onclick="closeEventList()">&#8592; Retour à la frise</button>
+    </div>
+    <div id="event-list-body" class="event-list-body"></div>
   </div>
 </body>
 </html>

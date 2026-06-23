@@ -457,6 +457,106 @@ function renderLevel(level, rangeStart) {
 /* ── Axe ─────────────────────────────────────────────────────────────*/
 /* Remplit la bande d'échelle chronologique FIXE (sous la barre de navigation).
    Reproduit les graduations de l'axe pour qu'elles restent visibles au défilement. */
+/* ── Liste des événements de la période ───────────────────────────── */
+function openEventList() {
+  var overlay = document.getElementById('event-list-overlay');
+  var body = document.getElementById('event-list-body');
+  var titleEl = document.getElementById('event-list-title');
+  if (!overlay || !body) return;
+
+  /* Détermine les bornes de la période courante selon le niveau */
+  var start, end, periodeLabel;
+  if (currentLevel === 4 && currentYear !== null) {
+    start = currentYear; end = currentYear + 1;
+    periodeLabel = 'Année ' + currentYear;
+  } else if (currentLevel === 3 && currentDecade !== null) {
+    start = currentDecade; end = currentDecade + 10;
+    periodeLabel = 'Décennie ' + currentDecade + '–' + (currentDecade + 9);
+  } else if (currentLevel === 2 && currentCentury !== null) {
+    start = currentCentury; end = currentCentury + 100;
+    periodeLabel = 'Siècle ' + currentCentury + '–' + (currentCentury + 100);
+  } else {
+    start = 1290; end = 1510;
+    periodeLabel = 'Ensemble de la période';
+  }
+
+  /* Collecte les événements visibles (mêmes règles que la frise) */
+  var list = allEvents.filter(function(e) {
+    if (e.regne) return false;
+    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+    return e.date < end && fin >= start;
+  }).sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+
+  if (titleEl) {
+    titleEl.innerHTML = 'Liste des événements ' +
+      '<span class="eli-count">' + periodeLabel + ' — ' + list.length +
+      ' événement' + (list.length > 1 ? 's' : '') + '</span>';
+  }
+
+  body.innerHTML = '';
+  if (list.length === 0) {
+    body.innerHTML = '<p class="eli-empty">Aucun événement pour cette période et les zones actives.</p>';
+  } else {
+    var MOIS = ['', 'janvier','février','mars','avril','mai','juin',
+                'juillet','août','septembre','octobre','novembre','décembre'];
+    list.forEach(function(e) {
+      /* Zone d'affichage : 1re zone active de l'événement */
+      var zoneAff = (e.zones || []).filter(function(z){ return activeZones[z]; })[0] || (e.zones||[])[0];
+      var col = COLORS[zoneAff] || COLORS['France'];
+
+      var card = document.createElement('div');
+      card.className = 'eli-card';
+      card.style.setProperty('--zone-color', col.bg);
+      card.onclick = (function(ev, z) {
+        return function() { closeEventList(); openModal(ev, z); };
+      })(e, zoneAff);
+
+      /* Vignette si image */
+      var thumbHtml = '';
+      if ((e.image || '').trim()) {
+        thumbHtml = '<img class="eli-thumb" src="' + e.image + '" alt="" ' +
+                    'onerror="this.style.display=\'none\'">';
+      }
+
+      /* Date lisible (avec mois si présent) */
+      var dateTxt = (e.mois ? MOIS[e.mois] + ' ' : '') + e.date;
+      if (e.date_fin && e.date_fin > e.date) {
+        dateTxt += ' – ' + (e.mois_fin ? MOIS[e.mois_fin] + ' ' : '') + e.date_fin;
+      }
+
+      var desc = (e.description || '').replace(/\s+/g, ' ').trim();
+      if (desc.length > 280) desc = desc.slice(0, 277) + '…';
+
+      card.innerHTML =
+        thumbHtml +
+        '<div class="eli-content">' +
+          '<div class="eli-head">' +
+            '<span class="eli-date">' + dateTxt + '</span>' +
+            '<span class="eli-zone" style="background:' + col.bg + ';">' + zoneAff + '</span>' +
+          '</div>' +
+          '<div class="eli-title">' + (e.titre || '') + '</div>' +
+          (desc ? '<div class="eli-desc">' + desc + '</div>' : '') +
+        '</div>';
+      body.appendChild(card);
+    });
+  }
+
+  overlay.style.display = 'block';
+  overlay.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeEventList() {
+  var overlay = document.getElementById('event-list-overlay');
+  if (overlay) overlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
 function updateStickyAxis(start, end, step, level) {
   var wrap = document.getElementById('sticky-axis');
   var bar = document.getElementById('sticky-axis-bar');
@@ -2251,6 +2351,7 @@ function goHome() {
   /* Réinitialise complètement la frise */
   var _sa = document.getElementById('sticky-axis');
   if (_sa) _sa.style.display = 'none';
+  closeEventList();
 
   /* 1. Désactive un éventuel parcours actif */
   if (activeParcours) {
