@@ -103,9 +103,14 @@
       width: 100%;
     }
 
-  </style>
+      .ec-theme { margin-left: auto; font-size: 1rem; }
+    .ec-theme-none { color: #d08a00; font-size: 0.85rem; opacity: 0.7; }
+</style>
 </head>
 <body>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-23 21:14 — thèmes+stats</div>
+
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-23 21:09</div>
 
 <header>
   <div>
@@ -397,8 +402,8 @@ function detectTheme(evt) {
   return 'politique';
 }
 function themeIcon(evt) {
-  var t = detectTheme(evt);
-  return THEME_DEFS[t] ? THEME_DEFS[t].icon : '';
+  if (evt.theme && THEME_DEFS[evt.theme]) return THEME_DEFS[evt.theme].icon;
+  return '';
 }
 
 
@@ -667,7 +672,11 @@ function renderList() {
       + '<span class="ec-title">' + evt.titre + '</span>'
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
-      + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span></div>';
+      + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
+      + (evt.theme && THEME_DEFS[evt.theme]
+          ? '<span class="ec-theme" title="' + THEME_DEFS[evt.theme].label + '">' + THEME_DEFS[evt.theme].icon + '</span>'
+          : '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>')
+      + '</div>';
     card.addEventListener('click', function() { fillForm(evt); });
     list.appendChild(card);
   });
@@ -1007,6 +1016,23 @@ function dashRefresh() {
   html += probLine('mois invalides', pbMois);
   html += probLine('zone manquante/inconnue', pbZone);
   html += probLine('niveau (type) invalide', pbType);
+
+  /* Classification thématique (mode manuel) */
+  var sansTheme = nonRegne.filter(function(e){ return !e.theme; });
+  var avecTheme = nonRegne.length - sansTheme.length;
+  html += '<h4 style="margin:1rem 0 0.4rem;">\uD83C\uDFF7 Classification thématique</h4>';
+  html += '<p style="font-size:0.85rem;margin:0 0 0.5rem;">' +
+          '<strong>' + avecTheme + '</strong> / ' + nonRegne.length + ' événements classés ' +
+          bar(avecTheme, nonRegne.length, '#6a4ea8') + '</p>';
+  if (sansTheme.length > 0) {
+    var ids = sansTheme.slice(0, 40).map(function(e){
+      return '<a href="#" onclick="loadEvent(' + e.id + ');return false;" style="color:#8B5E34;">#' + e.id + '</a>';
+    }).join(', ');
+    html += '<div style="font-size:0.82rem;padding:2px 0;"><strong>' + sansTheme.length +
+            '</strong> sans thème (à classer) : ' + ids + (sansTheme.length > 40 ? ' \u2026 (et ' + (sansTheme.length - 40) + ' autres)' : '') + '</div>';
+  } else {
+    html += '<div style="color:#2e7d32;font-size:0.85rem;">\u2713 Tous les événements sont classés.</div>';
+  }
 
   /* Complétude par zone */
   html += '<h4 style="margin:1rem 0 0.4rem;">Complétude par zone</h4>';

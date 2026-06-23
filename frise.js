@@ -574,10 +574,55 @@ function openEventList() {
   document.querySelectorAll('.eli-filter-btn').forEach(function(b) {
     b.classList.toggle('active', parseInt(b.dataset.lvl) === _eliFilterLevel);
   });
+  renderEliThemeFilter();
 
   overlay.style.display = 'block';
   overlay.scrollTop = 0;
   document.body.style.overflow = 'hidden';
+}
+
+/* Filtres thématiques dans l'en-tête de la liste (mêmes thèmes que la légende) */
+function renderEliThemeFilter() {
+  var box = document.getElementById('eli-theme-filter');
+  if (!box) return;
+  box.innerHTML = '';
+  var lbl = document.createElement('span');
+  lbl.className = 'eli-filter-label';
+  lbl.textContent = 'Thème\u00A0:';
+  box.appendChild(lbl);
+
+  var keys = THEME_ORDER.slice().reverse();
+  for (var key in THEME_DEFS) { if (keys.indexOf(key) === -1) keys.push(key); }
+
+  keys.forEach(function(t) {
+    var d = THEME_DEFS[t];
+    if (!d) return;
+    var btn = document.createElement('button');
+    btn.className = 'eli-filter-btn eli-theme-btn' + (activeThemes[t] ? ' active' : '');
+    btn.innerHTML = d.icon + ' ' + d.label;
+    btn.onclick = (function(theme) {
+      return function() {
+        activeThemes[theme] = !activeThemes[theme];
+        openEventList();                 /* régénère la liste */
+        if (typeof renderThemeLegend === 'function') renderThemeLegend();  /* sync légende frise */
+      };
+    })(t);
+    box.appendChild(btn);
+  });
+
+  var anyActive = false;
+  for (var k in activeThemes) if (activeThemes[k]) anyActive = true;
+  if (anyActive) {
+    var reset = document.createElement('button');
+    reset.className = 'theme-legend-reset';
+    reset.textContent = '\u2715 Tous';
+    reset.onclick = function() {
+      activeThemes = {};
+      openEventList();
+      if (typeof renderThemeLegend === 'function') renderThemeLegend();
+    };
+    box.appendChild(reset);
+  }
 }
 
 function closeEventList() {
@@ -1353,9 +1398,10 @@ function toggleThemeLegend() {
   el.style.display = 'flex';
 }
 
-/* Construit la légende interactive : chaque thème est une case à cocher (filtre) */
-function renderThemeLegend() {
-  var el = document.getElementById('theme-legend');
+/* Construit la légende interactive : chaque thème est une case à cocher (filtre).
+   elId = conteneur cible (défaut : la légende de la frise) */
+function renderThemeLegend(elId) {
+  var el = document.getElementById(elId || 'theme-legend');
   if (!el) return;
   el.innerHTML = '';
 
@@ -1379,7 +1425,7 @@ function renderThemeLegend() {
     btn.onclick = (function(theme) {
       return function() {
         activeThemes[theme] = !activeThemes[theme];
-        renderThemeLegend();
+        renderAllLegends();
         refreshThemeFilter();
       };
     })(t);
@@ -1395,11 +1441,28 @@ function renderThemeLegend() {
     reset.textContent = '\u2715 Tout afficher';
     reset.onclick = function() {
       activeThemes = {};
-      renderThemeLegend();
+      renderAllLegends();
       refreshThemeFilter();
     };
     el.appendChild(reset);
   }
+}
+
+/* Rafraîchit toutes les légendes actuellement affichées */
+function renderAllLegends() {
+  var f = document.getElementById('theme-legend');
+  if (f && f.style.display !== 'none') renderThemeLegend('theme-legend');
+  var l = document.getElementById('list-theme-legend');
+  if (l && l.style.display !== 'none') renderThemeLegend('list-theme-legend');
+}
+
+/* Affiche/masque la légende dans le panneau de liste */
+function toggleListLegend() {
+  var el = document.getElementById('list-theme-legend');
+  if (!el) return;
+  if (el.style.display === 'flex') { el.style.display = 'none'; return; }
+  renderThemeLegend('list-theme-legend');
+  el.style.display = 'flex';
 }
 
 /* Rafraîchit la frise et la liste après changement de filtre thématique */

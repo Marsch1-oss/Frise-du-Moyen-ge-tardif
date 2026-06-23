@@ -1740,6 +1740,11 @@
     }
     .theme-legend-reset:hover { background: rgba(160,48,48,0.12); }
     .theme-legend-hint { font-size: 0.82rem; font-weight: 700; color: var(--ink); align-self: center; margin-right: 0.3rem; }
+
+    .eli-theme-filter {
+      display: flex; flex-wrap: wrap; gap: 5px; align-items: center;
+      margin-top: 0.2rem;
+    }
 </style>
 </head>
 <body>
@@ -2058,7 +2063,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782246545"></script>
+<script src="frise.js?v=1782249319"></script>
 
 
 <!-- Modale login editeur -->
@@ -2137,7 +2142,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <button class="eli-filter-btn" data-lvl="2" onclick="eliSetFilter(2)">Important</button>
           <button class="eli-filter-btn" data-lvl="3" onclick="eliSetFilter(3)">Détaillé</button>
           <button class="eli-filter-btn active" data-lvl="4" onclick="eliSetFilter(4)">Complet</button>
+          <button class="eli-filter-btn" onclick="toggleListLegend()" style="margin-left:0.5rem;">&#127991; Thèmes</button>
         </div>
+        <div id="list-theme-legend" class="theme-legend" style="display:none;margin-top:0.5rem;"></div>
+        <div id="eli-theme-filter" class="eli-theme-filter"></div>
       </div>
       <button class="event-list-back" onclick="closeEventList()">&#8592; Retour à la frise</button>
     </div>
