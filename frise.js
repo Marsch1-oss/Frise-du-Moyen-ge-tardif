@@ -506,6 +506,7 @@ function openEventList() {
   var list = allEvents.filter(function(e) {
     if (e.regne) return false;
     if (!eliPassesFilter(e)) return false;   /* filtre Important/Détaillé/Complet */
+    if (!eventMatchesTheme(e)) return false; /* filtre thématique (légende) */
     if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
     var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
     return e.date < end && fin >= start;
@@ -562,7 +563,7 @@ function openEventList() {
             '<span class="eli-date">' + dateTxt + '</span>' +
             '<span class="eli-zone" style="background:' + col.bg + ';">' + zoneAff + '</span>' +
           '</div>' +
-          '<div class="eli-title">' + themeIcon(e) + '\u202F' + (e.titre || '') + '</div>' +
+          '<div class="eli-title">' + themePrefix(e) + (e.titre || '') + '</div>' +
           (desc ? '<div class="eli-desc">' + desc + '</div>' : '') +
         '</div>';
       body.appendChild(card);
@@ -977,6 +978,7 @@ function buildTrack(zone, evts, start, end, level) {
   lbl.appendChild(document.createTextNode(zone));
   row.appendChild(lbl);
   var visible = evts.filter(function(evt) {
+    if (!eventMatchesTheme(evt)) return false;   /* filtre thématique (légende) */
     var fin = (evt.date_fin && evt.date_fin > evt.date) ? evt.date_fin : evt.date;
     return evt.date <= end && fin >= start;
   });
@@ -1318,6 +1320,19 @@ var THEME_KEYWORDS = {
   'politique':   ['roi','reine','couronn','sacre','empereur','duc ','comte ','succession','trône','régence','dynastie','avènement','élection','règne','seigneur']
 };
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
+var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
+
+/* Un événement passe-t-il le filtre thématique ?
+   - si aucun thème coché → tous passent
+   - sinon → seuls ceux dont le thème est coché passent
+   (en mode manuel, un événement sans thème ne passe QUE si aucun filtre n'est actif) */
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
+  if (!anyActive) return true;
+  return !!(evt.theme && activeThemes[evt.theme]);
+}
+
 function detectTheme(evt) {
   if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
   var txt = ((evt.titre || '') + ' ' + (evt.description || '')).toLowerCase();
@@ -1334,27 +1349,87 @@ function toggleThemeLegend() {
   var el = document.getElementById('theme-legend');
   if (!el) return;
   if (el.style.display === 'flex') { el.style.display = 'none'; return; }
-  /* Construit la légende à partir des définitions */
-  var html = '';
-  THEME_ORDER.slice().reverse().forEach(function(t) {
-    var d = THEME_DEFS[t];
-    if (!d) return;
-    html += '<span class="theme-legend-item"><span class="ic">' + d.icon + '</span>' + d.label + '</span>';
-  });
-  /* Ajoute les thèmes non listés dans THEME_ORDER (ex. idees) */
-  for (var key in THEME_DEFS) {
-    if (THEME_ORDER.indexOf(key) === -1) {
-      var dd = THEME_DEFS[key];
-      html += '<span class="theme-legend-item"><span class="ic">' + dd.icon + '</span>' + dd.label + '</span>';
-    }
-  }
-  el.innerHTML = html;
+  renderThemeLegend();
   el.style.display = 'flex';
 }
 
+/* Construit la légende interactive : chaque thème est une case à cocher (filtre) */
+function renderThemeLegend() {
+  var el = document.getElementById('theme-legend');
+  if (!el) return;
+  el.innerHTML = '';
+
+  var hint = document.createElement('span');
+  hint.className = 'theme-legend-hint';
+  hint.textContent = 'Filtrer par thème :';
+  el.appendChild(hint);
+
+  /* Liste ordonnée des thèmes (puis ceux hors THEME_ORDER) */
+  var keys = THEME_ORDER.slice().reverse();
+  for (var key in THEME_DEFS) {
+    if (keys.indexOf(key) === -1) keys.push(key);
+  }
+
+  keys.forEach(function(t) {
+    var d = THEME_DEFS[t];
+    if (!d) return;
+    var btn = document.createElement('button');
+    btn.className = 'theme-legend-item' + (activeThemes[t] ? ' active' : '');
+    btn.innerHTML = '<span class="ic">' + d.icon + '</span>' + d.label;
+    btn.onclick = (function(theme) {
+      return function() {
+        activeThemes[theme] = !activeThemes[theme];
+        renderThemeLegend();
+        refreshThemeFilter();
+      };
+    })(t);
+    el.appendChild(btn);
+  });
+
+  /* Bouton de remise à zéro si au moins un thème est actif */
+  var anyActive = false;
+  for (var k in activeThemes) if (activeThemes[k]) anyActive = true;
+  if (anyActive) {
+    var reset = document.createElement('button');
+    reset.className = 'theme-legend-reset';
+    reset.textContent = '\u2715 Tout afficher';
+    reset.onclick = function() {
+      activeThemes = {};
+      renderThemeLegend();
+      refreshThemeFilter();
+    };
+    el.appendChild(reset);
+  }
+}
+
+/* Rafraîchit la frise et la liste après changement de filtre thématique */
+function refreshThemeFilter() {
+  /* Re-rend la vue courante */
+  if (typeof refreshFrise === 'function') refreshFrise();
+  else if (currentLevel) renderLevel(currentLevel, rangeStartForLevel());
+  /* Si la liste est ouverte, la régénérer */
+  var lst = document.getElementById('event-list-overlay');
+  if (lst && lst.style.display === 'block') openEventList();
+}
+
+/* Détermine le rangeStart selon le niveau courant (utilitaire) */
+function rangeStartForLevel() {
+  if (currentLevel === 4) return currentYear;
+  if (currentLevel === 3) return currentDecade;
+  if (currentLevel === 2) return currentCentury;
+  return 1300;
+}
+
+/* Mode manuel : icône uniquement si un thème a été choisi dans l'admin.
+   Aucune détection automatique par mots-clés. */
 function themeIcon(evt) {
-  var t = detectTheme(evt);
-  return THEME_DEFS[t] ? THEME_DEFS[t].icon : '';
+  if (evt.theme && THEME_DEFS[evt.theme]) return THEME_DEFS[evt.theme].icon;
+  return '';
+}
+/* Préfixe titre : icône + fine espace, ou rien si pas de thème */
+function themePrefix(evt) {
+  var ic = themeIcon(evt);
+  return ic ? ic + '\u202F' : '';
 }
 
 /* Date de DÉBUT fractionnaire (année + mois) : 1356 + (10-1)/12 pour octobre 1356 */
@@ -1451,7 +1526,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     chip.style.color   = _cc.text;
     chip.style.overflow = 'visible';
     if (level > 1) {
-      var titreP = themeIcon(evt) + '\u202F' + evt.titre;  /* icône thématique + fine espace */
+      var titreP = themePrefix(evt) + evt.titre;  /* icône thématique (manuelle) */
       var chipPct      = (Math.min(evt.date_fin, end) - Math.max(evt.date, start)) / (end - start);
       var chipPxApprox = chipPct * (TRACK_PX - 90);
       var maxC         = Math.max(8, Math.floor(chipPxApprox / 6.5));
@@ -1518,7 +1593,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLbl.className = 'chip-date-label';
       dateLbl.textContent = evt.mois ? MOIS_ABR[evt.mois - 1] + ' ' + evt.date : '' + evt.date;
       chip.appendChild(dateLbl);
-      var titreF = themeIcon(evt) + '\u202F' + evt.titre;  /* icône thématique */
+      var titreF = themePrefix(evt) + evt.titre;  /* icône thématique (manuelle) */
       chip.style.fontSize = adaptFontSize(titreF, 0.83, level === 4 ? 48 : 40);
       /* Titre sur une seule ligne (span interne pour ellipsis sur flex) */
       var titreSpan = document.createElement('span');
