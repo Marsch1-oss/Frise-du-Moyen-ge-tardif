@@ -479,12 +479,29 @@ function updateStickyAxis(start, end, step, level) {
       bar.appendChild(tlm);
     }
   } else {
+    /* En vue décennale : chaque année devient une BANDE CLIQUABLE vers la vue annuelle */
+    if (level === 3 && currentDecade !== null) {
+      for (var yy = currentDecade; yy < currentDecade + 10; yy++) {
+        (function(yr) {
+          var l0 = (yr - start) / (end - start) * 100;
+          var l1 = (yr + 1 - start) / (end - start) * 100;
+          var zone = document.createElement('div');
+          zone.className = 'sticky-axis-zone';
+          zone.style.left = l0 + '%';
+          zone.style.width = (l1 - l0) + '%';
+          zone.title = 'Année ' + yr + ' \u2192 vue annuelle';
+          zone.onclick = function() { currentYear = yr; renderLevel(4, yr); };
+          bar.appendChild(zone);
+        })(yy);
+      }
+    }
     for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
       var lpct = (y - start) / (end - start) * 100;
       var tick = document.createElement('div');
       tick.className = 'sticky-axis-tick';
       tick.style.left = lpct + '%';
       tick.textContent = Math.round(y);
+      if (level === 3) tick.classList.add('sticky-axis-tick-click');
       bar.appendChild(tick);
       var tl = document.createElement('div');
       tl.className = 'sticky-axis-tickline';
@@ -492,6 +509,9 @@ function updateStickyAxis(start, end, step, level) {
       bar.appendChild(tl);
     }
   }
+  /* Indice visuel en vue décennale */
+  var hint = document.getElementById('sticky-axis-hint');
+  if (hint) hint.style.display = (level === 3) ? 'inline' : 'none';
   wrap.style.display = 'block';
 }
 
