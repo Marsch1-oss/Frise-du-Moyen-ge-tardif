@@ -108,9 +108,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-23 21:14 — thèmes+stats</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-23 21:38 — champ thème visible</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-23 21:09</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-23 21:38 — champ thème visible</div>
 
 <header>
   <div>
@@ -225,10 +225,13 @@
 
       <div class="field-row">
         <div class="field">
-          <label>Thème <small>(icône thématique)</small></label>
-          <select id="f-theme" style="width:100%;padding:0.4rem;margin-bottom:0.6rem;box-sizing:border-box;">
-            <option value="">— Détection automatique —</option>
-          </select>
+          <div style="background:#f0e8d8;border:2px solid #8B5E34;border-radius:8px;padding:0.7rem;margin-bottom:0.8rem;">
+            <label style="font-weight:700;color:#8B5E34;">&#127991; Thème de l'événement</label>
+            <select id="f-theme" style="width:100%;padding:0.5rem;margin-top:0.3rem;box-sizing:border-box;font-size:0.95rem;border:1px solid #8B5E34;border-radius:6px;">
+              <option value="">— Aucun thème (pas d'icône) —</option>
+            </select>
+            <small style="color:#777;display:block;margin-top:0.3rem;">Choisissez un thème pour afficher son icône sur la frise et dans la liste.</small>
+          </div>
           <label>Image <small>(chemin relatif ou URL)</small></label>
           <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
         </div>
