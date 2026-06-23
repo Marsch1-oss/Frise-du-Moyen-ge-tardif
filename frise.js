@@ -1142,6 +1142,55 @@ function adaptFontSize(titre, basePx, maxChars) {
   return (basePx * 0.70).toFixed(2) + 'rem';
 }
 
+/* Mélange deux couleurs hex en une couleur intermédiaire */
+function mixHex(h1, h2) {
+  function rgb(h) {
+    h = h.replace('#', '');
+    return [parseInt(h.substr(0,2),16), parseInt(h.substr(2,2),16), parseInt(h.substr(4,2),16)];
+  }
+  var a = rgb(h1), b = rgb(h2);
+  var m = [Math.round((a[0]+b[0])/2), Math.round((a[1]+b[1])/2), Math.round((a[2]+b[2])/2)];
+  return '#' + m.map(function(v){ return ('0'+v.toString(16)).slice(-2); }).join('');
+}
+
+/* Éclaircit une couleur hex vers le parchemin (ratio 0=couleur, 1=parchemin) */
+function lightenHex(hex, ratio) {
+  var PARCH = [245, 237, 216];  /* #F5EDD8 */
+  hex = hex.replace('#', '');
+  var r = parseInt(hex.substr(0,2),16), g = parseInt(hex.substr(2,2),16), b = parseInt(hex.substr(4,2),16);
+  var nr = Math.round(r + (PARCH[0]-r)*ratio);
+  var ng = Math.round(g + (PARCH[1]-g)*ratio);
+  var nb = Math.round(b + (PARCH[2]-b)*ratio);
+  return '#' + [nr,ng,nb].map(function(v){ return ('0'+v.toString(16)).slice(-2); }).join('');
+}
+
+/* Détermine la couleur d'un chip selon les règles :
+   - 1 seule zone active concernée → couleur de cette zone
+   - plusieurs zones actives concernées → couleur intermédiaire (mélange)
+   - intensité en 3 paliers selon le type (1-2 soutenu, 3 moyen, 4-5 clair) */
+function chipColor(evt, zone) {
+  /* Zones de l'événement qui sont actuellement ACTIVES */
+  var activeMatched = (evt.zones || []).filter(function(z){ return activeZones[z]; });
+  var baseHex;
+  if (activeMatched.length >= 2) {
+    /* Mélange des couleurs des deux premières zones actives */
+    var c1 = (COLORS[activeMatched[0]] || COLORS['France']).bg;
+    var c2 = (COLORS[activeMatched[1]] || COLORS['France']).bg;
+    baseHex = mixHex(c1, c2);
+  } else {
+    /* Mono-zone : couleur de la zone (celle de la piste, ou la 1re active) */
+    var zn = activeMatched.length === 1 ? activeMatched[0] : zone;
+    baseHex = (COLORS[zn] || COLORS['France']).bg;
+  }
+  /* Intensité par palier : type 1-2 soutenu, 3 moyen, 4-5 clair */
+  var type = Number(evt.type) || 1;
+  var ratio = (type <= 2) ? 0 : (type === 3 ? 0.28 : 0.52);
+  var fill = lightenHex(baseHex, ratio);
+  /* Texte : blanc sur soutenu/moyen, sombre sur clair pour la lisibilité */
+  var textColor = (type <= 3) ? '#fff' : '#2a1c0c';
+  return { fill: fill, border: baseHex, text: textColor, multi: activeMatched.length >= 2 };
+}
+
 function buildChip(evt, zone, start, end, level, rowIndex) {
   var isShared = evt.zones && evt.zones.length > 1;
   var col      = COLORS[zone] || COLORS['France'];
@@ -1163,13 +1212,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     chip.style.left        = pct(d0, start, end);
     chip.style.width       = 'calc(' + pct(d1, start, end) + ' - ' + pct(d0, start, end) + ')';
     chip.style.minHeight   = (ROW_H - 4) + 'px';  /* hauteur auto pour retour ligne */
-    if (isShared) {
-      chip.style.background  = 'repeating-linear-gradient(60deg,' + col.bg + 'CC 0px,' + col.bg + 'CC 8px,' + col2.bg + 'CC 8px,' + col2.bg + 'CC 16px)';
-    } else {
-      chip.style.background  = col.bg + (type === 3 ? '88' : 'CC');
-    }
-    chip.style.borderColor = col.bg;
-    chip.style.color   = '#fff';
+    var _cc = chipColor(evt, zone);
+    chip.style.background  = _cc.fill;
+    chip.style.borderColor = _cc.border;
+    chip.style.color   = _cc.text;
     chip.style.overflow = 'visible';
     if (level > 1) {
       var titreP = evt.titre;
@@ -1230,8 +1276,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.classList.add('chip-full');
       if (type === 1) chip.classList.add('chip-type1');
       if (type === 3) chip.classList.add('chip-type3');
-      chip.style.background = isShared ? 'repeating-linear-gradient(60deg,' + col.bg + ' 0px,' + col.bg + ' 7px,' + col2.bg + ' 7px,' + col2.bg + ' 14px)' : col.bg;
-      chip.style.color      = '#fff';
+      var _cc1 = chipColor(evt, zone);
+      chip.style.background = _cc1.fill;
+      chip.style.borderColor = _cc1.border;
+      chip.style.color      = _cc1.text;
       var MOIS_ABR = ['jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
       var dateLbl = document.createElement('span');
       dateLbl.className = 'chip-date-label';
@@ -1248,8 +1296,9 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       chip.classList.add('chip-medium');
       if (type === 1) chip.classList.add('chip-type1');
       if (type === 3) chip.classList.add('chip-type3');
-      chip.style.background  = isShared ? 'repeating-linear-gradient(60deg,' + col.light + ' 0px,' + col.light + ' 7px,' + col2.light + ' 7px,' + col2.light + ' 14px)' : col.light;
-      chip.style.color       = col.text;
+      var _cc2 = chipColor(evt, zone);
+      chip.style.background  = _cc2.fill;
+      chip.style.color       = _cc2.text;
       chip.style.borderColor = col.bg;
       chip.style.fontSize   = adaptFontSize(evt.titre, 0.76, 18);
       chip.style.whiteSpace = 'normal';
