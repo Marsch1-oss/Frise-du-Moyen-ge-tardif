@@ -1826,14 +1826,24 @@ function wzBuildPeriodSelect() {
   var sub   = document.getElementById('wz-period-sub');
   if (!sel) return;
   sel.innerHTML = '';
-  if (scale === 2) {
-    sub.textContent = 'Sélectionnez le siècle à afficher.';
-    [['XIVe siècle (1300–1400)', 1300],
-     ['XVe siècle (1400–1500)',  1400]].forEach(function(o) {
-      var opt = document.createElement('option');
-      opt.textContent = o[0]; opt.value = o[1];
-      sel.appendChild(opt);
-    });
+  if (scale === 5) {
+    /* Parcours thématique : liste les parcours disponibles */
+    sub.textContent = 'Sélectionnez le parcours à suivre.';
+    var parcours = getAllParcours();
+    if (parcours.length === 0) {
+      var opt0 = document.createElement('option');
+      opt0.textContent = '(aucun parcours disponible)';
+      opt0.value = '';
+      sel.appendChild(opt0);
+    } else {
+      parcours.forEach(function(p) {
+        var opt = document.createElement('option');
+        var n = allEvents.filter(function(e){ return parseSeries(e.serie).indexOf(p) !== -1; }).length;
+        opt.textContent = p + ' (' + n + ' événements)';
+        opt.value = p;
+        sel.appendChild(opt);
+      });
+    }
   } else if (scale === 3) {
     sub.textContent = 'Sélectionnez la décennie à afficher.';
     for (var d = 1300; d < 1500; d += 10) {
@@ -1869,6 +1879,15 @@ function wzClose() {
   var rScale = document.querySelector('input[name="wz-scale"]:checked');
   if (rScale) _wzScale = parseInt(rScale.value);
   var scale  = _wzScale;
+
+  /* Parcours thématique : on lance directement le parcours sélectionné */
+  if (scale === 5) {
+    var pName = document.getElementById('wz-period-select').value;
+    if (pName) { setParcours(pName); return; }
+    /* aucun parcours : repli sur la vue décennale */
+    scale = 3;
+  }
+
   var period = parseInt(document.getElementById('wz-period-select').value || '1300');
 
   /* Niveau de détail par défaut selon la vue :
