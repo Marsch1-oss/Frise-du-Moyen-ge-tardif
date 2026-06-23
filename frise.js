@@ -458,6 +458,28 @@ function renderLevel(level, rangeStart) {
 /* Remplit la bande d'échelle chronologique FIXE (sous la barre de navigation).
    Reproduit les graduations de l'axe pour qu'elles restent visibles au défilement. */
 /* ── Liste des événements de la période ───────────────────────────── */
+var _eliFilterLevel = 4;  /* 2=Important, 3=Détaillé, 4=Complet */
+
+function eliSetFilter(lvl) {
+  _eliFilterLevel = lvl;
+  document.querySelectorAll('.eli-filter-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.lvl) === lvl);
+  });
+  openEventList();   /* régénère la liste avec le nouveau filtre */
+}
+
+/* Un événement passe-t-il le filtre de niveau de la liste ?
+   niveau 2 = Important (types 2-3), 3 = Détaillé (2-4), 4 = Complet (tous) */
+function eliPassesFilter(evt) {
+  var t = (evt.type === undefined || evt.type === null || evt.type === '')
+        ? 2 : parseInt(evt.type, 10);
+  if (isNaN(t) || t < 1) t = 2;
+  if (t === 1) return false;            /* règnes exclus */
+  if (_eliFilterLevel === 2) return t <= 3;
+  if (_eliFilterLevel === 3) return t <= 4;
+  return true;                          /* Complet */
+}
+
 function openEventList() {
   var overlay = document.getElementById('event-list-overlay');
   var body = document.getElementById('event-list-body');
@@ -483,6 +505,7 @@ function openEventList() {
   /* Collecte les événements visibles (mêmes règles que la frise) */
   var list = allEvents.filter(function(e) {
     if (e.regne) return false;
+    if (!eliPassesFilter(e)) return false;   /* filtre Important/Détaillé/Complet */
     if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
     var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
     return e.date < end && fin >= start;
@@ -545,6 +568,11 @@ function openEventList() {
       body.appendChild(card);
     });
   }
+
+  /* Synchronise l'état visuel des boutons de filtre */
+  document.querySelectorAll('.eli-filter-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.lvl) === _eliFilterLevel);
+  });
 
   overlay.style.display = 'block';
   overlay.scrollTop = 0;
