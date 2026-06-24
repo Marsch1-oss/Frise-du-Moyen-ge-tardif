@@ -3,7 +3,7 @@
 
 var ZONES = [
   'France', 'Angleterre', 'St Empire',
-  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace',
+  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
@@ -14,7 +14,7 @@ var ZONES = [
    sont désormais gérés via les thèmes-icônes (champ evt.theme).
    « Atlas » (Cartes/Maps) reste un filtre autonome, hors géographie et hors thèmes. */
 var ZONES_GROUPS = {
-  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'],
+  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
   'Europe du Nord':     ['Scandinavie'],
   'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
   'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
@@ -46,6 +46,7 @@ var COLORS = {
   'Inde':                { bg: '#6B5A10', light: '#F5F0D8', text: '#3A3008' },
   'Monde':               { bg: '#3A3A3A', light: '#EBEBEB', text: '#1C1C1C' },
   'Alsace':              { bg: '#7A3B69', light: '#F3E8F1', text: '#4A1A42' },
+  'Flandre':             { bg: '#C26A1A', light: '#F7EADB', text: '#5C2E08' },
   'Art':                 { bg: '#A0522D', light: '#F5EDE6', text: '#5C2E18' },
   'Techniques':          { bg: '#2F5233', light: '#E6F0E7', text: '#1A2E1C' },
   'Sciences':            { bg: '#1A4A5C', light: '#E0EEF5', text: '#0A2A3A' },
@@ -71,6 +72,10 @@ var ZONE_ALIASES = {
   'Hongrie':             'Hongrie',
   'Naples':              'Naples',
   'Alsace':              'Alsace',
+  'Flandre':             'Flandre',
+  'Flandres':            'Flandre',
+  'Flanders':            'Flandre',
+  'Comté de Flandre':    'Flandre',
   'Castille':            'Castille',
   'Aragon':              'Aragon',
   'Portugal':            'Portugal',
@@ -2907,6 +2912,8 @@ function updateNavButtons() {
   if (prev) prev.style.display = showNav ? '' : 'none';
   if (next) next.style.display = showNav ? '' : 'none';
   if (lbl)  lbl.style.display  = showNav ? '' : 'none';
+  var other = document.getElementById('btn-other');
+  if (other) other.style.display = showNav ? '' : 'none';
   if (showNav) {
     var atStart, atEnd;
     if (currentLevel === 2) {
@@ -2929,6 +2936,21 @@ function updateNavButtons() {
 
 function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
+}
+
+/* « Autres périodes » : rouvre le sélecteur en conservant les zones et le mode courants */
+function openPeriodPicker() {
+  var overlay = document.getElementById('wizard-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('hidden');
+  wzInit();                      /* reconstruit la grille selon les zones ACTUELLES */
+  var mode = (currentLevel === 4) ? '4' : '3';   /* annuelle ou décennale */
+  _wzMode  = mode;
+  _wzScale = parseInt(mode);
+  var rd = document.querySelector('input[name="wz-mode"][value="' + mode + '"]');
+  if (rd) rd.checked = true;
+  if (typeof wzApplyModeUI === 'function') wzApplyModeUI();
+  wzGoTo(2);                     /* va directement au choix des zones + période */
 }
 
 /* ── Recherche ──────────────────────────────────────────────────────*/

@@ -445,7 +445,7 @@
 
     .chip-medium { font-size: 0.76rem; padding: 3px 8px; border-radius: 10px; border: 1.5px solid; white-space: normal; line-height: 1.25; font-style: italic; max-width: 200px; word-break: break-word; box-sizing: border-box; }
     .chip-medium.chip-type1 { font-weight: 600; font-size: 0.75rem; border-width: 2px; }
-    .chip-medium.chip-type3 { opacity: 0.7; font-size: 0.65rem; }
+    .chip-medium.chip-type3 { opacity: 1; font-size: 0.65rem; }
 
     .chip-full { font-size: 0.83rem; padding: 5px 11px; border-radius: 10px; white-space: nowrap; font-style: italic; line-height: 1.25; max-width: 220px; box-sizing: border-box; position: relative; overflow: hidden; text-overflow: ellipsis; height: 28px; display: flex; align-items: center; }
 
@@ -479,10 +479,10 @@
     /* ── Bordure selon niveau d'importance (remplace l'étoile) ── */
     .chip-full.chip-type1 { font-weight: 700; box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 2px 10px rgba(0,0,0,0.30); letter-spacing: 0.01em; }
     .chip-full:not(.chip-type1):not(.chip-type3) { box-shadow: 0 0 0 1.5px rgba(255,255,255,0.6), 0 1px 5px rgba(0,0,0,0.18); }
-    .chip-full.chip-type3 { opacity: 0.82; box-shadow: none; border: 1px dashed rgba(255,255,255,0.4); }
+    .chip-full.chip-type3 { opacity: 1; box-shadow: none; border: 1px dashed rgba(255,255,255,0.55); }
     .chip-period.chip-type1 { border-width: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
     .chip-period:not(.chip-type1):not(.chip-type3) { border-width: 1.5px; }
-    .chip-period.chip-type3 { border-width: 1px; border-style: dashed; opacity: 0.78; }
+    .chip-period.chip-type3 { border-width: 1px; border-style: dashed; opacity: 1; }
     
 
     /* ── Section Rulers globale (en haut de la frise) ── */
@@ -553,7 +553,7 @@
 
     .chip-period { border-radius: 4px; border: 1.5px solid; font-size: 0.78rem; font-style: italic; white-space: normal; overflow: visible; padding: 3px 8px; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; min-width: 4px; word-break: break-word; hyphens: auto; height: auto; min-height: 0; }
     .chip-period.chip-type1 { border-width: 2px; font-weight: 600; }
-    .chip-period.chip-type3 { opacity: 0.65; }
+    .chip-period.chip-type3 { opacity: 1; }
     .chip-period:hover { z-index: 10; }
     .chip-period-sm { padding: 0; }
 
@@ -1801,8 +1801,9 @@
     <button class="ctrl-nav-btn" id="btn-prev" onclick="navigatePeriod(-1)" style="display:none;">&larr; P&eacute;riode pr&eacute;c&eacute;dente</button>
     <span id="decade-label" class="period-label"></span>
     <button class="ctrl-nav-btn" id="btn-next" onclick="navigatePeriod(1)" style="display:none;">P&eacute;riode suivante &rarr;</button>
+    <button class="ctrl-nav-btn" id="btn-other" onclick="openPeriodPicker()" style="display:none;" title="Choisir une autre p&eacute;riode">&#128197; Autres p&eacute;riodes</button>
     <button class="ctrl-list-btn" id="btn-list" onclick="openEventList()">&#9776; Liste des &eacute;v&eacute;nements</button>
-    <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="Légende des thèmes">&#127991; Légende</button>
+    <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="L&eacute;gende et tri th&eacute;matique">&#127991; L&eacute;gende &ndash; tri th&eacute;matique</button>
     <span class="nav-sep"></span>
     <div class="search-bar">
       <label for="search-input">&#128269;</label>
@@ -2046,7 +2047,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782292818"></script>
+<script src="frise.js?v=1782332767"></script>
 
 
 <!-- Modale login editeur -->
