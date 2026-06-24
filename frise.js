@@ -1444,7 +1444,11 @@ function renderThemeLegend(elId) {
     reset.textContent = '\u2715 Tout afficher';
     reset.onclick = function() {
       activeThemes = {};
-      renderAllLegends();
+      /* Masque la fenêtre de filtre : réouverture via le bouton « Légende » */
+      var lg = document.getElementById('theme-legend');
+      if (lg) lg.style.display = 'none';
+      var lgList = document.getElementById('list-theme-legend');
+      if (lgList) lgList.style.display = 'none';
       refreshThemeFilter();
     };
     el.appendChild(reset);
@@ -2170,6 +2174,12 @@ function wzInit() {
     }
   }
   wzUpdateNextHint();  /* reflète l'état initial des zones (bandeau masqué si aucune) */
+  /* Réinitialise le mode d'exploration sur « Frise décennale » */
+  _wzMode  = '3';
+  _wzScale = 3;
+  var rd = document.querySelector('input[name="wz-mode"][value="3"]');
+  if (rd) rd.checked = true;
+  wzApplyModeUI();
   wzGoTo(1);
 }
 
@@ -2192,6 +2202,28 @@ function wzUpdateNextHint() {
   }
 }
 
+var _wzMode = '3';   /* '3' décennale · '4' annuelle · 'search' recherche · '5' parcours */
+
+function wzModeChanged(val) {
+  _wzMode = val;
+  if (val !== 'search') _wzScale = parseInt(val);
+  wzApplyModeUI();
+}
+
+function wzApplyModeUI() {
+  /* Champ de recherche visible uniquement en mode recherche */
+  var row = document.getElementById('wz-search-row');
+  if (row) row.style.display = (_wzMode === 'search') ? 'block' : 'none';
+  /* Libellé du bouton de l'étape 1 */
+  var btn = document.getElementById('wz-step1-next');
+  if (btn) btn.innerHTML = (_wzMode === 'search') ? 'Voir la frise \u203A' : 'Suivant \u203A';
+  if (_wzMode === 'search') {
+    var inp = document.getElementById('wz-search-input');
+    if (inp) setTimeout(function(){ inp.focus(); }, 50);
+  }
+}
+
+/* Ancien nom conservé pour compatibilité (non appelé par le nouveau wizard) */
 function wzScaleChanged(val) {
   _wzScale = parseInt(val);
   if (wzCurrentStep === 2) wzBuildPeriodSelect();
@@ -2206,41 +2238,58 @@ function wzGoTo(step) {
     d.classList.toggle('active', i + 1 === step);
     d.classList.toggle('done',   i + 1 < step);
   });
-  /* Étape 2 : construit le select de période selon l'échelle choisie */
-  if (step === 2) wzBuildPeriodSelect();
+  /* Étape 2 : prépare zones/parcours + période */
+  if (step === 2) wzSetupStep2();
+}
+
+function wzSetupStep2() {
+  /* Les zones-thèmes ne sont proposées QUE pour les frises décennale et annuelle.
+     En mode parcours, on masque la grille et on ne propose que la liste des parcours. */
+  var isParcours = (_wzMode === '5');
+  var grid  = document.getElementById('wz-zones-grid');
+  var sub   = document.getElementById('wz-step2-sub');
+  var title = document.getElementById('wz-step2-title');
+  if (grid)  grid.style.display = isParcours ? 'none' : '';
+  if (sub)   sub.style.display  = isParcours ? 'none' : '';
+  if (title) title.textContent  = isParcours ? 'Parcours thématique' : 'Zones \u0026 thèmes';
+  wzBuildPeriodSelect();
 }
 
 function wzNext() {
+  /* ── Étape 1 : choix du mode d'exploration ── */
   if (wzCurrentStep === 1) {
-    var q = (document.getElementById('wz-search-input').value || '').trim();
-    if (q) { wzClose(); wzApplySearch(q); return; }
+    if (_wzMode === 'search') {
+      var q = (document.getElementById('wz-search-input').value || '').trim();
+      if (!q) { alert('Saisissez un mot-clé pour lancer la recherche.'); return; }
+      wzClose();                /* wzClose détecte le mot-clé et lance la recherche */
+      return;
+    }
+    /* Décennale / annuelle / parcours → étape 2 */
+    _wzScale = (_wzMode === '5') ? 5 : parseInt(_wzMode);
+    wzGoTo(2);
+    return;
+  }
+  /* ── Étape 2 : validation puis ouverture de la frise ── */
+  if (_wzMode === '5') {
+    var pv = (document.getElementById('wz-period-select').value || '');
+    if (!pv) { alert('Aucun parcours disponible pour le moment.'); return; }
+  } else {
     var anyZone = Object.values(activeZones).some(Boolean);
-    if (!anyZone) { alert('Sélectionnez au moins une zone ou saisissez un mot-clé.'); return; }
+    if (!anyZone) { alert('Sélectionnez au moins une zone ou un thème.'); return; }
   }
-  /* Mémorise le scale quand on quitte l'étape 2 (avant que la div soit masquée) */
-  if (wzCurrentStep === 2) {
-    var r = document.querySelector('input[name="wz-scale"]:checked');
-    if (r) _wzScale = parseInt(r.value);
-  }
-  var next = wzCurrentStep + 1;
-  if (next > WZ_TOTAL_STEPS) { wzClose(); return; }
-  wzGoTo(next);
+  wzClose();
 }
 
 function wzPrev() {
-  var prev = wzCurrentStep - 1;
-  if (wzCurrentStep === 5 && wzGetScale() !== 3) { wzGoTo(3); return; }
-  if (prev < 1) return;
-  wzGoTo(prev);
+  if (wzCurrentStep > 1) wzGoTo(wzCurrentStep - 1);
 }
 
 var _wzScale = 3; /* Mémorise le choix d'échelle — défaut décennale */
 
 function wzGetScale() {
-  /* Tente d'abord de lire le DOM, sinon utilise _wzScale */
-  var r = document.querySelector('input[name="wz-scale"]:checked');
-  if (r) _wzScale = parseInt(r.value);
-  return _wzScale;
+  if (_wzMode === '5') return 5;
+  if (_wzMode === 'search') return _wzScale;
+  return parseInt(_wzMode);
 }
 
 function wzBuildPeriodSelect() {
@@ -2295,13 +2344,12 @@ function wzClose() {
   var overlay = document.getElementById('wizard-overlay');
   if (overlay) overlay.classList.add('hidden');
   var q = (document.getElementById('wz-search-input').value || '').trim();
-  if (q) { wzApplySearch(q); return; }
+  if (_wzMode === 'search' && q) { wzApplySearch(q); return; }
   updateFilterCheckboxes();
 
-  /* Lit l'échelle mémorisée et la période choisie */
-  var rScale = document.querySelector('input[name="wz-scale"]:checked');
-  if (rScale) _wzScale = parseInt(rScale.value);
-  var scale  = _wzScale;
+  /* Échelle déduite du mode choisi */
+  var scale = (_wzMode === '5') ? 5 : (_wzMode === 'search' ? 3 : parseInt(_wzMode));
+  _wzScale = scale;
 
   /* Parcours thématique : on lance directement le parcours sélectionné */
   if (scale === 5) {
