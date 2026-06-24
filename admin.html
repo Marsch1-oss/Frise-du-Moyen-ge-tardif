@@ -691,12 +691,18 @@ function deleteEvent() {
 /* ── Classification thématique près du formulaire ──
    « classé » = thème manuel OU auto-détecté (detectTheme), hors règnes —
    même calcul que le tableau de bord (X / Y classés). */
+/* Une fiche « règne » s'affiche par défaut quel que soit le filtre :
+   inutile de lui attribuer un thème. On l'identifie par le drapeau regne
+   OU par le niveau 1 (Règne), pour couvrir tous les cas. */
+function isReign(e) {
+  return !!e.regne || Number(e.type) === 1;
+}
 function getNoThemeEvents() {
-  return events.filter(function(e) { return !e.regne && !detectTheme(e); })
+  return events.filter(function(e) { return !isReign(e) && !detectTheme(e); })
                .slice().sort(function(a, b) { return a.date - b.date; });
 }
 function refreshNoTheme() {
-  var nonRegne = events.filter(function(e) { return !e.regne; });
+  var nonRegne = events.filter(function(e) { return !isReign(e); });
   var sans = getNoThemeEvents();
   var done = nonRegne.length - sans.length;
   function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
