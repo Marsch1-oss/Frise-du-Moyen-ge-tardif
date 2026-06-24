@@ -48,6 +48,26 @@
     .theme-btn:hover { border-color: #8B5E34; }
     .theme-btn.selected { background: #8B5E34; border-color: #8B5E34; color: #fff; font-weight: 600; }
     .theme-btn .tb-ic { font-size: 1rem; line-height: 1; }
+    #no-theme-block { margin-top: 0.6rem; border-top: 1px dashed #c9b48f; padding-top: 0.5rem; }
+    .no-theme-toggle {
+      background: #fff; border: 1.5px solid #c9b48f; border-radius: 8px;
+      padding: 0.3rem 0.6rem; font-size: 0.82rem; color: #8B5E34; font-weight: 600;
+      cursor: pointer; width: 100%; text-align: left;
+    }
+    .no-theme-toggle:hover { border-color: #8B5E34; background: #faf6ee; }
+    #no-theme-caret { float: right; transition: transform .15s; }
+    #no-theme-caret.open { transform: rotate(90deg); }
+    .no-theme-list {
+      margin-top: 0.4rem; max-height: 220px; overflow-y: auto;
+      border: 1px solid #e0d4ba; border-radius: 6px; background: #fffdf8;
+    }
+    .no-theme-item {
+      padding: 0.32rem 0.55rem; font-size: 0.8rem; color: #4a3a1a;
+      border-bottom: 1px solid #efe6d2; cursor: pointer; line-height: 1.25;
+    }
+    .no-theme-item:last-child { border-bottom: none; }
+    .no-theme-item:hover { background: #f0e8d8; }
+    .no-theme-empty { padding: 0.5rem 0.6rem; font-size: 0.82rem; color: #777; font-style: italic; }
     .zones-group-sep {
       font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--ink-muted);
@@ -240,6 +260,12 @@
             <input type="hidden" id="f-theme" value="">
             <div id="theme-buttons" class="theme-btns"></div>
             <small style="color:#777;display:block;margin-top:0.4rem;">Cliquez sur un th&egrave;me pour afficher son ic&ocirc;ne sur la frise ; recliquez dessus pour l'enlever.</small>
+            <div id="no-theme-block">
+              <button type="button" id="no-theme-toggle" class="no-theme-toggle" onclick="toggleNoThemeList()">
+                &#128203; Fiches sans th&egrave;me (<span id="no-theme-count">0</span>) <span id="no-theme-caret">&#9656;</span>
+              </button>
+              <div id="no-theme-list" class="no-theme-list" style="display:none;"></div>
+            </div>
           </div>
           <label>Image <small>(chemin relatif ou URL)</small></label>
           <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
@@ -655,7 +681,56 @@ function deleteEvent() {
   toast('Événement supprimé');
 }
 
+/* ── Fiches sans thème : aide à proximité du tableau des thèmes ── */
+function getNoThemeEvents() {
+  return events.filter(function(e) { return !e.theme; })
+               .slice().sort(function(a, b) { return a.date - b.date; });
+}
+function refreshNoTheme() {
+  var c = document.getElementById('no-theme-count');
+  if (c) c.textContent = getNoThemeEvents().length;
+  var box = document.getElementById('no-theme-list');
+  if (box && box.style.display === 'block') renderNoThemeList();
+}
+function toggleNoThemeList() {
+  var box   = document.getElementById('no-theme-list');
+  var caret = document.getElementById('no-theme-caret');
+  if (!box) return;
+  if (box.style.display === 'block') {
+    box.style.display = 'none';
+    if (caret) caret.classList.remove('open');
+  } else {
+    renderNoThemeList();
+    box.style.display = 'block';
+    if (caret) caret.classList.add('open');
+  }
+}
+function renderNoThemeList() {
+  var box = document.getElementById('no-theme-list');
+  if (!box) return;
+  var list = getNoThemeEvents();
+  box.innerHTML = '';
+  if (list.length === 0) {
+    box.innerHTML = '<div class="no-theme-empty">Toutes les fiches ont un th\u00e8me \uD83C\uDF89</div>';
+    return;
+  }
+  list.forEach(function(e) {
+    var it = document.createElement('div');
+    it.className = 'no-theme-item';
+    var zones = (e.zones || []).join(', ');
+    it.textContent = e.date + ' \u2014 ' + (e.titre || '') + (zones ? '  (' + zones + ')' : '');
+    it.title = 'Ouvrir la fiche #' + e.id;
+    it.addEventListener('click', function() {
+      fillForm(e);
+      var f = document.getElementById('f-titre');
+      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    box.appendChild(it);
+  });
+}
+
 function renderList() {
+  refreshNoTheme();
   var q = (document.getElementById('search-input').value || '').toLowerCase();
   var filtered = events.filter(function(e) {
     return !q || e.titre.toLowerCase().indexOf(q) !== -1
