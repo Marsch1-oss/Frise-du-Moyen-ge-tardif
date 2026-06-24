@@ -108,9 +108,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-23 21:38 — champ thème visible</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-24 08:23 — révolte+auto</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-23 21:38 — champ thème visible</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-24 08:23 — révolte+auto</div>
 
 <header>
   <div>
@@ -369,40 +369,40 @@ var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
   'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
   'religion':    { icon: '\u271D\uFE0F',     label: 'Religion' },
-  'diplomatie':  { icon: '\uD83E\uDD1D',     label: 'Diplomatie' },
+  'revolte':     { icon: '\uD83D\uDD25',     label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC',     label: 'Diplomatie' },
   'economie':    { icon: '\uD83E\uDE99',     label: 'Économie' },
   'societe':     { icon: '\uD83E\uDDD1',     label: 'Société' },
   'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
-  'litterature': { icon: '\uD83D\uDCDC',     label: 'Littérature' },
+  'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
   'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
-var THEME_ORDER = ['catastrophe','sciences','art','litterature','economie','religion','diplomatie','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','art','litterature','societe','guerre','politique'];
 var THEME_KEYWORDS = {
-  'catastrophe': ['inondation','tremblement de terre','séisme','tempête','incendie ','éruption','sécheresse','peste noire','grande peste','épidémie','famine'],
-  'sciences':    ['astronom','mathémat','médecine','science','invention','horloge mécan'],
-  'art':         ['peintre','peinture','sculpture','fresque','retable','cathédrale','architecture','basilique','giotto','construction de la'],
-  'litterature': ['poète','poème','roman ','conte','écrivain','divine comédie','pétrarque','boccace','dante','chaucer','chronique de'],
-  'economie':    ['monnaie','florin','commerce','marchand','impôt','taxe','foire','banque','grande compagnie'],
-  'religion':    ['pape','antipape','concile','évêque','schisme','cardinal','excommuni','jubilé','canonis','ordre des frères','grand schisme'],
-  'diplomatie':  ['traité','paix de','trêve de','mariage de','alliance'],
-  'societe':     ['jacquerie','révolte des','soulèvement','émeute','révolte populaire'],
-  'guerre':      ['bataille','siège','guerre','assaut','combat','conquête','chevauchée','prise de','reconquête','croisade'],
-  'politique':   ['roi','reine','couronn','sacre','empereur','duc ','comte ','succession','trône','régence','dynastie','avènement','élection','règne','seigneur']
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 function detectTheme(evt) {
   if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
-  var txt = ((evt.titre || '') + ' ' + (evt.description || '')).toLowerCase();
+  var txt = (evt.titre || '').toLowerCase();
   for (var i = 0; i < THEME_ORDER.length; i++) {
     var theme = THEME_ORDER[i];
     var kws = THEME_KEYWORDS[theme];
+    if (!kws) continue;
     for (var k = 0; k < kws.length; k++) {
       if (txt.indexOf(kws[k]) !== -1) return theme;
     }
   }
-  return 'politique';
+  return null;
 }
 function themeIcon(evt) {
   if (evt.theme && THEME_DEFS[evt.theme]) return THEME_DEFS[evt.theme].icon;
@@ -676,9 +676,16 @@ function renderList() {
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
       + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
-      + (evt.theme && THEME_DEFS[evt.theme]
-          ? '<span class="ec-theme" title="' + THEME_DEFS[evt.theme].label + '">' + THEME_DEFS[evt.theme].icon + '</span>'
-          : '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>')
+      + (function(){
+          var dt = detectTheme(evt);
+          if (dt && THEME_DEFS[dt]) {
+            var manuel = !!evt.theme;
+            return '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
+                   (manuel ? ' (manuel)' : ' (auto)') + '" style="' +
+                   (manuel ? '' : 'opacity:0.6;') + '">' + THEME_DEFS[dt].icon + '</span>';
+          }
+          return '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
+        })()
       + '</div>';
     card.addEventListener('click', function() { fillForm(evt); });
     list.appendChild(card);
@@ -1021,7 +1028,7 @@ function dashRefresh() {
   html += probLine('niveau (type) invalide', pbType);
 
   /* Classification thématique (mode manuel) */
-  var sansTheme = nonRegne.filter(function(e){ return !e.theme; });
+  var sansTheme = nonRegne.filter(function(e){ return !detectTheme(e); });  /* ni manuel ni auto */
   var avecTheme = nonRegne.length - sansTheme.length;
   html += '<h4 style="margin:1rem 0 0.4rem;">\uD83C\uDFF7 Classification thématique</h4>';
   html += '<p style="font-size:0.85rem;margin:0 0 0.5rem;">' +

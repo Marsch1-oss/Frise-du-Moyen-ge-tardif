@@ -1342,27 +1342,26 @@ var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
   'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
   'religion':    { icon: '\u271D\uFE0F',     label: 'Religion' },
-  'diplomatie':  { icon: '\uD83E\uDD1D',     label: 'Diplomatie' },
+  'revolte':     { icon: '\uD83D\uDD25',     label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC',     label: 'Diplomatie' },
   'economie':    { icon: '\uD83E\uDE99',     label: 'Économie' },
   'societe':     { icon: '\uD83E\uDDD1',     label: 'Société' },
   'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
-  'litterature': { icon: '\uD83D\uDCDC',     label: 'Littérature' },
+  'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
   'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
-var THEME_ORDER = ['catastrophe','sciences','art','litterature','economie','religion','diplomatie','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','art','litterature','societe','guerre','politique'];
 var THEME_KEYWORDS = {
-  'catastrophe': ['inondation','tremblement de terre','séisme','tempête','incendie ','éruption','sécheresse','peste noire','grande peste','épidémie','famine'],
-  'sciences':    ['astronom','mathémat','médecine','science','invention','horloge mécan'],
-  'art':         ['peintre','peinture','sculpture','fresque','retable','cathédrale','architecture','basilique','giotto','construction de la'],
-  'litterature': ['poète','poème','roman ','conte','écrivain','divine comédie','pétrarque','boccace','dante','chaucer','chronique de'],
-  'economie':    ['monnaie','florin','commerce','marchand','impôt','taxe','foire','banque','grande compagnie'],
-  'religion':    ['pape','antipape','concile','évêque','schisme','cardinal','excommuni','jubilé','canonis','ordre des frères','grand schisme'],
-  'diplomatie':  ['traité','paix de','trêve de','mariage de','alliance'],
-  'societe':     ['jacquerie','révolte des','soulèvement','émeute','révolte populaire'],
-  'guerre':      ['bataille','siège','guerre','assaut','combat','conquête','chevauchée','prise de','reconquête','croisade'],
-  'politique':   ['roi','reine','couronn','sacre','empereur','duc ','comte ','succession','trône','régence','dynastie','avènement','élection','règne','seigneur']
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
@@ -1375,20 +1374,24 @@ function eventMatchesTheme(evt) {
   var anyActive = false;
   for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
   if (!anyActive) return true;
-  return !!(evt.theme && activeThemes[evt.theme]);
+  var th = detectTheme(evt);   /* manuel ou auto (titre) */
+  return !!(th && activeThemes[th]);
 }
 
 function detectTheme(evt) {
+  /* Thème manuel prioritaire */
   if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
-  var txt = ((evt.titre || '') + ' ' + (evt.description || '')).toLowerCase();
+  /* Sinon détection auto sur le TITRE uniquement */
+  var txt = (evt.titre || '').toLowerCase();
   for (var i = 0; i < THEME_ORDER.length; i++) {
     var theme = THEME_ORDER[i];
     var kws = THEME_KEYWORDS[theme];
+    if (!kws) continue;
     for (var k = 0; k < kws.length; k++) {
       if (txt.indexOf(kws[k]) !== -1) return theme;
     }
   }
-  return 'politique';
+  return null;   /* aucun mot-clé trouvé → pas de thème (pas d'icône) */
 }
 function toggleThemeLegend() {
   var el = document.getElementById('theme-legend');
@@ -1483,11 +1486,11 @@ function rangeStartForLevel() {
   return 1300;
 }
 
-/* Mode manuel : icône uniquement si un thème a été choisi dans l'admin.
-   Aucune détection automatique par mots-clés. */
+/* Icône : thème manuel prioritaire, sinon détection auto par mots-clés du titre.
+   Renvoie '' si aucun thème (manuel ou détecté). */
 function themeIcon(evt) {
-  if (evt.theme && THEME_DEFS[evt.theme]) return THEME_DEFS[evt.theme].icon;
-  return '';
+  var t = detectTheme(evt);
+  return (t && THEME_DEFS[t]) ? THEME_DEFS[t].icon : '';
 }
 /* Préfixe titre : icône + fine espace, ou rien si pas de thème */
 function themePrefix(evt) {
