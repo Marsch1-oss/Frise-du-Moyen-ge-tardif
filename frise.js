@@ -1623,8 +1623,15 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
 
       chip.style.overflow = 'hidden';
       if (chipPxApprox < 40) {
-        /* Très étroit : texte masqué, titre en tooltip (déjà dans chip.title) */
-        /* rien à afficher */
+        /* Très étroit : titre masqué (en tooltip), mais on garde l'icône thématique si présente */
+        var icNarrow = themeIcon(evt);
+        if (icNarrow) {
+          var icSpan = document.createElement('span');
+          icSpan.textContent = icNarrow;
+          icSpan.style.fontSize = '0.7rem';
+          icSpan.style.lineHeight = '1';
+          chip.appendChild(icSpan);
+        }
       } else {
         /* Titre dans un span interne pour gérer ellipsis/retour ligne
            (text-overflow ne marche pas sur un conteneur flex) */
@@ -1694,7 +1701,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
       dateLbl2.className   = 'chip-date-label';
       dateLbl2.textContent = evt.date;
       chip.appendChild(dateLbl2);
-      chip.appendChild(document.createTextNode(evt.titre));
+      chip.appendChild(document.createTextNode(themePrefix(evt) + evt.titre));
     } else {
       chip.classList.add('chip-dot');
       var sz = type === 1 ? 13 : type === 3 ? 7 : 10;
