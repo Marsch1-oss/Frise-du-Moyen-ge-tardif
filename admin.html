@@ -49,6 +49,9 @@
     .theme-btn.selected { background: #8B5E34; border-color: #8B5E34; color: #fff; font-weight: 600; }
     .theme-btn .tb-ic { font-size: 1rem; line-height: 1; }
     #no-theme-block { margin-top: 0.6rem; border-top: 1px dashed #c9b48f; padding-top: 0.5rem; }
+    .classif-head { font-size: 0.82rem; color: #4a3a1a; margin-bottom: 0.45rem; line-height: 1.5; }
+    .classif-bar { display: inline-block; vertical-align: middle; width: 90px; height: 9px; background: #e6dcc4; border-radius: 5px; overflow: hidden; margin-left: 0.3rem; }
+    .classif-bar > span { display: block; height: 100%; width: 0%; background: #6a4ea8; transition: width .2s; }
     .no-theme-toggle {
       background: #fff; border: 1.5px solid #c9b48f; border-radius: 8px;
       padding: 0.3rem 0.6rem; font-size: 0.82rem; color: #8B5E34; font-weight: 600;
@@ -261,6 +264,10 @@
             <div id="theme-buttons" class="theme-btns"></div>
             <small style="color:#777;display:block;margin-top:0.4rem;">Cliquez sur un th&egrave;me pour afficher son ic&ocirc;ne sur la frise ; recliquez dessus pour l'enlever.</small>
             <div id="no-theme-block">
+              <div class="classif-head">
+                &#127991; Classification th&eacute;matique : <strong><span id="classif-done">0</span>&#8201;/&#8201;<span id="classif-total">0</span></strong> class&eacute;s
+                <span class="classif-bar"><span></span></span>
+              </div>
               <button type="button" id="no-theme-toggle" class="no-theme-toggle" onclick="toggleNoThemeList()">
                 &#128203; Fiches sans th&egrave;me (<span id="no-theme-count">0</span>) <span id="no-theme-caret">&#9656;</span>
               </button>
@@ -681,14 +688,23 @@ function deleteEvent() {
   toast('Événement supprimé');
 }
 
-/* ── Fiches sans thème : aide à proximité du tableau des thèmes ── */
+/* ── Classification thématique près du formulaire ──
+   « classé » = thème manuel OU auto-détecté (detectTheme), hors règnes —
+   même calcul que le tableau de bord (X / Y classés). */
 function getNoThemeEvents() {
-  return events.filter(function(e) { return !e.theme; })
+  return events.filter(function(e) { return !e.regne && !detectTheme(e); })
                .slice().sort(function(a, b) { return a.date - b.date; });
 }
 function refreshNoTheme() {
-  var c = document.getElementById('no-theme-count');
-  if (c) c.textContent = getNoThemeEvents().length;
+  var nonRegne = events.filter(function(e) { return !e.regne; });
+  var sans = getNoThemeEvents();
+  var done = nonRegne.length - sans.length;
+  function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+  set('classif-done',  done);
+  set('classif-total', nonRegne.length);
+  set('no-theme-count', sans.length);
+  var bar = document.querySelector('.classif-bar > span');
+  if (bar) bar.style.width = (nonRegne.length ? Math.round(done / nonRegne.length * 100) : 0) + '%';
   var box = document.getElementById('no-theme-list');
   if (box && box.style.display === 'block') renderNoThemeList();
 }
