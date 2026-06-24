@@ -7,10 +7,12 @@ var ZONES = [
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde',
-  'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
+  'Afrique', 'Amerique', 'Monde', 'Atlas'
 ];
 
+/* Les anciens « thèmes-zones » (Art, Techniques, Sciences, Idées, Littérature)
+   sont désormais gérés via les thèmes-icônes (champ evt.theme).
+   « Atlas » (Cartes/Maps) reste un filtre autonome, hors géographie et hors thèmes. */
 var ZONES_GROUPS = {
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'],
   'Europe du Nord':     ['Scandinavie'],
@@ -18,7 +20,7 @@ var ZONES_GROUPS = {
   'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
   'Afrique & Amérique': ['Afrique', 'Amerique'],
   'Monde':              ['Monde'],
-  'Thèmes':             ['Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas']
+  'Cartographie':       ['Atlas']
 }
 
 var COLORS = {
@@ -153,7 +155,7 @@ var _syntheses = {};   /* clé "Zone|décennie" -> { titre, texte, auto } */
 
 function loadSyntheses() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'syntheses.json', true);
+  xhr.open('GET', 'syntheses.json?v=' + Date.now(), true);
   xhr.onload = function() {
     if (xhr.status === 200 || xhr.status === 0) {
       try { _syntheses = JSON.parse(xhr.responseText) || {}; }
@@ -213,7 +215,8 @@ function getSynthese(zone, dec) {
 
 function loadEvents() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'events.json', true);
+  /* Anti-cache : force la lecture de la dernière version du fichier à chaque ouverture */
+  xhr.open('GET', 'events.json?v=' + Date.now(), true);
   xhr.onload = function() {
     if (xhr.status === 200 || xhr.status === 0) {
       try {
@@ -1349,10 +1352,11 @@ var THEME_DEFS = {
   'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
   'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
   'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','art','litterature','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -1360,6 +1364,7 @@ var THEME_KEYWORDS = {
   'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };

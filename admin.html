@@ -38,6 +38,16 @@
     input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 2px rgba(154,107,26,0.15); }
     textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
     .zones-grid { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.2rem; }
+    .theme-btns { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+    .theme-btn {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      padding: 0.28rem 0.55rem; border: 1.5px solid #c9b48f; border-radius: 14px;
+      background: #fff; cursor: pointer; font-size: 0.82rem; color: #5a4a2a;
+      user-select: none; transition: background .12s, border-color .12s, color .12s;
+    }
+    .theme-btn:hover { border-color: #8B5E34; }
+    .theme-btn.selected { background: #8B5E34; border-color: #8B5E34; color: #fff; font-weight: 600; }
+    .theme-btn .tb-ic { font-size: 1rem; line-height: 1; }
     .zones-group-sep {
       font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--ink-muted);
@@ -226,11 +236,10 @@
       <div class="field-row">
         <div class="field">
           <div style="background:#f0e8d8;border:2px solid #8B5E34;border-radius:8px;padding:0.7rem;margin-bottom:0.8rem;">
-            <label style="font-weight:700;color:#8B5E34;">&#127991; Thème de l'événement</label>
-            <select id="f-theme" style="width:100%;padding:0.5rem;margin-top:0.3rem;box-sizing:border-box;font-size:0.95rem;border:1px solid #8B5E34;border-radius:6px;">
-              <option value="">— Aucun thème (pas d'icône) —</option>
-            </select>
-            <small style="color:#777;display:block;margin-top:0.3rem;">Choisissez un thème pour afficher son icône sur la frise et dans la liste.</small>
+            <label style="font-weight:700;color:#8B5E34;">&#127991; Th&egrave;me de l'&eacute;v&eacute;nement <small style="font-weight:400;color:#777;">(ic&ocirc;ne, facultatif)</small></label>
+            <input type="hidden" id="f-theme" value="">
+            <div id="theme-buttons" class="theme-btns"></div>
+            <small style="color:#777;display:block;margin-top:0.4rem;">Cliquez sur un th&egrave;me pour afficher son ic&ocirc;ne sur la frise ; recliquez dessus pour l'enlever.</small>
           </div>
           <label>Image <small>(chemin relatif ou URL)</small></label>
           <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
@@ -359,9 +368,7 @@ const ZONES = [
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde',
-  /* Thèmes */
-  'Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'
+  'Afrique', 'Amerique', 'Monde', 'Atlas'
 ];
 
 /* ── Thèmes iconographiques ──────────────────────────────────────── */
@@ -376,10 +383,11 @@ var THEME_DEFS = {
   'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
   'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
   'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','art','litterature','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -418,7 +426,7 @@ const ZONE_GROUPS = [
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
   { label: 'Afrique & Amérique',  zones: ['Afrique', 'Amerique'] },
   { label: 'Monde',               zones: ['Monde'] },
-  { label: 'Thèmes',              zones: ['Art', 'Techniques', 'Sciences', 'Idees', 'Litterature', 'Atlas'] }
+  { label: 'Cartographie',        zones: ['Atlas'] }
 ];
 
 const COLORS = {
@@ -572,7 +580,7 @@ function fillForm(evt) {
   document.getElementById('f-date-fin').value = evt.date_fin || '';
   document.getElementById('f-mois-fin').value = evt.mois_fin || '';
   document.getElementById('f-desc').value     = evt.description || '';
-  document.getElementById('f-theme').value    = evt.theme    || '';
+  setTheme(evt.theme || '');
   document.getElementById('f-image').value    = evt.image    || '';
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
@@ -611,6 +619,7 @@ function resetForm() {
     inp.checked = false;
     updateZoneTag(inp.closest('.zone-tag'), false, inp.value);
   });
+  setTheme('');
   document.querySelectorAll('.type-radio').forEach(function(lbl) {
     var isDefault = parseInt(lbl.dataset.val) === 3;  /* Niveau 3 Important par défaut */
     lbl.classList.toggle('selected', isDefault);
@@ -792,6 +801,48 @@ function copyJSON() {
   toast('JSON copié (' + events.length + ' événements) \u2713');
 }
 
+/* Migration : les anciennes zones-thèmes (Art, Techniques, Sciences, Idées,
+   Littérature) deviennent des thèmes-icônes. Atlas reste une zone autonome. */
+var THEME_ZONE_MAP = { 'Art':'art', 'Techniques':'techniques', 'Sciences':'sciences', 'Idees':'idees', 'Litterature':'litterature' };
+
+function migrateThemeZones() {
+  var oldKeys = Object.keys(THEME_ZONE_MAP);
+  var affected = events.filter(function(ev) {
+    return (ev.zones || []).some(function(z) { return oldKeys.indexOf(z) !== -1; });
+  });
+  if (affected.length === 0) return;
+
+  if (!confirm(affected.length + ' \u00e9v\u00e9nement(s) utilisent les anciens th\u00e8mes-zones (Art, Techniques, Sciences, Id\u00e9es, Litt\u00e9rature).\n\n'
+      + 'Les convertir automatiquement en th\u00e8mes-ic\u00f4nes ?\n'
+      + '\u2022 le th\u00e8me-ic\u00f4ne correspondant est attribu\u00e9 (si aucun n\'est d\u00e9j\u00e0 d\u00e9fini)\n'
+      + '\u2022 la zone-th\u00e8me est retir\u00e9e des donn\u00e9es g\u00e9ographiques\n'
+      + '\u2022 les \u00e9v\u00e9nements sans zone g\u00e9ographique restante seront signal\u00e9s\n\n'
+      + 'Annuler = ne rien changer.')) {
+    return;
+  }
+
+  var orphans = [];
+  events.forEach(function(ev) {
+    var zones = ev.zones || [];
+    var themesFound = zones.filter(function(z) { return oldKeys.indexOf(z) !== -1; });
+    if (themesFound.length === 0) return;
+    if (!ev.theme) ev.theme = THEME_ZONE_MAP[themesFound[0]];   /* thème-icône si aucun défini */
+    ev.zones = zones.filter(function(z) { return oldKeys.indexOf(z) === -1; });  /* retire la zone-thème */
+    if (ev.zones.length === 0) orphans.push('#' + ev.id + ' \u00ab ' + (ev.titre || '').substring(0, 30) + ' \u00bb');
+  });
+
+  events.sort(function(a, b) { return a.date - b.date; });
+
+  if (orphans.length > 0) {
+    alert('Migration effectu\u00e9e.\n\n' + orphans.length + ' \u00e9v\u00e9nement(s) n\'ont plus de zone g\u00e9ographique et doivent en recevoir une :\n\n'
+      + orphans.slice(0, 20).join('\n')
+      + (orphans.length > 20 ? '\n\u2026 et ' + (orphans.length - 20) + ' autre(s).' : '')
+      + '\n\nOuvrez-les pour leur attribuer une zone, puis t\u00e9l\u00e9chargez le fichier.');
+  } else {
+    toast('Migration th\u00e8mes \u2192 ic\u00f4nes effectu\u00e9e \u2713');
+  }
+}
+
 function importJSON(input) {
   var file = input.files[0];
   if (!file) return;
@@ -808,6 +859,7 @@ function importJSON(input) {
       hasImported = true;
       var warn = document.getElementById('import-warning');
       if (warn) warn.style.display = 'none';
+      migrateThemeZones();   /* convertit les anciennes zones-thèmes en thèmes-icônes */
       resetForm();
       updateJSON();
       toast(events.length + ' événements importés \u2713');
@@ -1138,27 +1190,37 @@ synthInitControls();
 synthRenderList();
 
 
-function initThemeSelect() {
-  var sel = document.getElementById('f-theme');
-  if (!sel) return;
-  /* garde la 1re option (détection auto) et ajoute les thèmes */
-  THEME_ORDER.slice().reverse().forEach(function(t) {
-    var d = THEME_DEFS[t];
-    var o = document.createElement('option');
-    o.value = t; o.textContent = d.icon + ' ' + d.label;
-    sel.appendChild(o);
+function initThemeButtons() {
+  var box = document.getElementById('theme-buttons');
+  if (!box) return;
+  box.innerHTML = '';
+  /* Même ordre d'affichage que la légende de la frise */
+  var keys = THEME_ORDER.slice();
+  for (var key in THEME_DEFS) { if (keys.indexOf(key) === -1) keys.push(key); }
+  keys.forEach(function(t) {
+    var d = THEME_DEFS[t]; if (!d) return;
+    var b = document.createElement('span');
+    b.className = 'theme-btn';
+    b.dataset.theme = t;
+    b.innerHTML = '<span class="tb-ic">' + d.icon + '</span>' + d.label;
+    b.addEventListener('click', function() {
+      var cur = document.getElementById('f-theme').value;
+      setTheme(cur === t ? '' : t);   /* reclic sur le thème actif → désélection */
+    });
+    box.appendChild(b);
   });
-  for (var key in THEME_DEFS) {
-    if (THEME_ORDER.indexOf(key) === -1) {
-      var dd = THEME_DEFS[key];
-      var oo = document.createElement('option');
-      oo.value = key; oo.textContent = dd.icon + ' ' + dd.label;
-      sel.appendChild(oo);
-    }
-  }
 }
 
-initThemeSelect();
+/* Définit le thème courant (chaîne vide = aucun) et met à jour les boutons */
+function setTheme(val) {
+  val = val || '';
+  document.getElementById('f-theme').value = val;
+  document.querySelectorAll('#theme-buttons .theme-btn').forEach(function(b) {
+    b.classList.toggle('selected', b.dataset.theme === val);
+  });
+}
+
+initThemeButtons();
 initZones();
 initTypeRadios();
 resetForm();
