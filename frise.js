@@ -494,35 +494,47 @@ function openEventList() {
   var titleEl = document.getElementById('event-list-title');
   if (!overlay || !body) return;
 
-  /* Détermine les bornes de la période courante selon le niveau */
-  var start, end, periodeLabel;
-  if (currentLevel === 4 && currentYear !== null) {
-    start = currentYear; end = currentYear + 1;
-    periodeLabel = 'Année ' + currentYear;
-  } else if (currentLevel === 3 && currentDecade !== null) {
-    start = currentDecade; end = currentDecade + 10;
-    periodeLabel = 'Décennie ' + currentDecade + '–' + (currentDecade + 9);
-  } else if (currentLevel === 2 && currentCentury !== null) {
-    start = currentCentury; end = currentCentury + 100;
-    periodeLabel = 'Siècle ' + currentCentury + '–' + (currentCentury + 100);
-  } else {
-    start = 1290; end = 1510;
-    periodeLabel = 'Ensemble de la période';
-  }
-
-  /* Collecte les événements visibles (mêmes règles que la frise) */
-  var list = allEvents.filter(function(e) {
-    if (e.regne) return false;
-    if (!eliPassesFilter(e)) return false;   /* filtre Important/Détaillé/Complet */
-    if (!eventMatchesTheme(e)) return false; /* filtre thématique (légende) */
-    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
-    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
-    return e.date < end && fin >= start;
-  }).sort(function(a, b) {
-    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
-    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
-    return da - db;
+  /* En mode parcours, le filtre par niveau (Important/Détaillé/Complet) ne s'applique pas */
+  document.querySelectorAll('.eli-filter-label, .eli-filter-btn[data-lvl]').forEach(function(el) {
+    el.style.display = activeParcours ? 'none' : '';
   });
+
+  var list, periodeLabel;
+  if (activeParcours) {
+    /* Mode parcours : la liste ne présente QUE les événements du parcours sélectionné
+       (l'ensemble du fil, sans restriction de période, de zone ni de niveau). */
+    periodeLabel = 'Parcours : ' + activeParcours;
+    list = getParcoursSteps(activeParcours).filter(function(e) { return !e.regne; });
+  } else {
+    /* Détermine les bornes de la période courante selon le niveau */
+    var start, end;
+    if (currentLevel === 4 && currentYear !== null) {
+      start = currentYear; end = currentYear + 1;
+      periodeLabel = 'Année ' + currentYear;
+    } else if (currentLevel === 3 && currentDecade !== null) {
+      start = currentDecade; end = currentDecade + 10;
+      periodeLabel = 'Décennie ' + currentDecade + '\u2013' + (currentDecade + 9);
+    } else if (currentLevel === 2 && currentCentury !== null) {
+      start = currentCentury; end = currentCentury + 100;
+      periodeLabel = 'Siècle ' + currentCentury + '\u2013' + (currentCentury + 100);
+    } else {
+      start = 1290; end = 1510;
+      periodeLabel = 'Ensemble de la période';
+    }
+    /* Collecte les événements visibles (mêmes règles que la frise) */
+    list = allEvents.filter(function(e) {
+      if (e.regne) return false;
+      if (!eliPassesFilter(e)) return false;   /* filtre Important/Détaillé/Complet */
+      if (!eventMatchesTheme(e)) return false; /* filtre thématique (légende) */
+      if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+      var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+      return e.date < end && fin >= start;
+    }).sort(function(a, b) {
+      var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+      var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+      return da - db;
+    });
+  }
 
   if (titleEl) {
     titleEl.innerHTML = 'Liste des événements ' +
@@ -545,7 +557,7 @@ function openEventList() {
       card.className = 'eli-card';
       card.style.setProperty('--zone-color', col.bg);
       card.onclick = (function(ev, z) {
-        return function() { closeEventList(); openModal(ev, z); };
+        return function() { openModal(ev, z); };   /* la liste reste ouverte dessous → on y revient en fermant la fiche */
       })(e, zoneAff);
 
       /* Vignette si image */
@@ -2993,19 +3005,48 @@ function pct(year, start, end) {
   return ((year - start) / (end - start) * 100).toFixed(3) + '%';
 }
 
-/* « Autres périodes » : rouvre le sélecteur en conservant les zones et le mode courants */
+/* « Autres périodes » : ouvre une fenêtre proposant les autres décennies (ou années),
+   pour sauter directement à l'une d'elles sans repasser par le menu des zones. */
 function openPeriodPicker() {
-  var overlay = document.getElementById('wizard-overlay');
-  if (!overlay) return;
-  overlay.classList.remove('hidden');
-  wzInit();                      /* reconstruit la grille selon les zones ACTUELLES */
-  var mode = (currentLevel === 4) ? '4' : '3';   /* annuelle ou décennale */
-  _wzMode  = mode;
-  _wzScale = parseInt(mode);
-  var rd = document.querySelector('input[name="wz-mode"][value="' + mode + '"]');
-  if (rd) rd.checked = true;
-  if (typeof wzApplyModeUI === 'function') wzApplyModeUI();
-  wzGoTo(2);                     /* va directement au choix des zones + période */
+  var overlay = document.getElementById('period-picker');
+  var grid    = document.getElementById('pp-grid');
+  var title   = document.getElementById('pp-title');
+  if (!overlay || !grid) return;
+  grid.innerHTML = '';
+
+  function mkItem(label, val, isCurrent, fn) {
+    var b = document.createElement('div');
+    b.className = 'pp-item' + (isCurrent ? ' current' : '');
+    b.textContent = label;
+    b.onclick = function() { closePeriodPicker(); fn(val); };
+    grid.appendChild(b);
+  }
+
+  if (currentLevel === 4) {
+    if (title) title.textContent = 'Choisir une année';
+    for (var y = 1300; y <= 1499; y++) {
+      mkItem('' + y, y, y === currentYear, function(v) { renderLevel(4, v); });
+    }
+  } else if (currentLevel === 2) {
+    if (title) title.textContent = 'Choisir un siècle';
+    for (var c = 1300; c <= 1400; c += 100) {
+      mkItem(c + '\u2013' + (c + 99), c, c === currentCentury, function(v) { renderLevel(2, v); });
+    }
+  } else {
+    if (title) title.textContent = 'Choisir une décennie';
+    for (var d = 1300; d <= 1490; d += 10) {
+      mkItem(d + '\u2013' + (d + 9), d, d === currentDecade, function(v) {
+        currentCentury = Math.floor(v / 100) * 100;
+        renderLevel(3, v);
+      });
+    }
+  }
+  overlay.style.display = 'flex';
+}
+
+function closePeriodPicker() {
+  var overlay = document.getElementById('period-picker');
+  if (overlay) overlay.style.display = 'none';
 }
 
 /* ── Recherche ──────────────────────────────────────────────────────*/

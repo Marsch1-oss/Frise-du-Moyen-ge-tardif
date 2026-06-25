@@ -564,7 +564,7 @@
     #modal-overlay {
       display: none; position: fixed; inset: 0;
       background: rgba(15,8,3,0.72);
-      z-index: 200; align-items: flex-start; justify-content: center;
+      z-index: 260; align-items: flex-start; justify-content: center;
       padding: 0; overflow-y: auto;
     }
     #modal-overlay.open { display: flex; }
@@ -962,6 +962,14 @@
     .wz-ca-btn:hover { background: #f0e6d2; border-color: #9A6B1A; }
     .wz-ca-primary { background: #6a4a10; color: #fff; border-color: #6a4a10; }
     .wz-ca-primary:hover { background: #815c14; border-color: #815c14; }
+    .pp-overlay { position: fixed; inset: 0; background: rgba(10,6,2,0.6); z-index: 1300; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+    .pp-box { background: #fff; border: 2px solid #9A6B1A; border-radius: 14px; max-width: 520px; width: 100%; max-height: 80vh; display: flex; flex-direction: column; box-shadow: 0 14px 44px rgba(0,0,0,0.4); }
+    .pp-head { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border-bottom: 1px solid #e0d4ba; font-weight: 700; color: #6a4a10; }
+    .pp-close { background: none; border: none; font-size: 1.05rem; cursor: pointer; color: #8B5E34; line-height: 1; }
+    .pp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 0.5rem; padding: 1rem; overflow-y: auto; }
+    .pp-item { padding: 0.6rem 0.5rem; border: 1.5px solid #c9b48f; border-radius: 8px; background: #faf6ee; color: #4a3a1a; font-weight: 600; cursor: pointer; text-align: center; font-size: 0.9rem; transition: background .12s, border-color .12s; }
+    .pp-item:hover { background: #f0e6d2; border-color: #9A6B1A; }
+    .pp-item.current { background: #6a4a10; color: #fff; border-color: #6a4a10; }
     .wz-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.3rem 1rem; border-radius: 18px; border: 1.5px solid var(--border-dark); background: rgba(245,237,216,0.8); color: var(--ink-soft); cursor: pointer; transition: all 0.14s; }
     .wz-btn:hover { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     .wz-btn-ok { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
@@ -2009,6 +2017,17 @@
   </div><!-- .wizard-box -->
 </div><!-- #wizard-overlay -->
 
+<!-- ── Fenêtre « Autres périodes » ── -->
+<div id="period-picker" class="pp-overlay" style="display:none;" onclick="if(event.target===this) closePeriodPicker()">
+  <div class="pp-box">
+    <div class="pp-head">
+      <span id="pp-title">Choisir une période</span>
+      <button class="pp-close" onclick="closePeriodPicker()" aria-label="Fermer">&#10005;</button>
+    </div>
+    <div id="pp-grid" class="pp-grid"></div>
+  </div>
+</div>
+
 
 <!-- ── Lecteur musical d'ambiance (MP3) ── -->
 <div id="music-player">
@@ -2074,7 +2093,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782371017"></script>
+<script src="frise.js?v=1782422102"></script>
 
 
 <!-- Modale login editeur -->
