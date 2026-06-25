@@ -1884,7 +1884,7 @@ function updateSyntheseBar() {
     icon.textContent = '\uD83D\uDCD6';  /* 📖 */
     var lbl = document.createElement('span');
     lbl.className = 'synthese-bar-btn-text';
-    lbl.textContent = titreSynth;
+    lbl.textContent = 'Synthèse : ' + titreSynth;
     b.appendChild(icon);
     b.appendChild(lbl);
     b.style.background = col.bg;
@@ -1912,7 +1912,12 @@ function showSyntheseBanner(zone, dec) {
   var bodyEl = document.getElementById('synthese-banner-body');
   if (!banner) return;
 
-  titleEl.textContent = s.titre || (zone + ' \u00b7 ' + dec);
+  titleEl.innerHTML = '';
+  var synthPre = document.createElement('span');
+  synthPre.className = 'synth-prefix';
+  synthPre.textContent = 'Synthèse';
+  titleEl.appendChild(synthPre);
+  titleEl.appendChild(document.createTextNode(' ' + (s.titre || (zone + ' \u00b7 ' + dec))));
   perEl.textContent = (s.auto ? '(brouillon auto) ' : '') + zone + ' \u2014 ' + dec + '-' + (dec + 9);
 
   bodyEl.innerHTML = '';
@@ -2999,6 +3004,59 @@ function updateNavButtons() {
     if (prev) prev.disabled = atStart;
     if (next) next.disabled = atEnd;
   }
+  updateNavStatus();
+}
+
+/* Bandeau d'état : rappelle le mode, l'échelle, la période et les filtres actifs */
+function updateNavStatus() {
+  var bar  = document.getElementById('nav-status');
+  var info = document.getElementById('nav-status-info');
+  if (!bar || !info) return;
+
+  var modeTxt, periodTxt;
+  if (typeof activeParcours !== 'undefined' && activeParcours) {
+    modeTxt = 'Parcours thématique'; periodTxt = activeParcours;
+  } else if (searchFilterActive) {
+    modeTxt = 'Recherche'; periodTxt = '\u00ab ' + (searchTerm || '') + ' \u00bb';
+  } else if (currentLevel === 4 && currentYear !== null) {
+    modeTxt = 'Frise par année'; periodTxt = 'année ' + currentYear;
+  } else if (currentLevel === 2 && currentCentury !== null) {
+    modeTxt = 'Vue siècle'; periodTxt = currentCentury + '\u2013' + (currentCentury + 99);
+  } else if (currentLevel === 1) {
+    modeTxt = "Vue d'ensemble"; periodTxt = '1300\u20131500';
+  } else {
+    modeTxt = 'Frise décennale';
+    periodTxt = (currentDecade !== null) ? currentDecade + '\u2013' + (currentDecade + 9) : '';
+  }
+
+  var zones = ZONES.filter(function(z) { return activeZones[z]; });
+  var zonesTxt = zones.length ? zones.join(', ') : 'aucune';
+
+  var themes = [];
+  for (var t in activeThemes) {
+    if (activeThemes[t]) themes.push(THEME_DEFS[t] ? THEME_DEFS[t].label : t);
+  }
+
+  var html = 'Mode : <b>' + modeTxt + '</b>';
+  if (periodTxt) html += ' &nbsp;\u00b7&nbsp; Échelle : <b>' + periodTxt + '</b>';
+  html += ' &nbsp;\u00b7&nbsp; Zones : <b>' + zonesTxt + '</b>';
+  if (themes.length) html += ' &nbsp;\u00b7&nbsp; Filtres thématiques : <b>' + themes.join(', ') + '</b>';
+  info.innerHTML = html;
+
+  bar.style.display = 'flex';
+}
+
+/* Retour rapide à la frise décennale (sort du parcours / de la recherche au besoin) */
+function backToDecade() {
+  var d = (currentDecade !== null) ? currentDecade : 1350;
+  if (typeof activeParcours !== 'undefined' && activeParcours && typeof clearParcours === 'function') {
+    clearParcours();
+  }
+  if ((searchFilterActive || searchTerm) && typeof clearSearch === 'function') {
+    clearSearch();
+  }
+  currentCentury = Math.floor(d / 100) * 100;
+  renderLevel(3, d);
 }
 
 function pct(year, start, end) {

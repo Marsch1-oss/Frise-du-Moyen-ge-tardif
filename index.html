@@ -246,6 +246,22 @@
 
     /* ── Navigation décennale ── */
     /* ── Barre de contrôle (zoom + flèches + recherche) ── */
+    .nav-status {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+      flex-wrap: wrap; padding: 0.5rem 0.9rem; margin: 0 0 0.45rem;
+      background: linear-gradient(180deg, #fbf4e6, #f3e8d2);
+      border: 1px solid #d8c6a0; border-left: 4px solid #9A6B1A; border-radius: 8px;
+      font-size: 0.85rem; color: #4a3a1a;
+    }
+    .nav-status-info { flex: 1 1 auto; line-height: 1.5; min-width: 0; }
+    .nav-status-info b { color: #6a4a10; font-weight: 700; }
+    .nav-status-home {
+      flex: 0 0 auto; padding: 0.4rem 0.8rem; border: 1.5px solid #6a4a10;
+      border-radius: 8px; background: #6a4a10; color: #fff; font-weight: 600;
+      font-size: 0.84rem; cursor: pointer; white-space: nowrap;
+      transition: background .12s;
+    }
+    .nav-status-home:hover { background: #815c14; }
     .control-bar {
       display: flex; align-items: center; justify-content: center;
       gap: 0.6rem; margin-bottom: 0.7rem;
@@ -1457,7 +1473,13 @@
     .synthese-banner-icon { font-size: 1.2rem; }
     .synthese-banner-title {
       margin: 0; font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.25rem; font-weight: 700; color: var(--ink, #3a2a14);
+      font-size: 1.6rem; font-weight: 700; color: #5a3d12; letter-spacing: 0.01em;
+    }
+    .synth-prefix {
+      display: inline-block; font-family: 'EB Garamond', Georgia, serif;
+      text-transform: uppercase; letter-spacing: 0.07em; font-size: 0.7em; font-weight: 700;
+      color: #fff; background: #9A6B1A; padding: 0.1em 0.55em; border-radius: 6px;
+      margin-right: 0.5em; vertical-align: middle;
     }
     .synthese-banner-period {
       font-size: 0.85rem; color: var(--ink-muted); font-style: italic;
@@ -1812,6 +1834,11 @@
     <span id="synthese-bar-btns"></span>
   </div>
 
+  <div id="nav-status" class="nav-status" style="display:none;">
+    <div class="nav-status-info" id="nav-status-info"></div>
+    <button class="nav-status-home" onclick="backToDecade()" title="Revenir à la frise décennale">&#8617; Frise décennale</button>
+  </div>
+
   <div class="control-bar">
     <button class="ctrl-nav-btn" id="btn-prev" onclick="navigatePeriod(-1)" style="display:none;">&larr; P&eacute;riode pr&eacute;c&eacute;dente</button>
     <span id="decade-label" class="period-label"></span>
@@ -2093,7 +2120,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782422102"></script>
+<script src="frise.js?v=1782423525"></script>
 
 
 <!-- Modale login editeur -->
