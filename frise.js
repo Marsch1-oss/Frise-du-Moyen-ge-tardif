@@ -542,6 +542,15 @@ function openEventList() {
       ' événement' + (list.length > 1 ? 's' : '') + '</span>';
   }
 
+  /* Bandeau d'état (mode lecture « Liste ») : reprend la configuration courante */
+  var eliStatus = document.getElementById('eli-status');
+  if (eliStatus) {
+    if (typeof updateNavStatus === 'function') updateNavStatus();
+    var niEl = document.getElementById('nav-status-info');
+    eliStatus.innerHTML = 'Mode lecture : <b>Liste des événements</b> &nbsp;\u00b7&nbsp; ' +
+                          (niEl ? niEl.innerHTML : '');
+  }
+
   body.innerHTML = '';
   if (list.length === 0) {
     body.innerHTML = '<p class="eli-empty">Aucun événement pour cette période et les zones actives.</p>';
@@ -3030,7 +3039,11 @@ function updateNavStatus() {
   }
 
   var zones = ZONES.filter(function(z) { return activeZones[z]; });
-  var zonesTxt = zones.length ? zones.join(', ') : 'aucune';
+  var zonesTxt;
+  if (zones.length === 0) zonesTxt = 'aucune';
+  else if (zones.length === ZONES.length) zonesTxt = 'toutes';
+  else if (zones.length > 6) zonesTxt = zones.length + ' zones';
+  else zonesTxt = zones.join(', ');
 
   var themes = [];
   for (var t in activeThemes) {
@@ -3046,15 +3059,29 @@ function updateNavStatus() {
   bar.style.display = 'flex';
 }
 
-/* Retour rapide à la frise décennale (sort du parcours / de la recherche au besoin) */
+/* « Frise décennale » : réinitialise tous les choix et revient à la frise
+   complète (toutes zones) à l'échelle de détail « Important ». */
 function backToDecade() {
-  var d = (currentDecade !== null) ? currentDecade : 1350;
-  if (typeof activeParcours !== 'undefined' && activeParcours && typeof clearParcours === 'function') {
-    clearParcours();
-  }
-  if ((searchFilterActive || searchTerm) && typeof clearSearch === 'function') {
-    clearSearch();
-  }
+  if (typeof activeParcours !== 'undefined' && activeParcours && typeof clearParcours === 'function') clearParcours();
+  if ((searchFilterActive || searchTerm) && typeof clearSearch === 'function') clearSearch();
+
+  /* Filtres thématiques effacés */
+  activeThemes = {};
+  if (typeof renderAllLegends === 'function') renderAllLegends();
+  var tl = document.getElementById('theme-legend'); if (tl) tl.style.display = 'none';
+
+  /* Toutes les zones actives → frise complète */
+  ZONES.forEach(function(z) { activeZones[z] = true; });
+  if (typeof updateFilterCheckboxes === 'function') updateFilterCheckboxes();
+
+  /* Échelle de détail « Important » */
+  detailLevel = 2;
+  document.querySelectorAll('.detail-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.level) === 2);
+  });
+
+  /* Vue décennale */
+  var d = (currentDecade !== null) ? currentDecade : 1300;
   currentCentury = Math.floor(d / 100) * 100;
   renderLevel(3, d);
 }

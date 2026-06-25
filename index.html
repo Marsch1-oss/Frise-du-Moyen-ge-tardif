@@ -248,20 +248,27 @@
     /* ── Barre de contrôle (zoom + flèches + recherche) ── */
     .nav-status {
       display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
-      flex-wrap: wrap; padding: 0.5rem 0.9rem; margin: 0 0 0.45rem;
+      flex-wrap: wrap; padding: 0.55rem 0.95rem; margin: 0 0 0.45rem;
       background: linear-gradient(180deg, #fbf4e6, #f3e8d2);
       border: 1px solid #d8c6a0; border-left: 4px solid #9A6B1A; border-radius: 8px;
-      font-size: 0.85rem; color: #4a3a1a;
+      font-size: 0.98rem; color: #3a2c12; font-weight: 500;
     }
-    .nav-status-info { flex: 1 1 auto; line-height: 1.5; min-width: 0; }
+    .nav-status-info { flex: 1 1 auto; line-height: 1.55; min-width: 0; }
     .nav-status-info b { color: #6a4a10; font-weight: 700; }
     .nav-status-home {
-      flex: 0 0 auto; padding: 0.4rem 0.8rem; border: 1.5px solid #6a4a10;
-      border-radius: 8px; background: #6a4a10; color: #fff; font-weight: 600;
-      font-size: 0.84rem; cursor: pointer; white-space: nowrap;
+      flex: 0 0 auto; padding: 0.45rem 0.85rem; border: 1.5px solid #6a4a10;
+      border-radius: 8px; background: #6a4a10; color: #fff; font-weight: 700;
+      font-size: 0.9rem; cursor: pointer; white-space: nowrap;
       transition: background .12s;
     }
     .nav-status-home:hover { background: #815c14; }
+    .eli-status {
+      padding: 0.55rem 0.95rem; margin: 0 0 0.3rem;
+      background: linear-gradient(180deg, #fbf4e6, #f3e8d2);
+      border-bottom: 2px solid #9A6B1A; font-size: 0.98rem; font-weight: 500; color: #3a2c12;
+      line-height: 1.55;
+    }
+    .eli-status b { color: #6a4a10; font-weight: 700; }
     .control-bar {
       display: flex; align-items: center; justify-content: center;
       gap: 0.6rem; margin-bottom: 0.7rem;
@@ -2120,7 +2127,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782423525"></script>
+<script src="frise.js?v=1782425627"></script>
 
 
 <!-- Modale login editeur -->
@@ -2191,6 +2198,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <div id="event-list-overlay" class="event-list-overlay" style="display:none;">
+    <div id="eli-status" class="eli-status"></div>
     <div class="event-list-header">
       <div class="event-list-head-left">
         <h2 id="event-list-title" class="event-list-title">Liste des événements</h2>
