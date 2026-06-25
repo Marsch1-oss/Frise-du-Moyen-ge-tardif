@@ -103,6 +103,7 @@ var searchTerm     = '';
 var searchFilterActive = false;
 var currentCentury = null;
 var currentDecade  = null;
+var startZones     = null;  /* zones sélectionnées au départ (wizard) → cible du bouton « frise complète » */
 var allEvents      = [];
 var activeZones    = null;
 var detailLevel    = 1;  /* 1=Essentiel, 2=Détaillé, 3=Complet */
@@ -547,8 +548,10 @@ function openEventList() {
   if (eliStatus) {
     if (typeof updateNavStatus === 'function') updateNavStatus();
     var niEl = document.getElementById('nav-status-info');
-    eliStatus.innerHTML = 'Mode lecture : <b>Liste des événements</b> &nbsp;\u00b7&nbsp; ' +
-                          (niEl ? niEl.innerHTML : '');
+    eliStatus.innerHTML =
+      '<span class="eli-status-info">Mode lecture : <b>Liste des événements</b> &nbsp;\u00b7&nbsp; ' +
+      (niEl ? niEl.innerHTML : '') + '</span>' +
+      '<button class="nav-status-home" onclick="backToDecade()" title="Quitter la liste, supprimer les filtres et revenir à la frise décennale en cours">\u21A9 Retour à la frise complète</button>';
   }
 
   body.innerHTML = '';
@@ -2466,6 +2469,11 @@ function wzClose() {
   currentCentury = Math.floor(period / 100) * 100;
   currentDecade  = scale >= 3 ? Math.floor(period / 10) * 10 : null;
   currentYear    = scale === 4 ? period : null;
+  /* Mémorise les zones choisies au départ (frise décennale/annuelle) */
+  if (scale === 3 || scale === 4) {
+    startZones = {};
+    ZONES.forEach(function(z) { if (activeZones[z]) startZones[z] = true; });
+  }
   renderLevel(scale, period);
 }
 
@@ -3059,19 +3067,27 @@ function updateNavStatus() {
   bar.style.display = 'flex';
 }
 
-/* « Frise décennale » : réinitialise tous les choix et revient à la frise
-   complète (toutes zones) à l'échelle de détail « Important ». */
+/* « Retour à la frise complète » : quitte les listes et les parcours,
+   supprime tous les filtres actifs, et revient à la frise décennale
+   de la période EN COURS (en conservant les zones de l'usager). */
 function backToDecade() {
+  /* Quitte la liste des événements si elle est ouverte */
+  if (typeof closeEventList === 'function') closeEventList();
+  /* Quitte le parcours et la recherche */
   if (typeof activeParcours !== 'undefined' && activeParcours && typeof clearParcours === 'function') clearParcours();
   if ((searchFilterActive || searchTerm) && typeof clearSearch === 'function') clearSearch();
 
-  /* Filtres thématiques effacés */
+  /* Supprime les filtres thématiques (légende) */
   activeThemes = {};
   if (typeof renderAllLegends === 'function') renderAllLegends();
   var tl = document.getElementById('theme-legend'); if (tl) tl.style.display = 'none';
 
-  /* Toutes les zones actives → frise complète */
-  ZONES.forEach(function(z) { activeZones[z] = true; });
+  /* Réaffiche les zones sélectionnées AU DÉPART (et non les zones courantes ni toutes les zones) */
+  if (startZones) {
+    ZONES.forEach(function(z) { activeZones[z] = !!startZones[z]; });
+  }
+  var anyZone = ZONES.some(function(z) { return activeZones[z]; });
+  if (!anyZone) activeZones['France'] = true;   /* filet de sécurité si aucune zone */
   if (typeof updateFilterCheckboxes === 'function') updateFilterCheckboxes();
 
   /* Échelle de détail « Important » */
@@ -3080,7 +3096,7 @@ function backToDecade() {
     b.classList.toggle('active', parseInt(b.dataset.level) === 2);
   });
 
-  /* Vue décennale */
+  /* Vue décennale, sur la période EN COURS */
   var d = (currentDecade !== null) ? currentDecade : 1300;
   currentCentury = Math.floor(d / 100) * 100;
   renderLevel(3, d);
