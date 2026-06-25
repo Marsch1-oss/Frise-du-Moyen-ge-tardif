@@ -2183,6 +2183,7 @@ function wzInit() {
             chip.style.background = on ? col.bg : col.light;
             dot.style.background  = on ? 'rgba(255,255,255,0.6)' : col.bg;
             wzUpdateNextHint();
+            if (on) wzShowZoneActions();   /* guidage : actions proposées après l'ajout d'une zone */
           });
           chipsEl.appendChild(chip);
         })(grpZones[zi]);
@@ -2197,6 +2198,7 @@ function wzInit() {
   var rd = document.querySelector('input[name="wz-mode"][value="3"]');
   if (rd) rd.checked = true;
   wzApplyModeUI();
+  wzHideActionPanels();
   wzGoTo(1);
 }
 
@@ -2225,6 +2227,51 @@ function wzModeChanged(val) {
   _wzMode = val;
   if (val !== 'search') _wzScale = parseInt(val);
   wzApplyModeUI();
+  wzShowModeActions();
+}
+
+/* Panneau central « a. Choisir une zone et une période / b. Choisir un autre mode » */
+function wzShowModeActions() {
+  var panel = document.getElementById('wz-mode-actions');
+  if (!panel) return;
+  if (_wzMode === 'search') { panel.style.display = 'none'; return; }  /* la saisie se fait dans le champ */
+  var go = document.getElementById('wz-mode-ca-go');
+  if (go) go.innerHTML = (_wzMode === '5')
+    ? '\u2694\uFE0F Choisir le parcours'
+    : '\uD83D\uDDFA\uFE0F Choisir une zone et une période';
+  var title = document.getElementById('wz-mode-ca-title');
+  if (title) {
+    var labels = { '3': 'Frise décennale', '4': 'Frise par année', '5': 'Parcours thématique' };
+    title.textContent = (labels[_wzMode] || 'Mode') + ' \u2713';
+  }
+  panel.style.display = 'flex';
+}
+function wzPickAnotherMode() {
+  var panel = document.getElementById('wz-mode-actions');
+  if (panel) panel.style.display = 'none';
+}
+
+/* Panneau central « a. Ajouter une zone / b. Choisir une période / c. Ouvrir la frise » */
+function wzShowZoneActions() {
+  var panel = document.getElementById('wz-zone-actions');
+  if (panel) panel.style.display = 'flex';
+}
+function wzAddAnotherZone() {
+  var panel = document.getElementById('wz-zone-actions');
+  if (panel) panel.style.display = 'none';
+}
+function wzChoosePeriod() {
+  var panel = document.getElementById('wz-zone-actions');
+  if (panel) panel.style.display = 'none';
+  var sel = document.getElementById('wz-period-select');
+  if (!sel) return;
+  sel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  try { sel.focus(); if (sel.showPicker) sel.showPicker(); } catch (e) {}
+}
+function wzHideActionPanels() {
+  ['wz-mode-actions', 'wz-zone-actions'].forEach(function(id) {
+    var p = document.getElementById(id); if (p) p.style.display = 'none';
+  });
 }
 
 function wzApplyModeUI() {
@@ -2248,6 +2295,7 @@ function wzScaleChanged(val) {
 
 function wzGoTo(step) {
   wzCurrentStep = step;
+  if (typeof wzHideActionPanels === 'function') wzHideActionPanels();
   document.querySelectorAll('.wizard-step').forEach(function(el, i) {
     el.classList.toggle('active', i + 1 === step);
   });

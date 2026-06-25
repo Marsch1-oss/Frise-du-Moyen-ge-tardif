@@ -955,6 +955,13 @@
     .wz-guide-icon { font-size: 1rem; flex-shrink: 0; width: 1.6rem; text-align: center; }
     .wz-guide-item strong { display: block; color: var(--ink); margin-bottom: 0.08rem; }
     .wz-footer { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 1.5rem; border-top: 1px solid var(--border); background: var(--parchment-dk); margin-top: auto; flex-shrink: 0; }
+    .wz-overlay-actions { position: fixed; inset: 0; background: rgba(30, 20, 8, 0.34); z-index: 1200; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+    .wz-center-actions { background: #fff; border: 2px solid #9A6B1A; border-radius: 14px; padding: 1.1rem 1.2rem; box-shadow: 0 14px 44px rgba(0,0,0,0.4); display: flex; flex-direction: column; gap: 0.55rem; min-width: 250px; max-width: 90%; text-align: center; }
+    .wz-ca-title { margin: 0 0 0.35rem; font-weight: 700; color: #6a4a10; font-size: 0.98rem; }
+    .wz-ca-btn { padding: 0.62rem 0.9rem; border: 1.5px solid #c9b48f; border-radius: 10px; background: #faf6ee; color: #4a3a1a; font-size: 0.92rem; cursor: pointer; font-weight: 600; transition: background .12s, border-color .12s; }
+    .wz-ca-btn:hover { background: #f0e6d2; border-color: #9A6B1A; }
+    .wz-ca-primary { background: #6a4a10; color: #fff; border-color: #6a4a10; }
+    .wz-ca-primary:hover { background: #815c14; border-color: #815c14; }
     .wz-btn { font-family: 'Crimson Pro', serif; font-size: 0.88rem; padding: 0.3rem 1rem; border-radius: 18px; border: 1.5px solid var(--border-dark); background: rgba(245,237,216,0.8); color: var(--ink-soft); cursor: pointer; transition: all 0.14s; }
     .wz-btn:hover { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
     .wz-btn-ok { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
@@ -1915,25 +1922,25 @@
 
       <div class="wz-scale-choices">
         <label class="wz-scale-card">
-          <input type="radio" name="wz-mode" value="3" checked onchange="wzModeChanged('3')">
+          <input type="radio" name="wz-mode" value="3" checked onclick="wzModeChanged('3')">
           <span class="wz-scale-icon">&#128197;</span>
           <span class="wz-scale-label">Frise décennale</span>
           <span class="wz-scale-desc">Zoom sur une décennie &mdash; <strong>lecture la plus confortable</strong></span>
         </label>
         <label class="wz-scale-card">
-          <input type="radio" name="wz-mode" value="4" onchange="wzModeChanged('4')">
+          <input type="radio" name="wz-mode" value="4" onclick="wzModeChanged('4')">
           <span class="wz-scale-icon">&#128196;</span>
           <span class="wz-scale-label">Frise par année</span>
           <span class="wz-scale-desc">Tous les événements d'une année</span>
         </label>
         <label class="wz-scale-card">
-          <input type="radio" name="wz-mode" value="search" onchange="wzModeChanged('search')">
+          <input type="radio" name="wz-mode" value="search" onclick="wzModeChanged('search')">
           <span class="wz-scale-icon">&#128269;</span>
           <span class="wz-scale-label">Recherche par mot-clé</span>
           <span class="wz-scale-desc">Trouver un événement, un lieu, un personnage&hellip;</span>
         </label>
         <label class="wz-scale-card">
-          <input type="radio" name="wz-mode" value="5" onchange="wzModeChanged('5')">
+          <input type="radio" name="wz-mode" value="5" onclick="wzModeChanged('5')">
           <span class="wz-scale-icon">&#9876;</span>
           <span class="wz-scale-label">Parcours thématique</span>
           <span class="wz-scale-desc">Suivre un fil narratif &mdash; guerre, conflit, dynastie&hellip;</span>
@@ -1954,28 +1961,48 @@
         <span></span>
         <button class="wz-btn wz-btn-next" id="wz-step1-next" onclick="wzNext()">Suivant &#8250;</button>
       </div>
+
+      <!-- Actions guidées : apparaissent au clic sur un mode -->
+      <div id="wz-mode-actions" class="wz-overlay-actions" style="display:none;" onclick="if(event.target===this) wzPickAnotherMode()">
+        <div class="wz-center-actions">
+          <p class="wz-ca-title" id="wz-mode-ca-title">Mode sélectionné</p>
+          <button class="wz-ca-btn wz-ca-primary" id="wz-mode-ca-go" onclick="wzNext()">&#128506;&#65039; Choisir une zone et une période</button>
+          <button class="wz-ca-btn" onclick="wzPickAnotherMode()">&#8635; Choisir un autre mode d'exploration</button>
+        </div>
+      </div>
     </div>
 
-    <!-- ── ÉTAPE 2 : Zones &amp; thèmes + période (décennale / annuelle / parcours) ── -->
+    <!-- ── ÉTAPE 2 : Période (en haut) + zones ── -->
     <div class="wizard-step" id="wz-step-2">
       <div class="wz-header">
         <span class="wz-icon">&#127757;</span>
-        <h2 class="wz-title" id="wz-step2-title">Zones &amp; thèmes</h2>
+        <h2 class="wz-title" id="wz-step2-title">Zones &amp; période</h2>
       </div>
-      <p class="wz-sub" id="wz-step2-sub">Choisissez une ou plusieurs zones géographiques et/ou thèmes&nbsp;:</p>
 
-      <div id="wz-zones-grid" class="wz-zones-grid"></div>
-
-      <p class="wz-sub" id="wz-period-sub" style="margin-top:1rem;">Choisissez ensuite la période à afficher&nbsp;:</p>
+      <!-- Choix de la période : placé EN HAUT de la page -->
+      <p class="wz-sub" id="wz-period-sub">Sélectionnez la décennie à afficher&nbsp;:</p>
       <div class="wz-select-wrap">
         <select id="wz-period-select" class="wz-select">
           <!-- rempli dynamiquement -->
         </select>
       </div>
 
+      <p class="wz-sub" id="wz-step2-sub" style="margin-top:1rem;">Choisissez une ou plusieurs zones géographiques&nbsp;:</p>
+      <div id="wz-zones-grid" class="wz-zones-grid"></div>
+
       <div class="wz-footer">
         <button class="wz-btn wz-btn-prev" onclick="wzPrev()">&#8249; Précédent</button>
         <button class="wz-btn wz-btn-next" onclick="wzNext()">Voir la frise &#8250;</button>
+      </div>
+
+      <!-- Actions guidées : apparaissent au clic sur une zone -->
+      <div id="wz-zone-actions" class="wz-overlay-actions" style="display:none;" onclick="if(event.target===this) wzAddAnotherZone()">
+        <div class="wz-center-actions">
+          <p class="wz-ca-title">Zone ajoutée &#10003;</p>
+          <button class="wz-ca-btn" onclick="wzAddAnotherZone()">&#10133; Ajouter une autre zone</button>
+          <button class="wz-ca-btn" onclick="wzChoosePeriod()">&#128197; Choisir une période</button>
+          <button class="wz-ca-btn wz-ca-primary" onclick="wzNext()">&#9654;&#65039; Ouvrir la frise chrono</button>
+        </div>
       </div>
     </div>
 
@@ -2047,7 +2074,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782332767"></script>
+<script src="frise.js?v=1782371017"></script>
 
 
 <!-- Modale login editeur -->
