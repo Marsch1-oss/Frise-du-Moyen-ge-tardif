@@ -1906,6 +1906,36 @@ function updateSyntheseBar() {
     return;
   }
 
+  /* Mode parcours : synthèse du parcours (décennie, avec repli sur la synthèse globale) */
+  if (typeof activeParcours !== 'undefined' && activeParcours) {
+    var ps = getParcoursSynthese(activeParcours, currentDecade);
+    if (ps) {
+      var pcol = parcoursColors[activeParcours] || '#7D3C98';
+      var ptitre = (ps.s.titre && ps.s.titre.trim()) ? ps.s.titre.trim() : activeParcours;
+      var scopeLbl = (ps.scope === 'decade')
+        ? ' (' + currentDecade + '-' + (currentDecade + 9) + ')'
+        : ' (vue d\'ensemble)';
+      var pb = document.createElement('button');
+      pb.className = 'synthese-bar-btn';
+      var picon = document.createElement('span');
+      picon.className = 'synthese-bar-btn-icon'; picon.textContent = '\uD83D\uDCD6';
+      var plbl = document.createElement('span');
+      plbl.className = 'synthese-bar-btn-text';
+      plbl.textContent = 'Synthèse du parcours : ' + ptitre + scopeLbl;
+      pb.appendChild(picon); pb.appendChild(plbl);
+      pb.style.background = pcol;
+      pb.title = 'Lire la synthèse du parcours';
+      pb.onclick = function() { showParcoursSyntheseBanner(activeParcours, currentDecade, true); };
+      btns.appendChild(pb);
+      bar.style.display = 'flex';
+      showParcoursSyntheseBanner(activeParcours, currentDecade, false);  /* affichage automatique */
+    } else {
+      bar.style.display = 'none';
+      closeSyntheseBanner();
+    }
+    return;
+  }
+
   /* Un bouton par zone active possédant une synthèse RÉDIGÉE pour cette décennie */
   var found = 0;
   ZONES.forEach(function(zone) {
@@ -1973,6 +2003,48 @@ function showSyntheseBanner(zone, dec) {
 
   banner.style.display = 'block';
   banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* Synthèse de parcours : clé "@parcours|Nom|décennie" (décennale) ou "@parcours|Nom" (globale).
+   Repli automatique de la décennale vers la globale. */
+function getParcoursSynthese(name, dec) {
+  var k1 = '@parcours|' + name + '|' + dec;
+  if (_syntheses[k1]) return { s: _syntheses[k1], scope: 'decade' };
+  var k2 = '@parcours|' + name;
+  if (_syntheses[k2]) return { s: _syntheses[k2], scope: 'global' };
+  return null;
+}
+
+function showParcoursSyntheseBanner(name, dec, doScroll) {
+  var pres = getParcoursSynthese(name, dec);
+  if (!pres) return;
+  var s = pres.s;
+  var banner  = document.getElementById('synthese-banner');
+  var titleEl = document.getElementById('synthese-banner-title');
+  var perEl   = document.getElementById('synthese-banner-period');
+  var bodyEl  = document.getElementById('synthese-banner-body');
+  if (!banner) return;
+  _currentSynthese = { parcours: name, dec: dec };
+
+  titleEl.innerHTML = '';
+  var pre = document.createElement('span');
+  pre.className = 'synth-prefix synth-prefix-parcours';
+  pre.textContent = 'Parcours';
+  titleEl.appendChild(pre);
+  titleEl.appendChild(document.createTextNode(' ' + (s.titre || name)));
+  perEl.textContent = (pres.scope === 'decade')
+    ? name + ' \u2014 ' + dec + '-' + (dec + 9)
+    : name + ' \u2014 vue d\'ensemble';
+
+  bodyEl.innerHTML = '';
+  (s.texte || '').split(/\n\n+/).forEach(function(para) {
+    if (!para.trim()) return;
+    var p = document.createElement('p');
+    renderSyntheseParagraph(p, para.trim());
+    bodyEl.appendChild(p);
+  });
+  banner.style.display = 'block';
+  if (doScroll) banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function closeSyntheseBanner() {
@@ -2680,6 +2752,7 @@ function clearParcours() {
   var panel = document.getElementById('search-results-panel');
   if (panel) panel.style.display = 'none';
   document.body.classList.remove('parcours-panel-open');
+  closeSyntheseBanner();
   refreshFrise();
   updateNavButtons();
   updateDetailBar();

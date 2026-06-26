@@ -351,13 +351,27 @@
   </p>
   <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:0.8rem;">
     <div>
+      <label style="display:block;font-size:0.78rem;color:#555;">Type</label>
+      <select id="synth-type" style="padding:0.3rem;min-width:110px;" onchange="synthTypeChanged()">
+        <option value="zone">Zone</option>
+        <option value="parcours">Parcours</option>
+      </select>
+    </div>
+    <div id="synth-zone-wrap">
       <label style="display:block;font-size:0.78rem;color:#555;">Zone</label>
       <select id="synth-zone" style="padding:0.3rem;min-width:150px;" onchange="synthUpdateStatus()"></select>
     </div>
-    <div>
+    <div id="synth-parcours-wrap" style="display:none;">
+      <label style="display:block;font-size:0.78rem;color:#555;">Parcours</label>
+      <select id="synth-parcours" style="padding:0.3rem;min-width:180px;" onchange="synthUpdateStatus()"></select>
+    </div>
+    <div id="synth-dec-wrap">
       <label style="display:block;font-size:0.78rem;color:#555;">Décennie</label>
       <select id="synth-dec" style="padding:0.3rem;min-width:120px;" onchange="synthUpdateStatus()"></select>
     </div>
+    <label id="synth-global-wrap" style="display:none;font-size:0.82rem;align-self:center;">
+      <input type="checkbox" id="synth-global" onchange="synthGlobalChanged()"> Synthèse globale (toutes décennies)
+    </label>
     <button class="btn" onclick="synthGenerate()" style="padding:0.35rem 1rem;">⚙ Générer le brouillon</button>
   </div>
   <p id="synth-status" style="font-size:0.82rem;margin:0 0 0.6rem;color:#999;">○ Aucune synthèse pour cette sélection.</p>
@@ -979,7 +993,55 @@ function toast(msg) {
 
 
 /* ─── Gestion des synthèses décennales ─────────────────────────── */
-var _synthData = {};   /* clé "Zone|décennie" -> { titre, texte, auto:false } */
+var _synthData = {};   /* clé "Zone|décennie" ou "@parcours|Nom[|décennie]" -> { titre, texte, auto:false } */
+
+/* Clé courante selon le type (zone / parcours, décennale ou globale) */
+function synthKey() {
+  var typeEl = document.getElementById('synth-type');
+  var type = typeEl ? typeEl.value : 'zone';
+  if (type === 'parcours') {
+    var p = document.getElementById('synth-parcours').value;
+    var glob = document.getElementById('synth-global').checked;
+    return glob ? '@parcours|' + p
+                : '@parcours|' + p + '|' + document.getElementById('synth-dec').value;
+  }
+  return document.getElementById('synth-zone').value + '|' + document.getElementById('synth-dec').value;
+}
+
+/* Remplit la liste des parcours (champ serie des événements) */
+function synthInitParcours() {
+  var sel = document.getElementById('synth-parcours');
+  if (!sel) return;
+  var cur = sel.value, set = {};
+  events.forEach(function(e) {
+    if (!e.serie) return;
+    e.serie.split('|').forEach(function(s) { s = s.trim(); if (s) set[s] = true; });
+  });
+  sel.innerHTML = '';
+  Object.keys(set).sort().forEach(function(p) {
+    var o = document.createElement('option'); o.value = p;
+    var nd = Object.keys(_synthData).filter(function(k) { return k === '@parcours|' + p || k.indexOf('@parcours|' + p + '|') === 0; }).length;
+    o.textContent = (nd > 0 ? '✓ ' : '  ') + p + (nd > 0 ? ' (' + nd + ')' : '');
+    sel.appendChild(o);
+  });
+  if (cur) sel.value = cur;
+}
+
+function synthTypeChanged() {
+  var isP = document.getElementById('synth-type').value === 'parcours';
+  document.getElementById('synth-zone-wrap').style.display     = isP ? 'none' : '';
+  document.getElementById('synth-parcours-wrap').style.display = isP ? '' : 'none';
+  document.getElementById('synth-global-wrap').style.display   = isP ? '' : 'none';
+  if (isP) synthInitParcours();
+  synthGlobalChanged();
+}
+
+function synthGlobalChanged() {
+  var isP = document.getElementById('synth-type').value === 'parcours';
+  var glob = isP && document.getElementById('synth-global').checked;
+  document.getElementById('synth-dec-wrap').style.display = glob ? 'none' : '';
+  synthUpdateStatus();
+}
 
 function synthInitControls() {
   var zSel = document.getElementById('synth-zone');
@@ -1004,16 +1066,15 @@ function synthInitControls() {
   }
   if (curZ) zSel.value = curZ;
   if (curD) dSel.value = curD; else dSel.value = 1340;
+  if (document.getElementById('synth-parcours')) synthInitParcours();
   synthUpdateStatus();
 }
 
 /* Indique sous les sélecteurs si la combinaison courante a déjà une synthèse */
 function synthUpdateStatus() {
-  var zSel = document.getElementById('synth-zone');
-  var dSel = document.getElementById('synth-dec');
   var st = document.getElementById('synth-status');
-  if (!zSel || !dSel || !st) return;
-  var key = zSel.value + '|' + dSel.value;
+  if (!st) return;
+  var key = synthKey();
   var titreEl = document.getElementById('synth-titre');
   var texteEl = document.getElementById('synth-texte');
   if (_synthData[key]) {
@@ -1033,47 +1094,61 @@ function synthUpdateStatus() {
 }
 
 function synthGenerate() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
-  var evts = events.filter(function(e) {
-    return !e.regne && (e.zones || []).indexOf(zone) !== -1 &&
-           e.date >= dec && e.date < dec + 10;
-  }).sort(function(a, b) {
+  function byDate(a, b) {
     var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
     var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
     return da - db;
-  });
-  if (evts.length === 0) {
-    toast('\u26a0 Aucun événement pour ' + zone + ' en ' + dec + '-' + (dec + 9));
-    return;
   }
-  var majeurs = evts.filter(function(e) { return (Number(e.type) || 3) <= 3; });
-  var intro = 'Au cours de la décennie ' + dec + '-' + (dec + 9) + ', la zone « ' + zone +
-              ' » compte ' + evts.length + ' événement' + (evts.length > 1 ? 's' : '') +
-              ' notable' + (evts.length > 1 ? 's' : '') +
-              (majeurs.length ? ', dont ' + majeurs.length + ' majeur' +
-               (majeurs.length > 1 ? 's' : '') : '') + '.';
+  var type = document.getElementById('synth-type').value;
+  var dec  = parseInt(document.getElementById('synth-dec').value);
+  var evts, intro, titreDef;
+
+  if (type === 'parcours') {
+    var p = document.getElementById('synth-parcours').value;
+    var glob = document.getElementById('synth-global').checked;
+    evts = events.filter(function(e) {
+      if (e.regne) return false;
+      var inP = (e.serie || '').split('|').map(function(s){ return s.trim(); }).indexOf(p) !== -1;
+      if (!inP) return false;
+      return glob ? true : (e.date >= dec && e.date < dec + 10);
+    }).sort(byDate);
+    if (evts.length === 0) { toast('\u26a0 Aucune étape pour ce parcours' + (glob ? '' : ' en ' + dec + '-' + (dec + 9))); return; }
+    var scope = glob ? "l'ensemble du parcours" : 'la décennie ' + dec + '-' + (dec + 9);
+    intro = 'Parcours « ' + p + ' » \u2014 ' + scope + ' : ' + evts.length + ' étape' + (evts.length > 1 ? 's' : '') + '.';
+    titreDef = p + (glob ? '' : ' \u00b7 ' + dec + '-' + (dec + 9));
+  } else {
+    var zone = document.getElementById('synth-zone').value;
+    evts = events.filter(function(e) {
+      return !e.regne && (e.zones || []).indexOf(zone) !== -1 && e.date >= dec && e.date < dec + 10;
+    }).sort(byDate);
+    if (evts.length === 0) { toast('\u26a0 Aucun événement pour ' + zone + ' en ' + dec + '-' + (dec + 9)); return; }
+    var majeurs = evts.filter(function(e) { return (Number(e.type) || 3) <= 3; });
+    intro = 'Au cours de la décennie ' + dec + '-' + (dec + 9) + ', la zone « ' + zone +
+            ' » compte ' + evts.length + ' événement' + (evts.length > 1 ? 's' : '') +
+            ' notable' + (evts.length > 1 ? 's' : '') +
+            (majeurs.length ? ', dont ' + majeurs.length + ' majeur' + (majeurs.length > 1 ? 's' : '') : '') + '.';
+    titreDef = zone + ' \u00b7 ' + dec + '-' + (dec + 9);
+  }
   var lignes = evts.map(function(e) {
     var desc = (e.description || '').replace(/\s+/g, ' ').trim();
     if (desc.length > 160) desc = desc.slice(0, 157) + '\u2026';
-    /* [[id]] = lien cliquable vers la fiche de l'événement */
     return '[[' + e.id + ']] ' + e.date + ' \u2014 ' + e.titre + (desc ? ' : ' + desc : '');
   });
-  document.getElementById('synth-titre').value = zone + ' \u00b7 ' + dec + '-' + (dec + 9);
+  document.getElementById('synth-titre').value = titreDef;
   document.getElementById('synth-texte').value = intro + '\n\n' + lignes.join('\n');
   toast('Brouillon généré (' + evts.length + ' fiches) — corrigez puis Ajouter');
 }
 
 function synthSave() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
+  var key = synthKey();
   var titre = document.getElementById('synth-titre').value.trim();
   var texte = document.getElementById('synth-texte').value.trim();
   if (!texte) { toast('\u26a0 Texte vide'); return; }
-  _synthData[zone + '|' + dec] = { titre: titre, texte: texte, auto: false };
+  _synthData[key] = { titre: titre, texte: texte, auto: false };
   synthRenderList();
   synthInitControls();   /* rafraîchit les marqueurs ✓ */
-  toast('\u2713 Synthèse ' + zone + ' ' + dec + ' enregistrée');
+  if (document.getElementById('synth-type').value === 'parcours') synthInitParcours();
+  toast('\u2713 Synthèse enregistrée (' + key + ')');
 }
 
 /* ─── Tableau de bord : statistiques et validation ──────────────── */
@@ -1223,13 +1298,12 @@ function loadEvent(id) {
 }
 
 function synthDelete() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
-  var key = zone + '|' + dec;
+  var key = synthKey();
   if (_synthData[key]) {
     delete _synthData[key];
     synthRenderList();
     synthInitControls();   /* rafraîchit les marqueurs ✓ */
+    if (document.getElementById('synth-type').value === 'parcours') synthInitParcours();
     toast('Synthèse supprimée');
   } else {
     toast('Aucune synthèse pour cette sélection');
