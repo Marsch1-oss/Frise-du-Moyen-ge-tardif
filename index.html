@@ -1755,6 +1755,21 @@
       background: var(--accent, #8B5E34); color: #fff; border-color: var(--accent, #8B5E34);
     }
 
+    /* Navigation d'une période à l'autre depuis la vue liste */
+    .eli-period-nav { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; }
+    .eli-period-btn {
+      padding: 0.32rem 0.85rem; font-size: 0.84rem; font-weight: 600;
+      background: var(--accent, #8B5E34); color: #fff;
+      border: 1px solid var(--accent, #8B5E34); border-radius: 8px; cursor: pointer;
+      transition: filter 0.12s, opacity 0.12s;
+    }
+    .eli-period-btn:hover:not(:disabled) { filter: brightness(1.08); }
+    .eli-period-btn:disabled { opacity: 0.4; cursor: default; }
+    .eli-period-label {
+      font-size: 0.86rem; font-weight: 700; color: var(--ink, #3a2a14);
+      min-width: 5.5rem; text-align: center;
+    }
+
     /* Bouton et panneau Légende des thèmes */
     .ctrl-legend-btn {
       display: inline-flex; align-items: center; gap: 5px;
@@ -2153,7 +2168,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782458550"></script>
+<script src="frise.js?v=1782511026"></script>
 
 
 <!-- Modale login editeur -->
@@ -2229,6 +2244,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="event-list-header">
       <div class="event-list-head-left">
         <h2 id="event-list-title" class="event-list-title">Liste des événements</h2>
+        <div id="eli-period-nav" class="eli-period-nav" style="display:none;">
+          <button id="eli-period-prev" class="eli-period-btn" onclick="eliNavigatePeriod(-1)" title="Période précédente">&#8249; Période précédente</button>
+          <span id="eli-period-label" class="eli-period-label"></span>
+          <button id="eli-period-next" class="eli-period-btn" onclick="eliNavigatePeriod(1)" title="Période suivante">Période suivante &#8250;</button>
+        </div>
         <div class="eli-filter">
           <span class="eli-filter-label">Niveau&nbsp;:</span>
           <button class="eli-filter-btn" data-lvl="2" onclick="eliSetFilter(2)">Important</button>

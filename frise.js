@@ -489,6 +489,45 @@ function eliPassesFilter(evt) {
   return true;                          /* Complet */
 }
 
+/* Navigation d'une période à l'autre directement depuis la vue liste :
+   réutilise navigatePeriod (qui met à jour l'état + la frise sous l'overlay)
+   puis reconstruit la liste pour la nouvelle période. */
+function eliNavigatePeriod(direction) {
+  if (activeParcours) return;                 /* en mode parcours, la liste est le fil complet */
+  navigatePeriod(direction);                  /* déplace currentDecade/Year/Century + bornes */
+  openEventList();                            /* reconstruit la liste (filtres zones/thèmes/niveau conservés) */
+}
+
+/* Met à jour le libellé et l'activation des boutons ‹ / › de la liste */
+function eliUpdatePeriodNav() {
+  var nav = document.getElementById('eli-period-nav');
+  if (!nav) return;
+  var navigable = !activeParcours && (
+    (currentLevel === 3 && currentDecade  !== null) ||
+    (currentLevel === 4 && currentYear    !== null) ||
+    (currentLevel === 2 && currentCentury !== null)
+  );
+  nav.style.display = navigable ? 'flex' : 'none';
+  if (!navigable) return;
+  var lbl = document.getElementById('eli-period-label');
+  var prevBtn = document.getElementById('eli-period-prev');
+  var nextBtn = document.getElementById('eli-period-next');
+  var label, canPrev, canNext;
+  if (currentLevel === 4) {
+    label = 'Année ' + currentYear;
+    canPrev = currentYear > 1290;  canNext = currentYear < 1509;
+  } else if (currentLevel === 3) {
+    label = currentDecade + '\u2013' + (currentDecade + 9);
+    canPrev = currentDecade > 1290;  canNext = currentDecade < 1500;
+  } else {
+    label = currentCentury + '\u2013' + (currentCentury + 100);
+    canPrev = currentCentury > 1200;  canNext = currentCentury < 1500;
+  }
+  if (lbl) lbl.textContent = label;
+  if (prevBtn) prevBtn.disabled = !canPrev;
+  if (nextBtn) nextBtn.disabled = !canNext;
+}
+
 function openEventList() {
   var overlay = document.getElementById('event-list-overlay');
   var body = document.getElementById('event-list-body');
@@ -542,6 +581,9 @@ function openEventList() {
       '<span class="eli-count">' + periodeLabel + ' — ' + list.length +
       ' événement' + (list.length > 1 ? 's' : '') + '</span>';
   }
+
+  /* Barre de navigation période (‹ Précédente / Suivante ›) */
+  eliUpdatePeriodNav();
 
   /* Bandeau d'état (mode lecture « Liste ») : reprend la configuration courante */
   var eliStatus = document.getElementById('eli-status');
