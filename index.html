@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Frise chronologique interactive du Moyen Âge tardif (1300–1500). Événements par zones géographiques : France, Angleterre, Empire, Italie, Orient.">
   <title>Frise chronologique — Moyen Âge tardif (1300–1500)</title>
+  <script>
+    /* Applique le plus tôt possible le zoom d'affichage mémorisé (évite tout clignotement) */
+    (function(){ try { var z = localStorage.getItem('friseZoom'); if (z) document.documentElement.style.zoom = z; } catch(e){} })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <style>
@@ -263,11 +267,13 @@
     }
     .nav-status-home:hover { background: #815c14; }
     .eli-status {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap;
       padding: 0.55rem 0.95rem; margin: 0 0 0.3rem;
       background: linear-gradient(180deg, #fbf4e6, #f3e8d2);
       border-bottom: 2px solid #9A6B1A; font-size: 0.98rem; font-weight: 500; color: #3a2c12;
       line-height: 1.55;
     }
+    .eli-status-info { flex: 1 1 auto; min-width: 0; }
     .eli-status b { color: #6a4a10; font-weight: 700; }
     .control-bar {
       display: flex; align-items: center; justify-content: center;
@@ -1751,6 +1757,8 @@
       transition: background 0.12s;
     }
     .ctrl-legend-btn:hover { background: rgba(139,94,52,0.15); }
+    .zoom-ctrl { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.82rem; color: var(--ink-muted, #6a5a40); white-space: nowrap; }
+    .zoom-ctrl select { font-size: 0.82rem; padding: 0.2rem 0.3rem; border: 1px solid var(--border-dark, #b8a37a); border-radius: 6px; background: #fff; color: var(--ink, #3a2a14); cursor: pointer; }
     .theme-legend {
       display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem;
       justify-content: center;
@@ -1843,7 +1851,7 @@
 
   <div id="nav-status" class="nav-status" style="display:none;">
     <div class="nav-status-info" id="nav-status-info"></div>
-    <button class="nav-status-home" onclick="backToDecade()" title="Revenir à la frise décennale">&#8617; Frise décennale</button>
+    <button class="nav-status-home" onclick="backToDecade()" title="Quitter les listes/parcours, supprimer les filtres et revenir à la frise décennale en cours">&#8617; Retour à la frise complète</button>
   </div>
 
   <div class="control-bar">
@@ -1853,6 +1861,16 @@
     <button class="ctrl-nav-btn" id="btn-other" onclick="openPeriodPicker()" style="display:none;" title="Choisir une autre p&eacute;riode">&#128197; Autres p&eacute;riodes</button>
     <button class="ctrl-list-btn" id="btn-list" onclick="openEventList()">&#9776; Liste des &eacute;v&eacute;nements</button>
     <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="L&eacute;gende et tri th&eacute;matique">&#127991; L&eacute;gende &ndash; tri th&eacute;matique</button>
+    <label class="zoom-ctrl" title="Niveau de zoom d'affichage de la frise (mémorisé sur cet appareil)">&#128270;
+      <select id="zoom-select" onchange="applyFriseZoom(this.value)">
+        <option value="1">100&#8201;%</option>
+        <option value="1.1">110&#8201;%</option>
+        <option value="1.25">125&#8201;%</option>
+        <option value="1.5">150&#8201;%</option>
+        <option value="1.75">175&#8201;%</option>
+        <option value="2">200&#8201;%</option>
+      </select>
+    </label>
     <span class="nav-sep"></span>
     <div class="search-bar">
       <label for="search-input">&#128269;</label>
@@ -2127,7 +2145,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782425627"></script>
+<script src="frise.js?v=1782427365"></script>
 
 
 <!-- Modale login editeur -->

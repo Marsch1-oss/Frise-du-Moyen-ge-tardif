@@ -3516,8 +3516,23 @@ function updateMusicBtn() {
   if (status) status.textContent = playing ? '\u23F8' : '\u25B6';
 }
 
+/* ── Zoom d'affichage (simule le zoom navigateur, mémorisé par appareil) ── */
+function applyFriseZoom(z) {
+  z = z || '1';
+  document.documentElement.style.zoom = z;
+  try { localStorage.setItem('friseZoom', z); } catch (e) {}
+}
+function initFriseZoom() {
+  var z = '1';
+  try { z = localStorage.getItem('friseZoom') || '1'; } catch (e) {}
+  document.documentElement.style.zoom = z;
+  var sel = document.getElementById('zoom-select');
+  if (sel) sel.value = z;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   initActiveZones();
+  initFriseZoom();
   document.getElementById('modal-overlay').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
