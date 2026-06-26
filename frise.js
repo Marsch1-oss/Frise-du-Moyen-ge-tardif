@@ -554,6 +554,36 @@ function openEventList() {
       '<button class="nav-status-home" onclick="backToDecade()" title="Quitter la liste, supprimer les filtres et revenir à la frise décennale en cours">\u21A9 Retour à la frise complète</button>';
   }
 
+  /* Accès aux synthèses décennales depuis la liste (zones actives ayant une synthèse rédigée) */
+  var eliSyn = document.getElementById('eli-synthese');
+  if (eliSyn) {
+    eliSyn.innerHTML = '';
+    var synFound = 0;
+    if (!(typeof activeParcours !== 'undefined' && activeParcours) && currentDecade !== null) {
+      ZONES.forEach(function(zone) {
+        if (!activeZones[zone]) return;
+        var key = zone + '|' + currentDecade;
+        if (!_syntheses[key]) return;
+        synFound++;
+        var s = _syntheses[key];
+        var titreSynth = (s && s.titre && s.titre.trim())
+          ? s.titre.trim()
+          : zone + ' (' + currentDecade + '-' + (currentDecade + 9) + ')';
+        var col = COLORS[zone] || COLORS['France'];
+        var b = document.createElement('button');
+        b.className = 'eli-synthese-btn';
+        b.style.background = col.bg;
+        b.textContent = '\uD83D\uDCD6 Synthèse : ' + titreSynth;
+        b.title = 'Lire la synthèse : ' + titreSynth;
+        b.onclick = (function(z, d) {
+          return function() { closeEventList(); showSyntheseBanner(z, d); };
+        })(zone, currentDecade);
+        eliSyn.appendChild(b);
+      });
+    }
+    eliSyn.style.display = synFound > 0 ? 'flex' : 'none';
+  }
+
   body.innerHTML = '';
   if (list.length === 0) {
     body.innerHTML = '<p class="eli-empty">Aucun événement pour cette période et les zones actives.</p>';
@@ -3030,11 +3060,11 @@ function updateNavStatus() {
   var info = document.getElementById('nav-status-info');
   if (!bar || !info) return;
 
-  var modeTxt, periodTxt;
+  var modeTxt, periodTxt = '';
   if (typeof activeParcours !== 'undefined' && activeParcours) {
-    modeTxt = 'Parcours thématique'; periodTxt = activeParcours;
+    modeTxt = 'Parcours thématique';
   } else if (searchFilterActive) {
-    modeTxt = 'Recherche'; periodTxt = '\u00ab ' + (searchTerm || '') + ' \u00bb';
+    modeTxt = 'Recherche';
   } else if (currentLevel === 4 && currentYear !== null) {
     modeTxt = 'Frise par année'; periodTxt = 'année ' + currentYear;
   } else if (currentLevel === 2 && currentCentury !== null) {
@@ -3045,6 +3075,10 @@ function updateNavStatus() {
     modeTxt = 'Frise décennale';
     periodTxt = (currentDecade !== null) ? currentDecade + '\u2013' + (currentDecade + 9) : '';
   }
+
+  /* Échelle = niveau de lecture (densité d'événements affichés) */
+  var levelNames = { 1: 'Siècle', 2: 'Important', 3: 'Détaillé', 4: 'Complet' };
+  var echelleTxt = levelNames[detailLevel] || '';
 
   var zones = ZONES.filter(function(z) { return activeZones[z]; });
   var zonesTxt;
@@ -3058,10 +3092,18 @@ function updateNavStatus() {
     if (activeThemes[t]) themes.push(THEME_DEFS[t] ? THEME_DEFS[t].label : t);
   }
 
+  var SEP = ' &nbsp;\u00b7&nbsp; ';
   var html = 'Mode : <b>' + modeTxt + '</b>';
-  if (periodTxt) html += ' &nbsp;\u00b7&nbsp; Échelle : <b>' + periodTxt + '</b>';
-  html += ' &nbsp;\u00b7&nbsp; Zones : <b>' + zonesTxt + '</b>';
-  if (themes.length) html += ' &nbsp;\u00b7&nbsp; Filtres thématiques : <b>' + themes.join(', ') + '</b>';
+  if (typeof activeParcours !== 'undefined' && activeParcours) {
+    html += SEP + 'Parcours : <b>' + activeParcours + '</b>';
+  } else if (searchFilterActive) {
+    html += SEP + 'Mot-clé : <b>' + (searchTerm || '') + '</b>';
+  } else {
+    if (echelleTxt) html += SEP + 'Échelle : <b>' + echelleTxt + '</b>';
+    if (periodTxt)  html += SEP + 'Période : <b>' + periodTxt + '</b>';
+  }
+  html += SEP + 'Zones : <b>' + zonesTxt + '</b>';
+  if (themes.length) html += SEP + 'Filtres thématiques : <b>' + themes.join(', ') + '</b>';
   info.innerHTML = html;
 
   bar.style.display = 'flex';

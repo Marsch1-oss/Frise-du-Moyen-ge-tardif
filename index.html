@@ -275,6 +275,14 @@
     }
     .eli-status-info { flex: 1 1 auto; min-width: 0; }
     .eli-status b { color: #6a4a10; font-weight: 700; }
+    .eli-synthese { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0.1rem 0.95rem 0.5rem; }
+    .eli-synthese-btn {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.4rem 0.7rem; border: none; border-radius: 8px;
+      color: #fff; font-weight: 600; font-size: 0.86rem; cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2); text-align: left;
+    }
+    .eli-synthese-btn:hover { filter: brightness(1.08); }
     .control-bar {
       display: flex; align-items: center; justify-content: center;
       gap: 0.6rem; margin-bottom: 0.7rem;
@@ -2145,7 +2153,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=1782427365"></script>
+<script src="frise.js?v=1782458550"></script>
 
 
 <!-- Modale login editeur -->
@@ -2217,6 +2225,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div id="event-list-overlay" class="event-list-overlay" style="display:none;">
     <div id="eli-status" class="eli-status"></div>
+    <div id="eli-synthese" class="eli-synthese" style="display:none;"></div>
     <div class="event-list-header">
       <div class="event-list-head-left">
         <h2 id="event-list-title" class="event-list-title">Liste des événements</h2>
