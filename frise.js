@@ -196,7 +196,7 @@ function generateSynthese(zone, dec) {
   /* Corps : liste chronologique titre + début de description */
   var lignes = evts.map(function(e) {
     var d = e.date + (e.mois ? '' : '');
-    var desc = (e.description || '').replace(/\s+/g, ' ').trim();
+    var desc = stripDescMarks(e.description || '').replace(/\s+/g, ' ').trim();
     if (desc.length > 160) desc = desc.slice(0, 157) + '…';
     return d + ' — ' + e.titre + (desc ? ' : ' + desc : '');
   });
@@ -615,7 +615,7 @@ function openEventList() {
         dateTxt += ' – ' + (e.mois_fin ? MOIS[e.mois_fin] + ' ' : '') + e.date_fin;
       }
 
-      var desc = (e.description || '').replace(/\s+/g, ' ').trim();
+      var desc = stripDescMarks(e.description || '').replace(/\s+/g, ' ').trim();
       if (desc.length > 280) desc = desc.slice(0, 277) + '…';
 
       card.innerHTML =
@@ -2027,6 +2027,53 @@ function openSyntheseModal(zone, dec) {
   document.body.style.overflow = 'hidden';
 }
 
+/* Rendu enrichi de la description : titres (## / ###), listes (- / •), paragraphes.
+   Compatible avec l'ancien format (texte simple → paragraphes). */
+function renderDescription(text, descEl) {
+  var blocks = (text || '').split(/\n\n+/);
+  for (var bi = 0; bi < blocks.length; bi++) {
+    var block = blocks[bi].replace(/^\n+|\n+$/g, '');
+    if (!block.trim()) continue;
+    var lines = block.split(/\n/).map(function(l){ return l.trim(); }).filter(Boolean);
+
+    /* Titre / sous-titre */
+    if (lines.length === 1 && /^#{2,3}\s+/.test(lines[0])) {
+      var isSub = /^###\s+/.test(lines[0]);
+      var h = document.createElement(isSub ? 'h5' : 'h4');
+      h.className = isSub ? 'desc-sub' : 'desc-h';
+      h.innerHTML = highlightText(lines[0].replace(/^#{2,3}\s+/, ''));
+      descEl.appendChild(h);
+      continue;
+    }
+    /* Liste : chaque ligne commence par - ou • */
+    if (lines.length && lines.every(function(l){ return /^[-•]\s+/.test(l); })) {
+      var ul = document.createElement('ul');
+      ul.className = 'desc-list';
+      lines.forEach(function(l){
+        var li = document.createElement('li');
+        var it = l.replace(/^[-•]\s+/, '');
+        var m = it.match(/^(.{1,34}?)\s[—–]\s([\s\S]+)$/);   /* "date — texte" → date en gras */
+        if (m && /\d/.test(m[1])) {
+          li.innerHTML = '<strong>' + highlightText(m[1]) + '</strong> — ' + highlightText(m[2]);
+        } else {
+          li.innerHTML = highlightText(it);
+        }
+        ul.appendChild(li);
+      });
+      descEl.appendChild(ul);
+      continue;
+    }
+    /* Paragraphe (saut simple → espace) */
+    var p = document.createElement('p');
+    p.innerHTML = highlightText(lines.join(' '));
+    descEl.appendChild(p);
+  }
+}
+/* Retire les marqueurs de structure pour les aperçus (chips, liste) */
+function stripDescMarks(t) {
+  return (t || '').replace(/(^|\n)\s*#{2,3}\s+/g, '$1').replace(/(^|\n)\s*[-•]\s+/g, '$1 ');
+}
+
 function openModal(evt, zone) {
   var col = COLORS[zone] || COLORS['France'];
   document.getElementById('modal-zone').textContent      = zone;
@@ -2056,14 +2103,7 @@ function openModal(evt, zone) {
 
   var descEl = document.getElementById('modal-desc');
   descEl.innerHTML = '';
-  var paras = (evt.description || '').split(/\n\n+/);
-  for (var pi = 0; pi < paras.length; pi++) {
-    if (!paras[pi].trim()) continue;
-    var p = document.createElement('p');
-    var paraText = paras[pi].replace(/\n/g, ' ').trim();
-    p.innerHTML = highlightText(paraText);
-    descEl.appendChild(p);
-  }
+  renderDescription(evt.description, descEl);
 
 /* --- DEBUT DU BLOC SÉQUENCES (Événements longs) --- */
   if (evt.serie) {
