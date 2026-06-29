@@ -79,7 +79,11 @@
 }
 
     /* ── En-tête ── */
-    header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); }
+    header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; }
+    .header-titles { flex: 1 1 auto; min-width: 0; }
+    .header-nav-link { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 1.05rem; border: 1.5px solid var(--gold); border-radius: 24px; background: rgba(245,237,216,0.08); color: var(--parchment); text-decoration: none; font-family: 'Crimson Pro', serif; font-size: 0.95rem; white-space: nowrap; transition: all 0.18s; }
+    .header-nav-link:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .header-nav-link .hnl-icon { font-size: 1.2rem; line-height: 1; }
     .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.9rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.2rem; }
     .site-sub { font-size: 0.85rem; color: rgba(245,237,216,0.55); font-style: italic; }
 
@@ -1825,8 +1829,14 @@
 <body>
 
 <header>
-  <h1 class="site-title">Frise du Moyen &Acirc;ge tardif</h1>
-  <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. & Or. &middot; Pologne &middot; Russie &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Japon &middot; Chine &middot; Inde &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Sciences &middot; Idees</p>
+  <div class="header-titles">
+    <h1 class="site-title">Frise du Moyen &Acirc;ge tardif</h1>
+    <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. & Or. &middot; Pologne &middot; Russie &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Japon &middot; Chine &middot; Inde &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Sciences &middot; Idees</p>
+  </div>
+  <a class="header-nav-link" href="carte.html" title="Basculer vers la carte chronologique">
+    <span class="hnl-icon">&#128506;&#65039;</span>
+    <span class="hnl-label">Carte</span>
+  </a>
 </header>
 
 <main>
