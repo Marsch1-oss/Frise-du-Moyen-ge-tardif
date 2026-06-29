@@ -307,12 +307,35 @@
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoClear()">Effacer (repli zone)</button>
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoFitZones()">Cadrer sur la zone</button>
           </div>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;margin-bottom:0.5rem;font-weight:normal;">
+            <input type="checkbox" id="f-geo-none" style="width:auto;margin:0;cursor:pointer;">
+            Sans coordonn&eacute;es (repli sur la zone assum&eacute; &mdash; relu)
+          </label>
           <div style="position:relative;border:1.5px solid #c9b896;border-radius:6px;overflow:hidden;background:#D9CFB2;">
             <svg id="geo-map" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:230px;cursor:crosshair;" preserveAspectRatio="xMidYMid meet"></svg>
             <div style="position:absolute;left:6px;bottom:4px;font-size:0.68rem;color:#7A6A52;font-style:italic;background:rgba(251,246,233,0.8);padding:0 0.4rem;border-radius:4px;pointer-events:none;">Cliquez sur la carte pour poser le point</div>
           </div>
         </div>
       </div>
+
+      <div class="field-row single" id="geo-todo-row" style="display:none;">
+        <div class="field">
+          <label>&#9888; Fiches &agrave; v&eacute;rifier
+            <small>(positions auto &agrave; confirmer + fiches sans coordonn&eacute;es)</small>
+            <span id="geo-todo-count" style="font-style:normal;color:#9A6B1A;font-weight:600;"></span>
+          </label>
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
+            <select id="geo-todo-select" onchange="geoTodoGo()"
+              style="flex:1;min-width:240px;padding:0.35rem 0.5rem;border:1.5px solid #c9b896;border-radius:6px;background:#FBF6E9;font-family:inherit;font-size:0.85rem;color:var(--ink);cursor:pointer;"></select>
+            <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.8rem;font-size:0.82rem;" onclick="geoTodoNext()">Suivante &#10142;</button>
+          </div>
+          <div style="font-size:0.7rem;color:#7A6A52;font-style:italic;margin-top:0.3rem;">
+            <strong>Position auto</strong> : posez le point (clic carte / saisie) puis Enregistrez.&nbsp;
+            <strong>Sans coordonn&eacute;es</strong> : cochez la case &laquo;&nbsp;Sans coordonn&eacute;es&nbsp;&raquo; ci-dessus puis Enregistrez. Dans les deux cas la fiche quitte la liste.
+          </div>
+        </div>
+      </div>
+
       <div class="btn-row">
         <button class="btn btn-primary" onclick="saveEvent()">Enregistrer</button>
         <button class="btn btn-secondary" onclick="resetForm()">Nouveau</button>
@@ -600,12 +623,15 @@ function readForm() {
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
+  var _noCoord = !!(document.getElementById('f-geo-none') && document.getElementById('f-geo-none').checked);
   var _la = parseFloat(document.getElementById('f-lat').value);
   var _lo = parseFloat(document.getElementById('f-lng').value);
-  if (!isNaN(_la) && !isNaN(_lo)) {
+  if (!_noCoord && !isNaN(_la) && !isNaN(_lo)) {
     evt.lat = Math.round(_la*10000)/10000;
     evt.lng = Math.round(_lo*10000)/10000;
     if (geoLoadedAuto && !geoValidated) evt.geo_auto = true;  /* encore auto-suggéré, non vérifié */
+  } else if (_noCoord) {
+    evt.geo_none = true;  /* repli sur la zone, volontaire et relu */
   }
   var series = [];
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
@@ -636,10 +662,14 @@ function fillForm(evt) {
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
+  var _cbNone = document.getElementById('f-geo-none'); if (_cbNone) _cbNone.checked = !!evt.geo_none;
   if (typeof evt.lat === 'number' && typeof evt.lng === 'number') {
     geoSet(evt.lat, evt.lng, false);
     geoBadge(geoLoadedAuto ? 'auto' : 'ok');
-  } else { geoClearSilent(); }
+  } else {
+    geoClearSilent();
+    geoBadge(evt.geo_none ? 'none' : 'todo');
+  }
   geoFitZones();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
@@ -681,7 +711,8 @@ function resetForm() {
     lbl.querySelector('input').checked = isDefault;
   });
   document.getElementById('form-title').textContent = 'Nouvel événement';
-  geoLoadedAuto=false; geoValidated=false; geoClearSilent();
+  var _cbN = document.getElementById('f-geo-none'); if (_cbN) _cbN.checked = false;
+  geoLoadedAuto=false; geoValidated=false; geoClearSilent(); geoBadge('todo');
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -761,6 +792,7 @@ function renderNoThemeList() {
 
 function renderList() {
   refreshNoTheme();
+  geoTodoRefresh();
   var q = (document.getElementById('search-input').value || '').toLowerCase();
   var filtered = events.filter(function(e) {
     return !q || e.titre.toLowerCase().indexOf(q) !== -1
@@ -828,6 +860,10 @@ function updateJSON() {
     if (e.legende) o.legende = e.legende;
     if (e.video)   o.video   = e.video;
     if (e.regne)   o.regne   = true;
+    if (typeof e.lat === 'number') o.lat = e.lat;
+    if (typeof e.lng === 'number') o.lng = e.lng;
+    if (e.geo_auto) o.geo_auto = true;
+    if (e.geo_none) o.geo_none = true;
     if (e.sources) o.sources = e.sources;
     if (e.serie)   o.serie   = e.serie;
     return o;
@@ -1354,18 +1390,22 @@ function geoRender(){
 function geoSet(lat,lng,fromUser){
   document.getElementById('f-lat').value = Math.round(lat*10000)/10000;
   document.getElementById('f-lng').value = Math.round(lng*10000)/10000;
-  if(fromUser){ geoValidated=true; geoBadge('ok'); }
+  if(fromUser){
+    var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
+    geoValidated=true; geoBadge('ok');
+  }
   geoRender();
 }
 function geoClearSilent(){
   document.getElementById('f-lat').value=''; document.getElementById('f-lng').value='';
   geoBadge('none'); geoRender();
 }
-function geoClear(){ geoValidated=true; geoClearSilent(); geoBadge('none'); }
+function geoClear(){ var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=true; geoValidated=true; geoClearSilent(); geoBadge('none'); }
 function geoBadge(kind){
   var el=document.getElementById('geo-badge'); if(!el) return;
   var map={ ok:['Validé','#1A6B3C','#E6F5ED'], auto:['Auto — à vérifier','#9A6B1A','#F7EFD9'],
-            none:['Repli sur la zone','#7A6A52','#EDE3C8'] };
+            todo:['Sans coordonnées — à vérifier','#9A6B1A','#F7EFD9'],
+            none:['Repli sur la zone (relu)','#7A6A52','#EDE3C8'] };
   var m=map[kind]||map.none; el.textContent=m[0]; el.style.color=m[1]; el.style.background=m[2];
 }
 function geoFitZones(){
@@ -1383,6 +1423,66 @@ function geoFitZones(){
   if(h < w*0.5) h=w*0.5; if(w < h*1.4) w=h*1.4;
   geoView={ x:x0-padX, y:y0-padY, w:w, h:h }; geoRender();
 }
+/* ── Fiches à vérifier : positions auto non confirmées + fiches sans coordonnées ── */
+function geoTodoEvents(){
+  var auto = [], nocoord = [];
+  events.forEach(function(e){
+    var hasGeo = (typeof e.lat === 'number' && typeof e.lng === 'number');
+    if (e.regne && hasGeo) return;                 /* règne déjà localisé : on ignore */
+    if (e.geo_auto === true && hasGeo) { auto.push(e); return; }   /* position auto à confirmer */
+    if (!hasGeo && !e.geo_none) { nocoord.push(e); return; }       /* sans coords, pas encore relu */
+  });
+  var byDate = function(a,b){ return (a.date||0) - (b.date||0); };
+  auto.sort(byDate); nocoord.sort(byDate);
+  return { auto: auto, nocoord: nocoord };
+}
+function geoTodoFlat(){ var t = geoTodoEvents(); return t.auto.concat(t.nocoord); }
+function geoTodoRefresh(){
+  var sel = document.getElementById('geo-todo-select');
+  var row = document.getElementById('geo-todo-row');
+  var cnt = document.getElementById('geo-todo-count');
+  if (!sel || !row) return;
+  var t = geoTodoEvents(), total = t.auto.length + t.nocoord.length;
+  if (cnt) cnt.textContent = total
+      ? '(' + t.auto.length + ' auto + ' + t.nocoord.length + ' sans coord.)'
+      : '';
+  if (!total){ row.style.display='none'; sel.innerHTML=''; return; }
+  row.style.display = '';
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
+  var optOf = function(e){
+    var label = e.date + (e.date_fin ? '–'+e.date_fin : '') + ' — ' + e.titre + '  (#' + e.id + ')';
+    return '<option value="' + e.id + '"' + (editingId === e.id ? ' selected' : '') + '>' + esc(label) + '</option>';
+  };
+  var html = '<option value="">— ' + total + ' fiche' + (total>1?'s':'') + ' à vérifier —</option>';
+  if (t.auto.length){
+    html += '<optgroup label="Coordonnées auto à confirmer (' + t.auto.length + ')">';
+    t.auto.forEach(function(e){ html += optOf(e); });
+    html += '</optgroup>';
+  }
+  if (t.nocoord.length){
+    html += '<optgroup label="Sans coordonnées — à localiser ou valider (' + t.nocoord.length + ')">';
+    t.nocoord.forEach(function(e){ html += optOf(e); });
+    html += '</optgroup>';
+  }
+  sel.innerHTML = html;
+}
+function geoTodoGo(){
+  var id = parseInt(document.getElementById('geo-todo-select').value);
+  if (!id) return;
+  var e = events.find(function(x){ return x.id === id; });
+  if (e){ fillForm(e); window.scrollTo({ top:0, behavior:'smooth' }); }
+}
+function geoTodoNext(){
+  var flat = geoTodoFlat();
+  if (!flat.length) return;
+  var e = flat[0];
+  if (editingId !== null){
+    var idx = flat.findIndex(function(x){ return x.id === editingId; });
+    if (idx !== -1) e = flat[Math.min(idx+1, flat.length-1)];  /* suivante (ou on reste sur la dernière) */
+  }
+  fillForm(e); window.scrollTo({ top:0, behavior:'smooth' });
+}
+
 function geoBindMap(){
   var svg=document.getElementById('geo-map'); if(!svg) return;
   svg.addEventListener('click', function(ev){
@@ -1392,8 +1492,23 @@ function geoBindMap(){
     geoSet(geoInvY(u.y), geoInvX(u.x), true);
   });
   ['f-lat','f-lng'].forEach(function(id){
-    document.getElementById(id).addEventListener('change', function(){ geoValidated=true; geoBadge('ok'); geoRender(); });
+    document.getElementById(id).addEventListener('change', function(){
+      var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
+      geoValidated=true; geoBadge('ok'); geoRender();
+    });
     document.getElementById(id).addEventListener('input', geoRender);
+  });
+  var cbNone=document.getElementById('f-geo-none');
+  if(cbNone) cbNone.addEventListener('change', function(){
+    geoValidated=true;
+    if(cbNone.checked){
+      document.getElementById('f-lat').value='';
+      document.getElementById('f-lng').value='';
+      geoBadge('none');
+    } else {
+      geoBadge('todo');
+    }
+    geoRender();
   });
 }
 geoBindMap();
