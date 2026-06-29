@@ -41,6 +41,15 @@
   .dec-nav:disabled{opacity:0.3;cursor:default}
   .dec-current{font-family:'IM Fell English',serif;font-size:1.25rem;color:var(--red);min-width:5.5rem;text-align:center}
 
+  /* Curseur d'année */
+  .year-slider{flex:1 1 160px;min-width:140px;max-width:340px;accent-color:var(--red);cursor:pointer;height:4px}
+  .year-hint{font-size:0.72rem;color:var(--ink-muted);font-style:italic}
+  /* Puce de thème (icône + libellé) */
+  .chip-theme{display:inline-flex;align-items:center;gap:0.3rem}
+  .chip-theme .ic{font-size:0.95rem;line-height:1}
+  .controls-row{display:flex;flex-wrap:wrap;gap:1.2rem 2rem}
+  .controls-row .ctrl-block{flex:0 0 auto}
+
   /* ── Mise en page carte + panneau ── */
   .stage{display:grid;grid-template-columns:1fr 320px;gap:1.2rem;align-items:start}
   @media(max-width:840px){.stage{grid-template-columns:1fr}}
@@ -127,14 +136,45 @@
       <span class="ctrl-label">Région</span>
       <div class="chips" id="region-chips"></div>
     </div>
+
+    <div class="controls-row">
+      <div class="ctrl-block">
+        <span class="ctrl-label">Échelle de temps</span>
+        <div class="chips" id="mode-chips">
+          <button class="chip active" data-mode="decade">Décennie</button>
+          <button class="chip" data-mode="year">Année</button>
+        </div>
+      </div>
+      <div class="ctrl-block">
+        <span class="ctrl-label">Niveau de détail</span>
+        <div class="chips" id="level-chips">
+          <button class="chip" data-level="important">Important</button>
+          <button class="chip" data-level="detaille">Détaillé</button>
+          <button class="chip active" data-level="complet">Complet</button>
+        </div>
+      </div>
+    </div>
+
     <div class="ctrl-block">
-      <span class="ctrl-label">Décennie</span>
-      <div class="decade-row">
+      <span class="ctrl-label" id="period-label">Décennie</span>
+      <div class="decade-row" id="decade-row">
         <button class="dec-nav" id="dec-prev" title="Décennie précédente">&#8249;</button>
         <span class="dec-current" id="dec-current">—</span>
         <button class="dec-nav" id="dec-next" title="Décennie suivante">&#8250;</button>
         <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
       </div>
+      <div class="decade-row" id="year-row" style="display:none">
+        <button class="dec-nav" id="yr-prev" title="Année précédente">&#8249;</button>
+        <span class="dec-current" id="yr-current">—</span>
+        <button class="dec-nav" id="yr-next" title="Année suivante">&#8250;</button>
+        <input type="range" class="year-slider" id="year-slider" min="0" max="0" step="1" value="0">
+        <span class="year-hint" id="year-hint"></span>
+      </div>
+    </div>
+
+    <div class="ctrl-block">
+      <span class="ctrl-label">Thèmes <span style="font-weight:400;text-transform:none;letter-spacing:0;font-style:italic;color:var(--ink-muted)">(aucun = tous)</span></span>
+      <div class="chips" id="theme-chips"></div>
     </div>
   </div>
 
@@ -172,7 +212,78 @@
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
-var state = { region: BUNDLE.regions[0], decade: null, selZone: null };
+var state = { region: BUNDLE.regions[0], decade: null, year: null, mode: 'decade',
+              selZone: null, level: 'complet', themes: {} };
+var YEAR_MIN = 1192, YEAR_MAX = 1500;
+
+/* ---- Thèmes (alignés sur la frise) -------------------------------------- */
+var THEME_DEFS = {
+  'guerre':      { icon: '\u2694\uFE0F', label: 'Guerre' },
+  'politique':   { icon: '\uD83D\uDC51', label: 'Politique' },
+  'religion':    { icon: '\u271D\uFE0F', label: 'Religion' },
+  'revolte':     { icon: '\uD83D\uDD25', label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC', label: 'Diplomatie' },
+  'economie':    { icon: '\uD83E\uDE99', label: 'Économie' },
+  'societe':     { icon: '\uD83E\uDDD1', label: 'Société' },
+  'art':         { icon: '\uD83C\uDFA8', label: 'Art' },
+  'litterature': { icon: '\uD83D\uDCD6', label: 'Littérature' },
+  'sciences':    { icon: '\uD83D\uDD2C', label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F', label: 'Techniques' },
+  'idees':       { icon: '\uD83D\uDCA1', label: 'Idées' },
+  'catastrophe': { icon: '\uD83C\uDF0B', label: 'Catastrophe' }
+};
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+var THEME_KEYWORDS = {
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
+};
+/* Détection du thème : champ explicite prioritaire, sinon mots-clés du titre */
+function detectTheme(e){
+  if(e.theme && THEME_DEFS[e.theme]) return e.theme;
+  var txt = (e.t || '').toLowerCase();
+  for(var i=0;i<THEME_ORDER.length;i++){
+    var th=THEME_ORDER[i], kws=THEME_KEYWORDS[th];
+    if(!kws) continue;
+    for(var k=0;k<kws.length;k++){ if(txt.indexOf(kws[k])!==-1) return th; }
+  }
+  return null;
+}
+
+/* ---- Filtre combiné niveau + thème -------------------------------------- */
+/* Niveau : règnes (type 1) toujours visibles ; sinon Important=types 2-3,
+   Détaillé=2-4, Complet=tous. Thème : si au moins un thème est coché,
+   seuls les événements de ce(s) thème(s) passent. */
+function passesFilters(e){
+  if(!e.r){
+    var t = (typeof e.ty==='number' && e.ty>=1) ? e.ty : 2;
+    if(state.level==='important' && t>3) return false;
+    if(state.level==='detaille' && t>4) return false;
+  }
+  var anyTheme=false;
+  for(var k in state.themes){ if(state.themes[k]){ anyTheme=true; break; } }
+  if(anyTheme){
+    var th=detectTheme(e);
+    if(!th || !state.themes[th]) return false;
+  }
+  return true;
+}
+
+/* ---- Bornes de la période courante (décennie ou année) ------------------ */
+function periodBounds(){
+  if(state.mode==='year') return [state.year, state.year];
+  return [state.decade, state.decade+9];
+}
+function periodLabelText(){
+  if(state.mode==='year') return 'an ' + state.year;
+  return state.decade + '–' + (state.decade+9);
+}
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
 function tryLoadLive(done){
@@ -182,7 +293,7 @@ function tryLoadLive(done){
       LIVE = {};
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
-        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0 };
+        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0, theme:e.theme||null };
         LIVE[e.id] = e;
         return o;
       });
@@ -197,21 +308,35 @@ function buildDecades(){
   EVENTS.forEach(function(e){
     if(typeof e.d==='number'){ if(e.d<min)min=e.d; var f=(typeof e.df==='number')?e.df:e.d; if(f>max)max=f; }
   });
+  YEAR_MIN=min; YEAR_MAX=max;
   var d0=Math.floor(min/10)*10, d1=Math.floor(max/10)*10, out=[];
   for(var d=d0; d<=d1; d+=10) out.push(d);
   return out;
 }
 var DECADES = [];
 
-/* ---- Compte : un événement compte dans la décennie si sa période la recoupe */
-function eventsFor(zone, decade){
-  var a=decade, b=decade+9;
+/* ---- Compte : un événement recoupe-t-il la période courante ? ----------- */
+function eventsFor(zone){
+  var b=periodBounds(), a=b[0], z=b[1];
   return EVENTS.filter(function(e){
     if(e.z.indexOf(zone)===-1) return false;
     if(typeof e.d!=='number') return false;
+    if(!passesFilters(e)) return false;
     var f=(typeof e.df==='number')?e.df:e.d;
-    return e.d<=b && f>=a;
+    return e.d<=z && f>=a;
   }).sort(function(x,y){return x.d-y.d;});
+}
+/* Compte brut (sans filtre niveau/thème) pour choisir la période de départ */
+function rawCount(zone, decade){
+  var a=decade, b=decade+9, n=0;
+  for(var i=0;i<EVENTS.length;i++){
+    var e=EVENTS[i];
+    if(e.z.indexOf(zone)===-1) continue;
+    if(typeof e.d!=='number') continue;
+    var f=(typeof e.df==='number')?e.df:e.d;
+    if(e.d<=b && f>=a) n++;
+  }
+  return n;
 }
 
 /* ---- Rendu de la carte -------------------------------------------------- */
@@ -227,7 +352,7 @@ function renderMap(){
   reg.zones.forEach(function(zone){
     var c=BUNDLE.centroids[zone];
     if(!c) return;
-    var evs=eventsFor(zone, state.decade);
+    var evs=eventsFor(zone);
     if(evs.length===0) return;
     anyDot=true; totalRegion+=evs.length;
     var n=evs.length;
@@ -253,7 +378,7 @@ function renderMap(){
   var emptyEl=document.getElementById('map-empty');
   if(!anyDot){
     emptyEl.style.display='flex';
-    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans les années '+state.decade+'.';
+    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » ('+periodLabelText()+') avec les filtres actuels.';
   } else { emptyEl.style.display='none'; }
 
   renderNonGeo();
@@ -263,7 +388,7 @@ function renderMap(){
 function renderNonGeo(){
   var el=document.getElementById('nongeo'), bits=[];
   BUNDLE.nonGeo.forEach(function(zone){
-    var n=eventsFor(zone, state.decade).length;
+    var n=eventsFor(zone).length;
     if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
   });
   if(bits.length){
@@ -276,16 +401,17 @@ function renderNonGeo(){
 function selectZone(zone){
   state.selZone=zone;
   renderMap();
-  var evs=eventsFor(zone, state.decade);
+  var evs=eventsFor(zone);
   document.getElementById('panel-title').textContent=zone;
-  document.getElementById('panel-count').textContent=state.decade+'–'+(state.decade+9)+' · '+evs.length+' évén.';
+  document.getElementById('panel-count').textContent=periodLabelText()+' · '+evs.length+' évén.';
   var list=document.getElementById('panel-list');
   if(!evs.length){ list.innerHTML='<div class="panel-empty">Aucun événement.</div>'; return; }
   list.innerHTML=evs.map(function(e){
     var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
+    var th=detectTheme(e), ic=(th && THEME_DEFS[th]) ? THEME_DEFS[th].icon+' ' : '';
     return '<div class="ev-row" data-id="'+e.id+'">'+
       '<span class="ev-date">'+dd+'</span>'+
-      '<span class="ev-title">'+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+'</span>'+
+      '<span class="ev-title">'+ic+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+'</span>'+
     '</div>';
   }).join('');
   Array.prototype.forEach.call(list.querySelectorAll('.ev-row'), function(row){
@@ -337,13 +463,79 @@ function renderDecadeChips(){
     c.addEventListener('click', function(){ setDecade(+c.getAttribute('data-d')); });
   });
 }
+
+/* Rafraîchit la carte en conservant la zone sélectionnée si possible */
+function refresh(){
+  renderMap();
+  if(state.selZone) selectZone(state.selZone);
+  else resetPanel();
+}
+
 function setDecade(d){
-  state.decade=d; state.selZone=null;
+  state.decade=d;
   document.getElementById('dec-current').textContent=d+'–'+(d+9);
   document.getElementById('dec-prev').disabled = (DECADES.indexOf(d)<=0);
   document.getElementById('dec-next').disabled = (DECADES.indexOf(d)>=DECADES.length-1);
-  renderDecadeChips(); renderMap(); resetPanel();
+  renderDecadeChips(); refresh();
 }
+
+function setYear(y){
+  y=Math.max(YEAR_MIN, Math.min(YEAR_MAX, y));
+  state.year=y;
+  document.getElementById('yr-current').textContent='an '+y;
+  document.getElementById('year-slider').value=y;
+  document.getElementById('yr-prev').disabled=(y<=YEAR_MIN);
+  document.getElementById('yr-next').disabled=(y>=YEAR_MAX);
+  refresh();
+}
+
+/* Bascule décennie ⇄ année (en conservant la position temporelle) */
+function applyMode(){
+  var dec=document.getElementById('decade-row'), yr=document.getElementById('year-row');
+  var lbl=document.getElementById('period-label');
+  if(state.mode==='year'){ dec.style.display='none'; yr.style.display='flex'; lbl.textContent='Année'; }
+  else { dec.style.display='flex'; yr.style.display='none'; lbl.textContent='Décennie'; }
+  Array.prototype.forEach.call(document.querySelectorAll('#mode-chips .chip'), function(c){
+    c.classList.toggle('active', c.getAttribute('data-mode')===state.mode);
+  });
+}
+function setMode(m){
+  if(m===state.mode){ return; }
+  if(m==='year'){
+    if(state.year==null) state.year=state.decade!=null?state.decade:YEAR_MIN;
+    state.mode='year'; applyMode(); setYear(state.year);
+  } else {
+    if(state.year!=null) state.decade=Math.floor(state.year/10)*10;
+    if(DECADES.indexOf(state.decade)===-1) state.decade=DECADES[0];
+    state.mode='decade'; applyMode(); setDecade(state.decade);
+  }
+}
+
+function setLevel(l){
+  state.level=l;
+  Array.prototype.forEach.call(document.querySelectorAll('#level-chips .chip'), function(c){
+    c.classList.toggle('active', c.getAttribute('data-level')===l);
+  });
+  refresh();
+}
+
+function renderThemeChips(){
+  var box=document.getElementById('theme-chips');
+  box.innerHTML=THEME_ORDER.map(function(t){
+    var d=THEME_DEFS[t]; if(!d) return '';
+    return '<button class="chip chip-theme'+(state.themes[t]?' active':'')+'" data-theme="'+t+'">'+
+           '<span class="ic">'+d.icon+'</span>'+d.label+'</button>';
+  }).join('');
+  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){
+      var t=c.getAttribute('data-theme');
+      state.themes[t]=!state.themes[t];
+      c.classList.toggle('active', !!state.themes[t]);
+      refresh();
+    });
+  });
+}
+
 function resetPanel(){
   document.getElementById('panel-title').textContent='Sélectionnez une pastille';
   document.getElementById('panel-count').textContent='';
@@ -356,19 +548,45 @@ function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {'
 function boot(mode){
   DECADES=buildDecades();
   renderRegionChips();
+  renderThemeChips();
+
+  // curseur d'année
+  var sl=document.getElementById('year-slider');
+  sl.min=YEAR_MIN; sl.max=YEAR_MAX;
+  document.getElementById('year-hint').textContent=YEAR_MIN+' – '+YEAR_MAX;
+
   // décennie de départ = celle avec le plus d'événements (Europe occ.)
   var best=DECADES[0], bestN=-1;
   DECADES.forEach(function(d){
-    var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=eventsFor(z,d).length; });
+    var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=rawCount(z,d); });
     if(n>bestN){bestN=n;best=d;}
   });
+  state.year=best;
+
+  // navigation décennie
   document.getElementById('dec-prev').addEventListener('click', function(){
     var i=DECADES.indexOf(state.decade); if(i>0) setDecade(DECADES[i-1]);
   });
   document.getElementById('dec-next').addEventListener('click', function(){
     var i=DECADES.indexOf(state.decade); if(i<DECADES.length-1) setDecade(DECADES[i+1]);
   });
+  // navigation année
+  document.getElementById('yr-prev').addEventListener('click', function(){ setYear(state.year-1); });
+  document.getElementById('yr-next').addEventListener('click', function(){ setYear(state.year+1); });
+  sl.addEventListener('input', function(){ setYear(+sl.value); });
+
+  // échelle de temps
+  Array.prototype.forEach.call(document.querySelectorAll('#mode-chips .chip'), function(c){
+    c.addEventListener('click', function(){ setMode(c.getAttribute('data-mode')); });
+  });
+  // niveau de détail
+  Array.prototype.forEach.call(document.querySelectorAll('#level-chips .chip'), function(c){
+    c.addEventListener('click', function(){ setLevel(c.getAttribute('data-level')); });
+  });
+
+  applyMode();
   setDecade(best);
+
   document.getElementById('status-note').innerHTML = (mode==='live')
     ? 'Données chargées depuis <b>events.json</b> en direct ('+EVENTS.length+' événements). Les fiches affichent le texte complet.'
     : 'Aperçu autonome : données <b>embarquées</b> ('+EVENTS.length+' événements, sans descriptions). Place ce fichier à côté de <b>events.json</b> pour le texte complet des fiches.';
