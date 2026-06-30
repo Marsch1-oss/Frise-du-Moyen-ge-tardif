@@ -307,10 +307,16 @@
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoClear()">Effacer (repli zone)</button>
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoFitZones()">Cadrer sur la zone</button>
           </div>
-          <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;margin-bottom:0.5rem;font-weight:normal;">
-            <input type="checkbox" id="f-geo-none" style="width:auto;margin:0;cursor:pointer;">
-            Sans coordonn&eacute;es (repli sur la zone assum&eacute; &mdash; relu)
-          </label>
+          <div style="display:flex;gap:1.3rem;flex-wrap:wrap;align-items:center;margin-bottom:0.5rem;">
+            <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;font-weight:normal;">
+              <input type="checkbox" id="f-geo-ok" style="width:auto;margin:0;cursor:pointer;">
+              Localisation v&eacute;rifi&eacute;e
+            </label>
+            <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;font-weight:normal;">
+              <input type="checkbox" id="f-geo-none" style="width:auto;margin:0;cursor:pointer;">
+              Sans coordonn&eacute;es (repli sur la zone assum&eacute; &mdash; relu)
+            </label>
+          </div>
           <div style="position:relative;border:1.5px solid #c9b896;border-radius:6px;overflow:hidden;background:#D9CFB2;">
             <svg id="geo-map" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:230px;cursor:crosshair;" preserveAspectRatio="xMidYMid meet"></svg>
             <div style="position:absolute;left:6px;bottom:4px;font-size:0.68rem;color:#7A6A52;font-style:italic;background:rgba(251,246,233,0.8);padding:0 0.4rem;border-radius:4px;pointer-events:none;">Cliquez sur la carte pour poser le point</div>
@@ -330,8 +336,8 @@
             <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.8rem;font-size:0.82rem;" onclick="geoTodoNext()">Suivante &#10142;</button>
           </div>
           <div style="font-size:0.7rem;color:#7A6A52;font-style:italic;margin-top:0.3rem;">
-            <strong>Position auto</strong> : posez le point (clic carte / saisie) puis Enregistrez.&nbsp;
-            <strong>Sans coordonn&eacute;es</strong> : cochez la case &laquo;&nbsp;Sans coordonn&eacute;es&nbsp;&raquo; ci-dessus puis Enregistrez. Dans les deux cas la fiche quitte la liste.
+            <strong>Position auto</strong> : ajustez le point si besoin puis cochez &laquo;&nbsp;Localisation v&eacute;rifi&eacute;e&nbsp;&raquo; et Enregistrez.&nbsp;
+            <strong>Sans coordonn&eacute;es</strong> : cochez &laquo;&nbsp;Sans coordonn&eacute;es&nbsp;&raquo; et Enregistrez. Dans les deux cas la fiche quitte la liste.
           </div>
         </div>
       </div>
@@ -429,7 +435,7 @@
 const ZONES = [
   /* Zones géographiques */
   'France', 'Angleterre', 'St Empire',
-  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace',
+  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
@@ -485,7 +491,7 @@ function themeIcon(evt) {
 
 /* Groupes pour l'affichage dans l'admin */
 const ZONE_GROUPS = [
-  { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'] },
+  { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'] },
   { label: 'Europe du Nord',      zones: ['Scandinavie'] },
   { label: 'Europe orientale',    zones: ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'] },
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
@@ -502,7 +508,7 @@ const COLORS = {
   'Russie':'#5C1A1A','Byzance':'#6B1A6B','Ottomans':'#8B1A3A',
   'Monde islamique':'#8B6B10','Orient':'#5C2A10','Japon':'#8B1A1A',
   'Chine':'#8B3A10','Inde':'#6B5A10','Monde':'#3A3A3A',
-  'Alsace':'#7A3B69','Art':'#A0522D','Techniques':'#2F5233',
+  'Alsace':'#7A3B69','Flandre':'#C26A1A','Art':'#A0522D','Techniques':'#2F5233',
   'Sciences':'#1A4A5C','Idees':'#1A3A6B','Litterature':'#2A5C2A','Scandinavie':'#2A4A6B',
   'Afrique':'#7A4A10','Amerique':'#2A6B4A',
   'Atlas':'#1A5C7A'
@@ -513,6 +519,7 @@ const ALIASES = {
   'Pén. ibérique':'Castille','Ibérique':'Castille',
   'Papauté':'Papaute','Techniques et idees':'Techniques',
   'Idées':'Idees','Empire':'St Empire',
+  'Flandres':'Flandre','Flanders':'Flandre','Comté de Flandre':'Flandre',
   'Amérique':'Amerique','America':'Amerique','Africa':'Afrique',
   'Cartes':'Atlas','Maps':'Atlas'
 };
@@ -624,12 +631,13 @@ function readForm() {
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
   var _noCoord = !!(document.getElementById('f-geo-none') && document.getElementById('f-geo-none').checked);
+  var _verified = !!(document.getElementById('f-geo-ok') && document.getElementById('f-geo-ok').checked);
   var _la = parseFloat(document.getElementById('f-lat').value);
   var _lo = parseFloat(document.getElementById('f-lng').value);
   if (!_noCoord && !isNaN(_la) && !isNaN(_lo)) {
     evt.lat = Math.round(_la*10000)/10000;
     evt.lng = Math.round(_lo*10000)/10000;
-    if (geoLoadedAuto && !geoValidated) evt.geo_auto = true;  /* encore auto-suggéré, non vérifié */
+    if (!_verified) evt.geo_auto = true;  /* position non encore vérifiée -> reste à confirmer */
   } else if (_noCoord) {
     evt.geo_none = true;  /* repli sur la zone, volontaire et relu */
   }
@@ -662,8 +670,10 @@ function fillForm(evt) {
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
+  var _hasGeo = (typeof evt.lat === 'number' && typeof evt.lng === 'number');
   var _cbNone = document.getElementById('f-geo-none'); if (_cbNone) _cbNone.checked = !!evt.geo_none;
-  if (typeof evt.lat === 'number' && typeof evt.lng === 'number') {
+  var _cbOk   = document.getElementById('f-geo-ok');   if (_cbOk)   _cbOk.checked   = _hasGeo && !evt.geo_auto;
+  if (_hasGeo) {
     geoSet(evt.lat, evt.lng, false);
     geoBadge(geoLoadedAuto ? 'auto' : 'ok');
   } else {
@@ -712,6 +722,7 @@ function resetForm() {
   });
   document.getElementById('form-title').textContent = 'Nouvel événement';
   var _cbN = document.getElementById('f-geo-none'); if (_cbN) _cbN.checked = false;
+  var _cbO = document.getElementById('f-geo-ok');   if (_cbO) _cbO.checked = false;
   geoLoadedAuto=false; geoValidated=false; geoClearSilent(); geoBadge('todo');
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
@@ -1392,6 +1403,7 @@ function geoSet(lat,lng,fromUser){
   document.getElementById('f-lng').value = Math.round(lng*10000)/10000;
   if(fromUser){
     var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
+    var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=true;
     geoValidated=true; geoBadge('ok');
   }
   geoRender();
@@ -1400,7 +1412,7 @@ function geoClearSilent(){
   document.getElementById('f-lat').value=''; document.getElementById('f-lng').value='';
   geoBadge('none'); geoRender();
 }
-function geoClear(){ var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=true; geoValidated=true; geoClearSilent(); geoBadge('none'); }
+function geoClear(){ var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=true; var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=false; geoValidated=true; geoClearSilent(); geoBadge('none'); }
 function geoBadge(kind){
   var el=document.getElementById('geo-badge'); if(!el) return;
   var map={ ok:['Validé','#1A6B3C','#E6F5ED'], auto:['Auto — à vérifier','#9A6B1A','#F7EFD9'],
@@ -1494,6 +1506,7 @@ function geoBindMap(){
   ['f-lat','f-lng'].forEach(function(id){
     document.getElementById(id).addEventListener('change', function(){
       var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
+      var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=true;
       geoValidated=true; geoBadge('ok'); geoRender();
     });
     document.getElementById(id).addEventListener('input', geoRender);
@@ -1502,11 +1515,25 @@ function geoBindMap(){
   if(cbNone) cbNone.addEventListener('change', function(){
     geoValidated=true;
     if(cbNone.checked){
+      var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=false;
       document.getElementById('f-lat').value='';
       document.getElementById('f-lng').value='';
       geoBadge('none');
     } else {
       geoBadge('todo');
+    }
+    geoRender();
+  });
+  var cbOk=document.getElementById('f-geo-ok');
+  if(cbOk) cbOk.addEventListener('change', function(){
+    geoValidated=true;
+    if(cbOk.checked){
+      var la=parseFloat(document.getElementById('f-lat').value), lo=parseFloat(document.getElementById('f-lng').value);
+      if(isNaN(la)||isNaN(lo)){ cbOk.checked=false; toast('Posez d\'abord une position sur la carte avant de la marquer vérifiée.'); return; }
+      if(cbNone) cbNone.checked=false;
+      geoBadge('ok');
+    } else {
+      geoBadge('auto');  /* repasse en « à vérifier » */
     }
     geoRender();
   });
