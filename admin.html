@@ -301,6 +301,13 @@
         <div class="field">
           <label>&#128205; Localisation pr&eacute;cise <small>(latitude / longitude &mdash; facultatif, sinon repli sur la zone)</small></label>
           <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.4rem;">
+            <input type="text" id="f-geo-search" placeholder="Nom du lieu &mdash; ex. Reims, Constantinople, Bruges&hellip;" style="flex:1;min-width:200px;"
+              onkeydown="if(event.key==='Enter'){event.preventDefault();geoSearchByName();}">
+            <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.9rem;font-size:0.82rem;white-space:nowrap;" onclick="geoSearchByName()">&#128269; Localiser</button>
+            <span id="geo-search-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
+          </div>
+          <div id="geo-search-results" style="display:none;margin-bottom:0.5rem;border:1px solid #c9b896;border-radius:6px;overflow:hidden;background:#FBF6E9;max-height:170px;overflow-y:auto;"></div>
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.4rem;">
             <input type="number" step="0.0001" id="f-lat" placeholder="lat. ex. 48.8566" style="width:140px;">
             <input type="number" step="0.0001" id="f-lng" placeholder="long. ex. 2.3522" style="width:140px;">
             <span id="geo-badge" style="font-size:0.74rem;padding:0.1rem 0.5rem;border-radius:10px;"></span>
@@ -681,6 +688,7 @@ function fillForm(evt) {
     geoBadge(evt.geo_none ? 'none' : 'todo');
   }
   geoFitZones();
+  geoSearchReset();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
     var el = document.getElementById(id);
@@ -724,6 +732,7 @@ function resetForm() {
   var _cbN = document.getElementById('f-geo-none'); if (_cbN) _cbN.checked = false;
   var _cbO = document.getElementById('f-geo-ok');   if (_cbO) _cbO.checked = false;
   geoLoadedAuto=false; geoValidated=false; geoClearSilent(); geoBadge('todo');
+  geoSearchReset();
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -1434,6 +1443,64 @@ function geoFitZones(){
   /* garder un ratio largeur/hauteur raisonnable */
   if(h < w*0.5) h=w*0.5; if(w < h*1.4) w=h*1.4;
   geoView={ x:x0-padX, y:y0-padY, w:w, h:h }; geoRender();
+}
+/* ── Recherche d'un lieu par son nom (géocodage Nominatim / OpenStreetMap) ── */
+function geoSearchStatus(msg, color){
+  var el = document.getElementById('geo-search-status'); if(!el) return;
+  el.textContent = msg || ''; el.style.color = color || '#7A6A52';
+}
+function geoSearchReset(){
+  var inp = document.getElementById('f-geo-search'); if(inp) inp.value = '';
+  var box = document.getElementById('geo-search-results'); if(box){ box.style.display='none'; box.innerHTML=''; }
+  geoSearchStatus('');
+}
+function geoSearchByName(){
+  var inp = document.getElementById('f-geo-search'); if(!inp) return;
+  var q = (inp.value || '').trim();
+  var box = document.getElementById('geo-search-results');
+  if(!q){ geoSearchStatus('Saisissez un nom de lieu.', '#8B1A1A'); if(box) box.style.display='none'; return; }
+  geoSearchStatus('Recherche en cours\u2026'); if(box){ box.style.display='none'; box.innerHTML=''; }
+  var url = 'https://nominatim.openstreetmap.org/search?format=json&limit=6&accept-language=fr&q=' + encodeURIComponent(q);
+  fetch(url, { headers:{ 'Accept':'application/json' } })
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(list){
+      if(!list || !list.length){ geoSearchStatus('Aucun lieu trouv\u00e9 pour \u00ab\u00a0' + q + '\u00a0\u00bb.', '#8B1A1A'); return; }
+      geoSearchStatus(list.length + ' r\u00e9sultat' + (list.length>1?'s':'') + ' \u2014 cliquez pour poser le point :', '#1A6B3C');
+      geoShowResults(list);
+    })
+    .catch(function(err){
+      geoSearchStatus('\u00c9chec de la recherche (' + err.message + '). R\u00e9essayez.', '#8B1A1A');
+    });
+}
+function geoShowResults(list){
+  var box = document.getElementById('geo-search-results'); if(!box) return;
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
+  var html = '';
+  list.forEach(function(p, i){
+    var la = parseFloat(p.lat), lo = parseFloat(p.lon);
+    if(isNaN(la)||isNaN(lo)) return;
+    var name = esc(p.display_name || (la + ', ' + lo));
+    html += '<div onclick="geoPickResult(' + la + ',' + lo + ')" title="Poser ce point et marquer la fiche v\u00e9rifi\u00e9e"' +
+            ' style="padding:0.4rem 0.6rem;cursor:pointer;font-size:0.8rem;line-height:1.3;' +
+            'border-top:' + (i ? '1px solid #e6dcc0' : 'none') + ';"' +
+            ' onmouseover="this.style.background=\'#F0E6CC\'" onmouseout="this.style.background=\'transparent\'">' +
+            '<span style="color:var(--ink);">' + name + '</span> ' +
+            '<span style="color:#9A6B1A;font-style:italic;white-space:nowrap;">[' + la.toFixed(4) + ', ' + lo.toFixed(4) + ']</span></div>';
+  });
+  box.innerHTML = html; box.style.display = '';
+}
+function geoCenterOnPoint(lat, lng, span){
+  var p = geoProj(lat, lng); span = span || 70;
+  geoView = { x: p.x - span, y: p.y - span*0.68, w: span*2, h: span*1.36 };
+  geoRender();
+}
+function geoPickResult(lat, lng){
+  lat = parseFloat(lat); lng = parseFloat(lng);
+  if(isNaN(lat) || isNaN(lng)) return;
+  geoSet(lat, lng, true);            /* remplit lat/lng, coche « vérifiée », badge Validé */
+  geoCenterOnPoint(lat, lng);        /* recentre la mini-carte sur le point trouvé */
+  var box = document.getElementById('geo-search-results'); if(box) box.style.display = 'none';
+  geoSearchStatus('Position pos\u00e9e et marqu\u00e9e \u00ab\u00a0v\u00e9rifi\u00e9e\u00a0\u00bb. Pensez \u00e0 Enregistrer.', '#1A6B3C');
 }
 /* ── Fiches à vérifier : positions auto non confirmées + fiches sans coordonnées ── */
 function geoTodoEvents(){
