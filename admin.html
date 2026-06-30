@@ -300,6 +300,12 @@
       <div class="field-row single">
         <div class="field">
           <label>&#128205; Localisation pr&eacute;cise <small>(latitude / longitude &mdash; facultatif, sinon repli sur la zone)</small></label>
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem;">
+            <input type="text" id="geo-search" list="geo-search-list" autocomplete="off" placeholder="&#128269; Nom du lieu &mdash; ex. Rome, Barcelone, Constantinople&hellip;" style="flex:1;min-width:220px;" onkeydown="if(event.key==='Enter'){event.preventDefault();geoLookup();}">
+            <datalist id="geo-search-list"></datalist>
+            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.8rem;font-size:0.82rem;white-space:nowrap;" onclick="geoLookup()">Trouver les coordonn&eacute;es</button>
+          </div>
+          <div id="geo-search-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;min-height:1.05em;margin-bottom:0.45rem;"></div>
           <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.4rem;">
             <input type="number" step="0.0001" id="f-lat" placeholder="lat. ex. 48.8566" style="width:140px;">
             <input type="number" step="0.0001" id="f-lng" placeholder="long. ex. 2.3522" style="width:140px;">
@@ -307,41 +313,12 @@
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoClear()">Effacer (repli zone)</button>
             <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.8rem;" onclick="geoFitZones()">Cadrer sur la zone</button>
           </div>
-          <div style="display:flex;gap:1.3rem;flex-wrap:wrap;align-items:center;margin-bottom:0.5rem;">
-            <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;font-weight:normal;">
-              <input type="checkbox" id="f-geo-ok" style="width:auto;margin:0;cursor:pointer;">
-              Localisation v&eacute;rifi&eacute;e
-            </label>
-            <label style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--ink);cursor:pointer;font-weight:normal;">
-              <input type="checkbox" id="f-geo-none" style="width:auto;margin:0;cursor:pointer;">
-              Sans coordonn&eacute;es (repli sur la zone assum&eacute; &mdash; relu)
-            </label>
-          </div>
           <div style="position:relative;border:1.5px solid #c9b896;border-radius:6px;overflow:hidden;background:#D9CFB2;">
             <svg id="geo-map" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:230px;cursor:crosshair;" preserveAspectRatio="xMidYMid meet"></svg>
             <div style="position:absolute;left:6px;bottom:4px;font-size:0.68rem;color:#7A6A52;font-style:italic;background:rgba(251,246,233,0.8);padding:0 0.4rem;border-radius:4px;pointer-events:none;">Cliquez sur la carte pour poser le point</div>
           </div>
         </div>
       </div>
-
-      <div class="field-row single" id="geo-todo-row" style="display:none;">
-        <div class="field">
-          <label>&#9888; Fiches &agrave; v&eacute;rifier
-            <small>(positions auto &agrave; confirmer + fiches sans coordonn&eacute;es)</small>
-            <span id="geo-todo-count" style="font-style:normal;color:#9A6B1A;font-weight:600;"></span>
-          </label>
-          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
-            <select id="geo-todo-select" onchange="geoTodoGo()"
-              style="flex:1;min-width:240px;padding:0.35rem 0.5rem;border:1.5px solid #c9b896;border-radius:6px;background:#FBF6E9;font-family:inherit;font-size:0.85rem;color:var(--ink);cursor:pointer;"></select>
-            <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.8rem;font-size:0.82rem;" onclick="geoTodoNext()">Suivante &#10142;</button>
-          </div>
-          <div style="font-size:0.7rem;color:#7A6A52;font-style:italic;margin-top:0.3rem;">
-            <strong>Position auto</strong> : ajustez le point si besoin puis cochez &laquo;&nbsp;Localisation v&eacute;rifi&eacute;e&nbsp;&raquo; et Enregistrez.&nbsp;
-            <strong>Sans coordonn&eacute;es</strong> : cochez &laquo;&nbsp;Sans coordonn&eacute;es&nbsp;&raquo; et Enregistrez. Dans les deux cas la fiche quitte la liste.
-          </div>
-        </div>
-      </div>
-
       <div class="btn-row">
         <button class="btn btn-primary" onclick="saveEvent()">Enregistrer</button>
         <button class="btn btn-secondary" onclick="resetForm()">Nouveau</button>
@@ -435,7 +412,7 @@
 const ZONES = [
   /* Zones géographiques */
   'France', 'Angleterre', 'St Empire',
-  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
+  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
@@ -491,7 +468,7 @@ function themeIcon(evt) {
 
 /* Groupes pour l'affichage dans l'admin */
 const ZONE_GROUPS = [
-  { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'] },
+  { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace'] },
   { label: 'Europe du Nord',      zones: ['Scandinavie'] },
   { label: 'Europe orientale',    zones: ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'] },
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
@@ -508,7 +485,7 @@ const COLORS = {
   'Russie':'#5C1A1A','Byzance':'#6B1A6B','Ottomans':'#8B1A3A',
   'Monde islamique':'#8B6B10','Orient':'#5C2A10','Japon':'#8B1A1A',
   'Chine':'#8B3A10','Inde':'#6B5A10','Monde':'#3A3A3A',
-  'Alsace':'#7A3B69','Flandre':'#C26A1A','Art':'#A0522D','Techniques':'#2F5233',
+  'Alsace':'#7A3B69','Art':'#A0522D','Techniques':'#2F5233',
   'Sciences':'#1A4A5C','Idees':'#1A3A6B','Litterature':'#2A5C2A','Scandinavie':'#2A4A6B',
   'Afrique':'#7A4A10','Amerique':'#2A6B4A',
   'Atlas':'#1A5C7A'
@@ -519,7 +496,6 @@ const ALIASES = {
   'Pén. ibérique':'Castille','Ibérique':'Castille',
   'Papauté':'Papaute','Techniques et idees':'Techniques',
   'Idées':'Idees','Empire':'St Empire',
-  'Flandres':'Flandre','Flanders':'Flandre','Comté de Flandre':'Flandre',
   'Amérique':'Amerique','America':'Amerique','Africa':'Afrique',
   'Cartes':'Atlas','Maps':'Atlas'
 };
@@ -630,16 +606,12 @@ function readForm() {
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
-  var _noCoord = !!(document.getElementById('f-geo-none') && document.getElementById('f-geo-none').checked);
-  var _verified = !!(document.getElementById('f-geo-ok') && document.getElementById('f-geo-ok').checked);
   var _la = parseFloat(document.getElementById('f-lat').value);
   var _lo = parseFloat(document.getElementById('f-lng').value);
-  if (!_noCoord && !isNaN(_la) && !isNaN(_lo)) {
+  if (!isNaN(_la) && !isNaN(_lo)) {
     evt.lat = Math.round(_la*10000)/10000;
     evt.lng = Math.round(_lo*10000)/10000;
-    if (!_verified) evt.geo_auto = true;  /* position non encore vérifiée -> reste à confirmer */
-  } else if (_noCoord) {
-    evt.geo_none = true;  /* repli sur la zone, volontaire et relu */
+    if (geoLoadedAuto && !geoValidated) evt.geo_auto = true;  /* encore auto-suggéré, non vérifié */
   }
   var series = [];
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
@@ -670,16 +642,10 @@ function fillForm(evt) {
   document.getElementById('f-regne').checked  = !!evt.regne;
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
-  var _hasGeo = (typeof evt.lat === 'number' && typeof evt.lng === 'number');
-  var _cbNone = document.getElementById('f-geo-none'); if (_cbNone) _cbNone.checked = !!evt.geo_none;
-  var _cbOk   = document.getElementById('f-geo-ok');   if (_cbOk)   _cbOk.checked   = _hasGeo && !evt.geo_auto;
-  if (_hasGeo) {
+  if (typeof evt.lat === 'number' && typeof evt.lng === 'number') {
     geoSet(evt.lat, evt.lng, false);
     geoBadge(geoLoadedAuto ? 'auto' : 'ok');
-  } else {
-    geoClearSilent();
-    geoBadge(evt.geo_none ? 'none' : 'todo');
-  }
+  } else { geoClearSilent(); }
   geoFitZones();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
@@ -721,9 +687,7 @@ function resetForm() {
     lbl.querySelector('input').checked = isDefault;
   });
   document.getElementById('form-title').textContent = 'Nouvel événement';
-  var _cbN = document.getElementById('f-geo-none'); if (_cbN) _cbN.checked = false;
-  var _cbO = document.getElementById('f-geo-ok');   if (_cbO) _cbO.checked = false;
-  geoLoadedAuto=false; geoValidated=false; geoClearSilent(); geoBadge('todo');
+  geoLoadedAuto=false; geoValidated=false; geoClearSilent();
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -803,7 +767,6 @@ function renderNoThemeList() {
 
 function renderList() {
   refreshNoTheme();
-  geoTodoRefresh();
   var q = (document.getElementById('search-input').value || '').toLowerCase();
   var filtered = events.filter(function(e) {
     return !q || e.titre.toLowerCase().indexOf(q) !== -1
@@ -871,10 +834,6 @@ function updateJSON() {
     if (e.legende) o.legende = e.legende;
     if (e.video)   o.video   = e.video;
     if (e.regne)   o.regne   = true;
-    if (typeof e.lat === 'number') o.lat = e.lat;
-    if (typeof e.lng === 'number') o.lng = e.lng;
-    if (e.geo_auto) o.geo_auto = true;
-    if (e.geo_none) o.geo_none = true;
     if (e.sources) o.sources = e.sources;
     if (e.serie)   o.serie   = e.serie;
     return o;
@@ -1401,23 +1360,18 @@ function geoRender(){
 function geoSet(lat,lng,fromUser){
   document.getElementById('f-lat').value = Math.round(lat*10000)/10000;
   document.getElementById('f-lng').value = Math.round(lng*10000)/10000;
-  if(fromUser){
-    var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
-    var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=true;
-    geoValidated=true; geoBadge('ok');
-  }
+  if(fromUser){ geoValidated=true; geoBadge('ok'); }
   geoRender();
 }
 function geoClearSilent(){
   document.getElementById('f-lat').value=''; document.getElementById('f-lng').value='';
   geoBadge('none'); geoRender();
 }
-function geoClear(){ var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=true; var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=false; geoValidated=true; geoClearSilent(); geoBadge('none'); }
+function geoClear(){ geoValidated=true; geoClearSilent(); geoBadge('none'); }
 function geoBadge(kind){
   var el=document.getElementById('geo-badge'); if(!el) return;
   var map={ ok:['Validé','#1A6B3C','#E6F5ED'], auto:['Auto — à vérifier','#9A6B1A','#F7EFD9'],
-            todo:['Sans coordonnées — à vérifier','#9A6B1A','#F7EFD9'],
-            none:['Repli sur la zone (relu)','#7A6A52','#EDE3C8'] };
+            none:['Repli sur la zone','#7A6A52','#EDE3C8'] };
   var m=map[kind]||map.none; el.textContent=m[0]; el.style.color=m[1]; el.style.background=m[2];
 }
 function geoFitZones(){
@@ -1435,64 +1389,132 @@ function geoFitZones(){
   if(h < w*0.5) h=w*0.5; if(w < h*1.4) w=h*1.4;
   geoView={ x:x0-padX, y:y0-padY, w:w, h:h }; geoRender();
 }
-/* ── Fiches à vérifier : positions auto non confirmées + fiches sans coordonnées ── */
-function geoTodoEvents(){
-  var auto = [], nocoord = [];
-  events.forEach(function(e){
-    var hasGeo = (typeof e.lat === 'number' && typeof e.lng === 'number');
-    if (e.regne && hasGeo) return;                 /* règne déjà localisé : on ignore */
-    if (e.geo_auto === true && hasGeo) { auto.push(e); return; }   /* position auto à confirmer */
-    if (!hasGeo && !e.geo_none) { nocoord.push(e); return; }       /* sans coords, pas encore relu */
-  });
-  var byDate = function(a,b){ return (a.date||0) - (b.date||0); };
-  auto.sort(byDate); nocoord.sort(byDate);
-  return { auto: auto, nocoord: nocoord };
-}
-function geoTodoFlat(){ var t = geoTodoEvents(); return t.auto.concat(t.nocoord); }
-function geoTodoRefresh(){
-  var sel = document.getElementById('geo-todo-select');
-  var row = document.getElementById('geo-todo-row');
-  var cnt = document.getElementById('geo-todo-count');
-  if (!sel || !row) return;
-  var t = geoTodoEvents(), total = t.auto.length + t.nocoord.length;
-  if (cnt) cnt.textContent = total
-      ? '(' + t.auto.length + ' auto + ' + t.nocoord.length + ' sans coord.)'
-      : '';
-  if (!total){ row.style.display='none'; sel.innerHTML=''; return; }
-  row.style.display = '';
-  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
-  var optOf = function(e){
-    var label = e.date + (e.date_fin ? '–'+e.date_fin : '') + ' — ' + e.titre + '  (#' + e.id + ')';
-    return '<option value="' + e.id + '"' + (editingId === e.id ? ' selected' : '') + '>' + esc(label) + '</option>';
-  };
-  var html = '<option value="">— ' + total + ' fiche' + (total>1?'s':'') + ' à vérifier —</option>';
-  if (t.auto.length){
-    html += '<optgroup label="Coordonnées auto à confirmer (' + t.auto.length + ')">';
-    t.auto.forEach(function(e){ html += optOf(e); });
-    html += '</optgroup>';
+/* ---- Recherche de coordonnées par nom de lieu ----
+   Dictionnaire embarqué (exonymes français, pertinence médiévale 1290–1500).
+   Format : [nom affiché, lat, lng, ...synonymes].
+   Résolution instantanée + hors-ligne ; repli en ligne (Nominatim) pour le reste. */
+var GEO_GAZETTEER = [
+  /* France */
+  ["Paris",48.8566,2.3522],["Avignon",43.9493,4.8055],["Reims",49.2583,4.0317],
+  ["Orléans",47.9029,1.9093],["Rouen",49.4432,1.0993],["Bordeaux",44.8378,-0.5792],
+  ["Toulouse",43.6045,1.4442],["Marseille",43.2965,5.3698],["Lyon",45.7640,4.8357],
+  ["Dijon",47.3220,5.0415],["Bourges",47.0810,2.3988],["Poitiers",46.5802,0.3404],
+  ["Calais",50.9513,1.8587],["Crécy",50.2536,1.8869,"Crécy-en-Ponthieu"],["Azincourt",50.4636,2.1389,"Agincourt"],
+  ["Strasbourg",48.5734,7.7521],["Nantes",47.2184,-1.5536],["Tours",47.3941,0.6848],
+  ["Carcassonne",43.2130,2.3491],["Montpellier",43.6108,3.8767],
+  /* Îles Britanniques */
+  ["Londres",51.5074,-0.1278,"London"],["York",53.9590,-1.0815],["Cantorbéry",51.2802,1.0789,"Canterbury"],
+  ["Bristol",51.4545,-2.5879],["Winchester",51.0632,-1.3080],["Oxford",51.7520,-1.2577],
+  ["Édimbourg",55.9533,-3.1883,"Edinburgh"],["Dublin",53.3498,-6.2603],
+  /* Pays-Bas / Flandre */
+  ["Bruges",51.2093,3.2247],["Gand",51.0543,3.7174,"Ghent","Gent"],["Anvers",51.2194,4.4025,"Antwerp","Antwerpen"],
+  ["Bruxelles",50.8503,4.3517,"Brussels"],["Tournai",50.6071,3.3892],["Liège",50.6326,5.5797],
+  ["Ypres",50.8510,2.8857,"Ieper"],["Utrecht",52.0907,5.1214],["Amsterdam",52.3676,4.9041],
+  /* Saint-Empire */
+  ["Cologne",50.9375,6.9603,"Köln","Koln"],["Aix-la-Chapelle",50.7753,6.0839,"Aachen"],["Mayence",49.9929,8.2473,"Mainz"],
+  ["Trèves",49.7596,6.6442,"Trier"],["Francfort",50.1109,8.6821,"Frankfurt"],["Nuremberg",49.4521,11.0767,"Nürnberg","Nurnberg"],
+  ["Augsbourg",48.3705,10.8978,"Augsburg"],["Bâle",47.5596,7.5886,"Basel","Basle"],["Constance",47.6779,9.1732,"Konstanz"],
+  ["Vienne",48.2082,16.3738,"Wien"],["Prague",50.0755,14.4378,"Praha"],["Munich",48.1351,11.5820,"München","Munchen"],
+  ["Lübeck",53.8655,10.6866,"Lubeck"],["Hambourg",53.5511,9.9937,"Hamburg"],["Brême",53.0793,8.8017,"Bremen"],
+  ["Magdebourg",52.1205,11.6276,"Magdeburg"],["Ratisbonne",49.0134,12.1016,"Regensburg"],["Berne",46.9480,7.4474,"Bern"],
+  /* Italie */
+  ["Rome",41.9028,12.4964,"Roma"],["Venise",45.4408,12.3155,"Venezia","Venice"],["Florence",43.7696,11.2558,"Firenze"],
+  ["Gênes",44.4056,8.9463,"Genova","Genoa","Genes"],["Milan",45.4642,9.1900,"Milano"],["Naples",40.8518,14.2681,"Napoli"],
+  ["Pise",43.7228,10.4017,"Pisa"],["Sienne",43.3188,11.3308,"Siena"],["Bologne",44.4949,11.3426,"Bologna"],
+  ["Vérone",45.4384,10.9916,"Verona"],["Padoue",45.4064,11.8768,"Padova"],["Ravenne",44.4184,12.2035,"Ravenna"],
+  ["Palerme",38.1157,13.3615,"Palermo"],["Messine",38.1938,15.5540,"Messina"],["Turin",45.0703,7.6869,"Torino"],
+  ["Mantoue",45.1564,10.7914,"Mantova"],["Ferrare",44.8381,11.6198,"Ferrara"],["Amalfi",40.6340,14.6027],
+  /* Péninsule ibérique */
+  ["Barcelone",41.3851,2.1734,"Barcelona"],["Tolède",39.8628,-4.0273,"Toledo"],["Séville",37.3891,-5.9845,"Sevilla","Seville"],
+  ["Cordoue",37.8882,-4.7794,"Córdoba","Cordoba"],["Grenade",37.1773,-3.5986,"Granada"],["Valence",39.4699,-0.3763,"Valencia"],
+  ["Saragosse",41.6488,-0.8891,"Zaragoza"],["Burgos",42.3439,-3.6969],["Lisbonne",38.7223,-9.1393,"Lisboa","Lisbon"],
+  ["Porto",41.1579,-8.6291],["Saint-Jacques-de-Compostelle",42.8782,-8.5448,"Compostelle","Santiago"],
+  ["Salamanque",40.9701,-5.6635,"Salamanca"],["Valladolid",41.6523,-4.7245],["Pampelune",42.8125,-1.6458,"Pamplona"],["Madrid",40.4168,-3.7038],
+  /* Europe centrale & orientale */
+  ["Cracovie",50.0647,19.9450,"Kraków","Krakow"],["Dantzig",54.3520,18.6466,"Gdańsk","Gdansk"],["Buda",47.4979,19.0402,"Budapest"],
+  ["Belgrade",44.7866,20.4489],["Kiev",50.4501,30.5234,"Kyiv"],["Novgorod",58.5215,31.2755],["Moscou",55.7558,37.6173,"Moscow","Moskva"],
+  ["Vilnius",54.6872,25.2797],["Riga",56.9496,24.1052],["Varsovie",52.2297,21.0122,"Warszawa","Warsaw"],["Wrocław",51.1079,17.0385,"Breslau","Wroclaw"],
+  /* Byzance, Ottomans, Balkans, Grèce */
+  ["Constantinople",41.0082,28.9784,"Istanbul"],["Thessalonique",40.6401,22.9444,"Thessaloniki","Salonique"],
+  ["Andrinople",41.6771,26.5557,"Edirne"],["Athènes",37.9838,23.7275,"Athens","Athinai"],["Nicée",40.4296,29.7196,"İznik","Iznik"],
+  ["Bursa",40.1885,29.0610,"Brousse"],["Trébizonde",41.0015,39.7178,"Trabzon"],["Mistra",37.0731,22.3667,"Mystras"],
+  /* Levant, Égypte, Mésopotamie, Arabie */
+  ["Jérusalem",31.7683,35.2137,"Jerusalem"],["Damas",33.5138,36.2765,"Damascus"],["Alep",36.2021,37.1343,"Aleppo"],
+  ["Antioche",36.2023,36.1613,"Antakya","Antioch"],["Acre",32.9281,35.0820,"Akko","Saint-Jean-d'Acre"],["Beyrouth",33.8938,35.5018,"Beirut"],
+  ["Le Caire",30.0444,31.2357,"Cairo","Caire"],["Alexandrie",31.2001,29.9187,"Alexandria"],["Bagdad",33.3152,44.3661,"Baghdad"],
+  ["La Mecque",21.4225,39.8262,"Mecca","Mecque"],
+  /* Maghreb & Afrique */
+  ["Tunis",36.8065,10.1815],["Tlemcen",34.8783,-1.3150],["Fès",34.0181,-5.0078,"Fez","Fes"],["Marrakech",31.6295,-7.9811,"Marrakesh"],
+  ["Ceuta",35.8894,-5.3198],["Tombouctou",16.7666,-3.0026,"Timbuktu","Timbouctou"],["Gao",16.2716,-0.0455],
+  /* Asie */
+  ["Tabriz",38.0800,46.2919],["Samarcande",39.6270,66.9750,"Samarkand"],["Boukhara",39.7747,64.4286,"Bukhara"],
+  ["Delhi",28.6139,77.2090],["Calicut",11.2588,75.7804,"Kozhikode"],["Ormuz",27.0667,56.4500,"Hormuz"],
+  ["Pékin",39.9042,116.4074,"Beijing","Khanbalik","Cambaluc","Dadu"],["Hangzhou",30.2741,120.1551,"Quinsai"],["Nankin",32.0603,118.7969,"Nanjing"],
+  ["Karakorum",47.2000,102.8333,"Karakoroum"],["Kamakura",35.3192,139.5469],["Kyoto",35.0116,135.7681,"Heian"],
+  /* Scandinavie */
+  ["Stockholm",59.3293,18.0686],["Copenhague",55.6761,12.5683,"København","Copenhagen"],["Bergen",60.3913,5.3221],
+  ["Visby",57.6348,18.2948],["Oslo",59.9139,10.7522]
+];
+var GEO_PLACE_MAP = {};
+(function(){
+  for(var i=0;i<GEO_GAZETTEER.length;i++){
+    var e=GEO_GAZETTEER[i], rec={name:e[0],lat:e[1],lng:e[2]};
+    GEO_PLACE_MAP[geoNorm(e[0])]=rec;
+    for(var j=3;j<e.length;j++) GEO_PLACE_MAP[geoNorm(e[j])]=rec;
   }
-  if (t.nocoord.length){
-    html += '<optgroup label="Sans coordonnées — à localiser ou valider (' + t.nocoord.length + ')">';
-    t.nocoord.forEach(function(e){ html += optOf(e); });
-    html += '</optgroup>';
-  }
-  sel.innerHTML = html;
+})();
+function geoNorm(s){
+  return (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 }
-function geoTodoGo(){
-  var id = parseInt(document.getElementById('geo-todo-select').value);
-  if (!id) return;
-  var e = events.find(function(x){ return x.id === id; });
-  if (e){ fillForm(e); window.scrollTo({ top:0, behavior:'smooth' }); }
+function geoSearchStatus(txt,color){
+  var el=document.getElementById('geo-search-status'); if(!el) return;
+  el.textContent=txt||''; el.style.color=color||'#7A6A52';
 }
-function geoTodoNext(){
-  var flat = geoTodoFlat();
-  if (!flat.length) return;
-  var e = flat[0];
-  if (editingId !== null){
-    var idx = flat.findIndex(function(x){ return x.id === editingId; });
-    if (idx !== -1) e = flat[Math.min(idx+1, flat.length-1)];  /* suivante (ou on reste sur la dernière) */
+function geoCenterOn(lat,lng){
+  var p=geoProj(lat,lng), w=340, h=230;
+  geoView={x:p.x-w/2, y:p.y-h/2, w:w, h:h}; geoRender();
+}
+function geoLookup(){
+  var q=document.getElementById('geo-search').value, nq=geoNorm(q);
+  if(!nq){ geoSearchStatus('Saisissez un nom de lieu.','#8B1A1A'); return; }
+  var hit=GEO_PLACE_MAP[nq];
+  if(!hit){  /* tolérance : préfixe unique le plus court */
+    var ks=Object.keys(GEO_PLACE_MAP).filter(function(k){return k.indexOf(nq)===0;});
+    if(ks.length) hit=GEO_PLACE_MAP[ks.sort(function(a,b){return a.length-b.length;})[0]];
   }
-  fillForm(e); window.scrollTo({ top:0, behavior:'smooth' });
+  if(hit){
+    geoSet(hit.lat,hit.lng,true);          /* coords posées + badge « Validé » */
+    geoCenterOn(hit.lat,hit.lng);
+    geoSearchStatus('\u2713 '+hit.name+' \u2014 coordonn\u00e9es pos\u00e9es (dictionnaire m\u00e9di\u00e9val)','#1A6B3C');
+    return;
+  }
+  geoSearchStatus('Recherche en ligne\u2026','#7A6A52');
+  geoLookupOnline(q);
+}
+function geoLookupOnline(q){
+  fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q='+encodeURIComponent(q),{headers:{'Accept':'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(arr){
+      if(arr && arr.length){
+        var lat=parseFloat(arr[0].lat), lng=parseFloat(arr[0].lon);
+        document.getElementById('f-lat').value=Math.round(lat*10000)/10000;
+        document.getElementById('f-lng').value=Math.round(lng*10000)/10000;
+        geoLoadedAuto=true; geoValidated=false; geoBadge('auto');  /* à vérifier */
+        geoCenterOn(lat,lng);
+        var nom=(arr[0].display_name||q).split(',')[0];
+        geoSearchStatus('\u2248 '+nom+' \u2014 r\u00e9sultat en ligne (carte actuelle), \u00e0 v\u00e9rifier','#9A6B1A');
+      } else {
+        geoSearchStatus('Aucun lieu trouv\u00e9 pour \u00ab '+q+' \u00bb.','#8B1A1A');
+      }
+    })
+    .catch(function(){
+      geoSearchStatus('Recherche en ligne indisponible (hors-ligne ?) \u2014 saisissez les coordonn\u00e9es \u00e0 la main.','#8B1A1A');
+    });
+}
+function geoPopulateSearchList(){
+  var dl=document.getElementById('geo-search-list'); if(!dl) return;
+  var names=GEO_GAZETTEER.map(function(e){return e[0];}).sort(function(a,b){return a.localeCompare(b,'fr');});
+  dl.innerHTML=names.map(function(n){return '<option value="'+n+'">';}).join('');
 }
 
 function geoBindMap(){
@@ -1504,41 +1526,12 @@ function geoBindMap(){
     geoSet(geoInvY(u.y), geoInvX(u.x), true);
   });
   ['f-lat','f-lng'].forEach(function(id){
-    document.getElementById(id).addEventListener('change', function(){
-      var cb=document.getElementById('f-geo-none'); if(cb) cb.checked=false;
-      var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=true;
-      geoValidated=true; geoBadge('ok'); geoRender();
-    });
+    document.getElementById(id).addEventListener('change', function(){ geoValidated=true; geoBadge('ok'); geoRender(); });
     document.getElementById(id).addEventListener('input', geoRender);
-  });
-  var cbNone=document.getElementById('f-geo-none');
-  if(cbNone) cbNone.addEventListener('change', function(){
-    geoValidated=true;
-    if(cbNone.checked){
-      var cbo=document.getElementById('f-geo-ok'); if(cbo) cbo.checked=false;
-      document.getElementById('f-lat').value='';
-      document.getElementById('f-lng').value='';
-      geoBadge('none');
-    } else {
-      geoBadge('todo');
-    }
-    geoRender();
-  });
-  var cbOk=document.getElementById('f-geo-ok');
-  if(cbOk) cbOk.addEventListener('change', function(){
-    geoValidated=true;
-    if(cbOk.checked){
-      var la=parseFloat(document.getElementById('f-lat').value), lo=parseFloat(document.getElementById('f-lng').value);
-      if(isNaN(la)||isNaN(lo)){ cbOk.checked=false; toast('Posez d\'abord une position sur la carte avant de la marquer vérifiée.'); return; }
-      if(cbNone) cbNone.checked=false;
-      geoBadge('ok');
-    } else {
-      geoBadge('auto');  /* repasse en « à vérifier » */
-    }
-    geoRender();
   });
 }
 geoBindMap();
+geoPopulateSearchList();
 
 initThemeButtons();
 initZones();
