@@ -17,7 +17,11 @@
   }
   html{font-size:15px}
   body{background:var(--parchment-dk);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;line-height:1.6;min-height:100vh}
-  header{background:var(--ink);color:var(--parchment);padding:1.2rem 2rem;border-bottom:3px solid var(--gold)}
+  header{background:var(--ink);color:var(--parchment);padding:1.2rem 2rem;border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+  .header-titles{flex:1 1 auto;min-width:0}
+  .header-nav-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:0.5rem;padding:0.45rem 1.05rem;border:1.5px solid var(--gold);border-radius:24px;background:rgba(245,237,216,0.08);color:var(--parchment);text-decoration:none;font-family:'Crimson Pro',serif;font-size:0.95rem;white-space:nowrap;transition:all 0.18s}
+  .header-nav-link:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .header-nav-link .hnl-icon{font-size:1.2rem;line-height:1}
   .site-title{font-family:'IM Fell English',Georgia,serif;font-size:1.5rem;line-height:1.15}
   .site-sub{font-size:0.82rem;color:rgba(245,237,216,0.55);font-style:italic;margin-top:0.15rem}
   main{padding:1.2rem 1.6rem 3rem;max-width:1280px;margin:0 auto}
@@ -36,6 +40,15 @@
            background:var(--parchment-lt);cursor:pointer;color:var(--ink-soft)}
   .dec-nav:disabled{opacity:0.3;cursor:default}
   .dec-current{font-family:'IM Fell English',serif;font-size:1.25rem;color:var(--red);min-width:5.5rem;text-align:center}
+
+  /* Curseur d'année */
+  .year-slider{flex:1 1 160px;min-width:140px;max-width:340px;accent-color:var(--red);cursor:pointer;height:4px}
+  .year-hint{font-size:0.72rem;color:var(--ink-muted);font-style:italic}
+  /* Puce de thème (icône + libellé) */
+  .chip-theme{display:inline-flex;align-items:center;gap:0.3rem}
+  .chip-theme .ic{font-size:0.95rem;line-height:1}
+  .controls-row{display:flex;flex-wrap:wrap;gap:1.2rem 2rem}
+  .controls-row .ctrl-block{flex:0 0 auto}
 
   /* ── Mise en page carte + panneau ── */
   .stage{display:grid;grid-template-columns:1fr 320px;gap:1.2rem;align-items:start}
@@ -58,18 +71,6 @@
   .pastille-lbl{fill:var(--ink);font-family:'Crimson Pro',serif;text-anchor:middle;pointer-events:none;
                 paint-order:stroke;stroke:var(--parchment-lt);stroke-width:3px;stroke-linejoin:round}
   .pastille-g.sel .pastille{fill:var(--gold)}
-  .pastille.nocoord{fill:var(--gold);opacity:0.85;stroke-dasharray:3 2}
-  .point-g{cursor:pointer}
-  .point{fill:var(--red);stroke:var(--parchment-lt);stroke-width:1.2;vector-effect:non-scaling-stroke;transition:fill .12s}
-  .point-g:hover .point,.point-g:focus .point{fill:#c62828;stroke:var(--gold)}
-  .point.reign{fill:var(--gold)}
-  .point-g:hover .point.reign,.point-g:focus .point.reign{fill:#c08a2a}
-  .dezoom{display:inline-block;margin:0.5rem 0.8rem 0.2rem;font-family:'Crimson Pro',serif;font-size:0.78rem;
-          border:1.5px solid var(--gold);background:var(--parchment-lt);color:var(--gold);font-weight:700;
-          border-radius:18px;padding:0.25rem 0.8rem;cursor:pointer}
-  .dezoom:hover{background:var(--gold);color:#fff}
-  .locdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);
-          border:1px solid var(--gold);margin-right:0.4rem;vertical-align:middle}
 
   .map-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
              font-style:italic;color:var(--ink-muted);font-size:0.95rem;pointer-events:none;text-align:center;padding:1rem}
@@ -119,8 +120,14 @@
 </head>
 <body>
 <header>
-  <div class="site-title">Carte chronologique — Moyen Âge tardif</div>
-  <div class="site-sub">Prototype « Niveau 1 » — une pastille par zone, dimensionnée selon le nombre d'événements de la décennie</div>
+  <div class="header-titles">
+    <div class="site-title">Carte chronologique — Moyen Âge tardif</div>
+    <div class="site-sub">Prototype « Niveau 1 » — une pastille par zone, dimensionnée selon le nombre d'événements de la décennie</div>
+  </div>
+  <a class="header-nav-link" href="index.html" title="Basculer vers la frise chronologique">
+    <span class="hnl-icon">&#128220;</span>
+    <span class="hnl-label">Frise</span>
+  </a>
 </header>
 
 <main>
@@ -129,14 +136,45 @@
       <span class="ctrl-label">Région</span>
       <div class="chips" id="region-chips"></div>
     </div>
+
+    <div class="controls-row">
+      <div class="ctrl-block">
+        <span class="ctrl-label">Échelle de temps</span>
+        <div class="chips" id="mode-chips">
+          <button class="chip active" data-mode="decade">Décennie</button>
+          <button class="chip" data-mode="year">Année</button>
+        </div>
+      </div>
+      <div class="ctrl-block">
+        <span class="ctrl-label">Niveau de détail</span>
+        <div class="chips" id="level-chips">
+          <button class="chip" data-level="important">Important</button>
+          <button class="chip" data-level="detaille">Détaillé</button>
+          <button class="chip active" data-level="complet">Complet</button>
+        </div>
+      </div>
+    </div>
+
     <div class="ctrl-block">
-      <span class="ctrl-label">Décennie</span>
-      <div class="decade-row">
+      <span class="ctrl-label" id="period-label">Décennie</span>
+      <div class="decade-row" id="decade-row">
         <button class="dec-nav" id="dec-prev" title="Décennie précédente">&#8249;</button>
         <span class="dec-current" id="dec-current">—</span>
         <button class="dec-nav" id="dec-next" title="Décennie suivante">&#8250;</button>
         <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
       </div>
+      <div class="decade-row" id="year-row" style="display:none">
+        <button class="dec-nav" id="yr-prev" title="Année précédente">&#8249;</button>
+        <span class="dec-current" id="yr-current">—</span>
+        <button class="dec-nav" id="yr-next" title="Année suivante">&#8250;</button>
+        <input type="range" class="year-slider" id="year-slider" min="0" max="0" step="1" value="0">
+        <span class="year-hint" id="year-hint"></span>
+      </div>
+    </div>
+
+    <div class="ctrl-block">
+      <span class="ctrl-label">Thèmes <span style="font-weight:400;text-transform:none;letter-spacing:0;font-style:italic;color:var(--ink-muted)">(aucun = tous)</span></span>
+      <div class="chips" id="theme-chips"></div>
     </div>
   </div>
 
@@ -174,7 +212,78 @@
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
-var state = { region: BUNDLE.regions[0], decade: null, selZone: null, zoomView: null };
+var state = { region: BUNDLE.regions[0], decade: null, year: null, mode: 'decade',
+              selZone: null, level: 'complet', themes: {} };
+var YEAR_MIN = 1192, YEAR_MAX = 1500;
+
+/* ---- Thèmes (alignés sur la frise) -------------------------------------- */
+var THEME_DEFS = {
+  'guerre':      { icon: '\u2694\uFE0F', label: 'Guerre' },
+  'politique':   { icon: '\uD83D\uDC51', label: 'Politique' },
+  'religion':    { icon: '\u271D\uFE0F', label: 'Religion' },
+  'revolte':     { icon: '\uD83D\uDD25', label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC', label: 'Diplomatie' },
+  'economie':    { icon: '\uD83E\uDE99', label: 'Économie' },
+  'societe':     { icon: '\uD83E\uDDD1', label: 'Société' },
+  'art':         { icon: '\uD83C\uDFA8', label: 'Art' },
+  'litterature': { icon: '\uD83D\uDCD6', label: 'Littérature' },
+  'sciences':    { icon: '\uD83D\uDD2C', label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F', label: 'Techniques' },
+  'idees':       { icon: '\uD83D\uDCA1', label: 'Idées' },
+  'catastrophe': { icon: '\uD83C\uDF0B', label: 'Catastrophe' }
+};
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+var THEME_KEYWORDS = {
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
+};
+/* Détection du thème : champ explicite prioritaire, sinon mots-clés du titre */
+function detectTheme(e){
+  if(e.theme && THEME_DEFS[e.theme]) return e.theme;
+  var txt = (e.t || '').toLowerCase();
+  for(var i=0;i<THEME_ORDER.length;i++){
+    var th=THEME_ORDER[i], kws=THEME_KEYWORDS[th];
+    if(!kws) continue;
+    for(var k=0;k<kws.length;k++){ if(txt.indexOf(kws[k])!==-1) return th; }
+  }
+  return null;
+}
+
+/* ---- Filtre combiné niveau + thème -------------------------------------- */
+/* Niveau : règnes (type 1) toujours visibles ; sinon Important=types 2-3,
+   Détaillé=2-4, Complet=tous. Thème : si au moins un thème est coché,
+   seuls les événements de ce(s) thème(s) passent. */
+function passesFilters(e){
+  if(!e.r){
+    var t = (typeof e.ty==='number' && e.ty>=1) ? e.ty : 2;
+    if(state.level==='important' && t>3) return false;
+    if(state.level==='detaille' && t>4) return false;
+  }
+  var anyTheme=false;
+  for(var k in state.themes){ if(state.themes[k]){ anyTheme=true; break; } }
+  if(anyTheme){
+    var th=detectTheme(e);
+    if(!th || !state.themes[th]) return false;
+  }
+  return true;
+}
+
+/* ---- Bornes de la période courante (décennie ou année) ------------------ */
+function periodBounds(){
+  if(state.mode==='year') return [state.year, state.year];
+  return [state.decade, state.decade+9];
+}
+function periodLabelText(){
+  if(state.mode==='year') return 'an ' + state.year;
+  return state.decade + '–' + (state.decade+9);
+}
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
 function tryLoadLive(done){
@@ -184,8 +293,7 @@ function tryLoadLive(done){
       LIVE = {};
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
-        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0,
-                  lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
+        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0, theme:e.theme||null };
         LIVE[e.id] = e;
         return o;
       });
@@ -200,35 +308,43 @@ function buildDecades(){
   EVENTS.forEach(function(e){
     if(typeof e.d==='number'){ if(e.d<min)min=e.d; var f=(typeof e.df==='number')?e.df:e.d; if(f>max)max=f; }
   });
+  YEAR_MIN=min; YEAR_MAX=max;
   var d0=Math.floor(min/10)*10, d1=Math.floor(max/10)*10, out=[];
   for(var d=d0; d<=d1; d+=10) out.push(d);
   return out;
 }
 var DECADES = [];
 
-/* ---- Projection équirectangulaire lat/lng -> coords carte (2000×1000) ---- */
-function projX(lng){ return (lng+180)/360 * BUNDLE.W; }
-function projY(lat){ return (90-lat)/180 * BUNDLE.H; }
-function hasCoord(e){ return typeof e.lat==='number' && typeof e.lng==='number'; }
-
-/* ---- Compte : un événement compte dans la décennie si sa période la recoupe */
-function eventsFor(zone, decade){
-  var a=decade, b=decade+9;
+/* ---- Compte : un événement recoupe-t-il la période courante ? ----------- */
+function eventsFor(zone){
+  var b=periodBounds(), a=b[0], z=b[1];
   return EVENTS.filter(function(e){
     if(e.z.indexOf(zone)===-1) return false;
     if(typeof e.d!=='number') return false;
+    if(!passesFilters(e)) return false;
     var f=(typeof e.df==='number')?e.df:e.d;
-    return e.d<=b && f>=a;
+    return e.d<=z && f>=a;
   }).sort(function(x,y){return x.d-y.d;});
+}
+/* Compte brut (sans filtre niveau/thème) pour choisir la période de départ */
+function rawCount(zone, decade){
+  var a=decade, b=decade+9, n=0;
+  for(var i=0;i<EVENTS.length;i++){
+    var e=EVENTS[i];
+    if(e.z.indexOf(zone)===-1) continue;
+    if(typeof e.d!=='number') continue;
+    var f=(typeof e.df==='number')?e.df:e.d;
+    if(e.d<=b && f>=a) n++;
+  }
+  return n;
 }
 
 /* ---- Rendu de la carte -------------------------------------------------- */
 function renderMap(){
-  var svg=document.getElementById('map'), reg=state.region;
-  var v = state.zoomView || reg.view;
+  var svg=document.getElementById('map'), reg=state.region, v=reg.view;
   svg.setAttribute('viewBox', v.x+' '+v.y+' '+v.w+' '+v.h);
   var scale=v.w; // pour dimensionner pastilles ~constantes à l'écran
-  var rBase=scale*0.013, fNum=scale*0.016, fLbl=scale*0.018, rDot=scale*0.0075;
+  var rBase=scale*0.013, fNum=scale*0.016, fLbl=scale*0.018;
 
   var parts=['<path class="land" d="'+BUNDLE.land+'"/>'];
 
@@ -236,65 +352,33 @@ function renderMap(){
   reg.zones.forEach(function(zone){
     var c=BUNDLE.centroids[zone];
     if(!c) return;
-    var evs=eventsFor(zone, state.decade);
+    var evs=eventsFor(zone);
     if(evs.length===0) return;
     anyDot=true; totalRegion+=evs.length;
-
-    if(state.selZone===zone){
-      /* Vue détaillée : un point à la position réelle de chaque événement géolocalisé */
-      var located = evs.filter(hasCoord);
-      var noloc   = evs.length - located.length;
-      located.forEach(function(e){
-        var x=projX(e.lng), y=projY(e.lat);
-        parts.push(
-          '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
-            '<circle class="point'+(e.r?' reign':'')+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
-          '</g>'
-        );
-      });
-      /* Les événements sans coordonnées restent regroupés sur le centroïde de la zone */
-      if(noloc>0){
-        var rr=rBase*(1+Math.min(0.9, Math.sqrt(noloc)/6));
-        parts.push(
-          '<g class="pastille-g sel" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+noloc+' sans position précise">'+
-            '<circle class="pastille nocoord" cx="'+c.x+'" cy="'+c.y+'" r="'+rr.toFixed(1)+'"></circle>'+
-            '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
-            '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
-          '</g>'
-        );
-      }
-    } else {
-      /* Vue d'ensemble : une pastille agrégée par zone */
-      var n=evs.length;
-      var r=rBase*(1+Math.min(0.9, Math.sqrt(n)/6)); // grossit ~sqrt(n)
-      parts.push(
-        '<g class="pastille-g" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+n+' événement'+(n>1?'s':'')+'">'+
-          '<circle class="pastille" cx="'+c.x+'" cy="'+c.y+'" r="'+r.toFixed(1)+'"></circle>'+
-          '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+n+'</text>'+
-          '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+r+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+'</text>'+
-        '</g>'
-      );
-    }
+    var n=evs.length;
+    var r=rBase*(1+Math.min(0.9, Math.sqrt(n)/6)); // grossit ~sqrt(n)
+    var sel=(state.selZone===zone)?' sel':'';
+    parts.push(
+      '<g class="pastille-g'+sel+'" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+n+' événement'+(n>1?'s':'')+'">'+
+        '<circle class="pastille" cx="'+c.x+'" cy="'+c.y+'" r="'+r.toFixed(1)+'"></circle>'+
+        '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+n+'</text>'+
+        '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+r+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+'</text>'+
+      '</g>'
+    );
   });
   svg.innerHTML=parts.join('');
 
-  // interactions : pastilles de zone -> sélection/drill-down
+  // interactions
   Array.prototype.forEach.call(svg.querySelectorAll('.pastille-g'), function(g){
     var zone=g.getAttribute('data-zone');
     g.addEventListener('click', function(){ selectZone(zone); });
     g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();selectZone(zone);} });
   });
-  // interactions : points précis -> ouverture de la fiche
-  Array.prototype.forEach.call(svg.querySelectorAll('.point-g'), function(g){
-    var id=+g.getAttribute('data-id');
-    g.addEventListener('click', function(){ openFiche(id); });
-    g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();openFiche(id);} });
-  });
 
   var emptyEl=document.getElementById('map-empty');
   if(!anyDot){
     emptyEl.style.display='flex';
-    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans les années '+state.decade+'.';
+    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » ('+periodLabelText()+') avec les filtres actuels.';
   } else { emptyEl.style.display='none'; }
 
   renderNonGeo();
@@ -304,7 +388,7 @@ function renderMap(){
 function renderNonGeo(){
   var el=document.getElementById('nongeo'), bits=[];
   BUNDLE.nonGeo.forEach(function(zone){
-    var n=eventsFor(zone, state.decade).length;
+    var n=eventsFor(zone).length;
     if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
   });
   if(bits.length){
@@ -316,47 +400,24 @@ function renderNonGeo(){
 /* ---- Panneau latéral ---------------------------------------------------- */
 function selectZone(zone){
   state.selZone=zone;
-  var evs=eventsFor(zone, state.decade);
-  var located=evs.filter(hasCoord);
-
-  /* Zoom sur l'étendue des points précis (s'il y en a) pour les écarter */
-  if(located.length){
-    var xs=located.map(function(e){return projX(e.lng);});
-    var ys=located.map(function(e){return projY(e.lat);});
-    var minx=Math.min.apply(null,xs), maxx=Math.max.apply(null,xs);
-    var miny=Math.min.apply(null,ys), maxy=Math.max.apply(null,ys);
-    var w=Math.max(maxx-minx, 24), h=Math.max(maxy-miny, 24);
-    var padX=w*0.55+24, padY=h*0.55+24;
-    var vw=w+padX*2, vh=h+padY*2;
-    if(vh < vw*0.62) vh=vw*0.62;   /* garder un cadre pas trop étiré */
-    if(vw < vh*1.25) vw=vh*1.25;
-    var cx=(minx+maxx)/2, cy=(miny+maxy)/2;
-    state.zoomView={ x:cx-vw/2, y:cy-vh/2, w:vw, h:vh };
-  } else {
-    state.zoomView=null;   /* aucune coordonnée : on reste sur la vue région */
-  }
   renderMap();
-
+  var evs=eventsFor(zone);
   document.getElementById('panel-title').textContent=zone;
-  var loc=located.length, tot=evs.length;
-  document.getElementById('panel-count').textContent=
-    state.decade+'–'+(state.decade+9)+' · '+tot+' évén.'+(loc?(' · '+loc+' localisé'+(loc>1?'s':'')):'');
+  document.getElementById('panel-count').textContent=periodLabelText()+' · '+evs.length+' évén.';
   var list=document.getElementById('panel-list');
   if(!evs.length){ list.innerHTML='<div class="panel-empty">Aucun événement.</div>'; return; }
-  var head = state.zoomView ? '<button class="dezoom" onclick="clearZoom()">&#10530; Vue d\'ensemble</button>' : '';
-  list.innerHTML=head+evs.map(function(e){
+  list.innerHTML=evs.map(function(e){
     var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
-    var pin=hasCoord(e)?'<span class="locdot" title="Localisé précisément"></span>':'';
+    var th=detectTheme(e), ic=(th && THEME_DEFS[th]) ? THEME_DEFS[th].icon+' ' : '';
     return '<div class="ev-row" data-id="'+e.id+'">'+
       '<span class="ev-date">'+dd+'</span>'+
-      '<span class="ev-title">'+pin+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+'</span>'+
+      '<span class="ev-title">'+ic+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+'</span>'+
     '</div>';
   }).join('');
   Array.prototype.forEach.call(list.querySelectorAll('.ev-row'), function(row){
     row.addEventListener('click', function(){ openFiche(+row.getAttribute('data-id')); });
   });
 }
-function clearZoom(){ state.zoomView=null; renderMap(); }
 
 /* ---- Fiche (prototype). En intégration : appeler ton openModal() -------- */
 function openFiche(id){
@@ -389,7 +450,7 @@ function renderRegionChips(){
   Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
     c.addEventListener('click', function(){
       state.region=BUNDLE.regions.find(function(r){return r.id===c.getAttribute('data-id');});
-      state.selZone=null; state.zoomView=null; renderRegionChips(); renderMap(); resetPanel();
+      state.selZone=null; renderRegionChips(); renderMap(); resetPanel();
     });
   });
 }
@@ -402,13 +463,79 @@ function renderDecadeChips(){
     c.addEventListener('click', function(){ setDecade(+c.getAttribute('data-d')); });
   });
 }
+
+/* Rafraîchit la carte en conservant la zone sélectionnée si possible */
+function refresh(){
+  renderMap();
+  if(state.selZone) selectZone(state.selZone);
+  else resetPanel();
+}
+
 function setDecade(d){
-  state.decade=d; state.selZone=null; state.zoomView=null;
+  state.decade=d;
   document.getElementById('dec-current').textContent=d+'–'+(d+9);
   document.getElementById('dec-prev').disabled = (DECADES.indexOf(d)<=0);
   document.getElementById('dec-next').disabled = (DECADES.indexOf(d)>=DECADES.length-1);
-  renderDecadeChips(); renderMap(); resetPanel();
+  renderDecadeChips(); refresh();
 }
+
+function setYear(y){
+  y=Math.max(YEAR_MIN, Math.min(YEAR_MAX, y));
+  state.year=y;
+  document.getElementById('yr-current').textContent='an '+y;
+  document.getElementById('year-slider').value=y;
+  document.getElementById('yr-prev').disabled=(y<=YEAR_MIN);
+  document.getElementById('yr-next').disabled=(y>=YEAR_MAX);
+  refresh();
+}
+
+/* Bascule décennie ⇄ année (en conservant la position temporelle) */
+function applyMode(){
+  var dec=document.getElementById('decade-row'), yr=document.getElementById('year-row');
+  var lbl=document.getElementById('period-label');
+  if(state.mode==='year'){ dec.style.display='none'; yr.style.display='flex'; lbl.textContent='Année'; }
+  else { dec.style.display='flex'; yr.style.display='none'; lbl.textContent='Décennie'; }
+  Array.prototype.forEach.call(document.querySelectorAll('#mode-chips .chip'), function(c){
+    c.classList.toggle('active', c.getAttribute('data-mode')===state.mode);
+  });
+}
+function setMode(m){
+  if(m===state.mode){ return; }
+  if(m==='year'){
+    if(state.year==null) state.year=state.decade!=null?state.decade:YEAR_MIN;
+    state.mode='year'; applyMode(); setYear(state.year);
+  } else {
+    if(state.year!=null) state.decade=Math.floor(state.year/10)*10;
+    if(DECADES.indexOf(state.decade)===-1) state.decade=DECADES[0];
+    state.mode='decade'; applyMode(); setDecade(state.decade);
+  }
+}
+
+function setLevel(l){
+  state.level=l;
+  Array.prototype.forEach.call(document.querySelectorAll('#level-chips .chip'), function(c){
+    c.classList.toggle('active', c.getAttribute('data-level')===l);
+  });
+  refresh();
+}
+
+function renderThemeChips(){
+  var box=document.getElementById('theme-chips');
+  box.innerHTML=THEME_ORDER.map(function(t){
+    var d=THEME_DEFS[t]; if(!d) return '';
+    return '<button class="chip chip-theme'+(state.themes[t]?' active':'')+'" data-theme="'+t+'">'+
+           '<span class="ic">'+d.icon+'</span>'+d.label+'</button>';
+  }).join('');
+  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){
+      var t=c.getAttribute('data-theme');
+      state.themes[t]=!state.themes[t];
+      c.classList.toggle('active', !!state.themes[t]);
+      refresh();
+    });
+  });
+}
+
 function resetPanel(){
   document.getElementById('panel-title').textContent='Sélectionnez une pastille';
   document.getElementById('panel-count').textContent='';
@@ -421,19 +548,45 @@ function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {'
 function boot(mode){
   DECADES=buildDecades();
   renderRegionChips();
+  renderThemeChips();
+
+  // curseur d'année
+  var sl=document.getElementById('year-slider');
+  sl.min=YEAR_MIN; sl.max=YEAR_MAX;
+  document.getElementById('year-hint').textContent=YEAR_MIN+' – '+YEAR_MAX;
+
   // décennie de départ = celle avec le plus d'événements (Europe occ.)
   var best=DECADES[0], bestN=-1;
   DECADES.forEach(function(d){
-    var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=eventsFor(z,d).length; });
+    var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=rawCount(z,d); });
     if(n>bestN){bestN=n;best=d;}
   });
+  state.year=best;
+
+  // navigation décennie
   document.getElementById('dec-prev').addEventListener('click', function(){
     var i=DECADES.indexOf(state.decade); if(i>0) setDecade(DECADES[i-1]);
   });
   document.getElementById('dec-next').addEventListener('click', function(){
     var i=DECADES.indexOf(state.decade); if(i<DECADES.length-1) setDecade(DECADES[i+1]);
   });
+  // navigation année
+  document.getElementById('yr-prev').addEventListener('click', function(){ setYear(state.year-1); });
+  document.getElementById('yr-next').addEventListener('click', function(){ setYear(state.year+1); });
+  sl.addEventListener('input', function(){ setYear(+sl.value); });
+
+  // échelle de temps
+  Array.prototype.forEach.call(document.querySelectorAll('#mode-chips .chip'), function(c){
+    c.addEventListener('click', function(){ setMode(c.getAttribute('data-mode')); });
+  });
+  // niveau de détail
+  Array.prototype.forEach.call(document.querySelectorAll('#level-chips .chip'), function(c){
+    c.addEventListener('click', function(){ setLevel(c.getAttribute('data-level')); });
+  });
+
+  applyMode();
   setDecade(best);
+
   document.getElementById('status-note').innerHTML = (mode==='live')
     ? 'Données chargées depuis <b>events.json</b> en direct ('+EVENTS.length+' événements). Les fiches affichent le texte complet.'
     : 'Aperçu autonome : données <b>embarquées</b> ('+EVENTS.length+' événements, sans descriptions). Place ce fichier à côté de <b>events.json</b> pour le texte complet des fiches.';
