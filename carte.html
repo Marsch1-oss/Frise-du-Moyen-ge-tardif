@@ -64,6 +64,20 @@
   .point-g:hover .point,.point-g:focus .point{fill:#c62828;stroke:var(--gold)}
   .point.reign{fill:var(--gold)}
   .point-g:hover .point.reign,.point-g:focus .point.reign{fill:#c08a2a}
+  /* ── Calques géographiques & héraldiques ── */
+  .border-fill{opacity:0.10;stroke:none}
+  .border-line{fill:none;stroke-width:1.6;stroke-dasharray:5 3;opacity:0.55;vector-effect:non-scaling-stroke}
+  .border-lbl{font-family:'IM Fell English',serif;font-style:italic;text-anchor:middle;opacity:0.75;
+              paint-order:stroke;stroke:var(--parchment-lt);stroke-width:2.5px;stroke-linejoin:round;pointer-events:none}
+  .river{fill:none;stroke:#3D6E8C;opacity:0.7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+  .mtn{fill:#7A5A38;opacity:0.85}
+  .mtn-cap{fill:#F3ECDD}
+  .mtn-lbl{fill:#6B4E2E;font-family:'Crimson Pro',serif;font-style:italic;text-anchor:middle;opacity:0.85;
+           paint-order:stroke;stroke:var(--parchment-lt);stroke-width:2px;pointer-events:none}
+  .blason{pointer-events:none}
+  .layers-row{display:flex;flex-wrap:wrap;gap:0.6rem 1.1rem;align-items:center}
+  .layer-tog{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.82rem;color:var(--ink-soft);cursor:pointer}
+  .layer-tog input{cursor:pointer}
   .dezoom{display:inline-block;margin:0.5rem 0.8rem 0.2rem;font-family:'Crimson Pro',serif;font-size:0.78rem;
           border:1.5px solid var(--gold);background:var(--parchment-lt);color:var(--gold);font-weight:700;
           border-radius:18px;padding:0.25rem 0.8rem;cursor:pointer}
@@ -138,6 +152,16 @@
         <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
       </div>
     </div>
+    <div class="ctrl-block">
+      <span class="ctrl-label">Calques</span>
+      <div class="layers-row">
+        <label class="layer-tog"><input type="checkbox" id="lay-rivers" checked> Fleuves</label>
+        <label class="layer-tog"><input type="checkbox" id="lay-relief" checked> Reliefs</label>
+        <label class="layer-tog"><input type="checkbox" id="lay-borders" checked> Fronti&egrave;res ~1350</label>
+        <label class="layer-tog"><input type="checkbox" id="lay-blason" checked> Blasons</label>
+        <span style="font-size:0.72rem;font-style:italic;color:var(--ink-muted)">rep&egrave;res approximatifs</span>
+      </div>
+    </div>
   </div>
 
   <div class="stage">
@@ -174,7 +198,7 @@
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
-var state = { region: BUNDLE.regions[0], decade: null, selZone: null, zoomView: null };
+var state = { region: BUNDLE.regions[0], decade: null, selZone: null, zoomView: null, layers:{rivers:true,relief:true,borders:true,blason:true} };
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
 function tryLoadLive(done){
@@ -222,6 +246,265 @@ function eventsFor(zone, decade){
   }).sort(function(x,y){return x.d-y.d;});
 }
 
+/* ===================== Calques géographiques & héraldiques =====================
+   Repères APPROXIMATIFS à vocation pédagogique. Coordonnées en [lng, lat] réelles,
+   projetées via projX/projY dans l'espace SVG 2000×1000 — faciles à affiner.       */
+
+var FLEUVES = [
+ {n:'Rhin',    p:[[9.5,46.5],[7.6,47.6],[7.75,48.6],[8.3,50.0],[6.96,50.94],[6.1,51.85],[4.1,51.95]]},
+ {n:'Rhône',   p:[[8.55,46.5],[6.15,46.2],[4.84,45.76],[4.81,43.95],[4.85,43.33]]},
+ {n:'Loire',   p:[[4.2,44.8],[3.0,46.4],[1.9,47.9],[0.69,47.39],[-1.55,47.2],[-2.1,47.28]]},
+ {n:'Seine',   p:[[4.7,47.6],[3.6,48.5],[2.35,48.85],[1.1,49.44],[0.2,49.43]]},
+ {n:'Tamise',  p:[[-1.8,51.7],[-1.2,51.7],[-0.1,51.5],[0.7,51.5]]},
+ {n:'Danube',  p:[[8.5,47.95],[11.0,48.7],[12.1,49.0],[14.0,48.3],[16.37,48.2],[19.04,47.5],[20.46,44.8],[22.9,44.0],[28.0,45.4],[29.6,45.2]]},
+ {n:'Elbe',    p:[[15.6,50.77],[14.4,51.0],[13.74,51.05],[11.63,52.13],[10.0,53.0],[9.99,53.55],[8.9,53.9]]},
+ {n:'Vistule', p:[[19.9,49.6],[19.94,50.06],[21.0,52.23],[18.9,53.0],[18.65,54.35]]},
+ {n:'Pô',      p:[[7.0,44.7],[7.69,45.07],[9.2,45.1],[11.0,45.0],[11.6,44.83],[12.5,44.95]]},
+ {n:'Èbre',    p:[[-4.0,42.9],[-2.5,42.5],[-0.88,41.65],[0.5,41.1],[0.86,40.72]]},
+ {n:'Tage',    p:[[-1.0,40.4],[-4.02,39.86],[-6.5,39.6],[-8.0,39.3],[-9.14,38.7]]},
+ {n:'Douro',   p:[[-2.8,41.7],[-5.0,41.4],[-7.0,41.1],[-8.6,41.15]]}
+];
+
+var RELIEFS = [
+ {n:'Alpes',       lbl:[10.6,46.0], pk:[[6.6,45.3],[7.4,45.9],[8.6,46.4],[10.0,46.6],[11.4,46.9],[12.8,47.1],[13.6,47.3]]},
+ {n:'Pyrénées',    lbl:[0.4,42.2],  pk:[[-1.4,42.95],[-0.2,42.7],[0.9,42.65],[2.0,42.5]]},
+ {n:'Apennins',    lbl:[13.9,42.3], pk:[[9.9,44.1],[11.2,43.4],[12.6,42.6],[13.8,41.8],[15.2,40.8],[16.2,39.6]]},
+ {n:'Carpates',    lbl:[23.5,48.4], pk:[[18.9,49.4],[20.4,49.2],[22.0,48.3],[24.0,47.6],[25.5,46.2],[26.0,45.3]]},
+ {n:'Massif central', lbl:[2.9,45.2], pk:[[2.4,45.4],[3.2,45.0],[3.9,44.6]]},
+ {n:'Dinariques',  lbl:[18.2,43.4], pk:[[15.5,44.6],[16.8,43.8],[18.2,43.2],[19.5,42.6]]}
+];
+
+/* Frontières SCHÉMATIQUES vers 1350 (polygones grossiers, à affiner librement) */
+var ROYAUMES_1350 = [
+ {n:'France', col:'#234C8B', lbl:[2.2,46.6], p:[[-1.5,49.7],[0.2,49.9],[1.6,50.9],[3.2,50.6],[4.2,49.6],[5.2,49.0],[5.4,47.6],[6.0,46.4],[5.3,45.2],[4.6,44.0],[3.0,43.2],[3.0,42.5],[1.6,42.5],[0.0,42.7],[-1.4,43.3],[-1.0,44.6],[-1.1,45.6],[-2.1,46.2],[-2.6,47.3],[-1.6,48.6],[-1.5,49.7]]},
+ {n:'Aquitaine angl.', col:'#8B1A1A', lbl:[-0.4,44.4], p:[[-1.4,43.3],[0.0,42.7],[0.8,43.0],[0.6,43.9],[0.2,44.8],[-0.5,45.3],[-1.1,45.6],[-1.0,44.6],[-1.4,43.3]]},
+ {n:'Saint-Empire', col:'#9A6B1A', lbl:[10.8,49.7], p:[[5.4,47.6],[5.2,49.0],[4.2,49.6],[4.3,50.9],[5.9,51.9],[8.5,53.6],[9.9,53.9],[12.0,54.4],[14.4,53.9],[15.0,51.0],[15.6,50.7],[14.0,48.6],[16.5,48.2],[16.5,46.5],[13.8,46.5],[12.4,46.6],[10.5,46.6],[8.6,46.4],[7.6,47.6],[6.0,46.4],[5.4,47.6]]},
+ {n:'Castille', col:'#7A5A38', lbl:[-4.2,40.6], p:[[-8.9,43.7],[-6.5,43.5],[-4.0,43.4],[-3.0,43.3],[-2.0,42.6],[-2.5,41.3],[-1.8,40.0],[-1.0,38.7],[-2.2,37.2],[-4.5,36.8],[-6.0,36.2],[-7.4,37.2],[-7.0,38.2],[-7.2,39.5],[-6.9,41.0],[-8.2,41.9],[-8.9,43.7]]},
+ {n:'Aragon', col:'#C9A227', lbl:[-0.3,41.3], p:[[-2.0,42.6],[-0.7,42.8],[0.7,42.7],[2.2,42.4],[3.2,41.9],[0.9,40.9],[0.0,40.0],[-0.6,38.8],[-1.0,38.7],[-1.8,40.0],[-2.5,41.3],[-2.0,42.6]]},
+ {n:'Portugal', col:'#2F6B3C', lbl:[-8.3,39.9], p:[[-8.2,41.9],[-6.9,41.0],[-7.2,39.5],[-7.0,38.2],[-7.4,37.2],[-8.9,37.0],[-8.8,38.5],[-9.4,39.4],[-8.8,41.1],[-8.2,41.9]]},
+ {n:'Grenade', col:'#6B2B5A', lbl:[-4.0,37.0], p:[[-5.4,36.0],[-3.5,36.7],[-2.1,36.8],[-2.2,37.4],[-3.8,37.6],[-5.4,37.2],[-5.6,36.4],[-5.4,36.0]]},
+ {n:'Naples', col:'#8B1A1A', lbl:[15.6,40.9], p:[[13.0,41.3],[14.0,41.5],[15.9,41.9],[16.9,41.1],[18.5,40.1],[17.0,39.0],[16.5,38.0],[15.6,38.0],[15.9,40.0],[14.0,40.6],[13.0,41.3]]},
+ {n:'États pontificaux', col:'#C9A227', lbl:[12.6,43.1], p:[[11.2,43.9],[12.6,44.1],[13.5,43.0],[13.0,42.0],[12.4,41.4],[11.5,42.4],[11.2,43.9]]},
+ {n:'Hongrie', col:'#8B1A1A', lbl:[19.6,46.6], p:[[16.5,46.5],[16.5,48.2],[18.8,48.6],[21.5,48.6],[22.9,48.0],[22.5,45.7],[21.0,45.2],[19.0,45.8],[17.0,45.9],[16.5,46.5]]},
+ {n:'Pologne', col:'#4A3B28', lbl:[19.6,51.9], p:[[15.0,51.0],[14.4,53.0],[18.9,54.0],[20.5,54.0],[23.5,52.5],[24.0,50.3],[22.0,49.2],[19.9,49.6],[18.0,49.8],[15.6,50.7],[15.0,51.0]]}
+];
+
+/* Blasons (anchors aux capitales) — dessinés en SVG, motifs héraldiques anciens */
+var BLASONS = [
+ {n:'France',      t:'france',    at:[2.35,48.85]},
+ {n:'Angleterre',  t:'angleterre',at:[-0.1,51.5]},
+ {n:'Écosse',      t:'ecosse',    at:[-3.9,56.3]},
+ {n:'Saint-Empire',t:'empire',    at:[8.4,50.0]},
+ {n:'Castille',    t:'castille',  at:[-3.7,40.4]},
+ {n:'Aragon',      t:'aragon',    at:[-0.6,41.6]},
+ {n:'Portugal',    t:'portugal',  at:[-8.6,39.6]},
+ {n:'Naples',      t:'naples',    at:[14.7,40.9]},
+ {n:'Papauté',     t:'papaute',   at:[4.81,43.95]},
+ {n:'Hongrie',     t:'hongrie',   at:[19.0,47.1]},
+ {n:'Pologne',     t:'pologne',   at:[20.6,52.1]},
+ {n:'Scandinavie', t:'suede',     at:[15.6,58.4]},
+ {n:'Byzance',     t:'byzance',   at:[28.95,41.0]}
+];
+
+var TINC={or:'#C9A227',arg:'#E8E4D8',gu:'#8B1A1A',az:'#234C8B',sa:'#2B2722',pp:'#6B2B5A',vt:'#2F6B3C'};
+
+function lnglatPath(pts,close){
+  var d='';
+  for(var i=0;i<pts.length;i++){ d+=(i?'L':'M')+projX(pts[i][0]).toFixed(1)+','+projY(pts[i][1]).toFixed(1); }
+  return close ? d+'Z' : d;
+}
+
+/* ---- charges héraldiques (formes simplifiées) ---- */
+function fleur(x,y,s,fill){
+  var a=s*0.5;
+  var d='M'+x+','+(y-a)+
+    'C'+(x-a*0.28)+','+(y-a*0.55)+' '+(x-a*0.95)+','+(y-a*0.35)+' '+(x-a*0.5)+','+(y+a*0.05)+
+    'C'+(x-a*0.85)+','+(y-a*0.05)+' '+(x-a*0.45)+','+(y+a*0.5)+' '+x+','+(y+a*0.2)+
+    'C'+(x+a*0.45)+','+(y+a*0.5)+' '+(x+a*0.85)+','+(y-a*0.05)+' '+(x+a*0.5)+','+(y+a*0.05)+
+    'C'+(x+a*0.95)+','+(y-a*0.35)+' '+(x+a*0.28)+','+(y-a*0.55)+' '+x+','+(y-a)+'Z'+
+    'M'+(x-a*0.6)+','+(y+a*0.18)+'L'+(x+a*0.6)+','+(y+a*0.18)+'L'+(x+a*0.6)+','+(y+a*0.34)+'L'+(x-a*0.6)+','+(y+a*0.34)+'Z';
+  return '<path d="'+d+'" fill="'+fill+'"/>';
+}
+function castle(x,y,w,fill){
+  var h=w*0.9, x0=x-w/2, y0=y-h/2;
+  function tower(tx,tw,th){ var ty=y0+h-th;
+    return '<rect x="'+tx.toFixed(1)+'" y="'+ty.toFixed(1)+'" width="'+tw.toFixed(1)+'" height="'+th.toFixed(1)+'" fill="'+fill+'"/>'+
+      '<rect x="'+tx.toFixed(1)+'" y="'+(ty-th*0.18).toFixed(1)+'" width="'+(tw*0.3).toFixed(1)+'" height="'+(th*0.2).toFixed(1)+'" fill="'+fill+'"/>'+
+      '<rect x="'+(tx+tw*0.7).toFixed(1)+'" y="'+(ty-th*0.18).toFixed(1)+'" width="'+(tw*0.3).toFixed(1)+'" height="'+(th*0.2).toFixed(1)+'" fill="'+fill+'"/>'; }
+  var wall='<rect x="'+x0.toFixed(1)+'" y="'+(y0+h*0.4).toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+(h*0.6).toFixed(1)+'" fill="'+fill+'"/>';
+  var door='<rect x="'+(x-w*0.09).toFixed(1)+'" y="'+(y0+h*0.6).toFixed(1)+'" width="'+(w*0.18).toFixed(1)+'" height="'+(h*0.4).toFixed(1)+'" fill="#5a1212"/>';
+  return wall+tower(x0,w*0.26,h*0.78)+tower(x0+w*0.74,w*0.26,h*0.78)+tower(x-w*0.17,w*0.34,h)+door;
+}
+function lion(x,y,s,fill){
+  var w=s,h=s*0.5,x0=x-w/2,y0=y-h/2;
+  var d='M'+x0.toFixed(1)+','+(y0+h*0.5).toFixed(1)+
+   'q'+(w*0.02)+','+(-h*0.34)+' '+(w*0.13)+','+(-h*0.3)+
+   'l'+(w*0.05)+','+(-h*0.12)+' l'+(w*0.03)+','+(h*0.14)+
+   'q'+(w*0.06)+','+(h*0.02)+' '+(w*0.04)+','+(h*0.16)+
+   'l'+(w*0.56)+',0'+
+   'q'+(w*0.1)+',0 '+(w*0.13)+','+(-h*0.16)+
+   'q'+(w*0.07)+','+(h*0.24)+' '+(-w*0.02)+','+(h*0.32)+
+   'l0,'+(h*0.3)+' l'+(-w*0.07)+',0 l0,'+(-h*0.24)+
+   'l'+(-w*0.52)+',0 l0,'+(h*0.24)+' l'+(-w*0.07)+',0 l0,'+(-h*0.28)+
+   'q'+(-w*0.06)+','+(-h*0.04)+' '+(-w*0.05)+','+(-h*0.2)+'Z';
+  return '<path d="'+d+'" fill="'+fill+'"/>';
+}
+function eagle(x,y,s,fill){
+  var w=s,h=s;
+  function wing(dir){ return '<path d="M'+x+','+(y-h*0.16)+
+    ' q'+(dir*w*0.34)+','+(-h*0.06)+' '+(dir*w*0.44)+','+(h*0.12)+
+    ' q'+(-dir*w*0.06)+','+(h*0.04)+' '+(-dir*w*0.16)+','+(h*0.02)+
+    ' q'+(dir*w*0.06)+','+(h*0.1)+' '+(-dir*w*0.02)+','+(h*0.18)+
+    ' q'+(-dir*w*0.08)+','+(-h*0.02)+' '+(-dir*w*0.14)+','+(h*0.04)+
+    ' q'+(dir*w*0.02)+','+(-h*0.16)+' '+(-dir*w*0.12)+','+(-h*0.28)+'Z" fill="'+fill+'"/>'; }
+  var body='<ellipse cx="'+x+'" cy="'+y+'" rx="'+(w*0.1)+'" ry="'+(h*0.28)+'" fill="'+fill+'"/>';
+  var head='<circle cx="'+x+'" cy="'+(y-h*0.34)+'" r="'+(w*0.07)+'" fill="'+fill+'"/>';
+  var beak='<path d="M'+(x+w*0.05)+','+(y-h*0.36)+'l'+(w*0.07)+','+(h*0.02)+'l'+(-w*0.06)+','+(h*0.05)+'Z" fill="'+fill+'"/>';
+  var tail='<path d="M'+(x-w*0.08)+','+(y+h*0.24)+'l'+(w*0.16)+',0l'+(-w*0.03)+','+(h*0.16)+'l'+(-w*0.05)+',0Z" fill="'+fill+'"/>';
+  var legs='<path d="M'+(x-w*0.05)+','+(y+h*0.22)+'l0,'+(h*0.1)+'M'+(x+w*0.05)+','+(y+h*0.22)+'l0,'+(h*0.1)+'" stroke="'+fill+'" stroke-width="'+(w*0.03)+'"/>';
+  return wing(-1)+wing(1)+body+tail+head+beak+legs;
+}
+function crown(x,y,s,fill){
+  var w=s,h=s*0.7,x0=x-w/2,y0=y-h/2;
+  var pts='M'+x0+','+(y0+h*0.6)+'L'+x0+','+(y0+h*0.15)+'L'+(x0+w*0.25)+','+(y0+h*0.5)+'L'+(x0+w*0.5)+','+y0+'L'+(x0+w*0.75)+','+(y0+h*0.5)+'L'+(x0+w)+','+(y0+h*0.15)+'L'+(x0+w)+','+(y0+h*0.6)+'Z';
+  var band='<rect x="'+x0+'" y="'+(y0+h*0.55)+'" width="'+w+'" height="'+(h*0.3)+'" fill="'+fill+'"/>';
+  return '<path d="'+pts+'" fill="'+fill+'"/>'+band;
+}
+function quinas(x,y,w){
+  var T=TINC, sh=w*0.2;
+  function mini(mx,my){ var s=sh,hh=s*1.1,x0=mx-s/2,y0=my-hh/2;
+    var d='M'+x0+','+y0+'L'+(x0+s)+','+y0+'L'+(x0+s)+','+(y0+hh*0.45)+'Q'+(x0+s)+','+(y0+hh*0.9)+' '+mx+','+(y0+hh)+'Q'+x0+','+(y0+hh*0.9)+' '+x0+','+(y0+hh*0.45)+'Z';
+    return '<path d="'+d+'" fill="'+T.az+'"/>'+'<circle cx="'+mx+'" cy="'+(my-hh*0.1)+'" r="'+(s*0.08)+'" fill="'+T.arg+'"/>'; }
+  return mini(x,y-w*0.22)+mini(x,y+w*0.18)+mini(x-w*0.22,y-w*0.02)+mini(x+w*0.22,y-w*0.02)+mini(x,y-w*0.02);
+}
+function doubleCross(x,y,s,fill){
+  var t=s*0.16;
+  return '<rect x="'+(x-t/2)+'" y="'+(y-s*0.6)+'" width="'+t+'" height="'+(s*1.2)+'" fill="'+fill+'"/>'+
+         '<rect x="'+(x-s*0.3)+'" y="'+(y-s*0.26)+'" width="'+(s*0.6)+'" height="'+t+'" fill="'+fill+'"/>'+
+         '<rect x="'+(x-s*0.4)+'" y="'+(y+s*0.04)+'" width="'+(s*0.8)+'" height="'+t+'" fill="'+fill+'"/>';
+}
+function keys(x,y,w){
+  var T=TINC;
+  function key(dir,fill){
+    return '<g transform="rotate('+(dir*26)+' '+x+' '+y+')">'+
+      '<rect x="'+(x-w*0.03)+'" y="'+(y-w*0.34)+'" width="'+(w*0.06)+'" height="'+(w*0.62)+'" fill="'+fill+'"/>'+
+      '<circle cx="'+x+'" cy="'+(y-w*0.36)+'" r="'+(w*0.1)+'" fill="none" stroke="'+fill+'" stroke-width="'+(w*0.05)+'"/>'+
+      '<rect x="'+x+'" y="'+(y+w*0.16)+'" width="'+(w*0.12)+'" height="'+(w*0.05)+'" fill="'+fill+'"/>'+
+      '<rect x="'+x+'" y="'+(y+w*0.24)+'" width="'+(w*0.08)+'" height="'+(w*0.05)+'" fill="'+fill+'"/></g>';
+  }
+  var tiara='<path d="M'+(x-w*0.17)+','+(y-w*0.42)+'q'+(w*0.17)+','+(-w*0.15)+' '+(w*0.34)+',0Z" fill="'+T.arg+'"/>';
+  return key(-1,T.or)+key(1,T.arg)+tiara;
+}
+
+/* ---- assemblage d'un blason ---- */
+function shieldPath(cx,cy,w){
+  var h=w*1.16,x0=cx-w/2,y0=cy-h/2;
+  return 'M'+x0+','+y0+'L'+(x0+w)+','+y0+'L'+(x0+w)+','+(y0+h*0.42)+
+         'Q'+(x0+w)+','+(y0+h*0.86)+' '+cx+','+(y0+h)+
+         'Q'+x0+','+(y0+h*0.86)+' '+x0+','+(y0+h*0.42)+'Z';
+}
+function blasonSVG(b,cx,cy,w){
+  var h=w*1.16,id='shc_'+b.t,sp=shieldPath(cx,cy,w),T=TINC;
+  var bbox='x="'+(cx-w/2)+'" y="'+(cy-h/2)+'" width="'+w+'" height="'+h+'"';
+  function field(fill){ return '<rect '+bbox+' fill="'+fill+'"/>'; }
+  var inner='';
+  switch(b.t){
+    case 'france':
+      inner=field(T.az)+fleur(cx,cy-h*0.24,w*0.34,T.or)+fleur(cx-w*0.21,cy+h*0.12,w*0.34,T.or)+fleur(cx+w*0.21,cy+h*0.12,w*0.34,T.or);
+      break;
+    case 'naples':
+      inner=field(T.az)+fleur(cx,cy-h*0.18,w*0.3,T.or)+fleur(cx-w*0.2,cy+h*0.16,w*0.3,T.or)+fleur(cx+w*0.2,cy+h*0.16,w*0.3,T.or)+
+            '<rect x="'+(cx-w/2)+'" y="'+(cy-h/2)+'" width="'+w+'" height="'+(h*0.16)+'" fill="'+T.gu+'"/>';
+      break;
+    case 'angleterre':
+      inner=field(T.gu)+lion(cx,cy-h*0.26,w*0.66,T.or)+lion(cx,cy,w*0.66,T.or)+lion(cx,cy+h*0.26,w*0.66,T.or);
+      break;
+    case 'ecosse':
+      inner=field(T.or)+lion(cx,cy,w*0.74,T.gu);
+      break;
+    case 'empire':
+      inner=field(T.or)+eagle(cx,cy,w*0.8,T.sa);
+      break;
+    case 'pologne':
+      inner=field(T.gu)+eagle(cx,cy,w*0.8,T.arg);
+      break;
+    case 'castille':
+      inner=field(T.gu)+castle(cx,cy,w*0.56,T.or);
+      break;
+    case 'aragon':
+      inner=field(T.or);
+      for(var i=0;i<4;i++){ var pw=w/9; inner+='<rect x="'+(cx-w/2+pw*(1+2*i)).toFixed(1)+'" y="'+(cy-h/2)+'" width="'+pw.toFixed(1)+'" height="'+h+'" fill="'+T.gu+'"/>'; }
+      break;
+    case 'portugal':
+      inner=field(T.arg)+quinas(cx,cy,w);
+      break;
+    case 'hongrie':
+      for(var j=0;j<8;j++){ inner+='<rect x="'+(cx-w/2)+'" y="'+(cy-h/2+h/8*j).toFixed(1)+'" width="'+(w/2)+'" height="'+(h/8+0.3).toFixed(1)+'" fill="'+(j%2?T.gu:T.arg)+'"/>'; }
+      inner+='<rect x="'+cx+'" y="'+(cy-h/2)+'" width="'+(w/2)+'" height="'+h+'" fill="'+T.gu+'"/>'+doubleCross(cx+w*0.24,cy,w*0.22,T.arg);
+      break;
+    case 'suede':
+      inner=field(T.az)+crown(cx,cy-h*0.22,w*0.26,T.or)+crown(cx-w*0.2,cy+h*0.12,w*0.26,T.or)+crown(cx+w*0.2,cy+h*0.12,w*0.26,T.or);
+      break;
+    case 'papaute':
+      inner=field(T.gu)+keys(cx,cy,w*0.72);
+      break;
+    case 'byzance':
+      inner=field(T.gu)+
+        '<rect x="'+(cx-w*0.07)+'" y="'+(cy-h*0.36)+'" width="'+(w*0.14)+'" height="'+(h*0.72)+'" fill="'+T.or+'"/>'+
+        '<rect x="'+(cx-w*0.34)+'" y="'+(cy-h*0.07)+'" width="'+(w*0.68)+'" height="'+(h*0.14)+'" fill="'+T.or+'"/>';
+      [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(function(q){ inner+='<rect x="'+(cx+q[0]*w*0.26-w*0.05)+'" y="'+(cy+q[1]*h*0.26-w*0.05)+'" width="'+(w*0.1)+'" height="'+(w*0.1)+'" fill="'+T.or+'"/>'; });
+      break;
+    default: inner=field(T.arg);
+  }
+  return '<g class="blason">'+
+    '<clipPath id="'+id+'"><path d="'+sp+'"/></clipPath>'+
+    '<g clip-path="url(#'+id+')">'+inner+'</g>'+
+    '<path d="'+sp+'" fill="none" stroke="#2B2722" stroke-width="'+(w*0.045).toFixed(2)+'"/>'+
+  '</g>';
+}
+
+/* ---- construit le SVG de tous les calques activés ---- */
+function buildFeatureSVG(scale){
+  var L=state.layers, out='';
+  if(L.borders){
+    var lines='';
+    ROYAUMES_1350.forEach(function(k){
+      var d=lnglatPath(k.p,true);
+      out+='<path class="border-fill" d="'+d+'" fill="'+k.col+'"/>';
+      lines+='<path class="border-line" d="'+d+'" stroke="'+k.col+'"/>';
+    });
+    out+=lines;
+    if(!state.selZone) ROYAUMES_1350.forEach(function(k){
+      out+='<text class="border-lbl" x="'+projX(k.lbl[0]).toFixed(1)+'" y="'+projY(k.lbl[1]).toFixed(1)+'" font-size="'+(scale*0.013).toFixed(1)+'" fill="'+k.col+'">'+k.n+'</text>';
+    });
+  }
+  if(L.rivers){
+    FLEUVES.forEach(function(r){ out+='<path class="river" d="'+lnglatPath(r.p,false)+'" stroke-width="'+(scale*0.0016).toFixed(3)+'"/>'; });
+  }
+  if(L.relief){
+    var s=scale*0.006;
+    RELIEFS.forEach(function(m){
+      m.pk.forEach(function(pt){
+        var x=projX(pt[0]),y=projY(pt[1]);
+        out+='<path class="mtn" d="M'+(x-s).toFixed(1)+','+(y+s).toFixed(1)+'L'+x.toFixed(1)+','+(y-s).toFixed(1)+'L'+(x+s).toFixed(1)+','+(y+s).toFixed(1)+'Z"/>'+
+             '<path class="mtn-cap" d="M'+(x-s*0.32).toFixed(1)+','+(y+s*0.08).toFixed(1)+'L'+x.toFixed(1)+','+(y-s).toFixed(1)+'L'+(x+s*0.32).toFixed(1)+','+(y+s*0.08).toFixed(1)+'Z"/>';
+      });
+      if(!state.selZone) out+='<text class="mtn-lbl" x="'+projX(m.lbl[0]).toFixed(1)+'" y="'+projY(m.lbl[1]).toFixed(1)+'" font-size="'+(scale*0.012).toFixed(1)+'">'+m.n+'</text>';
+    });
+  }
+  if(L.blason && !state.selZone){
+    BLASONS.forEach(function(b){ out+=blasonSVG(b, projX(b.at[0]), projY(b.at[1]), scale*0.05); });
+  }
+  return out;
+}
+
+function initLayerToggles(){
+  [['lay-rivers','rivers'],['lay-relief','relief'],['lay-borders','borders'],['lay-blason','blason']].forEach(function(p){
+    var el=document.getElementById(p[0]); if(!el) return;
+    el.addEventListener('change', function(){ state.layers[p[1]]=el.checked; renderMap(); });
+  });
+}
+
 /* ---- Rendu de la carte -------------------------------------------------- */
 function renderMap(){
   var svg=document.getElementById('map'), reg=state.region;
@@ -231,6 +514,7 @@ function renderMap(){
   var rBase=scale*0.013, fNum=scale*0.016, fLbl=scale*0.018, rDot=scale*0.0075;
 
   var parts=['<path class="land" d="'+BUNDLE.land+'"/>'];
+  parts.push(buildFeatureSVG(scale));
 
   var anyDot=false, totalRegion=0;
   reg.zones.forEach(function(zone){
@@ -421,6 +705,7 @@ function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {'
 function boot(mode){
   DECADES=buildDecades();
   renderRegionChips();
+  initLayerToggles();
   // décennie de départ = celle avec le plus d'événements (Europe occ.)
   var best=DECADES[0], bestN=-1;
   DECADES.forEach(function(d){
