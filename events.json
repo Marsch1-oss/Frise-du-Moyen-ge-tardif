@@ -1353,6 +1353,21 @@
     "lng": 11.8957
   },
   {
+    "id": 1767,
+    "titre": "Bataille de Dimbos",
+    "date": 1303,
+    "zones": [
+      "Byzance",
+      "Ottomans"
+    ],
+    "type": 4,
+    "description": "La bataille de Dimbos[1],[2] s'est déroulée en 1303 entre l'armée ottomane dirigée par Osman Ier et l'armée byzantine dirigée par Progonos Sgouros et Andronic II Paléologue. \nAprès la victoire de la bataille de Bapheus en 1302, les gazis turcs de toutes les parties de l’Anatolie ont commencé à attaquer les territoires byzantins. L’empereur byzantin Andronic II Paléologue tenta de former une alliance avec les Mongols ilkhanides contre la menace ottomane. incapable de défendre ses frontières, il décida d’attaquer les Ottomans avec sa propre armée.\nLa bataille n’est connue que par des traditions ultérieures qui incluent des éléments semi-légendaires, et reflète donc probablement plus de tradition folklorique que les événements historiques réels. Selon Théodore Spandounès, « Dimbos » (en grec) ou « Dinboz » (dérivé de din bozmak, « changement de foi ») a été la première ville byzantine à tomber aux Ottomans. Le chroniqueur du XVe siècle Aşıkpaşazade, s’est inspiré d’une autre bataille près de Koyunhisar d’autres chroniques et les a déplacés dans les environs de Dimbos pour former son récit de la « bataille de Dinboz ».\n\nL’armée anatolienne de l’Empire byzantin était composée des forces de garnisons locales cantonnées à Adranos (Orhaneli moderne), Bidnos, Kestel (village moderne Erdoğan) et à Kete (village moderne d’Ürünlü)[4]. En 1303, l’armée byzantine commandé par Progonos Sgouros avança vers Yenişehir, poste ottoman au nord-est de Bursa. Osman les a battus près de la passe de Dimbos sur le chemin de Yenişehir. Au cours de la bataille, les deux camps ont subi de lourdes pertes. Les gouverneurs de Kestel et de Dimbos furent parmi les pertes.\nLe gouverneur de Kestel tenta de s’échapper du fort voisin de Lopardion (Uluabat moderne). Mais Osman l’arrêta et le fit exécuter plus tard devant le fort qui s’est par la suite rendu.",
+    "image": "",
+    "theme": "guerre",
+    "lat": 40.2626,
+    "lng": 29.6522
+  },
+  {
     "id": 87,
     "titre": "Halles aux draps d'Ypres",
     "date": 1304,

@@ -2915,6 +2915,22 @@ function showParcoursResults(p) {
 }
 
 
+/* ── Navigation vers la carte : transmet la période actuellement affichée
+     (année en vue annuelle, décennie en vue décennale/siècle/ensemble)
+     pour que carte.html s'ouvre au bon endroit plutôt que sur la décennie
+     la plus peuplée par défaut. ── */
+function goToCarte() {
+  var params = new URLSearchParams();
+  if (currentLevel === 4 && currentYear) {
+    params.set('year', currentYear);
+  } else if (currentDecade !== undefined && currentDecade !== null) {
+    params.set('decade', currentDecade);
+  } else if (currentCentury !== undefined && currentCentury !== null) {
+    params.set('decade', currentCentury);
+  }
+  window.location.href = 'carte.html' + (params.toString() ? '?' + params.toString() : '');
+}
+
 function goHome() {
   /* Réinitialise complètement la frise */
   var _sa = document.getElementById('sticky-axis');

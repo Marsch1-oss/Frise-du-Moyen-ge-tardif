@@ -130,6 +130,10 @@
         border-left:3px solid var(--gold);padding:0.5rem 0.9rem;background:rgba(154,107,26,0.06);border-radius:0 6px 6px 0}
   .src-tag{position:absolute;top:0.5rem;right:0.7rem;font-size:0.66rem;color:var(--ink-muted);font-style:italic;
            background:rgba(251,246,233,0.8);padding:0.1rem 0.45rem;border-radius:4px;pointer-events:none}
+  .back-to-full{position:absolute;top:0.5rem;left:0.7rem;z-index:5;font-family:'Crimson Pro',serif;
+           font-size:0.78rem;padding:0.28rem 0.75rem;border:1px solid var(--border-dark);border-radius:20px;
+           background:rgba(251,246,233,0.92);color:var(--ink);cursor:pointer;transition:all 0.15s}
+  .back-to-full:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
 </style>
 </head>
 <body>
@@ -168,6 +172,7 @@
     <div>
       <div class="map-wrap" id="map-wrap">
         <div class="src-tag">Fond : Natural Earth</div>
+        <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="map-empty" id="map-empty" style="display:none"></div>
       </div>
@@ -276,6 +281,9 @@ function renderMap(){
 
   var anyDot=false, totalRegion=0;
   reg.zones.forEach(function(zone){
+    /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
+       pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
+    if(state.selZone && state.selZone!==zone) return;
     var c=BUNDLE.centroids[zone];
     if(!c) return;
     var evs=eventsFor(zone, currentRange());
@@ -338,6 +346,7 @@ function renderMap(){
     emptyEl.style.display='flex';
     emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.';
   } else { emptyEl.style.display='none'; }
+  document.getElementById('back-to-full').style.display = state.selZone ? 'block' : 'none';
 
   renderNonGeo();
 }
@@ -399,6 +408,10 @@ function selectZone(zone){
   });
 }
 function clearZoom(){ state.zoomView=null; renderMap(); }
+function deselectZone(){
+  state.selZone=null; state.zoomView=null;
+  renderMap(); resetPanel();
+}
 
 /* ---- Fiche (prototype). En intégration : appeler ton openModal() -------- */
 function openFiche(id){
@@ -500,12 +513,15 @@ function boot(mode){
   slider.addEventListener('input', function(){ setYear(+slider.value); });
   renderRegionChips();
   renderModeChips();
-  // décennie de départ = celle avec le plus d'événements (Europe occ.)
-  var best=DECADES[0], bestN=-1;
-  DECADES.forEach(function(d){
-    var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=eventsFor(z,{a:d,b:d+9}).length; });
-    if(n>bestN){bestN=n;best=d;}
-  });
+
+  /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
+     depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
+     (au lieu de retomber par défaut sur la décennie la plus peuplée). ---- */
+  var params = new URLSearchParams(window.location.search);
+  var pYear   = parseInt(params.get('year'), 10);
+  var pDecade = parseInt(params.get('decade'), 10);
+  var pZone   = params.get('zone');
+
   document.getElementById('dec-prev').addEventListener('click', function(){
     if(state.mode==='year'){ setYear(state.year-1); return; }
     var i=DECADES.indexOf(state.decade); if(i>0) setDecade(DECADES[i-1]);
@@ -514,7 +530,30 @@ function boot(mode){
     if(state.mode==='year'){ setYear(state.year+1); return; }
     var i=DECADES.indexOf(state.decade); if(i<DECADES.length-1) setDecade(DECADES[i+1]);
   });
-  setDecade(best);
+
+  if(!isNaN(pYear)){
+    setMode('year');
+    setYear(pYear);
+  } else if(!isNaN(pDecade)){
+    var target = Math.floor(pDecade/10)*10;
+    if(DECADES.indexOf(target)===-1){
+      /* décennie hors bornes des données : on prend la plus proche disponible */
+      target = DECADES.reduce(function(prev, cur){
+        return Math.abs(cur-target) < Math.abs(prev-target) ? cur : prev;
+      }, DECADES[0]);
+    }
+    setDecade(target);
+  } else {
+    // pas de période demandée : décennie de départ = celle avec le plus d'événements (Europe occ.)
+    var best=DECADES[0], bestN=-1;
+    DECADES.forEach(function(d){
+      var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=eventsFor(z,{a:d,b:d+9}).length; });
+      if(n>bestN){bestN=n;best=d;}
+    });
+    setDecade(best);
+  }
+  if(pZone) selectZone(pZone);
+
   document.getElementById('status-note').innerHTML = (mode==='live')
     ? 'Données chargées depuis <b>events.json</b> en direct ('+EVENTS.length+' événements). Les fiches affichent le texte complet.'
     : 'Aperçu autonome : données <b>embarquées</b> ('+EVENTS.length+' événements, sans descriptions). Place ce fichier à côté de <b>events.json</b> pour le texte complet des fiches.';
