@@ -264,6 +264,7 @@
               <button type="button" id="no-theme-toggle" class="no-theme-toggle" onclick="toggleNoThemeList()">
                 &#128203; Fiches sans th&egrave;me (<span id="no-theme-count">0</span>) <span id="no-theme-caret">&#9656;</span>
               </button>
+              <small id="no-theme-auto-hint" style="color:#8a7a55;display:none;margin-top:0.3rem;"></small>
               <div id="no-theme-list" class="no-theme-list" style="display:none;"></div>
             </div>
           </div>
@@ -762,14 +763,30 @@ function deleteEvent() {
   toast('Événement supprimé');
 }
 
-/* ── Fiches sans thème : aide à proximité du tableau des thèmes ── */
+/* ── Fiches sans thème : aide à proximité du tableau des thèmes ──
+   "Sans thème" = ni thème manuel (evt.theme), ni thème détecté auto par mots-clés du titre.
+   On distingue par ailleurs les fiches qui n'ont qu'un thème auto-détecté (non validé). */
 function getNoThemeEvents() {
-  return events.filter(function(e) { return !e.theme; })
+  return events.filter(function(e) { return !detectTheme(e); })
+               .slice().sort(function(a, b) { return a.date - b.date; });
+}
+function getAutoOnlyThemeEvents() {
+  return events.filter(function(e) { return !e.theme && detectTheme(e); })
                .slice().sort(function(a, b) { return a.date - b.date; });
 }
 function refreshNoTheme() {
   var c = document.getElementById('no-theme-count');
   if (c) c.textContent = getNoThemeEvents().length;
+  var hint = document.getElementById('no-theme-auto-hint');
+  if (hint) {
+    var autoCount = getAutoOnlyThemeEvents().length;
+    if (autoCount > 0) {
+      hint.textContent = '\u2139\uFE0F ' + autoCount + ' fiche(s) suppl\u00e9mentaire(s) n\'ont qu\'un th\u00e8me d\u00e9tect\u00e9 automatiquement (non valid\u00e9 manuellement).';
+      hint.style.display = 'block';
+    } else {
+      hint.style.display = 'none';
+    }
+  }
   var box = document.getElementById('no-theme-list');
   if (box && box.style.display === 'block') renderNoThemeList();
 }
