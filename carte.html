@@ -92,6 +92,13 @@
   .map-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
              font-style:italic;color:var(--ink-muted);font-size:0.95rem;pointer-events:none;text-align:center;padding:1rem}
 
+  #hover-preview{display:none;position:absolute;z-index:30;pointer-events:none;
+                 background:var(--parchment-lt);border:1.5px solid var(--border-dark);border-radius:6px;
+                 box-shadow:0 4px 16px rgba(30,18,6,0.35);padding:0.35rem;max-width:170px}
+  #hover-preview img{display:block;width:100%;max-height:120px;object-fit:cover;border-radius:3px}
+  #hover-preview .hp-title{font-size:0.72rem;color:var(--ink-soft);margin-top:0.3rem;line-height:1.25;
+                            font-family:'Crimson Pro',serif}
+
   .nongeo-banner{margin-top:0.6rem;font-size:0.82rem;color:var(--ink-soft);background:rgba(154,107,26,0.1);
                  border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.7rem}
   .nongeo-banner b{color:var(--gold)}
@@ -182,6 +189,7 @@
         <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="map-empty" id="map-empty" style="display:none"></div>
+        <div id="hover-preview"></div>
       </div>
       <div class="nongeo-banner" id="nongeo" style="display:none"></div>
     </div>
@@ -338,7 +346,7 @@ function renderMap(){
   var parts=['<path class="land" d="'+BUNDLE.land+'"/>'];
   if(state.layers.borders && BUNDLE.borders){
     var bd = BUNDLE.borders[currentBorderPeriod()];
-    if(bd) parts.push('<path class="border-line" d="'+bd+'"/>');
+    if(bd) parts.push('<path class="border-line" d="'+bd+'" style="fill:none;stroke:#8b6a4a;stroke-width:1.1;stroke-dasharray:3 2.4;opacity:0.6;vector-effect:non-scaling-stroke"/>');
   }
   if(state.layers.relief && BUNDLE.relief){
     var reliefSw = scale*0.011;
@@ -358,13 +366,14 @@ function renderMap(){
           var tipx=px+dx/len*amp*0.7, tipy=py+dy/len*amp*0.7;
           parts.push('<path class="relief-tick" d="M'+ax.toFixed(1)+','+ay.toFixed(1)+
                       'L'+tipx.toFixed(1)+','+tipy.toFixed(1)+
-                      'L'+bx.toFixed(1)+','+by.toFixed(1)+'" stroke-width="'+reliefSw.toFixed(2)+'"/>');
+                      'L'+bx.toFixed(1)+','+by.toFixed(1)+
+                      '" style="fill:none;stroke:#6b5637;stroke-linecap:round;opacity:0.7;stroke-width:'+reliefSw.toFixed(2)+'"/>');
         }
       }
     });
   }
   if(state.layers.rivers && BUNDLE.rivers){
-    parts.push('<path class="river-line" d="'+BUNDLE.rivers+'"/>');
+    parts.push('<path class="river-line" d="'+BUNDLE.rivers+'" style="fill:none;stroke:#4a708f;stroke-width:1.1;opacity:0.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke"/>');
   }
 
   var anyDot=false, totalRegion=0;
@@ -407,14 +416,18 @@ function renderMap(){
           );
         }
       });
-      /* Les événements sans coordonnées restent regroupés sur le centroïde de la zone */
+      /* Les événements sans coordonnées restent regroupés près du centroïde de la zone,
+         légèrement décalés pour ne pas se superposer à un événement géolocalisé qui
+         coïnciderait avec ce même centroïde (ex. capitale = centroïde de la zone). */
       if(noloc>0){
         var rr=rBase*(1+Math.min(0.9, Math.sqrt(noloc)/6));
+        var offAng = -2.3, offDist = rBase*2.1;
+        var ncx = c.x + Math.cos(offAng)*offDist, ncy = c.y + Math.sin(offAng)*offDist;
         parts.push(
           '<g class="pastille-g sel" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+noloc+' sans position précise">'+
-            '<circle class="pastille nocoord" cx="'+c.x+'" cy="'+c.y+'" r="'+rr.toFixed(1)+'"></circle>'+
-            '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
-            '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
+            '<circle class="pastille nocoord" cx="'+ncx.toFixed(1)+'" cy="'+ncy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
+            '<text class="pastille-num" x="'+ncx.toFixed(1)+'" y="'+ncy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
+            '<text class="pastille-lbl" x="'+ncx.toFixed(1)+'" y="'+(ncy+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
           '</g>'
         );
       }
@@ -439,11 +452,14 @@ function renderMap(){
     g.addEventListener('click', function(){ selectZone(zone); });
     g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();selectZone(zone);} });
   });
-  // interactions : points précis -> ouverture de la fiche
+  // interactions : points précis -> ouverture de la fiche + aperçu image au survol
   Array.prototype.forEach.call(svg.querySelectorAll('.point-g'), function(g){
     var id=+g.getAttribute('data-id');
     g.addEventListener('click', function(){ openFiche(id); });
     g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();openFiche(id);} });
+    g.addEventListener('mouseenter', function(evt){ showHoverImage(id, evt); });
+    g.addEventListener('mousemove', function(evt){ positionHoverImage(evt); });
+    g.addEventListener('mouseleave', hideHoverImage);
   });
   // interactions : clusters d'événements proches -> zoom sur le groupe
   Array.prototype.forEach.call(svg.querySelectorAll('.cluster-g'), function(g){
@@ -533,6 +549,31 @@ function clearZoom(){ state.zoomView=null; state.clusterZoomView=null; renderMap
 function deselectZone(){
   state.selZone=null; state.zoomView=null;
   renderMap(); resetPanel();
+}
+
+/* ---- Aperçu image au survol (mode live uniquement, si la fiche a une image) --- */
+function showHoverImage(id, evt){
+  var full = LIVE && LIVE[id];
+  if(!full || !full.image) return;
+  var el = document.getElementById('hover-preview');
+  el.innerHTML = '<img src="'+full.image+'" alt="">'+
+                 (full.titre ? '<div class="hp-title">'+escapeHtml(full.titre)+'</div>' : '');
+  el.style.display='block';
+  positionHoverImage(evt);
+}
+function positionHoverImage(evt){
+  var el = document.getElementById('hover-preview');
+  if(el.style.display!=='block') return;
+  var wrap = document.getElementById('map-wrap');
+  var rect = wrap.getBoundingClientRect();
+  var x = evt.clientX - rect.left + 16, y = evt.clientY - rect.top + 16;
+  if(x + 180 > rect.width) x = evt.clientX - rect.left - 190;
+  if(y + 160 > rect.height) y = evt.clientY - rect.top - 170;
+  el.style.left = Math.max(4,x)+'px';
+  el.style.top = Math.max(4,y)+'px';
+}
+function hideHoverImage(){
+  document.getElementById('hover-preview').style.display='none';
 }
 
 /* ---- Fiche (prototype). En intégration : appeler ton openModal() -------- */
