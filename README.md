@@ -53,9 +53,9 @@ Ouvrez `events.json` et ajoutez une entrée en respectant ce format :
 }
 ```
 
-**Zones disponibles** : `France`, `Angleterre`, `Empire`, `Ibérique`, `Italie`, `Orient`
+**Zones disponibles ** : `France`, `Angleterre`, `Empire`, `Ibérique`, `Italie`, `Orient`
 
-**Ajouter une image** :
+**Ajouter une image ** :
 1. Créez un dossier `images/` dans votre dépôt GitHub
 2. Déposez-y votre image (jpg ou png)
 3. Dans events.json, renseignez `"image": "images/nom-du-fichier.jpg"`
