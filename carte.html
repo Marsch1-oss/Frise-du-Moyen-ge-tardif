@@ -186,6 +186,14 @@
       <span class="ctrl-label">Repères géographiques</span>
       <div class="chips" id="layer-chips"></div>
     </div>
+    <div class="ctrl-block">
+      <span class="ctrl-label">Thèmes</span>
+      <div class="chips" id="theme-chips"></div>
+    </div>
+    <div class="ctrl-block">
+      <span class="ctrl-label">Zones</span>
+      <div class="chips" id="zone-chips"></div>
+    </div>
   </div>
 
   <div class="stage">
@@ -237,6 +245,7 @@ function tryLoadLive(done){
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
         var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0,
+                  th:(e.theme||null),
                   lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
         LIVE[e.id] = e;
         return o;
@@ -244,6 +253,71 @@ function tryLoadLive(done){
       done('live');
     })
     .catch(function(){ done('embed'); });
+}
+
+/* ---- Thèmes iconographiques ---------------------------------------------
+   PORTÉ DEPUIS frise.js (THEME_DEFS / THEME_ORDER / THEME_KEYWORDS / detectTheme).
+   ⚠ Garder ces trois structures synchronisées avec frise.js pour éviter toute
+   divergence de classement entre la frise et la carte. ------------------- */
+var THEME_DEFS = {
+  'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
+  'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
+  'religion':    { icon: '\u271D\uFE0F',     label: 'Religion' },
+  'revolte':     { icon: '\uD83D\uDD25',     label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC',     label: 'Diplomatie' },
+  'economie':    { icon: '\uD83E\uDE99',     label: 'Économie' },
+  'societe':     { icon: '\uD83E\uDDD1',     label: 'Société' },
+  'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
+  'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
+  'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
+  'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+};
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+var THEME_KEYWORDS = {
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
+};
+var activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
+var hiddenZones  = {};   /* zones décochées de la région courante ; vide = toutes visibles */
+
+/* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
+   (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
+   même logique que detectTheme(evt) de frise.js, adaptée aux noms de champs. */
+function detectThemeSlim(e){
+  if(e.th && THEME_DEFS[e.th]) return e.th;
+  var txt=(e.t||'').toLowerCase();
+  for(var i=0;i<THEME_ORDER.length;i++){
+    var kws=THEME_KEYWORDS[THEME_ORDER[i]];
+    if(!kws) continue;
+    for(var k=0;k<kws.length;k++){
+      if(txt.indexOf(kws[k])!==-1) return THEME_ORDER[i];
+    }
+  }
+  return null;
+}
+function eventMatchesTheme(e){
+  var anyActive=false;
+  for(var t in activeThemes){ if(activeThemes[t]){ anyActive=true; break; } }
+  if(!anyActive) return true;
+  var th = (e._th!==undefined) ? e._th : (e._th = detectThemeSlim(e));
+  return !!(th && activeThemes[th]);
+}
+function anyThemeActive(){
+  for(var t in activeThemes){ if(activeThemes[t]) return true; }
+  return false;
+}
+function anyZoneHidden(){
+  for(var z in hiddenZones){ if(hiddenZones[z]) return true; }
+  return false;
 }
 
 /* ---- Décennies présentes dans les données ------------------------------- */
@@ -287,6 +361,7 @@ function eventsFor(zone, range){
   return EVENTS.filter(function(e){
     if(e.z.indexOf(zone)===-1) return false;
     if(typeof e.d!=='number') return false;
+    if(!eventMatchesTheme(e)) return false;   /* filtre thématique global */
     var f=(typeof e.df==='number')?e.df:e.d;
     return e.d<=b && f>=a;
   }).sort(function(x,y){return x.d-y.d;});
@@ -434,6 +509,8 @@ function renderMap(){
     /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
        pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
     if(state.selZone && state.selZone!==zone) return;
+    /* Filtre de zones : zone décochée dans les contrôles -> pastille masquée */
+    if(hiddenZones[zone]) return;
     var c=BUNDLE.centroids[zone];
     if(!c) return;
     var evs=eventsFor(zone, currentRange());
@@ -562,7 +639,8 @@ function renderMap(){
   var emptyEl=document.getElementById('map-empty');
   if(!anyDot){
     emptyEl.style.display='flex';
-    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.';
+    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
+      +((anyThemeActive()||anyZoneHidden()) ? ' Des filtres (thèmes ou zones) sont actifs.' : '');
   } else { emptyEl.style.display='none'; }
   document.getElementById('back-to-full').style.display = state.selZone ? 'block' : 'none';
 
@@ -712,7 +790,9 @@ function renderRegionChips(){
   Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
     c.addEventListener('click', function(){
       state.region=BUNDLE.regions.find(function(r){return r.id===c.getAttribute('data-id');});
-      state.selZone=null; state.zoomView=null; renderRegionChips(); renderMap(); resetPanel();
+      state.selZone=null; state.zoomView=null;
+      hiddenZones={};            /* les zones diffèrent d'une région à l'autre */
+      renderRegionChips(); renderZoneChips(); renderMap(); resetPanel();
     });
   });
 }
@@ -737,6 +817,68 @@ function renderLayerChips(){
       var id=c.getAttribute('data-layer');
       state.layers[id] = !state.layers[id];
       renderLayerChips(); renderMap();
+    });
+  });
+}
+/* ---- Filtres : thèmes et zones ------------------------------------------ */
+/* Après un changement de filtre : re-rendre la carte ; si une zone est
+   sélectionnée, repasser par selectZone pour que la liste du panneau et le
+   zoom sur les points restent cohérents avec le nouveau sous-ensemble. */
+function refreshAfterFilter(){
+  if(state.selZone && !hiddenZones[state.selZone]){
+    selectZone(state.selZone);
+  } else {
+    if(state.selZone && hiddenZones[state.selZone]){
+      /* la zone sélectionnée vient d'être décochée : on sort du drill-down */
+      state.selZone=null; state.zoomView=null; state.spiderfied=null;
+      resetPanel();
+    }
+    renderMap();
+  }
+}
+function renderThemeChips(){
+  var box=document.getElementById('theme-chips');
+  /* Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé) */
+  var keys=THEME_ORDER.slice().reverse();
+  for(var key in THEME_DEFS){ if(keys.indexOf(key)===-1) keys.push(key); }
+  var html=keys.map(function(t){
+    var d=THEME_DEFS[t];
+    return '<button class="chip'+(activeThemes[t]?' active':'')+'" data-theme="'+t+'" title="'+d.label+'">'+d.icon+' '+d.label+'</button>';
+  }).join('');
+  if(anyThemeActive()){
+    html+='<button class="chip" data-theme-reset="1" title="Effacer le filtre thématique">&#10005; Tous</button>';
+  }
+  box.innerHTML=html;
+  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){
+      if(c.getAttribute('data-theme-reset')){ activeThemes={}; }
+      else {
+        var t=c.getAttribute('data-theme');
+        activeThemes[t]=!activeThemes[t];
+      }
+      renderThemeChips();
+      refreshAfterFilter();
+    });
+  });
+}
+function renderZoneChips(){
+  var box=document.getElementById('zone-chips');
+  var html=state.region.zones.map(function(z){
+    return '<button class="chip'+(hiddenZones[z]?'':' active')+'" data-zone-chip="'+escapeHtml(z)+'">'+escapeHtml(z)+'</button>';
+  }).join('');
+  if(anyZoneHidden()){
+    html+='<button class="chip" data-zone-reset="1" title="Réafficher toutes les zones">&#10005; Toutes</button>';
+  }
+  box.innerHTML=html;
+  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){
+      if(c.getAttribute('data-zone-reset')){ hiddenZones={}; }
+      else {
+        var z=c.getAttribute('data-zone-chip');
+        hiddenZones[z]=!hiddenZones[z];
+      }
+      renderZoneChips();
+      refreshAfterFilter();
     });
   });
 }
@@ -796,6 +938,8 @@ function boot(mode){
   renderRegionChips();
   renderModeChips();
   renderLayerChips();
+  renderThemeChips();
+  renderZoneChips();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
