@@ -486,6 +486,59 @@ function shieldSVG(zone, x, y, s){
   '</g>';
 }
 
+/* ---- Rendu d'un ensemble de points localisés : points isolés, clusters de
+   points proches, éclatement en éventail du cluster actif. Utilisé par le
+   drill-down d'une zone ET par le mode thématique global (tous les points du
+   thème affichés d'un coup). Alimente state.currentClusters pour que les
+   interactions de clic/survol des clusters restent cohérentes. ------------- */
+function renderLocatedPoints(ptsArr, parts, rDot, fNum){
+  var clusterThresh = rDot*3.2;
+  var clusters = clusterPoints(ptsArr, clusterThresh);
+  state.currentClusters = clusters;
+  clusters.forEach(function(group, ci){
+    if(group.length===1){
+      var p=group[0], e=p.e;
+      parts.push(
+        '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
+          '<circle class="point'+(e.r?' reign':'')+'" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
+        '</g>'
+      );
+    } else if(ci===state.spiderfied){
+      /* Éclatement en éventail : chaque événement du groupe devient une pastille
+         individuelle disposée en cercle, reliée au centre par un fin trait,
+         pour pouvoir les distinguer et les consulter même quand ils partagent
+         une position quasi identique (ex. plusieurs événements à Paris). */
+      var scx=0, scy=0; group.forEach(function(p){scx+=p.x;scy+=p.y;}); scx/=group.length; scy/=group.length;
+      var legR = rDot*(3.4+Math.min(group.length,14)*0.55);
+      group.forEach(function(p, gi){
+        var ang = (2*Math.PI*gi/group.length) - Math.PI/2;
+        var sx=scx+Math.cos(ang)*legR, sy=scy+Math.sin(ang)*legR;
+        var e=p.e;
+        parts.push('<line class="spider-leg" x1="'+scx.toFixed(1)+'" y1="'+scy.toFixed(1)+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'"/>');
+        parts.push(
+          '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
+            '<circle class="point'+(e.r?' reign':'')+'" cx="'+sx.toFixed(1)+'" cy="'+sy.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
+          '</g>'
+        );
+      });
+      parts.push(
+        '<g class="cluster-g spider-hub" data-cluster-idx="'+ci+'" tabindex="0" role="button" aria-label="Refermer le groupe">'+
+          '<circle class="pastille hub" cx="'+scx.toFixed(1)+'" cy="'+scy.toFixed(1)+'" r="'+(rDot*0.9).toFixed(1)+'"></circle>'+
+        '</g>'
+      );
+    } else {
+      var cx=0, cy=0; group.forEach(function(p){cx+=p.x;cy+=p.y;}); cx/=group.length; cy/=group.length;
+      var rr = rDot*(1.5+Math.min(1.1, Math.sqrt(group.length)/4));
+      parts.push(
+        '<g class="cluster-g" data-cluster-idx="'+ci+'" tabindex="0" role="button" aria-label="'+group.length+' événements très proches, cliquer pour les distinguer">'+
+          '<circle class="pastille" cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
+          '<text class="pastille-num" x="'+cx.toFixed(1)+'" y="'+cy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+group.length+'</text>'+
+        '</g>'
+      );
+    }
+  });
+}
+
 /* ---- Rendu de la carte -------------------------------------------------- */
 function renderMap(){
   var svg=document.getElementById('map'), reg=state.region;
@@ -505,6 +558,14 @@ function renderMap(){
   }
 
   var anyDot=false, totalRegion=0;
+  /* Mode thématique global : quand au moins un thème est coché et qu'aucune
+     zone n'est sélectionnée, on n'affiche plus les pastilles agrégées par
+     zone mais directement TOUS les points géolocalisés du thème sur toute la
+     carte (dédupliqués : un événement multi-zones = un seul point). Les
+     événements sans coordonnées restent signalés par une petite pastille
+     dorée « sans position » près du centroïde de leur zone. */
+  var themeGlobal = anyThemeActive() && !state.selZone;
+  var gPts=[], gSeen={};
   reg.zones.forEach(function(zone){
     /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
        pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
@@ -524,51 +585,7 @@ function renderMap(){
       var located = evs.filter(hasCoord);
       var noloc   = evs.length - located.length;
       var ptsArr = located.map(function(e){ return { x:projX(e.lng), y:projY(e.lat), e:e }; });
-      var clusterThresh = rDot*3.2;
-      var clusters = clusterPoints(ptsArr, clusterThresh);
-      state.currentClusters = clusters;
-      clusters.forEach(function(group, ci){
-        if(group.length===1){
-          var p=group[0], e=p.e;
-          parts.push(
-            '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
-              '<circle class="point'+(e.r?' reign':'')+'" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
-            '</g>'
-          );
-        } else if(ci===state.spiderfied){
-          /* Éclatement en éventail : chaque événement du groupe devient une pastille
-             individuelle disposée en cercle, reliée au centre par un fin trait,
-             pour pouvoir les distinguer et les consulter même quand ils partagent
-             une position quasi identique (ex. plusieurs événements à Paris). */
-          var scx=0, scy=0; group.forEach(function(p){scx+=p.x;scy+=p.y;}); scx/=group.length; scy/=group.length;
-          var legR = rDot*(3.4+Math.min(group.length,14)*0.55);
-          group.forEach(function(p, gi){
-            var ang = (2*Math.PI*gi/group.length) - Math.PI/2;
-            var sx=scx+Math.cos(ang)*legR, sy=scy+Math.sin(ang)*legR;
-            var e=p.e;
-            parts.push('<line class="spider-leg" x1="'+scx.toFixed(1)+'" y1="'+scy.toFixed(1)+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'"/>');
-            parts.push(
-              '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
-                '<circle class="point'+(e.r?' reign':'')+'" cx="'+sx.toFixed(1)+'" cy="'+sy.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
-              '</g>'
-            );
-          });
-          parts.push(
-            '<g class="cluster-g spider-hub" data-cluster-idx="'+ci+'" tabindex="0" role="button" aria-label="Refermer le groupe">'+
-              '<circle class="pastille hub" cx="'+scx.toFixed(1)+'" cy="'+scy.toFixed(1)+'" r="'+(rDot*0.9).toFixed(1)+'"></circle>'+
-            '</g>'
-          );
-        } else {
-          var cx=0, cy=0; group.forEach(function(p){cx+=p.x;cy+=p.y;}); cx/=group.length; cy/=group.length;
-          var rr = rDot*(1.5+Math.min(1.1, Math.sqrt(group.length)/4));
-          parts.push(
-            '<g class="cluster-g" data-cluster-idx="'+ci+'" tabindex="0" role="button" aria-label="'+group.length+' événements très proches, cliquer pour les distinguer">'+
-              '<circle class="pastille" cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
-              '<text class="pastille-num" x="'+cx.toFixed(1)+'" y="'+cy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+group.length+'</text>'+
-            '</g>'
-          );
-        }
-      });
+      renderLocatedPoints(ptsArr, parts, rDot, fNum);
       /* Les événements sans coordonnées restent regroupés près du centroïde de la zone,
          légèrement décalés pour ne pas se superposer à un événement géolocalisé qui
          coïnciderait avec ce même centroïde (ex. capitale = centroïde de la zone). */
@@ -581,6 +598,27 @@ function renderMap(){
             '<circle class="pastille nocoord" cx="'+ncx.toFixed(1)+'" cy="'+ncy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
             '<text class="pastille-num" x="'+ncx.toFixed(1)+'" y="'+ncy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
             '<text class="pastille-lbl" x="'+ncx.toFixed(1)+'" y="'+(ncy+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
+          '</g>'
+        );
+      }
+    } else if(themeGlobal){
+      /* Filtre thématique actif : pas de pastille agrégée. Les points
+         géolocalisés sont collectés ici puis rendus après la boucle. */
+      var nl=0;
+      evs.forEach(function(e){
+        if(hasCoord(e)){
+          if(!gSeen[e.id]){ gSeen[e.id]=true; gPts.push({ x:projX(e.lng), y:projY(e.lat), e:e }); }
+        } else nl++;
+      });
+      if(nl>0){
+        var rr2=rBase*0.7*(1+Math.min(0.9, Math.sqrt(nl)/6));
+        var offAng2 = -2.3, offDist2 = rBase*1.6;
+        var ncx2 = c.x + Math.cos(offAng2)*offDist2, ncy2 = c.y + Math.sin(offAng2)*offDist2;
+        parts.push(
+          '<g class="pastille-g" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+nl+' sans position précise, cliquer pour voir la zone">'+
+            '<circle class="pastille nocoord" cx="'+ncx2.toFixed(1)+'" cy="'+ncy2.toFixed(1)+'" r="'+rr2.toFixed(1)+'"></circle>'+
+            '<text class="pastille-num" x="'+ncx2.toFixed(1)+'" y="'+ncy2.toFixed(1)+'" font-size="'+(fNum*0.8).toFixed(1)+'">'+nl+'</text>'+
+            '<text class="pastille-lbl" x="'+ncx2.toFixed(1)+'" y="'+(ncy2+rr2+fLbl*0.7).toFixed(1)+'" font-size="'+(fLbl*0.72).toFixed(1)+'">'+zone+' · sans position</text>'+
           '</g>'
         );
       }
@@ -602,6 +640,11 @@ function renderMap(){
       }
     }
   });
+  /* Mode thématique : rendu global des points collectés (clustering commun
+     à toute la carte, indépendant des frontières de zones). */
+  if(themeGlobal && gPts.length){
+    renderLocatedPoints(gPts, parts, rDot, fNum);
+  }
   svg.innerHTML=parts.join('');
 
   // interactions : pastilles de zone -> sélection/drill-down
@@ -642,7 +685,10 @@ function renderMap(){
     emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
       +((anyThemeActive()||anyZoneHidden()) ? ' Des filtres (thèmes ou zones) sont actifs.' : '');
   } else { emptyEl.style.display='none'; }
-  document.getElementById('back-to-full').style.display = state.selZone ? 'block' : 'none';
+  /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
+     après un zoom sur un cluster en mode thématique global (sinon plus
+     aucun moyen de dézoomer depuis la carte). */
+  document.getElementById('back-to-full').style.display = (state.selZone || state.zoomView) ? 'block' : 'none';
 
   renderNonGeo();
 }
@@ -717,7 +763,7 @@ function refreshZoomButtons(){
 }
 function clearZoom(){ state.zoomView=null; state.clusterZoomView=null; renderMap(); refreshZoomButtons(); }
 function deselectZone(){
-  state.selZone=null; state.zoomView=null; state.spiderfied=null;
+  state.selZone=null; state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
   renderMap(); resetPanel();
 }
 
@@ -830,9 +876,12 @@ function refreshAfterFilter(){
   } else {
     if(state.selZone && hiddenZones[state.selZone]){
       /* la zone sélectionnée vient d'être décochée : on sort du drill-down */
-      state.selZone=null; state.zoomView=null; state.spiderfied=null;
+      state.selZone=null;
       resetPanel();
     }
+    /* Hors drill-down, un changement de filtre invalide les clusters courants
+       (indices périmés) : on referme l'éventail et on revient à la vue région. */
+    state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
     renderMap();
   }
 }
