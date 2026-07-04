@@ -190,10 +190,6 @@
       <span class="ctrl-label">Thèmes</span>
       <div class="chips" id="theme-chips"></div>
     </div>
-    <div class="ctrl-block">
-      <span class="ctrl-label">Zones</span>
-      <div class="chips" id="zone-chips"></div>
-    </div>
   </div>
 
   <div class="stage">
@@ -283,12 +279,13 @@ var THEME_KEYWORDS = {
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
   'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
 var activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
-var hiddenZones  = {};   /* zones décochées de la région courante ; vide = toutes visibles */
+/* NOTE : le filtre zone par zone (hiddenZones) a été retiré de la carte —
+   la navigation interzones passe par le sélecteur de régions ; les zones
+   restent filtrables individuellement sur la frise (frise.js). */
 
 /* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
    (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
@@ -314,10 +311,6 @@ function eventMatchesTheme(e){
 }
 function anyThemeActive(){
   for(var t in activeThemes){ if(activeThemes[t]) return true; }
-  return false;
-}
-function anyZoneHidden(){
-  for(var z in hiddenZones){ if(hiddenZones[z]) return true; }
   return false;
 }
 
@@ -571,8 +564,6 @@ function renderMap(){
     /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
        pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
     if(state.selZone && state.selZone!==zone) return;
-    /* Filtre de zones : zone décochée dans les contrôles -> pastille masquée */
-    if(hiddenZones[zone]) return;
     var c=BUNDLE.centroids[zone];
     if(!c) return;
     var evs=eventsFor(zone, currentRange());
@@ -684,7 +675,7 @@ function renderMap(){
   if(!anyDot){
     emptyEl.style.display='flex';
     emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
-      +((anyThemeActive()||anyZoneHidden()) ? ' Des filtres (thèmes ou zones) sont actifs.' : '');
+      +(anyThemeActive() ? ' Un filtre thématique est actif.' : '');
   } else { emptyEl.style.display='none'; }
   /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
      après un zoom sur un cluster en mode thématique global (sinon plus
@@ -838,8 +829,7 @@ function renderRegionChips(){
     c.addEventListener('click', function(){
       state.region=BUNDLE.regions.find(function(r){return r.id===c.getAttribute('data-id');});
       state.selZone=null; state.zoomView=null;
-      hiddenZones={};            /* les zones diffèrent d'une région à l'autre */
-      renderRegionChips(); renderZoneChips(); renderMap(); resetPanel();
+      renderRegionChips(); renderMap(); resetPanel();
     });
   });
 }
@@ -872,14 +862,9 @@ function renderLayerChips(){
    sélectionnée, repasser par selectZone pour que la liste du panneau et le
    zoom sur les points restent cohérents avec le nouveau sous-ensemble. */
 function refreshAfterFilter(){
-  if(state.selZone && !hiddenZones[state.selZone]){
+  if(state.selZone){
     selectZone(state.selZone);
   } else {
-    if(state.selZone && hiddenZones[state.selZone]){
-      /* la zone sélectionnée vient d'être décochée : on sort du drill-down */
-      state.selZone=null;
-      resetPanel();
-    }
     /* Hors drill-down, un changement de filtre invalide les clusters courants
        (indices périmés) : on referme l'éventail et on revient à la vue région. */
     state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
@@ -907,27 +892,6 @@ function renderThemeChips(){
         activeThemes[t]=!activeThemes[t];
       }
       renderThemeChips();
-      refreshAfterFilter();
-    });
-  });
-}
-function renderZoneChips(){
-  var box=document.getElementById('zone-chips');
-  var html=state.region.zones.map(function(z){
-    return '<button class="chip'+(hiddenZones[z]?'':' active')+'" data-zone-chip="'+escapeHtml(z)+'">'+escapeHtml(z)+'</button>';
-  }).join('');
-  if(anyZoneHidden()){
-    html+='<button class="chip" data-zone-reset="1" title="Réafficher toutes les zones">&#10005; Toutes</button>';
-  }
-  box.innerHTML=html;
-  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
-    c.addEventListener('click', function(){
-      if(c.getAttribute('data-zone-reset')){ hiddenZones={}; }
-      else {
-        var z=c.getAttribute('data-zone-chip');
-        hiddenZones[z]=!hiddenZones[z];
-      }
-      renderZoneChips();
       refreshAfterFilter();
     });
   });
@@ -989,7 +953,6 @@ function boot(mode){
   renderModeChips();
   renderLayerChips();
   renderThemeChips();
-  renderZoneChips();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
