@@ -150,6 +150,17 @@
            font-size:0.78rem;padding:0.28rem 0.75rem;border:1px solid var(--border-dark);border-radius:20px;
            background:rgba(251,246,233,0.92);color:var(--ink);cursor:pointer;transition:all 0.15s}
   .back-to-full:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+  /* ---- Règnes : cartouches associés aux pastilles (vue d'ensemble) et
+     bandeau en haut de carte (drill-down d'une zone) --------------------- */
+  .regne-g{pointer-events:none}
+  .regne-cart{fill:var(--parchment-lt);stroke:var(--gold);stroke-width:1;opacity:0.92;vector-effect:non-scaling-stroke}
+  .regne-txt{fill:var(--ink);font-family:'IM Fell English',serif;font-style:italic;text-anchor:middle;pointer-events:none}
+  #reign-banner{display:none;position:absolute;top:0.5rem;left:50%;transform:translateX(-50%);z-index:6;
+    max-width:68%;text-align:center;background:var(--parchment-lt);border:1px solid var(--gold);border-radius:6px;
+    padding:0.25rem 0.8rem;font-family:'IM Fell English',serif;font-style:italic;color:var(--ink);
+    font-size:0.85rem;line-height:1.35;box-shadow:0 1px 4px rgba(42,28,14,0.25);pointer-events:none}
+  #reign-banner .rb-zone{font-style:normal;font-weight:bold;letter-spacing:.03em;margin-right:0.4rem}
+  #reign-banner .rb-dates{color:var(--ink-muted);font-size:0.75rem}
 </style>
 </head>
 <body>
@@ -201,6 +212,7 @@
       <div class="map-wrap" id="map-wrap">
         <div class="src-tag">Fond : Natural Earth</div>
         <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
+        <div id="reign-banner" aria-live="polite"></div>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="map-empty" id="map-empty" style="display:none"></div>
         <div id="hover-preview"></div>
@@ -234,7 +246,7 @@ var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si d
 var LIVE = null;                     // map id -> event complet (si live)
 var state = { region: BUNDLE.regions[0], mode:'decade', decade: null, year: null, selZone: null, zoomView: null,
               zoneZoomView: null, clusterZoomView: null, currentClusters: null, spiderfied: null,
-              layers: { rivers:false, borders:false, shields:false } };
+              layers: { rivers:false, borders:false, shields:false, regnes:true } };
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
 function tryLoadLive(done){
@@ -436,6 +448,71 @@ function eventsFor(zone, range){
     var f=(typeof e.df==='number')?e.df:e.d;
     return e.d<=b && f>=a;
   }).sort(function(x,y){return x.d-y.d;});
+}
+
+/* ---- Règnes couvrant la plage courante pour une zone ---------------------
+   Événements marqués regne:true dans events.json (champ r sur l'objet
+   allégé de la carte). Volontairement indépendant du filtre thématique :
+   le règne est un repère de contexte, pas un événement filtrable. -------- */
+function reignsFor(zone, range){
+  var a=range.a, b=range.b;
+  return EVENTS.filter(function(e){
+    if(!e.r) return false;
+    if(e.z.indexOf(zone)===-1) return false;
+    if(typeof e.d!=='number') return false;
+    var f=(typeof e.df==='number')?e.df:e.d;
+    return e.d<=b && f>=a;
+  }).sort(function(x,y){return x.d-y.d;});
+}
+function reignDates(e){
+  return e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
+}
+
+/* ---- Cartouche « règne » sous la pastille d'une zone (vue d'ensemble).
+   pointer-events désactivés (classe .regne-g) pour ne pas gêner le clic sur
+   la pastille. En drill-down de zone, ce cartouche n'est PAS dessiné : le
+   règne passe dans le bandeau #reign-banner en haut de la carte (voir
+   renderReignBanner) afin de ne masquer aucune pastille d'événement. ----- */
+function reignCartoucheSVG(zone, c, r, fLbl){
+  var reigns = reignsFor(zone, currentRange());
+  if(!reigns.length) return '';
+  var names = reigns.map(function(e){ return e.t; });
+  var lines = (names.length>3)
+    ? names.slice(0,2).concat(['+'+(names.length-2)+' autres'])
+    : names;
+  var fR = fLbl*0.82, maxChars = 28;
+  lines = lines.map(function(t){ return t.length>maxChars ? t.slice(0,maxChars-1)+'…' : t; });
+  var wMax=0; lines.forEach(function(t){ if(t.length>wMax) wMax=t.length; });
+  var w = wMax*fR*0.5 + fR*1.6;
+  var h = fR*(1.6 + (lines.length-1)*1.25);
+  var x = c.x - w/2;
+  var y = c.y + r + fLbl*1.45;          /* juste sous le libellé de la zone */
+  var bits=['<g class="regne-g" aria-hidden="true">',
+    '<rect class="regne-cart" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+
+      '" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="'+(fR*0.4).toFixed(1)+'"/>'];
+  lines.forEach(function(t,i){
+    bits.push('<text class="regne-txt" x="'+c.x.toFixed(1)+'" y="'+
+      (y + fR*1.15 + i*fR*1.25).toFixed(1)+'" font-size="'+fR.toFixed(1)+'">'+escapeHtml(t)+'</text>');
+  });
+  bits.push('</g>');
+  return bits.join('');
+}
+
+/* ---- Bandeau « règne » en haut de la carte (drill-down d'une zone) -------
+   Surimpression HTML centrée, pointer-events:none : n'intercepte aucun clic
+   et ne masque pas les pastilles (contrairement à un cartouche SVG qui
+   suivrait la pastille de zone en vue zoomée). -------------------------- */
+function renderReignBanner(){
+  var el=document.getElementById('reign-banner');
+  if(!el) return;
+  if(!state.selZone || !state.layers.regnes){ el.style.display='none'; return; }
+  var reigns=reignsFor(state.selZone, currentRange());
+  if(!reigns.length){ el.style.display='none'; return; }
+  el.innerHTML='<span class="rb-zone">&#9819; '+escapeHtml(state.selZone)+'</span>'+
+    reigns.map(function(e){
+      return escapeHtml(e.t)+' <span class="rb-dates">('+reignDates(e)+')</span>';
+    }).join(' · ');
+  el.style.display='block';
 }
 
 /* ---- Regroupement de points géographiquement très proches --------------- */
@@ -702,6 +779,10 @@ function renderMap(){
         var sx = c.x - r - 20*ssc*0.75, sy = c.y - r - 24*ssc*0.9;
         parts.push(shieldSVG(zone, sx, sy, ssc));
       }
+      /* Cartouche « règne » sous la pastille (calque Règnes, vue d'ensemble) */
+      if(state.layers.regnes){
+        parts.push(reignCartoucheSVG(zone, c, r, fLbl));
+      }
     }
   });
   /* Mode thématique : rendu global des points collectés (clustering commun
@@ -754,6 +835,7 @@ function renderMap(){
      aucun moyen de dézoomer depuis la carte). */
   document.getElementById('back-to-full').style.display = (state.selZone || state.zoomView) ? 'block' : 'none';
 
+  renderReignBanner();
   renderNonGeo();
 }
 
@@ -918,7 +1000,7 @@ function renderModeChips(){
 }
 function renderLayerChips(){
   var box=document.getElementById('layer-chips');
-  var defs=[{id:'rivers',label:'Fleuves'},{id:'borders',label:'Frontières'},{id:'shields',label:'Blasons'}];
+  var defs=[{id:'rivers',label:'Fleuves'},{id:'borders',label:'Frontières'},{id:'shields',label:'Blasons'},{id:'regnes',label:'Règnes'}];
   box.innerHTML=defs.map(function(l){
     return '<button class="chip'+(state.layers[l.id]?' active':'')+'" data-layer="'+l.id+'">'+l.label+'</button>';
   }).join('');
