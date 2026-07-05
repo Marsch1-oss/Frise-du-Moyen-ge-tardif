@@ -124,6 +124,7 @@
   .ev-date{font-family:'IM Fell English',serif;color:var(--red);font-size:0.82rem;flex:0 0 auto;min-width:3.4rem}
   .ev-title{font-size:0.9rem;color:var(--ink-soft);line-height:1.35}
   .ev-row .reigntag{font-size:0.62rem;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:0 0.25rem;margin-left:0.3rem}
+  .ev-row .zonetag{font-size:0.62rem;color:var(--ink-muted);border:1px solid var(--border);border-radius:4px;padding:0 0.25rem;margin-left:0.3rem;white-space:nowrap}
 
   /* ── Fiche (modale légère) ── */
   #fiche-overlay{display:none;position:fixed;inset:0;background:rgba(15,9,3,0.55);z-index:100;
@@ -603,26 +604,14 @@ function renderMap(){
         );
       }
     } else if(themeGlobal){
-      /* Filtre thématique actif : pas de pastille agrégée. Les points
-         géolocalisés sont collectés ici puis rendus après la boucle. */
-      var nl=0;
+      /* Filtre thématique actif : pas de pastille agrégée, et plus aucun
+         relais vers le drill-down de zone. Les points géolocalisés sont
+         collectés ici puis rendus après la boucle ; les événements sans
+         coordonnées ne sont plus matérialisés sur la carte (ils restent
+         listés dans le panneau latéral, sans point rouge de localisation). */
       evs.forEach(function(e){
-        if(hasCoord(e)){
-          if(!gSeen[e.id]){ gSeen[e.id]=true; gPts.push({ x:projX(e.lng), y:projY(e.lat), e:e }); }
-        } else nl++;
+        if(hasCoord(e) && !gSeen[e.id]){ gSeen[e.id]=true; gPts.push({ x:projX(e.lng), y:projY(e.lat), e:e }); }
       });
-      if(nl>0){
-        var rr2=rBase*0.7*(1+Math.min(0.9, Math.sqrt(nl)/6));
-        var offAng2 = -2.3, offDist2 = rBase*1.6;
-        var ncx2 = c.x + Math.cos(offAng2)*offDist2, ncy2 = c.y + Math.sin(offAng2)*offDist2;
-        parts.push(
-          '<g class="pastille-g" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+nl+' sans position précise, cliquer pour voir la zone">'+
-            '<circle class="pastille nocoord" cx="'+ncx2.toFixed(1)+'" cy="'+ncy2.toFixed(1)+'" r="'+rr2.toFixed(1)+'"></circle>'+
-            '<text class="pastille-num" x="'+ncx2.toFixed(1)+'" y="'+ncy2.toFixed(1)+'" font-size="'+(fNum*0.8).toFixed(1)+'">'+nl+'</text>'+
-            '<text class="pastille-lbl" x="'+ncx2.toFixed(1)+'" y="'+(ncy2+rr2+fLbl*0.7).toFixed(1)+'" font-size="'+(fLbl*0.72).toFixed(1)+'">'+zone+' · sans position</text>'+
-          '</g>'
-        );
-      }
     } else {
       /* Vue d'ensemble : une pastille agrégée par zone */
       var n=evs.length;
@@ -694,12 +683,71 @@ function renderMap(){
   renderNonGeo();
 }
 
+/* ---- Panneau en mode thématique global ----------------------------------
+   Quand au moins un thème est coché et qu'aucune zone n'est sélectionnée,
+   le panneau latéral liste TOUTES les fiches de la période, toutes zones
+   confondues (dédupliquées : un événement multi-zones = une seule ligne),
+   sans quitter la carte interzones. Un clic sur une ligne ouvre la fiche.
+   NOTE : logique propre à carte.html, pas de pendant dans frise.js/admin.html. */
+function renderThemePanel(){
+  var range=currentRange(), seen={}, all=[];
+  var zonesAll = state.region.zones.concat(BUNDLE.nonGeo);
+  zonesAll.forEach(function(zone){
+    if(hiddenZones[zone]) return;
+    eventsFor(zone, range).forEach(function(e){
+      if(!seen[e.id]){ seen[e.id]=true; all.push(e); }
+    });
+  });
+  all.sort(function(x,y){return x.d-y.d;});
+  var labels=[];
+  THEME_ORDER.forEach(function(t){
+    if(activeThemes[t] && THEME_DEFS[t]) labels.push(THEME_DEFS[t].icon+' '+THEME_DEFS[t].label);
+  });
+  document.getElementById('panel-title').textContent =
+    'Toute la carte'+(labels.length?' · '+labels.join(', '):'');
+  var loc=all.filter(hasCoord).length;
+  document.getElementById('panel-count').textContent =
+    periodLabel()+' · '+all.length+' évén.'+(loc?(' · '+loc+' localisé'+(loc>1?'s':'')):'');
+  var list=document.getElementById('panel-list');
+  if(!all.length){
+    list.innerHTML='<div class="panel-empty">Aucun événement pour ce filtre dans cette période.</div>';
+    return;
+  }
+  list.innerHTML=zoomButtonsHtml()+all.map(function(e){
+    var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
+    var pin=hasCoord(e)?'<span class="locdot" title="Localisé précisément"></span>':'';
+    var zl=(e.z && e.z.length)
+      ? '<span class="zonetag">'+escapeHtml(e.z.slice(0,2).join(' · '))+(e.z.length>2?'…':'')+'</span>'
+      : '';
+    return '<div class="ev-row" data-id="'+e.id+'">'+
+      '<span class="ev-date">'+dd+'</span>'+
+      '<span class="ev-title">'+pin+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+zl+'</span>'+
+    '</div>';
+  }).join('');
+  Array.prototype.forEach.call(list.querySelectorAll('.ev-row'), function(row){
+    row.addEventListener('click', function(){ openFiche(+row.getAttribute('data-id')); });
+  });
+}
+/* Choisit l'état du panneau hors drill-down : liste thématique globale si un
+   thème est actif, sinon message d'invite. Remplace resetPanel() partout où
+   un changement de période/région/filtre réinitialise la vue. */
+function syncPanel(){
+  if(anyThemeActive() && !state.selZone) renderThemePanel();
+  else resetPanel();
+}
+
 /* ---- Bandeau zones non localisées (Monde, Atlas) ------------------------ */
 function renderNonGeo(){
   var el=document.getElementById('nongeo'), bits=[];
+  /* En mode thématique global, plus aucun relais vers le format zone :
+     le bandeau devient purement informatif (les fiches correspondantes
+     sont déjà listées dans le panneau latéral, toutes zones confondues). */
+  var infoOnly = anyThemeActive() && !state.selZone;
   BUNDLE.nonGeo.forEach(function(zone){
     var n=eventsFor(zone, currentRange()).length;
-    if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
+    if(n>0) bits.push(infoOnly
+      ? '<span><b>'+zone+'</b> ('+n+')</span>'
+      : '<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
   });
   if(bits.length){
     el.style.display='block';
@@ -765,7 +813,7 @@ function refreshZoomButtons(){
 function clearZoom(){ state.zoomView=null; state.clusterZoomView=null; renderMap(); refreshZoomButtons(); }
 function deselectZone(){
   state.selZone=null; state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
-  renderMap(); resetPanel();
+  renderMap(); syncPanel();
 }
 
 /* ---- Liste des titres au survol d'un groupe non éclaté -------------------- */
@@ -839,7 +887,7 @@ function renderRegionChips(){
       state.region=BUNDLE.regions.find(function(r){return r.id===c.getAttribute('data-id');});
       state.selZone=null; state.zoomView=null;
       hiddenZones={};            /* les zones diffèrent d'une région à l'autre */
-      renderRegionChips(); renderZoneChips(); renderMap(); resetPanel();
+      renderRegionChips(); renderZoneChips(); renderMap(); syncPanel();
     });
   });
 }
@@ -878,12 +926,12 @@ function refreshAfterFilter(){
     if(state.selZone && hiddenZones[state.selZone]){
       /* la zone sélectionnée vient d'être décochée : on sort du drill-down */
       state.selZone=null;
-      resetPanel();
     }
     /* Hors drill-down, un changement de filtre invalide les clusters courants
        (indices périmés) : on referme l'éventail et on revient à la vue région. */
     state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
     renderMap();
+    syncPanel();
   }
 }
 function renderThemeChips(){
@@ -952,7 +1000,7 @@ function setYear(y){
   document.getElementById('year-slider').value=y;
   document.getElementById('dec-prev').disabled = (y<=YEARRANGE.min);
   document.getElementById('dec-next').disabled = (y>=YEARRANGE.max);
-  renderMap(); resetPanel();
+  renderMap(); syncPanel();
 }
 function renderDecadeChips(){
   var box=document.getElementById('decade-chips');
@@ -968,7 +1016,7 @@ function setDecade(d){
   document.getElementById('dec-current').textContent=d+'–'+(d+9);
   document.getElementById('dec-prev').disabled = (DECADES.indexOf(d)<=0);
   document.getElementById('dec-next').disabled = (DECADES.indexOf(d)>=DECADES.length-1);
-  renderDecadeChips(); renderMap(); resetPanel();
+  renderDecadeChips(); renderMap(); syncPanel();
 }
 function resetPanel(){
   document.getElementById('panel-title').textContent='Sélectionnez une pastille';
