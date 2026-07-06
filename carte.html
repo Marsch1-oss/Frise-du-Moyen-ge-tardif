@@ -201,10 +201,6 @@
       <span class="ctrl-label">Thèmes</span>
       <div class="chips" id="theme-chips"></div>
     </div>
-    <div class="ctrl-block">
-      <span class="ctrl-label">Zones</span>
-      <div class="chips" id="zone-chips"></div>
-    </div>
   </div>
 
   <div class="stage">
@@ -300,7 +296,6 @@ var THEME_KEYWORDS = {
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
 var activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
-var hiddenZones  = {};   /* zones décochées de la région courante ; vide = toutes visibles */
 
 /* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
    (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
@@ -326,10 +321,6 @@ function eventMatchesTheme(e){
 }
 function anyThemeActive(){
   for(var t in activeThemes){ if(activeThemes[t]) return true; }
-  return false;
-}
-function anyZoneHidden(){
-  for(var z in hiddenZones){ if(hiddenZones[z]) return true; }
   return false;
 }
 
@@ -468,33 +459,134 @@ function reignDates(e){
   return e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
 }
 
-/* ---- Cartouche « règne » sous la pastille d'une zone (vue d'ensemble).
-   pointer-events désactivés (classe .regne-g) pour ne pas gêner le clic sur
-   la pastille. En drill-down de zone, ce cartouche n'est PAS dessiné : le
-   règne passe dans le bandeau #reign-banner en haut de la carte (voir
-   renderReignBanner) afin de ne masquer aucune pastille d'événement. ----- */
-function reignCartoucheSVG(zone, c, r, fLbl){
+/* ---- Cartouches « règnes » accolés aux pastilles (vue d'ensemble). -------
+   Nouvelle présentation : le cartouche est ACCOLÉ à la pastille (à droite,
+   centré verticalement) au lieu d'être empilé sous le libellé, ce qui
+   évitait mal les pastilles voisines dans les régions denses. Un système
+   d'évitement de collisions essaie dans l'ordre : droite, gauche, dessus,
+   dessous (dernier recours = ancien comportement). Un cartouche ne recouvre
+   jamais la pastille ou le libellé d'une autre zone, ni un cartouche déjà
+   posé. pointer-events désactivés (classe .regne-g) pour ne pas gêner le
+   clic sur les pastilles. En drill-down de zone, aucun cartouche n'est
+   dessiné : le règne passe dans le bandeau #reign-banner (renderReignBanner)
+   afin de ne masquer aucune pastille d'événement. ----------------------- */
+function reignCartoucheLayout(zone, fLbl, compact){
   var reigns = reignsFor(zone, currentRange());
-  if(!reigns.length) return '';
+  if(!reigns.length) return null;
   var names = reigns.map(function(e){ return e.t; });
-  var lines = (names.length>3)
-    ? names.slice(0,2).concat(['+'+(names.length-2)+' autres'])
-    : names;
-  var fR = fLbl*0.82, maxChars = 28;
-  lines = lines.map(function(t){ return t.length>maxChars ? t.slice(0,maxChars-1)+'…' : t; });
+  var lines, maxChars;
+  if(compact){
+    /* Vue très dense : une seule ligne courte (1er règne + compteur) */
+    maxChars = 20;
+    var t0 = names[0].length>maxChars ? names[0].slice(0,maxChars-1)+'…' : names[0];
+    lines = [ names.length>1 ? t0+' +'+(names.length-1) : t0 ];
+  } else {
+    maxChars = 28;
+    lines = (names.length>3)
+      ? names.slice(0,2).concat(['+'+(names.length-2)+' autres'])
+      : names;
+    lines = lines.map(function(t){ return t.length>maxChars ? t.slice(0,maxChars-1)+'…' : t; });
+  }
+  var fR = fLbl*0.82;
   var wMax=0; lines.forEach(function(t){ if(t.length>wMax) wMax=t.length; });
-  var w = wMax*fR*0.5 + fR*1.6;
-  var h = fR*(1.6 + (lines.length-1)*1.25);
-  var x = c.x - w/2;
-  var y = c.y + r + fLbl*1.45;          /* juste sous le libellé de la zone */
-  var bits=['<g class="regne-g" aria-hidden="true">',
-    '<rect class="regne-cart" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+
-      '" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="'+(fR*0.4).toFixed(1)+'"/>'];
-  lines.forEach(function(t,i){
-    bits.push('<text class="regne-txt" x="'+c.x.toFixed(1)+'" y="'+
-      (y + fR*1.15 + i*fR*1.25).toFixed(1)+'" font-size="'+fR.toFixed(1)+'">'+escapeHtml(t)+'</text>');
+  return {
+    lines: lines, fR: fR,
+    w: wMax*fR*0.5 + fR*1.6,
+    h: fR*(1.6 + (lines.length-1)*1.25)
+  };
+}
+function rectHitsCircle(rx, ry, rw, rh, cx, cy, cr){
+  var px = Math.max(rx, Math.min(cx, rx+rw));
+  var py = Math.max(ry, Math.min(cy, ry+rh));
+  return Math.hypot(cx-px, cy-py) < cr;
+}
+function rectsOverlap(a, b){
+  return a.x < b.x+b.w && a.x+a.w > b.x && a.y < b.y+b.h && a.y+a.h > b.y;
+}
+function renderReignCartouches(pastilles, fLbl){
+  var placed=[], bits=[];
+  /* Obstacles fixes : disques des pastilles (avec marge) + rectangles
+     approximatifs des libellés de zones sous chaque pastille. */
+  var labelRects = pastilles.map(function(p){
+    var lw = p.zone.length*fLbl*0.58;
+    return { x:p.x-lw/2, y:p.y+p.r, w:lw, h:fLbl*1.35 };
   });
-  bits.push('</g>');
+  /* Vue très dense (ex. « Europe & Méditerranée », 20 zones) : cartouches
+     compacts sur une seule ligne pour laisser une chance au placement. */
+  var compact = pastilles.length > 12;
+  function freeAt(x, y, w, h, pi){
+    var cand={ x:x, y:y, w:w, h:h };
+    for(var j=0; j<pastilles.length; j++){
+      var q=pastilles[j];
+      /* propre pastille : simple contact autorisé (marge nulle) ;
+         pastilles voisines : marge de sécurité. */
+      var marge = (j===pi) ? 0 : fLbl*0.3;
+      if(rectHitsCircle(x, y, w, h, q.x, q.y, q.r+marge)) return false;
+      if(rectsOverlap(cand, labelRects[j])) return false;
+    }
+    for(var k=0; k<placed.length; k++){
+      if(rectsOverlap(cand, placed[k])) return false;
+    }
+    return true;
+  }
+  function candidatesFor(p, w, h, g0){
+    /* Positions candidates : accolé (droite, gauche, dessus, dessous), puis
+       diagonales, en anneaux de distance croissante. */
+    var cands=[];
+    [0, 1, 2, 3].forEach(function(ring){
+      var g = g0 + ring*fLbl*1.6;
+      var yBelow = p.y + p.r + fLbl*1.55 + ring*fLbl*1.6; /* sous le libellé */
+      cands.push({ x:p.x + p.r + g,     y:p.y - h/2 });          /* droite   */
+      cands.push({ x:p.x - p.r - g - w, y:p.y - h/2 });          /* gauche   */
+      cands.push({ x:p.x - w/2,         y:p.y - p.r - g - h });  /* dessus   */
+      cands.push({ x:p.x - w/2,         y:yBelow });             /* dessous  */
+      cands.push({ x:p.x + p.r*0.7 + g, y:p.y - p.r*0.7 - g - h }); /* NE    */
+      cands.push({ x:p.x - p.r*0.7 - g - w, y:p.y - p.r*0.7 - g - h }); /* NO */
+      cands.push({ x:p.x + p.r*0.7 + g, y:yBelow });             /* SE       */
+      cands.push({ x:p.x - p.r*0.7 - g - w, y:yBelow });         /* SO       */
+    });
+    return cands;
+  }
+  function tryPlace(p, pi, w, h, g0){
+    var cands=candidatesFor(p, w, h, g0);
+    for(var ci=0; ci<cands.length; ci++){
+      if(freeAt(cands[ci].x, cands[ci].y, w, h, pi)){
+        return { x:cands[ci].x, y:cands[ci].y, w:w, h:h };
+      }
+    }
+    return null;
+  }
+  pastilles.forEach(function(p, pi){
+    var lay = reignCartoucheLayout(p.zone, fLbl, compact);
+    if(!lay) return;
+    var g0=fLbl*0.35;
+    var rect = tryPlace(p, pi, lay.w, lay.h, g0);
+    if(!rect){
+      /* Zone enclavée : 2e essai avec un cartouche « mini » (nom raccourci)
+         qui a plus de chances de trouver une place. */
+      var reigns=reignsFor(p.zone, currentRange());
+      var t0=reigns[0].t;
+      var mini=(t0.length>10 ? t0.slice(0,9)+'…' : t0) +
+               (reigns.length>1 ? ' +'+(reigns.length-1) : '');
+      var fR=lay.fR;
+      lay={ lines:[mini], fR:fR, w:mini.length*fR*0.5+fR*1.6, h:fR*1.6 };
+      rect = tryPlace(p, pi, lay.w, lay.h, g0);
+    }
+    if(!rect){ /* dernier recours : dessous, sous le libellé de la zone */
+      rect={ x:p.x - lay.w/2, y:p.y + p.r + fLbl*1.55, w:lay.w, h:lay.h };
+    }
+    var w=lay.w, h=lay.h;
+    placed.push(rect);
+    var fR=lay.fR, cxT=rect.x+w/2;
+    bits.push('<g class="regne-g" aria-hidden="true">');
+    bits.push('<rect class="regne-cart" x="'+rect.x.toFixed(1)+'" y="'+rect.y.toFixed(1)+
+      '" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="'+(fR*0.4).toFixed(1)+'"/>');
+    lay.lines.forEach(function(t,i){
+      bits.push('<text class="regne-txt" x="'+cxT.toFixed(1)+'" y="'+
+        (rect.y + fR*1.15 + i*fR*1.25).toFixed(1)+'" font-size="'+fR.toFixed(1)+'">'+escapeHtml(t)+'</text>');
+    });
+    bits.push('</g>');
+  });
   return bits.join('');
 }
 
@@ -716,13 +808,11 @@ function renderMap(){
   /* Toponymes de repère : uniquement en mode thématique (points individuels),
      placés sous les points d'événements pour ne rien masquer. */
   if(themeGlobal){ parts.push(cityLabelsSVG(v)); }
-  var gPts=[], gSeen={};
+  var gPts=[], gSeen={}, overviewPastilles=[];
   reg.zones.forEach(function(zone){
     /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
        pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
     if(state.selZone && state.selZone!==zone) return;
-    /* Filtre de zones : zone décochée dans les contrôles -> pastille masquée */
-    if(hiddenZones[zone]) return;
     var c=BUNDLE.centroids[zone];
     if(!c) return;
     var evs=eventsFor(zone, currentRange());
@@ -779,16 +869,22 @@ function renderMap(){
         var sx = c.x - r - 20*ssc*0.75, sy = c.y - r - 24*ssc*0.9;
         parts.push(shieldSVG(zone, sx, sy, ssc));
       }
-      /* Cartouche « règne » sous la pastille (calque Règnes, vue d'ensemble) */
-      if(state.layers.regnes){
-        parts.push(reignCartoucheSVG(zone, c, r, fLbl));
-      }
+      /* Pastille mémorisée : les cartouches « règnes » sont dessinés après
+         la boucle (renderReignCartouches) pour pouvoir éviter les collisions
+         avec les pastilles et libellés des AUTRES zones. */
+      overviewPastilles.push({ zone:zone, x:c.x, y:c.y, r:r });
     }
   });
   /* Mode thématique : rendu global des points collectés (clustering commun
      à toute la carte, indépendant des frontières de zones). */
   if(themeGlobal && gPts.length){
     renderLocatedPoints(gPts, parts, rDot, fNum);
+  }
+  /* Cartouches « règnes » accolés (vue d'ensemble, calque Règnes) : rendus
+     en dernier, avec connaissance de TOUTES les pastilles pour l'évitement
+     de collisions. Dessinés au-dessus mais pointer-events:none. */
+  if(state.layers.regnes && overviewPastilles.length){
+    parts.push(renderReignCartouches(overviewPastilles, fLbl));
   }
   svg.innerHTML=parts.join('');
 
@@ -828,7 +924,7 @@ function renderMap(){
   if(!anyDot){
     emptyEl.style.display='flex';
     emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
-      +((anyThemeActive()||anyZoneHidden()) ? ' Des filtres (thèmes ou zones) sont actifs.' : '');
+      +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '');
   } else { emptyEl.style.display='none'; }
   /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
      après un zoom sur un cluster en mode thématique global (sinon plus
@@ -983,8 +1079,7 @@ function renderRegionChips(){
     c.addEventListener('click', function(){
       state.region=BUNDLE.regions.find(function(r){return r.id===c.getAttribute('data-id');});
       state.selZone=null; state.zoomView=null;
-      hiddenZones={};            /* les zones diffèrent d'une région à l'autre */
-      renderRegionChips(); renderZoneChips(); renderMap(); resetPanel();
+      renderRegionChips(); renderMap(); resetPanel();
     });
   });
 }
@@ -1017,14 +1112,9 @@ function renderLayerChips(){
    sélectionnée, repasser par selectZone pour que la liste du panneau et le
    zoom sur les points restent cohérents avec le nouveau sous-ensemble. */
 function refreshAfterFilter(){
-  if(state.selZone && !hiddenZones[state.selZone]){
+  if(state.selZone){
     selectZone(state.selZone);
   } else {
-    if(state.selZone && hiddenZones[state.selZone]){
-      /* la zone sélectionnée vient d'être décochée : on sort du drill-down */
-      state.selZone=null;
-      resetPanel();
-    }
     /* Hors drill-down, un changement de filtre invalide les clusters courants
        (indices périmés) : on referme l'éventail et on revient à la vue région. */
     state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
@@ -1057,27 +1147,11 @@ function renderThemeChips(){
     });
   });
 }
-function renderZoneChips(){
-  var box=document.getElementById('zone-chips');
-  var html=state.region.zones.map(function(z){
-    return '<button class="chip'+(hiddenZones[z]?'':' active')+'" data-zone-chip="'+escapeHtml(z)+'">'+escapeHtml(z)+'</button>';
-  }).join('');
-  if(anyZoneHidden()){
-    html+='<button class="chip" data-zone-reset="1" title="Réafficher toutes les zones">&#10005; Toutes</button>';
-  }
-  box.innerHTML=html;
-  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
-    c.addEventListener('click', function(){
-      if(c.getAttribute('data-zone-reset')){ hiddenZones={}; }
-      else {
-        var z=c.getAttribute('data-zone-chip');
-        hiddenZones[z]=!hiddenZones[z];
-      }
-      renderZoneChips();
-      refreshAfterFilter();
-    });
-  });
-}
+/* NOTE ARCHITECTURE : le filtre « Zones » (chips + hiddenZones) a été
+   SUPPRIMÉ de la carte à la demande de Marc. Il faisait doublon avec le
+   drill-down : cliquer sur une pastille de zone affiche directement les
+   fiches de cette zone. Le filtrage par zone reste disponible dans la
+   frise (frise.js). Ne pas réintroduire ici sans nécessité avérée. */
 function setMode(mode){
   if(state.mode===mode) return;
   state.mode=mode;
@@ -1133,7 +1207,6 @@ function renderThemePanel(){
     .map(function(t){return THEME_DEFS[t].icon+' '+THEME_DEFS[t].label;});
   var range=currentRange(), seen={}, evs=[];
   state.region.zones.forEach(function(zone){
-    if(hiddenZones[zone]) return;
     eventsFor(zone, range).forEach(function(e){
       if(!seen[e.id]){ seen[e.id]=true; evs.push(e); }
     });
@@ -1173,7 +1246,6 @@ function boot(mode){
   renderModeChips();
   renderLayerChips();
   renderThemeChips();
-  renderZoneChips();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
