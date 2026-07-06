@@ -172,6 +172,26 @@
     font-size:0.85rem;line-height:1.35;box-shadow:0 1px 4px rgba(42,28,14,0.25);pointer-events:none}
   #reign-banner .rb-zone{font-style:normal;font-weight:bold;letter-spacing:.03em;margin-right:0.4rem}
   #reign-banner .rb-dates{color:var(--ink-muted);font-size:0.75rem}
+
+  /* ---- Bandeau « synthèse » au-dessus de la carte (drill-down de zone,
+     mode décennie uniquement). Contenu : syntheses.json, clé "Zone|décennie",
+     partagé avec frise.js (⚠ garder le format des clés synchronisé). ------ */
+  #synthese-banner{display:none;margin-bottom:0.7rem;background:var(--parchment-lt);
+    border:1.5px solid var(--border-dark);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+  #synthese-banner .sb-head{display:flex;align-items:baseline;gap:0.6rem;padding:0.55rem 0.9rem;
+    background:var(--parchment-dk);border-bottom:1px solid var(--border);cursor:pointer}
+  #synthese-banner .sb-prefix{font-size:0.68rem;letter-spacing:.06em;text-transform:uppercase;
+    color:#fff;background:var(--gold);border-radius:4px;padding:0.1rem 0.45rem;flex:0 0 auto}
+  #synthese-banner .sb-title{font-family:'IM Fell English',serif;font-size:0.98rem;color:var(--ink);line-height:1.25}
+  #synthese-banner .sb-period{font-size:0.74rem;color:var(--ink-muted);font-style:italic;flex:0 0 auto;margin-left:auto}
+  #synthese-banner .sb-toggle{flex:0 0 auto;background:none;border:1px solid var(--border-dark);border-radius:14px;
+    font:inherit;font-size:0.72rem;color:var(--ink-soft);padding:0.08rem 0.6rem;cursor:pointer}
+  #synthese-banner .sb-toggle:hover{background:var(--ink);color:var(--parchment)}
+  #synthese-banner .sb-body{max-height:300px;overflow-y:auto;padding:0.7rem 1rem}
+  #synthese-banner .sb-body p{font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:0.6rem}
+  #synthese-banner.collapsed .sb-body{display:none}
+  #synthese-banner .synth-link{text-decoration:none;font-size:0.78rem;margin:0 0.1rem;cursor:pointer}
+  #synthese-banner .synth-link:hover{filter:brightness(1.3)}
 </style>
 </head>
 <body>
@@ -216,6 +236,15 @@
 
   <div class="stage">
     <div>
+      <div id="synthese-banner" aria-live="polite">
+        <div class="sb-head" id="sb-head" title="Déplier / replier la synthèse">
+          <span class="sb-prefix">&#128214; Synth&egrave;se</span>
+          <span class="sb-title" id="sb-title"></span>
+          <span class="sb-period" id="sb-period"></span>
+          <button class="sb-toggle" id="sb-toggle" type="button" aria-expanded="true">Replier &#9650;</button>
+        </div>
+        <div class="sb-body" id="sb-body"></div>
+      </div>
       <div class="map-wrap" id="map-wrap">
         <div class="src-tag">Fond : Natural Earth</div>
         <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
@@ -272,6 +301,20 @@ function tryLoadLive(done){
       done('live');
     })
     .catch(function(){ done('embed'); });
+}
+
+/* ---- Synthèses décennales (syntheses.json, partagé avec frise.js) --------
+   Clé "Zone|décennie" -> { titre, texte, auto? }. Le texte peut contenir des
+   références [[id]] vers des événements : elles sont rendues comme des liens
+   🔎 ouvrant la fiche correspondante. Chargement tolérant : si le fichier est
+   absent (aperçu autonome), la fonctionnalité est simplement inactive.
+   ⚠ Format des clés et syntaxe [[id]] à garder synchronisés avec frise.js. */
+var SYNTHESES = {};
+function tryLoadSyntheses(){
+  fetch('syntheses.json?v=' + Date.now())
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(data){ SYNTHESES = data || {}; renderSyntheseBanner(); })
+    .catch(function(){ SYNTHESES = {}; });
 }
 
 /* ---- Thèmes iconographiques ---------------------------------------------
@@ -616,6 +659,62 @@ function renderReignBanner(){
       return escapeHtml(e.t)+' <span class="rb-dates">('+reignDates(e)+')</span>';
     }).join(' · ');
   el.style.display='block';
+}
+
+/* ---- Bandeau « synthèse » au-dessus de la carte --------------------------
+   Affiché uniquement en drill-down de zone ET en mode décennie, quand une
+   synthèse rédigée existe pour la clé "Zone|décennie". L'état replié/déplié
+   est conservé pendant la session (une synthèse longue ne doit pas repousser
+   la carte hors écran : le corps est borné et défilant). */
+var _synthCollapsed = false;
+function synthParagraphHtml(text){
+  /* Découpe sur [[id]] ; texte échappé, retours ligne simples -> <br>,
+     [[id]] connu -> lien 🔎 (data-id), [[id]] inconnu -> ignoré. */
+  return text.split(/(\[\[\d+\]\])/).map(function(part){
+    var m = part.match(/^\[\[(\d+)\]\]$/);
+    if(m){
+      var id = +m[1];
+      var evt = null;
+      for(var i=0;i<EVENTS.length;i++){ if(EVENTS[i].id===id){ evt=EVENTS[i]; break; } }
+      if(!evt) return '';
+      return '<a class="synth-link" data-id="'+id+'" role="button" tabindex="0" title="Ouvrir la fiche : '+
+             escapeHtml(evt.t)+' ('+evt.d+')">&#128270;</a>';
+    }
+    return escapeHtml(part).replace(/\n/g,'<br>');
+  }).join('');
+}
+function renderSyntheseBanner(){
+  var banner=document.getElementById('synthese-banner');
+  if(!banner) return;
+  var show = state.selZone && state.mode==='decade' && state.decade!==null;
+  var s = show ? SYNTHESES[state.selZone+'|'+state.decade] : null;
+  if(!s){ banner.style.display='none'; return; }
+  document.getElementById('sb-title').textContent = s.titre || (state.selZone+' \u00b7 '+state.decade);
+  document.getElementById('sb-period').textContent =
+    (s.auto ? '(brouillon auto) ' : '') + state.selZone + ' \u2014 ' + state.decade + '-' + (state.decade+9);
+  var body=document.getElementById('sb-body');
+  body.innerHTML = (s.texte||'').split(/\n\n+/).map(function(para){
+    return para.trim() ? '<p>'+synthParagraphHtml(para.trim())+'</p>' : '';
+  }).join('');
+  Array.prototype.forEach.call(body.querySelectorAll('.synth-link'), function(a){
+    var id=+a.getAttribute('data-id');
+    a.addEventListener('click', function(ev){ ev.preventDefault(); openFiche(id); });
+    a.addEventListener('keydown', function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); openFiche(id); } });
+  });
+  banner.classList.toggle('collapsed', _synthCollapsed);
+  refreshSynthToggle();
+  banner.style.display='block';
+}
+function refreshSynthToggle(){
+  var t=document.getElementById('sb-toggle');
+  if(!t) return;
+  t.innerHTML = _synthCollapsed ? 'D\u00e9plier \u25bc' : 'Replier \u25b2';
+  t.setAttribute('aria-expanded', String(!_synthCollapsed));
+}
+function toggleSynthese(){
+  _synthCollapsed = !_synthCollapsed;
+  document.getElementById('synthese-banner').classList.toggle('collapsed', _synthCollapsed);
+  refreshSynthToggle();
 }
 
 /* ---- Regroupement de points géographiquement très proches --------------- */
@@ -984,6 +1083,7 @@ function renderMap(){
   document.getElementById('back-to-full').style.display = (state.selZone || state.zoomView) ? 'block' : 'none';
 
   renderReignBanner();
+  renderSyntheseBanner();
   renderNonGeo();
 }
 
@@ -1350,6 +1450,12 @@ function boot(mode){
     : 'Aperçu autonome : données <b>embarquées</b> ('+EVENTS.length+' événements, sans descriptions). Place ce fichier à côté de <b>events.json</b> pour le texte complet des fiches.';
 }
 tryLoadLive(boot);
+tryLoadSyntheses();
+(function(){
+  var t=document.getElementById('sb-toggle'), h=document.getElementById('sb-head');
+  if(t) t.addEventListener('click', function(ev){ ev.stopPropagation(); toggleSynthese(); });
+  if(h) h.addEventListener('click', toggleSynthese);
+})();
 </script>
 </body>
 </html>
