@@ -83,6 +83,10 @@
   .point-g:hover .point,.point-g:focus .point{fill:#c62828;stroke:var(--gold)}
   .point.reign{fill:var(--gold)}
   .point-g:hover .point.reign,.point-g:focus .point.reign{fill:#c08a2a}
+  /* Numérotation chronologique (drill-down de zone) : le rang de l'événement
+     dans l'ordre chronologique de la zone est inscrit dans le point. */
+  .point-ord{fill:#fff;font-family:'IM Fell English',serif;text-anchor:middle;dominant-baseline:central;
+             pointer-events:none;paint-order:stroke;stroke:rgba(30,18,6,0.45);stroke-width:0.6px}
   .dezoom{display:inline-block;margin:0.5rem 0.8rem 0.2rem;font-family:'Crimson Pro',serif;font-size:0.78rem;
           border:1.5px solid var(--gold);background:var(--parchment-lt);color:var(--gold);font-weight:700;
           border-radius:18px;padding:0.25rem 0.8rem;cursor:pointer}
@@ -124,6 +128,13 @@
   .ev-date{font-family:'IM Fell English',serif;color:var(--red);font-size:0.82rem;flex:0 0 auto;min-width:3.4rem}
   .ev-title{font-size:0.9rem;color:var(--ink-soft);line-height:1.35}
   .ev-row .reigntag{font-size:0.62rem;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:0 0.25rem;margin-left:0.3rem}
+  /* Badge de rang chronologique : reprend le code visuel des points de la
+     carte (rouge = localisé, doré tireté = sans position) pour faire le lien
+     visuel carte <-> liste. */
+  .ev-ord{flex:0 0 auto;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--red);color:#fff;
+          font-family:'IM Fell English',serif;font-size:0.68rem;display:inline-flex;align-items:center;
+          justify-content:center;align-self:center;border:1px solid var(--gold)}
+  .ev-ord.noloc{background:var(--gold);opacity:0.85;border:1px dashed #fff}
 
   /* ── Fiche (modale légère) ── */
   #fiche-overlay{display:none;position:fixed;inset:0;background:rgba(15,9,3,0.55);z-index:100;
@@ -731,18 +742,54 @@ function shieldSVG(zone, x, y, s){
    drill-down d'une zone ET par le mode thématique global (tous les points du
    thème affichés d'un coup). Alimente state.currentClusters pour que les
    interactions de clic/survol des clusters restent cohérentes. ------------- */
-function renderLocatedPoints(ptsArr, parts, rDot, fNum){
+function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
+  opts = opts || {};
+  /* Mode numéroté (drill-down de zone) : chaque point porte le rang
+     chronologique de son événement (p.ord). Conséquence assumée : les lieux
+     regroupant plusieurs événements sont éclatés en étoile D'OFFICE (sinon un
+     cluster « n » ne pourrait pas porter n numéros distincts). Le mode
+     thématique global conserve l'ancien comportement (clusters cliquables,
+     éventail à la demande via state.spiderfied). */
+  var numbered = !!opts.numbered;
   var clusterThresh = rDot*3.2;
   var clusters = clusterPoints(ptsArr, clusterThresh);
   state.currentClusters = clusters;
+  /* Rayon des points numérotés : légèrement agrandi pour la lisibilité du chiffre. */
+  var rN = rDot*1.7;
+  function ordFont(ord){ var s=String(ord).length; return rN*(s>=3?0.95:(s===2?1.15:1.4)); }
+  function numberedDot(x, y, e, ord){
+    return '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+ord+'. '+escapeHtml(e.t)+'">'+
+        '<circle class="point'+(e.r?' reign':'')+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rN.toFixed(1)+'"><title>'+ord+'. '+escapeHtml(e.t)+'</title></circle>'+
+        '<text class="point-ord" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" font-size="'+ordFont(ord).toFixed(1)+'">'+ord+'</text>'+
+      '</g>';
+  }
   clusters.forEach(function(group, ci){
     if(group.length===1){
       var p=group[0], e=p.e;
+      if(numbered){
+        parts.push(numberedDot(p.x, p.y, e, p.ord));
+        return;
+      }
       parts.push(
         '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
           '<circle class="point'+(e.r?' reign':'')+'" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
         '</g>'
       );
+    } else if(numbered){
+      /* Étoile d'office : le centre (moyeu discret, non interactif) marque la
+         position réelle du lieu ; les événements sont disposés en cercle dans
+         l'ordre chronologique (sens horaire depuis le haut), chacun avec son
+         numéro. */
+      var scx=0, scy=0; group.forEach(function(p){scx+=p.x;scy+=p.y;}); scx/=group.length; scy/=group.length;
+      var sorted = group.slice().sort(function(a,b){ return a.ord-b.ord; });
+      var legR = rN*(2.6+Math.min(sorted.length,14)*0.5);
+      parts.push('<circle class="pastille hub" style="pointer-events:none" cx="'+scx.toFixed(1)+'" cy="'+scy.toFixed(1)+'" r="'+(rDot*0.75).toFixed(1)+'"/>');
+      sorted.forEach(function(p, gi){
+        var ang = (2*Math.PI*gi/sorted.length) - Math.PI/2;
+        var sx=scx+Math.cos(ang)*legR, sy=scy+Math.sin(ang)*legR;
+        parts.push('<line class="spider-leg" x1="'+scx.toFixed(1)+'" y1="'+scy.toFixed(1)+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'"/>');
+        parts.push(numberedDot(sx, sy, p.e, p.ord));
+      });
     } else if(ci===state.spiderfied){
       /* Éclatement en éventail : chaque événement du groupe devient une pastille
          individuelle disposée en cercle, reliée au centre par un fin trait,
@@ -825,8 +872,13 @@ function renderMap(){
          pour être distingués à l'échelle actuelle (clic pour zoomer davantage). */
       var located = evs.filter(hasCoord);
       var noloc   = evs.length - located.length;
-      var ptsArr = located.map(function(e){ return { x:projX(e.lng), y:projY(e.lat), e:e }; });
-      renderLocatedPoints(ptsArr, parts, rDot, fNum);
+      /* Rang chronologique : evs est déjà trié par date (eventsFor). Le rang
+         couvre TOUS les événements de la zone (localisés ou non) afin que la
+         numérotation des points de la carte corresponde exactement aux badges
+         de la liste du panneau latéral (les rangs des événements sans
+         coordonnées sont simplement absents de la carte). */
+      var ptsArr = located.map(function(e){ return { x:projX(e.lng), y:projY(e.lat), e:e, ord:evs.indexOf(e)+1 }; });
+      renderLocatedPoints(ptsArr, parts, rDot, fNum, { numbered:true });
       /* Les événements sans coordonnées restent regroupés près du centroïde de la zone,
          légèrement décalés pour ne pas se superposer à un événement géolocalisé qui
          coïnciderait avec ce même centroïde (ex. capitale = centroïde de la zone). */
@@ -981,10 +1033,16 @@ function selectZone(zone){
     periodLabel()+' · '+tot+' évén.'+(loc?(' · '+loc+' localisé'+(loc>1?'s':'')):'');
   var list=document.getElementById('panel-list');
   if(!evs.length){ list.innerHTML='<div class="panel-empty">Aucun événement.</div>'; return; }
-  list.innerHTML=zoomButtonsHtml()+evs.map(function(e){
+  list.innerHTML=zoomButtonsHtml()+evs.map(function(e, i){
     var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
-    var pin=hasCoord(e)?'<span class="locdot" title="Localisé précisément"></span>':'';
+    var isLoc=hasCoord(e);
+    var pin=isLoc?'<span class="locdot" title="Localisé précisément"></span>':'';
+    /* Badge de rang chronologique : même numéro que le point correspondant
+       sur la carte (doré tireté = événement sans position, donc absent de la
+       carte mais présent dans la numérotation). */
+    var ord='<span class="ev-ord'+(isLoc?'':' noloc')+'" title="'+(isLoc?'N° sur la carte':'Sans position sur la carte')+'">'+(i+1)+'</span>';
     return '<div class="ev-row" data-id="'+e.id+'">'+
+      ord+
       '<span class="ev-date">'+dd+'</span>'+
       '<span class="ev-title">'+pin+escapeHtml(e.t)+(e.r?'<span class="reigntag">règne</span>':'')+'</span>'+
     '</div>';
