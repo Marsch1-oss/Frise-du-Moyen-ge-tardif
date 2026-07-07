@@ -241,7 +241,7 @@
           <span class="sb-prefix">&#128214; Synth&egrave;se</span>
           <span class="sb-title" id="sb-title"></span>
           <span class="sb-period" id="sb-period"></span>
-          <button class="sb-toggle" id="sb-toggle" type="button" aria-expanded="true">Replier &#9650;</button>
+          <button class="sb-toggle" id="sb-toggle" type="button" aria-expanded="false">D&eacute;plier &#9660;</button>
         </div>
         <div class="sb-body" id="sb-body"></div>
       </div>
@@ -666,7 +666,7 @@ function renderReignBanner(){
    synthèse rédigée existe pour la clé "Zone|décennie". L'état replié/déplié
    est conservé pendant la session (une synthèse longue ne doit pas repousser
    la carte hors écran : le corps est borné et défilant). */
-var _synthCollapsed = false;
+var _synthCollapsed = true;   /* replié par défaut : l'utilisateur déplie à la demande */
 function synthParagraphHtml(text){
   /* Découpe sur [[id]] ; texte échappé, retours ligne simples -> <br>,
      [[id]] connu -> lien 🔎 (data-id), [[id]] inconnu -> ignoré. */
