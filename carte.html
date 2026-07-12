@@ -39,6 +39,13 @@
   .ctrl-block.pc-disabled{opacity:0.4;pointer-events:none}
   .parcours-line{fill:none;stroke:#8a4a24;stroke-width:1.6;stroke-dasharray:5 3;opacity:0.55;
         vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round;pointer-events:none}
+  /* Tracé « fantôme » : l'itinéraire complet en filigrane, pour situer la décennie
+     affichée dans l'ensemble du parcours sans surcharger la carte de points. */
+  .parcours-ghost{fill:none;stroke:#8a4a24;stroke-width:1.1;stroke-dasharray:2 4;opacity:0.16;
+        vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round;pointer-events:none}
+  /* Décennies traversées par le parcours actif */
+  .chip.pc-hit{border-color:#8a4a24;color:#8a4a24;font-weight:700;box-shadow:inset 0 -2px 0 #8a4a24}
+  .chip.pc-hit.active{background:var(--gold);color:#fff;border-color:var(--gold);box-shadow:none}
   .chips{display:flex;flex-wrap:wrap;gap:0.35rem}
   .chip{font-family:'Crimson Pro',serif;font-size:0.85rem;padding:0.25rem 0.85rem;border:1.5px solid var(--border-dark);
         border-radius:18px;background:var(--parchment-lt);color:var(--ink-soft);cursor:pointer;transition:all .15s;white-space:nowrap}
@@ -441,29 +448,68 @@ function parcoursEvents(name){
   });
   return out.sort(function(x,y){ return (x.d-y.d) || ((x.df||x.d)-(y.df||y.d)) || (x.id-y.id); });
 }
+/* Décennies traversées par un parcours (une étape à cheval sur plusieurs
+   décennies les marque toutes) : sert à la surbrillance des chips. */
+function parcoursDecades(name){
+  var hit={};
+  parcoursEvents(name).forEach(function(e){
+    var f = (typeof e.df==='number') ? e.df : e.d;
+    for(var d=Math.floor(e.d/10)*10; d<=Math.floor(f/10)*10; d+=10) hit[d]=true;
+  });
+  return hit;
+}
+/* Étapes du parcours actif visibles dans la période courante. Le rang porté par
+   chaque point (ord) reste le rang chronologique dans l'itinéraire COMPLET :
+   « étape 34 sur 113 » garde son sens d'une décennie à l'autre. */
+function parcoursVisible(){
+  var r=currentRange(), out=[];
+  parcoursEvents(state.parcours).forEach(function(e, i){
+    var f = (typeof e.df==='number') ? e.df : e.d;
+    if(e.d<=r.b && f>=r.a) out.push({ e:e, ord:i+1 });
+  });
+  return out;
+}
+/* Recadrage sur les étapes visibles ; à défaut (décennie sans étape localisée),
+   on garde l'emprise de l'itinéraire complet pour ne pas perdre le contexte. */
+function fitParcoursView(){
+  var pts = parcoursVisible().filter(function(x){ return hasCoord(x.e); })
+    .map(function(x){ return { x:projX(x.e.lng), y:projY(x.e.lat) }; });
+  if(!pts.length){
+    pts = parcoursEvents(state.parcours).filter(hasCoord)
+      .map(function(e){ return { x:projX(e.lng), y:projY(e.lat) }; });
+  }
+  state.clusterZoomView=null; state.spiderfied=null;
+  if(pts.length){
+    state.zoneZoomView = bboxView(pts, 24, 24);   /* vue « retour » des dézooms de cluster */
+    state.zoomView = state.zoneZoomView;
+  } else {
+    state.zoneZoomView = null; state.zoomView = null;
+  }
+}
 function setParcours(name){
   state.parcours = name || null;
   state.selZone=null; state.zoomView=null; state.zoneZoomView=null;
   state.clusterZoomView=null; state.spiderfied=null;
-  if(state.parcours){
-    /* Exclusif avec le filtre thématique : un parcours est un ensemble
-       curaté, le croiser avec un thème tronquerait l'itinéraire. */
-    activeThemes={}; renderThemeChips();
-    var located = parcoursEvents(state.parcours).filter(hasCoord)
-      .map(function(e){ return { x:projX(e.lng), y:projY(e.lat) }; });
-    if(located.length){
-      state.zoneZoomView = bboxView(located, 24, 24);   /* vue « retour » des dézooms de cluster */
-      state.zoomView = state.zoneZoomView;
-    }
-  }
-  /* Navigation temporelle neutralisée pendant un parcours (toutes les étapes
-     sont affichées quelle que soit la période). */
-  ['period-block','theme-block'].forEach(function(bid){
-    var b=document.getElementById(bid);
-    if(b) b.classList.toggle('pc-disabled', !!state.parcours);
-  });
+  /* Le filtre thématique reste exclusif du parcours (un parcours est un ensemble
+     curaté : le croiser avec un thème tronquerait l'itinéraire). La navigation
+     temporelle, elle, RESTE ACTIVE : le parcours se lit décennie par décennie,
+     sinon les longs itinéraires (Guerre de Cent ans : 113 étapes) saturent la carte. */
+  var themeBlock=document.getElementById('theme-block');
+  if(themeBlock) themeBlock.classList.toggle('pc-disabled', !!state.parcours);
   var sel = document.getElementById('parcours-select');
   if(sel){ sel.value = state.parcours || ''; sel.classList.toggle('active', !!state.parcours); }
+  if(state.parcours){
+    activeThemes={}; renderThemeChips();
+    /* On se place d'office sur une décennie traversée par le parcours (la 1re si
+       la période courante n'en contient aucune étape) : setDecade recadre la vue. */
+    if(state.mode!=='decade'){ setMode('decade'); }
+    var hit=parcoursDecades(state.parcours);
+    var target = (state.decade!==null && hit[state.decade]) ? state.decade
+               : Object.keys(hit).map(Number).sort(function(a,b){return a-b;})[0];
+    if(typeof target==='number'){ setDecade(target); return; }
+  }
+  renderDecadeChips();
+  fitParcoursView();
   renderMap();
   resetPanel();
 }
@@ -485,21 +531,29 @@ function renderParcoursSelect(){
   block.style.display='';
 }
 function renderParcoursPanel(){
-  var evs=parcoursEvents(state.parcours);
-  var located=evs.filter(hasCoord);
-  var dmin=evs.length?evs[0].d:'', dmax=evs.length?evs.reduce(function(m,e){return Math.max(m, e.df||e.d);},0):'';
+  var all=parcoursEvents(state.parcours);
+  var vis=parcoursVisible();                       /* étapes de la période courante */
+  var located=vis.filter(function(x){ return hasCoord(x.e); });
   document.getElementById('panel-title').textContent='Parcours : '+state.parcours;
   document.getElementById('panel-count').textContent=
-    dmin+'\u2013'+dmax+' \u00b7 '+evs.length+' \u00e9tapes'+(located.length?(' \u00b7 '+located.length+' localis\u00e9e'+(located.length>1?'s':'')):'');
+    periodLabel()+' \u00b7 '+vis.length+' \u00e9tape'+(vis.length>1?'s':'')+' sur '+all.length+
+    (located.length?(' \u00b7 '+located.length+' localis\u00e9e'+(located.length>1?'s':'')):'');
   var list=document.getElementById('panel-list');
-  if(!evs.length){ list.innerHTML='<div class="panel-empty">Aucune \u00e9tape.</div>'; return; }
-  /* Même structure de lignes que selectZone : badges de rang synchronisés
-     avec les numéros de la carte (doré tireté = étape sans position). */
-  list.innerHTML=zoomButtonsHtml()+evs.map(function(e, i){
+  if(!vis.length){
+    list.innerHTML='<div class="panel-empty">Aucune \u00e9tape de ce parcours dans '+
+      (state.mode==='year'?'l\u2019ann\u00e9e ':'les ann\u00e9es ')+periodLabel()+
+      '. Les d\u00e9cennies travers\u00e9es par le parcours sont soulign\u00e9es dans la barre des p\u00e9riodes.</div>';
+    return;
+  }
+  /* Même structure de lignes que selectZone : badges de rang synchronisés avec les
+     numéros de la carte (doré tireté = étape sans position). Le rang est celui de
+     l'itinéraire complet, pas de la décennie. */
+  list.innerHTML=zoomButtonsHtml()+vis.map(function(x){
+    var e=x.e;
     var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '\u2013'+e.df : '');
     var isLoc=hasCoord(e);
     var pin=isLoc?'<span class="locdot" title="Localis\u00e9 pr\u00e9cis\u00e9ment"></span>':'';
-    var ord='<span class="ev-ord'+(isLoc?'':' noloc')+'" title="'+(isLoc?'N\u00b0 sur la carte':'Sans position sur la carte')+'">'+(i+1)+'</span>';
+    var ord='<span class="ev-ord'+(isLoc?'':' noloc')+'" title="'+(isLoc?('\u00c9tape '+x.ord+' sur '+all.length):'Sans position sur la carte')+'">'+x.ord+'</span>';
     return '<div class="ev-row" data-id="'+e.id+'">'+
       ord+
       '<span class="ev-date">'+dd+'</span>'+
@@ -844,18 +898,18 @@ function renderSyntheseBanner(){
   if(!banner) return;
   var body=document.getElementById('sb-body');
   if(parcoursActive()){
-    var list=parcoursSyntheses(state.parcours);
-    if(!list.length){ banner.style.display='none'; return; }
-    var auto=list.every(function(x){ return x.s.auto; });
-    document.getElementById('sb-title').textContent = 'Parcours \u00b7 '+state.parcours;
+    /* Synthèse de la décennie affichée si elle existe, sinon synthèse globale
+       du parcours : le bandeau suit la lecture décennie par décennie. */
+    var ps = (state.mode==='decade' && state.decade!==null)
+      ? SYNTHESES['@parcours|'+state.parcours+'|'+state.decade] : null;
+    var scoped = !!ps;
+    if(!ps) ps = SYNTHESES['@parcours|'+state.parcours];
+    if(!ps){ banner.style.display='none'; return; }
+    document.getElementById('sb-title').textContent = ps.titre || ('Parcours \u00b7 '+state.parcours);
     document.getElementById('sb-period').textContent =
-      (auto ? '(brouillon auto) ' : '') + list.length + ' synth\u00e8se' + (list.length>1?'s':'');
-    body.innerHTML = list.map(function(x){
-      var head = (x.dec===null)
-        ? (x.s.titre ? '<p style="font-weight:700">'+escapeHtml(x.s.titre)+'</p>' : '')
-        : '<p style="font-weight:700;letter-spacing:0.04em">'+x.dec+'\u2013'+(x.dec+9)+'</p>';
-      return head + synthTexteHtml(x.s.texte);
-    }).join('');
+      (ps.auto ? '(brouillon auto) ' : '') + state.parcours +
+      (scoped ? (' \u2014 ' + state.decade + '-' + (state.decade+9)) : ' \u2014 vue d\u2019ensemble');
+    body.innerHTML = synthTexteHtml(ps.texte);
   } else {
     var show = state.selZone && state.mode==='decade' && state.decade!==null;
     var s = show ? SYNTHESES[state.selZone+'|'+state.decade] : null;
@@ -1122,18 +1176,23 @@ function renderMap(){
      badges du panneau latéral. */
   var pcActive = parcoursActive();
   if(pcActive){
-    var pcEvs = parcoursEvents(state.parcours), pcPts = [];
-    pcEvs.forEach(function(e, i){
-      if(hasCoord(e)) pcPts.push({ x:projX(e.lng), y:projY(e.lat), e:e, ord:i+1 });
-    });
+    var pcAll = parcoursEvents(state.parcours);
+    var pcVis = parcoursVisible();                       /* étapes de la période courante */
+    var pcPts = pcVis.filter(function(x){ return hasCoord(x.e); })
+      .map(function(x){ return { x:projX(x.e.lng), y:projY(x.e.lat), e:x.e, ord:x.ord }; });
     parts.push(cityLabelsSVG(v));
+    /* Filigrane : l'itinéraire complet, sans points, pour situer la décennie
+       affichée dans l'ensemble du parcours. */
+    var ghost = pcAll.filter(hasCoord).map(function(e){ return projX(e.lng).toFixed(1)+','+projY(e.lat).toFixed(1); });
+    if(ghost.length > 1) parts.push('<polyline class="parcours-ghost" points="'+ghost.join(' ')+'"/>');
+    /* Trait appuyé : les seules étapes de la période. */
     if(pcPts.length > 1){
       parts.push('<polyline class="parcours-line" points="'+
         pcPts.map(function(p){ return p.x.toFixed(1)+','+p.y.toFixed(1); }).join(' ')+'"/>');
     }
     if(pcPts.length) renderLocatedPoints(pcPts, parts, rDot, fNum, { numbered:true });
-    anyDot = pcEvs.length > 0;
-    totalRegion = pcEvs.length;
+    anyDot = pcVis.length > 0;
+    totalRegion = pcVis.length;
   }
   /* Mode thématique global : quand au moins un thème est coché et qu'aucune
      zone n'est sélectionnée, on n'affiche plus les pastilles agrégées par
@@ -1266,7 +1325,7 @@ function renderMap(){
   if(!anyDot){
     emptyEl.style.display='flex';
     emptyEl.textContent = pcActive
-      ? 'Aucune étape pour le parcours « '+state.parcours+' ».'
+      ? ('Aucune étape du parcours « '+state.parcours+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'. Les décennies concernées sont soulignées.')
       : ('Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
          +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : ''));
   } else { emptyEl.style.display='none'; }
@@ -1577,12 +1636,19 @@ function setYear(y){
   document.getElementById('year-slider').value=y;
   document.getElementById('dec-prev').disabled = (y<=YEARRANGE.min);
   document.getElementById('dec-next').disabled = (y>=YEARRANGE.max);
+  if(parcoursActive()) fitParcoursView();
   renderMap(); resetPanel();
 }
 function renderDecadeChips(){
   var box=document.getElementById('decade-chips');
+  /* En mode Parcours, les décennies traversées par l'itinéraire sont mises en
+     évidence : la navigation reste libre, mais le lecteur voit d'un coup d'œil
+     où « vit » le parcours dans le siècle. */
+  var hit = parcoursActive() ? parcoursDecades(state.parcours) : {};
   box.innerHTML=DECADES.map(function(d){
-    return '<button class="chip'+(d===state.decade?' active':'')+'" data-d="'+d+'">'+d+'</button>';
+    var cls='chip'+(d===state.decade?' active':'')+(hit[d]?' pc-hit':'');
+    var t = hit[d] ? ' title="Étapes du parcours dans cette décennie"' : '';
+    return '<button class="'+cls+'" data-d="'+d+'"'+t+'>'+d+'</button>';
   }).join('');
   Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
     c.addEventListener('click', function(){ setDecade(+c.getAttribute('data-d')); });
@@ -1593,6 +1659,7 @@ function setDecade(d){
   document.getElementById('dec-current').textContent=d+'–'+(d+9);
   document.getElementById('dec-prev').disabled = (DECADES.indexOf(d)<=0);
   document.getElementById('dec-next').disabled = (DECADES.indexOf(d)>=DECADES.length-1);
+  if(parcoursActive()) fitParcoursView();   /* la carte suit les étapes de la décennie */
   renderDecadeChips(); renderMap(); resetPanel();
 }
 function resetPanel(){
