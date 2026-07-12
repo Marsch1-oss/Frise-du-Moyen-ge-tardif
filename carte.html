@@ -59,6 +59,16 @@
   .music-title{font-size:0.80rem;font-weight:600;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .music-sub{font-size:0.66rem;opacity:0.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   #music-status{font-size:0.7rem;opacity:0.6;flex-shrink:0;letter-spacing:-2px}
+  /* ── Loupes de zoom (superposées à la carte) ── */
+  #zoom-ctrl{position:absolute;top:0.6rem;right:0.6rem;z-index:6;display:flex;flex-direction:column;gap:0.3rem}
+  .zoom-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+        font-size:1rem;line-height:1;cursor:pointer;border:1px solid var(--border-dark);
+        border-radius:8px;background:rgba(245,237,216,0.92);color:var(--ink);
+        box-shadow:0 1px 3px rgba(28,20,10,0.18);transition:background 0.15s}
+  .zoom-btn:hover{background:#fff}
+  .zoom-btn:disabled{opacity:0.35;cursor:default}
+  #map{touch-action:none}
+  #map.grabbing{cursor:grabbing}
   .chips{display:flex;flex-wrap:wrap;gap:0.35rem}
   .chip{font-family:'Crimson Pro',serif;font-size:0.85rem;padding:0.25rem 0.85rem;border:1.5px solid var(--border-dark);
         border-radius:18px;background:var(--parchment-lt);color:var(--ink-soft);cursor:pointer;transition:all .15s;white-space:nowrap}
@@ -305,6 +315,11 @@
         <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
         <div id="reign-banner" aria-live="polite"></div>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="zoom-ctrl">
+          <button class="zoom-btn" id="zoom-in"    onclick="zoomBy(1.5)"   title="Zoomer (molette, ou touche +)">&#128269;&#65291;</button>
+          <button class="zoom-btn" id="zoom-out"   onclick="zoomBy(1/1.5)" title="Dézoomer (molette, ou touche −)">&#128269;&#65293;</button>
+          <button class="zoom-btn" id="zoom-reset" onclick="clearZoom()"   title="Recentrer la vue">&#10226;</button>
+        </div>
         <div class="map-empty" id="map-empty" style="display:none"></div>
         <div id="hover-preview"></div>
       </div>
@@ -1035,17 +1050,29 @@ function toggleSpiderfy(idx){
   state.spiderfied = (state.spiderfied===idx) ? null : idx;
   renderMap();
 }
+/* Rayon d'un point et seuil de regroupement pour une largeur de vue donnée :
+   doivent rester alignés sur le calcul de renderMap (rDot = v.w*0.0075) et de
+   renderLocatedPoints (clusterThresh = rDot*3.2). */
+function clusterThreshFor(viewW){ return viewW*0.0075*3.2; }
+
 function clickCluster(idx){
   var grp = state.currentClusters && state.currentClusters[idx];
   if(!grp) return;
   var xs=grp.map(function(p){return p.x;}), ys=grp.map(function(p){return p.y;});
-  var spreadW=Math.max.apply(null,xs)-Math.min.apply(null,xs);
-  var spreadH=Math.max.apply(null,ys)-Math.min.apply(null,ys);
-  /* Si les points sont géographiquement distincts, zoomer permet de les écarter ;
-     s'ils sont (quasi) confondus, zoomer ne changerait rien : on les éclate en éventail. */
-  if(spreadW>1.5 || spreadH>1.5){
-    state.clusterZoomView = bboxView(grp, 12, 12);
-    state.zoomView = state.clusterZoomView;
+  var spread = Math.max(Math.max.apply(null,xs)-Math.min.apply(null,xs),
+                        Math.max.apply(null,ys)-Math.min.apply(null,ys));
+  /* Zoomer n'a d'intérêt que si les points s'en trouvent RÉELLEMENT séparés,
+     c'est-à-dire si leur écartement dépasse le seuil de regroupement de la vue
+     zoomée. L'ancien test comparait l'écartement à une constante (1.5) sans
+     rapport avec ce seuil : un cluster dont l'écartement tombait entre 1.5 et le
+     seuil post-zoom re-zoomait sur la MÊME vue à chaque clic, sans jamais
+     s'ouvrir (cas signalé : Florence, décennie 1310). On éclate donc en éventail
+     dès que le zoom ne suffirait pas — un clic aboutit toujours à des pastilles
+     individuelles ouvrables. */
+  var zv = bboxView(grp, 12, 12);
+  if(spread > clusterThreshFor(zv.w) * 1.15){
+    state.clusterZoomView = zv;
+    state.zoomView = zv;
     state.spiderfied = null;
     renderMap();
     refreshZoomButtons();
@@ -1403,6 +1430,7 @@ function renderMap(){
   renderReignBanner();
   renderSyntheseBanner();
   renderNonGeo();
+  refreshZoomCtrl();   /* état des loupes (bornes atteintes, vue recentrée) */
 }
 
 /* ---- Bandeau zones non localisées (Monde, Atlas) ------------------------ */
@@ -1479,10 +1507,101 @@ function zoomButtonsHtml(){
   return '<div id="zoom-buttons" style="display:inline">'+btns+'</div>';
 }
 function refreshZoomButtons(){
+  refreshZoomCtrl();
   var el=document.getElementById('zoom-buttons');
   if(el) el.outerHTML = zoomButtonsHtml();
 }
-function clearZoom(){ state.zoomView=null; state.clusterZoomView=null; renderMap(); refreshZoomButtons(); }
+function clearZoom(){
+  state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
+  renderMap(); refreshZoomButtons(); refreshZoomCtrl();
+}
+
+/* ---- Zoom libre ----------------------------------------------------------
+   Loupes, molette et glisser-déposer agissent sur le viewBox du SVG. Les
+   pastilles et les points étant dimensionnés proportionnellement à la largeur de
+   vue (rDot = v.w*0.0075), leur taille à l'écran reste constante : zoomer écarte
+   donc visuellement les événements trop proches, et le seuil de regroupement
+   diminuant d'autant, les clusters finissent par se séparer d'eux-mêmes. */
+var ZOOM_MIN_W = 6;      /* vue la plus rapprochée (unités carte) */
+function baseView(){ return state.region.view; }
+function currentView(){ return state.zoomView || baseView(); }
+function applyView(v){
+  var b=baseView();
+  /* Bornes : pas plus large que la région, pas plus étroit que ZOOM_MIN_W. */
+  if(v.w > b.w){ var k=b.w/v.w; v={ x:v.x+(v.w-b.w)/2, y:v.y+(v.h-v.h*k)/2, w:b.w, h:v.h*k }; }
+  if(v.w < ZOOM_MIN_W){ var k2=ZOOM_MIN_W/v.w; v={ x:v.x-(ZOOM_MIN_W-v.w)/2, y:v.y-(v.h*k2-v.h)/2, w:ZOOM_MIN_W, h:v.h*k2 }; }
+  state.zoomView = (Math.abs(v.w-b.w)<0.5 && Math.abs(v.x-b.x)<0.5 && Math.abs(v.y-b.y)<0.5) ? null : v;
+  state.spiderfied = null;   /* les groupes changent de composition à chaque échelle */
+  renderMap(); refreshZoomButtons(); refreshZoomCtrl();
+}
+/* Zoom centré sur un point de la vue (cx,cy en unités carte) ; par défaut le centre. */
+function zoomBy(f, cx, cy){
+  var v=currentView();
+  if(typeof cx!=='number'){ cx=v.x+v.w/2; cy=v.y+v.h/2; }
+  var nw=v.w/f, nh=v.h/f;
+  /* le point (cx,cy) garde sa position relative dans la vue */
+  var rx=(cx-v.x)/v.w, ry=(cy-v.y)/v.h;
+  applyView({ x:cx-rx*nw, y:cy-ry*nh, w:nw, h:nh });
+}
+function refreshZoomCtrl(){
+  var b=baseView(), v=currentView();
+  var zi=document.getElementById('zoom-in'), zo=document.getElementById('zoom-out'),
+      zr=document.getElementById('zoom-reset');
+  if(zi) zi.disabled = (v.w <= ZOOM_MIN_W*1.001);
+  if(zo) zo.disabled = (v.w >= b.w*0.999);
+  if(zr) zr.disabled = !state.zoomView;
+}
+/* Coordonnées carte du curseur (le SVG est en preserveAspectRatio="xMidYMid meet",
+   donc la vue est éventuellement lettrée : on recalcule l'échelle réelle). */
+function mapCoordsFromEvent(evt, svg){
+  var r=svg.getBoundingClientRect(), v=currentView();
+  if(!r.width || !r.height) return null;
+  var scale=Math.min(r.width/v.w, r.height/v.h);
+  var offX=(r.width - v.w*scale)/2, offY=(r.height - v.h*scale)/2;
+  return { x: v.x + (evt.clientX - r.left - offX)/scale,
+           y: v.y + (evt.clientY - r.top  - offY)/scale, scale: scale };
+}
+function initMapZoomGestures(){
+  var svg=document.getElementById('map');
+  if(!svg) return;
+  svg.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var c=mapCoordsFromEvent(e, svg);
+    zoomBy(e.deltaY < 0 ? 1.18 : 1/1.18, c && c.x, c && c.y);
+  }, { passive:false });
+  /* Glisser-déposer : déplace la vue. Un déplacement inférieur à 3 px n'est pas
+     un panoramique mais un clic — on laisse alors passer l'événement aux
+     pastilles (aucun preventDefault, aucun re-rendu). */
+  var drag=null;
+  svg.addEventListener('pointerdown', function(e){
+    if(e.button!==0) return;
+    var c=mapCoordsFromEvent(e, svg);
+    if(!c) return;
+    drag={ startX:e.clientX, startY:e.clientY, v:currentView(), scale:c.scale, moved:false };
+  });
+  svg.addEventListener('pointermove', function(e){
+    if(!drag) return;
+    var dx=e.clientX-drag.startX, dy=e.clientY-drag.startY;
+    if(!drag.moved && Math.hypot(dx,dy) < 3) return;
+    if(!drag.moved){ drag.moved=true; svg.classList.add('grabbing'); try{ svg.setPointerCapture(e.pointerId); }catch(err){} }
+    var v=drag.v;
+    applyView({ x:v.x - dx/drag.scale, y:v.y - dy/drag.scale, w:v.w, h:v.h });
+  });
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+    svg.addEventListener(ev, function(e){
+      if(drag && drag.moved){ e.preventDefault(); e.stopPropagation(); }
+      if(drag) svg.classList.remove('grabbing');
+      drag=null;
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(document.getElementById('fiche-overlay').classList.contains('open')) return;
+    var tag=(e.target.tagName||'').toLowerCase();
+    if(tag==='input' || tag==='select' || tag==='textarea') return;
+    if(e.key==='+' || e.key==='=') zoomBy(1.5);
+    else if(e.key==='-' || e.key==='_') zoomBy(1/1.5);
+  });
+}
 function deselectZone(){
   state.selZone=null; state.zoomView=null; state.clusterZoomView=null; state.spiderfied=null;
   renderMap(); resetPanel();
@@ -1803,6 +1922,7 @@ function boot(mode){
   slider.addEventListener('input', function(){ setYear(+slider.value); });
   renderRegionChips();
   renderModeChips();
+  initMapZoomGestures();
   renderLayerChips();
   renderLevelChips();
   renderThemeChips();
