@@ -3707,24 +3707,53 @@ var MUSIC_TRACKS  = [
 ];
 var musicTrackIdx = 0;
 var musicStarted  = false;
+var MUSIC_KEY     = 'friseMusic';
+
+/* Continuité frise <-> carte : la piste, sa position et l'état lecture/pause sont
+   mémorisés en sessionStorage, et repris à l'ouverture de l'autre page.
+   ---- GARDER SYNCHRONISÉ avec carte.html. ---- */
+function musicLoadState() {
+  try { return JSON.parse(sessionStorage.getItem(MUSIC_KEY)) || null; } catch (e) { return null; }
+}
+function musicSaveState() {
+  var a = document.getElementById('music-audio');
+  if (!a) return;
+  try {
+    sessionStorage.setItem(MUSIC_KEY, JSON.stringify({
+      idx: musicTrackIdx, t: a.currentTime || 0, playing: !a.paused
+    }));
+  } catch (e) {}
+}
 
 function initMusicPlayer() {
   var audio = document.getElementById('music-audio');
   if (!audio) return;
   audio.volume = 0.28;
-  audio.src    = MUSIC_TRACKS[0];
+  var st = musicLoadState();
+  if (st && typeof st.idx === 'number' && MUSIC_TRACKS[st.idx]) musicTrackIdx = st.idx;
+  audio.src = MUSIC_TRACKS[musicTrackIdx];
+  if (st && st.t) {
+    audio.addEventListener('loadedmetadata', function once() {
+      try { audio.currentTime = Math.min(st.t, (audio.duration || st.t + 1) - 0.5); } catch (e) {}
+      audio.removeEventListener('loadedmetadata', once);
+    });
+  }
   audio.addEventListener('ended', function() {
     musicTrackIdx = (musicTrackIdx + 1) % MUSIC_TRACKS.length;
     audio.src = MUSIC_TRACKS[musicTrackIdx];
     audio.play().catch(function(){});
   });
+  if (st && st.playing) audio.play().catch(function(){});
   document.addEventListener('click', function firstClick() {
-    if (audio.paused) audio.play().catch(function(){});
+    if (audio.paused && (!st || st.playing !== false)) audio.play().catch(function(){});
     updateMusicBtn();
     document.removeEventListener('click', firstClick);
   });
+  ['timeupdate', 'pause', 'play'].forEach(function(ev) { audio.addEventListener(ev, musicSaveState); });
+  window.addEventListener('pagehide', musicSaveState);
   var btn = document.getElementById('music-toggle');
   if (btn) btn.classList.remove('muted');
+  updateMusicBtn();
 }
 
 function startMusic() {
@@ -3743,7 +3772,7 @@ function toggleMusic() {
   } else {
     audio.pause();
   }
-  setTimeout(updateMusicBtn, 80);
+  setTimeout(function() { updateMusicBtn(); musicSaveState(); }, 80);
 }
 
 function updateMusicBtn() {
