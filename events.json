@@ -9233,8 +9233,8 @@
     "theme": "guerre",
     "legende": "La bataille de l'Écluse d'après une miniature extraite des Grandes Chroniques de France (1375-1380). BnF Ms 2813.",
     "video": "https://www.youtube.com/watch?v=GnMnnmzsXeg",
-    "lat": 49.44,
-    "lng": 1.1,
+    "lat": 51.3257,
+    "lng": 3.5166,
     "serie": "Guerre de Cent ans"
   },
   {
@@ -9938,7 +9938,10 @@
     ],
     "type": 3,
     "description": "Construction du palais neuf des papes à Avignon à l’initiative de Benoit XII ( fresques de Matteo Giovannetti de Viterbe).\n\nClément VI. Il considère que le palais de Benoît XII n'est pas en rapport avec la grandeur d'un souverain pontife. Il demande à Jean du Louvres dit de Loubières d’édifier un palais neuf digne de lui. En 1348 Jeanne de Naples comtesse de Provence cède la ville à la papauté .",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Avignon%2C_Palais_des_Papes_by_JM_Rosier.jpg/500px-Avignon%2C_Palais_des_Papes_by_JM_Rosier.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Avignon%2C_Palais_des_Papes_by_JM_Rosier.jpg/500px-Avignon%2C_Palais_des_Papes_by_JM_Rosier.jpg",
+    "theme": "art",
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 613,
@@ -9949,7 +9952,10 @@
     ],
     "type": 3,
     "description": "Généralisation de l’alcabala, taxe sur les transactions, en Castille.\n\nL’alcabala ou alcavala, francisé sous la forme « alcavale » par Victor Hugo, est un impôt indirect du royaume de Castille prélevé au profit du trésor royal. Créée au XIVe siècle, cette taxe présente la particularité de fournir à la monarchie espagnole l’essentiel de ses recettes fiscales à la fin du Moyen Âge.\n\nL’alcabala, dont le nom a conservé l’enclise de l’article arabe al, désigne à l’origine un impôt local (al-qabala) levé dans les municipalités d’al-Andalus. Récupéré par la fiscalité monarchique castillane, cet impôt est concédé par les assemblées d’État (Cortes) à la demande d’Alphonse XI de Castille en 1342, officiellement pour une durée limitée à trois ans, afin de mener la guerre de reconquête. Dans les années qui suivent, cette taxe sur les transactions représentant environ 10 % de leur montant finit par être transformée en impôt permanent pesant sur tous les sujets du royaume de Castille.\n\nBien qu’il s’agisse d’un impôt universel, certains groupes sociaux ont bénéficié d’une politique d’exception : l’alcabala ne touche pas les membres du clergé, pas plus que certaines villes bénéficiant d’exemptions royales, soit dans la perspective du développement des échanges commerciaux, soit en lien avec les nécessités de la guerre et l’entreprise de « repeuplement » de territoires.\n\nSous les Trastamares, la perception de cet impôt, comme beaucoup d'autres, a basculé du domaine royal (hacienda real) au domaine seigneurial (señoríos). La royauté a délégué la collecte des alcabalas d’abord aux nobles, dès le milieu du XVe siècle, puis aux municipalités, à travers la pratique de l’encabezamiento (montant fixe), à charge pour ces dernières de répartir l’impôt entre les contribuables. Pour des historiens comme María Asenjo González, cette innovation dans la politique fiscale participe d’une stratégie de la Couronne de Castille visant à associer de plus larges secteurs des élites urbaines à la gestion de la fiscalité du royaume, ceci afin d'endiguer l'agitation nobiliaire et municipale.\n\nEntre 1743 et 1750, le marquis de la Ensenada tenta de supprimer l’alcabala au profit d’un impôt sur les revenus fondé sur la valeur des terres. La cadastration nécessaire resta cependant limitée à la Catalogne. Impôt espagnol (datant du xives. et encore en vigueur au xixes. après diverses modifications) payé par le vendeur et frappant toute vente publique ou échange dont le montant était ainsi majoré d'un dixième :",
-    "image": ""
+    "image": "",
+    "theme": "economie",
+    "lat": 40.5996,
+    "lng": -4.1464
   },
   {
     "id": 614,
@@ -10215,7 +10221,10 @@
     ],
     "type": 5,
     "description": ". Boguslaw V de Poméranie et ses frères s'allient avec Casimir III le Grand contre les Teutoniques.",
-    "image": ""
+    "image": "",
+    "theme": "diplomatie",
+    "lat": 52.4007,
+    "lng": 16.9197
   },
   {
     "id": 632,
@@ -10242,7 +10251,10 @@
     ],
     "type": 4,
     "description": "Nouvelle bulle du pape Clément VI contre l'empereur Louis de Bavière qui a trois mois pour renoncer à son titre.",
-    "image": ""
+    "image": "",
+    "theme": "religion",
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 634,
@@ -10302,7 +10314,10 @@
     ],
     "type": 2,
     "description": "À la suite des désordres survenus entre chrétiens et musulmans dans les comptoirs de l’embouchure du Don, le khan de la Horde d'or Djanibeg chasse de nouveau les commerçants européens. Il assiège Caffa à deux reprises (1343 et 1345-1346)",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 45.1559,
+    "lng": 35.3698
   },
   {
     "id": 628,
@@ -10314,7 +10329,10 @@
     ],
     "type": 4,
     "description": "Ils se rend aux îles Canaries avec deux navires, mais en est expulsé par les naturels. Louis de la Cerda, dit « Louis d'Espagne », né vers 1291 et mort le 5 juillet 1348 à la Lamotte-du-Rhône, fils cadet de l'infant de Castille Alphonse le Déshérité, installé en France au début du XIVe siècle, est fait comte de Clermont, comte de Talmont et d'Oléron, puis nommé amiral de France par le roi Philippe VI de Valois (1341).\n\nEn 1344, il se lance dans un projet de conquête des îles Canaries (appelées « îles Fortunées »). Il sert d'abord son cousin issu de germain Alphonse XI (1311-1350 ; fils de Ferdinand IV et petit-fils de Sanche IV) quand celui-ci, devenu roi au berceau dès 1312, prend effectivement en main le royaume en 1325.\n\nLouis de la Cerda participe à la guerre de Gibraltar contre les Mérinides. Il passe ensuite au service du roi Philippe VI, le premier de la maison de Valois (1328).\n\nCe dernier le fait comte de Clermont, de Talmont et de l'ile d'Oléron en 1339.\n\nIl le nomme amiral de France le 13 mars 1341, en remplacement de Hugues Quiéret, tué lors du désastre naval de l’Écluse, le 23 juin 1340. En nommant amiral de France, maître de deux places maritimes stratégiques situées en Saintonge, tout près de la Guyenne et de Bordeaux (fief de France tenu par Édouard III, la Guyenne est la dernière possession des Plantagenêt encore tenue par le roi d'Angleterre), alors que commence (1337) le long conflit appelé ensuite « guerre de Cent Ans » (1337-1453), le roi montre l'importance qu'il accorde à la défense de ces places.\n\nLouis de la Cerda démissionne cependant de sa charge d'amiral le 28 décembre 1341. Aux côtés des Français, il se distingue sur les champs de bataille en combattant les Anglais au début la guerre de Cent Ans. Selon Froissart et Jean le Bel, c'est un guerrier cruel et rancunier, au point de vouloir faire exécuter des otages. Ses troupes assiègent et saccagent Guérande en 1342. Ayant amassé une grande fortune, il décide de conquérir les Îles Canaries.\n\nLe 15 novembre 1344, le pape Clément VI le nomme « prince de Fortunie », par sa bulle Tue devotionis sinceritas, en échange d'une rente de 400 florins d'or par an. Il obtient la souveraineté sur les onze iles avec des indulgences accordées à tous ceux qui participeront à l'expédition de conquête. Le poète Petrarque relate la cérémonie.\n\nCette désignation et les droits attachés sont contestés le 12 février 1345 par le roi Alphonse IV de Portugal, comme par le roi de Castille Alphonse XI.\n\nLouis de La Cerda rencontre des difficultés pour faire construire les vaisseaux de sa flotte. Il est probable qu'il ne met jamais le pied aux Canaries. Un de ses lieutenants aurait toutefois débarqué à Lanzarote (Lancerotte), sans pouvoir s'y maintenir[",
-    "image": ""
+    "image": "",
+    "theme": "sciences",
+    "lat": 28.2936,
+    "lng": -16.6214
   },
   {
     "id": 629,
@@ -10326,7 +10344,10 @@
     ],
     "type": 5,
     "description": "le pape Clément VI publie la première bulle de partage du monde pour éviter la discorde entre princes chrétiens et favoriser l’évangélisation des nouvelles terres. Les îles Canaries sont attribuées à l'Espagne le pape Clément VI publie la première bulle de partage du monde pour éviter la discorde entre princes chrétiens et favoriser l’évangélisation des nouvelles terres. Les îles Canaries sont attribuées à l'Espagne",
-    "image": ""
+    "image": "",
+    "theme": "sciences",
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 638,
@@ -10339,7 +10360,10 @@
     ],
     "type": 4,
     "description": "ligue maritime Italienne, prend Smyrne au sultan ottoman d’Aydın avec le soutien des Hospitaliers de Rhodes. Les Hospitaliers gardent la ville jusqu’en 1402",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 39.1163,
+    "lng": 27.1757
   },
   {
     "id": 639,
@@ -10351,7 +10375,10 @@
     ],
     "type": 3,
     "description": "Début du règne de Saïfa-Arad, roi d’Éthiopie (fin en 1372). Il pacifie le Tigré et combat victorieusement une révolte des musulmans de l’Ifat. Sous son règne, l’Éthiopie a acquis un tel prestige qu’elle fait figure de protectrice officielle du Patriarcat d’Alexandrie.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 10.2117,
+    "lng": 38.6521
   },
   {
     "id": 640,
@@ -10406,7 +10433,10 @@
     ],
     "type": 4,
     "description": "Les Ottomans absorbent l’émirat de Karasi, et prennent pied sur les Dardanelles",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 40.2092,
+    "lng": 26.4414
   },
   {
     "id": 645,
@@ -10450,7 +10480,10 @@
     ],
     "type": 2,
     "description": "Olgierd est l'un des sept fils du grand-prince Ghédimin ou Gediminas (*vers 1275-1341). Gediminas avait partagé son royaume entre son fils cadet Jaunutis, mis en possession de la capitale, Vilnius, Olgierd recevant la partie orientale, tandis que la partie occidentale revenait à Kęstutis. Mais ce partage féodal affaiblit d'abord le royaume face aux chevaliers de l'Ordre Teutonique au nord-ouest, la Horde d'Or au sud-est, la Pologne à l'ouest et la Moscovie à l'est.\n\nEn 1345, grâce au dévouement de Kęstutis, Olgierd, caractérisé par une grande sagacité politique, détrône d'abord Jaunutis, son plus jeune frère, jugé incompétent face à la politique agressive de l'Ordre Teutonique et partage d'abord le pouvoir avec Kestutis sous le titre de duc de Vitebsk pendant plus de 20 ans. Soucieux de continuer l'œuvre de son père, il consacre les années suivantes à l'expansion du territoire et portera ensuite le titre de grand-duc de Lituanie.\n\nOlgierd reprend le duché de Samogitie à l'ordre Teutonique, jugé responsable de la mort de son père, et la Podolie aux Tartares du Dniepr. Battu et fait prisonnier par les Chevaliers teutoniques, il parvient à leur échapper, et reprend la lutte pour empêcher ledit ordre de se consolider. Il perd cependant la Volhynie, la Podolie, les palatinats de Brzesc et de Belz, que lui ravissent les Polonais.\n\nEn 1362, il défit trois hordes de Mongols en Podolie et sur le Dniepr (bataille des Eaux Bleues), puis pilla et détruisit Cherson. Il dirigea contre la Russie trois expéditions dont deux en 1367 pour soutenir Michel II de Tver contre Dmitri. Il envahit ensuite la Prusse, en 1370, mais perdit la bataille de Rudau (en), ce qui entraîna l'occupation de Vilnius par les Allemands (pris au sens des membres teutons de l'ordre).\n\nOlgierd a tenu bon face aux appétits des royaumes voisins, gagnant en influence et territoire aux dépens de Moscou et de la Horde d'Or et étendant les frontières du grand-duché de Lituanie jusqu'à la mer Noire. Son action principale fut la sécurisation des terres de l'ancienne Rus' de Kiev.\n\nOlgierd mourut en 1377, laissant douze fils dont les plus célèbres sont Švitrigaila et Jogaila qui se convertit au catholicisme, monta sur le trône polonais et fonda la dynastie qui gouverna la Lituanie et la Pologne pendant près de 200 ans.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 54.687,
+    "lng": 25.2829
   },
   {
     "id": 648,
@@ -10542,7 +10575,10 @@
     ],
     "type": 4,
     "description": "Guillaume II d'Avesnes est tué à la bataille de Staveren en Frise. Extinction de la famille régnante de Hollande. Le comté de Hollande passe à la dynastie de Bavière (Wittelsbach), ce qui ouvre un long conflit entre Marguerite, la sœur du dernier comte, et son fils Guillaume IV qui revendiquait l’héritage, au motif que la province, « fief d’épée », ne pouvait échoir à une femme.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 52.8833,
+    "lng": 5.3602
   },
   {
     "id": 654,
@@ -10554,7 +10590,10 @@
     ],
     "type": 3,
     "description": "l’infant de Portugal, Pierre, est secrètement amoureux d’Inès de Castro une jeune femme de la suite de sa femme Constance de Castille. À la mort de cette dernière en couche (13 novembre), il épousera secrètement Inès avec laquelle il aura quatre enfants.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 38.7078,
+    "lng": -9.1366
   },
   {
     "id": 655,
@@ -10823,7 +10862,10 @@
     "type": 3,
     "description": "Cette expédition est évoquée par l’atlas catalan de 1375 Tout à fait au sud-ouest de la carte, au sud des îles Canaries, l'auteur témoigne de l'intérêt de Majorque vis-à-vis de l'exploration de la côte occidentale de l'Afrique en faisant le choix de représenter l'expédition de Jaume Ferrer (en), dont il précise qu'il est parti le 10 août 1346 à la recherche du légendaire « riu d'Or », le fleuve de l'or. Il s'agît du premier document à faire mention de cette expédition dont l'échec ou la réussite ne nous est pas connu Au nord du bateau, les îles Canaries sont représentées avec une grande précision de façon multicolore.\n\nSituées tout à fait à l'occident de la mappemonde, elles sont allégoriques des îles des Bienheureux, symbole grec du paradis alors que par opposition l'extrême-orient est chargé de figures démoniaques Les seules informations disponibles concernant son expédition sont la description et la note de l' Atlas catalan de 1375 et un annuaire géographique génois de 1802., attribuées au cartographe majorquin Abraham Cresques (patronyme correct : Cresques Abraham). Dans le coin inférieur gauche de la carte, on peut voir un navire aux couleurs vives, battant pavillon aragonais, et une note indiquant simplement que « Jacme Ferrer » partit à bord d'un uxer le 10 août 1346 à la recherche du « Riu de l'Or » (fleuve d'Or).\n\nUn uxer est une galère de transport à un seul mât, gréée en carré et propulsée par des rames, avec une poupe arrondie et une proue basse, couramment utilisée pour le transport de chevaux. La position géographique du navire (au pied des îles Canaries) suggère que Ferrer a probablement dépassé le cap Bojador, alors le summum de la navigation, au-delà duquel les navires européens n'osaient pas naviguer. Si Ferrer a survécu et est revenu, son exploit a précédé de près d'un siècle le célèbre passage réussi de ce cap par l'explorateur portugais Gil Eanes en 1434.\n\nLa « Rivière d'Or », fréquemment évoquée par les commerçants transsahariens, était une référence au fleuve Sénégal qui coulait au cœur de l' Empire du Mali producteur d'or.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Jacme_ferrer.jpg",
-    "legende": "Détail de l' Atlas catalan de 1375 représentant le navire de Jaume Ferrer"
+    "theme": "sciences",
+    "legende": "Détail de l' Atlas catalan de 1375 représentant le navire de Jaume Ferrer",
+    "lat": 7.0861,
+    "lng": -15.9619
   },
   {
     "id": 680,
@@ -10863,7 +10905,10 @@
       "Monde islamique"
     ],
     "type": 3,
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 28.7196,
+    "lng": 28.7936
   },
   {
     "id": 684,
@@ -10909,6 +10954,9 @@
     "type": 5,
     "description": "Renault de Gobehen, sous la conduite de Geoffroy d'Harcourt, brûle les faubourgs d'Avranches pour Édouard III, qui envahissait la Normandie",
     "image": "",
+    "theme": "guerre",
+    "lat": 48.6862,
+    "lng": -1.3579,
     "serie": "Guerre de Cent ans"
   },
   {
@@ -10954,7 +11002,10 @@
     ],
     "type": 4,
     "description": "Le roi Waldemar IV Atterdag du Danemark vend l'Estonie, qui avait été conquise par le Danemark en 1219, à l' Ordre Teutonique .",
-    "image": ""
+    "image": "",
+    "theme": "diplomatie",
+    "lat": 58.7524,
+    "lng": 25.3319
   },
   {
     "id": 694,
@@ -11084,6 +11135,9 @@
     "type": 4,
     "description": "Arnau Bassa est un peintre espagnol du XIVe siècle.\n\nFils et disciple du peintre Ferrer Bassa, Arnau collabora avec lui à de nombreuses œuvres.\n\nIl introduisit dans sa peinture des éléments provenant de l'école d'Avignon, mais pencha certainement vers un gothique italianisant, dont il fut l'un des plus grands représentants en Catalogne.\n\nIl est établi qu'Arnau réalisa des œuvres personnelles de 1345 à 1348, mais on sait qu'il travaillait déjà à l'atelier de son père avant ces dates. Sa main a été distinguée dans certaines miniatures du Livre d’Heures de Marie de Navarre (ca).\n\nLa première œuvre qu'il a été possible de lui attribuer est le retable de saint Marc qu'il peignit pour la chapelle que la corporation des cordonniers de Barcelone avait dans la cathédrale de cette ville. Elle était mentionnée dans un document daté du 11 décembre 1346. Elle fut transférée plus tard dans la collégiale basilique de Sainte-Marie de Manresa.\n\nEn 1347, il cosigna avec son père un contrat visant à la réalisation du retable de saint Jacques (dont le visage est attribué à Arnau) pour le monastère de Jonqueres (es). Ce retable se trouve actuellement au Musée diocésain de Barcelone (es).\n\nIl collabora au retable du palais royal de l'Almudaina à Palma de Majorque. Achevé par l'atelier de Ramón Destorrents (es) après que les Bassa père et fils moururent vers 1348 à cause de l'épidémie de peste, ce retable est conservé au Museu Nacional de Arte Antiga de Lisbonne.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Arnau_basa-san_marcos.jpg",
+    "theme": "art",
+    "lat": 40.8311,
+    "lng": -0.1864,
     "sources": "Retable de saint Marc, 1346, basilique de Sainte-Marie de Manresa"
   },
   {
@@ -11140,6 +11194,9 @@
     "type": 2,
     "description": "La peste frappe l'Empire ottoman et le Proche-Orient avec une intensité comparable à l'Europe. Les grandes villes marchandes comme Constantinople et Alexandrie perdent une grande partie de leur population, bouleversant les routes commerciales.",
     "image": "",
+    "theme": "catastrophe",
+    "lat": 35.1739,
+    "lng": 37.4336,
     "sources": "Ibn Battuta, Rihla"
   },
   {
@@ -11169,7 +11226,10 @@
     ],
     "type": 4,
     "description": "Les Mérinides du Maroc l’emportent  contre le sultan Hafside de Tunisie et dominent tout le Maghreb mais leurs échecs en Espagne et l’arrivée de la peste noire marqueront le début de leur déclin.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 36.1511,
+    "lng": 9.5336
   },
   {
     "id": 667,
@@ -11339,7 +11399,10 @@
       "Monde islamique"
     ],
     "type": 4,
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 37.5911,
+    "lng": 34.9136
   },
   {
     "id": 698,
@@ -11352,7 +11415,10 @@
     "type": 4,
     "description": "8 mars : statuts de Wiślica, qui réforment la législation polonaise. Ils créent un jus Polonicum qui désigne les nobles comme les représentants de la nation polonaise, c’est-à-dire de l’ensemble de la population. Casimir III de Pologne les utilise pour occuper les postes de gouverneurs (starosta) qui deviendront la base de l’administration polonaise.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Karol_marconi_Statuty_wi%C5%9Blickie.jpg",
-    "legende": "Casimir III de Pologne signe les Statuts de Wiślica"
+    "theme": "politique",
+    "legende": "Casimir III de Pologne signe les Statuts de Wiślica",
+    "lat": 50.3485,
+    "lng": 20.6745
   },
   {
     "id": 699,
@@ -11408,7 +11474,10 @@
     ],
     "type": 4,
     "description": "Une famine éclate en France à cause d'un champignon toxique des céréales qui provoque le feu de Saint-Antoine .",
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 47.0539,
+    "lng": 2.3336
   },
   {
     "id": 703,
@@ -11421,7 +11490,10 @@
     ],
     "type": 5,
     "description": "Les Chevaliers Hospitaliers défont une flotte turque et coulent 100 navires au large d'Imbros",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 40.1659,
+    "lng": 25.8314
   },
   {
     "id": 704,
@@ -11432,7 +11504,10 @@
     ],
     "type": 4,
     "description": "Dernier voyage viking connu en Amérique avant l'arrivée de Christophe Colomb.\n\nDernière mention historique de Markland, la côte du Labrador au sud de l'île de Baffin, visitée par les Vikings de la colonie du Groenland tout au long du Moyen Âge .",
-    "image": ""
+    "image": "",
+    "theme": "sciences",
+    "lat": 69.449,
+    "lng": -25.6048
   },
   {
     "id": 705,
@@ -11483,6 +11558,22 @@
     "theme": "politique",
     "lat": 48.4206,
     "lng": 11.4009
+  },
+  {
+    "id": 739,
+    "titre": "Décès de Guillaume d'Ockham",
+    "date": 1347,
+    "mois": 4,
+    "zones": [
+      "Italie"
+    ],
+    "type": 5,
+    "description": "Le 6 juin 1328, le pape excommunie Ockham pour avoir quitté Avignon sans permission (et non pour ses doctrines). Il est cependant incertain qu'il ait effectivement eu l'interdiction formelle de quitter la ville[3].\n\nIl aurait [Quand ?] prononcé à l’empereur ces mots célèbres : O Imperator, defende me gladio et ego defendam te verbo (« O empereur, défends-moi par l’épée, et je te défendrai par la parole »).[réf. souhaitée]\n\nVers 1329, l'empereur retourna d'Italie à Munich, et Ockham et ses confrères le suivirent[3].\n\nOckham consacra alors le reste de sa vie à son œuvre philosophique. A deux exceptions près, dont l'authenticité est contestée, il traita désormais de questions politiques[3]: il publia des pamphlets politico-religieux contre l'autorité pontificale, dont notamment Opus nonaginta dierum vers 1332.\n\nGuillaume d'Ockham mourut en 1347. Sa tombe porte la date du 10 avril\nOckham vit à une époque d'effervescence philosophique annonçant la Renaissance. Rompant avec le dogmatisme théologique et s'inscrivant dans l'héritage de la pensée de la Grèce antique, le nominalisme qu'il professe sème les germes de la modernité.\nL'un des personnages du Nom de la rose d'Umberto Eco, le moine franciscain Guillaume de Baskerville est, de l'aveu même d'Eco[18], une référence à Guillaume d'Ockham dont il partage le prénom. Premier jour, vêpres : « il ne faut pas multiplier les explications et les causes sans qu'on en ait une stricte nécessité. » (Entia non sunt multiplicanda praeter necessitatem).",
+    "image": "",
+    "theme": "idees",
+    "lat": 48.1371,
+    "lng": 11.5754,
+    "sources": "https://fr.wikipedia.org/wiki/Guillaume_d%27Ockham"
   },
   {
     "id": 125,
@@ -11730,7 +11821,10 @@
     ],
     "type": 4,
     "description": "2 février : Bataille de la Strėva entre les chevaliers Teutoniques et l’armée du grand-duché de Lituanie.\n\nLa bataille de la Streva se déroula le 2 février 1348 entre les chevaliers Teutoniques et l’armée du grand-duché de Lituanie sur les rives de la rivière Streva un affluent de la rive droite du Niémen près de la ville de Žiežmariai. Wigand de Marbourg clame que 18000 lituaniens furent tués ou noyés alors que l’ordre ne perdit 8 chevaliers et 60 soldats et que ce fut une des plus grandes victoires de l’ordre. Narimantas et Manvydas deux fils du grand-duc Gediminas auraient été tués à cette bataille.\n\nLa victoire fut attribuée à la Vierge Marie et un monastère fut créé en son honneur par le grand maître Winrich von Kniprode à Königsberg.\n\nCependant, du fait du changement de commandant (le grand maître Heinrich Dusemer von Arfberg était en mauvaise santé et mourut en 1353) et de la Peste Noire, les chevaliers de l'Ordre ne tirèrent pas avantage d'une des plus grandes défaites du grand-duché de Lituanie.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 54.7792,
+    "lng": 24.5363
   },
   {
     "id": 722,
@@ -11742,7 +11836,10 @@
     ],
     "type": 3,
     "description": "28 février : les Cortes de Alcalá convoqués par Alphonse XI de Castille promulguent l'ordonnance d'Alcala (Ordenamiento de Alcalá), somme juridique de 58 lois. Première mention de l'institution des corrégidors, fonctionnaires nommés pour représenter la couronne de Castille à l'échelon municipal (institution généralisée par les rois catholiques en 1480)",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 37.462,
+    "lng": -3.9224
   },
   {
     "id": 723,
@@ -11894,7 +11991,10 @@
     ],
     "type": 4,
     "description": "Le 4 juillet, le pape Clément VI publie une bulle papale condamnant la persécution des Juifs pendant la peste noire . Sa lettre est largement ignorée en dehors d' Avignon .\n\n26 septembre : Dans une seconde bulle intitulée Quamvis perfidiam, le pape Clément VI déclare les Juifs innocents d’ avoir empoisonné les puits ou d’avoir propagé la peste . Quiconque persécute des Juifs doit s’attendre à l’excommunication .\n\nDans sa bulle Quamvis Perfidiam, le pape Clément VI qualifie de « superstition » les accusations selon lesquelles les Juifs auraient provoqué la peste noire en empoisonnant les sources d'eau . Le pape a sollicité l'avis du médecin Guy de Chauliac",
-    "image": ""
+    "image": "",
+    "theme": "religion",
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 734,
@@ -11907,7 +12007,10 @@
     ],
     "type": 5,
     "description": "Un violent séisme dont l'épicentre se situe dans le Frioul provoque, entre autres, un glissement de terrain sur le mont Dobratsch en Carinthie, ensevelissant de nombreux villages et détruisant plusieurs châteaux.",
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 46.151,
+    "lng": 13.0559
   },
   {
     "id": 735,
@@ -11962,17 +12065,10 @@
     ],
     "type": 5,
     "description": "Les Cortes de Castille, réunies dans la ville d' Alcalá de Henares sous le règne d' Alphonse XI, interdirent la pratique de l'usure .",
-    "image": ""
-  },
-  {
-    "id": 739,
-    "titre": "Décès de Guillaume d'Ockham, d'Andrea Pisano,  Ambrogio Lorenzetti",
-    "date": 1348,
-    "zones": [
-      "Italie"
-    ],
-    "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "economie",
+    "lat": 41.62,
+    "lng": -4.726
   },
   {
     "id": 829,
@@ -12397,7 +12493,10 @@
     ],
     "type": 4,
     "description": "18 juin : ordonnance des Travailleurs en Angleterre. Interdiction de la mendicité en Angleterre (fin en 1388)\n\nD'autres mesures sont prises pour éviter la hausse des prix consécutive à la pénurie de main d’oeuvre.\n\nLes élites les plus aisées souffrirent de ce bouleversement soudain de l’économie. La difficulté de trouver des travailleurs créa de la frustration. John Gower dit des travailleurs de l’après-peste : « ils sont paresseux, ils sont rares, ils sont âpres au gain. Pour la moindre chose qu’ils font ils demandent la plus forte paie »\n\nL’ordonnance comprenait entre autres les mesures suivantes :\n\ntoute personne âgée de moins de 60 ans devait travailler ; les employeurs ne devaient pas employer de main d’œuvre excédentaire ; les salaires ne devaient pas être supérieurs à ceux d’avant la peste ; la nourriture devait être vendue à un prix raisonnable sans profit excédentaire.\n\nL’ordonnance est considérée comme largement inefficace. Malgré le renforcement de l’ordonnance par le parlement anglais, avec le statut des travailleurs de 1351, les travailleurs continuèrent à demander de très forts salaires et la majorité de l’Angleterre (la classe des travailleurs) bénéficia d’une période de relative prospérité avant que les salaires et les prix ne retrouvassent les proportions d’avant la peste avec l’augmentation du nombre de travailleurs. Tandis que la situation fut finalement inversée, la peste modifia radicalement la structure sociale de la société anglaise.\n\nLe statut des travailleurs (en anglais Statute of Labourers) est une loi votée en 1351 par le parlement anglais sous le règne d'Édouard III en réponse aux conséquences démographiques et économiques de la grande peste. Son promoteur principal est John Halles. La grande peste a tué environ le tiers de la population européenne et créé un manque de main-d’œuvre brutal qui intervient après une phase de surpopulation. Les propriétaires terriens se retrouvent en compétition pour obtenir de la main-d’œuvre, les paysans sont donc en position de force pour obtenir des avancées sociales.\n\nMais l'augmentation des prix agricoles et des salaires entraînent une importante inflation. Pour la contrer Édouard III décrète l'ordonnance des Travailleurs de 1349. Le parlement la renforce par le statut des travailleurs de 1351.\n\nLe statut établit pour les travailleurs un salaire plafonné proportionnel aux salaires payés avant la grande peste. Il est également établi que doit travailler tout homme ou femme en état de le faire et impose de fortes amendes aux oisifs. Dans la pratique, le statut est relativement peu appliqué et n’est pas vraiment couronné de succès ; en revanche, il permet d’établir une différenciation entre les travailleurs en état de travailler et les autres. Cette différenciation sera reprise dans les législations postérieures relatives à la pauvreté.\n\nLe mécontentement provoqué par cette loi est l'un des facteurs déclenchant de la révolte des paysans anglais de 1381. Des évolutions similaires ont eu lieu à travers l'Europe et en particulier en France où le roi Jean II le Bon bloque les prix et interdit la mendicité pour les mêmes raisons.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 51.5074,
+    "lng": -0.1278
   },
   {
     "id": 764,
@@ -12424,7 +12523,10 @@
     ],
     "type": 4,
     "description": "Annexion de la Ruthénie, par Casimir III (Kamizierz) le Grand, de Halicz à Wlodzimierz (Galicie)",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 49.4872,
+    "lng": 31.2718
   },
   {
     "id": 767,
@@ -12467,7 +12569,10 @@
     ],
     "type": 5,
     "description": "Suite au décès de Günther von Schwarzburg, Charles IV est couronné roi des Romains pour la seconde fois . Cette fois, son titre est universellement reconnu.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 50.5254,
+    "lng": 9.8936
   },
   {
     "id": 770,
@@ -12478,7 +12583,10 @@
     ],
     "type": 4,
     "description": "L'Épire est conquise par l' empereur byzantin Jean Cantakuzène",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 39.5502,
+    "lng": 20.7486
   },
   {
     "id": 771,
@@ -12490,7 +12598,10 @@
     "type": 5,
     "description": "Suite au délabrement et à la démolition avancée de la salle de l’assemblée carolingienne au XIIIe siècle, le magistrat et l’empereur Louis de Bavière convinrent d’un nouveau bâtiment à double fonction, qui allait héberger le siège administratif de la ville libre d’Empire et accueillir les plus importantes cérémonies impériales : les banquets de couronnement. La construction s’acheva en 1350 ; le bâtiment fut dès lors considéré comme une œuvre d’architecture profane des plus grandioses et des plus audacieuses.\n\nLe célèbre humaniste Enea Silvio Piccolomini, le futur pape Pie II, le décrivit en 1435 comme le « palais le plus noble de toute l’Allemagne ».\n\nUn édifice palatial à trois étages fut construit sur les fondations du palais et certains vestiges de ses murs extérieurs, selon une orientation strictement est-ouest. Les deux étages principaux étaient chacun divisés en cinq travées de forme proche du carré et dotées de voûtes en croisée d’ogives. La tour Granus datant de l’époque de Charlemagne fut exhaussée de trois étages et intégrée à l’édifice. La façade nord était ornée de 60 statues peintes et partiellement dorées. Cet édifice impressionna tellement son époque qu’il inspira de nombreux hôtels de ville en Flandre, notamment à Anvers, Bruges et Gand.\n\nL’incendie de 1656 détruisit les combles et les flèches de l’hôtel de ville. On opta rapidement pour la construction de tours plus hautes dans un style baroque, alors considéré comme moderne. Ce même style s’imposa également lorsqu’il fut question de réaménager la façade à partir de 1727. Les précieuses statues furent ôtées et remplacées par des élements en stuc. On retrouve aujourd’hui l’aménagement intérieur datant de cette époque dans la Salle blanche.\n\nLorsque le grand romantique Frédéric-Guillaume IV accéda au trône de Prusse en 1840, on décida de restaurer l’ancien faste de la « Salle impériale ». Une tour d’escalier fut construite au sud en guise d’accès représentatif, selon les plans de l’urbaniste Friedrich Ark. Ce dernier reconstitua également la structure gothique des fenêtres de la façade donnant sur le marché. Un nouvel incendie emporta les tours baroques en 1883. Elles réapparurent dans un style néogothique. La regothisation s’acheva en 1901 avec la réinstallation de statues.\n\nLes bombardements de 1943/44 ont gravement endommagé l’hôtel de ville. En 1944, et surtout à partir de 1946, on s’attacha tout d’abord à la préservation du bâtiment, puis à sa reconstruction. Dès 1950, le prix international Charlemagne put être décerné dans la salle des couronnements provisoirement restaurée. Le conseil et le maire réintégrèrent les lieux un an plus tard.\n\nLe portail principal de la tour ouest et les fenêtres de la salle des couronnements ont été conçus par Ewald Mataré. Les nouvelles flèches conçues par Leo Hugot apportèrent en 1979 la touche finale à l’apparence actuelle de l’hôtel de ville.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/De_merian_Westphaliae_100.jpg/960px-De_merian_Westphaliae_100.jpg",
-    "legende": "L'hôtel de ville d'Aix-la-Chapelle sur une gravure de Matthäus Merian, 1647"
+    "theme": "art",
+    "legende": "L'hôtel de ville d'Aix-la-Chapelle sur une gravure de Matthäus Merian, 1647",
+    "lat": 50.7764,
+    "lng": 6.0839
   },
   {
     "id": 772,
@@ -12915,7 +13026,10 @@
     ],
     "type": 4,
     "description": "L’administration militaire n’existe pas sous les Francs et les Mérovingiens. La guerre est affaire privée et constitue un état quasi permanent. Le roi plus suzerain que souverain tente de lutter contre la féodalité. Le système de l’ost à 40 jours étant insuffisant, il décida alors de monnayer la présence de troupes à son service. C’est l’appât du gain qui attire de nombreux aventuriers qui constituent des bandes : bandes de routiers, compagnies franches, puis les grandes compagnies. Il s’agit des premières troupes soldées.\n\nLe roi traite à forfait avec le chef de bande ou capitaine, lequel recrute ses hommes comme il l’entend. Ce sont les trésoriers des guerres, représentants du roi créés au début du XIVe siècle, qui assurent le paiement des forfaits aux capitaines au vu du « rôle des gens de guerre faisant effectivement du service ».\n\nEn effet, avides de gains, les capitaines n’entretiennent pas l’effectif pour lequel le roi les paie : ils grivèlent sur les gens de guerre (fausses lances, hommes de paille). Ainsi, devant les abus qu’engendre ce système, le pouvoir royal tente d’obtenir des justifications sur l’effectif des troupes entretenues.\n\nLe roi Jean II le Bon par un règlement du 30 avril 1351 décide alors de donner aux Maréchaux la faculté de déléguer leurs pouvoirs à des personnes convenables et avisées désignées le plus souvent sous le nom de commissaire des guerres afin de s’assurer par des montres qu’il n’y a pas d'abus. La fonction de commissaires de guerre est née.\n\nAu départ le contrôle de l’effectif est « assuré » par les chefs militaires : connétables, maréchaux, maîtres d’ostel, maître des arbalétriers… Mais les faiblesses du système deviennent de plus en plus criantes, les abus perdurent et même s’aggravent. Avec la guerre de 100 ans, la situation est devenue alarmante. Pour y remédier, le roi décide alors de renforcer le contrôle. Il institutionnalise les monstres, véritables revues d’effectifs. Cette mission est confiée aux « commissaires du roi pour les guerres ».\n\nLeurs tâches sont nombreuses : vérifier personnellement les effectifs soldés, contrôler les « remises » de matériels hors d’usage et ce, à la place des chefs militaires.\n\nPar l’ordonnance du 13 janvier 1373, le roi Charles V étend leurs pouvoirs, décidant que les commissaires des guerres seront aussi « meneurs de gens d’armes », chargés de conduire les chevauchées, de faire vivre les troupes en bon ordre et police, de réprimer tous les excès, crimes et délits commis par gens de guerre, déserteurs ou en maraude, et de faire tout en ce qui concerne « le bon ménage des deniers de sa Majesté ».\n\nSciemment choisis au sein de la bourgeoisie (instruite et s’inscrivant en porte à faux par rapport à la noblesse), les commissaires des guerres participent à l’extension du pouvoir royal face à la féodalité. Totalement indépendants du commandement, ces commissaires voient leurs pouvoirs grandir notamment après la création de l’armée permanente par l’édit de 1445. Quinze compagnies de 600 hommes à cheval sont instaurées. Ce sont les premiers corps de troupe\n\nAgents du pouvoir central, les commissaires des guerres concrétisent la séparation de l’administration et du commandement. Cette notion demeure encore aujourd’hui.\n\nEnfin, la création des commissaires marque de façon plus générale l’apparition de l’administration militaire française. Celle-ci est affirmée par l’édit de 1445 et l’instauration des compagnies d’ordonnance : le capitaine ne reçoit plus de forfait mais répartit les sommes que lui remet le commissaire au nom du roi. Ce dernier devient donc pourvoyeur après avoir été simple contrôleur.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 48.8589,
+    "lng": 2.32
   },
   {
     "id": 790,
@@ -12942,7 +13056,10 @@
     ],
     "type": 4,
     "description": "Le prince de Lituanie Kęstutis signe un accord de paix avec Casimir III le Grand et Louis Ier de Hongrie. Il s’engage à se convertir au christianisme.",
-    "image": ""
+    "image": "",
+    "theme": "diplomatie",
+    "lat": 51.5796,
+    "lng": 16.0136
   },
   {
     "id": 792,
@@ -12988,7 +13105,10 @@
     ],
     "type": 4,
     "description": "les Génois sont chassés de Nègrepont par les Vénitiens  alliés aux Aragonais et aux Byzantins.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 38.4624,
+    "lng": 23.5947
   },
   {
     "id": 795,
@@ -13015,7 +13135,10 @@
     ],
     "type": 4,
     "description": "Louis Ier de Hongrie confirme la « constitution nobiliaire » de 1222 qui donne à la petite noblesse hongroise l’égalité avec les grands : la loi sur l’inaliénabilité du patrimoine s’applique à tous ; les nobles sont représentés aux assemblées des comitats et à la Diète sur un pied d’égalité",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 48.8589,
+    "lng": 2.32
   },
   {
     "id": 797,
@@ -13075,7 +13198,10 @@
     ],
     "type": 5,
     "description": "Statut des Proviseurs : En Angleterre, une interdiction d'octroyer des bénéfices papaux et de faire appel à la Curie entre en vigueur. Le Statut des Proviseurs empêche notamment le Pape de nommer des membres du clergé à des bénéfices anglais",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 51.5074,
+    "lng": -0.1278
   },
   {
     "id": 802,
@@ -13087,7 +13213,10 @@
     ],
     "type": 5,
     "description": "14 janvier – Édouard III d'Angleterre promulgue le Treason Act de 1351, définissant la trahison en droit anglais. Cette loi est restée en vigueur jusqu'au XXIe siècle.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 51.5074,
+    "lng": -0.1278
   },
   {
     "id": 803,
@@ -13099,7 +13228,10 @@
     "type": 2,
     "description": "4 mars – Le royaume d'Ayutthaya un royaume thaï est établi par le roi Uthong (Ramathibodi I) au Siam (Thaïlande actuelle) . Il commence à propager le bouddhisme Theravada comme religion d'État. ce royaume perdure de 1351 à 1767.¨ Ramathibodi Ier (en thaï: สมเด็จพระรามาธิบดีที่ 1) (1314 - 1369) est le fondateur du royaume d'Ayutthaya, dans l'actuelle Thaïlande, sur lequel il a régné jusqu'en 1369. Il était connu sous le nom de prince U Thong avant son ascension au trône le 4 mars 1351.\n\nNatif de Chiang Saen (maintenant dans la province de Chiang Rai), il se réclamait de la descendance de Khoun Bourom (en) et a propagé le bouddhisme theravāda comme religion d'État.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ayutthaya_Historical_Park_%2849814043183%29.jpg/1280px-Ayutthaya_Historical_Park_%2849814043183%29.jpg",
-    "legende": "Vue du parc historique d'Ayutthaya, Phra Nakhon Si Ayutthaya, Thaïlande."
+    "theme": "guerre",
+    "legende": "Vue du parc historique d'Ayutthaya, Phra Nakhon Si Ayutthaya, Thaïlande.",
+    "lat": 14.8972,
+    "lng": 100.8327
   },
   {
     "id": 804,
@@ -13157,7 +13289,10 @@
     ],
     "type": 4,
     "description": "Un pont romain resta en service durant le haut Moyen Âge et fut restauré en 850 par l'empereur Louis II.\n\nLe nouveau pont fut construit à partir de 1351 au même emplacement que l'ancien pont romain, conçu par Giovanni da Ferrera et Jacopo da Cozzo. Achevé en 1354, il était couvert et doté de dix arches irrégulières et de deux tours à ses extrémités, servant à la défense. L'aspect de ce pont, même s'il ne comportait alors que six arches, est visible sur les fresques de Bernardino Lanzani (vers 1524) à l'intérieur de l' église San Teodoro.\n\nEn 1582, une tornade qui frappa le Tessin détruisit la toiture du pont et fit trois victimes. Lors de la construction des remparts espagnols (1546-1569), la première arche et demie côté ville et la première arche côté village furent intégrées aux bastions et donc condamnées.\n\nPar la suite, un portail d'entrée fut ajouté côté Borgo Ticino (achevé en 1599 pour le passage de l'archiduchesse Marguerite d'Autriche), une chapelle au centre du pont en l'honneur de saint Jean Népomucène (1746), saint traditionnellement invoqué contre les inondations et les noyades, et enfin un autre portail d'entrée côté centre historique, érigé par Carlo Amati (1822).\n\nDurant l'été 1944, les Alliés intensifièrent la pression sur les Allemands et le régime fasciste. Le 4 septembre 1944, des avions de la Royal Air Force survolèrent Pavie et bombardèrent les ponts du Tessin. Le Ponte Coperto fut épargné, mais 26 personnes furent tuées à Borgo Ticino. L'attaque fut répétée le 5 septembre. Là encore, le Ponte Coperto ne fut pas gravement touché et l'on déplora de nouveau des victimes à Borgo Ticino, cette fois-ci 45.\n\nLe 12 septembre, une troisième attaque fut lancée, avec le même résultat. La destruction définitive du Ponte Coperto fut causée par un bombardement aérien le 26 septembre, qui provoqua l'effondrement d'un portique. Au total, les bombardements des ponts coûtèrent la vie à 119 personnes à Pavie.\n\nÀ la fin de la guerre, un vif débat s'est engagé sur la question de la restauration ou de la démolition du vieux pont. Craignant des effondrements susceptibles de provoquer le débordement du Tessin, le ministère des Travaux publics décida, en février 1948, de faire démolir à la dynamite les vestiges de l'ancienne structure.\n\nQuelques vestiges des piliers de l'ancien pont sont visibles dans les eaux du fleuve, et la base du portail partiellement enfoui sur la rive gauche subsiste.\n\nAu Palazzo Mezzabarba, siège de la municipalité de Pavie, dans le hall de l'état civil, se trouve une maquette en bois du pont du XIVe siècle, réalisée en 1938.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/20160807-Pavia-002.jpg/330px-20160807-Pavia-002.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/20160807-Pavia-002.jpg/330px-20160807-Pavia-002.jpg",
+    "theme": "techniques",
+    "lat": 45.0369,
+    "lng": 9.1378
   },
   {
     "id": 808,
@@ -13169,7 +13304,10 @@
     ],
     "type": 5,
     "description": "Après que l' évêque de Montefeltro l'eut libérée des contraintes féodales, Saint-Marin devint une commune libre.",
-    "image": ""
+    "image": "",
+    "theme": "diplomatie",
+    "lat": 43.9459,
+    "lng": 12.4583
   },
   {
     "id": 1131,
@@ -13214,7 +13352,10 @@
     "type": 1,
     "description": "Innocent VI, né Étienne Aubert à Beyssac en Limousin (actuelle Corrèze) en 1282 et mort le 12 septembre 1362, est évêque de Noyon et évêque de Clermont, puis il devient le 199e pape de l’Église catholique à Avignon de 1352 à 1362, succédant au pape Clément VI (1342-1352).Innocent VI est pape de 1352 à 1362. Il succède à Clément VI. Il est élu le 18 décembre 1352 et siège comme son prédécesseur à Avignon.\n\nIl mène une politique d'économie après les fastes de son prédécesseur et de la cour pontificale. Entre autres réformes, il ordonne à tous les prélats et autres bénéficiers de se retirer chacun dans leurs bénéfices et d'y résider sous peine d'excommunication.",
     "image": "",
-    "regne": true
+    "theme": "politique",
+    "regne": true,
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 809,
@@ -13314,7 +13455,10 @@
     ],
     "type": 3,
     "description": "mort de Clément VI. Tentative du collège des cardinaux, réuni en conclave, pour prendre le pouvoir dans l’Église.\n\n18 décembre : début du pontificat d'Innocent VI (jusqu'en 1362)\n\nInnocent VI, né Étienne Aubert à Beyssac en Limousin (actuelle Corrèze) en 1282 et mort le 12 septembre 1362, est évêque de Noyon et évêque de Clermont, puis il devient le 199e pape de l’Église catholique à Avignon de 1352 à 1362, succédant au pape Clément VI (1342-1352).Innocent VI est pape de 1352 à 1362. Il succède à Clément VI. Il est élu le 18 décembre 1352 et siège comme son prédécesseur à Avignon.\n\nIl mène une politique d'économie après les fastes de son prédécesseur et de la cour pontificale. Entre autres réformes, il ordonne à tous les prélats et autres bénéficiers de se retirer chacun dans leurs bénéfices et d'y résider sous peine d'excommunication.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 43.9492,
+    "lng": 4.8059
   },
   {
     "id": 818,
@@ -13326,7 +13470,10 @@
       "Angleterre"
     ],
     "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 50.8691,
+    "lng": 1.8704
   },
   {
     "id": 819,
@@ -13402,7 +13549,10 @@
     ],
     "type": 4,
     "description": "Après des années de mendicité et de vie de moine bouddhiste, le paysan chinois sans le sou Zhu Yuanzhang rejoint les rébellions des Turbans rouges contre la dynastie Yuan de Chine dirigée par les Mongols ; il deviendra plus tard le premier empereur de la dynastie Ming .",
-    "image": ""
+    "image": "",
+    "theme": "revolte",
+    "lat": 28.0101,
+    "lng": 113.3168
   },
   {
     "id": 899,
@@ -13413,7 +13563,10 @@
     ],
     "type": 5,
     "description": "La loggia en marbre au pied même de la tour dela Mangia, connue sous le nom de Cappella di Piazza, a été ajoutée en 1352. C'est une offrande à la Sainte Vierge faite par les survivants siennois de la peste noire en signe de reconnaissance.\n\nLa Cappella di Piazza fut ajoutée par les Siennois au pied de la tour Torre del Mangia en offrande à la Vierge Marie en remerciement de les avoir libérés de la peste noire.\n\nCommencée en 1352, sur les plans de Domenico d'Agostino, elle est remaniée en style gothique en 1376 par Giovanni di Cecco (en).\n\nEn 1378, les pilastres ont été refaits sous leur forme actuelle et les sculptures décoratives entre les colonnes ont été exécutées entre 1378-1382 par Mariano d'Angelo Romanelli et Bartolomeo di Tomme.\n\nEntre 1461 et 1468 le simple plafond en bois qui recouvrait autrefois la loggia a été remplacé par l'actuelle chapelle en marbre de la Renaissance dont Antonio Federighi est l'auteur des étranges décorations du couronnement.\n\nEntre 1537 - 1539 Le Sodoma a peint une fresque sur l'autel (Vierge à l'Enfant et Dieu le Père) dont les restes sont maintenant conservés dans le Museo Civico du Palazzo Pubblico.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Siena.Torre.loggia01.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Siena.Torre.loggia01.jpg",
+    "theme": "art",
+    "lat": 43.1672,
+    "lng": 11.4676
   },
   {
     "id": 1407,
@@ -13456,8 +13609,13 @@
       "Byzance"
     ],
     "type": 1,
-    "image": "",
-    "regne": true
+    "description": "Mathieu Cantacuzène (v.1325 – après 1383) : le dernier empereur de la dynastie Cantacuzène\nLe fils de Jean VI Cantacuzène\n\nNé vers 1325, Mathieu Cantacuzène est le fils de l'empereur Jean VI Cantacuzène et d'Irène Asanina.\n\nSa carrière est étroitement liée à la guerre civile byzantine qui oppose son père au jeune Jean V Paléologue entre 1341 et 1347.\n\nUn commandement militaire en Thrace\n\nAu cours de la guerre civile, Jean VI confie à son fils le commandement militaire de la Thrace en 1346.\n\nAprès la victoire de son père et son entrée à Constantinople en 1347, Mathieu établit son autorité à Andrinople (Edirne), où il gouverne une vaste région de Thrace avec une large autonomie.\n\nCette position fait de lui le principal représentant de la dynastie Cantacuzène en Europe orientale.\n\nL'association au trône impérial (1353-1354)\n\nLes tensions persistent entre Jean VI Cantacuzène et Jean V Paléologue, pourtant officiellement coempereurs depuis 1347.\n\nLorsque Jean V tente de reprendre seul le pouvoir en 1352, Jean VI décide de renforcer la position de son propre fils.\n\nEn avril 1353, Mathieu est proclamé coempereur, puis officiellement couronné à l'église des Blachernes en février 1354.\n\nCette décision manifeste la volonté de Jean VI de faire de la couronne impériale un héritage dynastique au profit de la famille Cantacuzène, au détriment des Paléologues.\n\nLa chute de la dynastie Cantacuzène\n\nLa politique de Jean VI provoque une vive opposition.\n\nEn décembre 1354, Jean V Paléologue reprend Constantinople avec l'appui des Génois et d'une partie de l'aristocratie.\n\nJean VI abdique et se retire dans un monastère.\n\nMathieu refuse toutefois de reconnaître cette défaite et poursuit la lutte en Thrace.\n\nLa défaite et l'abdication (1357)\n\nAu cours des combats, Mathieu est capturé par les Serbes près de Philippes, puis remis à Jean V Paléologue.\n\nDétenu avec son épouse et ses enfants dans les îles de Ténédos puis de Lesbos, il est contraint de renoncer officiellement à la couronne.\n\nEn décembre 1357, lors d'une cérémonie organisée à Eibatai, sur la mer de Marmara, il abdique définitivement son titre impérial.\n\nCette abdication met un terme aux prétentions impériales de la branche des Cantacuzène.\n\nDespote de Morée\n\nAprès plusieurs années d'effacement politique, Mathieu rejoint son frère Manuel Cantacuzène, despote de Morée.\n\nÀ la mort de ce dernier, en 1380, il lui succède comme despote de Morée, gouvernant le despotat depuis Mistra, principal centre politique du Péloponnèse byzantin.\n\nSon autorité demeure toutefois essentiellement régionale, tandis que la dynastie des Paléologues règne de nouveau sans rival sur Constantinople.\n\nRetraite religieuse\n\nEn 1383, Mathieu abandonne le pouvoir et se retire dans un monastère.\n\nIl y compose plusieurs ouvrages de caractère religieux et philosophique, suivant l'exemple de son père Jean VI Cantacuzène, devenu lui aussi moine après son abdication.\n\nIl meurt entre 1383 et 1391.\n\nBilan\nMathieu Cantacuzène incarne la dernière tentative de la famille Cantacuzène pour établir une dynastie impériale concurrente de celle des Paléologues. Associé au trône par son père en 1353-1354, il ne parvient pas à s'imposer face à Jean V Paléologue et doit renoncer définitivement à ses prétentions en 1357. Son bref gouvernement en Morée puis sa retraite monastique illustrent le déclin politique des Cantacuzène, tandis que l'Empire byzantin, profondément affaibli par les guerres civiles, poursuit son lent recul face aux puissances balkaniques et ottomanes.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Matthew_Kantakouzenos.png",
+    "theme": "politique",
+    "legende": "Pièce de monnaie de l'empereur Matthieu Cantakouzenos, couronné et portant le loros, debout de face, tenant un sceptre à pointe cruciforme",
+    "regne": true,
+    "lat": 41.0064,
+    "lng": 28.9759
   },
   {
     "id": 840,
@@ -13483,7 +13641,10 @@
     ],
     "type": 4,
     "description": "A la demande du souverain Marinide du Maroc Ibn Battûta (la Marco Polo musulman) entreprend la rédaction de ses récits de voyages au titre : « Cadeau précieux pour ceux qui considèrent les choses étranges des grandes villes et les merveilles des voyages » communément appelé la rhila (le voyage un genre littéraire musulman ) qui s’étend entre 1325 et 1349dicté à un lettré  Ibn Jubayy.\n\nCertains érudits, s’ils considèrent le récit d’Ibn Battûta comme une œuvre littéraire importante, doutent en même temps de l’historicité des voyages accomplis. Ainsi, le spécialiste allemand en études islamiques Ralph Elger met-il en doute la véracité d’une bonne partie du contenu, qu’il soupçonne de n’être qu’un travail de fiction compilé à partir d’autres comptes rendus de voyage contemporains.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg/500px-Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg/500px-Bust_of_Ibn_Battuta_at_Ibn_Battuta_museum.jpg",
+    "theme": "litterature",
+    "lat": 33.5796,
+    "lng": -6.4864
   },
   {
     "id": 842,
@@ -13577,7 +13738,10 @@
     "type": 2,
     "description": "Fondation du royaume indépendant de Lan Xang (pays du « Million d’éléphants »), le futur Laos, par le prince lao, Phraya Fa Ngum. La capitale est fixée à Luang Prabang.\n\nC'est au XIVe siècle que le prince Fa Ngum, originaire de Xieng Dong-Xieng Thong, entreprend d'unification le Laos. Chassé très jeune par son père, éduqué par les Khmers à Angkor, il revient en conquérant dans sa ville natale après avoir annexé au passage deux autres provinces, constituant ainsi, pour la première fois dans l'histoire de la région un territoire laotien uni.\n\nLe nouveau royaume est baptisé Lan Xang Hom Khao, ou littéralement « Le Royaume du Million d'Éléphants et du Parasol Blanc ». La capitale est presque tout naturellement installée à Mueng Sua, et une nouvelle religion est proclamée pour tout le royaume, le bouddhisme Theravada que Fa Ngum rapportait de son passage chez les Khmers. Le roi d'Angkor n'a pas oublié son fils adoptif, entend parler de ses exploits et de sa ferveur envers Bouddha, et lui offre un Bouddha en or (le Pha Bang) qui deviendra le symbole du royaume et son palladium (la chose la plus sacrée, liée à la protection de la ville et du royaume), et donnera son nom à la capitale.\n\nDès lors, Luang Prabang devient la première cité spirituelle, politique et administrative du royaume laotien. Par la suite, on verra fleurir les temples d'or dans toute la ville qui, à ce jour, en garde un nombre très important. La plupart seront détruits durant les attaques de pillards et reconstruits ou rénovés aux XIXe ou XXe siècle. Le nouveau royaume connaît soixante ans de prospérité avant de décliner durant près d'un siècle, vacillant aux mains de souverains trop rapidement remplacés (on ne compte pas moins de dix monarques entre 1415 et 1440, et quatre encore entre 1479 et 1520).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Map-of-southeast-asia_1400_CE.png",
-    "legende": "L'Asie du Sud-Est en 1400 Rose pâle : Royaume d'Ava Saumon : Royaume d'Hanthawaddy Rose vif : Lanna Orange : Royaume de Sukhothaï Violet : Royaume d'Ayutthaya Vert foncé : Lan Xang Rouge : Empire khmer Bleu : Dai Viet Jaune : Champa"
+    "theme": "politique",
+    "legende": "L'Asie du Sud-Est en 1400 Rose pâle : Royaume d'Ava Saumon : Royaume d'Hanthawaddy Rose vif : Lanna Orange : Royaume de Sukhothaï Violet : Royaume d'Ayutthaya Vert foncé : Lan Xang Rouge : Empire khmer Bleu : Dai Viet Jaune : Champa",
+    "lat": 20.0171,
+    "lng": 103.3783
   },
   {
     "id": 850,
@@ -13667,7 +13831,10 @@
     ],
     "type": 5,
     "description": "La région autour de la ville de Pont-à-Mousson est élevée au rang de margraviat par le roi Charles IV en faveur de Robert Ier de Bar .",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 48.9026,
+    "lng": 6.0548
   },
   {
     "id": 856,
@@ -13812,7 +13979,10 @@
     "type": 1,
     "description": "Mathieu II, Galéas II et Barnabé",
     "image": "",
-    "regne": true
+    "theme": "politique",
+    "regne": true,
+    "lat": 45.4642,
+    "lng": 9.1896
   },
   {
     "id": 866,
@@ -13921,7 +14091,10 @@
     ],
     "type": 3,
     "description": "Le sultan ottoman Orhan intervient en Europe pour aider son beau-père Jean Cantacuzène contre son rival Jean V Paléologue soutenu par les Serbes. Son fils Suleyman s'empare par surprise avec 39 hommes du château de Tzympe (Cinbi), sur la rive européenne de l'Hellespont. Il renforce la garnison qui compte 3 000 hommes en quelques jours.\n\nQuand Jean VI sollicite leur aide, Orhan accepte mais exige que Suleyman conduise les opérations. 10 000 hommes de plus viennent renforcer les troupes de Suleyman qui réussit à vaincre les Serbes. Plus tard, il profite de ce qu'un tremblement de terre ouvre une brèche dans les remparts de Gallipoli pour s'emparer durablement de la ville.\n\nL' Empire ottoman, autrefois allié de Cantacuzène durant la guerre civile, entreprend des conquêtes indépendantes au sein d'un empire affaibli par la guerre. Le sultan Orhan Ier parvient à s'emparer de Gallipoli, frappée quelques jours auparavant par un violent tremblement de terre. Après cinquante années de défaites, les Byzantins ont ainsi perdu la quasi-totalité de leurs possessions en Asie Mineure . L'accès à la mer Égée et à la mer de Marmara permet aux Ottomans de conquérir ensuite le Péloponnèse et la Grèce, puis de progresser vers le nord, en Serbie et en Hongrie .",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 40.3107,
+    "lng": 26.4064
   },
   {
     "id": 874,
@@ -14044,7 +14217,10 @@
     ],
     "type": 4,
     "description": "Une ordonnance de Pierre IV d'Aragon oblige chaque navire de guerre à avoir deux cartes à bord",
-    "image": ""
+    "image": "",
+    "theme": "techniques",
+    "lat": 40.8825,
+    "lng": -0.1864
   },
   {
     "id": 883,
@@ -14152,7 +14328,10 @@
     ],
     "type": 1,
     "image": "",
-    "regne": true
+    "theme": "politique",
+    "regne": true,
+    "lat": 45.4642,
+    "lng": 9.1896
   },
   {
     "id": 336,
@@ -14166,7 +14345,10 @@
     ],
     "type": 2,
     "description": "Frédéric III ou IV dit Le Simple (né le 1er septembre 1341 à Catane, et mort à Messine, 27 janvier 1377) fut roi de Sicile (formellement roi de Trinacrie) et duc d'Athènes et de Neopatras, de 1355 à sa mort. Frédéric eût dû porter le chiffre III derrière son prénom mais il prit le IV pour se conformer au choix effectué par son grand-père, Frédéric III de Sicile, qui prit le III en hommage à l'empereur Frédéric II qui a été roi de Sicile mais ne se désigna jamais sous le nom de Frédéric Ier de Sicile.\n\nIl arrive toutefois qu'il soit désigné comme Frédéric III dans certaines listes des rois de Sicile., fils de Pierre II de Sicile, accède au trône en 1355 à seulement 13 ans, après la mort de son frère Louis Ier de Sicile. Son jeune âge favorise les ambitions des grands féodaux, notamment la puissante famille Alagona.\n\nTout au long de son règne, Frédéric tente de renforcer l’autorité royale face à ces barons influents, mais se heurte à de fortes résistances et à une instabilité politique chronique. Le royaume est marqué par des rivalités internes, notamment entre les factions « latine » et « catalane », ainsi que par des conflits militaires, comme l’épisode d’Ognina en 1356.\n\nDe 155 à 1557 sa sœur Euphemia assure la régence.\n\nDevenu majeur en 1357, il peine à s’imposer pleinement et cherche des soutiens extérieurs, notamment auprès de Pierre IV d'Aragon. Son règne reste également inscrit dans le prolongement des tensions issues des Vêpres siciliennes.\n\nUn tournant majeur survient en 1372 avec la signature d’un traité de paix avec Jeanne d'Anjou, mettant fin à près de 90 ans de guerre. Frédéric est reconnu roi de Trinacrie, mais devient vassal de la reine de Sicile.\n\nAffaibli politiquement, confronté aux ambitions de ses alliés et à l’absence d’héritier masculin, il laisse à sa mort une situation successorale délicate autour de sa fille Marie. Surnommé « le Simple », il est décrit comme un souverain manquant d’habileté, malgré un certain goût pour les arts.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 38.3111,
+    "lng": 13.3136
   },
   {
     "id": 741,
@@ -14179,8 +14361,11 @@
     "type": 1,
     "description": "Stefan Uroš V, né vers 1336, mort le 4 décembre 1371, est le fils et le successeur de l'empereur Stefan Uroš IV Dušan, souverain serbe de la dynastie des Nemanjić dont il est le dernier représentant direct. L'empereur Étienne Douchan épousa la princesse bulgare Hélène (Jelena) en 1332. De ce mariage, Uroš V naquit comme seul héritier en 1336 ou 1337. Le jeune Uroš V avait environ 10 ans lorsque son père se couronna empereur à Pâques, le 16 avril 1346, et lors du même concile de Skopje, le patriarche Ioannikije (en) couronna également Stefan Uroš V comme roi.\n\nIl était trop jeune, bien avant les 15 ans requis, pour pouvoir quitter la cour de l'empereur avec ses conseillers et courtisans pour acquérir les compétences de gestion d'un territoire et se former à gouverner. Cela ne put se produire qu'après 1350.\n\nÀ partir de 1351, Stefan Uroš V, en tant que roi de Serbie, avec ses conseillers et courtisans, put gérer une partie de l'État des Nemanjić jusqu'à la mort de son père le 20 décembre 1355.\n\nUn souverain « faible »\n\nIl est le fils unique de Dušan, et est couronné « roi des Serbes » en 1346, après que son père eut pris le titre d'empereur. Il devient lui-même empereur à la mort de son père en 1355 à l'âge de 19 ans. Manquant d'autorité et peut-être faible d'esprit, il ne peut s'opposer à l'affaiblissement du pouvoir central en Serbie et aux manifestations d'indépendance des grands nobles sur lesquels il ne conserve qu'une suzeraineté nominale.\n\nDès 1356, il entre en conflit avec Simeon Nemanjić, le demi-frère de Dušan.\n\nLa noblesse et l'église sont pourtant du côté d'Uroš V, malgré cela, il ne peut récupérer les domaines dans lesquels Simeon se proclame indépendant: Simeon tenait toute la Serbie du sud, l'Épire et la Thessalie, Uroš réussissant à sauvegarder la région de Skopje et la Dubrovčana, grâce à l'aide de sa mère Hélène, installée dans la région de Serrès mais dont le frère Jovan Asen, seigneur de Kanin et de Valona dans le sud de l'Albanie, affirme son autonomie comme à partir de 1360, le seigneur serbe Radoslav Hlapen seigneur de Ber et de Voden[Uroš V est d'abord soutenu par Vojislav Vojinović; à la mort de celui-ci en 1363, il se tourne vers Vukašin Mrnjavčević qui acquiert de plus en plus d'importance.\n\nEn août/septembre 1365, Vukašin est couronné cosouverain des Serbes, puis son fils Marko « jeune roi » alors que Jovan Uglješa successeur de sa mère comme seigneur de Serrès et frère de Vukašin reçoit le titre de « Despote ». Vukašin Jovan Uglješa sont cependant tués le 26 septembre 1371 à la bataille de la Maritsa.\n\nQuelques mois plus tard, le 4 décembre 1371,meurt le dernier empereur de Serbie et ultime représentant des Nemanjić. En effet, Uroš V n'a jamais eu d'enfant de son épouse Anca, fille du prince de Valachie Nicolae Ier Alexandru.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/UrosV.jpg",
+    "theme": "politique",
     "legende": "Uroš V, église de Psača, en Macédoine du Nord.",
-    "regne": true
+    "regne": true,
+    "lat": 41.9962,
+    "lng": 21.4319
   },
   {
     "id": 867,
@@ -14370,7 +14555,10 @@
     "type": 2,
     "description": "Les états généraux du royaume convoqués par Jean le Bon pour la Ste André, accordent au roi, pour les dépenses de guerre, un impôt sur toutes les ventes sauf celles des immeubles. Le ro s’engage en contrepartie à maintenir la monnaie à l’abri des variations.\n\nCondition avantageuse pour les marchands sensibilisé par les écrits du Normand Nicolas Oresme, disciple de Buridan, polymathe, conseiller du roi Charles V le Sage,traducteur et commentateur d’Aristote; qui dans son traité de l’origine, nature, droit et monnaies une théorie sur le caractère néfaste des fluctuations de monnaies. né à Fleury-sur-Orne (qui s'appelait alors Allemagne) vers 1320-1322 et mort à Lisieux le 11 juillet 1382 Le fait qu’il ait fait ses études au collège de Navarre, établissement commandité et subventionné par le roi pour les étudiants trop pauvres pour payer leurs frais de scolarité à l’université de Paris, constitue une indication probable de ses origines paysannes.\n\nLe roi Jean II nomme Oresme précepteur du Dauphin et futur roi. Le 2 novembre 1359, Oresme devient secrétaire du roi avant de devenir son aumônier et son conseiller. Le roi semble avoir tenu le caractère et les talents de Nicole Oresme en haute estime, suivant ses conseils et l'encourageant à développer le goût de l’étude dans son royaume. Il obtient le poste d'évêque de Lisieux en 1377. Il n’a pris résidence à Lisieux qu’en septembre 1380. À sa mort, survenue deux ans après celle de Charles V, il est enterré dans la cathédrale de Lisieux.\n\nL'une des principales contributions que l'on doit à Nicole Oresme est la traduction en français de nombreux textes anciens de référence — en mathématique, politique, biologie, etc. — comme les écrits d'Aristote. Il est donc l'inventeur de nombreux mots français courants aujourd'hui tels que : monarchie, démocratie, oligarchie, aristocratie, obligation légale, pour le lexique politique, numérateur, dénominateur dans le lexique des mathématiques.\n\nSes vues « économiques » (au sens moderne : on parlait alors de philosophie et d'éthique) sont contenues dans le Commentaire sur l’Éthique d’Aristote (1370), le Commentaire sur la Politique et les Économiques d’Aristote (1371) et le Traictié de la première invention des monnoies (De mutatione monetarum ac variatione facta per reges aut principes, rédigé en 1355), alors qu'il est conseiller du roi Charles V. Dans son traité sur les monnaies, Oresme avance des idées à la fois originales et bien ancrées dans son temps :\n\nprolongeant la pensée de Saint Augustin et d’Aristote, il considère comme inique l'usure ; s'inscrivant dans la lignée d'Aristote, il réaffirme que la monnaie n'est pas la propriété individuelle du prince, mais appartient à la collectivité qui seule peut en définir le statut ; les altérations monétaires décidées par le souverain sont mal venues : elles détruisent la raison d'être de l'outil d'échange, à savoir une valeur constante en laquelle on peut se fier.\n\nPar altérations, Oresme entend changements dans le poids, la dénomination, la quotité et la pureté des matières[Dans l’Algorismus proportionum et le De proportionibus proportionum, Oresme a développé la première méthode de calcul des puissances avec des exposants irrationnels fractionnaires, c’est-à-dire le calcul avec des proportions irrationnelles (proportio proportionum)",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Oresme.jpg/500px-Oresme.jpg",
-    "legende": "Enluminure du Traité de l'Espère (avant 1420)."
+    "theme": "idees",
+    "legende": "Enluminure du Traité de l'Espère (avant 1420).",
+    "lat": 49.1461,
+    "lng": 0.2255
   },
   {
     "id": 901,
@@ -14383,7 +14571,10 @@
     ],
     "type": 4,
     "description": "20 décembre : début du règne de Stefan Uroš V en Serbie Un souverain « faible »\n\nMorcellement du royaume serbe qui devient vulnérable face à la menace ottomane au sud et Hongroise au nord",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 41.9962,
+    "lng": 21.4319
   },
   {
     "id": 903,
@@ -14427,7 +14618,10 @@
       "Naples"
     ],
     "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 38.1112,
+    "lng": 13.3524
   },
   {
     "id": 906,
@@ -14440,7 +14634,10 @@
     ],
     "type": 5,
     "description": "Le corsaire génois Francesco Gattilusio (en) devient archonte de Lesbos. L'île de Samothrace devient possession de la famille génoise des Gattilusi.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 39.1758,
+    "lng": 25.9989
   },
   {
     "id": 907,
@@ -14451,7 +14648,10 @@
       "Chine"
     ],
     "type": 4,
-    "image": ""
+    "image": "",
+    "theme": "revolte",
+    "lat": 36.6415,
+    "lng": 117.2733
   },
   {
     "id": 954,
@@ -14494,7 +14694,10 @@
     ],
     "type": 3,
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Byzantine_empire_1355.jpg",
-    "legende": "William R. Shepherd's Historical Atlas, p. 89, published by Henry Holt and Company, New York 1911 L'Empire byzantin (rose clair) et les États environnants en 1355. Byzance comprend ici encore la moitié sud de la Morée, la région de Thessalonique et la Thrace."
+    "theme": "politique",
+    "legende": "William R. Shepherd's Historical Atlas, p. 89, published by Henry Holt and Company, New York 1911 L'Empire byzantin (rose clair) et les États environnants en 1355. Byzance comprend ici encore la moitié sud de la Morée, la région de Thessalonique et la Thrace.",
+    "lat": 41.6796,
+    "lng": 27.3536
   },
   {
     "id": 1721,
@@ -14700,6 +14903,9 @@
     "type": 4,
     "description": "le roi de Castille Pierre le Cruel déclare la guerre à Pierre IV d'Aragon à la suite d'une attaque aragonaise de navires marchands génois dans le port castillan de Sanlúcar de Barrameda. Début de la guerre des Deux Pierre",
     "image": "",
+    "theme": "guerre",
+    "lat": 41.3968,
+    "lng": -2.7064,
     "serie": "Guerre des deux Pierre"
   },
   {
@@ -14887,7 +15093,10 @@
     ],
     "type": 4,
     "description": "La guerre civile au Portugal, déclenchée par l'exécution d'Inês de Castro en 1355, est temporairement apaisée. Le roi Alphonse IV nomme son fils Pierre Ier corégent. Toutefois, des tensions persistent au sein de la maison de Bourgogne .",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 38.7078,
+    "lng": -9.1366
   },
   {
     "id": 930,
@@ -14930,7 +15139,10 @@
     ],
     "type": 5,
     "description": "La majeure partie des pierres de revêtement en calcaire de la Grande Pyramide de Gizeh est enlevée par Bahri Sultan An-Nasir Hasan pour construire des forteresses et des mosquées dans la ville voisine du Caire, laissant ainsi la première des Sept Merveilles du monde antique dans l'état de dalles de pierre où elle se trouve encore aujourd'hui.",
-    "image": ""
+    "image": "",
+    "theme": "societe",
+    "lat": 29.9871,
+    "lng": 31.2118
   },
   {
     "id": 933,
@@ -15062,8 +15274,11 @@
     "type": 1,
     "description": "Pierre est le fils du roi Alphonse IV de Portugal (1291-1357), dit Alphonse le Brave, et de Béatrice de Castille (1293-1359).\n\nEn octobre 1327, des contrats de mariage sont négociés pour Pierre avec Blanche de Castille (1319-1375), petite-fille du roi Sanche IV, et pour sa sœur, Marie de Portugal, avec le futur Alphonse XI de Castille. Blanche est emmenée au Portugal pour y être élevée jusqu'à ce qu'elle soit en âge de se marier, où elle reste huit ans. Selon la « Chronique du roi Pierre Ier » de Fernão Lopes, pendant son séjour, elle commence à montrer des signes de maladie qui la rendent inapte au mariage et à la procréation.\n\nElle est examinée par des médecins, dont ceux envoyés par Alphonse XI, qui confirment sa santé mentale fragile ainsi que son incapacité. En raison du refus de l'infant Pierre et du trouble mental évident de l'infante Blanche, le mariage proposé n'a pas lieu,.\n\nAlphonse IV de Portugal décide de marier son fils et héritier, Pierre, avec Constance de Castille, la fille de Don Juan Manuel, afin de forger une alliance avec lui. Lorsque Constance arrive au Portugal en 1340, Inés de Castro, la belle et aristocratique fille d'une importante famille galicienne, l'accompagne comme dame de compagnie.\n\nAlors qu’il ne règne pas encore, Pierre est connu pour sa relation adultère avec Inés de Castro, la dame de compagnie de son épouse Constance de Castille, qui a d'importantes répercussions sur la vie politique du Portugal sous le règne d’Alphonse IV. Inés finit par être assassinée, supposément sur ordre du souverain en 1355 sans que cela n'entraîne d’amélioration dans les rapports entre père et fils. Au contraire, entre 1355 et son accès à la couronne, Pierre se révolte contre son père au moins deux fois.\n\nL'histoire d'amour et le conflit père-fils ont inspiré plus de vingt opéras et de nombreux écrivains, notamment : l'épopée nationale portugaise « Les Lusiades » de Luís de Camões, les œuvres espagnoles « Nise lastimosa » et « Nise laureada » (1577) de Jerónimo Bermúdez et « Reinar despues de morir » de Luis Vélez de Guevara, ainsi que « Inez de Castro » de Mary Russell Mitford et le drame français « La Reine morte » de Henry de Montherlant.\n\nAprès son couronnement en 1357, Pierre Ier annonce son mariage secret avec Inés de Castro peu avant sa mort et sa volonté qu'on la considère comme reine de Portugal. Ce mariage n'est prouvé par aucun document. Deux des assassins d'Inés de Castro sont pris et exécutés avec une grande brutalité. La tradition dit aussi que Pierre Ier aurait exhumé le cadavre d'Inés de Castro, l'aurait couronné comme reine de Portugal et aurait obligé la noblesse à lui faire le baise-main. Il fait construire deux tombeaux dans les nefs latérales du monastère d'Alcobaça afin que, le jour du jugement final, les éternels amants, ressuscités, puissent se voir immédiatement.\n\nComme roi, Pierre Ier est un bon administrateur, courageux dans la défense de son pays contre le pouvoir pontifical et défendant les moins favorisés.\n\nIl mène la justice de manière brutale, afin de ne pas retarder l'application des peines, en punissant de mort la pratique d'avocat, ce qui provoque des protestations dans les tribunaux en 1361.\n\nIl ne fait pas grand-chose pour freiner le pouvoir de la noblesse, mais celle-ci craint le roi.\n\nEn politique extérieure, il soutient son neveu, le roi Pierre Ier de Castille, dans la guerre civile qui l'oppose à son demi-frère.\n\nLe roi Pierre Ier a une santé fragile du fait des mariages consanguins entre les Maisons de Portugal et de Castille qui aboutissent à une véritable dégénérescence des familles royales des deux pays. Son règne marque le début de la grave crise par laquelle la première dynastie portugaise s’achève.\n\nÀ sa mort en 1367, son fils Ferdinand Ier de Portugal lui succède sur le trône",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Jacente_do_t%C3%BAmulo_de_D._Pedro_I_de_Portugal.png",
+    "theme": "politique",
     "legende": "Gisant de Pierre Ier de Portugal à l'abbaye d'Alcobaça, vers 1360.",
-    "regne": true
+    "regne": true,
+    "lat": 38.7078,
+    "lng": -9.1366
   },
   {
     "id": 662,
@@ -15078,6 +15293,9 @@
     "type": 3,
     "description": "À son retour en Écosse en 1357, David II d'Écosse doit affronter des difficultés à la fois politiques, financières et personnelles. Sa situation conjugale se dégrade durablement : son attachement à Catherine Mortimer, assassinée en 1360, entraîne une rupture avec Jeanne de la Tour, qui se retire en Angleterre. Ses mariages successifs avec Margaret Drummond puis son projet d’union avec Agnès Dunbar témoignent de sa volonté persistante d’assurer une descendance, objectif qui demeure pourtant inabouti et constitue un facteur majeur d’instabilité politique.\n\nLa question financière domine également son règne. Le paiement de la rançon fixée par le traité de 1357 s’avère rapidement problématique, compromettant les relations avec Édouard III d'Angleterre et mettant en danger les nobles écossais retenus comme otages. Les négociations qui s’ensuivent révèlent les tensions entre souveraineté et pragmatisme : en 1363, une proposition anglaise prévoit l’abandon de la rançon en échange d’une succession anglaise en cas de décès sans héritier, solution rejetée par le Parlement écossais.\n\nFinalement, dans le contexte de la guerre de Cent Ans, un compromis est trouvé en 1369 avec un allègement de la dette et une trêve durable, illustrant l’importance des rapports de force internationaux.\n\nSur le plan intérieur, David II doit composer avec une aristocratie renforcée par son absence prolongée. Des figures majeures comme Robert Stuart, Patrick V de Dunbar et William Douglas dominent la scène politique. Le roi adopte une politique d’équilibre : il reconnaît leur pouvoir en leur attribuant titres et honneurs, tout en cherchant à promouvoir ses propres fidèles, notamment issus de son entourage ou liés à la famille Drummond. Cette stratégie de patronage, parfois perçue comme partisane, provoque des tensions, voire des révoltes, comme celle de 1363, rapidement réprimée.\n\nPar ailleurs, David II tente de réaffirmer l’autorité royale, notamment dans les Highlands, en imposant discipline et contrôle aux grands seigneurs territoriaux. Toutefois, ces efforts s’inscrivent dans un contexte de rivalités persistantes, notamment avec Robert Stuart, brièvement emprisonné, ce qui révèle la fragilité de l’équilibre politique.\n\nEnfin, la question de la succession demeure centrale. Faute d’héritier, David II semble s’orienter vers une transmission dynastique en faveur des Stuart, tout en cherchant à encadrer cette transition par des alliances matrimoniales stratégiques. À sa mort en 1371, Robert Stuart accède au trône sous le nom de Robert II, marquant une continuité dynastique mais aussi l’échec partiel de David II à restaurer pleinement l’autorité monarchique.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Royal_Coat_of_Arms_of_the_Kingdom_of_Scotland.svg/langfr-960px-Royal_Coat_of_Arms_of_the_Kingdom_of_Scotland.svg.png",
+    "theme": "politique",
+    "lat": 56.4205,
+    "lng": -3.3992,
     "serie": "Guerres écossaises"
   },
   {
@@ -15170,7 +15388,10 @@
     "type": 3,
     "description": "28 mai : début du règne de Pierre Ier, le Justicier, ou le Cruel (1320-1367), roi de Portugal. À la mort d'Alphonse IV, son fils Pierre Ier accède au trône du Portugal . Ceci met fin à un long conflit au sein de la maison de Bourgogne entre le père et le fils, qui a parfois pris des allures de guerre civile.\n\nIl torture et fait périr les meurtriers d’Inès de Castro, Pedro Coelho et Alvaro Gonçalves, conseillers de son père (1360). Il élève à la mémoire d’Inès un tombeau à Alcobaça, chef-d’œuvre de l’art médiéval portugais. Il luttera durant son règne contre la féodalité ecclésiastique et la corruption du haut clergé.\n\nLe séfarade Mossé « Navarro », réfugié au Portugal après avoir échappé à une tuerie en Navarre en 1328, devient trésorier et conseiller du roi Pedro",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Tableau_In%C3%A9s_de_Castro.jpg/960px-Tableau_In%C3%A9s_de_Castro.jpg",
-    "legende": "Couronnement posthume d'Inés de Castro. Détail du tableau de Pierre-Charles Comte, 1849, Musée des beaux-arts de Lyon. Pierre, devenu roi, aurait déterré le cadavre d'Inés de Castro pour le faire couronner."
+    "theme": "politique",
+    "legende": "Couronnement posthume d'Inés de Castro. Détail du tableau de Pierre-Charles Comte, 1849, Musée des beaux-arts de Lyon. Pierre, devenu roi, aurait déterré le cadavre d'Inés de Castro pour le faire couronner.",
+    "lat": 39.8559,
+    "lng": -4.0243
   },
   {
     "id": 961,
@@ -15197,7 +15418,10 @@
     ],
     "type": 4,
     "description": "20 juin : bataille d'Acireale.  Les forces napolitaines de Louis de Tarente, conduites par le sénéchal Niccolò Acciaiuoli, doivent lever le siège de Catane. Elles subissent des pertes considérable dans la retraite. La noblesse sicilienne se rallie à Frédéric III de Sicile et Messine est reprise avant 1359.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 37.6128,
+    "lng": 15.1659
   },
   {
     "id": 963,
@@ -15239,7 +15463,10 @@
     ],
     "type": 4,
     "description": "Assassinat de Djanibeg. Début du règne de Berdibeg, khan de la Horde d'or (fin en 1359).il est remplacé comme Khan de la Horde Bleue par son fils Berdi Beg qui ordonne la mort d'au moins 12 de ses proches parents pour consolider sa position. Sous Berdibeg et ses successeurs, l’empire de la Horde d’Or se disloque. Un seigneur féodal, Mamaï, détient le pouvoir effectif.\n\nAprès la mort du khan Jani Beg, des disputes éclatent au sujet du trône, entraînant la fin de la suprématie des princes de la Horde bleue sur la Horde dorée.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Golden_Horde_1389.svg/1280px-Golden_Horde_1389.svg.png"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Golden_Horde_1389.svg/1280px-Golden_Horde_1389.svg.png",
+    "theme": "revolte",
+    "lat": 55.7946,
+    "lng": 49.1115
   },
   {
     "id": 966,
@@ -15279,7 +15506,10 @@
     ],
     "type": 5,
     "description": "Le suaire de Turin (Saint-Suaire) est mentionné pour la première fois en 1357. Saint-Suaire est le nom donné par les catholiques au linceul de Jésus de Nazareth. De nombreux linges assimilés à cet événement de la Passion sont devenus l'objet d'une dévotion particulière. L'Église catholique reconnaît ces reliques comme des icônes et non comme des traces authentiquement historiques de l'existence de Jésus.\n\nLe suaire de Turin, actuellement le plus connu, serait une icône de Jésus en réalité datée du Moyen-Âge Le suaire de Turin, ou linceul de Turin, est un drap de lin jauni de 4,42 mètres de long sur 1,13 mètre de large montrant l'image floue (de face et de dos) d'un homme présentant les traces de blessures compatibles avec un crucifiement, une flagellation et une couronne d’épines. Puisque la représentation figure certains détails de la crucifixion de Jésus de Nazareth décrite dans les évangiles canoniques, elle est l'objet de piété populaire et est considérée par l'Église catholique comme une icône.\n\nCertains croyants la vénèrent comme une relique insigne, le « Saint-Suaire ».\n\nLes premières mentions documentées et non contestées de ce drap proviennent de la collégiale de Lirey, en Champagne, dans la seconde moitié du XIVe siècle. Les ostensions de l'objet aux fidèles sont interdites à deux reprises par les évêques de Troyes, qui affirment avoir découvert le faussaire responsable de la supercherie.\n\nEn 1390, le pape Clément VII publie une bulle autorisant l'ostension du linge, mais il défend que soient faites « les solennités en usage lorsqu'on montre une relique » et exige que la foule soit avertie qu'on ne montre pas l'objet en tant que relique, mais en tant que « figure ou représentation du Suaire du Christ ».\n\nAprès diverses pérégrinations, l'objet devient en 1453 la propriété du duc de Savoie Louis Ier ; à partir de la seconde moitié du XVe siècle, il est vénéré comme une relique de la Passion. Il est conservé depuis 1578 dans la chapelle de Guarini de la cathédrale Saint-Jean-Baptiste de Turin.\n\nL'essor de la photographie amène en 1898 Secondo Pia à publier une image du linceul dont le négatif offre toutes les qualités d'un positif, suscitant dès lors d'âpres débats sur l'authenticité du linceul et sa datation : le Suaire de Turin devient l'« artéfact le plus étudié de l'histoire » pendant près d'un siècle. Les techniques modernes d'analyse relancent le sujet en 1978 avec une équipe de scientifiques du Shroud of Turin Research Project qui, le 18 avril 1981, conclut à l'impossibilité d'exclure que le suaire soit celui décrit dans les évangiles.\n\nEn 1988, la datation par le carbone 14 fait consensus pour donner une origine médiévale du suaire (XIIIe – XIVe siècle), qui ne peut donc pas être qualifié comme une relique authentique. Dès leur publication, ces résultats sont acceptés par le pape Jean-Paul II et l'archevêque de Turin. La même année, Jean-Paul II qualifie le linceul de « provocation à l'intelligence » et invite les scientifiques à poursuivre leurs recherches (néanmoins, l'Église catholique, propriétaire du linceul depuis 1983, ne s'est jamais prononcée officiellement sur son authenticité).\n\nLes partisans de l'authenticité comme Giulio Fuanti et Emmanuella Marinelli contestent cette datation, en remettant en question la validité de l'échantillon et le protocole employé, en proposant de nouvelles méthodes de datation, ou en s'appuyant sur une miniature du Codex Pray, daté de la fin du XIIe siècle, qui présenterait des similitudes avec le suaire contredisant la datation.\n\nPour d'autres, comme les historiens Andrea Nicolotti, Gary Vikan ou Nicolas Sarzeaud, la défense de l'authenticité repose sur une littérature apologétique en grande partie pseudo-scientifique et le suaire est bien une image fabriquée au milieu du XIVe siècle, correspondant à l'aspiration de l'art de cette époque pour une description détaillée des souffrances de la Passion du Christ.\n\nLes premières preuves indiscutables de l'existence du suaire datent du XIVe siècle et le situent en Champagne, où il est rapidement accusé d'être un faux. Le texte le plus ancien le mentionnant est un extrait des Problemata, écrit vers 1370 par l'universitaire normand Nicole Oresme qui cite comme un cas de mensonge manifeste proféré par le clergé « une église en Champagne, où l’on a dit qu’il y avait le suaire du Seigneur ». Il se fait ainsi l'écho de l'apparition de l'objet autour de 1355-1356 dans la collégiale de Lirey, dans le diocèse de Troyes, que documentent aussi une enseigne de pèlerinage et un ensemble de documents produits dans les années 1389-1390.\n\nCes documents confirment que l'objet a été placé puis retiré du sanctuaire au milieu du siècle, à la suite d'une intervention de l'évêque Henri de Poitiers.\n\nL'intention de fonder une collégiale à Lirey, desservie par cinq chanoines, est documentée pour la première fois en juin 1343 dans une charte signée par le roi Philippe de Valois. En avril 1349, Geoffroy de Charny adresse au pape Clément VI des demandes d'indulgence de 100 jours pour les pèlerins qui visiteraient son église, demande qu'il renouvelle en janvier 1354. L'église collégiale est finalement fondée le 20 juin 1353 pour six chanoines, sous le vocable de l'Annonciation de Marie, par dotation de Geoffroy et par bulles pontificales de janvier et février 1354 du pape Innocent VI, qui consent quarante jours d'indulgence à tous ceux qui la visitent.\n\nAlors que Geoffroy de Charny est mort l'année précédente à la bataille de Poitiers, douze évêques de la cour pontificale d'Avignon accordent une bulle d'indulgences, datée du 5 juin 1357, dans laquelle ils remettent également quarante jours de pénitence aux fidèles qui « visiteront l'église ou ses reliques ». Dans ce document qui énumère les reliques, il n'est pas question du linceul.\n\nPourtant, selon une lettre de l'antipape Clément VII et le mémoire de l'évêque de Troyes Pierre d'Arcis, l'église de Lirey le conservait déjà « vers 1355 » : selon ces documents datés de 1389-1390, des ostensions auraient alors eu lieu, occasionnant une enquête de l'évêque de Troyes, Henri de Poitiers, qui aurait alors interdit les ostensions, considérant que le linceul était faux, sur la base d'une enquête et des Évangiles, lesquels ne font pas mention d'empreintes sur les linges funéraires du Christ.\n\nUn indult du Saint-Siège du 28 juillet 1389 autorise la famille de Charny et les chanoines de Lirey à reprendre les ostensions du linceul, qui est alors qualifié de « figure ou représentation du Suaire du Christ ». De plus, Clément VII impose au nouvel évêque de Troyes Pierre d'Arcis, qui se plaint de ne pas avoir été consulté, un silence éternel sur ce sujet sous peine d'excommunication.\n\nPierre d'Arcis n'obéit pas et en appelle au roi Charles VI, qui ordonne la confiscation de la relique. L'évêque écrit ensuite à Clément VII et lui adresse, entre août 1389 et mai 1390, un mémoire dans lequel il raconte que son prédécesseur, Henri de Poitiers, a découvert la supercherie. Celui-ci aurait retrouvé le faussaire, qui aurait reconnu avoir fabriqué le linceul à l'instigation du doyen de la collégiale Robert de Caillac, bénéficiaire des ostensions à but lucratif. Il ne donne pas le nom de ce faussaire mais précise la cupidité du doyen qui a payé des individus pour simuler des guérisons miraculeuses grâce au linceul.\n\nCe témoignage est corroboré par celui de Nicole Oresme, qui cite le cas dans un traité sur les mirabilia, les phénomènes physiques inexpliqués. Soucieux de s'assurer de la réalité de ces phénomènes, il affirme que les témoignages oraux et indirects ne suffisent pas à prouver qu'ils auraient bien eu lieu, et écrit à propos de la parole du clergé : « Je n’ai pas besoin de croire quelqu’un qui prétend : “Quelqu’un a fait tel miracle pour moi”, car beaucoup d’ecclésiastiques trompent ainsi les autres, afin d’obtenir des offrandes pour leurs églises.\n\nC’est clairement le cas d’une église en Champagne, où l’on a dit qu’il y avait le suaire du Seigneur Jésus-Christ, et du nombre presque infini de ceux qui ont forgé de telles choses, et d’autres ». Pour l'historien Nicolas Sarzeaud, c'est une preuve du retentissement de l'affaire dans la décennie 1350, en particulier dans les cléricaux et royaux parisiens que fréquentaient aussi bien Nicole Oresme que Geoffroy Ier.\n\nClément VII tranche en 1390 sous forme de bulle pontificale dont la formulation semble avoir varié. Dans la version originale de la bulle en date du 6 janvier 1390 conservée aux Archives nationales, Clément VII autorise les ostensions à condition que l'inauthenticité du suaire soit clairement indiquée aux pèlerins, soit « toute fraude cessant, que ladite figure ou représentation n'est pas le vrai suaire de Notre-Seigneur Jésus-Christ, mais […] une peinture ou tableau du suaire, ».\n\nDans la version postérieure du 30 mai 1390 retrouvée dans les registres pontificaux, la mention « peinture ou tableau » disparaît. Les ostensions sont permises à condition que l'on annonce publiquement lors des ostensions « toute fraude cessant qu'on ne montre pas la dite figure ou représentation comme étant le vrai suaire de Notre Seigneur, mais en tant que figure ou représentation du dit suaire qu'on dit avoir été celui de Notre Seigneur ». En dehors de cet avertissement, il est également demandé que l'on ne fasse « aucune des solennités qu’on a l’habitude de faire lors des ostensions de reliques, et qu’elles ne puissent à cet effet allumer ni torches ni cierges ni chandelles ni utiliser aucune sorte de luminaire ».\n\nEn outre, interdiction est faite à Pierre d'Arcis de s'opposer à l'exposition du suaire si ces restrictions sont respectées. Quelques jours après l'enregistrement de cette bulle, le 1er juin 1390, le pape publie une nouvelle bulle qui accorde des indulgences aux pèlerins qui visiteront l'église collégiale de Lirey, où est conservé l'objet. Cette bulle ne mentionne pas le suaire ni les restrictions concernant ses ostensions.\n\nPour expliquer la mollesse de la réponse de Clément VII, plusieurs auteurs ont rappelé ses liens de parenté avec la famille de Charny : la mère de Geffroy II de Charny, Jeanne de Vergy, s'est en effet remariée avec Aymon de Genève, seigneur d'Anthon, l'oncle de Clément VII, ce qui pourrait expliquer la souplesse du pontife vis-à-vis de la collégiale de Lirey tout au long de cette affaire. Emmanuel Poulle propose, quant à lui, de lire cette évolution de la bulle entre la première version de janvier et celle de mai, comme un désaveu à l'accusation de faux soutenue par les évêques de Troyes.\n\nPour autant, les deux versions de la réponse du pape indiquent clairement que le suaire conservé à Lirey n'est pas le vrai Suaire du Christ, mais seulement sa représentation.\n\nSi le pape d'Avignon Clément VII permet les ostensions et adoucit leurs conditions, il prend ainsi soin de ne pas présenter le suaire comme une relique authentique puisqu'il oblige les chanoines, « pour éviter l'erreur d'idolâtrie », à « ne pas faire les solennités en usage lorsque l'on montre des reliques » et à avertir les fidèles que le linceul « est montré non pas en tant que vrai suaire de Notre Seigneur Jésus-Christ mais comme figure ou représentation du dit suaire ».\n\nAu cours du XIVe siècle donc, l'objet n'est pas considéré comme une relique mais comme une image ; il est qualifié systématiquement dans la documentation de « figure ou représentation du Suaire du Christ » et ce même par ses promoteurs : le texte de l'indult de Clément VII d'août 1389 suggère que c'est Geoffroy II de Charny, fils de Geoffroy Ier, qui utilise lui-même cette dénomination lorsqu'il demande le droit de faire des ostensions.\n\nDe nombreux auteurs, tenants de l'authenticité, ont proposé des hypothèses pour expliquer comment la relique serait parvenue, depuis l'Orient, au chevalier champenois. Selon le récit tardif et légendaire des chanoines de Lirey, pendant sa captivité Geoffroy de Charny, capturé par les Anglais lors de la bataille de Morlaix en 1342, aurait prié la vierge Marie de le délivrer et fait le vœu de construire une chapelle à Lirey (Aube) sous l'invocation de Notre-Dame. Un ange lui serait apparu et l'aurait aidé à recouvrer la liberté.\n\nLes historiens réfutent le récit de cette évasion miraculeuse et savent, d'après une lettre patente que Geoffroy de Charny est libéré sur parole de sa geôle anglaise, le château de Goodrich, pour se procurer en France la forte rançon exigée. Selon ce récit romanesque, le roi aurait donné des reliques à Geoffroy de Charny, parmi lesquelles le linceul, en récompense de sa participation à de nombreuses batailles. Sur ce mode, Philippe VI aurait en effet pu prélever le suaire parmi les reliques de la Sainte-Chapelle.\n\nOn a aussi envisagé que la femme de Geoffroy, Jeanne de Vergy, ait pu obtenir le linge en héritage de son grand-père au cinquième degré Othon de La Roche. Celui-ci a en effet participé en 1204 au sac de Constantinople, lors duquel le croisé Robert de Clari raconte dans La Conquête de Constantinople avoir vu un suaire portant une image du Christ dans l'église Sainte-Marie du quartier des Blachernes. Une dernière hypothèse attribue à Geoffroy de Charny lui-même la conquête du linge, lors d'une croisade en Terre sainte à laquelle il participe vers 1345.\n\nCes théories sont difficilement compatibles avec l'état de la documentation, dans laquelle l'objet n'est jamais présenté comme une relique ou un objet ancien, mais comme une simple image, accusée par l'évêque local d'être une fausse relique.",
-    "image": ""
+    "image": "",
+    "theme": "religion",
+    "lat": 45.0678,
+    "lng": 7.6825
   },
   {
     "id": 969,
@@ -15336,6 +15566,9 @@
     "type": 2,
     "description": "Le 3 octobre, l'Angleterre et l'Écosse signent le traité de Berwick qui met fin de la 2e guerre d'indépendance écossaise . Dans cet accord, scellé dans la ville frontalière de Berwick, les deux royaumes acceptent la libération du roi d'Écosse David II, détenu par les Anglais, en échange d'une importante rançon. Une trêve est en vigueur jusqu'au paiement intégral de cette rançon. Bien que le traité de Berwick ne soit pas un traité de paix, il met de fait fin à la seconde guerre d'indépendance écossaise .",
     "image": "",
+    "theme": "diplomatie",
+    "lat": 55.7692,
+    "lng": -2.0026,
     "serie": "Guerres écossaises"
   },
   {
@@ -15376,7 +15609,10 @@
     ],
     "type": 4,
     "description": "Wat Phra Sri Rattana Mahathat (thaï : วัดพระศรีรัตนมหาธาตุ ; \"Temple du Grand Reliquaire Joyau\"), familièrement appelé Wat-Phra-Sri (thaï : วัดพระศรี) ou Wat Yai (thaï : วัดใหญ่ ; « Grand Temple »), est un temple bouddhiste (wat) dans la province de Phitsanulok, en Thaïlande, où il est situé sur la rive est de la rivière Nan, près du pont Naresuan et en face de la salle provinciale de Phitsanulok. Il se trouve à environ 337 km (209 mi) de Bangkok.\n\nLe Wat Phra Si Rattana Mahathat, connu localement sous le nom de « Wat Yai », fut fondé en 1357 par le roi Lithai de Sukhothai. Ce temple fut construit en même temps que les temples Phra Phuttha Chinnarat, Phra Phuttha Chinna Si et Phra Si Satsada. Sous le règne du roi Ekathotsarot d' Ayutthaya, son image de Bouddha fut dorée, et le temple fut ensuite agrandi par les rois Chulalongkorn et Bhumibol Adulyadej de Rattanakosin. Situé au pied du pont Naresuan, sur les rives de la rivière Nan, il s'étend sur une superficie de 36 rai (1 rai = 1 600 m²).\n\nLe temple est célèbre pour son image de Bouddha dorée, le Phra Phuttha Chinnarat, considérée par certains Thaïlandais comme la plus belle du pays",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg/1280px-Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg/1280px-Wat_Phra_Si_Rattana_Mahathat_-_Phitsanulok.jpg",
+    "theme": "art",
+    "lat": 14.8972,
+    "lng": 100.8327
   },
   {
     "id": 1031,
@@ -15510,14 +15746,17 @@
   },
   {
     "id": 669,
-    "titre": "Orcagna Rosace de la cathédrale d'Orivieto",
+    "titre": "Orcagna Rosace de la cathédrale d'Orvieto",
     "date": 1358,
     "zones": [
       "Italie"
     ],
     "type": 4,
     "description": "Œuvre de Andrea Orcagna en 1358, la splendide rosace à double cercle de colonnettes séparés par des arcs montre au centre le visage du Rédempteur. Les figures des quatre Docteurs de l’Église ornent les angles du carré dans lequel s’inscrit la rosace, et que bordent 52 têtes de saints en relief du XIVe siècle.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Rosone_del_Duomo_di_Orvieto.JPG/500px-Rosone_del_Duomo_di_Orvieto.JPG"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Rosone_del_Duomo_di_Orvieto.JPG/500px-Rosone_del_Duomo_di_Orvieto.JPG",
+    "theme": "art",
+    "lat": 42.7186,
+    "lng": 12.1088
   },
   {
     "id": 810,
@@ -15528,7 +15767,10 @@
       "Italie"
     ],
     "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "art",
+    "lat": 42.7186,
+    "lng": 12.1088
   },
   {
     "id": 837,
@@ -15541,7 +15783,10 @@
     ],
     "type": 2,
     "description": "À la mort d'Abû `Inân Fâris le 27 novembre 1358, la dynastie mérinide entra dans une première période de confusion. Chaque vizir tenta de mettre sur le trône son prétendant en choisissant de préférence l'individu le plus faible. Mansûr ben Sulayman (arrière-arrière-petit-fils de `Abd al-Haqq) avait été placé sur le trône par les chefs mérinides. Il s'est enfui lorsque Abû Sâlim a pris le pouvoir.\n\nAbû Ziân as-Sa`id Muhammad ben Fâris (أبو زيان السعيد محمد بن فارس) (1358)\n\nAbû Yahyâ abû Bakr ben Fâris (أبو يحي أبو بكر بن فارس) (1358-1359)\n\nAbû Sâlim Ibrâhîm ben `Alî (أبو سالم إبراهيم بن علي) est né à une date inconnue. Soutenu par le roi de Castille Pierre le cruel, il est un fils d'Abû al-Hasan ben `Uthmân. Il accéda au poste de sultan en 1359. Il fut destitué en 1361 au profit de son très éphémère successeur, Tachfîn, soutenu par les milices chrétiennes ; Ibn Khaldoun travailla à son accession au pouvoir et fut un temps son secrétaire.\n\nTachfîn (تاشفين) né à une date inconnue est le fils de Abû al-Hasan ben `Uthmân. Il fut nommé successeur de Abû Salîm, par les vizirs en 1361. Il ne régna que quelques mois.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 32.5511,
+    "lng": -7.0264
   },
   {
     "id": 939,
@@ -15569,7 +15814,10 @@
     ],
     "type": 3,
     "description": "À la mort d'Abû `Inân Fâris le 27 novembre 1358, la dynastie mérinide entra dans une première période de confusion. Chaque vizir tenta de mettre sur le trône son prétendant en choisissant de préférence l'individu le plus faible. L'assinat d'Abu Inan Faris par son vizir en 1358 marque un point de rupture dans laquelle les mérinides déclinent. La dynastie entre dans une première période de vizirat dans laquelle les vizirs gouvernent à la place des sultans qu'ils peuvent imposer ou déposer.\n\nCette situation est le résultat des politiques antérieures d'interventions militaires incessantes et de guerres de succession qui confortent la montée en puissance des fonctionnaires et vident la trésorerie du sultanat. Cette date marque le passage à une seconde phase de la dynastie mérinite, bien plus confuse, et ce jusqu'à la chute en 1465. Dix-sept sultans se succèdent sans parvenir à maîtriser les dissensions internes tandis que les vizirs gagnent en pouvoir et, à partir de 1420, sont nommés au sein des banu Wattas.\n\nCharles-André Julien distingue deux périodes dans cette confusion, considérant une première éclipse mérinide dans laquelle le pouvoir est éclipsé par les vizirs et à la suite de laquelle les sultans qui suivent parviennent à restaurer un certain pouvoir. Puis une deuxième éclipse mérinide jusqu'en 1393. Cette théorie n'est pas reprise par les auteurs modernes qui estiment que l'ensemble de la période voit l'affaiblissement du pouvoir des sultans, élus aux seuls souhaits des vizirs qui deviennent les véritables dirigeants,.\n\nLa chronologie retient plusieurs noms. Tout d'abord, Abû Ziân as-Sa`id Muhammad ben Fâris, l'héritier présomptif d'Abu Inan Faris, est écarté du trône par le vizir Hassan ibn Umar al Fududi qui lui préfère son jeune frère Abû Yahyâ Abû Bakr ben Fâris. Celui-ci est remplacé après quelques mois par Abû Salîm Ibrâhîm, fils d'Abû al-Hasan ben `Uthmân, qui règne en juillet 1359. Mais il est à son tour destitué par la milice chrétienne le 19 septembre 1361 afin d'être remplacé par Abu Omar Tachfin.\n\nIl ne règne que quelques mois et est renversé par Muhammad ben Yaqub, un protégé du roi de Castille qui avait séjourné à sa cour après la mort de son père Abu Inan. Bien que son règne dure un peu plus longtemps que ses prédécesseurs, il est également étranglé comme son père par son vizir à l'automne 1366 et ce dernier intronise Abu Faris Abd al-Aziz ben Ali",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 32.3196,
+    "lng": -7.0264
   },
   {
     "id": 977,
@@ -15709,7 +15957,10 @@
     ],
     "type": 5,
     "description": "Novembre : inondations catastrophiques du Rhône",
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 45.1871,
+    "lng": 4.9039
   },
   {
     "id": 986,
@@ -15720,7 +15971,10 @@
     ],
     "type": 4,
     "description": "Un moine, l'historiographe chroniqueur Richard Lescot, redécouvre la loi salique : elle est utilisée a posteriori pour justifier la légitimité des Valois",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 48.8535,
+    "lng": 2.3484
   },
   {
     "id": 987,
@@ -15731,7 +15985,10 @@
     ],
     "type": 4,
     "description": "Mubariz al-Din Muhammad, chef de la tribu arabe des Muzaffarides, chasse la Horde bleue du territoire ilkhanide en Perse . Les Muzaffarides cèdent ensuite le contrôle de l'Ilkhanat après avoir été vaincus par la tribu mongole des Jalayirides, dirigée par le cheikh Uvais . Ce dernier devient le nouvel Ilkhanat. L'Ilkhanat est alors dissous et remplacé par la dynastie jalaïride de Perse.\n\nShah Shuja renverse son père, Mubarazuddin Muhammad, à la tête de la tribu Muzaffaride.",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 32.6475,
+    "lng": 54.5644
   },
   {
     "id": 988,
@@ -15771,7 +16028,10 @@
       "St Empire"
     ],
     "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "diplomatie",
+    "lat": 53.0758,
+    "lng": 8.8072
   },
   {
     "id": 991,
@@ -15782,7 +16042,10 @@
     ],
     "type": 5,
     "description": "L'empereur Charles IV fit construire un pavillon de chasse aux sources chaudes près de ce qui allait devenir la ville de Carlsbad .",
-    "image": ""
+    "image": "",
+    "theme": "societe",
+    "lat": 50.2306,
+    "lng": 12.8701
   },
   {
     "id": 992,
@@ -15900,7 +16163,10 @@
     ],
     "type": 5,
     "description": "Hiver froid, au point de faire geler le Rhin durant 3 semaines à Mayence, suivi de longues pluies et inondations (Le phénomène de long gel du Rhin se reproduira en 1364, durant plus de 3 mois)",
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 50.4694,
+    "lng": 7.35
   },
   {
     "id": 999,
@@ -15999,7 +16265,10 @@
     ],
     "type": 4,
     "description": "Octobre: Galeazzo II Visconti s’empare de Pavie où il fonde une université.",
-    "image": ""
+    "image": "",
+    "theme": "guerre",
+    "lat": 45.0369,
+    "lng": 9.1378
   },
   {
     "id": 1005,
@@ -16048,7 +16317,10 @@
     ],
     "type": 5,
     "description": "Le gouverneur du Maramures, Bogdan, en conflit avec la Hongrie, est appelé par la population de la marche Moldave mécontente de la domination magyare. Reconnu voïévode par les grands, Bogdan Ier devient prince de Moldavie (fin en 1365).\n\nBogdan Ier devient prince de Moldavie (l’actuelle Moldavie) après l’avoir libérée du joug hongrois . Il sera l’ancêtre de la dynastie de Bogdan, qui régnera sur la Moldavie pendant plus de trois siècles",
-    "image": ""
+    "image": "",
+    "theme": "politique",
+    "lat": 47.288,
+    "lng": 28.5671
   },
   {
     "id": 1008,
@@ -16059,7 +16331,10 @@
       "France"
     ],
     "type": 5,
-    "image": ""
+    "image": "",
+    "theme": "catastrophe",
+    "lat": 51.0378,
+    "lng": 4.2406
   },
   {
     "id": 1009,
@@ -23604,8 +23879,8 @@
     "description": "16 février 1377 : alliance entre la république de Gênes et le roi Louis Ier de Hongrie contre Venise. Les Carrare de Padoue et le patriarche d'Aquilée rejoignent la ligue.\n\n1378 Juillet - août Pisani ravage plusieurs positions ennemies sur la côte dalmate",
     "image": "",
     "theme": "guerre",
-    "lat": 43.6829,
-    "lng": 16.0975,
+    "lat": 44.8036,
+    "lng": 15.015,
     "serie": "Guerre de Chioggia"
   },
   {
