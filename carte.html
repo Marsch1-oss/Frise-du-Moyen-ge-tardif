@@ -32,6 +32,13 @@
   .controls{display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1rem}
   .ctrl-block{display:flex;flex-direction:column;gap:0.4rem}
   .ctrl-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted)}
+  /* ── Mode Parcours ── */
+  #parcours-select{font-family:'Crimson Pro',serif;font-size:0.85rem;padding:0.25rem 0.6rem;border:1.5px solid var(--border-dark);
+        border-radius:18px;background:var(--parchment-lt);color:var(--ink-soft);cursor:pointer;max-width:260px}
+  #parcours-select.active{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+  .ctrl-block.pc-disabled{opacity:0.4;pointer-events:none}
+  .parcours-line{fill:none;stroke:#8a4a24;stroke-width:1.6;stroke-dasharray:5 3;opacity:0.55;
+        vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round;pointer-events:none}
   .chips{display:flex;flex-wrap:wrap;gap:0.35rem}
   .chip{font-family:'Crimson Pro',serif;font-size:0.85rem;padding:0.25rem 0.85rem;border:1.5px solid var(--border-dark);
         border-radius:18px;background:var(--parchment-lt);color:var(--ink-soft);cursor:pointer;transition:all .15s;white-space:nowrap}
@@ -224,7 +231,7 @@
       <span class="ctrl-label">Région</span>
       <div class="chips" id="region-chips"></div>
     </div>
-    <div class="ctrl-block">
+    <div class="ctrl-block" id="period-block">
       <span class="ctrl-label">Période</span>
       <div class="decade-row">
         <div class="chips" id="mode-chips" style="margin-right:0.4rem"></div>
@@ -241,9 +248,18 @@
       <span class="ctrl-label">Repères géographiques</span>
       <div class="chips" id="layer-chips"></div>
     </div>
-    <div class="ctrl-block">
+    <div class="ctrl-block" id="theme-block">
       <span class="ctrl-label">Thèmes</span>
       <div class="chips" id="theme-chips"></div>
+    </div>
+    <!-- Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
+         événements). Visible uniquement en mode live : le bundle embarqué ne
+         contient pas ce champ. -->
+    <div class="ctrl-block" id="parcours-block" style="display:none">
+      <span class="ctrl-label">Parcours</span>
+      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
+        <option value="">— aucun —</option>
+      </select>
     </div>
   </div>
 
@@ -304,6 +320,7 @@ var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si d
 var LIVE = null;                     // map id -> event complet (si live)
 var state = { region: BUNDLE.regions[0], mode:'decade', decade: null, year: null, selZone: null, zoomView: null,
               zoneZoomView: null, clusterZoomView: null, currentClusters: null, spiderfied: null,
+              parcours: null,   /* nom du parcours actif (mode Parcours dédié), sinon null */
               layers: { rivers:false, borders:false, shields:false, regnes:true } };
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
@@ -315,7 +332,7 @@ function tryLoadLive(done){
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
         var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0,
-                  th:(e.theme||null),
+                  th:(e.theme||null), s:(e.serie||null),
                   lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
         LIVE[e.id] = e;
         return o;
@@ -398,6 +415,100 @@ function eventMatchesTheme(e){
 function anyThemeActive(){
   for(var t in activeThemes){ if(activeThemes[t]) return true; }
   return false;
+}
+
+/* ---- Mode Parcours -------------------------------------------------------
+   Un « parcours » regroupe les étapes d'un itinéraire historique (champ
+   `serie` d'events.json, ex. « Guerre de Cent ans »). Le mode Parcours
+   affiche TOUTES les étapes d'un coup, hors navigation temporelle : les
+   points sont numérotés dans l'ordre chronologique (même infrastructure que
+   le drill-down de zone : étoiles automatiques, badges du panneau) et
+   reliés par un tracé en pointillés. Les synthèses « @parcours|Nom » ou
+   « @parcours|Nom|décennie » alimentent le bandeau. Disponible uniquement
+   en mode live (le bundle embarqué ne porte pas le champ serie). */
+function parcoursActive(){ return !!state.parcours; }
+function parcoursList(){
+  var seen={}, out=[];
+  EVENTS.forEach(function(e){ if(e.s && !seen[e.s]){ seen[e.s]=true; out.push(e.s); } });
+  return out.sort(function(a,b){ return a.localeCompare(b,'fr'); });
+}
+function parcoursEvents(name){
+  /* Étapes dédupliquées (un événement multi-zones = une étape), triées
+     chronologiquement ; le rang chronologique = index + 1. */
+  var seen={}, out=[];
+  EVENTS.forEach(function(e){
+    if(e.s===name && typeof e.d==='number' && !seen[e.id]){ seen[e.id]=true; out.push(e); }
+  });
+  return out.sort(function(x,y){ return (x.d-y.d) || ((x.df||x.d)-(y.df||y.d)) || (x.id-y.id); });
+}
+function setParcours(name){
+  state.parcours = name || null;
+  state.selZone=null; state.zoomView=null; state.zoneZoomView=null;
+  state.clusterZoomView=null; state.spiderfied=null;
+  if(state.parcours){
+    /* Exclusif avec le filtre thématique : un parcours est un ensemble
+       curaté, le croiser avec un thème tronquerait l'itinéraire. */
+    activeThemes={}; renderThemeChips();
+    var located = parcoursEvents(state.parcours).filter(hasCoord)
+      .map(function(e){ return { x:projX(e.lng), y:projY(e.lat) }; });
+    if(located.length){
+      state.zoneZoomView = bboxView(located, 24, 24);   /* vue « retour » des dézooms de cluster */
+      state.zoomView = state.zoneZoomView;
+    }
+  }
+  /* Navigation temporelle neutralisée pendant un parcours (toutes les étapes
+     sont affichées quelle que soit la période). */
+  ['period-block','theme-block'].forEach(function(bid){
+    var b=document.getElementById(bid);
+    if(b) b.classList.toggle('pc-disabled', !!state.parcours);
+  });
+  var sel = document.getElementById('parcours-select');
+  if(sel){ sel.value = state.parcours || ''; sel.classList.toggle('active', !!state.parcours); }
+  renderMap();
+  resetPanel();
+}
+function renderParcoursSelect(){
+  var sel=document.getElementById('parcours-select'), block=document.getElementById('parcours-block');
+  if(!sel || !block) return;
+  var names = parcoursList();
+  if(!names.length){ block.style.display='none'; return; }
+  /* Options construites en DOM (les noms contiennent des apostrophes). */
+  sel.innerHTML='';
+  var o0=document.createElement('option'); o0.value=''; o0.textContent='\u2014 aucun \u2014'; sel.appendChild(o0);
+  names.forEach(function(n){
+    var evs=parcoursEvents(n);
+    var o=document.createElement('option'); o.value=n;
+    o.textContent=n+' ('+evs.length+' \u00e9tapes)';
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', function(){ setParcours(sel.value); });
+  block.style.display='';
+}
+function renderParcoursPanel(){
+  var evs=parcoursEvents(state.parcours);
+  var located=evs.filter(hasCoord);
+  var dmin=evs.length?evs[0].d:'', dmax=evs.length?evs.reduce(function(m,e){return Math.max(m, e.df||e.d);},0):'';
+  document.getElementById('panel-title').textContent='Parcours : '+state.parcours;
+  document.getElementById('panel-count').textContent=
+    dmin+'\u2013'+dmax+' \u00b7 '+evs.length+' \u00e9tapes'+(located.length?(' \u00b7 '+located.length+' localis\u00e9e'+(located.length>1?'s':'')):'');
+  var list=document.getElementById('panel-list');
+  if(!evs.length){ list.innerHTML='<div class="panel-empty">Aucune \u00e9tape.</div>'; return; }
+  /* Même structure de lignes que selectZone : badges de rang synchronisés
+     avec les numéros de la carte (doré tireté = étape sans position). */
+  list.innerHTML=zoomButtonsHtml()+evs.map(function(e, i){
+    var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '\u2013'+e.df : '');
+    var isLoc=hasCoord(e);
+    var pin=isLoc?'<span class="locdot" title="Localis\u00e9 pr\u00e9cis\u00e9ment"></span>':'';
+    var ord='<span class="ev-ord'+(isLoc?'':' noloc')+'" title="'+(isLoc?'N\u00b0 sur la carte':'Sans position sur la carte')+'">'+(i+1)+'</span>';
+    return '<div class="ev-row" data-id="'+e.id+'">'+
+      ord+
+      '<span class="ev-date">'+dd+'</span>'+
+      '<span class="ev-title">'+pin+escapeHtml(e.t)+(e.r?'<span class="reigntag">r\u00e8gne</span>':'')+'</span>'+
+    '</div>';
+  }).join('');
+  Array.prototype.forEach.call(list.querySelectorAll('.ev-row'), function(row){
+    row.addEventListener('click', function(){ openFiche(+row.getAttribute('data-id')); });
+  });
 }
 
 /* ---- Décennies présentes dans les données ------------------------------- */
@@ -705,19 +816,55 @@ function synthParagraphHtml(text){
     return escapeHtml(part).replace(/\n/g,'<br>');
   }).join('');
 }
+/* Synthèses d'un parcours : clé globale « @parcours|Nom » et/ou clés par
+   décennie « @parcours|Nom|1340 ». Les secondes sont concaténées dans l'ordre
+   chronologique (le corps du bandeau est borné et défilant). */
+function parcoursSyntheses(name){
+  var out=[], glob=SYNTHESES['@parcours|'+name], pref='@parcours|'+name+'|';
+  if(glob) out.push({ dec:null, s:glob });
+  Object.keys(SYNTHESES).forEach(function(k){
+    if(k.indexOf(pref)!==0) return;
+    var d=parseInt(k.slice(pref.length), 10);
+    if(!isNaN(d)) out.push({ dec:d, s:SYNTHESES[k] });
+  });
+  out.sort(function(a,b){
+    if(a.dec===null) return -1;
+    if(b.dec===null) return 1;
+    return a.dec-b.dec;
+  });
+  return out;
+}
+function synthTexteHtml(texte){
+  return (texte||'').split(/\n\n+/).map(function(para){
+    return para.trim() ? '<p>'+synthParagraphHtml(para.trim())+'</p>' : '';
+  }).join('');
+}
 function renderSyntheseBanner(){
   var banner=document.getElementById('synthese-banner');
   if(!banner) return;
-  var show = state.selZone && state.mode==='decade' && state.decade!==null;
-  var s = show ? SYNTHESES[state.selZone+'|'+state.decade] : null;
-  if(!s){ banner.style.display='none'; return; }
-  document.getElementById('sb-title').textContent = s.titre || (state.selZone+' \u00b7 '+state.decade);
-  document.getElementById('sb-period').textContent =
-    (s.auto ? '(brouillon auto) ' : '') + state.selZone + ' \u2014 ' + state.decade + '-' + (state.decade+9);
   var body=document.getElementById('sb-body');
-  body.innerHTML = (s.texte||'').split(/\n\n+/).map(function(para){
-    return para.trim() ? '<p>'+synthParagraphHtml(para.trim())+'</p>' : '';
-  }).join('');
+  if(parcoursActive()){
+    var list=parcoursSyntheses(state.parcours);
+    if(!list.length){ banner.style.display='none'; return; }
+    var auto=list.every(function(x){ return x.s.auto; });
+    document.getElementById('sb-title').textContent = 'Parcours \u00b7 '+state.parcours;
+    document.getElementById('sb-period').textContent =
+      (auto ? '(brouillon auto) ' : '') + list.length + ' synth\u00e8se' + (list.length>1?'s':'');
+    body.innerHTML = list.map(function(x){
+      var head = (x.dec===null)
+        ? (x.s.titre ? '<p style="font-weight:700">'+escapeHtml(x.s.titre)+'</p>' : '')
+        : '<p style="font-weight:700;letter-spacing:0.04em">'+x.dec+'\u2013'+(x.dec+9)+'</p>';
+      return head + synthTexteHtml(x.s.texte);
+    }).join('');
+  } else {
+    var show = state.selZone && state.mode==='decade' && state.decade!==null;
+    var s = show ? SYNTHESES[state.selZone+'|'+state.decade] : null;
+    if(!s){ banner.style.display='none'; return; }
+    document.getElementById('sb-title').textContent = s.titre || (state.selZone+' \u00b7 '+state.decade);
+    document.getElementById('sb-period').textContent =
+      (s.auto ? '(brouillon auto) ' : '') + state.selZone + ' \u2014 ' + state.decade + '-' + (state.decade+9);
+    body.innerHTML = synthTexteHtml(s.texte);
+  }
   Array.prototype.forEach.call(body.querySelectorAll('.synth-link'), function(a){
     var id=+a.getAttribute('data-id');
     a.addEventListener('click', function(ev){ ev.preventDefault(); openFiche(id); });
@@ -966,18 +1113,40 @@ function renderMap(){
   }
 
   var anyDot=false, totalRegion=0;
+  /* Mode Parcours : l'itinéraire prime sur tout le reste (région, période,
+     thèmes). Les étapes géolocalisées sont numérotées dans l'ordre
+     chronologique — même rendu que le drill-down de zone (renderLocatedPoints
+     numbered:true, donc éclatement automatique des lieux confondus) — et
+     reliées par un tracé en pointillés dans ce même ordre. La numérotation
+     couvre TOUTES les étapes (localisées ou non) pour rester alignée sur les
+     badges du panneau latéral. */
+  var pcActive = parcoursActive();
+  if(pcActive){
+    var pcEvs = parcoursEvents(state.parcours), pcPts = [];
+    pcEvs.forEach(function(e, i){
+      if(hasCoord(e)) pcPts.push({ x:projX(e.lng), y:projY(e.lat), e:e, ord:i+1 });
+    });
+    parts.push(cityLabelsSVG(v));
+    if(pcPts.length > 1){
+      parts.push('<polyline class="parcours-line" points="'+
+        pcPts.map(function(p){ return p.x.toFixed(1)+','+p.y.toFixed(1); }).join(' ')+'"/>');
+    }
+    if(pcPts.length) renderLocatedPoints(pcPts, parts, rDot, fNum, { numbered:true });
+    anyDot = pcEvs.length > 0;
+    totalRegion = pcEvs.length;
+  }
   /* Mode thématique global : quand au moins un thème est coché et qu'aucune
      zone n'est sélectionnée, on n'affiche plus les pastilles agrégées par
      zone mais directement TOUS les points géolocalisés du thème sur toute la
      carte (dédupliqués : un événement multi-zones = un seul point). Les
      événements sans coordonnées restent signalés par une petite pastille
      dorée « sans position » près du centroïde de leur zone. */
-  var themeGlobal = anyThemeActive() && !state.selZone;
+  var themeGlobal = !pcActive && anyThemeActive() && !state.selZone;
   /* Toponymes de repère : uniquement en mode thématique (points individuels),
      placés sous les points d'événements pour ne rien masquer. */
   if(themeGlobal){ parts.push(cityLabelsSVG(v)); }
   var gPts=[], gSeen={}, overviewPastilles=[];
-  reg.zones.forEach(function(zone){
+  if(!pcActive) reg.zones.forEach(function(zone){
     /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
        pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
     if(state.selZone && state.selZone!==zone) return;
@@ -1096,8 +1265,10 @@ function renderMap(){
   var emptyEl=document.getElementById('map-empty');
   if(!anyDot){
     emptyEl.style.display='flex';
-    emptyEl.textContent='Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
-      +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '');
+    emptyEl.textContent = pcActive
+      ? 'Aucune étape pour le parcours « '+state.parcours+' ».'
+      : ('Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
+         +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : ''));
   } else { emptyEl.style.display='none'; }
   /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
      après un zoom sur un cluster en mode thématique global (sinon plus
@@ -1112,6 +1283,9 @@ function renderMap(){
 /* ---- Bandeau zones non localisées (Monde, Atlas) ------------------------ */
 function renderNonGeo(){
   var el=document.getElementById('nongeo'), bits=[];
+  /* Sans objet pendant un parcours : les étapes sans coordonnées figurent déjà
+     dans le panneau latéral (badge doré tireté). */
+  if(parcoursActive()){ el.style.display='none'; return; }
   BUNDLE.nonGeo.forEach(function(zone){
     var n=eventsFor(zone, currentRange()).length;
     if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
@@ -1422,6 +1596,9 @@ function setDecade(d){
   renderDecadeChips(); renderMap(); resetPanel();
 }
 function resetPanel(){
+  /* Mode Parcours : le panneau liste les étapes de l'itinéraire (badges de rang
+     synchronisés avec les numéros de la carte). */
+  if(parcoursActive()){ renderParcoursPanel(); return; }
   /* En mode thématique global, le panneau n'est jamais « vide » : il liste
      tous les événements du thème (localisés et non localisés), toutes zones
      confondues. C'est là que vivent désormais les événements « sans position »
@@ -1517,6 +1694,12 @@ function boot(mode){
     setDecade(best);
   }
   if(pZone) selectZone(pZone);
+
+  /* Mode Parcours : le sélecteur ne s'affiche qu'en présence du champ `serie`,
+     donc uniquement en mode live (le bundle embarqué ne le porte pas). */
+  renderParcoursSelect();
+  var pParcours = params.get('parcours');
+  if(pParcours && parcoursList().indexOf(pParcours)!==-1) setParcours(pParcours);
 
   document.getElementById('status-note').innerHTML = (mode==='live')
     ? 'Données chargées depuis <b>events.json</b> en direct ('+EVENTS.length+' événements). Les fiches affichent le texte complet.'
