@@ -1466,7 +1466,6 @@ var THEME_KEYWORDS = {
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
   'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
@@ -2435,11 +2434,11 @@ function wzUpdateNextHint() {
   }
 }
 
-var _wzMode = '3';   /* '3' décennale · '4' annuelle · 'search' recherche · '5' parcours */
+var _wzMode = '3';   /* '3' décennale · '4' annuelle · 'carte' carte · 'search' recherche · '5' parcours */
 
 function wzModeChanged(val) {
   _wzMode = val;
-  if (val !== 'search') _wzScale = parseInt(val);
+  if (val !== 'search' && val !== 'carte') _wzScale = parseInt(val);
   wzApplyModeUI();
   wzShowModeActions();
 }
@@ -2452,10 +2451,13 @@ function wzShowModeActions() {
   var go = document.getElementById('wz-mode-ca-go');
   if (go) go.innerHTML = (_wzMode === '5')
     ? '\u2694\uFE0F Choisir le parcours'
-    : '\uD83D\uDDFA\uFE0F Choisir une zone et une période';
+    : (_wzMode === 'carte'
+        ? '\uD83D\uDDFA\uFE0F Choisir une décennie'
+        : '\uD83D\uDDFA\uFE0F Choisir une zone et une période');
   var title = document.getElementById('wz-mode-ca-title');
   if (title) {
-    var labels = { '3': 'Frise décennale', '4': 'Frise par année', '5': 'Parcours thématique' };
+    var labels = { '3': 'Frise décennale', '4': 'Frise par année', '5': 'Parcours thématique',
+                   'carte': 'Carte interactive' };
     title.textContent = (labels[_wzMode] || 'Mode') + ' \u2713';
   }
   panel.style.display = 'flex';
@@ -2524,13 +2526,18 @@ function wzGoTo(step) {
 function wzSetupStep2() {
   /* Les zones-thèmes ne sont proposées QUE pour les frises décennale et annuelle.
      En mode parcours, on masque la grille et on ne propose que la liste des parcours. */
-  var isParcours = (_wzMode === '5');
+  /* Ni le parcours ni la carte n'utilisent la grille de zones de la frise :
+     le parcours est un ensemble curaté, et carte.html a ses propres contrôles
+     de région et de zone. Seule la période est demandée. */
+  var noZones = (_wzMode === '5' || _wzMode === 'carte');
   var grid  = document.getElementById('wz-zones-grid');
   var sub   = document.getElementById('wz-step2-sub');
   var title = document.getElementById('wz-step2-title');
-  if (grid)  grid.style.display = isParcours ? 'none' : '';
-  if (sub)   sub.style.display  = isParcours ? 'none' : '';
-  if (title) title.textContent  = isParcours ? 'Parcours thématique' : 'Zones \u0026 thèmes';
+  if (grid)  grid.style.display = noZones ? 'none' : '';
+  if (sub)   sub.style.display  = noZones ? 'none' : '';
+  if (title) title.textContent  = (_wzMode === '5') ? 'Parcours thématique'
+                                : (_wzMode === 'carte') ? 'Carte interactive'
+                                : 'Zones \u0026 thèmes';
   wzBuildPeriodSelect();
 }
 
@@ -2543,20 +2550,29 @@ function wzNext() {
       wzClose();                /* wzClose détecte le mot-clé et lance la recherche */
       return;
     }
-    /* Décennale / annuelle / parcours → étape 2 */
-    _wzScale = (_wzMode === '5') ? 5 : parseInt(_wzMode);
+    /* Décennale / annuelle / carte / parcours → étape 2 */
+    _wzScale = (_wzMode === '5') ? 5 : (_wzMode === 'carte') ? 3 : parseInt(_wzMode);
     wzGoTo(2);
     return;
   }
-  /* ── Étape 2 : validation puis ouverture de la frise ── */
+  /* ── Étape 2 : validation puis ouverture de la frise ou de la carte ── */
   if (_wzMode === '5') {
     var pv = (document.getElementById('wz-period-select').value || '');
     if (!pv) { alert('Aucun parcours disponible pour le moment.'); return; }
+  } else if (_wzMode === 'carte') {
+    /* rien à valider : la décennie a toujours une valeur */
   } else {
     var anyZone = Object.values(activeZones).some(Boolean);
     if (!anyZone) { alert('Sélectionnez au moins une zone ou un thème.'); return; }
   }
   wzClose();
+}
+
+/* Bascule frise -> carte sur une décennie donnée (mode « Carte interactive »
+   de l'assistant d'ouverture). Isolée pour rester testable. */
+function wzOpenCarte(dec) {
+  if (isNaN(dec)) dec = 1300;
+  window.location.href = 'carte.html?decade=' + (Math.floor(dec / 10) * 10);
 }
 
 function wzPrev() {
@@ -2567,6 +2583,7 @@ var _wzScale = 3; /* Mémorise le choix d'échelle — défaut décennale */
 
 function wzGetScale() {
   if (_wzMode === '5') return 5;
+  if (_wzMode === 'carte') return 3;   /* la carte se lit par décennie */
   if (_wzMode === 'search') return _wzScale;
   return parseInt(_wzMode);
 }
@@ -2596,7 +2613,9 @@ function wzBuildPeriodSelect() {
       });
     }
   } else if (scale === 3) {
-    sub.textContent = 'Sélectionnez la décennie à afficher.';
+    sub.textContent = (_wzMode === 'carte')
+      ? 'Sélectionnez la décennie à afficher sur la carte.'
+      : 'Sélectionnez la décennie à afficher.';
     for (var d = 1300; d < 1500; d += 10) {
       var opt = document.createElement('option');
       opt.textContent = d + ' – ' + (d + 9);
@@ -2624,6 +2643,13 @@ function wzClose() {
   if (overlay) overlay.classList.add('hidden');
   var q = (document.getElementById('wz-search-input').value || '').trim();
   if (_wzMode === 'search' && q) { wzApplySearch(q); return; }
+
+  /* Carte interactive : on quitte la frise pour carte.html, ouverte sur la
+     décennie choisie (paramètre ?decade= géré par carte.html). */
+  if (_wzMode === 'carte') {
+    wzOpenCarte(parseInt(document.getElementById('wz-period-select').value || '1300', 10));
+    return;
+  }
   updateFilterCheckboxes();
 
   /* Échelle déduite du mode choisi */

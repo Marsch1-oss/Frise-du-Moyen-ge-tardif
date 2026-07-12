@@ -255,6 +255,12 @@
       <span class="ctrl-label">Repères géographiques</span>
       <div class="chips" id="layer-chips"></div>
     </div>
+    <!-- Niveau de détail : mêmes paliers cumulatifs que la frise
+         (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de frise.js). -->
+    <div class="ctrl-block" id="level-block">
+      <span class="ctrl-label">Niveau de détail</span>
+      <div class="chips" id="level-chips"></div>
+    </div>
     <div class="ctrl-block" id="theme-block">
       <span class="ctrl-label">Thèmes</span>
       <div class="chips" id="theme-chips"></div>
@@ -328,6 +334,7 @@ var LIVE = null;                     // map id -> event complet (si live)
 var state = { region: BUNDLE.regions[0], mode:'decade', decade: null, year: null, selZone: null, zoomView: null,
               zoneZoomView: null, clusterZoomView: null, currentClusters: null, spiderfied: null,
               parcours: null,   /* nom du parcours actif (mode Parcours dédié), sinon null */
+              level: 4,         /* densité affichée : 2=Important, 3=Détaillé, 4=Complet (défaut) */
               layers: { rivers:false, borders:false, shields:false, regnes:true } };
 
 /* ---- Données live (si le fichier est servi à côté) ---------------------- */
@@ -494,19 +501,29 @@ function setParcours(name){
      curaté : le croiser avec un thème tronquerait l'itinéraire). La navigation
      temporelle, elle, RESTE ACTIVE : le parcours se lit décennie par décennie,
      sinon les longs itinéraires (Guerre de Cent ans : 113 étapes) saturent la carte. */
-  var themeBlock=document.getElementById('theme-block');
-  if(themeBlock) themeBlock.classList.toggle('pc-disabled', !!state.parcours);
+  ['theme-block','level-block'].forEach(function(bid){
+    var b=document.getElementById(bid);
+    if(b) b.classList.toggle('pc-disabled', !!state.parcours);
+  });
   var sel = document.getElementById('parcours-select');
   if(sel){ sel.value = state.parcours || ''; sel.classList.toggle('active', !!state.parcours); }
   if(state.parcours){
     activeThemes={}; renderThemeChips();
-    /* On se place d'office sur une décennie traversée par le parcours (la 1re si
-       la période courante n'en contient aucune étape) : setDecade recadre la vue. */
+    /* On entre toujours dans un itinéraire par son commencement : la carte se
+       place sur la décennie de l'étape 1, quelle que soit la période affichée
+       avant la sélection (setDecade recadre la vue). */
     if(state.mode!=='decade'){ setMode('decade'); }
-    var hit=parcoursDecades(state.parcours);
-    var target = (state.decade!==null && hit[state.decade]) ? state.decade
-               : Object.keys(hit).map(Number).sort(function(a,b){return a-b;})[0];
-    if(typeof target==='number'){ setDecade(target); return; }
+    var first = parcoursEvents(state.parcours)[0];
+    if(first){
+      var target = Math.floor(first.d/10)*10;
+      if(DECADES.indexOf(target)===-1){
+        target = DECADES.reduce(function(prev, cur){
+          return Math.abs(cur-target) < Math.abs(prev-target) ? cur : prev;
+        }, DECADES[0]);
+      }
+      setDecade(target);
+      return;
+    }
   }
   renderDecadeChips();
   fitParcoursView();
@@ -671,11 +688,33 @@ function cityLabelsSVG(v){
 }
 
 /* ---- Compte : un événement compte dans la plage si sa période la recoupe */
+/* ---- Niveau de détail ----------------------------------------------------
+   Reprend les paliers cumulatifs de la frise (frise.js, detailLevel) :
+     2 = Important : types 2 et 3 (+ règnes)
+     3 = Détaillé  : types 2 à 4  (+ règnes)
+     4 = Complet   : tous les types
+   Les règnes (type 1) passent à tous les niveaux : ils servent de repère de
+   contexte sur la carte (cartouches, bandeau), comme le filtre thématique les
+   laisse passer. Sans effet en mode Parcours (itinéraire curaté).
+   ---- GARDER SYNCHRONISÉ avec frise.js (types 1-5). ---------------------- */
+var LEVEL_DEFS = [
+  { lvl:2, nom:'Important' },
+  { lvl:3, nom:'Détaillé' },
+  { lvl:4, nom:'Complet' }
+];
+function eventPassesLevel(e){
+  var t = (typeof e.ty==='number' && e.ty>=1) ? e.ty : 2;
+  if(t===1) return true;                      /* règne : repère de contexte */
+  if(state.level===2) return t<=3;
+  if(state.level===3) return t<=4;
+  return true;                                /* Complet */
+}
 function eventsFor(zone, range){
   var a=range.a, b=range.b;
   return EVENTS.filter(function(e){
     if(e.z.indexOf(zone)===-1) return false;
     if(typeof e.d!=='number') return false;
+    if(!eventPassesLevel(e)) return false;    /* densité : Important / Détaillé / Complet */
     if(!eventMatchesTheme(e)) return false;   /* filtre thématique global */
     var f=(typeof e.df==='number')?e.df:e.d;
     return e.d<=b && f>=a;
@@ -1327,7 +1366,8 @@ function renderMap(){
     emptyEl.textContent = pcActive
       ? ('Aucune étape du parcours « '+state.parcours+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'. Les décennies concernées sont soulignées.')
       : ('Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
-         +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : ''));
+         +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '')
+         +(state.level<4 ? ' Niveau de détail : '+(state.level===2?'Important':'Détaillé')+'.' : ''));
   } else { emptyEl.style.display='none'; }
   /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
      après un zoom sur un cluster en mode thématique global (sinon plus
@@ -1586,6 +1626,24 @@ function refreshAfterFilter(){
     resetPanel();   /* liste du thème si filtre actif, placeholder sinon */
   }
 }
+function renderLevelChips(){
+  var box=document.getElementById('level-chips');
+  if(!box) return;
+  box.innerHTML=LEVEL_DEFS.map(function(L){
+    return '<button class="chip'+(state.level===L.lvl?' active':'')+'" data-lvl="'+L.lvl+'" title="'+
+      (L.lvl===2?'Événements majeurs seulement':(L.lvl===3?'Événements majeurs et secondaires':'Tous les événements'))+
+      '">'+L.nom+'</button>';
+  }).join('');
+  Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){ setLevel(+c.getAttribute('data-lvl')); });
+  });
+}
+function setLevel(lvl){
+  if(state.level===lvl) return;
+  state.level=lvl;
+  renderLevelChips();
+  refreshAfterFilter();   /* recalcule pastilles, points et panneau */
+}
 function renderThemeChips(){
   var box=document.getElementById('theme-chips');
   /* Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé) */
@@ -1720,6 +1778,7 @@ function boot(mode){
   renderRegionChips();
   renderModeChips();
   renderLayerChips();
+  renderLevelChips();
   renderThemeChips();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
