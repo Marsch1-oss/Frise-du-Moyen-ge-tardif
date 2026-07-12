@@ -489,10 +489,16 @@ function parcoursList(){
 }
 function parcoursEvents(name){
   /* Étapes dédupliquées (un événement multi-zones = une étape), triées
-     chronologiquement ; le rang chronologique = index + 1. */
+     chronologiquement ; le rang chronologique = index + 1.
+     Le niveau de détail (Important / Détaillé / Complet) s'applique ici, en
+     amont de tout le reste : la numérotation, le tracé, le filigrane, le
+     panneau et la surbrillance des décennies découlent tous de cette liste et
+     restent donc cohérents entre eux. Conséquence assumée : les numéros se
+     renumérotent d'un niveau à l'autre (1, 2, 3… sans trous), afin que la
+     lecture de la carte reste continue. */
   var seen={}, out=[];
   EVENTS.forEach(function(e){
-    if(e.s===name && typeof e.d==='number' && !seen[e.id]){ seen[e.id]=true; out.push(e); }
+    if(e.s===name && typeof e.d==='number' && !seen[e.id] && eventPassesLevel(e)){ seen[e.id]=true; out.push(e); }
   });
   return out.sort(function(x,y){ return (x.d-y.d) || ((x.df||x.d)-(y.df||y.d)) || (x.id-y.id); });
 }
@@ -542,10 +548,11 @@ function setParcours(name){
      curaté : le croiser avec un thème tronquerait l'itinéraire). La navigation
      temporelle, elle, RESTE ACTIVE : le parcours se lit décennie par décennie,
      sinon les longs itinéraires (Guerre de Cent ans : 113 étapes) saturent la carte. */
-  ['theme-block','level-block'].forEach(function(bid){
-    var b=document.getElementById(bid);
-    if(b) b.classList.toggle('pc-disabled', !!state.parcours);
-  });
+  /* Seul le filtre thématique est exclusif du parcours : il le tronquerait de
+     façon arbitraire. Le niveau de détail, lui, reste disponible — c'est une
+     densité de lecture, applicable à un itinéraire comme au reste de la carte. */
+  var themeBlock=document.getElementById('theme-block');
+  if(themeBlock) themeBlock.classList.toggle('pc-disabled', !!state.parcours);
   var sel = document.getElementById('parcours-select');
   if(sel){ sel.value = state.parcours || ''; sel.classList.toggle('active', !!state.parcours); }
   if(state.parcours){
@@ -1417,7 +1424,9 @@ function renderMap(){
   if(!anyDot){
     emptyEl.style.display='flex';
     emptyEl.textContent = pcActive
-      ? ('Aucune étape du parcours « '+state.parcours+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'. Les décennies concernées sont soulignées.')
+      ? ('Aucune étape du parcours « '+state.parcours+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
+         +(state.level<4 ? ' Niveau de détail : '+(state.level===2?'Important':'Détaillé')+'.' : '')
+         +' Les décennies concernées sont soulignées.')
       : ('Aucun événement localisé pour « '+reg.nom+' » dans '+(state.mode==='year'?'l’année ':'les années ')+periodLabel()+'.'
          +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '')
          +(state.level<4 ? ' Niveau de détail : '+(state.level===2?'Important':'Détaillé')+'.' : ''));
@@ -1787,6 +1796,19 @@ function setLevel(lvl){
   if(state.level===lvl) return;
   state.level=lvl;
   renderLevelChips();
+  if(parcoursActive()){
+    /* Les étapes changent : décennies traversées, tracé et cadrage suivent.
+       Si la décennie affichée n'a plus d'étape à ce niveau, on rejoint la
+       première décennie encore traversée plutôt que de laisser une carte vide. */
+    var hit=parcoursDecades(state.parcours);
+    if(state.mode==='decade' && state.decade!==null && !hit[state.decade]){
+      var first=Object.keys(hit).map(Number).sort(function(a,b){return a-b;})[0];
+      if(typeof first==='number'){ setDecade(first); return; }
+    }
+    fitParcoursView();
+    renderDecadeChips(); renderMap(); resetPanel();
+    return;
+  }
   refreshAfterFilter();   /* recalcule pastilles, points et panneau */
 }
 function renderThemeChips(){
