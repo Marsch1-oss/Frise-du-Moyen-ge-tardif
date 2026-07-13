@@ -823,7 +823,20 @@ function updateStickyAxis(start, end, step, level) {
     hint.style.display = hints[level] ? 'inline' : 'none';
   }
   wrap.style.display = 'block';
+  syncStickyOffsets();
 }
+
+/* Le bandeau titre (#period-banner) est collant en haut de page ; l'échelle
+   fixe doit se caler juste dessous. Sa hauteur varie (vue décennale = titre
+   plus grand, retour à la ligne sur mobile), d'où ce calcul dynamique. */
+function syncStickyOffsets() {
+  var banner = document.getElementById('period-banner');
+  var axis   = document.getElementById('sticky-axis');
+  if (!banner || !axis) return;
+  var h = banner.offsetHeight || 0;
+  axis.style.top = (h + 4) + 'px';
+}
+window.addEventListener('resize', syncStickyOffsets);
 
 /* buildAxis()/makeBand() supprimés : l'axe interne à la frise faisait double
    emploi avec l'échelle fixe #sticky-axis, qui assure désormais graduations
