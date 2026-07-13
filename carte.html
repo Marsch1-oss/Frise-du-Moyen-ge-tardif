@@ -437,7 +437,14 @@
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
-var state = { region: BUNDLE.regions[0], mode:'decade', decade: null, year: null, selZone: null, zoomView: null,
+/* Région d'ouverture par défaut : « Europe & Méditerranée (vue large) ».
+   Repli sur la première région du bundle si l'id venait à disparaître. */
+var DEFAULT_REGION_ID = 'europe_med';
+function regionById(id){
+  for(var i=0;i<BUNDLE.regions.length;i++){ if(BUNDLE.regions[i].id===id) return BUNDLE.regions[i]; }
+  return BUNDLE.regions[0];
+}
+var state = { region: regionById(DEFAULT_REGION_ID), mode:'decade', decade: null, year: null, selZone: null, zoomView: null,
               zoneZoomView: null, clusterZoomView: null, currentClusters: null, spiderfied: null,
               parcours: null,   /* nom du parcours actif (mode Parcours dédié), sinon null */
               level: 4,         /* densité affichée : 2=Important, 3=Détaillé, 4=Complet (défaut) */
@@ -2118,10 +2125,11 @@ function boot(mode){
     }
     setDecade(target);
   } else {
-    // pas de période demandée : décennie de départ = celle avec le plus d'événements (Europe occ.)
+    // pas de période demandée : décennie de départ = celle avec le plus d'événements
+    // dans la région d'ouverture (cf. DEFAULT_REGION_ID)
     var best=DECADES[0], bestN=-1;
     DECADES.forEach(function(d){
-      var n=0; BUNDLE.regions[0].zones.forEach(function(z){ n+=eventsFor(z,{a:d,b:d+9}).length; });
+      var n=0; state.region.zones.forEach(function(z){ n+=eventsFor(z,{a:d,b:d+9}).length; });
       if(n>bestN){bestN=n;best=d;}
     });
     setDecade(best);

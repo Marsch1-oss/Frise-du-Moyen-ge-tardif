@@ -82,7 +82,21 @@
        Volontairement compacte : l'ordre de lecture voulu est
        1. titre / période  2. synthèse  3. frise  4. outils (sous la frise).
        Toute hauteur gagnée ici est de la frise visible sans défilement. */
-    header { background: var(--ink); color: var(--parchment); padding: 0.6rem 1.8rem 0.55rem; border-bottom: 3px solid var(--gold); }
+    header {
+      background: var(--ink); color: var(--parchment); padding: 0.6rem 1.8rem 0.55rem;
+      border-bottom: 3px solid var(--gold);
+      display: flex; align-items: center; gap: 1.2rem;
+    }
+    .header-txt { flex: 1; min-width: 0; }   /* min-width:0 : conserve l'ellipse du sous-titre */
+    .header-carte-btn {
+      flex-shrink: 0; white-space: nowrap; cursor: pointer;
+      font-family: 'Crimson Pro', serif; font-size: 0.9rem; font-weight: 600;
+      padding: 0.35rem 1.05rem; border-radius: 20px;
+      border: 1.5px solid var(--gold);
+      background: rgba(245,237,216,0.10); color: var(--parchment);
+      transition: all 0.18s;
+    }
+    .header-carte-btn:hover { background: var(--gold); color: #fff; }
     .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.2rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.1rem; }
     .site-sub {
       font-size: 0.75rem; color: rgba(245,237,216,0.5); font-style: italic;
@@ -1864,8 +1878,11 @@
 <body>
 
 <header>
+  <div class="header-txt">
   <h1 class="site-title">Frise du Moyen &Acirc;ge tardif</h1>
   <p class="site-sub">1300 &mdash; 1500 &middot; France &middot; Angleterre &middot; St Empire &middot; Papaute &middot; Naples &middot; Italie &middot; Castille &middot; Aragon &middot; Portugal &middot; Hongrie &middot; Europe C. & Or. &middot; Pologne &middot; Russie &middot; Byzance &middot; Ottomans &middot; Monde islamique &middot; Orient &middot; Japon &middot; Chine &middot; Inde &middot; Monde &middot; Alsace &middot; Art &middot; Techniques &middot; Sciences &middot; Idees</p>
+  </div>
+  <button class="header-carte-btn" onclick="goToCarte()" title="Voir la p&eacute;riode affich&eacute;e sur la carte interactive">&#128506; Carte</button>
 </header>
 
 <main>
