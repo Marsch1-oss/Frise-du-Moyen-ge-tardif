@@ -353,8 +353,10 @@ function renderLevel(level, rangeStart) {
 
   var container = document.getElementById('frise-container');
   container.innerHTML = '';
-  container.appendChild(buildAxis(start, end, tickStep, level));
-  updateStickyAxis(start, end, tickStep, level);   /* échelle fixe sous la barre nav */
+  /* Plus d'axe interne à la frise : il faisait double emploi avec l'échelle
+     fixe (#sticky-axis), qui reprend graduations ET bandes cliquables pour
+     tous les niveaux. Voir updateStickyAxis(). */
+  updateStickyAxis(start, end, tickStep, level);
 
   var rulersSection = buildRulersSection(start, end, level);
   if (rulersSection) container.appendChild(rulersSection);
@@ -757,19 +759,41 @@ function updateStickyAxis(start, end, step, level) {
       bar.appendChild(tlm);
     }
   } else {
-    /* En vue décennale : chaque année devient une BANDE CLIQUABLE vers la vue annuelle */
-    if (level === 3 && currentDecade !== null) {
+    /* Bandes CLIQUABLES : l'échelle fixe reprend le rôle de l'ancien axe interne.
+       niveau 1 (vue d'ensemble) → demi-siècles cliquables vers la vue siècle
+       niveau 2 (vue siècle)     → décennies cliquables vers la vue décennale
+       niveau 3 (vue décennale)  → années cliquables vers la vue annuelle */
+    var addZone = function(from, to, title, onClick) {
+      var l0 = (from - start) / (end - start) * 100;
+      var l1 = (to   - start) / (end - start) * 100;
+      var z = document.createElement('div');
+      z.className = 'sticky-axis-zone';
+      z.style.left = l0 + '%';
+      z.style.width = (l1 - l0) + '%';
+      z.title = title;
+      z.onclick = onClick;
+      bar.appendChild(z);
+    };
+    if (level === 1) {
+      [1300, 1350, 1400, 1450].forEach(function(s) {
+        addZone(s, s + 50, s + '\u2013' + (s + 50) + ' \u2192 vue si\u00e8cle', function() {
+          renderLevel(2, Math.floor(s / 100) * 100);
+        });
+      });
+    } else if (level === 2 && currentCentury !== null) {
+      for (var dd = currentCentury; dd < currentCentury + 100; dd += 10) {
+        (function(dec) {
+          addZone(dec, dec + 10, dec + '\u2013' + (dec + 10) + ' \u2192 vue d\u00e9cennale', function() {
+            renderLevel(3, dec);
+          });
+        })(dd);
+      }
+    } else if (level === 3 && currentDecade !== null) {
       for (var yy = currentDecade; yy < currentDecade + 10; yy++) {
         (function(yr) {
-          var l0 = (yr - start) / (end - start) * 100;
-          var l1 = (yr + 1 - start) / (end - start) * 100;
-          var zone = document.createElement('div');
-          zone.className = 'sticky-axis-zone';
-          zone.style.left = l0 + '%';
-          zone.style.width = (l1 - l0) + '%';
-          zone.title = 'Année ' + yr + ' \u2192 vue annuelle';
-          zone.onclick = function() { currentYear = yr; renderLevel(4, yr); };
-          bar.appendChild(zone);
+          addZone(yr, yr + 1, 'Ann\u00e9e ' + yr + ' \u2192 vue annuelle', function() {
+            currentYear = yr; renderLevel(4, yr);
+          });
         })(yy);
       }
     }
@@ -779,7 +803,7 @@ function updateStickyAxis(start, end, step, level) {
       tick.className = 'sticky-axis-tick';
       tick.style.left = lpct + '%';
       tick.textContent = Math.round(y);
-      if (level === 3) tick.classList.add('sticky-axis-tick-click');
+      if (level >= 1 && level <= 3) tick.classList.add('sticky-axis-tick-click');
       bar.appendChild(tick);
       var tl = document.createElement('div');
       tl.className = 'sticky-axis-tickline';
@@ -787,90 +811,23 @@ function updateStickyAxis(start, end, step, level) {
       bar.appendChild(tl);
     }
   }
-  /* Indice visuel en vue décennale */
+  /* Indice visuel : adapté au niveau courant */
   var hint = document.getElementById('sticky-axis-hint');
-  if (hint) hint.style.display = (level === 3) ? 'inline' : 'none';
+  if (hint) {
+    var hints = {
+      1: '\u25B8 Cliquez un demi-si\u00e8cle pour zoomer',
+      2: '\u25B8 Cliquez une d\u00e9cennie pour zoomer',
+      3: '\u25B8 Cliquez une ann\u00e9e pour zoomer'
+    };
+    hint.textContent = hints[level] || '';
+    hint.style.display = hints[level] ? 'inline' : 'none';
+  }
   wrap.style.display = 'block';
 }
 
-function buildAxis(start, end, step, level) {
-  var axis = document.createElement('div');
-  axis.className = 'axis-row';
-  var spacer = document.createElement('div');
-  spacer.className = 'zone-label axis-spacer';
-  axis.appendChild(spacer);
-  var bar = document.createElement('div');
-  bar.className = 'axis-bar';
-
-  if (level !== 4) {
-    for (var y = Math.ceil(start / step) * step; y <= end; y += step) {
-      var tick = document.createElement('div');
-      tick.className = 'tick';
-      tick.style.left = pct(y, start, end);
-      tick.textContent = y;
-      bar.appendChild(tick);
-      var tl = document.createElement('div');
-      tl.className = 'tick-line';
-      tl.style.left = pct(y, start, end);
-      bar.appendChild(tl);
-    }
-  }
-
-  if (level === 1) {
-    [1300, 1350, 1400, 1450].forEach(function(s) {
-      var band = makeBand(s, s + 50, start, end, (function(sv) {
-        return function() { renderLevel(2, Math.floor(sv / 100) * 100); };
-      })(s));
-      bar.appendChild(band);
-    });
-  } else if (level === 2) {
-    for (var d = currentCentury; d < currentCentury + 100; d += 10) {
-      (function(decade) {
-        var b = makeBand(decade, decade + 10, start, end, function() {
-          renderLevel(3, decade);
-        });
-        b.dataset.label = decade + '\u2013' + (decade + 10) + ' → zoomer';
-        bar.appendChild(b);
-      })(d);
-    }
-  } else if (level === 3) {
-    for (var y = currentDecade; y < currentDecade + 10; y++) {
-      (function(yr) {
-        var band = makeBand(yr, yr + 1, start, end, function() {
-          renderLevel(4, yr);
-        });
-        band.classList.add('axis-band-year');
-        band.dataset.label = yr + ' \u2192 vue annuelle';
-        bar.appendChild(band);
-      })(y);
-    }
-  } else if (level === 4) {
-    var MOIS = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
-    for (var m = 0; m < 12; m++) {
-      var mStart = currentYear + m / 12;
-      var tick = document.createElement('div');
-      tick.className = 'tick tick-month';
-      tick.style.left = pct(mStart, start, end);
-      tick.textContent = MOIS[m];
-      bar.appendChild(tick);
-      var tl = document.createElement('div');
-      tl.className = 'tick-line';
-      tl.style.left = pct(mStart, start, end);
-      bar.appendChild(tl);
-    }
-  }
-  axis.appendChild(bar);
-  return axis;
-}
-
-function makeBand(from, to, start, end, onClick) {
-  var band = document.createElement('div');
-  band.className = 'axis-band';
-  band.style.left  = pct(from, start, end);
-  band.style.width = 'calc(' + pct(to, start, end) + ' - ' + pct(from, start, end) + ')';
-  band.addEventListener('click', onClick);
-  return band;
-}
+/* buildAxis()/makeBand() supprimés : l'axe interne à la frise faisait double
+   emploi avec l'échelle fixe #sticky-axis, qui assure désormais graduations
+   ET bandes cliquables (siècles / décennies / années). Ne pas réintroduire. */
 
 /* ── Anti-collision ──────────────────────────────────────────────────*/
 function chipW(evt, start, end, level) {
@@ -1307,37 +1264,6 @@ function _drawBgImage(container, evt, x, y, w, h) {
   container.appendChild(wrap);
 }
 
-/* ── Tooltip de survol d'un chip : image (si présente), titre, date, légende.
-   Source unique utilisée par les règnes ET les événements : toute évolution
-   du contenu du survol doit passer par ici (pas de copie locale).
-   ⚠ Contenu équivalent au survol des pastilles de carte.html (showHoverImage) :
-      garder les deux synchronisés. */
-function buildChipTooltip(evt) {
-  var tt = document.createElement('div');
-  tt.className = 'chip-img-tooltip';
-  if (evt.image && evt.image.trim()) {
-    var ttImg = document.createElement('img');
-    ttImg.src = evt.image;
-    tt.appendChild(ttImg);
-  }
-  var ttTit = document.createElement('div');
-  ttTit.className = 'tt-title';
-  ttTit.textContent = evt.titre || '';
-  tt.appendChild(ttTit);
-  var ttDate = document.createElement('div');
-  ttDate.className = 'tt-date';
-  ttDate.textContent = '' + evt.date
-    + (evt.date_fin && evt.date_fin !== evt.date ? '\u2013' + evt.date_fin : '');
-  tt.appendChild(ttDate);
-  if (evt.legende) {
-    var ttCap = document.createElement('span');
-    ttCap.className = 'tt-cap';
-    ttCap.textContent = evt.legende;
-    tt.appendChild(ttCap);
-  }
-  return tt;
-}
-
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
 function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {
   var col  = COLORS[zone] || COLORS['France'];
@@ -1415,8 +1341,17 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
     chip.style.overflow = 'visible';
-    /* Carte de survol : image + titre + date + légende (cf. buildChipTooltip) */
-    chip.appendChild(buildChipTooltip(evt));
+    var tt = document.createElement('div');
+    tt.className = 'chip-img-tooltip';
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    tt.appendChild(ttImg);
+    if (evt.legende) {
+      var ttCap = document.createElement('span');
+      ttCap.textContent = evt.legende;
+      tt.appendChild(ttCap);
+    }
+    chip.appendChild(tt);
   }
   if (evt.video && evt.video.trim()) {
     var vBadge = document.createElement('span');
@@ -1848,10 +1783,17 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     imgBadge.className   = 'chip-img-badge';
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
-    /* Carte de survol : image + titre + date + légende (cf. buildChipTooltip).
-       Réservée aux chips à image : y monter un tooltip impose overflow:visible,
-       ce qui déroge au rognage du titre des chips-période. */
-    chip.appendChild(buildChipTooltip(evt));
+    var tt = document.createElement('div');
+    tt.className = 'chip-img-tooltip';
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    tt.appendChild(ttImg);
+    if (evt.legende) {
+      var ttCap = document.createElement('span');
+      ttCap.textContent = evt.legende;
+      tt.appendChild(ttCap);
+    }
+    chip.appendChild(tt);
     chip.style.position = 'absolute';
     if (chip.classList.contains('chip-period')) chip.style.overflow = 'visible';
   }

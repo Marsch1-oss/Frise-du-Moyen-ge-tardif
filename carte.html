@@ -40,6 +40,16 @@
              letter-spacing:0.04em;color:var(--ink)}
   #ctx-period{font-family:'IM Fell English',Georgia,serif;font-size:1.1rem;color:var(--red)}
   #ctx-detail{font-size:0.8rem;font-style:italic;color:var(--ink-muted)}
+  #ctx-bar .ctx-center{flex:1 1 auto;min-width:0;display:flex;align-items:baseline;justify-content:center;
+                       gap:0.7rem;flex-wrap:wrap}
+  /* Navigation de période : à portée immédiate, au-dessus de la carte */
+  .ctx-nav{flex:0 0 auto;font-family:'Crimson Pro',serif;font-size:0.85rem;font-weight:600;
+           padding:0.3rem 0.9rem;border-radius:18px;white-space:nowrap}
+  @media(max-width:760px){
+    #ctx-bar{flex-wrap:wrap}
+    #ctx-bar .ctx-center{order:-1;flex-basis:100%}
+    .ctx-nav{flex:1 1 45%;font-size:0.78rem;padding:0.25rem 0.5rem}
+  }
 
   /* ── 4. Contrôles (zone d'outils, SOUS la carte) ── */
   .controls{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.2rem;margin-bottom:1rem;
@@ -294,9 +304,13 @@
 <main>
   <!-- ══ 1. Titre : lieu & période ══ -->
   <div id="ctx-bar" aria-live="polite">
-    <span id="ctx-place">—</span>
-    <span id="ctx-period"></span>
-    <span id="ctx-detail"></span>
+    <button class="dec-nav ctx-nav" id="dec-prev" title="Période précédente">&larr; Période précédente</button>
+    <span class="ctx-center">
+      <span id="ctx-place">—</span>
+      <span id="ctx-period"></span>
+      <span id="ctx-detail"></span>
+    </span>
+    <button class="dec-nav ctx-nav" id="dec-next" title="Période suivante">Période suivante &rarr;</button>
   </div>
 
   <!-- ══ 2. Synthèse (dans .stage) &amp; 3. Carte ══ -->
@@ -354,9 +368,8 @@
       <span class="ctrl-label">Période</span>
       <div class="decade-row">
         <div class="chips" id="mode-chips" style="margin-right:0.4rem"></div>
-        <button class="dec-nav" id="dec-prev" title="Période précédente">&#8249;</button>
+        <!-- ‹ / › déplacés en haut de page (#ctx-bar) : navigation la plus utilisée -->
         <span class="dec-current" id="dec-current">—</span>
-        <button class="dec-nav" id="dec-next" title="Période suivante">&#8250;</button>
         <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
       </div>
       <div class="year-row" id="year-row" style="display:none">
