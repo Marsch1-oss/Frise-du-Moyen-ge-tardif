@@ -393,20 +393,23 @@
 <div class="panel" style="margin-top:1.2rem;">
   <div class="panel-title">📋 Synthèses décennales</div>
   <p style="font-size:0.85rem;color:#666;margin:0.3rem 0 0.8rem;">
-    Générez un brouillon de synthèse pour une zone et une décennie, corrigez-le, puis ajoutez-le. Téléchargez ensuite <strong>syntheses.json</strong> à placer sur GitHub.
+    Générez un brouillon de synthèse pour une <strong>zone</strong> ou un <strong>parcours</strong> et une décennie, corrigez-le, puis ajoutez-le. Téléchargez ensuite <strong>syntheses.json</strong> à placer sur GitHub.
   </p>
   <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:0.8rem;">
     <div>
-      <label style="display:block;font-size:0.78rem;color:#555;">Zone</label>
-      <select id="synth-zone" style="padding:0.3rem;min-width:150px;" onchange="synthUpdateStatus()"></select>
+      <label style="display:block;font-size:0.78rem;color:#555;">Zone / Parcours</label>
+      <select id="synth-zone" style="padding:0.3rem;min-width:190px;" onchange="synthUpdateStatus()"></select>
     </div>
     <div>
       <label style="display:block;font-size:0.78rem;color:#555;">Décennie</label>
-      <select id="synth-dec" style="padding:0.3rem;min-width:120px;" onchange="synthUpdateStatus()"></select>
+      <select id="synth-dec" style="padding:0.3rem;min-width:150px;" onchange="synthUpdateStatus()"></select>
     </div>
     <button class="btn" onclick="synthGenerate()" style="padding:0.35rem 1rem;">⚙ Générer le brouillon</button>
   </div>
   <p id="synth-status" style="font-size:0.82rem;margin:0 0 0.6rem;color:#999;">○ Aucune synthèse pour cette sélection.</p>
+  <p style="font-size:0.78rem;color:#777;margin:0 0 0.6rem;">
+    Clé JSON&nbsp;: <code id="synth-key" style="background:#eee;padding:1px 5px;border-radius:3px;">—</code>
+  </p>
   <input type="text" id="synth-titre" placeholder="Titre de la synthèse"
          style="width:100%;padding:0.4rem;margin-bottom:0.5rem;box-sizing:border-box;font-weight:600;">
   <textarea id="synth-texte" placeholder="Texte de la synthèse (généré puis corrigé)…"
@@ -474,8 +477,6 @@ var THEME_KEYWORDS = {
   'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
-  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
@@ -923,6 +924,9 @@ function updateJSON() {
   }
   renderList();
   buildSerieDatalist();
+  /* Les parcours du panneau « Synthèses » dérivent du champ « serie » : on les
+     rafraîchit ici, sans écraser une synthèse en cours de rédaction. */
+  if (typeof synthInitControls === 'function') synthInitControls({ keepForm: true });
 }
 
 function buildSerieDatalist() {
@@ -1061,101 +1065,221 @@ function toast(msg) {
 
 
 /* ─── Gestion des synthèses décennales ─────────────────────────── */
-var _synthData = {};   /* clé "Zone|décennie" -> { titre, texte, auto:false } */
+/* Deux portées de clés — GARDER SYNCHRONISÉ avec carte.html et frise.js :
+     • zone     : "Zone|décennie"           ex. "France|1340"
+     • parcours : "@parcours|Nom|décennie"  ex. "@parcours|Guerre de Cent ans|1330"
+                  + clé globale "@parcours|Nom" (vue d'ensemble, sans décennie).
+   carte.html affiche en priorité la clé décennale du parcours et retombe sur la
+   clé globale quand elle n'existe pas. */
+var _synthData = {};
+var PARCOURS_PREFIX = '@parcours|';
 
-function synthInitControls() {
+/* Liste des parcours présents dans les données (champ « serie », multivalué par |). */
+function synthParcoursList() {
+  var set = {};
+  (events || []).forEach(function(e) {
+    if (!e.serie) return;
+    e.serie.split('|').forEach(function(s) {
+      s = s.trim();
+      if (s) set[s] = true;
+    });
+  });
+  /* Inclut aussi les parcours connus des seules synthèses importées, pour que la
+     liste reste utilisable avant le chargement d'events.json. */
+  Object.keys(_synthData).forEach(function(k) {
+    var p = synthParseKey(k);
+    if (p.scope === 'parcours') set[p.name] = true;
+  });
+  return Object.keys(set).sort(function(a, b) { return a.localeCompare(b, 'fr'); });
+}
+
+/* Décompose une clé. Robuste aux noms contenant une apostrophe (« Guerre de
+   l'Union d'Aix ») et aux clés à 2 ou 3 segments. */
+function synthParseKey(key) {
+  if (key.indexOf(PARCOURS_PREFIX) === 0) {
+    var rest = key.slice(PARCOURS_PREFIX.length);
+    var i = rest.lastIndexOf('|');
+    if (i !== -1 && /^\d{3,4}$/.test(rest.slice(i + 1)))
+      return { scope: 'parcours', name: rest.slice(0, i), dec: parseInt(rest.slice(i + 1), 10) };
+    return { scope: 'parcours', name: rest, dec: null };   /* clé globale */
+  }
+  var j = key.lastIndexOf('|');
+  if (j === -1) return { scope: 'zone', name: key, dec: null };
+  return { scope: 'zone', name: key.slice(0, j), dec: parseInt(key.slice(j + 1), 10) };
+}
+
+/* Sélection courante -> { scope, name, dec, key } */
+function synthSelection() {
+  var v = document.getElementById('synth-zone').value || '';
+  var d = document.getElementById('synth-dec').value;
+  var isP = v.indexOf(PARCOURS_PREFIX) === 0;
+  var name = isP ? v.slice(PARCOURS_PREFIX.length) : v;
+  var dec  = (d === 'all') ? null : parseInt(d, 10);
+  var key  = isP
+    ? (dec === null ? PARCOURS_PREFIX + name : PARCOURS_PREFIX + name + '|' + dec)
+    : (name + '|' + dec);
+  return { scope: isP ? 'parcours' : 'zone', name: name, dec: dec, key: key };
+}
+
+/* opts.keepForm : rafraîchit les listes sans écraser le texte en cours d'édition. */
+function synthInitControls(opts) {
+  opts = opts || {};
   var zSel = document.getElementById('synth-zone');
   var dSel = document.getElementById('synth-dec');
   if (!zSel || !dSel) return;
   var curZ = zSel.value, curD = dSel.value;
+  var parsed = Object.keys(_synthData).map(synthParseKey);
+
   zSel.innerHTML = '';
+  var gZ = document.createElement('optgroup');
+  gZ.label = 'Zones';
   ZONES.forEach(function(z) {
-    var o = document.createElement('option'); o.value = z;
-    /* Compte les synthèses existantes pour cette zone (toutes décennies) */
-    var n = Object.keys(_synthData).filter(function(k){ return k.split('|')[0] === z; }).length;
-    o.textContent = (n > 0 ? '✓ ' : '  ') + z + (n > 0 ? ' (' + n + ')' : '');
-    zSel.appendChild(o);
+    var n = parsed.filter(function(p){ return p.scope === 'zone' && p.name === z; }).length;
+    var o = document.createElement('option');
+    o.value = z;
+    o.textContent = (n > 0 ? '\u2713 ' : '\u2007 ') + z + (n > 0 ? ' (' + n + ')' : '');
+    gZ.appendChild(o);
   });
+  zSel.appendChild(gZ);
+
+  var parcours = synthParcoursList();
+  if (parcours.length) {
+    var gP = document.createElement('optgroup');
+    gP.label = 'Parcours';
+    parcours.forEach(function(nom) {
+      var n = parsed.filter(function(p){ return p.scope === 'parcours' && p.name === nom; }).length;
+      var o = document.createElement('option');
+      o.value = PARCOURS_PREFIX + nom;
+      o.textContent = (n > 0 ? '\u2713 ' : '\u2007 ') + nom + (n > 0 ? ' (' + n + ')' : '');
+      gP.appendChild(o);
+    });
+    zSel.appendChild(gP);
+  }
+
   dSel.innerHTML = '';
+  var oAll = document.createElement('option');
+  oAll.value = 'all';
+  oAll.textContent = '\u2014 Vue d\u2019ensemble \u2014';
+  dSel.appendChild(oAll);
   for (var d = 1190; d <= 1500; d += 10) {
-    var o = document.createElement('option'); o.value = d;
-    /* Marque les décennies ayant au moins une synthèse (toutes zones) */
-    var nd = Object.keys(_synthData).filter(function(k){ return parseInt(k.split('|')[1]) === d; }).length;
-    o.textContent = (nd > 0 ? '✓ ' : '  ') + d + '-' + (d + 9) + (nd > 0 ? ' (' + nd + ')' : '');
+    var nd = parsed.filter(function(p){ return p.dec === d; }).length;
+    var o = document.createElement('option');
+    o.value = d;
+    o.textContent = (nd > 0 ? '\u2713 ' : '\u2007 ') + d + '-' + (d + 9) + (nd > 0 ? ' (' + nd + ')' : '');
     dSel.appendChild(o);
   }
+
   if (curZ) zSel.value = curZ;
-  if (curD) dSel.value = curD; else dSel.value = 1340;
-  synthUpdateStatus();
+  if (!zSel.value) zSel.value = ZONES[0];
+  if (curD) dSel.value = curD;
+  if (!dSel.value) dSel.value = 1340;
+
+  if (opts.keepForm) { synthSyncDecOption(); synthUpdateKeyPreview(); }
+  else synthUpdateStatus();
+}
+
+/* La « vue d'ensemble » n'a de sens que pour un parcours (clé « @parcours|Nom »).
+   Pour une zone, on la neutralise et on retombe sur une décennie. */
+function synthSyncDecOption() {
+  var dSel = document.getElementById('synth-dec');
+  var oAll = dSel ? dSel.querySelector('option[value="all"]') : null;
+  if (!oAll) return;
+  var isZone = synthSelection().scope === 'zone';
+  oAll.disabled = isZone;
+  if (isZone && dSel.value === 'all') dSel.value = 1340;
+}
+
+function synthUpdateKeyPreview() {
+  var el = document.getElementById('synth-key');
+  if (el) el.textContent = synthSelection().key;
 }
 
 /* Indique sous les sélecteurs si la combinaison courante a déjà une synthèse */
 function synthUpdateStatus() {
-  var zSel = document.getElementById('synth-zone');
-  var dSel = document.getElementById('synth-dec');
   var st = document.getElementById('synth-status');
-  if (!zSel || !dSel || !st) return;
-  var key = zSel.value + '|' + dSel.value;
+  if (!st || !document.getElementById('synth-zone')) return;
+  synthSyncDecOption();
+  var sel = synthSelection();
+  synthUpdateKeyPreview();
   var titreEl = document.getElementById('synth-titre');
   var texteEl = document.getElementById('synth-texte');
-  if (_synthData[key]) {
+  if (_synthData[sel.key]) {
     /* Charge automatiquement la synthèse existante dans le formulaire */
-    var s = _synthData[key];
+    var s = _synthData[sel.key];
     if (titreEl) titreEl.value = s.titre || '';
     if (texteEl) texteEl.value = s.texte || '';
-    st.innerHTML = '✓ Synthèse existante chargée — modifiez puis « Ajouter / Mettre à jour ».';
+    st.innerHTML = '\u2713 Synthèse existante chargée — modifiez puis « Ajouter / Mettre à jour ».';
     st.style.color = '#2e7d32';
   } else {
     /* Aucune synthèse : vide le formulaire pour éviter de garder l'ancien texte */
     if (titreEl) titreEl.value = '';
     if (texteEl) texteEl.value = '';
-    st.innerHTML = '○ Aucune synthèse pour cette sélection — générez un brouillon puis ajoutez.';
+    st.innerHTML = '\u25cb Aucune synthèse pour cette sélection — générez un brouillon puis ajoutez.';
     st.style.color = '#999';
   }
 }
 
-function synthGenerate() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
-  var evts = events.filter(function(e) {
-    return !e.regne && (e.zones || []).indexOf(zone) !== -1 &&
-           e.date >= dec && e.date < dec + 10;
+/* Événements retenus pour la sélection courante, triés chronologiquement.
+   dec === null (vue d'ensemble) => tout le parcours, toutes décennies. */
+function synthEvents(sel) {
+  return (events || []).filter(function(e) {
+    if (e.regne) return false;
+    if (sel.dec !== null && !(e.date >= sel.dec && e.date < sel.dec + 10)) return false;
+    if (sel.scope === 'parcours') {
+      if (!e.serie) return false;
+      return e.serie.split('|').some(function(s){ return s.trim() === sel.name; });
+    }
+    return (e.zones || []).indexOf(sel.name) !== -1;
   }).sort(function(a, b) {
     var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
     var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
     return da - db;
   });
+}
+
+function synthGenerate() {
+  var sel  = synthSelection();
+  var evts = synthEvents(sel);
+  var periode = sel.dec === null ? 'vue d\u2019ensemble' : (sel.dec + '-' + (sel.dec + 9));
   if (evts.length === 0) {
-    toast('\u26a0 Aucun événement pour ' + zone + ' en ' + dec + '-' + (dec + 9));
+    toast('\u26a0 Aucun événement pour ' + sel.name + ' (' + periode + ')');
     return;
   }
+  var isP = sel.scope === 'parcours';
   var majeurs = evts.filter(function(e) { return (Number(e.type) || 3) <= 3; });
-  var intro = 'Au cours de la décennie ' + dec + '-' + (dec + 9) + ', la zone « ' + zone +
-              ' » compte ' + evts.length + ' événement' + (evts.length > 1 ? 's' : '') +
-              ' notable' + (evts.length > 1 ? 's' : '') +
-              (majeurs.length ? ', dont ' + majeurs.length + ' majeur' +
-               (majeurs.length > 1 ? 's' : '') : '') + '.';
+  var n = evts.length, m = majeurs.length;
+  /* « étapes … majeures » pour un parcours, « événements notables … majeurs » pour une zone */
+  var noyau = isP
+    ? n + ' étape' + (n > 1 ? 's' : '')
+    : n + ' événement' + (n > 1 ? 's' : '') + ' notable' + (n > 1 ? 's' : '');
+  var suite = m
+    ? ', dont ' + m + ' majeur' + (isP ? 'e' : '') + (m > 1 ? 's' : '')
+    : '';
+  var sujet = (isP ? 'le parcours « ' : 'la zone « ') + sel.name + ' »';
+  var intro = sel.dec === null
+    ? 'De ' + evts[0].date + ' à ' + evts[n - 1].date + ', ' + sujet + ' compte ' + noyau + suite + '.'
+    : 'Au cours de la décennie ' + sel.dec + '-' + (sel.dec + 9) + ', ' + sujet +
+      ' compte ' + noyau + suite + '.';
   var lignes = evts.map(function(e) {
     var desc = (e.description || '').replace(/\s+/g, ' ').trim();
     if (desc.length > 160) desc = desc.slice(0, 157) + '\u2026';
     /* [[id]] = lien cliquable vers la fiche de l'événement */
     return '[[' + e.id + ']] ' + e.date + ' \u2014 ' + e.titre + (desc ? ' : ' + desc : '');
   });
-  document.getElementById('synth-titre').value = zone + ' \u00b7 ' + dec + '-' + (dec + 9);
+  document.getElementById('synth-titre').value = sel.name + ' \u00b7 ' + periode;
   document.getElementById('synth-texte').value = intro + '\n\n' + lignes.join('\n');
-  toast('Brouillon généré (' + evts.length + ' fiches) — corrigez puis Ajouter');
+  toast('Brouillon généré (' + n + ' fiches) — corrigez puis Ajouter');
 }
 
 function synthSave() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
+  var sel = synthSelection();
   var titre = document.getElementById('synth-titre').value.trim();
   var texte = document.getElementById('synth-texte').value.trim();
   if (!texte) { toast('\u26a0 Texte vide'); return; }
-  _synthData[zone + '|' + dec] = { titre: titre, texte: texte, auto: false };
+  _synthData[sel.key] = { titre: titre, texte: texte, auto: false };
   synthRenderList();
-  synthInitControls();   /* rafraîchit les marqueurs ✓ */
-  toast('\u2713 Synthèse ' + zone + ' ' + dec + ' enregistrée');
+  synthInitControls({ keepForm: true });   /* rafraîchit les ✓ sans vider le formulaire */
+  toast('\u2713 Synthèse « ' + sel.key + ' » enregistrée');
 }
 
 /* ─── Tableau de bord : statistiques et validation ──────────────── */
@@ -1305,40 +1429,80 @@ function loadEvent(id) {
 }
 
 function synthDelete() {
-  var zone = document.getElementById('synth-zone').value;
-  var dec  = parseInt(document.getElementById('synth-dec').value);
-  var key = zone + '|' + dec;
+  var key = synthSelection().key;
   if (_synthData[key]) {
     delete _synthData[key];
     synthRenderList();
     synthInitControls();   /* rafraîchit les marqueurs ✓ */
-    toast('Synthèse supprimée');
+    toast('Synthèse « ' + key + ' » supprimée');
   } else {
     toast('Aucune synthèse pour cette sélection');
   }
 }
 
 function synthLoadIntoForm(key) {
-  var parts = key.split('|');
-  document.getElementById('synth-zone').value = parts[0];
-  document.getElementById('synth-dec').value  = parts[1];
-  document.getElementById('synth-titre').value = _synthData[key].titre || '';
-  document.getElementById('synth-texte').value = _synthData[key].texte || '';
+  var s = _synthData[key];
+  if (!s) return;
+  var p = synthParseKey(key);
+  var zSel = document.getElementById('synth-zone');
+  var dSel = document.getElementById('synth-dec');
+  zSel.value = (p.scope === 'parcours') ? (PARCOURS_PREFIX + p.name) : p.name;
+  synthSyncDecOption();                       /* réactive « Vue d'ensemble » si parcours */
+  dSel.value = (p.dec === null) ? 'all' : String(p.dec);
+  synthUpdateKeyPreview();
+  document.getElementById('synth-titre').value = s.titre || '';
+  document.getElementById('synth-texte').value = s.texte || '';
+  var st = document.getElementById('synth-status');
+  if (st) {
+    st.innerHTML = '\u2713 Synthèse existante chargée — modifiez puis « Ajouter / Mettre à jour ».';
+    st.style.color = '#2e7d32';
+  }
 }
 
+/* Listeners attachés après injection (jamais via onclick="…") : les noms de
+   parcours contiennent des apostrophes — « Guerre de l'Union d'Aix ». */
 function synthRenderList() {
   var el = document.getElementById('synth-list');
-  var keys = Object.keys(_synthData).sort();
+  var keys = Object.keys(_synthData).sort(function(a, b) {
+    var pa = synthParseKey(a), pb = synthParseKey(b);
+    if (pa.scope !== pb.scope) return pa.scope === 'zone' ? -1 : 1;   /* zones puis parcours */
+    if (pa.name !== pb.name) return pa.name.localeCompare(pb.name, 'fr');
+    return (pa.dec === null ? -1 : pa.dec) - (pb.dec === null ? -1 : pb.dec);
+  });
   document.getElementById('synth-count').textContent = keys.length + ' synthèse(s)';
   if (keys.length === 0) { el.innerHTML = '<em style="color:#999;">Aucune synthèse enregistrée.</em>'; return; }
-  var html = '';
+  el.innerHTML = '';
   keys.forEach(function(k) {
     var s = _synthData[k];
-    html += '<div style="padding:0.3rem 0.5rem;border-bottom:1px solid #eee;display:flex;gap:0.5rem;align-items:center;">' +
-            '<a href="#" onclick="synthLoadIntoForm(\'' + k + '\');return false;" style="font-weight:600;">' + k.replace('|', ' · ') + '</a>' +
-            '<span style="color:#999;flex:1;">' + (s.titre || '') + '</span></div>';
+    var p = synthParseKey(k);
+    var row = document.createElement('div');
+    row.style.cssText = 'padding:0.3rem 0.5rem;border-bottom:1px solid #eee;display:flex;gap:0.5rem;align-items:center;';
+
+    var badge = document.createElement('span');
+    var isP = p.scope === 'parcours';
+    badge.textContent = isP ? 'PARCOURS' : 'ZONE';
+    badge.style.cssText = 'font-size:0.65rem;font-weight:700;letter-spacing:0.04em;padding:1px 5px;border-radius:3px;flex:0 0 auto;' +
+      (isP ? 'background:#e8dcc0;color:#6b4c1e;' : 'background:#dfe7ef;color:#2b4a6b;');
+    row.appendChild(badge);
+
+    var a = document.createElement('a');
+    a.href = '#';
+    a.style.fontWeight = '600';
+    a.textContent = p.name + ' \u00b7 ' + (p.dec === null ? 'vue d\u2019ensemble' : p.dec + '-' + (p.dec + 9));
+    a.addEventListener('click', function(ev) {
+      ev.preventDefault();
+      synthLoadIntoForm(k);
+      window.scrollTo({ top: a.getBoundingClientRect().top + window.scrollY - 400, behavior: 'smooth' });
+    });
+    row.appendChild(a);
+
+    var t = document.createElement('span');
+    t.style.cssText = 'color:#999;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
+    t.textContent = s.titre || '';
+    row.appendChild(t);
+
+    el.appendChild(row);
   });
-  el.innerHTML = html;
 }
 
 function synthDownload() {
