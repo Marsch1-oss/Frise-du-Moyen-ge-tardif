@@ -17,10 +17,13 @@
   }
   html{font-size:15px}
   body{background:var(--parchment-dk);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;line-height:1.6;min-height:100vh}
-  header{background:var(--ink);color:var(--parchment);padding:1.2rem 2rem;border-bottom:3px solid var(--gold)}
-  .site-title{font-family:'IM Fell English',Georgia,serif;font-size:1.5rem;line-height:1.15}
-  .site-sub{font-size:0.82rem;color:rgba(245,237,216,0.55);font-style:italic;margin-top:0.15rem}
-  main{padding:1.2rem 1.6rem 3rem;max-width:1280px;margin:0 auto}
+  /* En-tête compacte : l'ordre de lecture voulu est
+     1. titre lieu & période  2. synthèse  3. carte  4. outils (sous la carte). */
+  header{background:var(--ink);color:var(--parchment);padding:0.55rem 1.6rem;border-bottom:3px solid var(--gold)}
+  .site-title{font-family:'IM Fell English',Georgia,serif;font-size:1.15rem;line-height:1.15}
+  .site-sub{font-size:0.72rem;color:rgba(245,237,216,0.5);font-style:italic;margin-top:0.1rem;
+            white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  main{padding:0.8rem 1.6rem 3rem;max-width:1280px;margin:0 auto}
 
   .header-top{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
   .back-btn{flex:0 0 auto;font-family:'Crimson Pro',serif;font-size:0.85rem;font-weight:700;
@@ -28,8 +31,21 @@
             border-radius:18px;padding:0.3rem 0.9rem;transition:all .15s;white-space:nowrap}
   .back-btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
 
-  /* ── Contrôles ── */
-  .controls{display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1rem}
+  /* ── 1. Barre de contexte : lieu + période affichés ── */
+  #ctx-bar{display:flex;align-items:baseline;justify-content:center;gap:0.9rem;flex-wrap:wrap;
+           text-align:center;margin-bottom:0.8rem;padding:0.5rem 1.4rem;
+           background:linear-gradient(135deg,rgba(245,237,216,0.95),rgba(232,217,186,0.9));
+           border:1px solid var(--gold);border-radius:6px;box-shadow:0 2px 10px rgba(100,80,40,0.18)}
+  #ctx-place{font-family:'IM Fell English',Georgia,serif;font-size:1.35rem;font-weight:700;
+             letter-spacing:0.04em;color:var(--ink)}
+  #ctx-period{font-family:'IM Fell English',Georgia,serif;font-size:1.1rem;color:var(--red)}
+  #ctx-detail{font-size:0.8rem;font-style:italic;color:var(--ink-muted)}
+
+  /* ── 4. Contrôles (zone d'outils, SOUS la carte) ── */
+  .controls{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.2rem;margin-bottom:1rem;
+            padding-top:0.7rem;border-top:2px solid var(--border-dark)}
+  .controls-title{font-family:'IM Fell English',Georgia,serif;font-size:0.9rem;color:var(--ink-muted);
+                  letter-spacing:0.06em;text-transform:uppercase}
   .ctrl-block{display:flex;flex-direction:column;gap:0.4rem}
   .ctrl-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted)}
   /* ── Mode Parcours ── */
@@ -160,12 +176,8 @@
   #hover-preview img{display:block;width:100%;max-height:120px;object-fit:cover;border-radius:3px}
   #hover-preview .hp-title{font-size:0.72rem;color:var(--ink-soft);margin-top:0.3rem;line-height:1.25;
                             font-family:'Crimson Pro',serif}
-  #hover-preview .hp-title:first-child{margin-top:0}
-  #hover-preview .hp-date{font-size:0.7rem;font-weight:700;color:var(--gold);letter-spacing:0.03em;
-                          margin-top:0.12rem;font-family:'Crimson Pro',serif}
   #hover-preview .hp-list{font-family:'Crimson Pro',serif}
   #hover-preview .hp-list div{font-size:0.78rem;color:var(--ink-soft);line-height:1.35;padding:0.05rem 0}
-  #hover-preview .hp-list .hp-ld{font-weight:700;color:var(--gold);font-size:0.72rem}
   #hover-preview .hp-more{font-style:italic;color:var(--ink-muted);font-size:0.72rem}
   #hover-preview .hp-hint{font-style:italic;color:var(--gold);font-size:0.68rem;margin-top:0.2rem;
                            border-top:1px solid var(--border);padding-top:0.2rem}
@@ -280,49 +292,14 @@
 </header>
 
 <main>
-  <div class="controls">
-    <div class="ctrl-block">
-      <span class="ctrl-label">Région</span>
-      <div class="chips" id="region-chips"></div>
-    </div>
-    <div class="ctrl-block" id="period-block">
-      <span class="ctrl-label">Période</span>
-      <div class="decade-row">
-        <div class="chips" id="mode-chips" style="margin-right:0.4rem"></div>
-        <button class="dec-nav" id="dec-prev" title="Période précédente">&#8249;</button>
-        <span class="dec-current" id="dec-current">—</span>
-        <button class="dec-nav" id="dec-next" title="Période suivante">&#8250;</button>
-        <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
-      </div>
-      <div class="year-row" id="year-row" style="display:none">
-        <input type="range" id="year-slider" class="year-slider" min="0" max="0" value="0" step="1">
-      </div>
-    </div>
-    <div class="ctrl-block">
-      <span class="ctrl-label">Repères géographiques</span>
-      <div class="chips" id="layer-chips"></div>
-    </div>
-    <!-- Niveau de détail : mêmes paliers cumulatifs que la frise
-         (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de frise.js). -->
-    <div class="ctrl-block" id="level-block">
-      <span class="ctrl-label">Niveau de détail</span>
-      <div class="chips" id="level-chips"></div>
-    </div>
-    <div class="ctrl-block" id="theme-block">
-      <span class="ctrl-label">Thèmes</span>
-      <div class="chips" id="theme-chips"></div>
-    </div>
-    <!-- Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
-         événements). Visible uniquement en mode live : le bundle embarqué ne
-         contient pas ce champ. -->
-    <div class="ctrl-block" id="parcours-block" style="display:none">
-      <span class="ctrl-label">Parcours</span>
-      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
-        <option value="">— aucun —</option>
-      </select>
-    </div>
+  <!-- ══ 1. Titre : lieu & période ══ -->
+  <div id="ctx-bar" aria-live="polite">
+    <span id="ctx-place">—</span>
+    <span id="ctx-period"></span>
+    <span id="ctx-detail"></span>
   </div>
 
+  <!-- ══ 2. Synthèse (dans .stage) &amp; 3. Carte ══ -->
   <div class="stage">
     <div>
       <div id="synthese-banner" aria-live="polite">
@@ -365,6 +342,51 @@
     </aside>
   </div>
 
+
+  <!-- ══ 4. Outils de navigation (sous la carte) ══ -->
+  <div class="controls">
+    <div class="controls-title">Navigation &amp; filtres</div>
+    <div class="ctrl-block">
+      <span class="ctrl-label">Région</span>
+      <div class="chips" id="region-chips"></div>
+    </div>
+    <div class="ctrl-block" id="period-block">
+      <span class="ctrl-label">Période</span>
+      <div class="decade-row">
+        <div class="chips" id="mode-chips" style="margin-right:0.4rem"></div>
+        <button class="dec-nav" id="dec-prev" title="Période précédente">&#8249;</button>
+        <span class="dec-current" id="dec-current">—</span>
+        <button class="dec-nav" id="dec-next" title="Période suivante">&#8250;</button>
+        <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
+      </div>
+      <div class="year-row" id="year-row" style="display:none">
+        <input type="range" id="year-slider" class="year-slider" min="0" max="0" value="0" step="1">
+      </div>
+    </div>
+    <div class="ctrl-block">
+      <span class="ctrl-label">Repères géographiques</span>
+      <div class="chips" id="layer-chips"></div>
+    </div>
+    <!-- Niveau de détail : mêmes paliers cumulatifs que la frise
+         (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de frise.js). -->
+    <div class="ctrl-block" id="level-block">
+      <span class="ctrl-label">Niveau de détail</span>
+      <div class="chips" id="level-chips"></div>
+    </div>
+    <div class="ctrl-block" id="theme-block">
+      <span class="ctrl-label">Thèmes</span>
+      <div class="chips" id="theme-chips"></div>
+    </div>
+    <!-- Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
+         événements). Visible uniquement en mode live : le bundle embarqué ne
+         contient pas ce champ. -->
+    <div class="ctrl-block" id="parcours-block" style="display:none">
+      <span class="ctrl-label">Parcours</span>
+      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
+        <option value="">— aucun —</option>
+      </select>
+    </div>
+  </div>
   <div class="note" id="status-note"></div>
 </main>
 
@@ -1276,7 +1298,32 @@ function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
 }
 
 /* ---- Rendu de la carte -------------------------------------------------- */
+/* ── Barre de contexte (titre : lieu + période) ──────────────────────────
+   Affichée tout en haut, avant la synthèse et la carte. Reflète l'état
+   courant : parcours actif > zone sélectionnée (drill-down) > région.
+   Appelée depuis renderMap(), donc à chaque changement d'état. */
+function renderContextTitle(){
+  var place=document.getElementById('ctx-place'),
+      period=document.getElementById('ctx-period'),
+      detail=document.getElementById('ctx-detail');
+  if(!place) return;
+  var d='';
+  if(parcoursActive()){
+    place.textContent='\u25C6 Parcours \u00b7 '+state.parcours;
+  } else if(state.selZone){
+    place.textContent=state.selZone;
+    d=state.region ? state.region.nom : '';
+  } else {
+    place.textContent=state.region ? state.region.nom : '\u2014';
+  }
+  period.textContent = (state.mode==='year')
+      ? (state.year!=null ? String(state.year) : '')
+      : (state.decade!=null ? (state.decade+'\u2013'+(state.decade+9)) : '');
+  detail.textContent = d ? ('\u00b7 '+d) : '';
+}
+
 function renderMap(){
+  renderContextTitle();
   var svg=document.getElementById('map'), reg=state.region;
   var v = state.zoomView || reg.view;
   svg.setAttribute('viewBox', v.x+' '+v.y+' '+v.w+' '+v.h);
@@ -1696,34 +1743,23 @@ function deselectZone(){
 /* ---- Liste des titres au survol d'un groupe non éclaté -------------------- */
 function showHoverList(group, evt){
   var el = document.getElementById('hover-preview');
-  var titles = group.map(function(p){
-    return { t: p.e.t, d: reignDates(p.e) };
-  });
+  var titles = group.map(function(p){ return p.e.t; });
   var shown = titles.slice(0,6), extra = titles.length - shown.length;
   el.innerHTML = '<div class="hp-list">'+
-    shown.map(function(o){
-      return '<div><span class="hp-ld">'+escapeHtml(''+o.d)+'</span> '+escapeHtml(o.t)+'</div>';
-    }).join('')+
+    shown.map(function(t){ return '<div>'+escapeHtml(t)+'</div>'; }).join('')+
     (extra>0 ? '<div class="hp-more">+'+extra+' autre'+(extra>1?'s':'')+'…</div>' : '')+
     '<div class="hp-hint">Cliquer pour distinguer</div></div>';
   el.style.display='block';
   positionHoverImage(evt);
 }
 
-/* ---- Aperçu au survol d'une pastille : titre + date, et image si la fiche
-       en possède une (mode live). Sans image, l'aperçu reste affiché : la date
-       est l'information attendue au survol. --------------------------------- */
+/* ---- Aperçu image au survol (mode live uniquement, si la fiche a une image) --- */
 function showHoverImage(id, evt){
   var full = LIVE && LIVE[id];
-  var slim = EVENTS.find(function(e){ return e.id===id; });
-  if(!full && !slim) return;
-  var titre = full ? (full.titre||'') : (slim.t||'');
-  var dLbl  = slim ? reignDates(slim)
-                   : (full.date + (full.date_fin && full.date_fin!==full.date ? '\u2013'+full.date_fin : ''));
+  if(!full || !full.image) return;
   var el = document.getElementById('hover-preview');
-  el.innerHTML = (full && full.image ? '<img src="'+full.image+'" alt="">' : '')+
-                 (titre ? '<div class="hp-title">'+escapeHtml(titre)+'</div>' : '')+
-                 (dLbl  ? '<div class="hp-date">'+escapeHtml(''+dLbl)+'</div>' : '');
+  el.innerHTML = '<img src="'+full.image+'" alt="">'+
+                 (full.titre ? '<div class="hp-title">'+escapeHtml(full.titre)+'</div>' : '');
   el.style.display='block';
   positionHoverImage(evt);
 }

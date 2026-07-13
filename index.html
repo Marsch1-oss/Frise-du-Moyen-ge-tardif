@@ -78,13 +78,29 @@
   border-bottom: 1px solid var(--red);
 }
 
-    /* ── En-tête ── */
-    header { background: var(--ink); color: var(--parchment); padding: 1.6rem 2.5rem; border-bottom: 3px solid var(--gold); }
-    .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.9rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.2rem; }
-    .site-sub { font-size: 0.85rem; color: rgba(245,237,216,0.55); font-style: italic; }
+    /* ── En-tête ──
+       Volontairement compacte : l'ordre de lecture voulu est
+       1. titre / période  2. synthèse  3. frise  4. outils (sous la frise).
+       Toute hauteur gagnée ici est de la frise visible sans défilement. */
+    header { background: var(--ink); color: var(--parchment); padding: 0.6rem 1.8rem 0.55rem; border-bottom: 3px solid var(--gold); }
+    .site-title { font-family: 'IM Fell English', Georgia, serif; font-size: 1.2rem; color: var(--parchment); line-height: 1.15; margin-bottom: 0.1rem; }
+    .site-sub {
+      font-size: 0.75rem; color: rgba(245,237,216,0.5); font-style: italic;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; /* une seule ligne */
+    }
 
     /* ── Mise en page pleine largeur ── */
-    main { padding: 1.4rem 1.8rem 3rem; }
+    main { padding: 0.9rem 1.8rem 3rem; }
+
+    /* ── Zone d'outils (sous la frise) ──
+       Regroupe toute la navigation : niveaux, périodes, recherche, légende,
+       parcours, niveau de détail, zones & thèmes, aide. */
+    .tools-zone { margin-top: 1.1rem; padding-top: 0.7rem; border-top: 2px solid var(--border-dark); }
+    .tools-zone-title {
+      font-family: 'IM Fell English', Georgia, serif; font-size: 0.9rem;
+      color: var(--ink-muted); letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
 
     /* ── Barre supérieure (recherche + niveaux) ── */
     /* .top-bar supprimée */
@@ -291,13 +307,12 @@
       border: 1.5px solid var(--border-dark);
       border-radius: 24px;
       flex-wrap: wrap;
-      /* Barre fixe : reste visible en haut au défilement */
-      position: sticky;
-      top: 8px;
+      /* La barre appartient désormais à la zone d'outils, SOUS la frise :
+         plus de position:sticky (sinon elle recouvrirait la frise). */
+      position: static;
       z-index: 120;
-      box-shadow: 0 3px 14px rgba(60,42,20,0.16);
-      backdrop-filter: blur(3px);
-      transition: box-shadow 0.2s, top 0.2s;
+      box-shadow: 0 2px 8px rgba(60,42,20,0.12);
+      transition: box-shadow 0.2s;
     }
     .ctrl-nav-btn {
       font-family: 'Crimson Pro', serif; font-size: 0.88rem; font-style: italic;
@@ -403,24 +418,6 @@
       margin-top: 4px;
       line-height: 1.3;
       white-space: normal;
-    }
-    /* Titre + date sous l'image (cf. buildChipTooltip dans frise.js) */
-    .chip-img-tooltip .tt-title {
-      color: #f5edd8;
-      font-size: 0.68rem;
-      font-weight: 600;
-      line-height: 1.25;
-      margin-top: 4px;
-      white-space: normal;
-    }
-    .chip-img-tooltip .tt-title:first-child { margin-top: 0; }
-    .chip-img-tooltip .tt-date {
-      color: #E0B44A;
-      font-size: 0.64rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      margin-top: 1px;
-      white-space: nowrap;
     }
     .evt-chip:hover .chip-img-tooltip { display: block; }
 
@@ -1564,15 +1561,15 @@
       white-space: normal; overflow-wrap: anywhere;
     }
 
-    /* Bande d'échelle chronologique fixe, sous la barre de navigation */
+    /* Bande d'échelle chronologique : seul élément collant de la page
+       (la control-bar est passée sous la frise), donc ancrée tout en haut. */
     .sticky-axis {
-      position: sticky; top: 58px; z-index: 110;
-      margin: -0.5rem 0 0.7rem;
+      position: sticky; top: 8px; z-index: 110;
+      margin: 0 0 0.7rem;
       padding: 4px 1rem 6px;
       background: rgba(245,237,216,0.97);
       border: 1.5px solid var(--border-dark, #b89b72);
-      border-top: none;
-      border-radius: 0 0 14px 14px;
+      border-radius: 14px;
       box-shadow: 0 3px 10px rgba(60,42,20,0.14);
       backdrop-filter: blur(3px);
     }
@@ -1849,6 +1846,59 @@
 
 <main>
 
+  <!-- ══ 1. Titre : lieu & période ══ -->
+  <div id="period-banner">
+    <span class="pb-label" id="pb-label">XIVe si&egrave;cle</span>
+    <span class="pb-sub" id="pb-sub">1300 &mdash; 1400</span>
+  </div>
+
+  <div id="breadcrumb"></div>
+
+  <div id="nav-status" class="nav-status" style="display:none;">
+    <div class="nav-status-info" id="nav-status-info"></div>
+    <button class="nav-status-home" onclick="backToDecade()" title="Quitter les listes/parcours, supprimer les filtres et revenir à la frise décennale en cours">&#8617; Retour à la frise complète</button>
+  </div>
+
+  <!-- ══ 2. Synthèse (si disponible) ══ -->
+  <div id="synthese-bar" class="synthese-bar" style="display:none;">
+    <span id="synthese-bar-btns"></span>
+  </div>
+
+  <div id="synthese-banner" class="synthese-banner" style="display:none;">
+    <button class="synthese-banner-close" onclick="closeSyntheseBanner()" title="Fermer la synthèse">&#10005;</button>
+    <div class="synthese-banner-head">
+      <span class="synthese-banner-icon">&#128214;</span>
+      <h3 id="synthese-banner-title" class="synthese-banner-title"></h3>
+      <span id="synthese-banner-period" class="synthese-banner-period"></span>
+    </div>
+    <div id="synthese-banner-body" class="synthese-banner-body"></div>
+  </div>
+
+  <!-- ══ 3. Frise ══ -->
+  <div id="sticky-axis" class="sticky-axis" style="display:none;">
+    <span id="sticky-axis-hint" class="sticky-axis-hint" style="display:none;">▸ Cliquez une ann&eacute;e pour zoomer</span>
+    <div id="sticky-axis-bar" class="sticky-axis-bar"></div>
+  </div>
+
+  <div class="frise-card">
+    <div id="frise-container">
+      <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
+    </div>
+  </div>
+
+  <!-- ══ 4. Outils de navigation (sous la frise) ══ -->
+  <div class="tools-zone">
+    <div class="tools-zone-title">Navigation &amp; filtres</div>
+
+  <!-- Barre navigation parcours active -->
+  <div id="parcours-nav-bar" style="display:none;flex-direction:row;align-items:center;gap:0.5rem;padding:0.4rem 0.8rem;margin-bottom:0.3rem;background:rgba(245,237,216,0.85);border:1.5px solid var(--border-dark);border-radius:24px;flex-wrap:wrap;">
+    <span class="pnav-title" style="font-family:'Crimson Pro',serif;font-size:0.88rem;font-style:italic;font-weight:600;flex:1;min-width:120px;"></span>
+    <button class="pnav-arrow" onclick="parcoursNavStep(-1)" title="Étape précédente" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&larr;</button>
+    <select class="pnav-select" style="font-family:'Crimson Pro',serif;font-size:0.82rem;padding:0.25rem 0.5rem;border:1px solid var(--border-dark);border-radius:6px;background:var(--parchment);color:var(--ink);max-width:300px;cursor:pointer;"></select>
+    <button class="pnav-arrow" onclick="parcoursNavStep(1)" title="Étape suivante" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&rarr;</button>
+    <button onclick="clearParcours()" style="font-size:0.78rem;padding:0.2rem 0.7rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(192,57,43,0.1);color:#922B21;cursor:pointer;" title="Quitter le parcours">&#10005; Quitter</button>
+  </div>
+
   <div class="nav-bar">
     <button class="nav-btn nav-btn-home" onclick="goHome()" title="Retour page d&rsquo;accueil">&#127968; Accueil</button>
     <span class="nav-sep"></span>
@@ -1862,39 +1912,6 @@
     <button class="nav-btn nav-btn-parcours" id="btn-parcours" onclick="openParcoursPanel()" title="Parcours thématiques">&#9670; Parcours</button>
     <span class="nav-sep"></span>
     <button class="nav-btn" onclick="goToCarte()" title="Voir la p&eacute;riode affich&eacute;e sur la carte">&#128506; Carte</button>
-  </div>
-
-  <div class="help-inline">
-    <span class="help-tip">
-      <span class="help-icon-box">&#128269;</span>
-      Cliquez sur l&rsquo;axe pour zoomer
-    </span>
-    <span class="help-tip">
-      <span class="help-icon-box">&larr;&rarr;</span>
-      Fl&egrave;ches pour changer de p&eacute;riode
-    </span>
-    <span class="help-tip">
-      <span class="help-icon-box">&#128196;</span>
-      Cliquez sur un &eacute;v&eacute;nement pour sa fiche
-    </span>
-    <span class="help-tip">
-      <span class="help-icon-box">&#128269;</span>
-      Recherche par mot-cl&eacute; possible
-    </span>
-  </div>
-
-  <div id="period-banner">
-    <span class="pb-label" id="pb-label">XIVe si&egrave;cle</span>
-    <span class="pb-sub" id="pb-sub">1300 &mdash; 1400</span>
-  </div>
-
-  <div id="synthese-bar" class="synthese-bar" style="display:none;">
-    <span id="synthese-bar-btns"></span>
-  </div>
-
-  <div id="nav-status" class="nav-status" style="display:none;">
-    <div class="nav-status-info" id="nav-status-info"></div>
-    <button class="nav-status-home" onclick="backToDecade()" title="Quitter les listes/parcours, supprimer les filtres et revenir à la frise décennale en cours">&#8617; Retour à la frise complète</button>
   </div>
 
   <div class="control-bar">
@@ -1926,38 +1943,6 @@
 
   <div id="theme-legend" class="theme-legend" style="display:none;"></div>
 
-  <div id="sticky-axis" class="sticky-axis" style="display:none;">
-    <span id="sticky-axis-hint" class="sticky-axis-hint" style="display:none;">▸ Cliquez une ann&eacute;e pour zoomer</span>
-    <div id="sticky-axis-bar" class="sticky-axis-bar"></div>
-  </div>
-
-  <div id="breadcrumb"></div>
-
-  <div id="synthese-banner" class="synthese-banner" style="display:none;">
-    <button class="synthese-banner-close" onclick="closeSyntheseBanner()" title="Fermer la synthèse">&#10005;</button>
-    <div class="synthese-banner-head">
-      <span class="synthese-banner-icon">&#128214;</span>
-      <h3 id="synthese-banner-title" class="synthese-banner-title"></h3>
-      <span id="synthese-banner-period" class="synthese-banner-period"></span>
-    </div>
-    <div id="synthese-banner-body" class="synthese-banner-body"></div>
-  </div>
-
-  <div class="frise-card">
-    <div id="frise-container">
-      <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
-    </div>
-  </div>
-
-  <!-- Barre navigation parcours active -->
-  <div id="parcours-nav-bar" style="display:none;flex-direction:row;align-items:center;gap:0.5rem;padding:0.4rem 0.8rem;margin-bottom:0.3rem;background:rgba(245,237,216,0.85);border:1.5px solid var(--border-dark);border-radius:24px;flex-wrap:wrap;">
-    <span class="pnav-title" style="font-family:'Crimson Pro',serif;font-size:0.88rem;font-style:italic;font-weight:600;flex:1;min-width:120px;"></span>
-    <button class="pnav-arrow" onclick="parcoursNavStep(-1)" title="Étape précédente" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&larr;</button>
-    <select class="pnav-select" style="font-family:'Crimson Pro',serif;font-size:0.82rem;padding:0.25rem 0.5rem;border:1px solid var(--border-dark);border-radius:6px;background:var(--parchment);color:var(--ink);max-width:300px;cursor:pointer;"></select>
-    <button class="pnav-arrow" onclick="parcoursNavStep(1)" title="Étape suivante" style="font-size:1.1rem;padding:0.1rem 0.6rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(245,237,216,0.9);cursor:pointer;">&rarr;</button>
-    <button onclick="clearParcours()" style="font-size:0.78rem;padding:0.2rem 0.7rem;border:1px solid var(--border-dark);border-radius:14px;background:rgba(192,57,43,0.1);color:#922B21;cursor:pointer;" title="Quitter le parcours">&#10005; Quitter</button>
-  </div>
-
   <div id="detail-bar" style="display:none;">
     <span class="detail-title">&#128270; Affichage&nbsp;:</span>
     <button class="detail-btn" data-level="1" onclick="setDetailLevel(1)" title="Type 2 uniquement — événements Siècle">Si&egrave;cle</button>
@@ -1976,6 +1961,26 @@
     </div>
   </div>
 
+  <div class="help-inline">
+    <span class="help-tip">
+      <span class="help-icon-box">&#128269;</span>
+      Cliquez sur l&rsquo;axe pour zoomer
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&larr;&rarr;</span>
+      Fl&egrave;ches pour changer de p&eacute;riode
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&#128196;</span>
+      Cliquez sur un &eacute;v&eacute;nement pour sa fiche
+    </span>
+    <span class="help-tip">
+      <span class="help-icon-box">&#128269;</span>
+      Recherche par mot-cl&eacute; possible
+    </span>
+  </div>
+
+  </div><!-- /.tools-zone -->
 
 
 <!-- Lightbox image -->
