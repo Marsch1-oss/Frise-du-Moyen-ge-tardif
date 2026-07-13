@@ -67,6 +67,26 @@
         box-shadow:0 1px 3px rgba(28,20,10,0.18);transition:background 0.15s}
   .zoom-btn:hover{background:#fff}
   .zoom-btn:disabled{opacity:0.35;cursor:default}
+  /* Curseur vertical. L'input reste un <input type="range"> standard (horizontal
+     dans son flux) qu'on pivote de -90° : la rotation est fiable sur tous les
+     navigateurs, contrairement à `writing-mode:vertical` ou `slider-vertical`.
+     Après rotation, la valeur haute (zoom max) se retrouve en haut. */
+  .zoom-slider{position:relative;width:34px;height:126px;display:flex;align-items:center;
+        justify-content:center;border:1px solid var(--border-dark);border-radius:8px;
+        background:rgba(245,237,216,0.92);box-shadow:0 1px 3px rgba(28,20,10,0.18)}
+  #zoom-range{position:absolute;width:110px;height:24px;margin:0;padding:0;cursor:pointer;
+        transform:rotate(-90deg);background:transparent;-webkit-appearance:none;appearance:none}
+  #zoom-range:focus{outline:none}
+  #zoom-range:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:4px}
+  #zoom-range::-webkit-slider-runnable-track{height:4px;border-radius:2px;
+        background:var(--border-dark);opacity:0.55}
+  #zoom-range::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;margin-top:-5.5px;
+        border-radius:50%;background:var(--ink);border:2px solid var(--parchment-lt);
+        box-shadow:0 1px 2px rgba(28,20,10,0.35);cursor:grab}
+  #zoom-range:active::-webkit-slider-thumb{cursor:grabbing}
+  #zoom-range::-moz-range-track{height:4px;border-radius:2px;background:var(--border-dark);opacity:0.55}
+  #zoom-range::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--ink);
+        border:2px solid var(--parchment-lt);box-shadow:0 1px 2px rgba(28,20,10,0.35);cursor:grab}
   #map{touch-action:none}
   #map.grabbing{cursor:grabbing}
   .chips{display:flex;flex-wrap:wrap;gap:0.35rem}
@@ -316,8 +336,12 @@
         <div id="reign-banner" aria-live="polite"></div>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div id="zoom-ctrl">
-          <button class="zoom-btn" id="zoom-in"    onclick="zoomBy(1.5)"   title="Zoomer (molette, ou touche +)">&#128269;&#65291;</button>
-          <button class="zoom-btn" id="zoom-out"   onclick="zoomBy(1/1.5)" title="Dézoomer (molette, ou touche −)">&#128269;&#65293;</button>
+          <button class="zoom-btn" id="zoom-in"    onclick="zoomBy(1.5)"   title="Zoomer (touche +)">&#128269;&#65291;</button>
+          <div class="zoom-slider">
+            <input type="range" id="zoom-range" min="0" max="100" step="0.5" value="0"
+                   aria-label="Niveau de zoom" aria-orientation="vertical" title="Faites glisser pour zoomer">
+          </div>
+          <button class="zoom-btn" id="zoom-out"   onclick="zoomBy(1/1.5)" title="Dézoomer (touche &minus;)">&#128269;&#65293;</button>
           <button class="zoom-btn" id="zoom-reset" onclick="clearZoom()"   title="Recentrer la vue">&#10226;</button>
         </div>
         <div class="map-empty" id="map-empty" style="display:none"></div>
@@ -1552,13 +1576,54 @@ function zoomBy(f, cx, cy){
   var rx=(cx-v.x)/v.w, ry=(cy-v.y)/v.h;
   applyView({ x:cx-rx*nw, y:cy-ry*nh, w:nw, h:nh });
 }
+/* ── Curseur de zoom ───────────────────────────────────────────────────────
+   La position du curseur (0 = vue d'ensemble, 100 = zoom maximal) est reliée à
+   la largeur de vue par une échelle LOGARITHMIQUE : un même déplacement du
+   curseur produit toujours le même facteur de grossissement, ce qui donne une
+   progression régulière à l'œil (une échelle linéaire tasserait tout le zoom
+   utile dans les derniers pourcents). */
+function zoomBounds(){
+  var b=baseView();
+  var minW=Math.min(ZOOM_MIN_W, b.w);        /* garde-fou : région déjà plus étroite que le mini */
+  return { maxW:b.w, minW:minW, span:Math.log(minW/b.w) };   /* span < 0 */
+}
+function zoomToPercent(){
+  var t=zoomBounds();
+  if(!t.span) return 0;                       /* aucune amplitude de zoom possible */
+  var p=Math.log(currentView().w/t.maxW)/t.span*100;
+  return Math.max(0, Math.min(100, p));
+}
+function zoomFromPercent(p){
+  var t=zoomBounds();
+  if(!t.span) return;
+  var v=currentView();
+  var nw=t.maxW*Math.exp(t.span*(p/100));     /* largeur de vue visée */
+  if(nw>0) zoomBy(v.w/nw);                    /* zoomBy sans point : centré sur la vue */
+}
+var _zoomSliding=false;   /* pendant un glissement, on ne réécrit pas la valeur du curseur */
+
 function refreshZoomCtrl(){
   var b=baseView(), v=currentView();
   var zi=document.getElementById('zoom-in'), zo=document.getElementById('zoom-out'),
-      zr=document.getElementById('zoom-reset');
+      zr=document.getElementById('zoom-reset'), zs=document.getElementById('zoom-range');
   if(zi) zi.disabled = (v.w <= ZOOM_MIN_W*1.001);
   if(zo) zo.disabled = (v.w >= b.w*0.999);
   if(zr) zr.disabled = !state.zoomView;
+  /* Le curseur reflète aussi les zooms venus d'ailleurs (loupes, clavier,
+     clic sur une zone) : c'est le miroir de l'état, pas une source unique. */
+  if(zs && !_zoomSliding) zs.value = zoomToPercent();
+}
+function initZoomSlider(){
+  var zs=document.getElementById('zoom-range');
+  if(!zs) return;
+  zs.addEventListener('input', function(){ zoomFromPercent(parseFloat(zs.value)); });
+  zs.addEventListener('pointerdown', function(){ _zoomSliding=true; });
+  ['pointerup','pointercancel','blur'].forEach(function(ev){
+    zs.addEventListener(ev, function(){ _zoomSliding=false; refreshZoomCtrl(); });
+  });
+  /* Le curseur pivoté reste un range horizontal pour le clavier : les flèches
+     ↑/→ augmentent la valeur, donc zooment. Rien à corriger. */
+  zs.value = zoomToPercent();
 }
 /* Coordonnées carte du curseur (le SVG est en preserveAspectRatio="xMidYMid meet",
    donc la vue est éventuellement lettrée : on recalcule l'échelle réelle). */
@@ -1573,7 +1638,15 @@ function mapCoordsFromEvent(evt, svg){
 function initMapZoomGestures(){
   var svg=document.getElementById('map');
   if(!svg) return;
+  initZoomSlider();
+  /* La molette SEULE ne zoome plus : elle faisait défiler la carte au lieu de la
+     page dès que le curseur la survolait, ce qui rendait la lecture pénible.
+     Le zoom se fait au curseur vertical, aux loupes ou au clavier (+/−).
+     Ctrl/Cmd + molette reste actif : c'est le geste attendu pour un zoom
+     ponctuel centré sur le pointeur, et il n'entre pas en conflit avec le
+     défilement de la page. */
   svg.addEventListener('wheel', function(e){
+    if(!e.ctrlKey && !e.metaKey) return;   /* pas de preventDefault : la page défile */
     e.preventDefault();
     var c=mapCoordsFromEvent(e, svg);
     zoomBy(e.deltaY < 0 ? 1.18 : 1/1.18, c && c.x, c && c.y);
