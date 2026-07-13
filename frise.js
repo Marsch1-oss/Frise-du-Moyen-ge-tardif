@@ -1307,6 +1307,37 @@ function _drawBgImage(container, evt, x, y, w, h) {
   container.appendChild(wrap);
 }
 
+/* ── Tooltip de survol d'un chip : image (si présente), titre, date, légende.
+   Source unique utilisée par les règnes ET les événements : toute évolution
+   du contenu du survol doit passer par ici (pas de copie locale).
+   ⚠ Contenu équivalent au survol des pastilles de carte.html (showHoverImage) :
+      garder les deux synchronisés. */
+function buildChipTooltip(evt) {
+  var tt = document.createElement('div');
+  tt.className = 'chip-img-tooltip';
+  if (evt.image && evt.image.trim()) {
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    tt.appendChild(ttImg);
+  }
+  var ttTit = document.createElement('div');
+  ttTit.className = 'tt-title';
+  ttTit.textContent = evt.titre || '';
+  tt.appendChild(ttTit);
+  var ttDate = document.createElement('div');
+  ttDate.className = 'tt-date';
+  ttDate.textContent = '' + evt.date
+    + (evt.date_fin && evt.date_fin !== evt.date ? '\u2013' + evt.date_fin : '');
+  tt.appendChild(ttDate);
+  if (evt.legende) {
+    var ttCap = document.createElement('span');
+    ttCap.className = 'tt-cap';
+    ttCap.textContent = evt.legende;
+    tt.appendChild(ttCap);
+  }
+  return tt;
+}
+
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
 function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {
   var col  = COLORS[zone] || COLORS['France'];
@@ -1384,17 +1415,8 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
     chip.style.overflow = 'visible';
-    var tt = document.createElement('div');
-    tt.className = 'chip-img-tooltip';
-    var ttImg = document.createElement('img');
-    ttImg.src = evt.image;
-    tt.appendChild(ttImg);
-    if (evt.legende) {
-      var ttCap = document.createElement('span');
-      ttCap.textContent = evt.legende;
-      tt.appendChild(ttCap);
-    }
-    chip.appendChild(tt);
+    /* Carte de survol : image + titre + date + légende (cf. buildChipTooltip) */
+    chip.appendChild(buildChipTooltip(evt));
   }
   if (evt.video && evt.video.trim()) {
     var vBadge = document.createElement('span');
@@ -1826,17 +1848,10 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     imgBadge.className   = 'chip-img-badge';
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
-    var tt = document.createElement('div');
-    tt.className = 'chip-img-tooltip';
-    var ttImg = document.createElement('img');
-    ttImg.src = evt.image;
-    tt.appendChild(ttImg);
-    if (evt.legende) {
-      var ttCap = document.createElement('span');
-      ttCap.textContent = evt.legende;
-      tt.appendChild(ttCap);
-    }
-    chip.appendChild(tt);
+    /* Carte de survol : image + titre + date + légende (cf. buildChipTooltip).
+       Réservée aux chips à image : y monter un tooltip impose overflow:visible,
+       ce qui déroge au rognage du titre des chips-période. */
+    chip.appendChild(buildChipTooltip(evt));
     chip.style.position = 'absolute';
     if (chip.classList.contains('chip-period')) chip.style.overflow = 'visible';
   }
