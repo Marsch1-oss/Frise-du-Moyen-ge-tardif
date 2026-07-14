@@ -433,6 +433,22 @@
       line-height: 1.3;
       white-space: normal;
     }
+    /* Titre + date sous l'image (cf. buildChipTooltip dans frise.js).
+       Le sélecteur `span` générique ci-dessus les mettrait en italique. */
+    .chip-img-tooltip .tt-title {
+      color: #f5edd8;
+      font-size: 0.7rem;
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .chip-img-tooltip .tt-date {
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-style: normal;
+      font-weight: 700;
+      margin-top: 1px;
+    }
     .evt-chip:hover .chip-img-tooltip { display: block; }
 
     /* ── Pastille vidéo ── */

@@ -1277,6 +1277,39 @@ function _drawBgImage(container, evt, x, y, w, h) {
   container.appendChild(wrap);
 }
 
+/* ── Carte de survol d'un chip : image + titre + date (+ légende) ──────────
+   SOURCE UNIQUE, utilisée par les règnes (buildRulerChip) ET les événements.
+   Toute évolution du contenu du survol se fait ici, nulle part ailleurs.
+   Les styles .tt-title / .tt-date vivent dans index.html.
+   ⚠ Le tooltip n'est monté que sur les chips à image : le monter partout
+   imposerait overflow:visible, ce qui casserait le rognage du titre des
+   chips-période. Le survol des chips sans image reste servi par chip.title. */
+function buildChipTooltip(evt) {
+  var tt = document.createElement('div');
+  tt.className = 'chip-img-tooltip';
+  if (evt.image && evt.image.trim()) {
+    var ttImg = document.createElement('img');
+    ttImg.src = evt.image;
+    tt.appendChild(ttImg);
+  }
+  var ttTit = document.createElement('span');
+  ttTit.className   = 'tt-title';
+  ttTit.textContent = evt.titre || '';
+  tt.appendChild(ttTit);
+  var dTxt = '' + evt.date +
+             (evt.date_fin && evt.date_fin !== evt.date ? '\u2013' + evt.date_fin : '');
+  var ttDat = document.createElement('span');
+  ttDat.className   = 'tt-date';
+  ttDat.textContent = dTxt;
+  tt.appendChild(ttDat);
+  if (evt.legende) {
+    var ttCap = document.createElement('span');
+    ttCap.textContent = evt.legende;
+    tt.appendChild(ttCap);
+  }
+  return tt;
+}
+
 /* ── Ruler Chip (ligne Rulers dédiée) ──────────────────────────────*/
 function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_GAP) {
   var col  = COLORS[zone] || COLORS['France'];
@@ -1354,17 +1387,7 @@ function buildRulerChip(evt, zone, start, end, level, rowIndex, RULER_H, RULER_G
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
     chip.style.overflow = 'visible';
-    var tt = document.createElement('div');
-    tt.className = 'chip-img-tooltip';
-    var ttImg = document.createElement('img');
-    ttImg.src = evt.image;
-    tt.appendChild(ttImg);
-    if (evt.legende) {
-      var ttCap = document.createElement('span');
-      ttCap.textContent = evt.legende;
-      tt.appendChild(ttCap);
-    }
-    chip.appendChild(tt);
+    chip.appendChild(buildChipTooltip(evt));
   }
   if (evt.video && evt.video.trim()) {
     var vBadge = document.createElement('span');
@@ -1796,17 +1819,7 @@ function buildChip(evt, zone, start, end, level, rowIndex) {
     imgBadge.className   = 'chip-img-badge';
     imgBadge.textContent = '\uD83D\uDDBC';
     chip.appendChild(imgBadge);
-    var tt = document.createElement('div');
-    tt.className = 'chip-img-tooltip';
-    var ttImg = document.createElement('img');
-    ttImg.src = evt.image;
-    tt.appendChild(ttImg);
-    if (evt.legende) {
-      var ttCap = document.createElement('span');
-      ttCap.textContent = evt.legende;
-      tt.appendChild(ttCap);
-    }
-    chip.appendChild(tt);
+    chip.appendChild(buildChipTooltip(evt));
     chip.style.position = 'absolute';
     if (chip.classList.contains('chip-period')) chip.style.overflow = 'visible';
   }

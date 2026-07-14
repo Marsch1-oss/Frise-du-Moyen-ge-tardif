@@ -187,9 +187,12 @@
                  box-shadow:0 4px 16px rgba(30,18,6,0.35);padding:0.35rem;max-width:170px}
   #hover-preview img{display:block;width:100%;max-height:120px;object-fit:cover;border-radius:3px}
   #hover-preview .hp-title{font-size:0.72rem;color:var(--ink-soft);margin-top:0.3rem;line-height:1.25;
-                            font-family:'Crimson Pro',serif}
+                            font-family:'Crimson Pro',serif;font-weight:600}
+  #hover-preview .hp-date{font-family:'Crimson Pro',serif;font-size:0.72rem;font-weight:700;
+                           color:var(--gold);margin-top:0.1rem;line-height:1.2}
   #hover-preview .hp-list{font-family:'Crimson Pro',serif}
   #hover-preview .hp-list div{font-size:0.78rem;color:var(--ink-soft);line-height:1.35;padding:0.05rem 0}
+  #hover-preview .hp-list .hp-ld{font-weight:700;color:var(--gold);font-size:0.72rem}
   #hover-preview .hp-more{font-style:italic;color:var(--ink-muted);font-size:0.72rem}
   #hover-preview .hp-hint{font-style:italic;color:var(--gold);font-size:0.68rem;margin-top:0.2rem;
                            border-top:1px solid var(--border);padding-top:0.2rem}
@@ -1765,23 +1768,32 @@ function deselectZone(){
 /* ---- Liste des titres au survol d'un groupe non éclaté -------------------- */
 function showHoverList(group, evt){
   var el = document.getElementById('hover-preview');
-  var titles = group.map(function(p){ return p.e.t; });
+  var titles = group.map(function(p){ return { t: p.e.t, d: reignDates(p.e) }; });
   var shown = titles.slice(0,6), extra = titles.length - shown.length;
   el.innerHTML = '<div class="hp-list">'+
-    shown.map(function(t){ return '<div>'+escapeHtml(t)+'</div>'; }).join('')+
+    shown.map(function(o){
+      return '<div><span class="hp-ld">'+escapeHtml(''+o.d)+'</span> '+escapeHtml(o.t)+'</div>';
+    }).join('')+
     (extra>0 ? '<div class="hp-more">+'+extra+' autre'+(extra>1?'s':'')+'…</div>' : '')+
     '<div class="hp-hint">Cliquer pour distinguer</div></div>';
   el.style.display='block';
   positionHoverImage(evt);
 }
 
-/* ---- Aperçu image au survol (mode live uniquement, si la fiche a une image) --- */
+/* ---- Aperçu au survol d'une pastille : titre + date, et image si la fiche
+       en possède une (mode live). Sans image, l'aperçu reste affiché : la date
+       est l'information attendue au survol. --------------------------------- */
 function showHoverImage(id, evt){
   var full = LIVE && LIVE[id];
-  if(!full || !full.image) return;
+  var slim = EVENTS.find(function(e){ return e.id===id; });
+  if(!full && !slim) return;
+  var titre = full ? (full.titre||'') : (slim.t||'');
+  var dLbl  = slim ? reignDates(slim)
+                   : (full.date + (full.date_fin && full.date_fin!==full.date ? '\u2013'+full.date_fin : ''));
   var el = document.getElementById('hover-preview');
-  el.innerHTML = '<img src="'+full.image+'" alt="">'+
-                 (full.titre ? '<div class="hp-title">'+escapeHtml(full.titre)+'</div>' : '');
+  el.innerHTML = (full && full.image ? '<img src="'+full.image+'" alt="">' : '')+
+                 (titre ? '<div class="hp-title">'+escapeHtml(titre)+'</div>' : '')+
+                 (dLbl  ? '<div class="hp-date">'+escapeHtml(''+dLbl)+'</div>' : '');
   el.style.display='block';
   positionHoverImage(evt);
 }
