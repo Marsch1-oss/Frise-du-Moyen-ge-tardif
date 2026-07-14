@@ -138,9 +138,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia</div>
 
 <header>
   <div>
@@ -234,6 +234,15 @@
         <div class="field">
           <label>Description</label>
           <textarea id="f-desc" placeholder="Texte de la fiche événement..."></textarea>
+          <div style="background:#eaf0f4;border:2px solid #1A4A6B;border-radius:8px;padding:0.6rem;margin-top:0.5rem;">
+            <label style="font-weight:700;color:#1A4A6B;">&#128196; Wikip&eacute;dia <small style="font-weight:400;color:#777;">(introduction de l'article correspondant &mdash; facultatif)</small></label>
+            <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
+              <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.9rem;font-size:0.82rem;white-space:nowrap;" onclick="wpLookupFiche()">&#128269; Chercher l'article</button>
+              <span style="font-size:0.74rem;color:#666;">Utilise le lien Wikidata si la fiche est li&eacute;e, sinon le titre.</span>
+              <span id="wp-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
+            </div>
+            <div id="wp-result" style="display:none;border:1px solid #b8c8d4;border-radius:6px;background:#FBFDFE;margin-top:0.4rem;"></div>
+          </div>
         </div>
       </div>
 
@@ -771,6 +780,7 @@ function fillForm(evt) {
   wdRenderFiche();
   wdFicheStatus('');
   cmReset();
+  wpReset();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
     var el = document.getElementById(id);
@@ -819,6 +829,7 @@ function resetForm() {
   wdRenderFiche();
   wdFicheStatus('');
   cmReset();
+  wpReset();
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -2548,11 +2559,216 @@ function cmAddCredit() {
   cmStatus('Cr\u00e9dit ajout\u00e9 \u00e0 la l\u00e9gende.', '#1A6B3C');
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   ENRICHISSEMENT WIKIPÉDIA (article correspondant au titre)
+   ───────────────────────────────────────────────────────────────────────────
+   Comme Wikidata et Commons : l'API n'est appelée QU'ICI, à l'édition.
+
+   Résolution de l'article, par ordre de fiabilité :
+     1. si la fiche est liée à Wikidata (QID), on lit son sitelink « frwiki » —
+        le titre EXACT de l'article français. Décisif sur les titres narratifs
+        qui ne correspondent à aucun titre d'article ;
+     2. sinon, recherche plein-texte sur le titre de la fiche ; on retient le
+        résultat dont le titre recoupe celui de la fiche, sinon le premier
+        (marqué « à vérifier »).
+
+   Deux profondeurs de texte :
+     • INTRO COMPLÈTE (exintro) : tous les paragraphes d'introduction, en texte
+       brut, séparés par \n\n — le format des descriptions existantes. C'est ce
+       qui peut être inséré dans la description.
+     • ARTICLE COMPLET : chargé à la demande, affiché pour un copier-coller
+       manuel ciblé. Jamais inséré d'office (longueur + licence).
+
+   ⚠ Licence : Wikipédia est sous CC BY-SA. À l'insertion de l'intro, le lien de
+     l'article est ajouté au champ Sources pour attribution. Le texte inséré est
+     une base à retravailler ; le reformuler le fait vôtre.
+   ═══════════════════════════════════════════════════════════════════════════ */
+var WP_API   = 'https://fr.wikipedia.org/w/api.php';
+var WP_DELAY = 300;
+var _wpCurrent = null;   /* { title, url, intro, full, thumb, sure } */
+
+function wpFetch(base, params) {
+  var qs = Object.keys(params).map(function(k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+  return fetch(base + '?format=json&origin=*&' + qs)
+    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+}
+function wpArticleUrl(title) {
+  return 'https://fr.wikipedia.org/wiki/' + encodeURIComponent(title.replace(/ /g, '_'));
+}
+function wpStatus(msg, color) {
+  var el = document.getElementById('wp-status');
+  if (el) { el.textContent = msg || ''; el.style.color = color || '#7A6A52'; }
+}
+
+/* Sitelink frwiki de l'élément Wikidata lié, si présent. */
+function wpSitelinkOfLinked() {
+  if (!wdFormQid) return Promise.resolve(null);
+  return wpFetch('https://www.wikidata.org/w/api.php', {
+    action: 'wbgetentities', ids: wdFormQid, props: 'sitelinks', sitefilter: 'frwiki'
+  }).then(function(d) {
+    var ent = d && d.entities && d.entities[wdFormQid];
+    var sl  = ent && ent.sitelinks && ent.sitelinks.frwiki;
+    return (sl && sl.title) ? sl.title : null;
+  }).catch(function() { return null; });
+}
+
+/* Recherche du titre d'article à partir du titre de la fiche. */
+function wpSearchTitle(query) {
+  return wpFetch(WP_API, {
+    action: 'query', list: 'search', srsearch: query, srlimit: 5, srnamespace: 0
+  }).then(function(d) {
+    return (d && d.query && d.query.search) || [];
+  });
+}
+function wpResolveTitle() {
+  var titre = (document.getElementById('f-titre').value || '').trim();
+  return wpSitelinkOfLinked().then(function(sl) {
+    if (sl) return { title: sl, sure: true };
+    if (!titre) return null;
+    return wpSearchTitle(titre).then(function(res) {
+      if (!res.length) return null;
+      var nT = wdNorm(titre);
+      for (var i = 0; i < res.length; i++) {
+        var nR = wdNorm(res[i].title);
+        if (nR && (nT.indexOf(nR) !== -1 || nR.indexOf(nT) !== -1)) return { title: res[i].title, sure: true };
+      }
+      return { title: res[0].title, sure: false };
+    });
+  });
+}
+
+/* Extrait (intro ou article complet) + vignette + URL canonique. */
+function wpExtract(title, introOnly) {
+  var params = {
+    action: 'query', prop: 'extracts|pageimages|info', inprop: 'url',
+    titles: title, explaintext: 1, redirects: 1,
+    piprop: 'thumbnail', pithumbsize: 320
+  };
+  if (introOnly) params.exintro = 1;
+  return wpFetch(WP_API, params).then(function(d) {
+    var pages = d && d.query && d.query.pages;
+    if (!pages) return null;
+    var key = Object.keys(pages)[0];
+    if (!key || key === '-1') return null;   /* -1 = page manquante */
+    var p = pages[key];
+    return {
+      title:   p.title || title,
+      url:     p.canonicalurl || p.fullurl || wpArticleUrl(p.title || title),
+      text:    (p.extract || '').trim(),
+      thumb:   (p.thumbnail && p.thumbnail.source) || ''
+    };
+  });
+}
+
+function wpLookupFiche() {
+  var titre = (document.getElementById('f-titre').value || '').trim();
+  if (!titre && !wdFormQid) { wpStatus('Saisissez un titre (ou liez la fiche à Wikidata).', '#8B1A1A'); return; }
+  wpStatus('Recherche de l\'article\u2026');
+  document.getElementById('wp-result').style.display = 'none';
+  wpResolveTitle().then(function(r) {
+    if (!r) { wpStatus('Aucun article Wikipédia trouvé pour ce titre.', '#8B1A1A'); return; }
+    return wpSleep(WP_DELAY).then(function() { return wpExtract(r.title, true); }).then(function(ex) {
+      if (!ex || !ex.text) { wpStatus('Article « ' + r.title +' » sans introduction exploitable.', '#8B1A1A'); return; }
+      _wpCurrent = { title: ex.title, url: ex.url, intro: ex.text, full: null, thumb: ex.thumb, sure: r.sure };
+      wpStatus(r.sure ? 'Article trouvé.' : 'Article approximatif — vérifiez qu\'il correspond.', r.sure ? '#1A6B3C' : '#9A6B1A');
+      wpShow();
+    });
+  }).catch(function(err) {
+    wpStatus('Échec de la requête (' + err.message + '). Réessayez.', '#8B1A1A');
+  });
+}
+function wpSleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+
+function wpShow() {
+  var c = _wpCurrent, box = document.getElementById('wp-result');
+  if (!c || !box) return;
+  var descVide = !(document.getElementById('f-desc').value || '').trim();
+  var h = '<div style="padding:0.55rem 0.65rem;">'
+    + '<div style="display:flex;gap:0.6rem;align-items:flex-start;">'
+    + (c.thumb ? '<img src="' + wdEsc(c.thumb) + '" alt="" style="width:72px;height:72px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#eee;">' : '')
+    + '<div style="flex:1;min-width:0;">'
+    + '<div style="font-weight:600;color:var(--ink);">' + wdEsc(c.title)
+    + (c.sure ? '' : ' <span title="À vérifier" style="color:#9A6B1A;">\u26A0</span>') + '</div>'
+    + '<a href="' + wdEsc(c.url) + '" target="_blank" rel="noopener" style="font-size:0.78rem;color:#1A6B3C;">Ouvrir l\'article \u2197</a>'
+    + '</div></div>';
+  h += '<div id="wp-text" style="margin-top:0.5rem;max-height:220px;overflow-y:auto;font-size:0.82rem;line-height:1.45;'
+    + 'white-space:pre-wrap;background:#FBFDF9;border:1px solid #d8e0d2;border-radius:5px;padding:0.5rem;">'
+    + wdEsc(c.intro) + '</div>';
+  h += '<div style="font-size:0.72rem;color:#7A6A52;margin-top:0.25rem;">'
+    + (c.full ? 'Article complet chargé (' + c.full.length.toLocaleString('fr-FR') + ' caractères).'
+              : 'Introduction complète (' + c.intro.length.toLocaleString('fr-FR') + ' caractères).')
+    + ' Wikipédia, CC BY-SA.</div>';
+  h += '<div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.55rem;">'
+    + '<button type="button" class="btn" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpInsertDesc()">'
+    + (descVide ? '\u2193 Insérer comme description' : '\u21bb Remplacer la description') + '</button>'
+    + '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpAppendDesc()">\u2795 Ajouter à la fin</button>'
+    + '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpAddSource()">\uD83D\uDD17 Ajouter le lien aux sources</button>'
+    + (c.full ? '' : '<button type="button" class="btn btn-secondary" id="wp-full-btn" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpLoadFull()">\uD83D\uDCC4 Charger l\'article complet</button>')
+    + '</div>';
+  h += '<div style="font-size:0.72rem;color:#9A8A6A;font-style:italic;margin-top:0.35rem;">'
+    + 'Le texte inséré est une base à retravailler — reformulé, il devient le vôtre.</div>';
+  h += '</div>';
+  box.innerHTML = h;
+  box.style.display = '';
+}
+
+function wpInsertDesc() {
+  if (!_wpCurrent) return;
+  var el = document.getElementById('f-desc');
+  if ((el.value || '').trim() && !confirm('Remplacer la description actuelle par l\'introduction Wikipédia ?')) return;
+  el.value = _wpCurrent.intro;
+  wpAddSource(true);
+  wpStatus('Introduction insérée + source ajoutée. Relisez et retravaillez le texte.', '#1A6B3C');
+}
+function wpAppendDesc() {
+  if (!_wpCurrent) return;
+  var el = document.getElementById('f-desc');
+  var cur = (el.value || '').trim();
+  el.value = cur ? (cur + '\n\n' + _wpCurrent.intro) : _wpCurrent.intro;
+  wpAddSource(true);
+  wpStatus('Introduction ajoutée à la fin + source. Relisez l\'ensemble.', '#1A6B3C');
+}
+function wpAddSource(silent) {
+  if (!_wpCurrent) return;
+  var el = document.getElementById('f-sources');
+  var cur = (el.value || '').trim();
+  if (cur.indexOf(_wpCurrent.url) !== -1) { if (!silent) wpStatus('Ce lien est déjà dans les sources.', '#9A6B1A'); return; }
+  var ref = 'Article « ' + _wpCurrent.title + ' », Wikipédia (CC BY-SA), ' + _wpCurrent.url;
+  el.value = cur ? (cur.replace(/\s*[;.]?\s*$/, '') + ' ; ' + ref) : ref;
+  if (!silent) wpStatus('Lien de l\'article ajouté aux sources.', '#1A6B3C');
+}
+function wpLoadFull() {
+  if (!_wpCurrent) return;
+  var btn = document.getElementById('wp-full-btn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Chargement\u2026'; }
+  wpExtract(_wpCurrent.title, false).then(function(ex) {
+    if (!ex || !ex.text) { wpStatus('Article complet indisponible.', '#8B1A1A'); if (btn) { btn.disabled = false; } return; }
+    _wpCurrent.full = ex.text;
+    /* On bascule l'affichage sur le texte intégral, pour copier-coller manuel.
+       L'insertion « description » continue de porter sur l'INTRO uniquement :
+       le texte intégral ne s'insère jamais d'office (longueur + licence). */
+    var pane = document.getElementById('wp-text');
+    if (pane) pane.textContent = ex.text;
+    wpStatus('Article complet affiché ci-dessous — copiez-collez ce dont vous avez besoin (non inséré automatiquement).', '#9A6B1A');
+    /* on ne re-render pas tout : on retire juste le bouton et met à jour le compteur */
+    if (btn) btn.style.display = 'none';
+  }).catch(function(err) {
+    wpStatus('Échec du chargement (' + err.message + ').', '#8B1A1A');
+    if (btn) { btn.disabled = false; btn.textContent = '\uD83D\uDCC4 Charger l\'article complet'; }
+  });
+}
+function wpReset() {
+  _wpCurrent = null;
+  var box = document.getElementById('wp-result'); if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+  wpStatus('');
+}
+
 function wdInit() {
   wdRenderFiche();
   wdBatchRender();
   wdBatchProgress(0, 0, '');
   cmReset();
+  wpReset();
 }
 
 initThemeButtons();
