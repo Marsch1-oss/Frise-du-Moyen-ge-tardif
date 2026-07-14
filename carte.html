@@ -2084,14 +2084,35 @@ function setMode(mode){
     setDecade(state.decade!==null ? state.decade : DECADES[0]);
   }
 }
+/* ---- Changement de période : le contexte SPATIAL est conservé --------------
+   Passer de 1320 à 1330 doit rester dans la zone où l'on se trouve (drill-down),
+   pas rejeter le lecteur sur la vue d'ensemble. On ré-entre donc dans la zone
+   pour la nouvelle période : selectZone() recalcule le cadrage sur les points
+   de cette période et remplit le panneau. Si la zone n'a aucun point localisé
+   dans la nouvelle période, on conserve le cadrage précédent plutôt que de
+   dézoomer brutalement. Le mode Parcours garde sa propre logique de cadrage
+   (fitParcoursView). Renvoie true si la carte a déjà été rendue. */
+function reenterZoneAfterPeriodChange(keepZone, prevView){
+  if(!keepZone || parcoursActive()) return false;
+  selectZone(keepZone);
+  if(!state.zoneZoomView && prevView){
+    state.zoneZoomView = prevView;
+    state.zoomView     = prevView;
+    renderMap();
+  }
+  return true;
+}
 function setYear(y){
   y = Math.max(YEARRANGE.min, Math.min(YEARRANGE.max, y));
-  state.year=y; state.selZone=null; state.zoomView=null; state.spiderfied=null;
+  var keepZone=state.selZone, prevView=state.zoneZoomView;
+  state.year=y; state.selZone=null; state.zoomView=null;
+  state.clusterZoomView=null; state.spiderfied=null;
   document.getElementById('dec-current').textContent=String(y);
   document.getElementById('year-slider').value=y;
   document.getElementById('dec-prev').disabled = (y<=YEARRANGE.min);
   document.getElementById('dec-next').disabled = (y>=YEARRANGE.max);
   if(parcoursActive()) fitParcoursView();
+  if(reenterZoneAfterPeriodChange(keepZone, prevView)) return;
   renderMap(); resetPanel();
 }
 function renderDecadeChips(){
@@ -2110,12 +2131,16 @@ function renderDecadeChips(){
   });
 }
 function setDecade(d){
-  state.decade=d; state.selZone=null; state.zoomView=null; state.spiderfied=null;
+  var keepZone=state.selZone, prevView=state.zoneZoomView;
+  state.decade=d; state.selZone=null; state.zoomView=null;
+  state.clusterZoomView=null; state.spiderfied=null;
   document.getElementById('dec-current').textContent=d+'–'+(d+9);
   document.getElementById('dec-prev').disabled = (DECADES.indexOf(d)<=0);
   document.getElementById('dec-next').disabled = (DECADES.indexOf(d)>=DECADES.length-1);
   if(parcoursActive()) fitParcoursView();   /* la carte suit les étapes de la décennie */
-  renderDecadeChips(); renderMap(); resetPanel();
+  renderDecadeChips();
+  if(reenterZoneAfterPeriodChange(keepZone, prevView)) return;
+  renderMap(); resetPanel();
 }
 function resetPanel(){
   /* Mode Parcours : le panneau liste les étapes de l'itinéraire (badges de rang
