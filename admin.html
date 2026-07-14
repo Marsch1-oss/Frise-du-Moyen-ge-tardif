@@ -138,9 +138,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-06-24 08:23 — révolte+auto</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-06-24 08:23 — révolte+auto</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons</div>
 
 <header>
   <div>
@@ -268,8 +268,27 @@
               <div id="no-theme-list" class="no-theme-list" style="display:none;"></div>
             </div>
           </div>
+          <div style="background:#eef2ea;border:2px solid #2F5233;border-radius:8px;padding:0.7rem;margin-bottom:0.8rem;">
+            <label style="font-weight:700;color:#2F5233;">&#128279; Wikidata <small style="font-weight:400;color:#777;">(th&egrave;me, coordonn&eacute;es, image &mdash; facultatif)</small></label>
+            <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin:0.4rem 0;">
+              <button type="button" class="btn btn-secondary" style="padding:0.3rem 0.9rem;font-size:0.82rem;white-space:nowrap;" onclick="wdLookupFiche()">&#128269; Chercher d'apr&egrave;s le titre</button>
+              <span style="font-size:0.78rem;color:#555;">&Eacute;l&eacute;ment li&eacute;&nbsp;: <span id="wd-badge"></span></span>
+              <span id="wd-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
+            </div>
+            <div id="wd-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;"></div>
+          </div>
           <label>Image <small>(chemin relatif ou URL)</small></label>
           <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
+          <div style="display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
+            <input type="text" id="f-img-search" placeholder="Mots-cl&eacute;s pour Commons (pr&eacute;-rempli avec la l&eacute;gende ou le titre)"
+                   style="flex:1;min-width:180px;" onfocus="cmPrefill()"
+                   onkeydown="if(event.key==='Enter'){event.preventDefault();cmSearch(false);}">
+            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(false)">&#128506; Chercher une illustration</button>
+            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(true)" title="Utilise la cat&eacute;gorie Commons de l'&eacute;l&eacute;ment Wikidata li&eacute; (plus pr&eacute;cis)">&#128193; Par cat&eacute;gorie</button>
+          </div>
+          <div id="img-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;margin-top:0.25rem;"></div>
+          <div id="img-results" style="display:none;border:1px solid #c9b896;border-radius:6px;background:#FBF6E9;margin-top:0.35rem;max-height:260px;overflow-y:auto;"></div>
+          <div id="img-picked" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
         <div class="field">
           <label>Légende de l'image</label>
@@ -391,6 +410,56 @@
 </div>
 
 <div class="panel" style="margin-top:1.2rem;">
+  <div class="panel-title">🔗 Enrichissement Wikidata</div>
+  <p style="font-size:0.85rem;color:#666;margin:0.3rem 0 0.8rem;">
+    Interroge Wikidata pour déduire le <strong>thème</strong> (via l'occupation ou la nature de l'élément), les <strong>coordonnées</strong> et une <strong>image Commons</strong>.
+    Les résultats sont écrits dans <code>events.json</code> : la frise et la carte n'appellent aucune API à l'exécution.
+    Les lignes <span style="background:#fdf8ec;padding:0 4px;border-radius:3px;">sur fond crème ⚠</span> sont des correspondances approximatives, à vérifier — elles ne sont pas pré-cochées.
+  </p>
+  <div style="display:flex;gap:0.8rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:0.7rem;">
+    <div>
+      <label style="display:block;font-size:0.78rem;color:#555;">Portée</label>
+      <select id="wd-scope" style="padding:0.3rem;min-width:210px;">
+        <option value="notheme">Fiches sans thème</option>
+        <option value="nogeo">Fiches sans coordonnées</option>
+        <option value="unlinked">Fiches non liées à Wikidata</option>
+      </select>
+    </div>
+    <div>
+      <label style="display:block;font-size:0.78rem;color:#555;">Taille du lot</label>
+      <select id="wd-limit" style="padding:0.3rem;">
+        <option value="10">10 fiches</option>
+        <option value="25" selected>25 fiches</option>
+        <option value="50">50 fiches</option>
+        <option value="100">100 fiches</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:0.9rem;flex-wrap:wrap;align-items:center;padding-bottom:0.3rem;">
+      <label style="display:inline-flex;align-items:center;gap:0.3rem;font-size:0.8rem;font-weight:normal;cursor:pointer;">
+        <input type="checkbox" id="wd-opt-theme" checked style="width:auto;margin:0;cursor:pointer;"> Thème
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:0.3rem;font-size:0.8rem;font-weight:normal;cursor:pointer;">
+        <input type="checkbox" id="wd-opt-geo" style="width:auto;margin:0;cursor:pointer;"> Coordonnées
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:0.3rem;font-size:0.8rem;font-weight:normal;cursor:pointer;">
+        <input type="checkbox" id="wd-opt-image" style="width:auto;margin:0;cursor:pointer;"> Image
+      </label>
+    </div>
+    <button class="btn" id="wd-run" onclick="wdBatchRun()" style="padding:0.35rem 1rem;">▶ Analyser le lot</button>
+    <button class="btn btn-danger" id="wd-stop" onclick="wdBatchStop()" style="padding:0.35rem 1rem;display:none;">⏹ Arrêter</button>
+  </div>
+  <div id="wd-progress" style="margin-bottom:0.6rem;"></div>
+  <div id="wd-rows" style="max-height:420px;overflow-y:auto;"></div>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.7rem;align-items:center;">
+    <button class="btn btn-success" onclick="wdBatchApply()" style="padding:0.3rem 1rem;">✓ Appliquer la sélection</button>
+    <button class="btn btn-secondary" onclick="wdBatchSelectAll(true)" style="padding:0.3rem 0.8rem;font-size:0.82rem;">Tout cocher</button>
+    <button class="btn btn-secondary" onclick="wdBatchSelectAll(false)" style="padding:0.3rem 0.8rem;font-size:0.82rem;">Tout décocher</button>
+    <span style="flex:1;"></span>
+    <span style="font-size:0.78rem;color:#777;font-style:italic;">Les champs déjà remplis ne sont jamais écrasés. Les coordonnées appliquées entrent dans la file « à vérifier ».</span>
+  </div>
+</div>
+
+<div class="panel" style="margin-top:1.2rem;">
   <div class="panel-title">📋 Synthèses décennales</div>
   <p style="font-size:0.85rem;color:#666;margin:0.3rem 0 0.8rem;">
     Générez un brouillon de synthèse pour une <strong>zone</strong> ou un <strong>parcours</strong> et une décennie, corrigez-le, puis ajoutez-le. Téléchargez ensuite <strong>syntheses.json</strong> à placer sur GitHub.
@@ -477,6 +546,8 @@ var THEME_KEYWORDS = {
   'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
@@ -658,6 +729,9 @@ function readForm() {
     if (el && el.value.trim()) series.push(cleanText(el.value.trim()));
   });
   evt.serie = series.join('|');
+  /* ⚠ readForm() reconstruit l'objet à plat : tout champ absent d'ici est perdu.
+     Le QID Wikidata n'a pas de champ de saisie, on le réinjecte explicitement. */
+  if (wdFormQid) evt.wikidata = wdFormQid;
   return evt;
 }
 
@@ -693,6 +767,10 @@ function fillForm(evt) {
   }
   geoFitZones();
   geoSearchReset();
+  wdFormQid = evt.wikidata || null;
+  wdRenderFiche();
+  wdFicheStatus('');
+  cmReset();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
     var el = document.getElementById(id);
@@ -737,6 +815,10 @@ function resetForm() {
   var _cbO = document.getElementById('f-geo-ok');   if (_cbO) _cbO.checked = false;
   geoLoadedAuto=false; geoValidated=false; geoClearSilent(); geoBadge('todo');
   geoSearchReset();
+  wdFormQid = null;
+  wdRenderFiche();
+  wdFicheStatus('');
+  cmReset();
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -907,6 +989,7 @@ function updateJSON() {
     if (e.geo_none) o.geo_none = true;
     if (e.sources) o.sources = e.sources;
     if (e.serie)   o.serie   = e.serie;
+    if (e.wikidata) o.wikidata = e.wikidata;   /* ⚠ sinon silencieusement perdu à l'export */
     return o;
   });
   var txt = JSON.stringify(clean, null, 2);
@@ -1306,7 +1389,7 @@ function dashRefresh() {
   var sansSrc  = nonRegne.filter(function(e){ return !(e.sources||'').trim(); });
 
   /* 2. Incohérences */
-  var pbDate = [], pbMois = [], pbZone = [], pbType = [];
+  var pbDate = [], pbMois = [], pbZone = [], pbType = [], pbImage = [];
   events.forEach(function(e){
     if (e.date_fin && e.date_fin < e.date) pbDate.push(e);
     if (e.mois && (e.mois < 1 || e.mois > 12)) pbMois.push(e);
@@ -1314,6 +1397,9 @@ function dashRefresh() {
     if (!e.zones || e.zones.length === 0) pbZone.push(e);
     (e.zones||[]).forEach(function(z){ if (ZONES.indexOf(z) === -1 && pbZone.indexOf(e) === -1) pbZone.push(e); });
     if (e.type && (e.type < 1 || e.type > 5)) pbType.push(e);
+    /* champ image rempli mais qui n'est ni une URL ni un chemin : légende égarée */
+    var _im = (e.image || '').trim();
+    if (_im && _im.indexOf('/') === -1 && !/^https?:/i.test(_im)) pbImage.push(e);
   });
 
   /* 3. Répartition par type */
@@ -1383,6 +1469,7 @@ function dashRefresh() {
   html += probLine('mois invalides', pbMois);
   html += probLine('zone manquante/inconnue', pbZone);
   html += probLine('niveau (type) invalide', pbType);
+  html += probLine('champ image invalide (ni chemin ni URL)', pbImage);
 
   /* Classification thématique (mode manuel) */
   var sansTheme = nonRegne.filter(function(e){ return !detectTheme(e); });  /* ni manuel ni auto */
@@ -1791,11 +1878,689 @@ function geoBindMap(){
 }
 geoBindMap();
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   ENRICHISSEMENT WIKIDATA
+   ───────────────────────────────────────────────────────────────────────────
+   Wikidata est interrogé UNIQUEMENT ICI, à l'édition. Le résultat est écrit
+   dans events.json ; index.html / frise.js / carte.html restent autonomes et
+   n'appellent aucune API à l'exécution. Même principe que le géocodage
+   Nominatim déjà en place.
+
+   Ce que l'on récupère :
+     • P31  (nature de l'élément) et P106 (occupation) → thème
+     • P625 (coordonnées)                              → lat / lng
+     • P18  (image)                                    → URL Commons
+     • le QID lui-même                                 → champ « wikidata »,
+       qui sert de clé stable pour tout ré-enrichissement futur.
+
+   ⚠ Le champ « wikidata » doit être préservé par readForm() ET par
+     updateJSON() : ces deux fonctions reconstruisent l'objet à plat et
+     laissent tomber tout champ non listé explicitement.
+   ═══════════════════════════════════════════════════════════════════════════ */
+var WD_API   = 'https://www.wikidata.org/w/api.php';
+var WD_DELAY = 320;   /* ms entre deux appels — courtoisie envers l'API publique */
+
+/* Correspondance QID → thème (voie rapide, exacte).
+   Sources : P106 (occupation, testée en premier) puis P31 (nature). */
+var WD_THEME_QID = {
+  /* — P106 : occupation — */
+  'Q1028181': 'art',         /* peintre */
+  'Q1281618': 'art',         /* sculpteur */
+  'Q42973':   'art',         /* architecte */
+  'Q36834':   'art',         /* compositeur */
+  'Q36180':   'litterature', /* écrivain */
+  'Q49757':   'litterature', /* poète */
+  'Q201788':  'litterature', /* historien */
+  'Q11063':   'sciences',    /* astronome */
+  'Q170790':  'sciences',    /* mathématicien */
+  'Q39631':   'sciences',    /* médecin */
+  'Q4964182': 'idees',       /* philosophe */
+  'Q1234713': 'religion',    /* théologien */
+  'Q205375':  'techniques',  /* inventeur */
+  'Q175151':  'techniques',  /* imprimeur */
+  /* — P31 : nature de l'élément — */
+  'Q178561':  'guerre',      /* bataille */
+  'Q188055':  'guerre',      /* siège */
+  'Q198':     'guerre',      /* guerre */
+  'Q831663':  'guerre',      /* campagne militaire */
+  'Q47912':   'guerre',      /* croisade */
+  'Q131569':  'diplomatie',  /* traité */
+  'Q625298':  'diplomatie',  /* traité de paix */
+  'Q124734':  'revolte',     /* rébellion */
+  'Q44512':   'catastrophe', /* épidémie */
+  'Q12184':   'catastrophe', /* pandémie */
+  'Q168247':  'catastrophe', /* famine */
+  'Q7944':    'catastrophe', /* séisme */
+  'Q207590':  'religion',    /* bulle pontificale */
+  'Q3305213': 'art',         /* peinture */
+  'Q860861':  'art',         /* sculpture */
+  'Q2977':    'art',         /* cathédrale */
+  'Q7725634': 'litterature', /* œuvre littéraire */
+  'Q5185279': 'litterature', /* poème */
+  'Q87167':   'litterature', /* manuscrit */
+  'Q3918':    'idees',       /* université */
+  'Q209715':  'politique'    /* couronnement */
+};
+/* Filet de sécurité : si aucun QID de la table ci-dessus ne correspond, on
+   récupère le LIBELLÉ FRANÇAIS des types via l'API et on le teste contre ces
+   mots-clés. Redondant à dessein : le classement reste juste même si un QID
+   change, disparaît, ou n'a jamais été listé. Parcouru dans l'ordre de
+   THEME_ORDER, donc « politique » ne capte que ce qui n'a rien matché avant. */
+var WD_THEME_LABELS = {
+  'catastrophe': ['epidemie','pandemie','peste','famine','seisme','tremblement de terre','inondation','catastrophe'],
+  'revolte':     ['rebellion','revolte','soulevement','insurrection','jacquerie'],
+  'diplomatie':  ['traite','paix','treve','alliance'],
+  'religion':    ['theologien','pape','eveque','concile','bulle','heresi','moine','abbaye','synode','canonisation','ordre religieux','saint chretien'],
+  'economie':    ['banquier','marchand','commerce','monnaie','foire','banque'],
+  'idees':       ['philosophe','philosophie','universite','humaniste'],
+  'sciences':    ['astronome','astronomie','mathematicien','mathematiques','medecin','medecine','physicien','alchimiste','naturaliste','cartographe','savant'],
+  'techniques':  ['inventeur','imprimeur','imprimerie','ingenieur','horloger','artisan','navigateur','explorateur'],
+  'art':         ['peintre','peinture','sculpteur','sculpture','architecte','architecture','tableau','retable','fresque','enlumin','orfevre','compositeur','cathedrale','basilique','polyptyque','triptyque','tapisserie','vitrail'],
+  'litterature': ['ecrivain','poete','poeme','poesie','chroniqueur','historien','roman','oeuvre litteraire','manuscrit','litteraire','dramaturge','traducteur'],
+  'societe':     ['confrerie','corporation','hopital','fete'],
+  'guerre':      ['bataille','siege','guerre','conflit','croisade','campagne militaire','affrontement'],
+  'politique':   ['roi','reine','empereur','duc','comte','monarque','couronnement','souverain','dynastie','homme politique','noble']
+};
+
+var wdCache   = { ent: {}, label: {} };  /* QID → entité complète / libellé fr */
+var wdFormQid = null;                    /* QID lié à la fiche en cours d'édition */
+var wdBatch   = { running:false, stop:false, rows:[] };
+
+function wdNorm(s) {
+  return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+function wdSleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+function wdEsc(s) {
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function wdFetch(params) {
+  var qs = Object.keys(params).map(function(k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+  return fetch(WD_API + '?format=json&origin=*&' + qs)
+    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+}
+function wdSearch(query) {
+  return wdFetch({ action:'wbsearchentities', search:query, language:'fr', uselang:'fr', type:'item', limit:6 })
+    .then(function(d) { return (d && d.search) || []; });
+}
+function wdEntities(ids) {
+  return wdFetch({ action:'wbgetentities', ids:ids.join('|'), props:'claims|labels|descriptions', languages:'fr|en' })
+    .then(function(d) { return (d && d.entities) || {}; });
+}
+function wdFetchLabels(ids) {
+  return wdFetch({ action:'wbgetentities', ids:ids.join('|'), props:'labels', languages:'fr|en' })
+    .then(function(d) { return (d && d.entities) || {}; });
+}
+
+/* — Lecture des déclarations ————————————————————————————————————— */
+function wdClaimIds(ent, prop) {
+  var out = [], cl = ent && ent.claims && ent.claims[prop];
+  if (!cl) return out;
+  cl.forEach(function(c) {
+    var dv = c.mainsnak && c.mainsnak.datavalue;
+    if (dv && dv.type === 'wikibase-entityid' && dv.value && dv.value.id) out.push(dv.value.id);
+  });
+  return out;
+}
+function wdClaimCoord(ent) {
+  var cl = ent && ent.claims && ent.claims.P625;
+  if (!cl || !cl.length) return null;
+  var dv = cl[0].mainsnak && cl[0].mainsnak.datavalue;
+  if (!dv || dv.type !== 'globecoordinate' || !dv.value) return null;
+  var v = dv.value;
+  if (typeof v.latitude !== 'number' || typeof v.longitude !== 'number') return null;
+  return { lat: Math.round(v.latitude * 10000) / 10000, lng: Math.round(v.longitude * 10000) / 10000 };
+}
+function wdClaimImage(ent) {
+  var cl = ent && ent.claims && ent.claims.P18;
+  if (!cl || !cl.length) return null;
+  var dv = cl[0].mainsnak && cl[0].mainsnak.datavalue;
+  if (!dv || typeof dv.value !== 'string') return null;
+  return 'https://commons.wikimedia.org/wiki/Special:FilePath/'
+       + encodeURIComponent(dv.value.replace(/ /g, '_')) + '?width=900';
+}
+
+/* — Déduction du thème ——————————————————————————————————————————— */
+function wdThemeOf(ent) {
+  var types = wdClaimIds(ent, 'P106').concat(wdClaimIds(ent, 'P31'));
+  for (var i = 0; i < types.length; i++) {
+    if (WD_THEME_QID[types[i]]) return Promise.resolve(WD_THEME_QID[types[i]]);
+  }
+  if (!types.length) return Promise.resolve(null);
+  var need = types.filter(function(q) { return wdCache.label[q] === undefined; });
+  var chain = Promise.resolve();
+  for (var s = 0; s < need.length; s += 50) {
+    (function(chunk) {
+      chain = chain.then(function() { return wdSleep(WD_DELAY); })
+                   .then(function() { return wdFetchLabels(chunk); })
+                   .then(function(ents) {
+                     chunk.forEach(function(q) {
+                       var e = ents[q], lab = '';
+                       if (e && e.labels) lab = (e.labels.fr && e.labels.fr.value) || (e.labels.en && e.labels.en.value) || '';
+                       wdCache.label[q] = lab;
+                     });
+                   })
+                   .catch(function() { chunk.forEach(function(q) { wdCache.label[q] = ''; }); });
+    })(need.slice(s, s + 50));
+  }
+  return chain.then(function() {
+    var n = wdNorm(types.map(function(q) { return wdCache.label[q] || ''; }).join(' | '));
+    for (var t = 0; t < THEME_ORDER.length; t++) {
+      var th = THEME_ORDER[t], kws = WD_THEME_LABELS[th] || [];
+      for (var k = 0; k < kws.length; k++) {
+        if (n.indexOf(wdNorm(kws[k])) !== -1) return th;
+      }
+    }
+    return null;
+  });
+}
+
+/* — Requêtes candidates déduites du titre ————————————————————————
+   Un titre comme « Jan van Eyck achève le Retable de l'Agneau mystique » ne
+   correspond à aucun élément Wikidata. On en extrait donc les groupes de noms
+   propres — c'est précisément le cas des fiches identifiées par un nom de
+   peintre, indétectables par mots-clés. */
+function wdQueries(titre) {
+  var t = (titre || '').trim(), out = [];
+  if (!t) return out;
+  out.push(t);
+  var re = /[A-ZÀ-ÖØ-Þ][\wÀ-ÿ'’-]+(?:\s+(?:de|du|des|van|von|di|da|le|la|d'|l')?\s*[A-ZÀ-ÖØ-Þ][\wÀ-ÿ'’-]+)*/g;
+  var m;
+  while ((m = re.exec(t)) !== null) {
+    var g = m[0].trim();
+    if (g.length > 3 && out.indexOf(g) === -1) out.push(g);
+    /* « Mort de Charles VI » → on tente aussi « Charles VI » */
+    var tail = g.split(/\s+(?:de|du|des|d')\s*/i).pop();
+    if (tail && tail.length > 3 && tail !== g && out.indexOf(tail) === -1) out.push(tail);
+  }
+  return out.slice(0, 4);
+}
+
+/* — Rapprochement titre → élément Wikidata ————————————————————————
+   « sûr » = le libellé de l'élément trouvé apparaît tel quel dans le titre.
+   Sinon on garde le premier résultat comme piste à vérifier (non cochée). */
+function wdMatch(titre) {
+  var qs = wdQueries(titre), nTitle = wdNorm(titre), fallback = null;
+  var chain = Promise.resolve(null);
+  qs.forEach(function(q) {
+    chain = chain.then(function(found) {
+      if (found) return found;
+      return wdSleep(WD_DELAY)
+        .then(function() { return wdSearch(q); })
+        .then(function(res) {
+          for (var j = 0; j < res.length; j++) {
+            var lab = wdNorm(res[j].label);
+            if (lab && nTitle.indexOf(lab) !== -1) {
+              return { id:res[j].id, label:res[j].label, desc:res[j].description || '', sure:true };
+            }
+          }
+          if (!fallback && res.length) {
+            fallback = { id:res[0].id, label:res[0].label, desc:res[0].description || '', sure:false };
+          }
+          return null;
+        })
+        .catch(function() { return null; });
+    });
+  });
+  return chain.then(function(found) { return found || fallback; });
+}
+
+/* — Proposition complète pour une fiche ——————————————————————————— */
+function wdPropose(titre) {
+  return wdMatch(titre).then(function(m) {
+    if (!m) return null;
+    if (wdCache.ent[m.id]) return { m:m, ent:wdCache.ent[m.id] };
+    return wdSleep(WD_DELAY)
+      .then(function() { return wdEntities([m.id]); })
+      .then(function(ents) {
+        var ent = ents[m.id];
+        if (!ent) return null;
+        wdCache.ent[m.id] = ent;
+        return { m:m, ent:ent };
+      });
+  }).then(function(hit) {
+    if (!hit) return null;
+    return wdThemeOf(hit.ent).then(function(theme) {
+      return {
+        qid:   hit.m.id,
+        label: hit.m.label,
+        desc:  hit.m.desc,
+        sure:  hit.m.sure,
+        theme: theme,
+        coord: wdClaimCoord(hit.ent),
+        image: wdClaimImage(hit.ent)
+      };
+    });
+  });
+}
+
+/* ── Panneau « fiche en cours » ─────────────────────────────────────────── */
+function wdFicheStatus(msg, color) {
+  var el = document.getElementById('wd-status');
+  if (el) { el.textContent = msg || ''; el.style.color = color || '#7A6A52'; }
+}
+function wdRenderFiche() {
+  var badge = document.getElementById('wd-badge');
+  if (badge) {
+    if (wdFormQid) {
+      badge.innerHTML = '<a href="https://www.wikidata.org/wiki/' + wdEsc(wdFormQid) + '" target="_blank" rel="noopener" '
+        + 'style="color:#1A6B3C;text-decoration:none;font-weight:600;">' + wdEsc(wdFormQid) + ' \u2197</a> '
+        + '<button type="button" onclick="wdUnlink()" title="D\u00e9lier cette fiche" '
+        + 'style="border:none;background:none;color:#8B1A1A;cursor:pointer;font-size:0.9rem;">\u00d7</button>';
+    } else {
+      badge.innerHTML = '<span style="color:#9A8A6A;font-style:italic;">non li\u00e9e</span>';
+    }
+  }
+  var box = document.getElementById('wd-result');
+  if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+}
+function wdUnlink() {
+  wdFormQid = null;
+  wdRenderFiche();
+  wdFicheStatus('Fiche d\u00e9li\u00e9e. Pensez \u00e0 Enregistrer.', '#8B1A1A');
+}
+function wdLookupFiche() {
+  var titre = (document.getElementById('f-titre').value || '').trim();
+  if (!titre) { wdFicheStatus('Saisissez d\'abord un titre.', '#8B1A1A'); return; }
+  wdFicheStatus('Interrogation de Wikidata\u2026');
+  wdPropose(titre).then(function(p) {
+    if (!p) { wdFicheStatus('Aucun \u00e9l\u00e9ment Wikidata trouv\u00e9 pour ce titre.', '#8B1A1A'); return; }
+    wdFicheStatus(p.sure ? 'Correspondance directe trouv\u00e9e.' : 'Piste \u00e0 v\u00e9rifier (correspondance approximative).',
+                  p.sure ? '#1A6B3C' : '#9A6B1A');
+    wdShowProposal(p);
+  }).catch(function(err) {
+    wdFicheStatus('\u00c9chec de la requ\u00eate (' + err.message + '). R\u00e9essayez.', '#8B1A1A');
+  });
+}
+var _wdCurrent = null;
+function wdShowProposal(p) {
+  _wdCurrent = p;
+  var box = document.getElementById('wd-result');
+  if (!box) return;
+  var h = '<div style="padding:0.5rem 0.6rem;">'
+    + '<div style="font-size:0.85rem;font-weight:600;color:var(--ink);">' + wdEsc(p.label)
+    + ' <a href="https://www.wikidata.org/wiki/' + wdEsc(p.qid) + '" target="_blank" rel="noopener" '
+    + 'style="font-weight:400;color:#1A6B3C;text-decoration:none;">(' + wdEsc(p.qid) + ' \u2197)</a></div>'
+    + (p.desc ? '<div style="font-size:0.78rem;color:#7A6A52;font-style:italic;margin-bottom:0.4rem;">' + wdEsc(p.desc) + '</div>' : '')
+    + '<div style="display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;">';
+  h += '<div>' + (p.theme && THEME_DEFS[p.theme]
+        ? 'Th\u00e8me : <strong>' + THEME_DEFS[p.theme].icon + ' ' + wdEsc(THEME_DEFS[p.theme].label) + '</strong>'
+          + ' <button type="button" class="btn btn-secondary" style="padding:0.1rem 0.5rem;font-size:0.75rem;" onclick="wdApplyOne(\'theme\')">Appliquer</button>'
+        : '<span style="color:#9A8A6A;">Th\u00e8me : non d\u00e9duit</span>') + '</div>';
+  h += '<div>' + (p.coord
+        ? 'Coordonn\u00e9es : <strong>' + p.coord.lat + ', ' + p.coord.lng + '</strong>'
+          + ' <button type="button" class="btn btn-secondary" style="padding:0.1rem 0.5rem;font-size:0.75rem;" onclick="wdApplyOne(\'geo\')">Appliquer</button>'
+        : '<span style="color:#9A8A6A;">Coordonn\u00e9es : absentes</span>') + '</div>';
+  h += '<div>' + (p.image
+        ? 'Image Commons : <strong>disponible</strong>'
+          + ' <a href="' + wdEsc(p.image) + '" target="_blank" rel="noopener" style="color:#1A6B3C;">voir \u2197</a>'
+          + ' <button type="button" class="btn btn-secondary" style="padding:0.1rem 0.5rem;font-size:0.75rem;" onclick="wdApplyOne(\'image\')">Appliquer</button>'
+        : '<span style="color:#9A8A6A;">Image : absente</span>') + '</div>';
+  h += '</div><div style="margin-top:0.5rem;">'
+    + '<button type="button" class="btn" style="padding:0.2rem 0.8rem;font-size:0.8rem;" onclick="wdApplyOne(\'all\')">\u2713 Tout appliquer</button>'
+    + '</div></div>';
+  box.innerHTML = h;
+  box.style.display = '';
+}
+function wdApplyOne(what) {
+  var p = _wdCurrent;
+  if (!p) return;
+  wdFormQid = p.qid;
+  if ((what === 'theme' || what === 'all') && p.theme && THEME_DEFS[p.theme]) setTheme(p.theme);
+  if ((what === 'geo' || what === 'all') && p.coord) {
+    var cbN = document.getElementById('f-geo-none'); if (cbN) cbN.checked = false;
+    geoSet(p.coord.lat, p.coord.lng, false);   /* pose le point sans cocher « vérifiée » */
+    geoLoadedAuto = true; geoBadge('auto');    /* reste dans la file de v\u00e9rification g\u00e9o */
+    geoCenterOnPoint(p.coord.lat, p.coord.lng);
+  }
+  if ((what === 'image' || what === 'all') && p.image) {
+    var img = document.getElementById('f-image');
+    if (img && !img.value.trim()) img.value = p.image;
+  }
+  wdRenderFiche();
+  wdFicheStatus('Appliqu\u00e9 (' + p.qid + '). Pensez \u00e0 Enregistrer.', '#1A6B3C');
+}
+
+/* ── Traitement par lot ─────────────────────────────────────────────────── */
+function wdBatchScope() {
+  var v = (document.getElementById('wd-scope') || {}).value || 'notheme';
+  var list;
+  if (v === 'nogeo') {
+    list = events.filter(function(e) {
+      return !e.geo_none && !e.regne && typeof e.lat !== 'number';
+    });
+  } else if (v === 'unlinked') {
+    list = events.filter(function(e) { return !e.wikidata; });
+  } else {
+    list = events.filter(function(e) { return !detectTheme(e); });
+  }
+  return list.slice().sort(function(a, b) { return (a.date || 0) - (b.date || 0); });
+}
+function wdBatchOpts() {
+  var g = function(id) { var el = document.getElementById(id); return !!(el && el.checked); };
+  return { theme: g('wd-opt-theme'), geo: g('wd-opt-geo'), image: g('wd-opt-image') };
+}
+function wdBatchProgress(done, total, msg) {
+  var el = document.getElementById('wd-progress');
+  if (!el) return;
+  var pct = total ? Math.round(done / total * 100) : 0;
+  el.innerHTML = '<div style="background:#e6dcc0;border-radius:6px;height:8px;overflow:hidden;">'
+    + '<div style="background:#9A6B1A;height:100%;width:' + pct + '%;transition:width .2s;"></div></div>'
+    + '<div style="font-size:0.78rem;color:#7A6A52;margin-top:0.25rem;">' + wdEsc(msg || (done + ' / ' + total)) + '</div>';
+}
+function wdBatchStop() { wdBatch.stop = true; }
+function wdBatchRun() {
+  if (wdBatch.running) return;
+  var scope = wdBatchScope();
+  var limit = parseInt((document.getElementById('wd-limit') || {}).value, 10) || 25;
+  var todo  = scope.slice(0, limit);
+  if (!todo.length) { wdBatchProgress(0, 0, 'Rien \u00e0 analyser dans cette port\u00e9e.'); return; }
+  wdBatch.running = true; wdBatch.stop = false; wdBatch.rows = [];
+  document.getElementById('wd-stop').style.display = '';
+  document.getElementById('wd-run').disabled = true;
+
+  var i = 0;
+  var step = function() {
+    if (wdBatch.stop || i >= todo.length) {
+      wdBatch.running = false;
+      document.getElementById('wd-stop').style.display = 'none';
+      document.getElementById('wd-run').disabled = false;
+      wdBatchProgress(i, todo.length, (wdBatch.stop ? 'Arr\u00eat\u00e9 \u2014 ' : 'Termin\u00e9 \u2014 ')
+        + wdBatch.rows.length + ' proposition(s) sur ' + i + ' fiche(s) analys\u00e9e(s)'
+        + ' (reste ' + Math.max(0, scope.length - i) + ' fiche(s) dans cette port\u00e9e).');
+      wdBatchRender();
+      return;
+    }
+    var e = todo[i];
+    wdBatchProgress(i, todo.length, 'Analyse : ' + e.date + ' \u2014 ' + e.titre);
+    wdPropose(e.titre)
+      .then(function(p) {
+        if (p) wdBatch.rows.push({ id:e.id, date:e.date, titre:e.titre, p:p });
+      })
+      .catch(function() { /* fiche ignorée en cas d'échec réseau ponctuel */ })
+      .then(function() { i++; wdBatchRender(); step(); });
+  };
+  step();
+}
+function wdBatchRender() {
+  var box = document.getElementById('wd-rows');
+  if (!box) return;
+  if (!wdBatch.rows.length) {
+    box.innerHTML = '<p style="font-size:0.82rem;color:#999;font-style:italic;margin:0.5rem 0;">Aucune proposition pour le moment.</p>';
+    return;
+  }
+  var h = '<table style="width:100%;border-collapse:collapse;font-size:0.8rem;">'
+    + '<tr style="text-align:left;color:#7A6A52;border-bottom:1px solid #c9b896;">'
+    + '<th style="padding:0.3rem 0.2rem;width:26px;"></th><th style="padding:0.3rem 0.2rem;">Fiche</th>'
+    + '<th style="padding:0.3rem 0.2rem;">\u00c9l\u00e9ment Wikidata</th><th style="padding:0.3rem 0.2rem;">Th\u00e8me</th>'
+    + '<th style="padding:0.3rem 0.2rem;">Coord.</th><th style="padding:0.3rem 0.2rem;">Img</th></tr>';
+  wdBatch.rows.forEach(function(r, idx) {
+    var p = r.p;
+    var pre = p.sure && (p.theme || p.coord);   /* pré-cochée seulement si correspondance directe */
+    h += '<tr style="border-bottom:1px solid #eee3cc;' + (p.sure ? '' : 'background:#fdf8ec;') + '">'
+      + '<td style="padding:0.3rem 0.2rem;"><input type="checkbox" id="wd-cb-' + idx + '"' + (pre ? ' checked' : '') + ' style="width:auto;margin:0;"></td>'
+      + '<td style="padding:0.3rem 0.2rem;"><span style="color:#9A6B1A;">' + r.date + '</span> '
+      + '<a href="#" onclick="loadEvent(' + r.id + ');return false;" style="color:var(--ink);text-decoration:none;">' + wdEsc(r.titre) + '</a></td>'
+      + '<td style="padding:0.3rem 0.2rem;"><a href="https://www.wikidata.org/wiki/' + wdEsc(p.qid) + '" target="_blank" rel="noopener" style="color:#1A6B3C;text-decoration:none;">'
+      + wdEsc(p.label) + '</a>' + (p.sure ? '' : ' <span title="Correspondance approximative \u2014 \u00e0 v\u00e9rifier" style="color:#9A6B1A;">\u26A0</span>')
+      + (p.desc ? '<div style="color:#9A8A6A;font-style:italic;">' + wdEsc(p.desc) + '</div>' : '') + '</td>'
+      + '<td style="padding:0.3rem 0.2rem;">' + (p.theme && THEME_DEFS[p.theme] ? THEME_DEFS[p.theme].icon + ' ' + wdEsc(THEME_DEFS[p.theme].label) : '\u2014') + '</td>'
+      + '<td style="padding:0.3rem 0.2rem;">' + (p.coord ? '\u2713' : '\u2014') + '</td>'
+      + '<td style="padding:0.3rem 0.2rem;">' + (p.image ? '\u2713' : '\u2014') + '</td>'
+      + '</tr>';
+  });
+  h += '</table>';
+  box.innerHTML = h;
+}
+function wdBatchSelectAll(on) {
+  wdBatch.rows.forEach(function(_, idx) {
+    var cb = document.getElementById('wd-cb-' + idx);
+    if (cb) cb.checked = on;
+  });
+}
+function wdBatchApply() {
+  var opts = wdBatchOpts(), n = 0;
+  wdBatch.rows.forEach(function(r, idx) {
+    var cb = document.getElementById('wd-cb-' + idx);
+    if (!cb || !cb.checked) return;
+    var e = events.find(function(x) { return x.id === r.id; });
+    if (!e) return;
+    var p = r.p;
+    e.wikidata = p.qid;
+    if (opts.theme && p.theme && THEME_DEFS[p.theme] && !e.theme) e.theme = p.theme;
+    if (opts.geo && p.coord && typeof e.lat !== 'number' && !e.geo_none) {
+      e.lat = p.coord.lat; e.lng = p.coord.lng;
+      e.geo_auto = true;   /* position non vérifiée : rejoint la file de relecture géo */
+    }
+    if (opts.image && p.image && !e.image) e.image = p.image;
+    n++;
+  });
+  if (!n) { toast('Aucune ligne s\u00e9lectionn\u00e9e.'); return; }
+  wdBatch.rows = [];
+  wdBatchRender();
+  if (editingId !== null) {
+    var cur = events.find(function(x) { return x.id === editingId; });
+    if (cur) fillForm(cur);
+  }
+  updateJSON();
+  toast(n + ' fiche(s) enrichie(s) \u2713  \u2014 pensez \u00e0 t\u00e9l\u00e9charger events.json');
+}
+/* ═══════════════════════════════════════════════════════════════════════════
+   RECHERCHE D'ILLUSTRATIONS — WIKIMEDIA COMMONS
+   ───────────────────────────────────────────────────────────────────────────
+   Même principe que Wikidata : l'API n'est appelée QU'ICI, à l'édition. Ce qui
+   est écrit dans events.json, c'est une URL de vignette upload.wikimedia.org —
+   exactement le format déjà utilisé par les 759 fiches illustrées du corpus.
+
+   Trois sources de requête, par ordre de pertinence :
+     1. la CATÉGORIE Commons de l'élément Wikidata lié (propriété P373) : de
+        loin la plus précise, elle cible les fichiers réellement rattachés au
+        sujet plutôt qu'une recherche par mots ;
+     2. la LÉGENDE de la fiche, qui décrit littéralement l'image souhaitée ;
+     3. le TITRE, en dernier recours.
+   Le champ de recherche reste éditable : sur un titre narratif, aucune requête
+   automatique ne vaut une reformulation à la main.
+
+   Toute image de Commons est sous licence libre : c'est la raison de s'y
+   limiter plutôt que d'aller chercher des images « tout-venant » sur le web,
+   dont les droits ne sont pas vérifiables pour un site public.
+   ═══════════════════════════════════════════════════════════════════════════ */
+var CM_API   = 'https://commons.wikimedia.org/w/api.php';
+var CM_WIDTH = 800;   /* largeur de la vignette écrite dans events.json */
+
+var cmResults = [];   /* dernier lot de résultats */
+var cmPicked  = null; /* fichier sélectionné */
+
+function cmFetch(params) {
+  var qs = Object.keys(params).map(function(k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+  return fetch(CM_API + '?format=json&origin=*&' + qs)
+    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+}
+/* Les métadonnées Commons (extmetadata) arrivent en HTML : on les aplatit. */
+function cmPlain(html) {
+  if (!html) return '';
+  var d = document.createElement('div');
+  d.innerHTML = String(html);
+  return (d.textContent || '').replace(/\s+/g, ' ').trim();
+}
+function cmMeta(info, key) {
+  var m = info && info.extmetadata && info.extmetadata[key];
+  return m ? cmPlain(m.value) : '';
+}
+function cmStatus(msg, color) {
+  var el = document.getElementById('img-status');
+  if (el) { el.textContent = msg || ''; el.style.color = color || '#7A6A52'; }
+}
+
+/* Catégorie Commons (P373) de l'élément Wikidata lié à la fiche, si connu. */
+function cmCategoryOfLinked() {
+  if (!wdFormQid) return Promise.resolve(null);
+  var take = function(ent) {
+    var cl = ent && ent.claims && ent.claims.P373;
+    if (!cl || !cl.length) return null;
+    var dv = cl[0].mainsnak && cl[0].mainsnak.datavalue;
+    return (dv && typeof dv.value === 'string') ? dv.value : null;
+  };
+  if (wdCache.ent[wdFormQid]) return Promise.resolve(take(wdCache.ent[wdFormQid]));
+  return wdEntities([wdFormQid])
+    .then(function(ents) {
+      var ent = ents[wdFormQid];
+      if (ent) wdCache.ent[wdFormQid] = ent;
+      return take(ent);
+    })
+    .catch(function() { return null; });
+}
+
+/* Requête par défaut proposée dans le champ : légende, sinon titre. */
+function cmDefaultQuery() {
+  var leg = (document.getElementById('f-legende').value || '').trim();
+  var tit = (document.getElementById('f-titre').value || '').trim();
+  return leg || tit;
+}
+function cmPrefill() {
+  var inp = document.getElementById('f-img-search');
+  if (inp && !inp.value.trim()) inp.value = cmDefaultQuery();
+}
+function cmReset() {
+  cmResults = []; cmPicked = null;
+  var inp = document.getElementById('f-img-search'); if (inp) inp.value = '';
+  var box = document.getElementById('img-results'); if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+  var det = document.getElementById('img-picked'); if (det) { det.style.display = 'none'; det.innerHTML = ''; }
+  cmStatus('');
+}
+
+/* Lance la recherche. useCat = true → tente d'abord la catégorie Commons. */
+function cmSearch(useCat) {
+  cmPrefill();
+  var q = (document.getElementById('f-img-search').value || '').trim();
+  if (!q && !useCat) { cmStatus('Saisissez des mots-clés (ou remplissez le titre / la légende).', '#8B1A1A'); return; }
+  cmStatus('Recherche sur Commons\u2026');
+  var det = document.getElementById('img-picked'); if (det) det.style.display = 'none';
+
+  var pre = useCat ? cmCategoryOfLinked() : Promise.resolve(null);
+  pre.then(function(cat) {
+    /* filetype:bitmap écarte les PDF, vidéos et sons ; incategory cible la
+       catégorie Commons du sujet quand elle est connue. */
+    var expr = cat ? 'incategory:"' + cat + '" filetype:bitmap'
+                   : q + ' filetype:bitmap';
+    return cmFetch({
+      action: 'query', generator: 'search', gsrsearch: expr,
+      gsrnamespace: 6, gsrlimit: 12,
+      prop: 'imageinfo', iiprop: 'url|size|mime|extmetadata', iiurlwidth: CM_WIDTH
+    }).then(function(d) { return { data: d, cat: cat }; });
+  })
+  .then(function(r) {
+    var pages = (r.data && r.data.query && r.data.query.pages) || {};
+    var list = Object.keys(pages).map(function(k) { return pages[k]; })
+      .sort(function(a, b) { return (a.index || 0) - (b.index || 0); })
+      .map(function(p) {
+        var info = (p.imageinfo && p.imageinfo[0]) || null;
+        if (!info || !info.thumburl) return null;
+        return {
+          title:   (p.title || '').replace(/^File:/, '').replace(/^Fichier:/, ''),
+          thumb:   info.thumburl,          /* URL /thumb/.../800px-… → écrite dans events.json */
+          page:    info.descriptionurl,
+          desc:    cmMeta(info, 'ImageDescription'),
+          objet:   cmMeta(info, 'ObjectName'),
+          auteur:  cmMeta(info, 'Artist'),
+          licence: cmMeta(info, 'LicenseShortName')
+        };
+      }).filter(Boolean);
+    cmResults = list;
+    if (!list.length) {
+      cmStatus(r.cat ? 'Catégorie « ' + r.cat + ' » vide ou introuvable — essayez la recherche par mots-clés.'
+                     : 'Aucune image trouvée. Reformulez la requête.', '#8B1A1A');
+      var box = document.getElementById('img-results'); if (box) box.style.display = 'none';
+      return;
+    }
+    cmStatus(list.length + ' image' + (list.length > 1 ? 's' : '') + (r.cat ? ' dans la catégorie « ' + r.cat + ' »' : '') + ' — cliquez pour choisir.', '#1A6B3C');
+    cmRender();
+  })
+  .catch(function(err) {
+    cmStatus('\u00c9chec de la recherche (' + err.message + '). R\u00e9essayez.', '#8B1A1A');
+  });
+}
+function cmRender() {
+  var box = document.getElementById('img-results');
+  if (!box) return;
+  var h = '<div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding:0.5rem;">';
+  cmResults.forEach(function(f, i) {
+    h += '<div onclick="cmPick(' + i + ')" title="' + wdEsc(f.title) + '" '
+      + 'style="width:104px;cursor:pointer;border:2px solid transparent;border-radius:4px;padding:2px;" '
+      + 'onmouseover="this.style.borderColor=\'#9A6B1A\'" onmouseout="this.style.borderColor=\'transparent\'">'
+      + '<img src="' + wdEsc(f.thumb) + '" alt="" loading="lazy" '
+      + 'style="width:100px;height:100px;object-fit:cover;border-radius:3px;background:#eee;display:block;">'
+      + '<div style="font-size:0.66rem;color:#7A6A52;line-height:1.2;margin-top:2px;overflow:hidden;'
+      + 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">' + wdEsc(f.title) + '</div>'
+      + '</div>';
+  });
+  h += '</div>';
+  box.innerHTML = h;
+  box.style.display = '';
+}
+function cmPick(i) {
+  var f = cmResults[i];
+  if (!f) return;
+  cmPicked = f;
+  document.getElementById('f-image').value = f.thumb;   /* format identique aux fiches existantes */
+  var det = document.getElementById('img-picked');
+  if (!det) return;
+  var credit = cmCredit(f);
+  var suggest = f.desc || f.objet || '';
+  det.innerHTML = '<div style="padding:0.5rem 0.6rem;font-size:0.8rem;">'
+    + '<div style="font-weight:600;color:var(--ink);">' + wdEsc(f.title) + '</div>'
+    + (f.auteur || f.licence
+        ? '<div style="color:#7A6A52;font-style:italic;">' + wdEsc(credit) + '</div>' : '')
+    + '<div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap;">'
+    + (suggest
+        ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmUseCaption()">Reprendre la description comme légende</button>' : '')
+    + (credit
+        ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmAddCredit()">Ajouter le crédit à la légende</button>' : '')
+    + '<a href="' + wdEsc(f.page || '') + '" target="_blank" rel="noopener" class="btn btn-secondary" '
+    + 'style="padding:0.15rem 0.6rem;font-size:0.76rem;text-decoration:none;">Fiche Commons \u2197</a>'
+    + '</div>'
+    + (suggest ? '<div style="margin-top:0.4rem;color:#7A6A52;">' + wdEsc(suggest.substring(0, 220)) + (suggest.length > 220 ? '\u2026' : '') + '</div>' : '')
+    + '</div>';
+  det.style.display = '';
+  cmStatus('Image plac\u00e9e dans le champ Image. Pensez \u00e0 Enregistrer.', '#1A6B3C');
+}
+function cmCredit(f) {
+  var parts = [];
+  if (f.auteur)  parts.push(f.auteur);
+  if (f.licence) parts.push(f.licence);
+  if (!parts.length) return '';
+  return parts.join(', ') + ' \u2014 Wikimedia Commons';
+}
+function cmUseCaption() {
+  if (!cmPicked) return;
+  var txt = (cmPicked.desc || cmPicked.objet || '').trim();
+  if (!txt) return;
+  document.getElementById('f-legende').value = txt.substring(0, 300);
+  cmStatus('L\u00e9gende reprise de Commons \u2014 relisez-la, elle est souvent en anglais.', '#9A6B1A');
+}
+function cmAddCredit() {
+  if (!cmPicked) return;
+  var credit = cmCredit(cmPicked);
+  if (!credit) return;
+  var el = document.getElementById('f-legende');
+  var cur = (el.value || '').trim();
+  if (cur.indexOf('Wikimedia Commons') !== -1) return;   /* crédit déjà présent */
+  el.value = (cur ? cur.replace(/\s*[.]?\s*$/, '. ') : '') + '(' + credit + ')';
+  cmStatus('Cr\u00e9dit ajout\u00e9 \u00e0 la l\u00e9gende.', '#1A6B3C');
+}
+
+function wdInit() {
+  wdRenderFiche();
+  wdBatchRender();
+  wdBatchProgress(0, 0, '');
+  cmReset();
+}
+
 initThemeButtons();
 initZones();
 initTypeRadios();
 resetForm();
 updateJSON();
+wdInit();
 </script>
 </body>
 </html>
