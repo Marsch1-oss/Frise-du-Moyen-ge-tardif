@@ -365,6 +365,22 @@
   <!-- ══ 4. Outils de navigation (sous la carte) ══ -->
   <div class="controls">
     <div class="controls-title">Navigation &amp; filtres</div>
+
+    <!-- Outils les plus utilisés placés en tête, juste sous la carte.
+         Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
+         événements). Visible uniquement en mode live : le bundle embarqué ne
+         contient pas ce champ — renderParcoursSelect() rétablit display:''. -->
+    <div class="ctrl-block" id="parcours-block" style="display:none">
+      <span class="ctrl-label">Parcours</span>
+      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
+        <option value="">— aucun —</option>
+      </select>
+    </div>
+    <div class="ctrl-block" id="theme-block">
+      <span class="ctrl-label">Thèmes</span>
+      <div class="chips" id="theme-chips"></div>
+    </div>
+
     <div class="ctrl-block">
       <span class="ctrl-label">Région</span>
       <div class="chips" id="region-chips"></div>
@@ -390,19 +406,6 @@
     <div class="ctrl-block" id="level-block">
       <span class="ctrl-label">Niveau de détail</span>
       <div class="chips" id="level-chips"></div>
-    </div>
-    <div class="ctrl-block" id="theme-block">
-      <span class="ctrl-label">Thèmes</span>
-      <div class="chips" id="theme-chips"></div>
-    </div>
-    <!-- Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
-         événements). Visible uniquement en mode live : le bundle embarqué ne
-         contient pas ce champ. -->
-    <div class="ctrl-block" id="parcours-block" style="display:none">
-      <span class="ctrl-label">Parcours</span>
-      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
-        <option value="">— aucun —</option>
-      </select>
     </div>
   </div>
   <div class="note" id="status-note"></div>
