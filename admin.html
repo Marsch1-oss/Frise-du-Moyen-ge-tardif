@@ -143,9 +143,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte + traduction</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte + traduction</div>
 
 <header>
   <div>
@@ -248,6 +248,11 @@
             </div>
             <div id="wp-result" style="display:none;border:1px solid #b8c8d4;border-radius:6px;background:#FBFDFE;margin-top:0.4rem;"></div>
           </div>
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
+            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.8rem;font-size:0.8rem;white-space:nowrap;" onclick="trField('f-desc','tr-desc-status','tr-desc-result')">&#127760; Traduire EN&rarr;FR</button>
+            <span id="tr-desc-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
+          </div>
+          <div id="tr-desc-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
       </div>
 
@@ -307,6 +312,11 @@
         <div class="field">
           <label>Légende de l'image</label>
           <input type="text" id="f-legende" placeholder="ex. Buste de Philippe le Bel">
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
+            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.8rem;font-size:0.8rem;white-space:nowrap;" onclick="trField('f-legende','tr-leg-status','tr-leg-result')">&#127760; Traduire EN&rarr;FR</button>
+            <span id="tr-leg-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
+          </div>
+          <div id="tr-leg-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
       </div>
       <div class="field-row single">
@@ -787,6 +797,7 @@ function fillForm(evt) {
   wdFicheStatus('');
   cmReset();
   wpReset();
+  trReset();
     var _sParts = (evt.serie || '').split('|').map(function(s){return s.trim();});
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id, i) {
     var el = document.getElementById(id);
@@ -836,6 +847,7 @@ function resetForm() {
   wdFicheStatus('');
   cmReset();
   wpReset();
+  trReset();
   document.getElementById('btn-delete').style.display = 'none';
   renderList();
 }
@@ -2805,12 +2817,148 @@ function wpReset() {
   wpStatus('');
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   TRADUCTION EN → FR
+   ───────────────────────────────────────────────────────────────────────────
+   Comme les autres modules : l'API n'est appelée QU'ICI, à l'édition. Seul le
+   texte traduit — que vous relisez et corrigez — finit dans events.json.
+
+   Service : MyMemory (api.mymemory.translated.net) — gratuit, sans clé, CORS
+   ouvert. Chaque requête est limitée à ~500 caractères en anonyme : les longs
+   textes (intro Wikipédia) sont donc découpés en phrases, traduits par
+   morceaux, puis recollés en préservant les sauts de paragraphe.
+
+   ⚠ Qualité « à relire » : traduction automatique. Sur le vocabulaire médiéval
+     (dignités, toponymes, termes d'art) elle se trompe volontiers. Le bouton
+     fait le gros du travail ; vous ajustez avant d'enregistrer. L'original
+     reste récupérable tant que la fiche n'est pas enregistrée.
+   ═══════════════════════════════════════════════════════════════════════════ */
+var TR_API   = 'https://api.mymemory.translated.net/get';
+var TR_LIMIT = 480;          /* marge sous la limite ~500 car. de MyMemory */
+var TR_DELAY = 250;          /* courtoisie entre deux appels */
+var _trState = {};           /* par champ : { original, translated } */
+
+function trSleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+
+/* Découpe un texte en segments < TR_LIMIT, sans couper au milieu d'une phrase
+   quand c'est possible. Les \n\n (paragraphes) sont préservés comme segments. */
+function trSplit(text) {
+  var segs = [];
+  text.split(/(\n{2,})/).forEach(function(part) {
+    if (/^\n{2,}$/.test(part)) { segs.push({ sep: part }); return; }
+    if (part.length <= TR_LIMIT) { if (part.length) segs.push({ txt: part }); return; }
+    /* trop long : découpe par phrases, en regroupant sous la limite */
+    var phrases = part.match(/[^.!?…]+[.!?…]+|\s*[^.!?…]+$/g) || [part];
+    var buf = '';
+    phrases.forEach(function(ph) {
+      if ((buf + ph).length > TR_LIMIT) {
+        if (buf) segs.push({ txt: buf });
+        if (ph.length > TR_LIMIT) {                 /* phrase géante : coupe dure par mots */
+          var words = ph.split(/(\s+)/), w = '';
+          words.forEach(function(tok) {
+            if ((w + tok).length > TR_LIMIT) { if (w) segs.push({ txt: w }); w = tok; }
+            else w += tok;
+          });
+          buf = w;
+        } else buf = ph;
+      } else buf += ph;
+    });
+    if (buf) segs.push({ txt: buf });
+  });
+  return segs;
+}
+
+function trOne(text) {
+  var url = TR_API + '?langpair=en|fr&q=' + encodeURIComponent(text);
+  return fetch(url)
+    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(d) {
+      var t = d && d.responseData && d.responseData.translatedText;
+      if (t == null) throw new Error('réponse vide');
+      /* MyMemory renvoie parfois un avertissement de quota dans le texte */
+      if (/MYMEMORY WARNING|QUOTA/i.test(t)) throw new Error('quota journalier atteint');
+      return t;
+    });
+}
+
+/* Traduit un champ (id textarea/input). Affiche l'aperçu, ne remplace pas seul. */
+function trField(fieldId, statusId, resultId) {
+  var el = document.getElementById(fieldId);
+  var original = (el.value || '').trim();
+  if (!original) { trStatus(statusId, 'Ce champ est vide.', '#8B1A1A'); return; }
+  trStatus(statusId, 'Traduction en cours\u2026');
+  var box = document.getElementById(resultId); if (box) box.style.display = 'none';
+
+  var segs = trSplit(original);
+  var parts = new Array(segs.length);
+  var chain = Promise.resolve();
+  var idx = 0, total = segs.filter(function(s){ return s.txt != null; }).length, done = 0;
+
+  segs.forEach(function(s, i) {
+    if (s.sep != null) { parts[i] = s.sep; return; }   /* séparateur de paragraphe */
+    chain = chain
+      .then(function() { return idx++ ? trSleep(TR_DELAY) : null; })
+      .then(function() { return trOne(s.txt); })
+      .then(function(t) {
+        parts[i] = t; done++;
+        if (total > 1) trStatus(statusId, 'Traduction\u2026 ' + done + '/' + total + ' segment(s)');
+      });
+  });
+
+  chain.then(function() {
+    var translated = parts.join('');
+    _trState[fieldId] = { original: original, translated: translated };
+    trStatus(statusId, 'Traduction prête — relisez avant de remplacer.', '#1A6B3C');
+    trShow(fieldId, resultId, translated);
+  }).catch(function(err) {
+    trStatus(statusId, 'Échec de la traduction (' + err.message + ').', '#8B1A1A');
+  });
+}
+
+function trStatus(id, msg, color) {
+  var el = document.getElementById(id);
+  if (el) { el.textContent = msg || ''; el.style.color = color || '#7A6A52'; }
+}
+function trShow(fieldId, resultId, translated) {
+  var box = document.getElementById(resultId); if (!box) return;
+  box.innerHTML = '<div style="padding:0.5rem 0.6rem;">'
+    + '<div style="font-size:0.82rem;line-height:1.45;white-space:pre-wrap;max-height:200px;overflow-y:auto;'
+    + 'background:#FBFDF9;border:1px solid #d8e0d2;border-radius:5px;padding:0.5rem;">' + wdEsc(translated) + '</div>'
+    + '<div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.5rem;">'
+    + '<button type="button" class="btn" style="padding:0.2rem 0.8rem;font-size:0.79rem;" onclick="trApply(\'' + fieldId + '\',\'' + resultId + '\')">\u2193 Remplacer par la traduction</button>'
+    + '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.8rem;font-size:0.79rem;" onclick="trRestore(\'' + fieldId + '\',\'' + resultId + '\')">\u21ba Revenir à l\'original</button>'
+    + '</div>'
+    + '<div style="font-size:0.72rem;color:#9A8A6A;font-style:italic;margin-top:0.35rem;">Traduction automatique (MyMemory) — à relire, surtout le vocabulaire médiéval.</div>'
+    + '</div>';
+  box.style.display = '';
+}
+function trApply(fieldId, resultId) {
+  var st = _trState[fieldId]; if (!st) return;
+  document.getElementById(fieldId).value = st.translated;
+  var box = document.getElementById(resultId); if (box) box.style.display = 'none';
+}
+function trRestore(fieldId, resultId) {
+  var st = _trState[fieldId]; if (!st) return;
+  document.getElementById(fieldId).value = st.original;
+  var box = document.getElementById(resultId); if (box) box.style.display = 'none';
+}
+function trReset() {
+  _trState = {};
+  ['tr-desc-result', 'tr-leg-result'].forEach(function(id) {
+    var b = document.getElementById(id); if (b) { b.style.display = 'none'; b.innerHTML = ''; }
+  });
+  ['tr-desc-status', 'tr-leg-status'].forEach(function(id) {
+    var s = document.getElementById(id); if (s) s.textContent = '';
+  });
+}
+
 function wdInit() {
   wdRenderFiche();
   wdBatchRender();
   wdBatchProgress(0, 0, '');
   cmReset();
   wpReset();
+  trReset();
 }
 
 initThemeButtons();
