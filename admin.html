@@ -2434,6 +2434,7 @@ var CM_WIDTH = 800;   /* largeur de la vignette écrite dans events.json */
 
 var cmResults = [];   /* dernier lot de résultats */
 var cmPicked  = null; /* fichier sélectionné */
+var cmPickedIndex = null; /* index du fichier sélectionné (pour re-render) */
 
 function cmFetch(params) {
   var qs = Object.keys(params).map(function(k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
@@ -2486,7 +2487,7 @@ function cmPrefill() {
   if (inp && !inp.value.trim()) inp.value = cmDefaultQuery();
 }
 function cmReset() {
-  cmResults = []; cmPicked = null;
+  cmResults = []; cmPicked = null; cmPickedIndex = null;
   var inp = document.getElementById('f-img-search'); if (inp) inp.value = '';
   var box = document.getElementById('img-results'); if (box) { box.style.display = 'none'; box.innerHTML = ''; }
   var det = document.getElementById('img-picked'); if (det) { det.style.display = 'none'; det.innerHTML = ''; }
@@ -2566,27 +2567,46 @@ function cmPick(i) {
   var f = cmResults[i];
   if (!f) return;
   cmPicked = f;
+  cmPickedIndex = i;
   document.getElementById('f-image').value = f.thumb;   /* format identique aux fiches existantes */
   var det = document.getElementById('img-picked');
   if (!det) return;
   var credit = cmCredit(f);
-  var suggest = f.desc || f.objet || '';
+  var srcCaption = f.desc || f.objet || '';
+  var suggest = f.descFr || srcCaption;   /* affiche la version FR si déjà traduite */
+  var isFr = !!f.descFr;
   det.innerHTML = '<div style="padding:0.5rem 0.6rem;font-size:0.8rem;">'
     + '<div style="font-weight:600;color:var(--ink);">' + wdEsc(f.title) + '</div>'
     + (f.auteur || f.licence
         ? '<div style="color:#7A6A52;font-style:italic;">' + wdEsc(credit) + '</div>' : '')
     + '<div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap;">'
     + (suggest
-        ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmUseCaption()">Reprendre la description comme légende</button>' : '')
+        ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmUseCaption()">Reprendre la description comme légende' + (isFr ? ' (FR)' : '') + '</button>' : '')
+    + (srcCaption
+        ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmTranslateCaption()">\uD83C\uDF10 ' + (isFr ? 'Retraduire' : 'Traduire EN\u2192FR') + '</button>' : '')
     + (credit
         ? '<button type="button" class="btn btn-secondary" style="padding:0.15rem 0.6rem;font-size:0.76rem;" onclick="cmAddCredit()">Ajouter le crédit à la légende</button>' : '')
     + '<a href="' + wdEsc(f.page || '') + '" target="_blank" rel="noopener" class="btn btn-secondary" '
     + 'style="padding:0.15rem 0.6rem;font-size:0.76rem;text-decoration:none;">Fiche Commons \u2197</a>'
     + '</div>'
-    + (suggest ? '<div style="margin-top:0.4rem;color:#7A6A52;">' + wdEsc(suggest.substring(0, 220)) + (suggest.length > 220 ? '\u2026' : '') + '</div>' : '')
+    + (suggest ? '<div style="margin-top:0.4rem;color:#7A6A52;">' + (isFr ? '<span style="color:#1A6B3C;font-style:italic;">Traduit : </span>' : '') + wdEsc(suggest.substring(0, 220)) + (suggest.length > 220 ? '\u2026' : '') + '</div>' : '')
     + '</div>';
   det.style.display = '';
   cmStatus('Image plac\u00e9e dans le champ Image. Pensez \u00e0 Enregistrer.', '#1A6B3C');
+}
+/* Traduit la description Commons (souvent en anglais) puis la propose en FR. */
+function cmTranslateCaption() {
+  if (!cmPicked) return;
+  var src = (cmPicked.desc || cmPicked.objet || '').trim();
+  if (!src) return;
+  cmStatus('Traduction de la description\u2026');
+  trTranslate(src, function(done, total) { if (total > 1) cmStatus('Traduction\u2026 ' + done + '/' + total); })
+    .then(function(fr) {
+      cmPicked.descFr = fr;
+      if (cmPickedIndex != null) cmPick(cmPickedIndex);   /* ré-affiche avec la version FR */
+      cmStatus('Description traduite — « Reprendre » posera la version fran\u00e7aise.', '#1A6B3C');
+    })
+    .catch(function(err) { cmStatus('\u00c9chec de la traduction (' + err.message + ').', '#8B1A1A'); });
 }
 function cmCredit(f) {
   var parts = [];
@@ -2597,10 +2617,13 @@ function cmCredit(f) {
 }
 function cmUseCaption() {
   if (!cmPicked) return;
-  var txt = (cmPicked.desc || cmPicked.objet || '').trim();
+  var txt = (cmPicked.descFr || cmPicked.desc || cmPicked.objet || '').trim();
   if (!txt) return;
   document.getElementById('f-legende').value = txt.substring(0, 300);
-  cmStatus('L\u00e9gende reprise de Commons \u2014 relisez-la, elle est souvent en anglais.', '#9A6B1A');
+  cmStatus(cmPicked.descFr
+    ? 'L\u00e9gende (traduite) reprise de Commons \u2014 relisez-la.'
+    : 'L\u00e9gende reprise de Commons \u2014 relisez-la, elle est souvent en anglais.',
+    cmPicked.descFr ? '#1A6B3C' : '#9A6B1A');
 }
 function cmAddCredit() {
   if (!cmPicked) return;
@@ -2881,6 +2904,24 @@ function trOne(text) {
     });
 }
 
+/* Traduit un texte complet (avec découpage/recollage). onProgress(done,total)
+   est optionnel. Réutilisé par le champ Légende/Description ET par le module
+   Commons (traduction de la description d'image). */
+function trTranslate(text, onProgress) {
+  var segs = trSplit(text);
+  var parts = new Array(segs.length);
+  var total = segs.filter(function(s){ return s.txt != null; }).length, done = 0, idx = 0;
+  var chain = Promise.resolve();
+  segs.forEach(function(s, i) {
+    if (s.sep != null) { parts[i] = s.sep; return; }
+    chain = chain
+      .then(function() { return idx++ ? trSleep(TR_DELAY) : null; })
+      .then(function() { return trOne(s.txt); })
+      .then(function(t) { parts[i] = t; done++; if (onProgress) onProgress(done, total); });
+  });
+  return chain.then(function() { return parts.join(''); });
+}
+
 /* Traduit un champ (id textarea/input). Affiche l'aperçu, ne remplace pas seul. */
 function trField(fieldId, statusId, resultId) {
   var el = document.getElementById(fieldId);
@@ -2888,25 +2929,9 @@ function trField(fieldId, statusId, resultId) {
   if (!original) { trStatus(statusId, 'Ce champ est vide.', '#8B1A1A'); return; }
   trStatus(statusId, 'Traduction en cours\u2026');
   var box = document.getElementById(resultId); if (box) box.style.display = 'none';
-
-  var segs = trSplit(original);
-  var parts = new Array(segs.length);
-  var chain = Promise.resolve();
-  var idx = 0, total = segs.filter(function(s){ return s.txt != null; }).length, done = 0;
-
-  segs.forEach(function(s, i) {
-    if (s.sep != null) { parts[i] = s.sep; return; }   /* séparateur de paragraphe */
-    chain = chain
-      .then(function() { return idx++ ? trSleep(TR_DELAY) : null; })
-      .then(function() { return trOne(s.txt); })
-      .then(function(t) {
-        parts[i] = t; done++;
-        if (total > 1) trStatus(statusId, 'Traduction\u2026 ' + done + '/' + total + ' segment(s)');
-      });
-  });
-
-  chain.then(function() {
-    var translated = parts.join('');
+  trTranslate(original, function(done, total) {
+    if (total > 1) trStatus(statusId, 'Traduction\u2026 ' + done + '/' + total + ' segment(s)');
+  }).then(function(translated) {
     _trState[fieldId] = { original: original, translated: translated };
     trStatus(statusId, 'Traduction prête — relisez avant de remplacer.', '#1A6B3C');
     trShow(fieldId, resultId, translated);
