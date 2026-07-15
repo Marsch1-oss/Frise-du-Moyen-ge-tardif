@@ -874,7 +874,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.8rem;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
       text-align: center;
       margin-bottom: 0.6rem;
       padding: 0.5rem 1rem;
@@ -886,7 +887,11 @@
       box-shadow: 0 3px 12px rgba(100,80,40,0.22);
       backdrop-filter: blur(3px);
     }
-    #period-banner .pb-center { flex: 1 1 auto; min-width: 0; }
+    /* Le titre occupe toujours sa propre ligne, en tête du bandeau ; les
+       commandes (navigation de période, puis barre Affichage) suivent en
+       dessous. Ce comportement, jadis réservé au mobile, est désormais permanent
+       — un titre serré entre les deux boutons se lisait mal. */
+    #period-banner .pb-center { flex: 1 1 100%; order: -1; min-width: 0; text-align: center; }
     /* Boutons de période, à portée immédiate au-dessus de la frise */
     #period-banner .pb-nav {
       flex: 0 0 auto;
@@ -896,8 +901,6 @@
       white-space: nowrap;
     }
     @media (max-width: 760px) {
-      #period-banner { flex-wrap: wrap; }
-      #period-banner .pb-center { order: -1; flex-basis: 100%; }
       #period-banner .pb-nav { flex: 1 1 45%; font-size: 0.78rem; padding: 0.25rem 0.5rem; }
     }
     #period-banner .pb-label {
