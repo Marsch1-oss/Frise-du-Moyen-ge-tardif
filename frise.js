@@ -1,5 +1,5 @@
 
-/* frise.js — Frise chronologique medievale 1300-1500 */
+/* frise.js — Frise chronologique medievale 1300-1500 — 2026-07-14 : fil d'Ariane retiré + THEME_KEYWORDS synchronisé (art) */
 
 var ZONES = [
   'France', 'Angleterre', 'St Empire',
@@ -346,7 +346,6 @@ function renderLevel(level, rangeStart) {
     start = rangeStart; end = rangeStart + 1; tickStep = 0.0833;
   }
 
-  updateBreadcrumb();
   updateNavButtons();
   updateSyntheseBar();
   updatePeriodBanner(level, rangeStart || 1300);
@@ -1451,6 +1450,7 @@ var THEME_DEFS = {
   'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
 var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+/* GARDER SYNCHRONISÉ avec carte.html et admin.html (THEME_KEYWORDS identiques). */
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -1459,6 +1459,7 @@ var THEME_KEYWORDS = {
   'economie':    ['monnaie','exportation','dévaluation'],
   'idees':       ['université'],
   'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
@@ -3165,16 +3166,16 @@ function navigatePeriod(direction) {
   }
 }
 
-function updateBreadcrumb() {
-  var html = '<span class="bc-item bc-link" onclick="goLevel(1)">1300\u20131500</span>';
-  if (currentLevel >= 2 && currentCentury !== null)
-    html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(2)">' + currentCentury + '\u2013' + (currentCentury + 100) + '</span>';
-  if (currentLevel >= 3 && currentDecade !== null)
-    html += '<span class="bc-sep"> \u203a </span><span class="bc-item bc-link" onclick="goLevel(3)">' + currentDecade + '\u2013' + (currentDecade + 10) + '</span>';
-  if (currentLevel === 4 && currentYear !== null)
-    html += '<span class="bc-sep"> \u203a </span><span class="bc-item">' + currentYear + '</span>';
-  document.getElementById('breadcrumb').innerHTML = html;
-}
+/* Fil d'Ariane RETIRÉ (2026-07-14) : il était redondant sur les deux plans.
+   — Indication de position : déjà donnée par le bandeau collant #period-banner
+     (pb-label + pb-sub), avec en prime les bornes exactes de la décennie.
+   — Navigation vers le haut : déjà assurée par les boutons « Vue d'ensemble /
+     Vue siècle / Vue décennale / Vue annuelle » (goLevel), toujours visibles.
+   Il introduisait aussi une incohérence de bornes (« 1310–1320 » ici contre
+   « 1310 – 1319 » dans le bandeau). Fonction conservée en no-op pour ne pas
+   casser d'éventuels appels ; NE PAS réintroduire sans lever ces doublons.
+   GARDER : la div #breadcrumb (index.html) et sa règle CSS ont été retirées. */
+function updateBreadcrumb() { /* volontairement vide — voir commentaire ci-dessus */ }
 
 function updateNavButtons() {
   /* Surbrillance et activation par identifiant (évite le décalage d'index) */
