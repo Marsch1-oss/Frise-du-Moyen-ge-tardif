@@ -91,6 +91,11 @@
     .btn-primary:hover { background: #3A2A18; }
     .btn-secondary { background: transparent; color: var(--ink-soft); border-color: var(--border-dark); }
     .btn-secondary:hover { background: var(--parchment-dk); }
+    .geo-view-btn { font-family: 'Crimson Pro', serif; font-size: 0.76rem; padding: 0.15rem 0.6rem;
+      border: 1px solid var(--border-dark); border-radius: 12px; background: transparent;
+      color: var(--ink-soft); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+    .geo-view-btn:hover { background: var(--parchment-dk); }
+    .geo-view-btn.active { background: var(--gold, #9A6B1A); color: #fff; border-color: var(--gold, #9A6B1A); font-weight: 600; }
     .btn-danger { background: transparent; color: var(--red); border-color: var(--red); }
     .btn-danger:hover { background: var(--red); color: #fff; }
     .btn-success { background: var(--green); color: #fff; border-color: var(--green); }
@@ -138,9 +143,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte</div>
 
 <header>
   <div>
@@ -353,6 +358,7 @@
               Sans coordonn&eacute;es (repli sur la zone assum&eacute; &mdash; relu)
             </label>
           </div>
+          <div id="geo-view-btns" style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.4rem;"></div>
           <div style="position:relative;border:1.5px solid #c9b896;border-radius:6px;overflow:hidden;background:#D9CFB2;">
             <svg id="geo-map" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:230px;cursor:crosshair;" preserveAspectRatio="xMidYMid meet"></svg>
             <div style="position:absolute;left:6px;bottom:4px;font-size:0.68rem;color:#7A6A52;font-style:italic;background:rgba(251,246,233,0.8);padding:0 0.4rem;border-radius:4px;pointer-events:none;">Cliquez sur la carte pour poser le point</div>
@@ -1726,6 +1732,41 @@ function geoFitZones(){
   if(h < w*0.5) h=w*0.5; if(w < h*1.4) w=h*1.4;
   geoView={ x:x0-padX, y:y0-padY, w:w, h:h }; geoRender();
 }
+
+/* ── Vues régionales prédéfinies ─────────────────────────────────────────────
+   La mini-carte couvre le monde entier (GEO_LAND) ; seul le cadrage (geoView)
+   était bloqué sur l'Europe. Ces vues permettent de recadrer sur n'importe
+   quelle région pour y pointer un lieu à la main. Bornes en lat/lng, converties
+   en viewBox via geoProj — même projection équirectangulaire que le fond. */
+var GEO_VIEWS = {
+  monde:   { label:'🌍 Monde',          latN:78,  latS:-56, lngW:-135, lngE:162 },
+  europe:  { label:'Europe',            latN:63,  latS:34,  lngW:-13,  lngE:32  },
+  medit:   { label:'Méditerranée',      latN:48,  latS:20,  lngW:-11,  lngE:42  },
+  orient:  { label:'Proche & Moyen-Orient', latN:46, latS:11, lngW:24, lngE:66 },
+  afrique: { label:'Afrique',           latN:38,  latS:-35, lngW:-19,  lngE:52  },
+  asie:    { label:'Asie',              latN:55,  latS:5,   lngW:64,   lngE:146 },
+  amerique:{ label:'Amérique',          latN:60,  latS:-55, lngW:-130, lngE:-34 }
+};
+var GEO_VIEW_ORDER = ['monde','europe','medit','orient','afrique','asie','amerique'];
+
+function geoViewFromBounds(b){
+  var tl = geoProj(b.latN, b.lngW), br = geoProj(b.latS, b.lngE);
+  return { x:tl.x, y:tl.y, w:br.x-tl.x, h:br.y-tl.y };
+}
+function geoSetView(key){
+  var v = GEO_VIEWS[key]; if(!v) return;
+  geoView = geoViewFromBounds(v);
+  geoRender();
+  document.querySelectorAll('#geo-view-btns .geo-view-btn').forEach(function(b){
+    b.classList.toggle('active', b.dataset.view === key);
+  });
+}
+function geoBuildViewButtons(){
+  var box = document.getElementById('geo-view-btns'); if(!box) return;
+  box.innerHTML = GEO_VIEW_ORDER.map(function(k){
+    return '<button type="button" class="geo-view-btn" data-view="'+k+'" onclick="geoSetView(\''+k+'\')">'+GEO_VIEWS[k].label+'</button>';
+  }).join('');
+}
 /* ── Recherche d'un lieu par son nom (géocodage Nominatim / OpenStreetMap) ── */
 function geoSearchStatus(msg, color){
   var el = document.getElementById('geo-search-status'); if(!el) return;
@@ -1888,6 +1929,7 @@ function geoBindMap(){
   });
 }
 geoBindMap();
+geoBuildViewButtons();
 
 /* ═══════════════════════════════════════════════════════════════════════════
    ENRICHISSEMENT WIKIDATA
