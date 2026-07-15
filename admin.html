@@ -143,9 +143,9 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte + traduction</div>
+<div style="position:fixed;top:4px;right:8px;font-size:0.7rem;color:#999;z-index:9999;background:rgba(255,255,255,0.8);padding:2px 8px;border-radius:6px;">admin v.2026-07-15 — recherche améliorée (scoring + QID article + localisation lieu)</div>
 
-  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-14 — wikidata + commons + wikipedia + vues carte + traduction</div>
+  <div style="position:fixed;top:2px;right:6px;font-size:0.7rem;color:#999;z-index:9999;">admin v.2026-07-15 — recherche améliorée (scoring + QID article + localisation lieu)</div>
 
 <header>
   <div>
@@ -2034,6 +2034,32 @@ var wdBatch   = { running:false, stop:false, rows:[] };
 function wdNorm(s) {
   return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
+
+/* ── Rapprochement titre ↔ candidat par mots-clés communs ────────────────────
+   Remplace l'ancien « le libellé doit être littéralement contenu dans le titre »
+   (tout-ou-rien), qui échouait dès que la formulation différait (« Jacques Ier
+   de Chypre » vs « Jacques de Lusignan roi de Chypres »). On compte les mots
+   significatifs communs, avec normalisation (accents, casse, pluriel simple),
+   en ignorant les mots-outils. */
+var FT_STOP = { de:1, du:1, des:1, la:1, le:1, les:1, un:1, une:1, et:1, en:1,
+  dans:1, sur:1, par:1, pour:1, au:1, aux:1, ou:1, ler:1, ii:1, iii:1, iv:1,
+  roi:1, reine:1, empereur:1, duc:1, comte:1, pape:1, saint:1, sainte:1 };
+function ftTokens(str) {
+  return wdNorm(str).split(/[^a-z0-9]+/).filter(function(w) {
+    return w.length >= 3 && !FT_STOP[w];
+  }).map(function(w) { return w.replace(/s$/, ''); });   /* pluriel simple : chypres → chypre */
+}
+/* Score d'un candidat vis-à-vis du titre de la fiche : nombre de mots-clés
+   communs (le signal fort), + une fraction du ratio pour départager. */
+function ftScore(candidat, titre) {
+  var a = ftTokens(candidat), b = ftTokens(titre);
+  if (!a.length || !b.length) return 0;
+  var setB = {}; b.forEach(function(t) { setB[t] = 1; });
+  var common = 0, seen = {};
+  a.forEach(function(t) { if (setB[t] && !seen[t]) { common++; seen[t] = 1; } });
+  return common + (common / a.length) * 0.4;
+}
+
 function wdSleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 function wdEsc(s) {
   return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -2144,29 +2170,27 @@ function wdQueries(titre) {
    « sûr » = le libellé de l'élément trouvé apparaît tel quel dans le titre.
    Sinon on garde le premier résultat comme piste à vérifier (non cochée). */
 function wdMatch(titre) {
-  var qs = wdQueries(titre), nTitle = wdNorm(titre), fallback = null;
-  var chain = Promise.resolve(null);
+  var qs = wdQueries(titre);
+  var best = null, bestScore = 0;
+  var chain = Promise.resolve();
   qs.forEach(function(q) {
-    chain = chain.then(function(found) {
-      if (found) return found;
-      return wdSleep(WD_DELAY)
-        .then(function() { return wdSearch(q); })
-        .then(function(res) {
-          for (var j = 0; j < res.length; j++) {
-            var lab = wdNorm(res[j].label);
-            if (lab && nTitle.indexOf(lab) !== -1) {
-              return { id:res[j].id, label:res[j].label, desc:res[j].description || '', sure:true };
-            }
-          }
-          if (!fallback && res.length) {
-            fallback = { id:res[0].id, label:res[0].label, desc:res[0].description || '', sure:false };
-          }
-          return null;
-        })
-        .catch(function() { return null; });
-    });
+    chain = chain.then(function() { return wdSleep(WD_DELAY); })
+      .then(function() { return wdSearch(q); })
+      .then(function(res) {
+        res.forEach(function(r) {
+          /* on note le libellé, et un peu la description (souvent « roi de
+             Chypre », « peintre italien »… : de bons mots-clés). */
+          var sc = ftScore(r.label, titre) + (r.description ? ftScore(r.description, titre) * 0.5 : 0);
+          if (sc > bestScore) { bestScore = sc; best = { id:r.id, label:r.label, desc:r.description || '' }; }
+        });
+      })
+      .catch(function() {});
   });
-  return chain.then(function(found) { return found || fallback; });
+  return chain.then(function() {
+    if (!best || bestScore < 1) return best ? (best.sure = false, best) : null;
+    best.sure = bestScore >= 1.8;
+    return best;
+  });
 }
 
 /* — Proposition complète pour une fiche ——————————————————————————— */
@@ -2185,16 +2209,60 @@ function wdPropose(titre) {
   }).then(function(hit) {
     if (!hit) return null;
     return wdThemeOf(hit.ent).then(function(theme) {
-      return {
+      var coord = wdClaimCoord(hit.ent);
+      var base = {
         qid:   hit.m.id,
         label: hit.m.label,
         desc:  hit.m.desc,
         sure:  hit.m.sure,
         theme: theme,
-        coord: wdClaimCoord(hit.ent),
         image: wdClaimImage(hit.ent)
       };
+      if (coord) { base.coord = coord; return base; }
+      /* Pas de coordonnées : l'entité est sans doute une personne (un roi n'a
+         pas de P625). On tente alors de localiser le LIEU cité dans le titre. */
+      return wdLocateFromTitle(titre, hit.m.id, hit.m.label + ' ' + hit.m.desc).then(function(loc) {
+        if (loc) { base.coord = loc.coord; base.coordFrom = loc.label; }
+        return base;
+      });
     });
+  });
+}
+
+/* Cherche un lieu (entité avec P625) parmi les noms propres du titre, autre que
+   l'entité principale. « Jacques de Lusignan roi de Chypres » → Chypre (et non
+   Lusignan, la commune d'origine de la famille). On privilégie le lieu qui
+   apparaît dans le libellé/description de l'entité (« roi de Chypre »), puis
+   celui cité le plus tard dans le titre. */
+function wdLocateFromTitle(titre, mainId, ctx) {
+  var qs = wdQueries(titre).filter(function(q) { return q !== titre; });
+  if (!qs.length) return Promise.resolve(null);
+  var nCtx = wdNorm(ctx || ''), found = [];
+  var chain = Promise.resolve();
+  qs.forEach(function(q, order) {
+    chain = chain.then(function() { return wdSleep(WD_DELAY); })
+      .then(function() { return wdSearch(q); })
+      .then(function(res) {
+        var cand = res.filter(function(r) { return r.id !== mainId; }).slice(0, 2);
+        if (!cand.length) return;
+        return wdSleep(WD_DELAY)
+          .then(function() { return wdEntities(cand.map(function(r) { return r.id; })); })
+          .then(function(ents) {
+            cand.forEach(function(r) {
+              var c = ents[r.id] && wdClaimCoord(ents[r.id]);
+              if (c) found.push({ coord:c, label:r.label, inCtx: nCtx.indexOf(wdNorm(r.label)) !== -1, order:order });
+            });
+          });
+      })
+      .catch(function() {});
+  });
+  return chain.then(function() {
+    if (!found.length) return null;
+    found.sort(function(a, b) {
+      if (a.inCtx !== b.inCtx) return a.inCtx ? -1 : 1;   /* lié à l'entité d'abord */
+      return b.order - a.order;                            /* sinon, le plus tardif dans le titre */
+    });
+    return found[0];
   });
 }
 
@@ -2253,6 +2321,7 @@ function wdShowProposal(p) {
         : '<span style="color:#9A8A6A;">Th\u00e8me : non d\u00e9duit</span>') + '</div>';
   h += '<div>' + (p.coord
         ? 'Coordonn\u00e9es : <strong>' + p.coord.lat + ', ' + p.coord.lng + '</strong>'
+          + (p.coordFrom ? ' <span style="color:#9A6B1A;font-style:italic;">(lieu : ' + wdEsc(p.coordFrom) + ')</span>' : '')
           + ' <button type="button" class="btn btn-secondary" style="padding:0.1rem 0.5rem;font-size:0.75rem;" onclick="wdApplyOne(\'geo\')">Appliquer</button>'
         : '<span style="color:#9A8A6A;">Coordonn\u00e9es : absentes</span>') + '</div>';
   h += '<div>' + (p.image
@@ -2704,12 +2773,15 @@ function wpResolveTitle() {
     if (!titre) return null;
     return wpSearchTitle(titre).then(function(res) {
       if (!res.length) return null;
-      var nT = wdNorm(titre);
-      for (var i = 0; i < res.length; i++) {
-        var nR = wdNorm(res[i].title);
-        if (nR && (nT.indexOf(nR) !== -1 || nR.indexOf(nT) !== -1)) return { title: res[i].title, sure: true };
-      }
-      return { title: res[0].title, sure: false };
+      /* On note chaque résultat par ses mots-clés communs avec le titre de la
+         fiche, et on retient le meilleur — au lieu de prendre bêtement le 1er. */
+      var best = null, bestScore = 0;
+      res.forEach(function(r) {
+        var sc = ftScore(r.title, titre);
+        if (sc > bestScore) { bestScore = sc; best = r; }
+      });
+      if (best && bestScore >= 1) return { title: best.title, sure: bestScore >= 1.8 };
+      return { title: res[0].title, sure: false };   /* rien ne recoupe : 1er résultat, à vérifier */
     });
   });
 }
@@ -2717,9 +2789,9 @@ function wpResolveTitle() {
 /* Extrait (intro ou article complet) + vignette + URL canonique. */
 function wpExtract(title, introOnly) {
   var params = {
-    action: 'query', prop: 'extracts|pageimages|info', inprop: 'url',
-    titles: title, explaintext: 1, redirects: 1,
-    piprop: 'thumbnail', pithumbsize: 320
+    action: 'query', prop: 'extracts|pageimages|info|pageprops', inprop: 'url',
+    ppprop: 'wikibase_item', titles: title, explaintext: 1, redirects: 1,
+    piprop: 'thumbnail', pithumbsize: 400
   };
   if (introOnly) params.exintro = 1;
   return wpFetch(WP_API, params).then(function(d) {
@@ -2732,7 +2804,8 @@ function wpExtract(title, introOnly) {
       title:   p.title || title,
       url:     p.canonicalurl || p.fullurl || wpArticleUrl(p.title || title),
       text:    (p.extract || '').trim(),
-      thumb:   (p.thumbnail && p.thumbnail.source) || ''
+      thumb:   (p.thumbnail && p.thumbnail.source) || '',
+      qid:     (p.pageprops && p.pageprops.wikibase_item) || ''   /* QID de l'article */
     };
   });
 }
@@ -2746,7 +2819,7 @@ function wpLookupFiche() {
     if (!r) { wpStatus('Aucun article Wikipédia trouvé pour ce titre.', '#8B1A1A'); return; }
     return wpSleep(WP_DELAY).then(function() { return wpExtract(r.title, true); }).then(function(ex) {
       if (!ex || !ex.text) { wpStatus('Article « ' + r.title +' » sans introduction exploitable.', '#8B1A1A'); return; }
-      _wpCurrent = { title: ex.title, url: ex.url, intro: ex.text, full: null, thumb: ex.thumb, sure: r.sure };
+      _wpCurrent = { title: ex.title, url: ex.url, intro: ex.text, full: null, thumb: ex.thumb, qid: ex.qid, sure: r.sure };
       wpStatus(r.sure ? 'Article trouvé.' : 'Article approximatif — vérifiez qu\'il correspond.', r.sure ? '#1A6B3C' : '#9A6B1A');
       wpShow();
     });
@@ -2781,6 +2854,8 @@ function wpShow() {
     + '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpAppendDesc()">\u2795 Ajouter à la fin</button>'
     + '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpAddSource()">\uD83D\uDD17 Ajouter le lien aux sources</button>'
     + (c.full ? '' : '<button type="button" class="btn btn-secondary" id="wp-full-btn" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpLoadFull()">\uD83D\uDCC4 Charger l\'article complet</button>')
+    + (c.qid && c.qid !== wdFormQid ? '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpLinkWikidata()">\uD83D\uDD17 Lier à Wikidata (' + wdEsc(c.qid) + ')</button>' : '')
+    + (c.thumb ? '<button type="button" class="btn btn-secondary" style="padding:0.2rem 0.7rem;font-size:0.79rem;" onclick="wpUseImage()">\uD83D\uDDBC Utiliser cette image</button>' : '')
     + '</div>';
   h += '<div style="font-size:0.72rem;color:#9A8A6A;font-style:italic;margin-top:0.35rem;">'
     + 'Le texte inséré est une base à retravailler — reformulé, il devient le vôtre.</div>';
@@ -2838,6 +2913,23 @@ function wpReset() {
   _wpCurrent = null;
   var box = document.getElementById('wp-result'); if (box) { box.style.display = 'none'; box.innerHTML = ''; }
   wpStatus('');
+}
+/* Lie la fiche au QID trouvé sur l'article Wikipédia (bien plus fiable qu'une
+   recherche Wikidata floue) : de là, le module Wikidata peut déduire thème,
+   coordonnées et image. */
+function wpLinkWikidata() {
+  if (!_wpCurrent || !_wpCurrent.qid) return;
+  wdFormQid = _wpCurrent.qid;
+  if (typeof wdRenderFiche === 'function') wdRenderFiche();
+  wpShow();   /* le bouton « Lier » disparaît (déjà lié) */
+  wpStatus('Fiche liée à Wikidata (' + _wpCurrent.qid + '). Utilisez « Wikidata » pour thème/coordonnées, puis Enregistrer.', '#1A6B3C');
+}
+function wpUseImage() {
+  if (!_wpCurrent || !_wpCurrent.thumb) return;
+  var img = document.getElementById('f-image');
+  if (img && img.value.trim() && !confirm('Remplacer l\'image actuelle par celle de l\'article ?')) return;
+  if (img) img.value = _wpCurrent.thumb;
+  wpStatus('Image de l\'article placée dans le champ Image. Pensez à Enregistrer.', '#1A6B3C');
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
