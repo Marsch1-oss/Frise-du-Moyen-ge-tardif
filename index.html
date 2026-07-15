@@ -241,13 +241,14 @@
     /* ── Filtre zones ── */
     /* ── Barre de détail (niveau affichage) ── */
     #detail-bar {
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-top: 0.6rem; margin-bottom: 0.4rem;
-      padding: 0.3rem 0.8rem;
-      background: rgba(245,237,216,0.6);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      flex-wrap: wrap;
+      /* 2e ligne du #period-banner : pleine largeur (flex-basis 100 %) pour
+         passer sous les boutons Période préc./suiv., séparée par un filet —
+         calqué sur #ctx-bar .ctx-level de carte.html. */
+      flex: 1 1 100%;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.5rem; flex-wrap: wrap;
+      margin: 0.15rem 0 0; padding-top: 0.35rem;
+      border-top: 1px solid rgba(154,107,26,0.28);
     }
     .detail-title { font-size: 0.82rem; color: var(--ink-muted); font-style: italic; margin-right: 0.3rem; }
     .detail-hint  { font-size: 0.75rem; color: var(--ink-muted); font-style: italic; margin-left: 0.5rem; }
@@ -1193,7 +1194,6 @@
     /* La frise se décale à gauche quand le panneau est ouvert */
     body.parcours-panel-open .frise-card,
     body.parcours-panel-open .filter-bar,
-    body.parcours-panel-open #detail-bar,
     body.parcours-panel-open #parcours-nav-bar {
       margin-right: 284px;
       transition: margin-right 0.2s;
@@ -1906,6 +1906,16 @@
       <span class="pb-sub" id="pb-sub">1300 &mdash; 1400</span>
     </span>
     <button class="ctrl-nav-btn pb-nav" id="btn-next" onclick="navigatePeriod(1)" style="display:none;" title="P&eacute;riode suivante">P&eacute;riode suivante &rarr;</button>
+    <!-- Affichage / niveau de détail : 2e ligne du bandeau, au même niveau que
+         les commandes Période préc./suiv. — comme #ctx-bar .ctx-level de carte.html. -->
+    <div id="detail-bar" style="display:none;">
+      <span class="detail-title">&#128270; Affichage&nbsp;:</span>
+      <button class="detail-btn" data-level="1" onclick="setDetailLevel(1)" title="Type 2 uniquement — événements Siècle">Si&egrave;cle</button>
+      <button class="detail-btn active" data-level="2" onclick="setDetailLevel(2)" title="Types 2 et 3 — événements importants">Important</button>
+      <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Types 2, 3 et 4 — vue détaillée">D&eacute;taill&eacute;</button>
+      <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les types — vue complète">Complet</button>
+      <span class="detail-hint" id="detail-hint"></span>
+    </div>
   </div>
 
   <!-- ══ 2. Synthèse (si disponible) ══ -->
@@ -1995,14 +2005,6 @@
 
   <div id="theme-legend" class="theme-legend" style="display:none;"></div>
 
-  <div id="detail-bar" style="display:none;">
-    <span class="detail-title">&#128270; Affichage&nbsp;:</span>
-    <button class="detail-btn" data-level="1" onclick="setDetailLevel(1)" title="Type 2 uniquement — événements Siècle">Si&egrave;cle</button>
-    <button class="detail-btn active" data-level="2" onclick="setDetailLevel(2)" title="Types 2 et 3 — événements importants">Important</button>
-    <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Types 2, 3 et 4 — vue détaillée">D&eacute;taill&eacute;</button>
-    <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les types — vue complète">Complet</button>
-    <span class="detail-hint" id="detail-hint"></span>
-  </div>
 
   <div class="filter-bar">
     <span class="filter-title">Zones &amp; th&egrave;mes&nbsp;:</span>
@@ -2251,7 +2253,7 @@
   </div>
 </div>
 
-<script src="frise.js?v=20260714b"></script>
+<script src="frise.js?v=20260714c"></script>
 
 
 <!-- Modale login editeur -->
