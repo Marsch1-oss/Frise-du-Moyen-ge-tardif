@@ -1,5 +1,5 @@
 
-/* frise.js — Frise chronologique medievale 1300-1500 — 2026-07-14 : fil d'Ariane retiré + THEME_KEYWORDS synchronisé (art) */
+/* frise.js — Frise chronologique medievale 1300-1500 — 2026-07-14 : fil d'Ariane retiré + THEME_KEYWORDS synchronisé (art) + barre Affichage remontée dans le bandeau */
 
 var ZONES = [
   'France', 'Angleterre', 'St Empire',
@@ -3140,6 +3140,9 @@ function updateDetailBar() {
     };
     hint.textContent = labels[detailLevel] || '';
   }
+  /* Le detail-bar est désormais une ligne du #period-banner : son apparition/
+     disparition modifie la hauteur du bandeau → recaler l'axe fixe dessous. */
+  syncStickyOffsets();
 }
 
 function navigateDecade(direction) { navigatePeriod(direction); }
