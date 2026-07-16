@@ -101,6 +101,29 @@
     .btn-success { background: var(--green); color: #fff; border-color: var(--green); }
     .btn-success:hover { background: #0F3D24; }
     #toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--ink); color: var(--parchment); padding: 0.7rem 1.6rem; border-radius: 20px; font-size: 0.88rem; font-style: italic; opacity: 0; transition: all 0.3s; z-index: 999; pointer-events: none; border-left: 3px solid var(--gold); }
+    /* ── Garde-fou export : rappel visuel des fichiers modifiés non téléchargés ── */
+    .needs-download { animation: dlpulse 1.4s ease-in-out infinite; }
+    @keyframes dlpulse {
+      0%   { box-shadow: 0 0 0 0 rgba(154,107,26,0.55); }
+      70%  { box-shadow: 0 0 0 9px rgba(154,107,26,0); }
+      100% { box-shadow: 0 0 0 0 rgba(154,107,26,0); }
+    }
+    #dirty-pill { position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: 1000; display: none;
+      background: var(--red); color: var(--parchment); padding: 0.5rem 1.05rem; border-radius: 20px;
+      font-size: 0.82rem; font-style: italic; border-left: 3px solid var(--gold);
+      box-shadow: 0 2px 12px rgba(50,30,10,0.3); cursor: default; max-width: 60vw; }
+    /* ── Message d'ouverture : rappel d'importer les fichiers à jour ── */
+    #open-reminder-overlay { position: fixed; inset: 0; z-index: 2000; display: none;
+      align-items: center; justify-content: center; padding: 1rem;
+      background: rgba(28,20,10,0.55); }
+    #open-reminder-box { background: var(--parchment-lt); border: 1px solid var(--border-dark);
+      border-top: 4px solid var(--gold); border-radius: var(--radius); max-width: 480px; width: 100%;
+      padding: 1.5rem 1.8rem; box-shadow: 0 10px 44px rgba(28,20,10,0.42); }
+    #open-reminder-box h2 { font-family: 'IM Fell English', serif; font-size: 1.3rem; color: var(--ink);
+      margin: 0 0 0.9rem; }
+    #open-reminder-box p { font-size: 0.93rem; color: var(--ink-soft); line-height: 1.55; margin: 0 0 0.7rem; }
+    #open-reminder-box code { background: var(--parchment-dk); padding: 0 4px; border-radius: 3px; font-size: 0.9em; }
+    #open-reminder-box .r-actions { display: flex; justify-content: flex-end; margin-top: 1.1rem; }
     #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     .list-search { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
     .list-search input { flex: 1; }
@@ -409,7 +432,7 @@
       <div class="json-header">
         <span id="json-count">0 événements</span>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
-          <button class="btn btn-success" onclick="downloadJSON()" style="padding:0.25rem 1rem;font-size:0.85rem;">⬇ Télécharger</button>
+          <button id="dl-evt-btn" class="btn btn-success" onclick="downloadJSON()" style="padding:0.25rem 1rem;font-size:0.85rem;">⬇ Télécharger</button>
           <button class="btn btn-secondary" onclick="copyJSON()" style="padding:0.25rem 1rem;font-size:0.85rem;">Copier</button>
         </div>
       </div>
@@ -516,7 +539,7 @@
     <button class="btn" onclick="synthDelete()" style="padding:0.3rem 1rem;">🗑 Supprimer</button>
     <span style="flex:1;"></span>
     <span id="synth-count" style="font-size:0.8rem;color:#666;">0 synthèse(s)</span>
-    <button class="btn btn-success" onclick="synthDownload()" style="padding:0.3rem 1rem;">⬇ Télécharger syntheses.json</button>
+    <button id="dl-synth-btn" class="btn btn-success" onclick="synthDownload()" style="padding:0.3rem 1rem;">⬇ Télécharger syntheses.json</button>
     <label class="btn" style="padding:0.3rem 1rem;cursor:pointer;">
       ⬆ Importer
       <input type="file" accept=".json" onchange="synthImport(this)" style="display:none;">
@@ -535,6 +558,17 @@
 </div>
 
 <div id="toast"></div>
+<div id="dirty-pill" title="Des modifications n'ont pas encore été enregistrées dans un fichier"></div>
+<div id="open-reminder-overlay" onclick="if(event.target===this)dismissOpenReminder()">
+  <div id="open-reminder-box" role="dialog" aria-modal="true" aria-labelledby="open-reminder-title">
+    <h2 id="open-reminder-title">⚜ Avant de commencer</h2>
+    <p><strong>Importez d'abord les fichiers les plus récents</strong> — <code>events.json</code> et <code>syntheses.json</code> — avant toute modification, pour ne pas éditer une version périmée.</p>
+    <p>Et pensez à <strong>retélécharger</strong> chaque fichier modifié avant de fermer : le bouton concerné clignotera et une pastille rouge s'affichera en bas à gauche pour vous le rappeler.</p>
+    <div class="r-actions">
+      <button class="btn btn-primary" onclick="dismissOpenReminder()" style="padding:0.45rem 1.5rem;">Commencer</button>
+    </div>
+  </div>
+</div>
 
 <script>
 const ZONES = [
@@ -632,6 +666,54 @@ const ALIASES = {
 };
 
 var events     = [];
+
+/* ═══ Garde-fou export : évite d'oublier de télécharger un fichier modifié ═══
+   events.json et syntheses.json se téléchargent séparément → suivi indépendant.
+   GARDER SYNCHRONISÉ : toute fonction qui modifie « events » doit appeler
+   markEvtDirty(), et toute modification de synthèse markSynthDirty() ; les
+   fonctions de téléchargement remettent le drapeau à zéro. */
+var _evtDirty   = false;   /* events.json modifié mais non téléchargé */
+var _synthDirty = false;   /* syntheses.json modifié mais non téléchargé */
+function markEvtDirty()    { _evtDirty   = true;  refreshDirtyUI(); }
+function markSynthDirty()  { _synthDirty = true;  refreshDirtyUI(); }
+function clearEvtDirty()   { _evtDirty   = false; refreshDirtyUI(); }
+function clearSynthDirty() { _synthDirty = false; refreshDirtyUI(); }
+function refreshDirtyUI() {
+  var b1 = document.getElementById('dl-evt-btn');
+  var b2 = document.getElementById('dl-synth-btn');
+  if (b1) b1.classList.toggle('needs-download', _evtDirty);
+  if (b2) b2.classList.toggle('needs-download', _synthDirty);
+  var pill = document.getElementById('dirty-pill');
+  if (pill) {
+    var pending = [];
+    if (_evtDirty)   pending.push('events.json');
+    if (_synthDirty) pending.push('syntheses.json');
+    if (pending.length) {
+      pill.style.display = '';
+      pill.textContent = '\u26A0 \u00C0 t\u00E9l\u00E9charger avant de fermer : ' + pending.join(' + ');
+    } else {
+      pill.style.display = 'none';
+    }
+  }
+}
+/* Blocage natif du navigateur si des modifications ne sont pas téléchargées.
+   Le texte du dialogue est imposé par le navigateur (non personnalisable). */
+window.addEventListener('beforeunload', function(e) {
+  if (_evtDirty || _synthDirty) { e.preventDefault(); e.returnValue = ''; return ''; }
+});
+
+/* Message d'ouverture : rappel d'importer les fichiers à jour avant d'éditer. */
+function dismissOpenReminder() {
+  var o = document.getElementById('open-reminder-overlay');
+  if (o) o.style.display = 'none';
+}
+function showOpenReminder() {
+  var o = document.getElementById('open-reminder-overlay');
+  if (o) o.style.display = 'flex';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') dismissOpenReminder();
+});
 var editingId  = null;
 var hasImported = false;
 
@@ -866,6 +948,7 @@ function saveEvent() {
   events.sort(function(a, b) { return a.date - b.date; });
   resetForm();
   updateJSON();
+  markEvtDirty();
 }
 
 function deleteEvent() {
@@ -874,6 +957,7 @@ function deleteEvent() {
   events = events.filter(function(e) { return e.id !== editingId; });
   resetForm();
   updateJSON();
+  markEvtDirty();
   toast('Événement supprimé');
 }
 
@@ -995,6 +1079,7 @@ function quickDelete(id, ev) {
   events = events.filter(function(e) { return e.id !== id; });
   if (editingId === id) resetForm();
   updateJSON();
+  markEvtDirty();
   toast('Événement supprimé');
 }
 
@@ -1084,6 +1169,7 @@ function downloadJSON() {
   document.body.appendChild(a); a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+  clearEvtDirty();
   toast('events.json téléchargé (' + events.length + ' événements) \u2713');
 }
 
@@ -1095,6 +1181,7 @@ function copyJSON() {
   var ta = document.getElementById('json-output');
   ta.select();
   document.execCommand('copy');
+  clearEvtDirty();
   toast('JSON copié (' + events.length + ' événements) \u2713');
 }
 
@@ -1389,6 +1476,7 @@ function synthSave() {
   var texte = document.getElementById('synth-texte').value.trim();
   if (!texte) { toast('\u26a0 Texte vide'); return; }
   _synthData[sel.key] = { titre: titre, texte: texte, auto: false };
+  markSynthDirty();
   synthRenderList();
   synthInitControls({ keepForm: true });   /* rafraîchit les ✓ sans vider le formulaire */
   toast('\u2713 Synthèse « ' + sel.key + ' » enregistrée');
@@ -1548,6 +1636,7 @@ function synthDelete() {
   var key = synthSelection().key;
   if (_synthData[key]) {
     delete _synthData[key];
+    markSynthDirty();
     synthRenderList();
     synthInitControls();   /* rafraîchit les marqueurs ✓ */
     toast('Synthèse « ' + key + ' » supprimée');
@@ -1628,6 +1717,7 @@ function synthDownload() {
   a.href = URL.createObjectURL(blob);
   a.download = 'syntheses.json';
   a.click();
+  clearSynthDirty();
   toast('\u2713 syntheses.json téléchargé');
 }
 
@@ -2476,6 +2566,7 @@ function wdBatchApply() {
     if (cur) fillForm(cur);
   }
   updateJSON();
+  markEvtDirty();
   toast(n + ' fiche(s) enrichie(s) \u2713  \u2014 pensez \u00e0 t\u00e9l\u00e9charger events.json');
 }
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -3083,6 +3174,8 @@ initZones();
 initTypeRadios();
 resetForm();
 updateJSON();
+refreshDirtyUI();   /* état « propre » explicite au chargement (pill masqué, boutons neutres) */
+showOpenReminder(); /* rappel d'ouverture : importer les fichiers à jour avant d'éditer */
 wdInit();
 </script>
 </body>
