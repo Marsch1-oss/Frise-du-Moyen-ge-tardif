@@ -263,7 +263,10 @@
   .ev-ord.noloc{background:var(--gold);opacity:0.85;border:1px dashed #fff}
 
   /* ── Fiche (modale légère) ── */
-  #fiche-overlay{display:none;position:fixed;inset:0;background:rgba(15,9,3,0.55);z-index:100;
+  /* z-index 200 : au-dessus des bandeaux sticky (#ctx-bar = 130) pour que la
+     fiche recouvre bien le titre et la navigation ; sous #img-lightbox (500)
+     ouverte depuis la fiche. */
+  #fiche-overlay{display:none;position:fixed;inset:0;background:rgba(15,9,3,0.55);z-index:200;
                  align-items:center;justify-content:center;padding:1rem}
   #fiche-overlay.open{display:flex}
   .fiche{background:var(--parchment);border:1.5px solid var(--border-dark);border-radius:8px;
