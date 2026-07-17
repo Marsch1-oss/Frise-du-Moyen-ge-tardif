@@ -86,8 +86,16 @@
   /* ── 4. Contrôles (zone d'outils, SOUS la carte) ── */
   .controls{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.2rem;margin-bottom:1rem;
             padding-top:0.7rem;border-top:2px solid var(--border-dark)}
-  .controls-title{font-family:'IM Fell English',Georgia,serif;font-size:0.9rem;color:var(--ink-muted);
-                  letter-spacing:0.06em;text-transform:uppercase}
+  /* Rubrique repliable : le titre est un bouton-bascule ; le corps se replie. */
+  .controls-title{display:flex;align-items:center;gap:0.5rem;width:100%;
+                  font-family:'IM Fell English',Georgia,serif;font-size:0.9rem;color:var(--ink-muted);
+                  letter-spacing:0.06em;text-transform:uppercase;text-align:left;
+                  background:none;border:0;padding:0.15rem 0;cursor:pointer;transition:color .12s}
+  .controls-title:hover,.controls-title:focus-visible{color:var(--ink);outline:none}
+  .controls-title .ct-caret{display:inline-block;font-size:0.7rem;color:var(--gold);transition:transform .18s}
+  .controls:not(.collapsed) .controls-title .ct-caret{transform:rotate(90deg)}
+  .controls-body{display:flex;flex-direction:column;gap:0.9rem}
+  .controls.collapsed .controls-body{display:none}
   .ctrl-block{display:flex;flex-direction:column;gap:0.4rem}
   .ctrl-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted)}
   /* ── Mode Parcours ── */
@@ -434,8 +442,14 @@
 
 
   <!-- ══ 4. Outils de navigation (sous la carte) ══ -->
-  <div class="controls">
-    <div class="controls-title">Navigation &amp; filtres</div>
+  <div class="controls collapsed" id="controls">
+    <button class="controls-title" id="controls-toggle" type="button"
+            aria-expanded="false" aria-controls="controls-body"
+            title="Afficher / masquer la navigation et les filtres">
+      <span class="ct-caret" aria-hidden="true">&#9654;</span>
+      <span>Navigation &amp; filtres</span>
+    </button>
+    <div class="controls-body" id="controls-body">
 
     <!-- Outils les plus utilisés placés en tête, juste sous la carte.
          Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
@@ -475,6 +489,7 @@
     <!-- Niveau de détail : mêmes paliers cumulatifs que la frise
          (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de frise.js). -->
     <!-- Niveau de détail : déplacé dans #ctx-bar, au-dessus de la carte. -->
+    </div><!-- /.controls-body -->
   </div>
   <div class="note" id="status-note"></div>
 </main>
@@ -1165,6 +1180,19 @@ function pinReignBanner(){
 function schedulePinReignBanner(){
   if(_pinRaf) return;
   _pinRaf=requestAnimationFrame(function(){ _pinRaf=0; pinReignBanner(); });
+}
+
+/* ---- Volet « Navigation & filtres » repliable --------------------------
+   Le titre est un bouton-bascule ; le corps (.controls-body) se replie.
+   Replié par défaut (classe .collapsed dans le HTML). -------------------- */
+function initControlsToggle(){
+  var btn=document.getElementById('controls-toggle');
+  var box=document.getElementById('controls');
+  if(!btn||!box) return;
+  btn.addEventListener('click', function(){
+    var open = box.classList.toggle('collapsed') === false;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 }
 
 /* ---- Bandeau « synthèse » au-dessus de la carte --------------------------
@@ -2329,6 +2357,7 @@ function boot(mode){
   renderLevelChips();
   renderThemeChips();
   initThemeAccess();
+  initControlsToggle();
   /* Le cartouche de règne reste en haut de la partie visible de la carte
      quand la page défile ou est redimensionnée (cf. pinReignBanner). */
   window.addEventListener('scroll', schedulePinReignBanner, { passive:true });
