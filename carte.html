@@ -53,6 +53,30 @@
                       border-top:1px solid rgba(154,107,26,0.28)}
   #ctx-bar .ctx-level-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;
                             text-transform:uppercase;color:var(--ink-muted)}
+  /* Accès rapide « Thèmes » dans le bandeau Niveau de détail */
+  #ctx-bar .ctx-level-sep{width:1px;align-self:stretch;min-height:1.1rem;
+                          background:rgba(154,107,26,0.32);margin:0 0.15rem}
+  #ctx-bar .ctx-theme{position:relative;display:inline-flex}
+  .ctx-theme-btn{display:inline-flex;align-items:center;gap:0.3rem}
+  .ctx-theme-btn.has-active{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
+  .ctx-theme-count{display:inline-flex;align-items:center;justify-content:center;
+                   min-width:1.15rem;height:1.15rem;padding:0 0.25rem;border-radius:999px;
+                   background:var(--red);color:#fff;font-size:0.7rem;font-weight:700;line-height:1}
+  .ctx-theme-btn:not(.has-active) .ctx-theme-count:empty{display:none}
+  .ctx-theme-count:empty{display:none}
+  .ctx-theme-pop{position:absolute;top:calc(100% + 0.5rem);right:0;z-index:40;
+                 min-width:15rem;max-width:min(90vw,26rem);padding:0.7rem 0.8rem;
+                 background:var(--parchment-lt);border:1.5px solid var(--border-dark);
+                 border-radius:10px;box-shadow:var(--shadow)}
+  .ctx-theme-pop::before{content:"";position:absolute;top:-7px;right:1.1rem;width:12px;height:12px;
+                 background:var(--parchment-lt);border-left:1.5px solid var(--border-dark);
+                 border-top:1.5px solid var(--border-dark);transform:rotate(45deg)}
+  .ctx-theme-pop-head{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+                 color:var(--ink-muted);margin-bottom:0.5rem}
+  @media(max-width:760px){
+    .ctx-theme-pop{right:auto;left:50%;transform:translateX(-50%);max-width:92vw}
+    .ctx-theme-pop::before{right:auto;left:50%;margin-left:-6px}
+  }
   @media(max-width:760px){
     #ctx-bar{flex-wrap:wrap}
     #ctx-bar .ctx-center{order:-1;flex-basis:100%}
@@ -287,6 +311,15 @@
     font-size:0.85rem;line-height:1.35;box-shadow:0 1px 4px rgba(42,28,14,0.25);pointer-events:none}
   #reign-banner .rb-zone{font-style:normal;font-weight:bold;letter-spacing:.03em;margin-right:0.4rem}
   #reign-banner .rb-dates{color:var(--ink-muted);font-size:0.75rem}
+  /* Nom du souverain : cliquable -> ouvre sa fiche. Le bandeau reste
+     pointer-events:none (n'intercepte pas les clics carte) ; seuls les noms
+     réactivent pointer-events. */
+  #reign-banner .rb-name{font:inherit;color:var(--ink);background:none;border:0;padding:0;margin:0;
+    cursor:pointer;pointer-events:auto;text-decoration:underline;text-decoration-color:rgba(154,107,26,0.55);
+    text-underline-offset:2px;transition:color .12s,text-decoration-color .12s}
+  #reign-banner .rb-name:hover,#reign-banner .rb-name:focus-visible{color:var(--red);
+    text-decoration-color:var(--red);outline:none}
+  #reign-banner .rb-sep{margin:0 0.15rem;color:var(--ink-muted)}
 
   /* ---- Bandeau « synthèse » au-dessus de la carte (drill-down de zone,
      mode décennie uniquement). Contenu : syntheses.json, clé "Zone|décennie",
@@ -337,6 +370,19 @@
     <div class="ctx-level" id="level-block">
       <span class="ctx-level-label">Niveau de détail</span>
       <div class="chips" id="level-chips"></div>
+      <!-- Accès rapide au tri par thème : doublon de commande du bloc #theme-chips
+           (zone .controls, sous la carte). Le popover réutilise activeThemes et
+           renderThemeChips() : les deux emplacements restent synchronisés. -->
+      <span class="ctx-level-sep" aria-hidden="true"></span>
+      <div class="ctx-theme" id="ctx-theme">
+        <button class="chip ctx-theme-btn" id="ctx-theme-btn" type="button"
+                aria-expanded="false" aria-controls="ctx-theme-pop"
+                title="Trier / filtrer les événements par thème">&#127912; Thèmes<span class="ctx-theme-count" id="ctx-theme-count"></span></button>
+        <div class="ctx-theme-pop" id="ctx-theme-pop" role="dialog" aria-label="Tri par thème" hidden>
+          <div class="ctx-theme-pop-head">Trier par thème</div>
+          <div class="chips" id="theme-pop-chips"></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1079,9 +1125,43 @@ function renderReignBanner(){
   if(!reigns.length){ el.style.display='none'; return; }
   el.innerHTML='<span class="rb-zone">&#9819; '+escapeHtml(state.selZone)+'</span>'+
     reigns.map(function(e){
-      return escapeHtml(e.t)+' <span class="rb-dates">('+reignDates(e)+')</span>';
-    }).join(' · ');
+      return '<button type="button" class="rb-name" data-id="'+e.id+'" '+
+             'title="Ouvrir la fiche : '+escapeHtml(e.t)+'">'+escapeHtml(e.t)+'</button>'+
+             ' <span class="rb-dates">('+reignDates(e)+')</span>';
+    }).join(' <span class="rb-sep">&middot;</span> ');
   el.style.display='block';
+  /* Le nom du souverain ouvre sa fiche (le bandeau lui-même reste transparent
+     aux clics ; seuls les .rb-name captent le pointeur — cf. CSS). */
+  Array.prototype.forEach.call(el.querySelectorAll('.rb-name'), function(btn){
+    btn.addEventListener('click', function(ev){
+      ev.stopPropagation();
+      openFiche(+btn.getAttribute('data-id'));
+    });
+  });
+  pinReignBanner();
+}
+
+/* ---- Épinglage du cartouche de règne au défilement de la PAGE ------------
+   Le bandeau est en position:absolute dans .map-wrap : sans intervention, il
+   s'en irait avec la carte quand on fait défiler la page. On ajuste son
+   décalage vertical pour qu'il reste en haut de la PARTIE VISIBLE de la carte,
+   borné pour ne jamais sortir de la zone carte. Le pan/zoom (viewBox du SVG)
+   ne déplace pas .map-wrap : seul le scroll de page est concerné. */
+var _pinRaf = 0;
+function pinReignBanner(){
+  var el=document.getElementById('reign-banner');
+  var wrap=document.getElementById('map-wrap');
+  if(!el || !wrap || el.style.display==='none'){ return; }
+  var r=wrap.getBoundingClientRect();
+  var margin=8;                                   /* ~0.5rem, valeur CSS par défaut */
+  var bh=el.offsetHeight || 0;
+  var hidden=Math.max(0, -r.top);                 /* hauteur de carte remontée hors écran */
+  var maxTop=Math.max(margin, r.height - bh - margin);
+  el.style.top=Math.min(margin + hidden, maxTop) + 'px';
+}
+function schedulePinReignBanner(){
+  if(_pinRaf) return;
+  _pinRaf=requestAnimationFrame(function(){ _pinRaf=0; pinReignBanner(); });
 }
 
 /* ---- Bandeau « synthèse » au-dessus de la carte --------------------------
@@ -2041,9 +2121,11 @@ function setLevel(lvl){
   }
   refreshAfterFilter();   /* recalcule pastilles, points et panneau */
 }
-function renderThemeChips(){
-  var box=document.getElementById('theme-chips');
-  /* Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé) */
+/* HTML commun aux deux emplacements de tri par thème :
+   - #theme-chips (bloc « Thèmes » de la zone .controls, sous la carte)
+   - #theme-pop-chips (popover d'accès rapide, bandeau Niveau de détail)
+   Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé). */
+function themeChipsHTML(){
   var keys=THEME_ORDER.slice().reverse();
   for(var key in THEME_DEFS){ if(keys.indexOf(key)===-1) keys.push(key); }
   var html=keys.map(function(t){
@@ -2053,7 +2135,10 @@ function renderThemeChips(){
   if(anyThemeActive()){
     html+='<button class="chip" data-theme-reset="1" title="Effacer le filtre thématique">&#10005; Tous</button>';
   }
-  box.innerHTML=html;
+  return html;
+}
+function wireThemeChips(box){
+  if(!box) return;
   Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
     c.addEventListener('click', function(){
       if(c.getAttribute('data-theme-reset')){ activeThemes={}; }
@@ -2064,6 +2149,45 @@ function renderThemeChips(){
       renderThemeChips();
       refreshAfterFilter();
     });
+  });
+}
+function renderThemeChips(){
+  var html=themeChipsHTML();
+  var box=document.getElementById('theme-chips');
+  if(box){ box.innerHTML=html; wireThemeChips(box); }
+  var pop=document.getElementById('theme-pop-chips');
+  if(pop){ pop.innerHTML=html; wireThemeChips(pop); }
+  updateThemeAccessBtn();
+}
+/* Badge du bouton d'accès rapide : nombre de thèmes actifs (0 = pas de badge). */
+function updateThemeAccessBtn(){
+  var btn=document.getElementById('ctx-theme-btn');
+  if(!btn) return;
+  var n=0; for(var t in activeThemes){ if(activeThemes[t]) n++; }
+  var badge=document.getElementById('ctx-theme-count');
+  if(badge) badge.textContent = n>0 ? String(n) : '';
+  btn.classList.toggle('has-active', n>0);
+}
+/* Ouverture/fermeture du popover de tri par thème (bandeau Niveau de détail). */
+function toggleThemePop(force){
+  var pop=document.getElementById('ctx-theme-pop');
+  var btn=document.getElementById('ctx-theme-btn');
+  if(!pop||!btn) return;
+  var open = (typeof force==='boolean') ? force : pop.hasAttribute('hidden');
+  if(open){ pop.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+  else    { pop.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+}
+function initThemeAccess(){
+  var btn=document.getElementById('ctx-theme-btn');
+  var wrap=document.getElementById('ctx-theme');
+  if(!btn||!wrap) return;
+  btn.addEventListener('click', function(ev){ ev.stopPropagation(); toggleThemePop(); });
+  /* Fermeture au clic hors du popover et à la touche Échap. */
+  document.addEventListener('click', function(ev){
+    if(!wrap.contains(ev.target)) toggleThemePop(false);
+  });
+  document.addEventListener('keydown', function(ev){
+    if(ev.key==='Escape') toggleThemePop(false);
   });
 }
 /* NOTE ARCHITECTURE : le filtre « Zones » (chips + hiddenZones) a été
@@ -2201,6 +2325,11 @@ function boot(mode){
   renderLayerChips();
   renderLevelChips();
   renderThemeChips();
+  initThemeAccess();
+  /* Le cartouche de règne reste en haut de la partie visible de la carte
+     quand la page défile ou est redimensionnée (cf. pinReignBanner). */
+  window.addEventListener('scroll', schedulePinReignBanner, { passive:true });
+  window.addEventListener('resize', schedulePinReignBanner, { passive:true });
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
