@@ -57,13 +57,15 @@
      bandeau. Le nom du souverain est cliquable (ouvre sa fiche). */
   #ctx-bar .ctx-reigns{flex:1 1 100%;display:none;justify-content:center;align-items:baseline;
                        flex-wrap:wrap;gap:0.15rem 0.5rem;margin-top:0.4rem;padding:0.35rem 0.9rem;
-                       background:linear-gradient(135deg,var(--parchment-dk),#dcc79c);
+                       background:linear-gradient(135deg,var(--parchment-lt),var(--parchment));
                        border:1px solid rgba(154,107,26,0.5);border-radius:6px;
-                       box-shadow:inset 0 1px 3px rgba(100,80,40,0.18);
+                       box-shadow:inset 0 1px 3px rgba(100,80,40,0.14);
                        font-family:'IM Fell English',Georgia,serif;font-style:italic;
                        font-size:0.92rem;color:var(--ink);line-height:1.4;text-align:center}
   #ctx-bar .ctx-reigns.show{display:flex}
-  #ctx-bar .ctx-reigns .rn-crown{color:var(--gold);font-style:normal;margin-right:0.15rem}
+  /* Couronnes de part et d'autre des règnes (une à gauche, une à droite). */
+  #ctx-bar .ctx-reigns .rn-crown{color:var(--gold);font-style:normal;font-size:1.2em;
+      margin:0 0.15rem;text-shadow:0 1px 1px rgba(100,80,40,0.25)}
   #ctx-bar .ctx-reigns .rn-dates{color:var(--ink-muted);font-size:0.8rem}
   #ctx-bar .ctx-reigns .rn-sep{color:var(--ink-muted)}
   #ctx-bar .ctx-reigns .rn-name{font:inherit;color:var(--ink);background:none;border:0;padding:0;margin:0;
@@ -1157,12 +1159,14 @@ function renderReignBanner(){
   if(!state.selZone || !state.layers.regnes){ hide(); return; }
   var reigns=reignsFor(state.selZone, currentRange());
   if(!reigns.length){ hide(); return; }
-  el.innerHTML='<span class="rn-crown" aria-hidden="true">&#9819;</span>'+
+  var crown='<span class="rn-crown" aria-hidden="true">&#9819;</span>';
+  el.innerHTML=crown+
     reigns.map(function(e){
       return '<button type="button" class="rn-name" data-id="'+e.id+'" '+
              'title="Ouvrir la fiche : '+escapeHtml(e.t)+'">'+escapeHtml(e.t)+'</button>'+
              ' <span class="rn-dates">'+reignDates(e)+'</span>';
-    }).join(' <span class="rn-sep" aria-hidden="true">&middot;</span> ');
+    }).join(' <span class="rn-sep" aria-hidden="true">&middot;</span> ')+
+    crown;
   el.classList.add('show');
   Array.prototype.forEach.call(el.querySelectorAll('.rn-name'), function(btn){
     btn.addEventListener('click', function(ev){
