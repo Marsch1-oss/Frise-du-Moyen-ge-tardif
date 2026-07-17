@@ -56,8 +56,10 @@
   /* Règnes (échelle de zone) en ligne sous le titre — ligne pleine largeur du
      bandeau. Le nom du souverain est cliquable (ouvre sa fiche). */
   #ctx-bar .ctx-reigns{flex:1 1 100%;display:none;justify-content:center;align-items:baseline;
-                       flex-wrap:wrap;gap:0.15rem 0.5rem;margin-top:0.15rem;padding-top:0.3rem;
-                       border-top:1px solid rgba(154,107,26,0.28);
+                       flex-wrap:wrap;gap:0.15rem 0.5rem;margin-top:0.4rem;padding:0.35rem 0.9rem;
+                       background:linear-gradient(135deg,var(--parchment-dk),#dcc79c);
+                       border:1px solid rgba(154,107,26,0.5);border-radius:6px;
+                       box-shadow:inset 0 1px 3px rgba(100,80,40,0.18);
                        font-family:'IM Fell English',Georgia,serif;font-style:italic;
                        font-size:0.92rem;color:var(--ink);line-height:1.4;text-align:center}
   #ctx-bar .ctx-reigns.show{display:flex}
@@ -74,6 +76,8 @@
                           background:rgba(154,107,26,0.32);margin:0 0.15rem}
   #ctx-bar .ctx-theme{position:relative;display:inline-flex}
   .ctx-theme-btn{display:inline-flex;align-items:center;gap:0.3rem}
+  .ctx-synth-btn{display:inline-flex;align-items:center;gap:0.3rem}
+  .ctx-synth-btn.active{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   .ctx-theme-btn.has-active{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   .ctx-theme-count{display:inline-flex;align-items:center;justify-content:center;
                    min-width:1.15rem;height:1.15rem;padding:0 0.25rem;border-radius:999px;
@@ -400,6 +404,11 @@
           <div class="chips" id="theme-pop-chips"></div>
         </div>
       </div>
+      <!-- Accès à la synthèse de la période : visible uniquement lorsqu'une
+           synthèse existe pour la vue courante (cf. updateSynthAccessBtn). -->
+      <span class="ctx-level-sep" aria-hidden="true"></span>
+      <button class="chip ctx-synth-btn" id="ctx-synth-btn" type="button" style="display:none"
+              title="Afficher la synthèse de la période">&#128220; Synthèse</button>
     </div>
   </div>
 
@@ -1232,7 +1241,7 @@ function renderSyntheseBanner(){
       ? SYNTHESES['@parcours|'+state.parcours+'|'+state.decade] : null;
     var scoped = !!ps;
     if(!ps) ps = SYNTHESES['@parcours|'+state.parcours];
-    if(!ps){ banner.style.display='none'; return; }
+    if(!ps){ banner.style.display='none'; updateSynthAccessBtn(); return; }
     document.getElementById('sb-title').textContent = ps.titre || ('Parcours \u00b7 '+state.parcours);
     document.getElementById('sb-period').textContent =
       (ps.auto ? '(brouillon auto) ' : '') + state.parcours +
@@ -1241,7 +1250,7 @@ function renderSyntheseBanner(){
   } else {
     var show = state.selZone && state.mode==='decade' && state.decade!==null;
     var s = show ? SYNTHESES[state.selZone+'|'+state.decade] : null;
-    if(!s){ banner.style.display='none'; return; }
+    if(!s){ banner.style.display='none'; updateSynthAccessBtn(); return; }
     document.getElementById('sb-title').textContent = s.titre || (state.selZone+' \u00b7 '+state.decade);
     document.getElementById('sb-period').textContent =
       (s.auto ? '(brouillon auto) ' : '') + state.selZone + ' \u2014 ' + state.decade + '-' + (state.decade+9);
@@ -1255,6 +1264,7 @@ function renderSyntheseBanner(){
   banner.classList.toggle('collapsed', _synthCollapsed);
   refreshSynthToggle();
   banner.style.display='block';
+  updateSynthAccessBtn();
 }
 function refreshSynthToggle(){
   var t=document.getElementById('sb-toggle');
@@ -1266,6 +1276,35 @@ function toggleSynthese(){
   _synthCollapsed = !_synthCollapsed;
   document.getElementById('synthese-banner').classList.toggle('collapsed', _synthCollapsed);
   refreshSynthToggle();
+  updateSynthAccessBtn();
+}
+
+/* ---- Accès à la synthèse depuis le bandeau « Niveau de détail / Thèmes » --
+   Le bouton #ctx-synth-btn n'apparaît que lorsqu'une synthèse existe pour la
+   vue courante (updateSynthAccessBtn, appelé par renderSyntheseBanner). Un
+   clic déplie la synthèse et l'amène à l'écran. --------------------------- */
+function updateSynthAccessBtn(){
+  var btn=document.getElementById('ctx-synth-btn');
+  var banner=document.getElementById('synthese-banner');
+  if(!btn) return;
+  var avail = banner && banner.style.display!=='none';
+  btn.style.display = avail ? 'inline-flex' : 'none';
+  btn.classList.toggle('active', avail && !_synthCollapsed);
+}
+function openSynthese(){
+  var banner=document.getElementById('synthese-banner');
+  if(!banner || banner.style.display==='none') return;
+  _synthCollapsed=false;
+  banner.classList.remove('collapsed');
+  refreshSynthToggle();
+  updateSynthAccessBtn();
+  try{ banner.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+  catch(e){ /* scrollIntoView indisponible : sans effet */ }
+}
+function initSynthAccess(){
+  var btn=document.getElementById('ctx-synth-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(ev){ ev.stopPropagation(); openSynthese(); });
 }
 
 /* ---- Regroupement de points géographiquement très proches --------------- */
@@ -2339,6 +2378,7 @@ function boot(mode){
   renderThemeChips();
   initThemeAccess();
   initControlsToggle();
+  initSynthAccess();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
