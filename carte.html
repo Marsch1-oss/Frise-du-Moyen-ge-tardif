@@ -53,6 +53,22 @@
                       border-top:1px solid rgba(154,107,26,0.28)}
   #ctx-bar .ctx-level-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;
                             text-transform:uppercase;color:var(--ink-muted)}
+  /* Règnes (échelle de zone) en ligne sous le titre — ligne pleine largeur du
+     bandeau. Le nom du souverain est cliquable (ouvre sa fiche). */
+  #ctx-bar .ctx-reigns{flex:1 1 100%;display:none;justify-content:center;align-items:baseline;
+                       flex-wrap:wrap;gap:0.15rem 0.5rem;margin-top:0.15rem;padding-top:0.3rem;
+                       border-top:1px solid rgba(154,107,26,0.28);
+                       font-family:'IM Fell English',Georgia,serif;font-style:italic;
+                       font-size:0.92rem;color:var(--ink);line-height:1.4;text-align:center}
+  #ctx-bar .ctx-reigns.show{display:flex}
+  #ctx-bar .ctx-reigns .rn-crown{color:var(--gold);font-style:normal;margin-right:0.15rem}
+  #ctx-bar .ctx-reigns .rn-dates{color:var(--ink-muted);font-size:0.8rem}
+  #ctx-bar .ctx-reigns .rn-sep{color:var(--ink-muted)}
+  #ctx-bar .ctx-reigns .rn-name{font:inherit;color:var(--ink);background:none;border:0;padding:0;margin:0;
+      cursor:pointer;text-decoration:underline;text-decoration-color:rgba(154,107,26,0.55);
+      text-underline-offset:2px;transition:color .12s,text-decoration-color .12s}
+  #ctx-bar .ctx-reigns .rn-name:hover,#ctx-bar .ctx-reigns .rn-name:focus-visible{color:var(--red);
+      text-decoration-color:var(--red);outline:none}
   /* Accès rapide « Thèmes » dans le bandeau Niveau de détail */
   #ctx-bar .ctx-level-sep{width:1px;align-self:stretch;min-height:1.1rem;
                           background:rgba(154,107,26,0.32);margin:0 0.15rem}
@@ -311,26 +327,12 @@
            font-size:0.78rem;padding:0.28rem 0.75rem;border:1px solid var(--border-dark);border-radius:20px;
            background:rgba(251,246,233,0.92);color:var(--ink);cursor:pointer;transition:all 0.15s}
   .back-to-full:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
-  /* ---- Règnes : cartouches associés aux pastilles (vue d'ensemble) et
-     bandeau en haut de carte (drill-down d'une zone) --------------------- */
+  /* ---- Règnes : cartouches SVG associés aux pastilles (vue d'ensemble).
+     En drill-down d'une zone, le règne s'affiche en ligne sous le titre
+     (#ctx-reigns), et non plus dans un cartouche flottant. ------------- */
   .regne-g{pointer-events:none}
   .regne-cart{fill:var(--parchment-lt);stroke:var(--gold);stroke-width:1;opacity:0.92;vector-effect:non-scaling-stroke}
   .regne-txt{fill:var(--ink);font-family:'IM Fell English',serif;font-style:italic;text-anchor:middle;pointer-events:none}
-  #reign-banner{display:none;position:absolute;top:0.5rem;left:50%;transform:translateX(-50%);z-index:6;
-    max-width:68%;text-align:center;background:var(--parchment-lt);border:1px solid var(--gold);border-radius:6px;
-    padding:0.25rem 0.8rem;font-family:'IM Fell English',serif;font-style:italic;color:var(--ink);
-    font-size:0.85rem;line-height:1.35;box-shadow:0 1px 4px rgba(42,28,14,0.25);pointer-events:none}
-  #reign-banner .rb-zone{font-style:normal;font-weight:bold;letter-spacing:.03em;margin-right:0.4rem}
-  #reign-banner .rb-dates{color:var(--ink-muted);font-size:0.75rem}
-  /* Nom du souverain : cliquable -> ouvre sa fiche. Le bandeau reste
-     pointer-events:none (n'intercepte pas les clics carte) ; seuls les noms
-     réactivent pointer-events. */
-  #reign-banner .rb-name{font:inherit;color:var(--ink);background:none;border:0;padding:0;margin:0;
-    cursor:pointer;pointer-events:auto;text-decoration:underline;text-decoration-color:rgba(154,107,26,0.55);
-    text-underline-offset:2px;transition:color .12s,text-decoration-color .12s}
-  #reign-banner .rb-name:hover,#reign-banner .rb-name:focus-visible{color:var(--red);
-    text-decoration-color:var(--red);outline:none}
-  #reign-banner .rb-sep{margin:0 0.15rem;color:var(--ink-muted)}
 
   /* ---- Bandeau « synthèse » au-dessus de la carte (drill-down de zone,
      mode décennie uniquement). Contenu : syntheses.json, clé "Zone|décennie",
@@ -374,6 +376,10 @@
       <span id="ctx-detail"></span>
     </span>
     <button class="dec-nav ctx-nav" id="dec-next" title="Période suivante">Période suivante &rarr;</button>
+    <!-- Règnes (échelle de zone) affichés en ligne sous le titre. Le bandeau
+         #ctx-bar étant sticky, ils restent visibles au défilement — ce qui
+         remplace l'ancien cartouche flottant sur la carte (supprimé). -->
+    <div class="ctx-reigns" id="ctx-reigns" aria-live="polite"></div>
     <!-- Niveau de détail : remonté ici (au niveau de la navigation de période)
          car il conditionne ce que la carte affiche. Mêmes paliers cumulatifs
          que la frise (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de
@@ -412,7 +418,6 @@
       <div class="map-wrap" id="map-wrap">
         <div class="src-tag">Fond : Natural Earth</div>
         <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
-        <div id="reign-banner" aria-live="polite"></div>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div id="zoom-ctrl">
           <button class="zoom-btn" id="zoom-in"    onclick="zoomBy(1.5)"   title="Zoomer (touche +)">&#128269;&#65291;</button>
@@ -1009,8 +1014,8 @@ function reignDates(e){
    jamais la pastille ou le libellé d'une autre zone, ni un cartouche déjà
    posé. pointer-events désactivés (classe .regne-g) pour ne pas gêner le
    clic sur les pastilles. En drill-down de zone, aucun cartouche n'est
-   dessiné : le règne passe dans le bandeau #reign-banner (renderReignBanner)
-   afin de ne masquer aucune pastille d'événement. ----------------------- */
+   dessiné : le règne s'affiche en ligne sous le titre (#ctx-reigns, via
+   renderReignBanner) afin de ne masquer aucune pastille d'événement. ---- */
 function reignCartoucheLayout(zone, fLbl, compact){
   var reigns = reignsFor(zone, currentRange());
   if(!reigns.length) return null;
@@ -1131,55 +1136,31 @@ function renderReignCartouches(pastilles, fLbl){
   return bits.join('');
 }
 
-/* ---- Bandeau « règne » en haut de la carte (drill-down d'une zone) -------
-   Surimpression HTML centrée, pointer-events:none : n'intercepte aucun clic
-   et ne masque pas les pastilles (contrairement à un cartouche SVG qui
-   suivrait la pastille de zone en vue zoomée). -------------------------- */
+/* ---- Règnes (échelle de zone) affichés en ligne sous le titre -----------
+   Rendus dans #ctx-reigns (bandeau sticky #ctx-bar) : toujours visibles au
+   défilement, sans surcharger la carte. Chaque nom de souverain est cliquable
+   et ouvre sa fiche. Fonction conservée sous le nom renderReignBanner pour ne
+   pas toucher aux appels existants. --------------------------------------- */
 function renderReignBanner(){
-  var el=document.getElementById('reign-banner');
+  var el=document.getElementById('ctx-reigns');
   if(!el) return;
-  if(!state.selZone || !state.layers.regnes){ el.style.display='none'; return; }
+  var hide=function(){ el.classList.remove('show'); el.innerHTML=''; };
+  if(!state.selZone || !state.layers.regnes){ hide(); return; }
   var reigns=reignsFor(state.selZone, currentRange());
-  if(!reigns.length){ el.style.display='none'; return; }
-  el.innerHTML='<span class="rb-zone">&#9819; '+escapeHtml(state.selZone)+'</span>'+
+  if(!reigns.length){ hide(); return; }
+  el.innerHTML='<span class="rn-crown" aria-hidden="true">&#9819;</span>'+
     reigns.map(function(e){
-      return '<button type="button" class="rb-name" data-id="'+e.id+'" '+
+      return '<button type="button" class="rn-name" data-id="'+e.id+'" '+
              'title="Ouvrir la fiche : '+escapeHtml(e.t)+'">'+escapeHtml(e.t)+'</button>'+
-             ' <span class="rb-dates">('+reignDates(e)+')</span>';
-    }).join(' <span class="rb-sep">&middot;</span> ');
-  el.style.display='block';
-  /* Le nom du souverain ouvre sa fiche (le bandeau lui-même reste transparent
-     aux clics ; seuls les .rb-name captent le pointeur — cf. CSS). */
-  Array.prototype.forEach.call(el.querySelectorAll('.rb-name'), function(btn){
+             ' <span class="rn-dates">'+reignDates(e)+'</span>';
+    }).join(' <span class="rn-sep" aria-hidden="true">&middot;</span> ');
+  el.classList.add('show');
+  Array.prototype.forEach.call(el.querySelectorAll('.rn-name'), function(btn){
     btn.addEventListener('click', function(ev){
       ev.stopPropagation();
       openFiche(+btn.getAttribute('data-id'));
     });
   });
-  pinReignBanner();
-}
-
-/* ---- Épinglage du cartouche de règne au défilement de la PAGE ------------
-   Le bandeau est en position:absolute dans .map-wrap : sans intervention, il
-   s'en irait avec la carte quand on fait défiler la page. On ajuste son
-   décalage vertical pour qu'il reste en haut de la PARTIE VISIBLE de la carte,
-   borné pour ne jamais sortir de la zone carte. Le pan/zoom (viewBox du SVG)
-   ne déplace pas .map-wrap : seul le scroll de page est concerné. */
-var _pinRaf = 0;
-function pinReignBanner(){
-  var el=document.getElementById('reign-banner');
-  var wrap=document.getElementById('map-wrap');
-  if(!el || !wrap || el.style.display==='none'){ return; }
-  var r=wrap.getBoundingClientRect();
-  var margin=8;                                   /* ~0.5rem, valeur CSS par défaut */
-  var bh=el.offsetHeight || 0;
-  var hidden=Math.max(0, -r.top);                 /* hauteur de carte remontée hors écran */
-  var maxTop=Math.max(margin, r.height - bh - margin);
-  el.style.top=Math.min(margin + hidden, maxTop) + 'px';
-}
-function schedulePinReignBanner(){
-  if(_pinRaf) return;
-  _pinRaf=requestAnimationFrame(function(){ _pinRaf=0; pinReignBanner(); });
 }
 
 /* ---- Volet « Navigation & filtres » repliable --------------------------
@@ -2358,10 +2339,6 @@ function boot(mode){
   renderThemeChips();
   initThemeAccess();
   initControlsToggle();
-  /* Le cartouche de règne reste en haut de la partie visible de la carte
-     quand la page défile ou est redimensionnée (cf. pinReignBanner). */
-  window.addEventListener('scroll', schedulePinReignBanner, { passive:true });
-  window.addEventListener('resize', schedulePinReignBanner, { passive:true });
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
