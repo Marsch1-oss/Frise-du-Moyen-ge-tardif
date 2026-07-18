@@ -79,6 +79,8 @@
   #ctx-bar .ctx-theme{position:relative;display:inline-flex}
   .ctx-theme-btn{display:inline-flex;align-items:center;gap:0.3rem}
   .ctx-synth-btn{display:inline-flex;align-items:center;gap:0.3rem}
+  .ctx-scale-btn{display:inline-flex;align-items:center;gap:0.3rem;font-weight:700}
+  .ctx-scale-btn:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
   .ctx-synth-btn.active{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   .ctx-theme-btn.has-active{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   .ctx-theme-count{display:inline-flex;align-items:center;justify-content:center;
@@ -393,6 +395,12 @@
     <div class="ctx-level" id="level-block">
       <span class="ctx-level-label">Niveau de détail</span>
       <div class="chips" id="level-chips"></div>
+      <!-- Bascule d'échelle : propose toujours l'échelle OPPOSÉE à la vue
+           courante (décennale <-> annuelle). Libellé et titre mis à jour par
+           updateScaleBtn(), appelé depuis renderModeChips() : reste synchronisé
+           avec #mode-chips du volet « Navigation & filtres ». -->
+      <span class="ctx-level-sep" aria-hidden="true"></span>
+      <button class="chip ctx-scale-btn" id="ctx-scale-btn" type="button"></button>
       <!-- Accès rapide au tri par thème : doublon de commande du bloc #theme-chips
            (zone .controls, sous la carte). Le popover réutilise activeThemes et
            renderThemeChips() : les deux emplacements restent synchronisés. -->
@@ -2115,6 +2123,31 @@ function renderModeChips(){
   Array.prototype.forEach.call(box.querySelectorAll('.chip'), function(c){
     c.addEventListener('click', function(){ setMode(c.getAttribute('data-mode')); });
   });
+  updateScaleBtn();
+}
+
+/* ---- Bascule d'échelle depuis le bandeau « Niveau de détail » ------------
+   Le bouton propose toujours l'échelle OPPOSÉE à la vue courante :
+   en décennal -> « Échelle annuelle » ; en annuel -> « Échelle décennale ».
+   Appelé par renderModeChips(), donc synchronisé quel que soit le point
+   d'entrée (bouton, chips du volet, navigation par période). ------------- */
+function updateScaleBtn(){
+  var btn=document.getElementById('ctx-scale-btn');
+  if(!btn) return;
+  var toYear = (state.mode!=='year');
+  btn.innerHTML = toYear ? '&#128197; Échelle annuelle' : '&#128198; Échelle décennale';
+  btn.title = toYear
+    ? 'Passer à l\u2019échelle annuelle (année par année)'
+    : 'Revenir à l\u2019échelle décennale (par décennie)';
+  btn.setAttribute('data-target', toYear ? 'year' : 'decade');
+}
+function initScaleToggle(){
+  var btn=document.getElementById('ctx-scale-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(ev){
+    ev.stopPropagation();
+    setMode(btn.getAttribute('data-target')==='year' ? 'year' : 'decade');
+  });
 }
 function renderLayerChips(){
   var box=document.getElementById('layer-chips');
@@ -2383,6 +2416,7 @@ function boot(mode){
   initThemeAccess();
   initControlsToggle();
   initSynthAccess();
+  initScaleToggle();
 
   /* ---- Paramètres d'URL : ouvrir directement sur la période demandée
      depuis la frise, ex. carte.html?decade=1300 ou carte.html?year=1305
