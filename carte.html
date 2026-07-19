@@ -331,10 +331,14 @@
         border-left:3px solid var(--gold);padding:0.5rem 0.9rem;background:rgba(154,107,26,0.06);border-radius:0 6px 6px 0}
   .src-tag{position:absolute;top:0.5rem;right:0.7rem;font-size:0.66rem;color:var(--ink-muted);font-style:italic;
            background:rgba(251,246,233,0.8);padding:0.1rem 0.45rem;border-radius:4px;pointer-events:none}
-  .back-to-full{position:absolute;top:0.5rem;left:0.7rem;z-index:5;font-family:'Crimson Pro',serif;
-           font-size:0.78rem;padding:0.28rem 0.75rem;border:1px solid var(--border-dark);border-radius:20px;
-           background:rgba(251,246,233,0.92);color:var(--ink);cursor:pointer;transition:all 0.15s}
-  .back-to-full:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+  /* ---- Retour à la carte générale -----------------------------------------
+     Anciennement bouton flottant (.back-to-full) posé en absolu sur la carte :
+     il disparaissait de l'écran dès que l'on faisait défiler la page. Il est
+     désormais une chip du bandeau #ctx-bar (sticky), donc toujours à portée.
+     GARDER SYNCHRONISÉ : l'id #back-to-full est conservé (renderMap()), et le
+     séparateur #back-sep s'affiche/se masque avec lui. -------------------- */
+  .ctx-back-btn{display:inline-flex;align-items:center;gap:0.3rem;font-weight:700}
+  .ctx-back-btn:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
   /* ---- Règnes : cartouches SVG associés aux pastilles (vue d'ensemble).
      En drill-down d'une zone, le règne s'affiche en ligne sous le titre
      (#ctx-reigns), et non plus dans un cartouche flottant. ------------- */
@@ -393,6 +397,13 @@
          que la frise (2=Important, 3=Détaillé, 4=Complet ; cf. detailLevel de
          frise.js). L'id #level-chips est inchangé : renderLevelChips() suit. -->
     <div class="ctx-level" id="level-block">
+      <!-- Retour à la carte générale : n'apparaît qu'en drill-down de zone ou
+           après un zoom sur cluster (cf. renderMap()). Placé ici plutôt qu'en
+           flottant sur la carte, pour rester visible au défilement. -->
+      <button class="chip ctx-back-btn" id="back-to-full" type="button" style="display:none"
+              onclick="deselectZone()"
+              title="Revenir à la carte générale (toutes les zones)">&#8630; Retour &agrave; la carte g&eacute;n&eacute;rale</button>
+      <span class="ctx-level-sep" id="back-sep" aria-hidden="true" style="display:none"></span>
       <span class="ctx-level-label">Niveau de détail</span>
       <div class="chips" id="level-chips"></div>
       <!-- Bascule d'échelle : propose toujours l'échelle OPPOSÉE à la vue
@@ -436,7 +447,6 @@
       </div>
       <div class="map-wrap" id="map-wrap">
         <div class="src-tag">Fond : Natural Earth</div>
-        <button class="back-to-full" id="back-to-full" style="display:none" onclick="deselectZone()">&#8630; Carte complète</button>
         <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
         <div id="zoom-ctrl">
           <button class="zoom-btn" id="zoom-in"    onclick="zoomBy(1.5)"   title="Zoomer (touche +)">&#128269;&#65291;</button>
@@ -1748,10 +1758,15 @@ function renderMap(){
          +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '')
          +(state.level<4 ? ' Niveau de détail : '+(state.level===2?'Important':'Détaillé')+'.' : ''));
   } else { emptyEl.style.display='none'; }
-  /* Bouton « Carte complète » : visible en drill-down de zone, mais aussi
-     après un zoom sur un cluster en mode thématique global (sinon plus
-     aucun moyen de dézoomer depuis la carte). */
-  document.getElementById('back-to-full').style.display = (state.selZone || state.zoomView) ? 'block' : 'none';
+  /* Bouton « Retour à la carte générale » : visible en drill-down de zone,
+     mais aussi après un zoom sur un cluster en mode thématique global (sinon
+     plus aucun moyen de dézoomer depuis la carte). Il vit désormais dans
+     #ctx-bar (sticky) : on masque aussi son séparateur quand il disparaît,
+     pour ne pas laisser de trait orphelin dans le bandeau. */
+  var backOn = !!(state.selZone || state.zoomView);
+  document.getElementById('back-to-full').style.display = backOn ? 'inline-flex' : 'none';
+  var backSep = document.getElementById('back-sep');
+  if(backSep) backSep.style.display = backOn ? 'block' : 'none';
 
   renderReignBanner();
   renderSyntheseBanner();
