@@ -623,9 +623,12 @@ var THEME_DEFS = {
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
-  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
+  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
+
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -636,18 +639,19 @@ var THEME_KEYWORDS = {
   'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
   'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
-  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
+  'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
 };
-var activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
+ activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
 
 /* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
    (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
    même logique que detectTheme(evt) de frise.js, adaptée aux noms de champs. */
 function detectThemeSlim(e){
   if(e.th && THEME_DEFS[e.th]) return e.th;
-  var txt=(e.t||'').toLowerCase();
-  for(var i=0;i<THEME_ORDER.length;i++){
-    var kws=THEME_KEYWORDS[THEME_ORDER[i]];
+   txt=(e.t||'').toLowerCase();
+  for( i=0;i<THEME_ORDER.length;i++){
+     kws=THEME_KEYWORDS[THEME_ORDER[i]];
     if(!kws) continue;
     for(var k=0;k<kws.length;k++){
       if(txt.indexOf(kws[k])!==-1) return THEME_ORDER[i];
@@ -655,16 +659,15 @@ function detectThemeSlim(e){
   }
   return null;
 }
-function eventMatchesTheme(e){
-  var anyActive=false;
-  for(var t in activeThemes){ if(activeThemes[t]){ anyActive=true; break; } }
-  if(!anyActive) return true;
-  var th = (e._th!==undefined) ? e._th : (e._th = detectThemeSlim(e));
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
+  if (!anyActive) return true;
+  
+  if (activeThemes['atlas'] && evt.atlas) return true;
+  
+  var th = detectTheme(evt);
   return !!(th && activeThemes[th]);
-}
-function anyThemeActive(){
-  for(var t in activeThemes){ if(activeThemes[t]) return true; }
-  return false;
 }
 
 /* ---- Mode Parcours -------------------------------------------------------
