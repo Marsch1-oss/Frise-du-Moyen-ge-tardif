@@ -794,11 +794,6 @@ function readForm() {
 
   var zones = [];
   document.querySelectorAll('#zones-grid input:checked').forEach(function(inp) { zones.push(inp.value); });
-  // NOUVEAU : On ajoute "Atlas" à la liste des zones si la case est cochée
-  var isAtlas = document.getElementById('f-atlas') && document.getElementById('f-atlas').checked;
-  if (isAtlas && zones.indexOf('Atlas') === -1) {
-    zones.push('Atlas');
-  }
   if (zones.length === 0) { toast('Sélectionnez au moins une zone géographique.'); return null; }
 
   var type = parseInt(document.querySelector('input[name="type"]:checked').value);
@@ -811,6 +806,7 @@ function readForm() {
   var fVideoEl = document.getElementById('f-video');
   var rawVideo = fVideoEl ? fVideoEl.value.trim() : '';
   var isRegne  = !!(document.getElementById('f-regne') && document.getElementById('f-regne').checked);
+  var isAtlas  = !!(document.getElementById('f-atlas') && document.getElementById('f-atlas').checked);
 
   var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
   if (mois)                    evt.mois     = mois;
@@ -821,22 +817,25 @@ function readForm() {
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
   var fTheme = document.getElementById('f-theme').value;
-  if (fTheme) evt.theme = fTheme;   /* thème manuel (sinon détection auto à l'affichage) */
+  if (fTheme) evt.theme = fTheme; 
   if (rawVideo)  evt.video = rawVideo;
   if (isRegne)   evt.regne = true;
+  if (isAtlas)   evt.atlas = true;
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
+  
   var _noCoord = !!(document.getElementById('f-geo-none') && document.getElementById('f-geo-none').checked);
   var _verified = !!(document.getElementById('f-geo-ok') && document.getElementById('f-geo-ok').checked);
   var _la = parseFloat(document.getElementById('f-lat').value);
   var _lo = parseFloat(document.getElementById('f-lng').value);
+  
   if (!_noCoord && !isNaN(_la) && !isNaN(_lo)) {
     evt.lat = Math.round(_la*10000)/10000;
     evt.lng = Math.round(_lo*10000)/10000;
-    if (!_verified) evt.geo_auto = true;  /* position non encore vérifiée -> reste à confirmer */
+    if (!_verified) evt.geo_auto = true; 
   } else if (_noCoord) {
-    evt.geo_none = true;  /* repli sur la zone, volontaire et relu */
+    evt.geo_none = true;
   }
   var series = [];
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
@@ -844,12 +843,9 @@ function readForm() {
     if (el && el.value.trim()) series.push(cleanText(el.value.trim()));
   });
   evt.serie = series.join('|');
-  /* ⚠ readForm() reconstruit l'objet à plat : tout champ absent d'ici est perdu.
-     Le QID Wikidata n'a pas de champ de saisie, on le réinjecte explicitement. */
   if (wdFormQid) evt.wikidata = wdFormQid;
   return evt;
 }
-
 function nextId() {
   if (events.length === 0) return 1;
   return Math.max.apply(null, events.map(function(e) { return e.id; })) + 1;
@@ -868,11 +864,14 @@ function fillForm(evt) {
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
-  // NOUVEAU : Cocher la case Atlas si l'événement le possède dans ses zones
+
   var atlasCb = document.getElementById('f-atlas');
-  if (atlasCb) {
-    atlasCb.checked = (evt.zones || []).indexOf('Atlas') !== -1;
+  if (atlasCb) { 
+    atlasCb.checked = !!evt.atlas; 
   }
+
+  document.getElementById('f-sources').value  = evt.sources  || '';
+  geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
   var _hasGeo = (typeof evt.lat === 'number' && typeof evt.lng === 'number');
