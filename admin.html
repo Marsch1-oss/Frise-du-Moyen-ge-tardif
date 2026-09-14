@@ -342,11 +342,15 @@
           <div id="tr-leg-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
       </div>
-      <div class="field-row single">
-        <div class="field">
+    <div class="field-row single">
+        <div class="field" style="display: flex; gap: 2rem; flex-wrap: wrap;">
           <label>
             <input type="checkbox" id="f-regne" style="margin-right:6px;vertical-align:middle;">
             ♛ Règne / Dynastie <small>(bande colorée dédiée sur la frise)</small>
+          </label>
+          <label>
+            <input type="checkbox" id="f-atlas" style="margin-right:6px;vertical-align:middle;">
+            🗺️ Catégorie Atlas <small>(inclure cet événement dans les cartes)</small>
           </label>
         </div>
       </div>
@@ -637,8 +641,7 @@ const ZONE_GROUPS = [
   { label: 'Europe orientale',    zones: ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'] },
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
   { label: 'Afrique & Amérique',  zones: ['Afrique', 'Amerique'] },
-  { label: 'Monde',               zones: ['Monde'] },
-  { label: 'Cartographie',        zones: ['Atlas'] }
+  { label: 'Monde',               zones: ['Monde'] }
 ];
 
 const COLORS = {
@@ -791,6 +794,11 @@ function readForm() {
 
   var zones = [];
   document.querySelectorAll('#zones-grid input:checked').forEach(function(inp) { zones.push(inp.value); });
+  // NOUVEAU : On ajoute "Atlas" à la liste des zones si la case est cochée
+  var isAtlas = document.getElementById('f-atlas') && document.getElementById('f-atlas').checked;
+  if (isAtlas && zones.indexOf('Atlas') === -1) {
+    zones.push('Atlas');
+  }
   if (zones.length === 0) { toast('Sélectionnez au moins une zone géographique.'); return null; }
 
   var type = parseInt(document.querySelector('input[name="type"]:checked').value);
@@ -860,6 +868,11 @@ function fillForm(evt) {
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
+  // NOUVEAU : Cocher la case Atlas si l'événement le possède dans ses zones
+  var atlasCb = document.getElementById('f-atlas');
+  if (atlasCb) {
+    atlasCb.checked = (evt.zones || []).indexOf('Atlas') !== -1;
+  }
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
   var _hasGeo = (typeof evt.lat === 'number' && typeof evt.lng === 'number');
@@ -905,6 +918,9 @@ function fillForm(evt) {
 function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
+  // NOUVEAU : Décocher la case Atlas
+  var atlasCb = document.getElementById('f-atlas');
+  if (atlasCb) atlasCb.checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
    'f-desc','f-image','f-legende','f-video','f-sources','f-lat','f-lng','f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
     document.getElementById(id).value = '';
