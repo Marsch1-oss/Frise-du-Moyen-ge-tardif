@@ -1616,12 +1616,14 @@ function themePrefix(evt) {
   var pfx = ic ? ic + '\u202F' : '';
   if (evt.atlas) pfx = '🗺️\u202F' + pfx;
   return pfx;
+}
 
 /* Date de DÉBUT fractionnaire (année + mois) : 1356 + (10-1)/12 pour octobre 1356 */
 function evtStartFrac(evt) {
   var m = Number(evt.mois) || 0;
   return evt.date + (m > 0 ? (m - 1) / 12 : 0);
 }
+
 /* Date de FIN fractionnaire : prend mois_fin si présent, sinon fin d'année.
    Pour octobre on veut la FIN d'octobre, donc on ajoute le mois complet (m/12). */
 function evtEndFrac(evt) {
@@ -1630,7 +1632,6 @@ function evtEndFrac(evt) {
   if (mf > 0) return base + mf / 12;          /* fin du mois mf */
   return base + 1;                             /* fin d'année si mois inconnu */
 }
-
 /* Mélange deux couleurs hex en une couleur intermédiaire */
 function mixHex(h1, h2) {
   function rgb(h) {
