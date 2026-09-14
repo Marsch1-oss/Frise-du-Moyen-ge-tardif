@@ -1071,16 +1071,22 @@ function renderList() {
       + '<span class="ec-title">' + evt.titre + '</span>'
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
-      + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
+   + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
       + (function(){
           var dt = detectTheme(evt);
+          var html = '';
+          if (evt.atlas) {
+              html += '<span class="ec-theme" title="Atlas / Cartes" style="margin-right:4px;">🗺️</span>';
+          }
           if (dt && THEME_DEFS[dt]) {
             var manuel = !!evt.theme;
-            return '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
+            html += '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
                    (manuel ? ' (manuel)' : ' (auto)') + '" style="' +
                    (manuel ? '' : 'opacity:0.6;') + '">' + THEME_DEFS[dt].icon + '</span>';
+          } else if (!evt.atlas) {
+            html += '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
           }
-          return '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
+          return html;
         })()
       + '</div>';
     card.addEventListener('click', function() { fillForm(evt); });
@@ -1253,6 +1259,15 @@ function importJSON(input) {
         if (!ev.zones) ev.zones = ev.zone ? [ev.zone] : [];
         if (!ev.type)  ev.type  = 1;
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
+        
+        // MIGRATION : On transforme "Atlas" en attribut et on nettoie la zone
+        var idx = ev.zones.indexOf('Atlas');
+        if (idx !== -1) {
+          ev.atlas = true;
+          ev.zones.splice(idx, 1);
+          if (ev.zones.length === 0) ev.zones.push('Monde'); // Évite que la fiche ne disparaisse de la carte
+        }
+        
         return ev;
       });
       hasImported = true;
