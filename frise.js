@@ -7,21 +7,17 @@ var ZONES = [
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde', 'Atlas'
+  'Afrique', 'Amerique', 'Monde'
 ];
 
-/* Les anciens « thèmes-zones » (Art, Techniques, Sciences, Idées, Littérature)
-   sont désormais gérés via les thèmes-icônes (champ evt.theme).
-   « Atlas » (Cartes/Maps) reste un filtre autonome, hors géographie et hors thèmes. */
 var ZONES_GROUPS = {
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
   'Europe du Nord':     ['Scandinavie'],
   'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
   'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
   'Afrique & Amérique': ['Afrique', 'Amerique'],
-  'Monde':              ['Monde'],
-  'Cartographie':       ['Atlas']
-}
+  'Monde':              ['Monde']
+};
 
 var COLORS = {
   'France':              { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
@@ -54,8 +50,7 @@ var COLORS = {
   'Litterature':         { bg: '#2A5C2A', light: '#E0F0E0', text: '#163316' },
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
-  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' },
-  'Atlas':               { bg: '#1A5C7A', light: '#D8EEF5', text: '#0A2E40' }
+  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
 };
 
 var ZONE_ALIASES = {
@@ -87,11 +82,25 @@ var ZONE_ALIASES = {
   'Literature':          'Litterature',
   'Amérique':            'Amerique',
   'America':             'Amerique',
-  'Africa':              'Afrique',
-  'Cartes':              'Atlas',
-  'Maps':                'Atlas'
+  'Africa':              'Afrique'
 };
 
+var THEME_DEFS = {
+  'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
+  'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
+  'religion':    { icon: '\u271D\uFE0F',     label: 'Religion' },
+  'revolte':     { icon: '\uD83D\uDD25',     label: 'Révolte' },
+  'diplomatie':  { icon: '\uD83D\uDCDC',     label: 'Diplomatie' },
+  'economie':    { icon: '\uD83E\uDE99',     label: 'Économie' },
+  'societe':     { icon: '\uD83E\uDDD1',     label: 'Société' },
+  'art':         { icon: '\uD83C\uDFA8',     label: 'Art' },
+  'litterature': { icon: '\uD83D\uDCD6',     label: 'Littérature' },
+  'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
+  'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
+  'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
+  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
+};
 var ROW_H    = 30;
 var ROW_GAP  = 18;
 var CHIP_PAD = 10;
@@ -1447,10 +1456,11 @@ var THEME_DEFS = {
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
-  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
+  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
-/* GARDER SYNCHRONISÉ avec carte.html et admin.html (THEME_KEYWORDS identiques). */
+
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -1461,7 +1471,8 @@ var THEME_KEYWORDS = {
   'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
   'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
-  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
+  'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
 };
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
@@ -1474,7 +1485,10 @@ function eventMatchesTheme(evt) {
   var anyActive = false;
   for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
   if (!anyActive) return true;
-  var th = detectTheme(evt);   /* manuel ou auto (titre) */
+  
+  if (activeThemes['atlas'] && evt.atlas) return true;
+  
+  var th = detectTheme(evt);
   return !!(th && activeThemes[th]);
 }
 
@@ -1599,8 +1613,9 @@ function themeIcon(evt) {
 /* Préfixe titre : icône + fine espace, ou rien si pas de thème */
 function themePrefix(evt) {
   var ic = themeIcon(evt);
-  return ic ? ic + '\u202F' : '';
-}
+  var pfx = ic ? ic + '\u202F' : '';
+  if (evt.atlas) pfx = '🗺️\u202F' + pfx;
+  return pfx;
 
 /* Date de DÉBUT fractionnaire (année + mois) : 1356 + (10-1)/12 pour octobre 1356 */
 function evtStartFrac(evt) {
