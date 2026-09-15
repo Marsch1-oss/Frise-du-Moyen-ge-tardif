@@ -661,8 +661,7 @@ function eventMatchesTheme(e){
   for(var t in activeThemes){ if(activeThemes[t]){ anyActive=true; break; } }
   if(!anyActive) return true;
   
-  /* --- LA NOUVELLE LIGNE EST ICI --- */
-  if (activeThemes['atlas'] && e.atlas) return true;
+  if (activeThemes['atlas'] && e.atlas) return true; // <-- CETTE LIGNE EXACTEMENT
   
   var th = (e._th!==undefined) ? e._th : (e._th = detectThemeSlim(e));
   return !!(th && activeThemes[th]);
