@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script>
-  window.onerror = function(msg, url, line) {
-    alert("Erreur JS admin : " + msg + "\nLigne : " + line);
-  };
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Éditeur — Frise médiévale</title>
@@ -347,15 +342,11 @@
           <div id="tr-leg-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
       </div>
-    <div class="field-row single">
-        <div class="field" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <div class="field-row single">
+        <div class="field">
           <label>
             <input type="checkbox" id="f-regne" style="margin-right:6px;vertical-align:middle;">
             ♛ Règne / Dynastie <small>(bande colorée dédiée sur la frise)</small>
-          </label>
-          <label>
-            <input type="checkbox" id="f-atlas" style="margin-right:6px;vertical-align:middle;">
-            🗺️ Catégorie Atlas <small>(inclure cet événement dans les cartes)</small>
           </label>
         </div>
       </div>
@@ -604,10 +595,9 @@ var THEME_DEFS = {
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
-  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
-  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -647,7 +637,8 @@ const ZONE_GROUPS = [
   { label: 'Europe orientale',    zones: ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'] },
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
   { label: 'Afrique & Amérique',  zones: ['Afrique', 'Amerique'] },
-  { label: 'Monde',               zones: ['Monde'] }
+  { label: 'Monde',               zones: ['Monde'] },
+  { label: 'Cartographie',        zones: ['Atlas'] }
 ];
 
 const COLORS = {
@@ -768,7 +759,7 @@ function initZones() {
       dot.className = 'zone-dot-sm';
       dot.style.background = COLORS[z] || '#888';
       lbl.appendChild(inp); lbl.appendChild(dot);
-      lbl.appendChild(document.createTextNode(' ' + z));
+      lbl.appendChild(document.createTextNode(' ' + z));
       groupWrap.appendChild(lbl);
     });
     grid.appendChild(groupWrap);
@@ -812,7 +803,6 @@ function readForm() {
   var fVideoEl = document.getElementById('f-video');
   var rawVideo = fVideoEl ? fVideoEl.value.trim() : '';
   var isRegne  = !!(document.getElementById('f-regne') && document.getElementById('f-regne').checked);
-  var isAtlas  = !!(document.getElementById('f-atlas') && document.getElementById('f-atlas').checked);
 
   var evt = { id: editingId !== null ? editingId : nextId(), titre: cleanText(titre), date: date };
   if (mois)                    evt.mois     = mois;
@@ -823,25 +813,22 @@ function readForm() {
   evt.description = cleanText(document.getElementById('f-desc').value);
   evt.image       = rawImg;
   var fTheme = document.getElementById('f-theme').value;
-  if (fTheme) evt.theme = fTheme; 
+  if (fTheme) evt.theme = fTheme;   /* thème manuel (sinon détection auto à l'affichage) */
   if (rawVideo)  evt.video = rawVideo;
   if (isRegne)   evt.regne = true;
-  if (isAtlas)   evt.atlas = true;
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
-  
   var _noCoord = !!(document.getElementById('f-geo-none') && document.getElementById('f-geo-none').checked);
   var _verified = !!(document.getElementById('f-geo-ok') && document.getElementById('f-geo-ok').checked);
   var _la = parseFloat(document.getElementById('f-lat').value);
   var _lo = parseFloat(document.getElementById('f-lng').value);
-  
   if (!_noCoord && !isNaN(_la) && !isNaN(_lo)) {
     evt.lat = Math.round(_la*10000)/10000;
     evt.lng = Math.round(_lo*10000)/10000;
-    if (!_verified) evt.geo_auto = true; 
+    if (!_verified) evt.geo_auto = true;  /* position non encore vérifiée -> reste à confirmer */
   } else if (_noCoord) {
-    evt.geo_none = true;
+    evt.geo_none = true;  /* repli sur la zone, volontaire et relu */
   }
   var series = [];
   ['f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
@@ -849,9 +836,12 @@ function readForm() {
     if (el && el.value.trim()) series.push(cleanText(el.value.trim()));
   });
   evt.serie = series.join('|');
+  /* ⚠ readForm() reconstruit l'objet à plat : tout champ absent d'ici est perdu.
+     Le QID Wikidata n'a pas de champ de saisie, on le réinjecte explicitement. */
   if (wdFormQid) evt.wikidata = wdFormQid;
   return evt;
 }
+
 function nextId() {
   if (events.length === 0) return 1;
   return Math.max.apply(null, events.map(function(e) { return e.id; })) + 1;
@@ -870,14 +860,6 @@ function fillForm(evt) {
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
   document.getElementById('f-regne').checked  = !!evt.regne;
-
-  var atlasCb = document.getElementById('f-atlas');
-  if (atlasCb) { 
-    atlasCb.checked = !!evt.atlas; 
-  }
-
-  document.getElementById('f-sources').value  = evt.sources  || '';
-  geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
   document.getElementById('f-sources').value  = evt.sources  || '';
   geoLoadedAuto = !!evt.geo_auto; geoValidated = false;
   var _hasGeo = (typeof evt.lat === 'number' && typeof evt.lng === 'number');
@@ -923,9 +905,6 @@ function fillForm(evt) {
 function resetForm() {
   editingId = null;
   document.getElementById('f-regne').checked = false;
-  // NOUVEAU : Décocher la case Atlas
-  var atlasCb = document.getElementById('f-atlas');
-  if (atlasCb) atlasCb.checked = false;
   ['f-titre','f-date','f-mois','f-date-fin','f-mois-fin',
    'f-desc','f-image','f-legende','f-video','f-sources','f-lat','f-lng','f-serie-1','f-serie-2','f-serie-3'].forEach(function(id) {
     document.getElementById(id).value = '';
@@ -968,56 +947,20 @@ function saveEvent() {
   }
   events.sort(function(a, b) { return a.date - b.date; });
   resetForm();
-function updateJSON() {
-  var clean = events.map(function(e) {
-    var o = { id: e.id, titre: e.titre, date: e.date };
-    if (e.mois)     o.mois     = e.mois;
-    if (e.date_fin) o.date_fin = e.date_fin;
-    if (e.mois_fin) o.mois_fin = e.mois_fin;
-    o.zones = e.zones;
-    o.type  = e.type || 1;
-    if (e.description) o.description = e.description;
-    o.image = e.image || '';
-    if (e.theme)   o.theme   = e.theme;
-    if (e.legende) o.legende = e.legende;
-    if (e.video)   o.video   = e.video;
-    if (e.regne)   o.regne   = true;
-    if (e.atlas)   o.atlas   = true;
-    if (typeof e.lat === 'number') o.lat = e.lat;
-    if (typeof e.lng === 'number') o.lng = e.lng;
-    if (e.geo_auto) o.geo_auto = true;
-    if (e.geo_none) o.geo_none = true;
-    if (e.sources) o.sources = e.sources;
-    if (e.serie)   o.serie   = e.serie;
-    if (e.wikidata) o.wikidata = e.wikidata;
-    return o;
-  });
-  
-  var txt = JSON.stringify(clean, null, 2);
-  var jsonOut = document.getElementById('json-output');
-  if (jsonOut) jsonOut.value = txt;
-  
-  var countEl = document.getElementById('json-count');
-  if (countEl) {
-    countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
-    // Sécurité : on vérifie si validateEvents existe
-    if (typeof validateEvents === 'function') {
-      var warns = validateEvents();
-      if (warns && warns.length > 0) {
-        countEl.textContent += ' \u26A0 ' + warns.length + ' pb';
-        countEl.style.color = '#8B1A1A';
-        countEl.title = warns.join('\n');
-      } else {
-        countEl.style.color = '';
-        countEl.title = '';
-      }
-    }
-  }
-  
-  if (typeof renderList === 'function') renderList();
-  if (typeof buildSerieDatalist === 'function') buildSerieDatalist();
-  if (typeof synthInitControls === 'function') synthInitControls({ keepForm: true });
+  updateJSON();
+  markEvtDirty();
 }
+
+function deleteEvent() {
+  if (editingId === null) return;
+  if (!confirm('Supprimer cet événement ?')) return;
+  events = events.filter(function(e) { return e.id !== editingId; });
+  resetForm();
+  updateJSON();
+  markEvtDirty();
+  toast('Événement supprimé');
+}
+
 /* ── Fiches sans thème : aide à proximité du tableau des thèmes ──
    "Sans thème" = ni thème manuel (evt.theme), ni thème détecté auto par mots-clés du titre.
    On distingue par ailleurs les fiches qui n'ont qu'un thème auto-détecté (non validé). */
@@ -1113,22 +1056,16 @@ function renderList() {
       + '<span class="ec-title">' + evt.titre + '</span>'
       + '<span class="ec-id">#' + evt.id + '</span>'
       + '</div>'
-   + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
+      + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
       + (function(){
           var dt = detectTheme(evt);
-          var html = '';
-          if (evt.atlas) {
-              html += '<span class="ec-theme" title="Atlas / Cartes" style="margin-right:4px;">🗺️</span>';
-          }
           if (dt && THEME_DEFS[dt]) {
             var manuel = !!evt.theme;
-            html += '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
+            return '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
                    (manuel ? ' (manuel)' : ' (auto)') + '" style="' +
                    (manuel ? '' : 'opacity:0.6;') + '">' + THEME_DEFS[dt].icon + '</span>';
-          } else if (!evt.atlas) {
-            html += '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
           }
-          return html;
+          return '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
         })()
       + '</div>';
     card.addEventListener('click', function() { fillForm(evt); });
@@ -1298,44 +1235,26 @@ function importJSON(input) {
     try {
       var data = JSON.parse(e.target.result);
       events = data.map(function(ev) {
-        // Compatibilité avec les anciennes fiches
         if (!ev.zones) ev.zones = ev.zone ? [ev.zone] : [];
         if (!ev.type)  ev.type  = 1;
-        
-        // Sécurité : on vérifie si ALIASES existe dans votre version
-        if (typeof ALIASES !== 'undefined') {
-          ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
-        }
-        
-        // Transformation automatique de la zone "Atlas" pour la nouvelle case
-        var idx = ev.zones.indexOf('Atlas');
-        if (idx !== -1) {
-          ev.atlas = true;
-          ev.zones.splice(idx, 1);
-          if (ev.zones.length === 0) ev.zones.push('Monde');
-        }
-        
+        ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         return ev;
       });
-      
-      if (typeof hasImported !== 'undefined') hasImported = true;
+      hasImported = true;
       var warn = document.getElementById('import-warning');
       if (warn) warn.style.display = 'none';
-      
-      // Sécurités additionnelles
-      if (typeof migrateThemeZones === 'function') migrateThemeZones();
-      if (typeof resetForm === 'function') resetForm();
-      
+      migrateThemeZones();   /* convertit les anciennes zones-thèmes en thèmes-icônes */
+      resetForm();
       updateJSON();
-      
-      if (typeof toast === 'function') toast(events.length + ' événements importés');
+      toast(events.length + ' événements importés \u2713');
     } catch(err) {
-      alert("Erreur lors de l'importation : " + err.message);
+      toast('Erreur : fichier JSON invalide');
     }
   };
   reader.readAsText(file);
   input.value = '';
 }
+
 function toast(msg) {
   var el = document.getElementById('toast');
   el.textContent = msg;
@@ -1826,10 +1745,10 @@ function initThemeButtons() {
   var box = document.getElementById('theme-buttons');
   if (!box) return;
   box.innerHTML = '';
+  /* Même ordre d'affichage que la légende de la frise */
   var keys = THEME_ORDER.slice();
   for (var key in THEME_DEFS) { if (keys.indexOf(key) === -1) keys.push(key); }
   keys.forEach(function(t) {
-    if (t === 'atlas') return;
     var d = THEME_DEFS[t]; if (!d) return;
     var b = document.createElement('span');
     b.className = 'theme-btn';
@@ -1837,7 +1756,7 @@ function initThemeButtons() {
     b.innerHTML = '<span class="tb-ic">' + d.icon + '</span>' + d.label;
     b.addEventListener('click', function() {
       var cur = document.getElementById('f-theme').value;
-      setTheme(cur === t ? '' : t);
+      setTheme(cur === t ? '' : t);   /* reclic sur le thème actif → désélection */
     });
     box.appendChild(b);
   });
