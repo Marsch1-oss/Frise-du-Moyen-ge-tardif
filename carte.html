@@ -623,9 +623,10 @@ var THEME_DEFS = {
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
-  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
+  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique''atlas'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -659,6 +660,10 @@ function eventMatchesTheme(e){
   var anyActive=false;
   for(var t in activeThemes){ if(activeThemes[t]){ anyActive=true; break; } }
   if(!anyActive) return true;
+  
+  /* --- LA NOUVELLE LIGNE EST ICI --- */
+  if (activeThemes['atlas'] && e.atlas) return true;
+  
   var th = (e._th!==undefined) ? e._th : (e._th = detectThemeSlim(e));
   return !!(th && activeThemes[th]);
 }
