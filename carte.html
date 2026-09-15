@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+ <script>
+  window.onerror = function(msg, url, line) {
+    alert("Erreur JS : " + msg + "\nLigne : " + line);
+  };
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carte chronologique — prototype (Niveau 1)</title>
