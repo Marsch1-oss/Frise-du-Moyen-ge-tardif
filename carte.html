@@ -642,21 +642,33 @@ var THEME_KEYWORDS = {
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
   'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
 };
- activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
 
-/* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
-   (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
-   même logique que detectTheme(evt) de frise.js, adaptée aux noms de champs. */
-function detectThemeSlim(e){
-  if(e.th && THEME_DEFS[e.th]) return e.th;
-   txt=(e.t||'').toLowerCase();
-  for( i=0;i<THEME_ORDER.length;i++){
-     kws=THEME_KEYWORDS[THEME_ORDER[i]];
-    if(!kws) continue;
-    for(var k=0;k<kws.length;k++){
-      if(txt.indexOf(kws[k])!==-1) return THEME_ORDER[i];
+var activeThemes = {};
+
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
+  if (!anyActive) return true;
+  
+  if (activeThemes['atlas'] && evt.atlas) return true;
+  
+  var th = detectTheme(evt);
+  return !!(th && activeThemes[th]);
+}
+
+function detectTheme(evt) {
+  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
+  var txt = (evt.titre || '').toLowerCase();
+  for (var i = 0; i < THEME_ORDER.length; i++) {
+    var theme = THEME_ORDER[i];
+    var kws = THEME_KEYWORDS[theme];
+    if (!kws) continue;
+    for (var k = 0; k < kws.length; k++) {
+      if (txt.indexOf(kws[k]) !== -1) return theme;
     }
   }
+  return null;
+}
   return null;
 }
 function eventMatchesTheme(evt) {
