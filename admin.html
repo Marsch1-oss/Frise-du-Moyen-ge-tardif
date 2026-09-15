@@ -599,9 +599,10 @@ var THEME_DEFS = {
   'sciences':    { icon: '\uD83D\uDD2C',     label: 'Sciences' },
   'techniques':  { icon: '\u2699\uFE0F',     label: 'Techniques' },
   'idees':       { icon: '\uD83D\uDCA1',     label: 'Idées' },
-  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' }
+  'catastrophe': { icon: '\uD83C\uDF0B',     label: 'Catastrophe' },
+  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
-var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique'];
+var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
 var THEME_KEYWORDS = {
   'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
   'revolte':     ['révolte','soulèvement','soulève','émeute'],
@@ -962,20 +963,47 @@ function saveEvent() {
   }
   events.sort(function(a, b) { return a.date - b.date; });
   resetForm();
-  updateJSON();
-  markEvtDirty();
+function updateJSON() {
+  var clean = events.map(function(e) {
+    var o = { id: e.id, titre: e.titre, date: e.date };
+    if (e.mois)     o.mois     = e.mois;
+    if (e.date_fin) o.date_fin = e.date_fin;
+    if (e.mois_fin) o.mois_fin = e.mois_fin;
+    o.zones = e.zones;
+    o.type  = e.type || 1;
+    if (e.description) o.description = e.description;
+    o.image = e.image || '';
+    if (e.theme)   o.theme   = e.theme;
+    if (e.legende) o.legende = e.legende;
+    if (e.video)   o.video   = e.video;
+    if (e.regne)   o.regne   = true;
+    if (e.atlas)   o.atlas   = true;
+    if (typeof e.lat === 'number') o.lat = e.lat;
+    if (typeof e.lng === 'number') o.lng = e.lng;
+    if (e.geo_auto) o.geo_auto = true;
+    if (e.geo_none) o.geo_none = true;
+    if (e.sources) o.sources = e.sources;
+    if (e.serie)   o.serie   = e.serie;
+    if (e.wikidata) o.wikidata = e.wikidata;
+    return o;
+  });
+  var txt = JSON.stringify(clean, null, 2);
+  document.getElementById('json-output').value = txt;
+  var warns = validateEvents();
+  var countEl = document.getElementById('json-count');
+  countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
+  if (warns.length > 0) {
+    countEl.textContent += ' \u26a0 ' + warns.length + ' pb';
+    countEl.style.color = '#8B1A1A';
+    countEl.title = warns.join('\n');
+  } else {
+    countEl.style.color = '';
+    countEl.title = '';
+  }
+  renderList();
+  buildSerieDatalist();
+  if (typeof synthInitControls === 'function') synthInitControls({ keepForm: true });
 }
-
-function deleteEvent() {
-  if (editingId === null) return;
-  if (!confirm('Supprimer cet événement ?')) return;
-  events = events.filter(function(e) { return e.id !== editingId; });
-  resetForm();
-  updateJSON();
-  markEvtDirty();
-  toast('Événement supprimé');
-}
-
 /* ── Fiches sans thème : aide à proximité du tableau des thèmes ──
    "Sans thème" = ni thème manuel (evt.theme), ni thème détecté auto par mots-clés du titre.
    On distingue par ailleurs les fiches qui n'ont qu'un thème auto-détecté (non validé). */
@@ -1260,12 +1288,11 @@ function importJSON(input) {
         if (!ev.type)  ev.type  = 1;
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         
-        // MIGRATION : On transforme "Atlas" en attribut et on nettoie la zone
         var idx = ev.zones.indexOf('Atlas');
         if (idx !== -1) {
           ev.atlas = true;
           ev.zones.splice(idx, 1);
-          if (ev.zones.length === 0) ev.zones.push('Monde'); // Évite que la fiche ne disparaisse de la carte
+          if (ev.zones.length === 0) ev.zones.push('Monde');
         }
         
         return ev;
@@ -1273,7 +1300,7 @@ function importJSON(input) {
       hasImported = true;
       var warn = document.getElementById('import-warning');
       if (warn) warn.style.display = 'none';
-      migrateThemeZones();   /* convertit les anciennes zones-thèmes en thèmes-icônes */
+      migrateThemeZones();
       resetForm();
       updateJSON();
       toast(events.length + ' événements importés \u2713');
@@ -1284,7 +1311,6 @@ function importJSON(input) {
   reader.readAsText(file);
   input.value = '';
 }
-
 function toast(msg) {
   var el = document.getElementById('toast');
   el.textContent = msg;
@@ -1774,12 +1800,11 @@ synthRenderList();
 function initThemeButtons() {
   var box = document.getElementById('theme-buttons');
   if (!box) return;
-  /* Même ordre d'affichage que la légende de la frise */
+  box.innerHTML = '';
   var keys = THEME_ORDER.slice();
   for (var key in THEME_DEFS) { if (keys.indexOf(key) === -1) keys.push(key); }
   keys.forEach(function(t) {
-    if (t === 'atlas') return; // NOUVEAU : on masque le bouton Atlas ici car il a déjà sa case à cocher !
-    
+    if (t === 'atlas') return;
     var d = THEME_DEFS[t]; if (!d) return;
     var b = document.createElement('span');
     b.className = 'theme-btn';
@@ -1787,7 +1812,7 @@ function initThemeButtons() {
     b.innerHTML = '<span class="tb-ic">' + d.icon + '</span>' + d.label;
     b.addEventListener('click', function() {
       var cur = document.getElementById('f-theme').value;
-      setTheme(cur === t ? '' : t);   /* reclic sur le thème actif → désélection */
+      setTheme(cur === t ? '' : t);
     });
     box.appendChild(b);
   });
