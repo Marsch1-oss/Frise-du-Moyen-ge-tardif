@@ -987,21 +987,30 @@ function updateJSON() {
     if (e.wikidata) o.wikidata = e.wikidata;
     return o;
   });
+  
   var txt = JSON.stringify(clean, null, 2);
-  document.getElementById('json-output').value = txt;
-  var warns = validateEvents();
+  var jsonOut = document.getElementById('json-output');
+  if (jsonOut) jsonOut.value = txt;
+  
   var countEl = document.getElementById('json-count');
-  countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
-  if (warns.length > 0) {
-    countEl.textContent += ' \u26a0 ' + warns.length + ' pb';
-    countEl.style.color = '#8B1A1A';
-    countEl.title = warns.join('\n');
-  } else {
-    countEl.style.color = '';
-    countEl.title = '';
+  if (countEl) {
+    countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
+    // Sécurité : on vérifie si validateEvents existe
+    if (typeof validateEvents === 'function') {
+      var warns = validateEvents();
+      if (warns && warns.length > 0) {
+        countEl.textContent += ' \u26A0 ' + warns.length + ' pb';
+        countEl.style.color = '#8B1A1A';
+        countEl.title = warns.join('\n');
+      } else {
+        countEl.style.color = '';
+        countEl.title = '';
+      }
+    }
   }
-  renderList();
-  buildSerieDatalist();
+  
+  if (typeof renderList === 'function') renderList();
+  if (typeof buildSerieDatalist === 'function') buildSerieDatalist();
   if (typeof synthInitControls === 'function') synthInitControls({ keepForm: true });
 }
 /* ── Fiches sans thème : aide à proximité du tableau des thèmes ──
@@ -1284,10 +1293,16 @@ function importJSON(input) {
     try {
       var data = JSON.parse(e.target.result);
       events = data.map(function(ev) {
+        // Compatibilité avec les anciennes fiches
         if (!ev.zones) ev.zones = ev.zone ? [ev.zone] : [];
         if (!ev.type)  ev.type  = 1;
-        ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         
+        // Sécurité : on vérifie si ALIASES existe dans votre version
+        if (typeof ALIASES !== 'undefined') {
+          ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
+        }
+        
+        // Transformation automatique de la zone "Atlas" pour la nouvelle case
         var idx = ev.zones.indexOf('Atlas');
         if (idx !== -1) {
           ev.atlas = true;
@@ -1297,15 +1312,20 @@ function importJSON(input) {
         
         return ev;
       });
-      hasImported = true;
+      
+      if (typeof hasImported !== 'undefined') hasImported = true;
       var warn = document.getElementById('import-warning');
       if (warn) warn.style.display = 'none';
-      migrateThemeZones();
-      resetForm();
+      
+      // Sécurités additionnelles
+      if (typeof migrateThemeZones === 'function') migrateThemeZones();
+      if (typeof resetForm === 'function') resetForm();
+      
       updateJSON();
-      toast(events.length + ' événements importés \u2713');
+      
+      if (typeof toast === 'function') toast(events.length + ' événements importés');
     } catch(err) {
-      toast('Erreur : fichier JSON invalide');
+      alert("Erreur lors de l'importation : " + err.message);
     }
   };
   reader.readAsText(file);
