@@ -669,19 +669,9 @@ function detectTheme(evt) {
   }
   return null;
 }
-  return null;
-}
-function eventMatchesTheme(evt) {
-  var anyActive = false;
-  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
-  if (!anyActive) return true;
-  
-  if (activeThemes['atlas'] && evt.atlas) return true;
-  
-  var th = detectTheme(evt);
-  return !!(th && activeThemes[th]);
-}
-
+</script>
+</body>
+</html>
 /* ---- Mode Parcours -------------------------------------------------------
    Un « parcours » regroupe les étapes d'un itinéraire historique (champ
    `serie` d'events.json, ex. « Guerre de Cent ans »). Le mode Parcours
