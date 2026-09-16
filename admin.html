@@ -821,8 +821,9 @@ function readForm() {
   if (fTheme) evt.theme = fTheme; 
   if (rawVideo)  evt.video = rawVideo;
   if (isRegne)   evt.regne = true;
-  if (isAtlas)   evt.atlas = true;
-  var leg = document.getElementById('f-legende').value.trim();
+  var isAtlas = !!(document.getElementById('f-atlas') && document.getElementById('f-atlas').checked);
+  if (isAtlas) evt.atlas = true;
+   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
   evt.sources = cleanText(document.getElementById('f-sources').value) || '';
   
@@ -1145,7 +1146,8 @@ function updateJSON() {
     if (e.theme)   o.theme   = e.theme;
     if (e.legende) o.legende = e.legende;
     if (e.video)   o.video   = e.video;
-    if (e.regne)   o.regne   = true;
+        if (e.regne)   o.regne   = true;
+    if (e.atlas) o.atlas = true;
     if (typeof e.lat === 'number') o.lat = e.lat;
     if (typeof e.lng === 'number') o.lng = e.lng;
     if (e.geo_auto) o.geo_auto = true;
@@ -1288,7 +1290,8 @@ function importJSON(input) {
         if (!ev.type)  ev.type  = 1;
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         
-        var idx = ev.zones.indexOf('Atlas');
+        // --- Intégration sécurisée pour l'Atlas ---
+        var idx = ev.zones ? ev.zones.indexOf('Atlas') : -1;
         if (idx !== -1) {
           ev.atlas = true;
           ev.zones.splice(idx, 1);
@@ -1300,7 +1303,7 @@ function importJSON(input) {
       hasImported = true;
       var warn = document.getElementById('import-warning');
       if (warn) warn.style.display = 'none';
-      migrateThemeZones();
+      migrateThemeZones();   /* convertit les anciennes zones-thèmes en thèmes-icônes */
       resetForm();
       updateJSON();
       toast(events.length + ' événements importés \u2713');
