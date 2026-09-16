@@ -964,46 +964,8 @@ function saveEvent() {
   }
   events.sort(function(a, b) { return a.date - b.date; });
   resetForm();
-function updateJSON() {
-  var clean = events.map(function(e) {
-    var o = { id: e.id, titre: e.titre, date: e.date };
-    if (e.mois)     o.mois     = e.mois;
-    if (e.date_fin) o.date_fin = e.date_fin;
-    if (e.mois_fin) o.mois_fin = e.mois_fin;
-    o.zones = e.zones;
-    o.type  = e.type || 1;
-    if (e.description) o.description = e.description;
-    o.image = e.image || '';
-    if (e.theme)   o.theme   = e.theme;
-    if (e.legende) o.legende = e.legende;
-    if (e.video)   o.video   = e.video;
-    if (e.regne)   o.regne   = true;
-    if (e.atlas)   o.atlas   = true;
-    if (typeof e.lat === 'number') o.lat = e.lat;
-    if (typeof e.lng === 'number') o.lng = e.lng;
-    if (e.geo_auto) o.geo_auto = true;
-    if (e.geo_none) o.geo_none = true;
-    if (e.sources) o.sources = e.sources;
-    if (e.serie)   o.serie   = e.serie;
-    if (e.wikidata) o.wikidata = e.wikidata;
-    return o;
-  });
-  var txt = JSON.stringify(clean, null, 2);
-  document.getElementById('json-output').value = txt;
-  var warns = validateEvents();
-  var countEl = document.getElementById('json-count');
-  countEl.textContent = events.length + ' événement' + (events.length > 1 ? 's' : '');
-  if (warns.length > 0) {
-    countEl.textContent += ' \u26a0 ' + warns.length + ' pb';
-    countEl.style.color = '#8B1A1A';
-    countEl.title = warns.join('\n');
-  } else {
-    countEl.style.color = '';
-    countEl.title = '';
-  }
-  renderList();
-  buildSerieDatalist();
-  if (typeof synthInitControls === 'function') synthInitControls({ keepForm: true });
+  updateJSON();
+  markEvtDirty();
 }
 /* ── Fiches sans thème : aide à proximité du tableau des thèmes ──
    "Sans thème" = ni thème manuel (evt.theme), ni thème détecté auto par mots-clés du titre.
