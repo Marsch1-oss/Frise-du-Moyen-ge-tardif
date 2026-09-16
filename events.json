@@ -7417,11 +7417,19 @@
     "titre": "Europe 1328",
     "date": 1328,
     "zones": [
-      "Monde"
+      "France",
+      "Angleterre",
+      "St Empire",
+      "Naples",
+      "Italie",
+      "Castille",
+      "Aragon",
+      "Portugal"
     ],
     "type": 3,
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Europe_in_1328.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
     "theme": "politique",
+    "atlas": true,
     "lat": 49.9596,
     "lng": 5.5736,
     "sources": "https://commons.wikimedia.org/wiki/File:Europe_in_1328.png"
@@ -11793,6 +11801,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Spread-Of-The-Black-Death.gif",
     "theme": "catastrophe",
     "video": "https://www.youtube.com/watch?v=mrvj1Gj1G-A&list=PLaMC5Lw8rJzERaOzu4g8nAb4K23uzevX3&index=6",
+    "atlas": true,
     "lat": 44.4073,
     "lng": 8.9339,
     "sources": "Giovanni Boccaccio, Decameron (préface)"
@@ -23075,6 +23084,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/HRR_14Jh.jpg/960px-HRR_14Jh.jpg",
     "theme": "politique",
     "legende": "Le Brandebourg dans la structure de pouvoir de la maison du Saint-Empire romain germanique 1373 lors de la transition vers les Luxembourgeois",
+    "atlas": true,
     "lat": 49.4711,
     "lng": 8.0936
   },
