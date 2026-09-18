@@ -3704,6 +3704,7 @@ function extractYouTubeId(url) {
 
 /* ── Init ────────────────────────────────────────────────────────────*/
 var MUSIC_TRACKS  = [
+   'audio/Je vivroie liement Guillaume de Machaut ENSEMBLE PARLAMENTO.mp3',
   'audio/Guillaume_de_Machaut_Je_vivroie_liementLiement_me_deport.mp3',
   'audio/Guillaume_de_Machaut_Jaim_sans_penser.mp3',
   'audio/Douce_Dame_Jolie Guillaume de Machaut.mp3'
