@@ -2,7 +2,7 @@
 /* frise.js — Frise chronologique medievale 1300-1500 — 2026-07-14 : fil d'Ariane retiré + THEME_KEYWORDS synchronisé (art) + barre Affichage remontée dans le bandeau */
 
 var ZONES = [
-  'France', 'Angleterre', 'St Empire',
+ 'Europe', 'France', 'Angleterre', 'St Empire',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
@@ -11,15 +11,15 @@ var ZONES = [
 ];
 
 var ZONES_GROUPS = {
+'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde', 'Atlas'],
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
   'Europe du Nord':     ['Scandinavie'],
   'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
   'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
-  'Afrique & Amérique': ['Afrique', 'Amerique'],
-  'Monde':              ['Monde']
-};
+   };
 
 var COLORS = {
+'Europe':              { bg: '#3B5998', light: '#E8ECF5', text: '#1A2A5A' },
   'France':              { bg: '#8B1A1A', light: '#F5E6E6', text: '#5C0F0F' },
   'Angleterre':          { bg: '#1A4A6B', light: '#E6EFF5', text: '#0F2E45' },
   'St Empire':           { bg: '#6B4A10', light: '#F5EDE0', text: '#3A2508' },
@@ -84,6 +84,16 @@ var ZONE_ALIASES = {
   'America':             'Amerique',
   'Africa':              'Afrique'
 };
+
+/* --- NOUVEAU CODE : GESTION DE LA ZONE EUROPE --- */
+var EUROPE_PAYS = ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Scandinavie', 'Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'];
+
+function matchZone(evt, zoneCible) {
+  if (!evt.zones) return false;
+  if (evt.zones.indexOf(zoneCible) !== -1) return true;
+  if (evt.zones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
+  return false;
+}
 
 var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
@@ -376,7 +386,7 @@ function renderLevel(level, rangeStart) {
     if (!visibleAtLevel(e, level)) continue;
     if (e.regne) continue;
     for (var zi = 0; zi < ZONES.length; zi++) {
-      if (e.zones.indexOf(ZONES[zi]) !== -1 && activeZones[ZONES[zi]]) {
+     if (matchZone(e, ZONES[zi]) && activeZones[ZONES[zi]]) {
         sharedZoneOf[e.id] = ZONES[zi];
         break;
       }
@@ -393,7 +403,7 @@ function renderLevel(level, rangeStart) {
   var numList = allEvents.filter(function(e) {
     if (e.regne) return false;
     if (!visibleAtLevel(e, level)) return false;
-    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+    if (!ZONES.some(function(z) { return activeZones[z] && matchZone(e, z); })) return false;
     var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
     return e.date <= end && fin >= start;
   }).sort(function(a, b) {
@@ -428,12 +438,13 @@ function renderLevel(level, rangeStart) {
     var evts = [];
     for (var j = 0; j < allEvents.length; j++) {
       var e = allEvents[j];
-      if (e.zones.indexOf(zone) === -1) continue;
-      if (!visibleAtLevel(e, level)) continue;
-      if (e.regne) continue;
-      if (e.zones.length > 1) {
-        if (sharedZoneOf[e.id] !== zone) continue;
-      }
+     if (!matchZone(e, zone)) continue;
+if (!visibleAtLevel(e, level)) continue;
+if (e.regne) continue;
+if (e.zones.length > 1 || e.zones.indexOf('Europe') !== -1) { // L'Europe agit comme un événement multi-zones
+  if (sharedZoneOf[e.id] !== zone) continue;
+}
+  
       if (displayedIds[e.id]) continue;
       displayedIds[e.id] = true;
       var eDateF = e.date + (e.mois ? (e.mois - 1) / 12 : 0);
@@ -576,7 +587,7 @@ function openEventList() {
       if (e.regne) return false;
       if (!eliPassesFilter(e)) return false;   /* filtre Important/Détaillé/Complet */
       if (!eventMatchesTheme(e)) return false; /* filtre thématique (légende) */
-      if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+      if (!ZONES.some(function(z) { return activeZones[z] && matchZone(e, z); })) return false;
       var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
       return e.date < end && fin >= start;
     }).sort(function(a, b) {
@@ -965,7 +976,7 @@ function buildRulersSection(start, end, level) {
     for (var j = 0; j < allEvents.length; j++) {
       var e = allEvents[j];
       if (!e.regne) continue;
-      if (e.zones.indexOf(zone) === -1) continue;
+     if (!matchZone(e, zone)) continue;
       /* En mode parcours, tous les règnes des zones actives restent
          affichés comme repères chronologiques pour le lecteur */
       if (searchTerm && !eventMatchesSearch(e)) continue;
@@ -1153,7 +1164,7 @@ function injectBackgroundImages(container, start, end, level) {
     if (!e.image || !e.image.trim()) return false;
     if (_shownImages[e.image]) return false;
     if (!visibleAtLevel(e, level)) return false;
-    if (!e.zones.some(function(z) { return activeZones[z]; })) return false;
+    if (!ZONES.some(function(z) { return activeZones[z] && matchZone(e, z); })) return false;
     var d0 = e.date, d1 = e.date_fin || e.date;
     return d0 <= end && d1 >= start;
   });
