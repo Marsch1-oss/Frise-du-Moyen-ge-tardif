@@ -1051,7 +1051,7 @@ function reignsFor(zone, range){
   var a=range.a, b=range.b;
   return EVENTS.filter(function(e){
     if(!e.r) return false;
-    if (matchZone(e, zone))
+   if (!matchZone(e, zone)) return false;
     if(typeof e.d!=='number') return false;
     var f=(typeof e.df==='number')?e.df:e.d;
     return e.d<=b && f>=a;
