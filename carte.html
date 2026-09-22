@@ -1024,7 +1024,7 @@ function eventPassesLevel(e){
 function eventsFor(zone, range){
   var a=range.a, b=range.b;
   return EVENTS.filter(function(e){
-    if (!matchZone(e, zoneActuelle))
+    if (matchZone(e, zone))
     if(typeof e.d!=='number') return false;
     if(!eventPassesLevel(e)) return false;    /* densité : Important / Détaillé / Complet */
     if(!eventMatchesTheme(e)) return false;   /* filtre thématique global */
@@ -1041,7 +1041,7 @@ function reignsFor(zone, range){
   var a=range.a, b=range.b;
   return EVENTS.filter(function(e){
     if(!e.r) return false;
-    if (matchZone(e, zoneActuelle))
+    if (matchZone(e, zone))
     if(typeof e.d!=='number') return false;
     var f=(typeof e.df==='number')?e.df:e.d;
     return e.d<=b && f>=a;
