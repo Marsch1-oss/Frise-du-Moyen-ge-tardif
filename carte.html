@@ -1048,7 +1048,7 @@ function eventPassesLevel(e){
 function eventsFor(zone, range){
   var a=range.a, b=range.b;
   return EVENTS.filter(function(e){
-    if (matchZone(e, zone))
+    if (!matchZone(e, zone)) return false;
     if(typeof e.d!=='number') return false;
     if(!eventPassesLevel(e)) return false;    /* densité : Important / Détaillé / Complet */
     if(!eventMatchesTheme(e)) return false;   /* filtre thématique global */
