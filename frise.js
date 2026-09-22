@@ -89,11 +89,29 @@ var ZONE_ALIASES = {
 var EUROPE_PAYS = ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Scandinavie', 'Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'];
 
 function matchZone(evt, zoneCible) {
-  if (!evt.zones) return false;
-  if (evt.zones.indexOf(zoneCible) !== -1) return true;
-  if (evt.zones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
+  // SÉCURITÉ UNIVERSELLE : On prend "evt.z" (pour la carte) OU "evt.zones" (pour la frise)
+  var dataZone = evt.z || evt.zones; 
+  if (!dataZone) return false;
+  
+  var listeZones = Array.isArray(dataZone) ? dataZone : [dataZone];
+  if (!zoneCible) return false;
+
+  // 1. L'événement est explicitement lié à la zone cherchée
+  if (listeZones.indexOf(zoneCible) !== -1) return true;
+  
+  // 2. Si on cherche un pays (ex: France) et que l'événement est global à "Europe"
+  if (listeZones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
+  
+  // 3. Si on cherche "Europe" et que l'événement s'est produit dans un pays européen
+  if (zoneCible === 'Europe') {
+    for (var i = 0; i < listeZones.length; i++) {
+        if (EUROPE_PAYS.indexOf(listeZones[i]) !== -1) return true;
+    }
+  }
+
   return false;
 }
+/* ------------------------------------------------ */
 
 var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
