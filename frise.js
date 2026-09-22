@@ -12,10 +12,10 @@ var ZONES = [
 
 var ZONES_GROUPS = {
 'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde', 'Atlas'],
-  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Atlas'],
-  'Europe du Nord':     ['Scandinavie' 'Atlas'],
-  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans' 'Atlas'],
-  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde' 'Atlas'],
+  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
+  'Europe du Nord':     ['Scandinavie'],
+  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
+  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
    };
 
 var COLORS = {
@@ -51,12 +51,10 @@ var COLORS = {
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
   'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
-'Atlas':             { bg: '#B2854B', light: '#F5EDD8', text: '#4A3B28' }
 };
 
 var ZONE_ALIASES = {
   'Empire':              'St Empire',
- 'Atlas':              'Atlas',
   'St_Empire':           'St Empire',
   'Iberique':            'Castille',
   'Ibérique':            'Castille',
@@ -91,29 +89,11 @@ var ZONE_ALIASES = {
 var EUROPE_PAYS = ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Scandinavie', 'Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'];
 
 function matchZone(evt, zoneCible) {
-  // SÉCURITÉ UNIVERSELLE : On prend "evt.z" (pour la carte) OU "evt.zones" (pour la frise)
-  var dataZone = evt.z || evt.zones; 
-  if (!dataZone) return false;
-  
-  var listeZones = Array.isArray(dataZone) ? dataZone : [dataZone];
-  if (!zoneCible) return false;
-
-  // 1. L'événement est explicitement lié à la zone cherchée
-  if (listeZones.indexOf(zoneCible) !== -1) return true;
-  
-  // 2. Si on cherche un pays (ex: France) et que l'événement est global à "Europe"
-  if (listeZones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
-  
-  // 3. Si on cherche "Europe" et que l'événement s'est produit dans un pays européen
-  if (zoneCible === 'Europe') {
-    for (var i = 0; i < listeZones.length; i++) {
-        if (EUROPE_PAYS.indexOf(listeZones[i]) !== -1) return true;
-    }
-  }
-
+  if (!evt.zones) return false;
+  if (evt.zones.indexOf(zoneCible) !== -1) return true;
+  if (evt.zones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
   return false;
 }
-/* ------------------------------------------------ */
 
 var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
