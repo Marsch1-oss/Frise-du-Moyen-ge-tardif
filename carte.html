@@ -565,10 +565,18 @@
 var EUROPE_PAYS = ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Scandinavie', 'Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'];
 
 function matchZone(evt, zoneCible) {
-  var listeZones = evt.z; // Dans la carte, la propriété s'appelle "z"
-  if (!listeZones) return false;
+  var listeZones = evt.z; 
+  if (!listeZones || !zoneCible) return false;
+  
+  // 1. Si la zone est trouvée directement
   if (listeZones.indexOf(zoneCible) !== -1) return true;
+  
+  // 2. Si c'est l'Europe et que le pays cherché est dedans
   if (listeZones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
+  
+  // 3. Inversement (pour le menu latéral) : Si on affiche l'Europe, on prend tous ses pays
+  if (zoneCible === 'Europe' && listeZones.some(z => EUROPE_PAYS.indexOf(z) !== -1)) return true;
+
   return false;
 }
 "use strict";
