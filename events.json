@@ -959,6 +959,7 @@
     "image": "images/Barrois mouvant.jpg",
     "theme": "diplomatie",
     "legende": "Le duché de Bar et l’écheveau des limites entre royaume et Empire (carte Léonard Dauphant). https://books.openedition.org/edul/4285",
+    "atlas": true,
     "lat": 48.765,
     "lng": 5.2846,
     "sources": "Wikipedia Article Barrois mouvant"
@@ -1199,6 +1200,7 @@
     "description": "1ere mention d’Osman fondateur de la dynastie Ottomane.\n\nLes Ottomans sous Osman Ier remportent une victoire cruciale près de Nicomédie, ouvrant la voie à la conquête de l'Asie Mineure byzantine. La bataille de Bapheus s'est déroulée le 27 juillet 1302 entre l'armée ottomane dirigée par Osman Ier et l'armée byzantine (composée en partie de mercenaires alains) dirigée par le général Georges Muzalon et Michel IX Paléologue, le fils d'Andronic II Paléologue. L'offensive victorieuse du général Jean Tarchaniotès en 1298 contre les émirats turcs s'est révélée sans lendemain ; les émirs affaiblis par ces actions ont peu à peu reconquis les territoires qu'ils contrôlaient, profitant du remplacement de Jean par des chefs de guerre souvent moins compétents.\n\nDe plus, les mercenaires, souvent non payés, désertent les rangs de l'armée byzantine. Pour défendre la Bythinie, Andronic II profite de l'arrivée d'Alains qui fuient les Mongols et demandent l'asile. Andronic les envoie en Anatolie où il les met sous le commandement de son fils Michel, En 1302, lorsque Michel IX prépare son offensive, il reste à Magnésie où ses officiers l'encouragent à la prudence, du fait de son absence d'expérience militaire. Face à cet immobilisme, les Turcs ravagent les campagnes alentour.\n\nLes Alains ne comprenant pas cette stratégie demandent à quitter les rangs de l'armée tandis que les éléments byzantins de celle-ci abandonnent la campagne, écœurés de voir leurs biens détruits impunément. Andronic réussit à rassembler l'argent nécessaire pour solder les Alains trois mois supplémentaires.\n\nAu terme des trois mois, les Alains commencent à déserter tandis que les Turcs resserrent leur pression autour de Magnésie. Face au danger, Michel IX décide de battre en retraite vers l'ouest entraînant le reste de son armée. Celle-ci passe par Pergame alors que ses arrières sont constamment harcelés par les Turcs.\n\nPendant ce temps, le corps d'Alains envoyés le long du Sangarios, fleuve marquant la frontière entre les territoires byzantins et turcs, fait aussi face à une offensive turque. Cette armée, commandée par le général Mouzalon, est composée de 2 000 hommes. Elle fait face à 5 000 Ottomans dirigés par Osman Ier, le fondateur de la dynastie ottomane. La bataille se déroule près de Nicomédie le 27 juillet 1302. Les Alains sont vaincus par les Ottomans et se replient dans Nicomédie, laissant les troupes d'Osman ravager les campagnes.\n\nSeules les grandes villes telles que Brousse, Nicée ou Nicomédie constituent des îlots de sécurité pour les Grecs. La plupart des paysans fuient en direction de l'Europe devant l'insécurité régnant sur leurs terres. Peu de temps après, une armée dirigée par Progonos Sgouros est aussi vaincue par les Ottomans.\n\nToutefois, Andronic parvient à gagner les services de la Compagnie catalane, un groupe de mercenaires catalans expérimentés, envoyé en Asie Mineure repousser les Turcs en 1304.\n\nCeux qui deviendront les Ottomans (ou fils d’Osmân) prennent de l’assurance et les heurts se multiplient entre ces groupes de pasteurs et les populations des villes. Bientôt, le fils d’Ertuğrul, Osmân, doté d’un caractère combatif, se transforme en ghâzi ou « combattant pour la foi ». Le déclin du sultanat seldjoukide permet aux ghâzis de la frontière de s’enhardir et de constituer de véritables bandes armées attirant à la fois les soldats d’autres chefs moins belliqueux et les réfugiés fuyant l’avance des Mongols.\n\nSe joignent à eux des notables de centres urbains anatoliens. Ensemble ils édifient un nouvel État après la défaite du général byzantin Georges Mouzalon lors de la bataille de Bapheus, le 27 juillet 1302. C’est lors de cette bataille qu’Osmân, père d’Orkhan, apparait dans les sources. Ses troupes peuvent alors piller impunément les campagnes byzantines de Bithynie dont une grande partie des paysans fuit vers la portion européenne de l’empire. Seules les grandes villes telles que Bursa, Nicée ou Nicomédie constituent des îlots de sécurité pour les Grecs",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Beylicats_d%E2%80%99Anatolie_vers_1330-fr.svg/1920px-Beylicats_d%E2%80%99Anatolie_vers_1330-fr.svg.png",
     "legende": "Carte des beylicats d’Anatolie vers 1330",
+    "atlas": true,
     "lat": 40.43,
     "lng": 29.72,
     "sources": "Wikipedia"
@@ -1320,24 +1322,7 @@
     "date": 1303,
     "mois": 1,
     "zones": [
-      "France",
-      "Angleterre",
-      "St Empire",
-      "Naples",
-      "Italie",
-      "Castille",
-      "Aragon",
-      "Portugal",
-      "Papaute",
-      "Alsace",
-      "Flandre",
-      "Scandinavie",
-      "Pologne",
-      "Russie",
-      "Hongrie",
-      "Europe C. & Or.",
-      "Byzance",
-      "Ottomans"
+      "Europe"
     ],
     "type": 3,
     "description": "Hiver rude. Selon Christian Pfister, c'est le début du \"Petit âge glaciaire\" (PAG) qui perdure jusqu'en 1860, caractérisé par une avancée des glaciers européens, des températures hivernales très froides, non constantes mais fréquentes, des étés souvent humides et frais. Sécheresse en été ; la Loire, le Rhin, la Seine et le Danube sont à sec.\n\nHiver 1305-1306 très rude, au point de faire geler le Rhin, suivi d'un printemps et été sec, avec forte sècheresse au printemps et en l'été en France selon Guillaume de Nangis.",
@@ -1559,6 +1544,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mapa_Divisi%C3%B3n_del_Reino_de_Murcia_-_Sentencia_de_Torrellas_y_Tratado_de_Elche.png/1280px-Mapa_Divisi%C3%B3n_del_Reino_de_Murcia_-_Sentencia_de_Torrellas_y_Tratado_de_Elche.png",
     "theme": "diplomatie",
     "legende": "Les territoires attribués au Royaume de Valence après la sentence arbitrale de Torrellas et le traité d'Elche formèrent le parquet général d' Orihuela .",
+    "atlas": true,
     "lat": 41.65,
     "lng": -0.88,
     "sources": "https://es.wikipedia.org/wiki/Sentencia_arbitral_de_Torrellas"
@@ -1675,6 +1661,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/P%C3%A9ninsule_ib%C3%A9rique_en_1314.png/1280px-P%C3%A9ninsule_ib%C3%A9rique_en_1314.png",
     "theme": "politique",
     "legende": "Le royaume de Navarre et la péninsule ibérique à l'époque de Jeanne Ire",
+    "atlas": true,
     "lat": 42.6125,
     "lng": -1.8308,
     "sources": "wikipedia"
@@ -7417,19 +7404,11 @@
     "titre": "Europe 1328",
     "date": 1328,
     "zones": [
-      "France",
-      "Angleterre",
-      "St Empire",
-      "Naples",
-      "Italie",
-      "Castille",
-      "Aragon",
-      "Portugal"
+      "Monde"
     ],
     "type": 3,
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Europe_in_1328.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
     "theme": "politique",
-    "atlas": true,
     "lat": 49.9596,
     "lng": 5.5736,
     "sources": "https://commons.wikimedia.org/wiki/File:Europe_in_1328.png"
@@ -11781,20 +11760,7 @@
     "titre": "Peste noire en Europe",
     "date": 1347,
     "zones": [
-      "France",
-      "Angleterre",
-      "St Empire",
-      "Naples",
-      "Italie",
-      "Castille",
-      "Aragon",
-      "Portugal",
-      "Alsace",
-      "Scandinavie",
-      "Pologne",
-      "Russie",
-      "Hongrie",
-      "Europe C. & Or."
+      "Europe"
     ],
     "type": 2,
     "description": "La peste bubonique débarque à Messine depuis des navires génois. En cinq ans, elle emporte entre un tiers et la moitié de la population européenne, soit 25 millions de morts. Aucune catastrophe comparable ne frappera l'Occident avant le XXe siècle.\n\nLa peste noire, aussi appelée grande peste ou mort noire, est une pandémie de peste (principalement bubonique) qui a sévi au milieu du XIVe siècle (pendant le Moyen Âge).\n\nProbablement originaire d'Asie centrale, la pandémie touche l'Europe à travers les invasions mongoles, puis se propage en Afrique du Nord voire en Afrique subsaharienne, faisant jusqu'à 50 millions de victimes à travers le monde. Il s'agit à la fois de la pandémie la plus meurtrière et de la plus grande catastrophe démographique enregistrée dans l'histoire de l'humanité.\n\nEn Europe, elle fait environ 25 millions de victimes en cinq ou six ans (1347-1352), soit entre 30 et 60 % de la population. Elle est considérée comme le début explosif et dévastateur de la deuxième pandémie de peste, qui dure de façon plus sporadique jusqu'au début du XIXe siècle.\n\nCette pandémie provoque indirectement la chute de la dynastie Yuan en Chine, affecte l'Empire khmer et affaiblit encore plus ce qui reste de l'Empire byzantin, en déclin depuis le début du XIVe siècle.\n\nSon nom lui a été donné par les historiens modernes ; elle n'est ni la première ni la dernière pandémie de peste, mais c'est la seule à porter ce nom. C'est aussi la première pandémie à avoir été bien décrite par les chroniqueurs de l'époque.\n\nLe Moyen Âge fut traversé par de nombreuses épidémies, plus ou moins virulentes et localisées, et souvent mal identifiées, incluant grippe, variole et dysenteries. Cette période est marquée par une intoxication digestive à forme épidémique, l'ergotisme par l'ergot du seigle. À partir du Xe siècle, le paludisme à Plasmodium vivax se répand en Europe du Nord en remontant les fleuves et en s'installant dans les zones marécageuses.\n\nLa lèpre du Haut Moyen Âge régresse à partir du IXe siècle mais reprend son expansion au XIIe siècle, probablement par retour des Croisades. La tuberculose (dont l'importance est marquée par le toucher des écrouelles) serait liée à la densité urbaine croissante ou à une exportation importante de bovins infectés, depuis la Lombardie dans toute l'Europe occidentale.\n\nLa peste de Justinien (541-767) qui ravagea l'Europe méditerranéenne a été clairement identifiée comme peste due à Yersinia pestis. Elle fut sûrement à l'origine d'un déficit démographique pendant le haut Moyen Âge en Europe du Sud, et indirectement, de l'essor économique de l'Europe du Nord. Elle est considérée comme la première pandémie de peste ; sa disparition au VIIIe siècle reste énigmatique.\n\nL'absence de la peste en Europe dura six siècles. Quand l'Europe occidentale fut de nouveau touchée en 1347-1348, la maladie revêtit tout de suite, aux yeux des contemporains, un caractère de nouveauté et de gravité exceptionnelle, qui n'avait rien de commun avec les épidémies habituelles et archivées. Pour les plus lettrés, les seules références connues pouvant s'en rapprocher étaient la peste d'Athènes et la peste de Justinien.\n\nContrairement à la peste de Justinien, qui fut essentiellement bubonique, la peste noire, due aussi à Yersinia pestis, a pu revêtir deux formes : principalement bubonique, mais aussi pulmonaire, selon les circonstances.\n\nLes historiens sont en désaccord sur l'origine géographique exacte de la peste noire, mais ils sont unanimes sur son arrivée par la route de la soie, par le nord ou par le sud de la mer Caspienne.\n\nPour les chroniqueurs musulmans andalous, comme Ibnul Khatib de Grenade, l'épidémie vient de Chine. Ils s'appuient sur le témoignage de marchands venant de Samarcande. Ils rapportent aussi une rumeur circulant chez les voyageurs chrétiens selon laquelle la peste est venue d'Abyssinie. La thèse de l'origine chinoise est reprise jusqu'au début du XXe siècle par des auteurs qui ne font, le plus souvent, que se recopier. Elle s'appuie principalement sur Joseph de Guignes (1758) qui, en citant des annales chinoises, atteste que la capitale est atteinte en 1334.\n\nQuelques chroniqueurs chrétiens voient l'origine de la maladie aux Indes, Giovanni Villani y fait allusion en parlant de feux souterrains et de pluies d'insectes dans ces pays. Des auteurs plus modernes situent l'origine sur les pentes sud de l'Himalaya, en surinterprétant le témoignage d'Ibn Battûta sur une épidémie sévissant à Mathura en 1332 (confusion probable avec Matrah selon Jean-Noël Biraben, en 1975).\n\nDepuis le dernier quart du XXe siècle, les historiens ont tendance à déplacer l'origine de la peste noire vers la mer Noire et le sud de la Russie, réduisant la distance du trajet de la peste noire. Les uns s'appuient sur des données phylogénétiques de Yersinia pestis pour localiser l'origine de la peste noire au Kurdistan irakien, d'autres se basent sur des chroniques médiévales russes pour la placer entre le bassin du Don et celui de la Volga.\n\nEnfin, l'hypothèse de l'Asie centrale, en particulier les territoires mongols de la Horde d'Or, est le plus souvent développée, car elle s'appuie sur des données archéologiques (épitaphes de cimetières nestoriens) dans le Kirghizistan, autour du lac Yssyk Koul, datant de 1338-1339. Cette hypothèse est fortement renforcée par des données paléogénétiques d'une étude publiée par la revue Nature le 15 juin 2022 qui localise son origine dans la vallée de Tchouï,.\n\nSi des historiens s'appuient sur l'existence d'une Pax Mongolica favorisant le commerce, d'autres opposent les troubles politico-militaires de l'islamisation de chefs mongols (ce serait alors les guerres et non le commerce qui facilitent l'épidémie). Des éruptions volcaniques en 1345 ou 1346 ont pu aussi jouer un rôle en induisant des étés exceptionnellement froids et humides qui ont provoqué des famines en Espagne, en France, sur une partie de l'Italie, en Égypte et au Levant et affaibli les populations, et qui ont induit les républiques de Venise et de Gênes à lever en avril 1347 l'embargo sur les céréales en provenance de la mer Noire[",
@@ -23084,7 +23050,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/HRR_14Jh.jpg/960px-HRR_14Jh.jpg",
     "theme": "politique",
     "legende": "Le Brandebourg dans la structure de pouvoir de la maison du Saint-Empire romain germanique 1373 lors de la transition vers les Luxembourgeois",
-    "atlas": true,
     "lat": 49.4711,
     "lng": 8.0936
   },
