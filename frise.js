@@ -12,10 +12,10 @@ var ZONES = [
 
 var ZONES_GROUPS = {
 'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde', 'Atlas'],
-  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
-  'Europe du Nord':     ['Scandinavie'],
-  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
-  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
+  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Atlas'],
+  'Europe du Nord':     ['Scandinavie' 'Atlas'],
+  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans' 'Atlas'],
+  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde' 'Atlas'],
    };
 
 var COLORS = {
@@ -51,10 +51,12 @@ var COLORS = {
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
   'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
+'Atlas':             { bg: '#B2854B', light: '#F5EDD8', text: '#4A3B28' }
 };
 
 var ZONE_ALIASES = {
   'Empire':              'St Empire',
+ 'Atlas':              'Atlas',
   'St_Empire':           'St Empire',
   'Iberique':            'Castille',
   'Ibérique':            'Castille',
