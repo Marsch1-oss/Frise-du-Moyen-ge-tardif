@@ -565,36 +565,22 @@
 var EUROPE_PAYS = ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre', 'Scandinavie', 'Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'];
 
 function matchZone(evt, zoneCible) {
-  // Sécurité 1 : vérifier que l'événement et sa propriété z existent
   if (!evt || !evt.z) return false;
-  
-  // Sécurité 2 : s'assurer que evt.z est bien un tableau (array)
   var listeZones = Array.isArray(evt.z) ? evt.z : [evt.z];
-  
-  // Si la zone ciblée n'est pas définie, on ne matche rien
   if (!zoneCible) return false;
 
-  // 1. L'événement est explicitement lié à la zone cherchée
   if (listeZones.indexOf(zoneCible) !== -1) return true;
-  
-  // 2. Si on cherche un pays d'Europe (ex: France) et que l'événement est global à "Europe"
   if (listeZones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
   
-  // 3. Si on cherche "Europe" et que l'événement s'est produit dans un pays européen
   if (zoneCible === 'Europe') {
     for (var i = 0; i < listeZones.length; i++) {
         if (EUROPE_PAYS.indexOf(listeZones[i]) !== -1) return true;
     }
   }
-
   return false;
 }
 /* ------------------------------------------------ */
 
-  // Dans tous les autres cas (ex: Japon quand on cherche Scandinavie), c'est faux.
-  return false;
-}
-/* ------------------------------------------------ */
 "use strict";
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
