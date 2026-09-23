@@ -482,6 +482,8 @@ if (e.zones.length > 1 || e.zones.indexOf('Europe') !== -1) { // L'Europe agit c
   setTimeout(function() { injectBackgroundImages(container, start, end, level); }, 180);
 
   if (searchTerm) applySearch();
+ if (searchTerm) applySearch();
+  if (typeof updateFrisePanelList === 'function') updateFrisePanelList();
 }
 
 /* ── Axe ─────────────────────────────────────────────────────────────*/
@@ -3842,4 +3844,96 @@ function openLightboxById(id) {
   if (evt) {
     openModal(evt, evt.zones[0]); 
   }
+}
+/* --- GESTION DU PANNEAU LATÉRAL (VIS-À-VIS) --- */
+var isFrisePanelOpen = false;
+
+function toggleFrisePanel() {
+  var panel = document.getElementById('frise-panel');
+  var btn = document.getElementById('btn-toggle-panel');
+  if (!panel) return;
+  isFrisePanelOpen = !isFrisePanelOpen;
+  if (isFrisePanelOpen) {
+    panel.classList.add('open');
+    if (btn) btn.classList.add('active');
+    updateFrisePanelList();
+  } else {
+    panel.classList.remove('open');
+    if (btn) btn.classList.remove('active');
+  }
+  /* Recalibrer les axes et bandeaux si la largeur a changé */
+  if (typeof syncStickyOffsets === 'function') setTimeout(syncStickyOffsets, 50);
+}
+
+function updateFrisePanelList() {
+  if (!isFrisePanelOpen) return;
+  var listEl = document.getElementById('frise-panel-list');
+  if (!listEl) return;
+  
+  var start, end;
+  if (currentLevel === 4 && currentYear !== null) { start = currentYear; end = currentYear + 1; }
+  else if (currentLevel === 3 && currentDecade !== null) { start = currentDecade; end = currentDecade + 10; }
+  else if (currentLevel === 2 && currentCentury !== null) { start = currentCentury; end = currentCentury + 100; }
+  else { start = 1290; end = 1510; }
+
+  /* Filtre les événements exactement comme la frise */
+  var visibleEvts = allEvents.filter(function(e) {
+    if (e.regne) return false;
+    if (!visibleAtLevel(e, currentLevel)) return false;
+    if (!eventMatchesTheme(e)) return false;
+    if (!ZONES.some(function(z) { return activeZones[z] && matchZone(e, z); })) return false;
+    var fin = (e.date_fin && e.date_fin > e.date) ? e.date_fin : e.date;
+    return e.date <= end && fin >= start;
+  }).sort(function(a, b) {
+    var da = a.date + (a.mois ? (a.mois - 1) / 12 : 0);
+    var db = b.date + (b.mois ? (b.mois - 1) / 12 : 0);
+    return da - db;
+  });
+
+  listEl.innerHTML = '';
+  if (visibleEvts.length === 0) {
+    listEl.innerHTML = '<p style="text-align:center;color:var(--ink-muted);font-style:italic;padding:1.5rem;">Aucun événement affiché.</p>';
+    return;
+  }
+
+  var MOIS = ['', 'jan.','fév.','mar.','avr.','mai','jun.','jul.','aoû.','sep.','oct.','nov.','déc.'];
+  visibleEvts.forEach(function(e) {
+     var zoneAff = (e.zones || []).filter(function(z){ return activeZones[z]; })[0] || (e.zones||[])[0];
+     var col = COLORS[zoneAff] || COLORS['France'];
+     
+     var dTxt = (e.mois ? MOIS[e.mois] + ' ' : '') + e.date;
+     if (e.date_fin && e.date_fin > e.date) {
+       dTxt += ' – ' + (e.mois_fin ? MOIS[e.mois_fin] + ' ' : '') + e.date_fin;
+     }
+
+     var card = document.createElement('div');
+     card.className = 'fp-card';
+     card.style.setProperty('--zone-color', col.bg);
+     card.innerHTML = '<span class="fp-zone">' + zoneAff + '</span>' +
+                      '<div class="fp-date">' + dTxt + '</div>' +
+                      '<div class="fp-title">' + themePrefix(e) + (e.titre || '') + '</div>';
+     
+     /* Ouvre la modale au clic */
+     card.onclick = function() { openModal(e, zoneAff); };
+     
+     /* Petit bonus : surligner l'élément sur la frise au survol de la liste ! */
+     card.onmouseenter = function() {
+       var chip = document.querySelector('.evt-chip[data-evt-id="' + e.id + '"]');
+       if (chip) {
+         chip.dataset.oldZ = chip.style.zIndex;
+         chip.dataset.oldT = chip.style.transform;
+         chip.style.zIndex = '50';
+         chip.style.transform = 'translateY(-2px) scale(1.05)';
+       }
+     };
+     card.onmouseleave = function() {
+       var chip = document.querySelector('.evt-chip[data-evt-id="' + e.id + '"]');
+       if (chip) {
+         chip.style.zIndex = chip.dataset.oldZ || '';
+         chip.style.transform = chip.dataset.oldT || '';
+       }
+     };
+
+     listEl.appendChild(card);
+  });
 }
