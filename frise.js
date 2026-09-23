@@ -11,7 +11,7 @@ var ZONES = [
 ];
 
 var ZONES_GROUPS = {
-'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde', 'Atlas'],
+'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde'],
   'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
   'Europe du Nord':     ['Scandinavie'],
   'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
@@ -248,8 +248,27 @@ function loadEvents() {
         var data = JSON.parse(xhr.responseText);
         allEvents = data.map(function(e) {
           var rawZones = e.zones || (e.zone ? [e.zone] : []);
-          e.zones = rawZones.map(normalizeZone);
-          e.type  = Number(e.type) || 1;
+          e.zones = [];
+          e.themes = [];
+          
+          /* 1. Récupération des thèmes existants (tableau ou texte séparé par des virgules) */
+          if (e.theme) {
+            e.themes = Array.isArray(e.theme) ? e.theme.slice() : e.theme.split(',').map(function(s){ return s.trim(); });
+          }
+          /* Compatibilité ancien format atlas: true */
+          if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
+          
+          /* 2. Tri : si une zone est "Atlas", on la bascule dans les thèmes */
+          rawZones.forEach(function(z) {
+            var nz = normalizeZone(z);
+            if (nz.toLowerCase() === 'atlas') {
+              if (e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
+            } else {
+              e.zones.push(nz);
+            }
+          });
+          
+          e.type = Number(e.type) || 1;
           return e;
         });
         getAllParcours();
@@ -1490,36 +1509,55 @@ var THEME_KEYWORDS = {
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
 
-/* Un événement passe-t-il le filtre thématique ?
-   - si aucun thème coché → tous passent
-   - sinon → seuls ceux dont le thème est coché passent
-   (en mode manuel, un événement sans thème ne passe QUE si aucun filtre n'est actif) */
+/* Un événement passe-t-il le filtre thématique ? */
 function eventMatchesTheme(evt) {
   var anyActive = false;
   for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
   if (!anyActive) return true;
   
-  if (activeThemes['atlas'] && evt.atlas) return true;
-  
-  var th = detectTheme(evt);
-  return !!(th && activeThemes[th]);
+  var ths = getEventThemes(evt);
+  for (var i = 0; i < ths.length; i++) {
+    if (activeThemes[ths[i]]) return true;
+  }
+  return false;
 }
 
-function detectTheme(evt) {
-  /* Thème manuel prioritaire */
-  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
-  /* Sinon détection auto sur le TITRE uniquement */
-  var txt = (evt.titre || '').toLowerCase();
-  for (var i = 0; i < THEME_ORDER.length; i++) {
-    var theme = THEME_ORDER[i];
-    var kws = THEME_KEYWORDS[theme];
-    if (!kws) continue;
-    for (var k = 0; k < kws.length; k++) {
-      if (txt.indexOf(kws[k]) !== -1) return theme;
+/* Récupère tous les thèmes d'un événement (déclarés ou détectés automatiquement) */
+function getEventThemes(evt) {
+  if (evt._cachedThemes) return evt._cachedThemes;
+  var ths = [];
+  
+  /* Ajoute les thèmes explicites de l'événement */
+  if (evt.themes && evt.themes.length > 0) {
+    ths = evt.themes.slice();
+  }
+  
+  /* Si aucun thème explicite, détection automatique par mots-clés dans le titre */
+  if (ths.length === 0) {
+    var txt = (evt.titre || '').toLowerCase();
+    for (var i = 0; i < THEME_ORDER.length; i++) {
+      var theme = THEME_ORDER[i];
+      var kws = THEME_KEYWORDS[theme];
+      if (!kws) continue;
+      for (var k = 0; k < kws.length; k++) {
+        if (txt.indexOf(kws[k]) !== -1) {
+          ths.push(theme);
+          break; /* Passe au thème suivant dès qu'un mot-clé correspond */
+        }
+      }
     }
   }
-  return null;   /* aucun mot-clé trouvé → pas de thème (pas d'icône) */
+  
+  /* Nettoyage et déduplication */
+  var unique = [];
+  for (var j = 0; j < ths.length; j++) {
+    var t = ths[j].toLowerCase();
+    if (unique.indexOf(t) === -1 && THEME_DEFS[t]) unique.push(t);
+  }
+  evt._cachedThemes = unique;
+  return unique;
 }
+
 function toggleThemeLegend() {
   var el = document.getElementById('theme-legend');
   if (!el) return;
@@ -1617,18 +1655,20 @@ function rangeStartForLevel() {
   return 1300;
 }
 
-/* Icône : thème manuel prioritaire, sinon détection auto par mots-clés du titre.
-   Renvoie '' si aucun thème (manuel ou détecté). */
-function themeIcon(evt) {
-  var t = detectTheme(evt);
-  return (t && THEME_DEFS[t]) ? THEME_DEFS[t].icon : '';
+/* Renvoie la chaîne des icônes pour tous les thèmes de l'événement */
+function themeIcons(evt) {
+  var ths = getEventThemes(evt);
+  var icons = [];
+  for (var i = 0; i < ths.length; i++) {
+    icons.push(THEME_DEFS[ths[i]].icon);
+  }
+  return icons.join('\u202F'); /* Espace fine insécable entre les icônes */
 }
-/* Préfixe titre : icône + fine espace, ou rien si pas de thème */
+
+/* Préfixe pour le titre : icônes + espace, ou chaîne vide si aucun thème */
 function themePrefix(evt) {
-  var ic = themeIcon(evt);
-  var pfx = ic ? ic + '\u202F' : '';
-  if (evt.atlas) pfx = '🗺️\u202F' + pfx;
-  return pfx;
+  var ics = themeIcons(evt);
+  return ics ? ics + '\u202F' : '';
 }
 
 /* Date de DÉBUT fractionnaire (année + mois) : 1356 + (10-1)/12 pour octobre 1356 */
