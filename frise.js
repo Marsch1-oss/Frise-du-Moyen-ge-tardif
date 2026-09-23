@@ -3716,9 +3716,10 @@ function extractYouTubeId(url) {
 /* ── Init ────────────────────────────────────────────────────────────*/
 var MUSIC_TRACKS  = [
    'audio/Je_vivroie_liementGuillaumedeMachautENSEMBLEPARLAMENTO.mp3',
-  'audio/Guillaume_de_Machaut_Je_vivroie_liementLiement_me_deport.mp3',
   'audio/Guillaume_de_Machaut_Jaim_sans_penser.mp3',
   'audio/Douce_Dame_Jolie Guillaume de Machaut.mp3'
+ 'audio/Guillaume_de_Machaut_Je_vivroie_liementLiement_me_deport.mp3',
+   
 ];
 var musicTrackIdx = 0;
 var musicStarted  = false;
