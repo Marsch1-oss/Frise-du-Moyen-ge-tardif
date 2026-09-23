@@ -1099,7 +1099,42 @@
     .wz-btn-ok { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
     .wz-btn-ok:hover { filter: brightness(1.1); background: var(--gold); color: #fff; }
 
-  
+  /* ── Panneau latéral de la Frise (vis-à-vis) ── */
+    .frise-stage { display: flex; align-items: flex-start; gap: 1.2rem; width: 100%; transition: all 0.3s; }
+    .frise-card-wrapper { flex: 1; min-width: 0; }
+    
+    .frise-panel {
+      width: 320px; flex-shrink: 0; background: var(--parchment-lt);
+      border: 1.5px solid var(--border-dark); border-radius: 8px; box-shadow: var(--shadow);
+      position: sticky; top: 110px; max-height: calc(100vh - 140px);
+      display: none; flex-direction: column; overflow: hidden;
+    }
+    .frise-panel.open { display: flex; }
+    .frise-panel-head {
+      padding: 0.7rem 1rem; border-bottom: 1px solid var(--border);
+      background: var(--parchment-dk); border-radius: 8px 8px 0 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+    }
+    .frise-panel-head h2 { font-family: 'IM Fell English', serif; font-size: 1.05rem; color: var(--ink); margin: 0; }
+    .frise-panel-close { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--ink-muted); }
+    .frise-panel-close:hover { color: var(--ink); }
+    .frise-panel-list { overflow-y: auto; padding: 0.6rem; flex: 1; }
+    
+    .fp-card {
+      padding: 0.5rem 0.6rem; margin-bottom: 0.6rem; border-radius: 6px;
+      background: rgba(255,255,255,0.5); border: 1px solid var(--border);
+      border-left: 4px solid var(--zone-color); cursor: pointer; transition: background 0.12s;
+    }
+    .fp-card:hover { background: var(--parchment-dk); }
+    .fp-date { font-family: 'IM Fell English', serif; color: var(--red); font-size: 0.9rem; }
+    .fp-zone { font-size: 0.65rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; float: right; padding-top: 3px; }
+    .fp-title { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.35; margin-top: 0.2rem; }
+    
+    @media (max-width: 840px) {
+      .frise-stage { flex-direction: column; }
+      .frise-panel { width: 100%; position: static; max-height: 400px; }
+    }
+    
     /* ── Lecteur musical ── */
     #music-player {
       position: fixed;
@@ -1936,6 +1971,9 @@
       <button class="detail-btn active" data-level="2" onclick="setDetailLevel(2)" title="Types 2 et 3 — événements importants">Important</button>
       <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Types 2, 3 et 4 — vue détaillée">D&eacute;taill&eacute;</button>
       <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les types — vue complète">Complet</button>
+      <!-- NOUVEAU BOUTON AJOUTÉ ICI -->
+      <span class="nav-sep" style="height: 1.2rem; margin: 0 0.2rem;"></span>
+      <button class="detail-btn" id="btn-toggle-panel" onclick="toggleFrisePanel()" title="Afficher la liste en vis-à-vis">&#9776; Liste</button>
       <span class="detail-hint" id="detail-hint"></span>
     </div>
   </div>
@@ -1961,10 +1999,22 @@
     <div id="sticky-axis-bar" class="sticky-axis-bar"></div>
   </div>
 
-  <div class="frise-card">
-    <div id="frise-container">
-      <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
+ <div class="frise-stage">
+    <div class="frise-card-wrapper">
+      <div class="frise-card">
+        <div id="frise-container">
+          <p style="color:var(--ink-muted);font-style:italic;padding:1rem 0">Chargement&hellip;</p>
+        </div>
+      </div>
     </div>
+    
+    <aside class="frise-panel" id="frise-panel">
+      <div class="frise-panel-head">
+        <h2>Événements affichés</h2>
+        <button class="frise-panel-close" onclick="toggleFrisePanel()">&#10005;</button>
+      </div>
+      <div class="frise-panel-list" id="frise-panel-list"></div>
+    </aside>
   </div>
 
   <!-- ══ 4. Outils de navigation (sous la frise) ══ -->
