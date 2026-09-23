@@ -345,12 +345,11 @@
     <div class="field-row single">
         <div class="field" style="display: flex; gap: 2rem; flex-wrap: wrap;">
           <label>
+          <div class="field-row single">
+        <div class="field" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <label>
             <input type="checkbox" id="f-regne" style="margin-right:6px;vertical-align:middle;">
             ♛ Règne / Dynastie <small>(bande colorée dédiée sur la frise)</small>
-          </label>
-          <label>
-            <input type="checkbox" id="f-atlas" style="margin-right:6px;vertical-align:middle;">
-            🗺️ Catégorie Atlas <small>(inclure cet événement dans les cartes)</small>
           </label>
         </div>
       </div>
@@ -577,13 +576,13 @@
 <script>
 const ZONES = [
   /* Zones géographiques */
-   'Europe',
-  'France', 'Angleterre', 'St Empire',
+  'Europe', 'France', 'Angleterre', 'St Empire',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
   'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde'];
+  'Afrique', 'Amerique', 'Monde'
+];
 
 /* ── Thèmes iconographiques ──────────────────────────────────────── */
 var THEME_DEFS = {
@@ -615,9 +614,10 @@ var THEME_KEYWORDS = {
   'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
   'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
 };
+
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 function detectTheme(evt) {
-  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
+  if (evt.themes && evt.themes.length > 0) return evt.themes[0];
   var txt = (evt.titre || '').toLowerCase();
   for (var i = 0; i < THEME_ORDER.length; i++) {
     var theme = THEME_ORDER[i];
@@ -630,10 +630,10 @@ function detectTheme(evt) {
   return null;
 }
 function themeIcon(evt) {
-  if (evt.theme && THEME_DEFS[evt.theme]) return THEME_DEFS[evt.theme].icon;
+  var t = detectTheme(evt);
+  if (t && THEME_DEFS[t]) return THEME_DEFS[t].icon;
   return '';
 }
-
 
 /* Groupes pour l'affichage dans l'admin */
 const ZONE_GROUPS = [
@@ -643,16 +643,6 @@ const ZONE_GROUPS = [
   { label: 'Europe orientale',    zones: ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'] },
   { label: 'Asie & Islam',        zones: ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'] },
   { label: 'Afrique & Amérique',  zones: ['Afrique', 'Amerique'] }
-];
-
-const ZONES = [
-  /* Zones géographiques */
-  'Europe', 'France', 'Angleterre', 'St Empire',
-  'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
-  'Scandinavie', 'Pologne', 'Russie',
-  'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
-  'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde'
 ];
 
 const COLORS = {
@@ -674,7 +664,7 @@ const ALIASES = {
   'Papauté':'Papaute','Techniques et idees':'Techniques',
   'Idées':'Idees','Empire':'St Empire',
   'Flandres':'Flandre','Flanders':'Flandre','Comté de Flandre':'Flandre',
-  'Amérique':'Amerique','America':'Amerique','Africa':'Afrique'
+  'Amérique':'Amerique','America':'Amerique','Afrique':'Afrique'
 };
 
 var events     = [];
