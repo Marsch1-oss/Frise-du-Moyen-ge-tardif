@@ -869,7 +869,14 @@ function fillForm(evt) {
   document.getElementById('f-date-fin').value = evt.date_fin || '';
   document.getElementById('f-mois-fin').value = evt.mois_fin || '';
   document.getElementById('f-desc').value     = evt.description || '';
-  setTheme(evt.theme || '');
+ /* Gère les thèmes au nouveau format (tableau) ou à l'ancien (chaîne unique) */
+  var themesToSet = [];
+  if (evt.themes && evt.themes.length > 0) {
+    themesToSet = evt.themes;
+  } else if (evt.theme) {
+    themesToSet = [evt.theme];
+  }
+  setTheme(themesToSet);
   document.getElementById('f-image').value    = evt.image    || '';
   document.getElementById('f-legende').value  = evt.legende  || '';
   document.getElementById('f-video').value    = evt.video    || '';
