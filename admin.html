@@ -980,7 +980,7 @@ function getNoThemeEvents() {
                .slice().sort(function(a, b) { return a.date - b.date; });
 }
 function getAutoOnlyThemeEvents() {
-  return events.filter(function(e) { return !e.theme && detectTheme(e); })
+  return events.filter(function(e) { return (!e.themes || e.themes.length === 0) && detectTheme(e); })
                .slice().sort(function(a, b) { return a.date - b.date; });
 }
 function refreshNoTheme() {
@@ -1069,18 +1069,18 @@ function renderList() {
       + '</div>'
    + '<div class="ec-meta">' + zonesHtml + '<span class="ec-type">' + stars + '</span>'
       + (function(){
-          var dt = detectTheme(evt);
           var html = '';
-          if (evt.atlas) {
-              html += '<span class="ec-theme" title="Atlas / Cartes" style="margin-right:4px;">🗺️</span>';
-          }
-          if (dt && THEME_DEFS[dt]) {
-            var manuel = !!evt.theme;
-            html += '<span class="ec-theme" title="' + THEME_DEFS[dt].label +
-                   (manuel ? ' (manuel)' : ' (auto)') + '" style="' +
-                   (manuel ? '' : 'opacity:0.6;') + '">' + THEME_DEFS[dt].icon + '</span>';
-          } else if (!evt.atlas) {
-            html += '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
+          if (evt.themes && evt.themes.length > 0) {
+            evt.themes.forEach(function(t) {
+              if (THEME_DEFS[t]) html += '<span class="ec-theme" title="' + THEME_DEFS[t].label + ' (manuel)" style="margin-right:2px;">' + THEME_DEFS[t].icon + '</span>';
+            });
+          } else {
+            var dt = detectTheme(evt);
+            if (dt && THEME_DEFS[dt]) {
+              html += '<span class="ec-theme" title="' + THEME_DEFS[dt].label + ' (auto)" style="opacity:0.6;">' + THEME_DEFS[dt].icon + '</span>';
+            } else {
+              html += '<span class="ec-theme ec-theme-none" title="Sans thème">\u26A0</span>';
+            }
           }
           return html;
         })()
@@ -1228,7 +1228,9 @@ function migrateThemeZones() {
     var zones = ev.zones || [];
     var themesFound = zones.filter(function(z) { return oldKeys.indexOf(z) !== -1; });
     if (themesFound.length === 0) return;
-    if (!ev.theme) ev.theme = THEME_ZONE_MAP[themesFound[0]];   /* thème-icône si aucun défini */
+    if (!ev.themes) ev.themes = [];
+    var newTheme = THEME_ZONE_MAP[themesFound[0]];
+    if (ev.themes.indexOf(newTheme) === -1) ev.themes.push(newTheme);
     ev.zones = zones.filter(function(z) { return oldKeys.indexOf(z) === -1; });  /* retire la zone-thème */
     if (ev.zones.length === 0) orphans.push('#' + ev.id + ' \u00ab ' + (ev.titre || '').substring(0, 30) + ' \u00bb');
   });
@@ -1257,10 +1259,16 @@ function importJSON(input) {
         if (!ev.type)  ev.type  = 1;
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         
-        // --- Intégration sécurisée pour l'Atlas ---
+        /* --- Migration des thèmes au chargement --- */
+        ev.themes = [];
+        if (ev.theme) {
+          ev.themes = Array.isArray(ev.theme) ? ev.theme.slice() : ev.theme.split(',').map(function(s){ return s.trim(); });
+        }
+        if (ev.atlas && ev.themes.indexOf('atlas') === -1) ev.themes.push('atlas');
+        
         var idx = ev.zones ? ev.zones.indexOf('Atlas') : -1;
         if (idx !== -1) {
-          ev.atlas = true;
+          if (ev.themes.indexOf('atlas') === -1) ev.themes.push('atlas');
           ev.zones.splice(idx, 1);
           if (ev.zones.length === 0) ev.zones.push('Monde');
         }
@@ -1281,13 +1289,6 @@ function importJSON(input) {
   reader.readAsText(file);
   input.value = '';
 }
-function toast(msg) {
-  var el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(function() { el.classList.remove('show'); }, 2800);
-}
-
 
 /* ─── Gestion des synthèses décennales ─────────────────────────── */
 /* Deux portées de clés — GARDER SYNCHRONISÉ avec carte.html et frise.js :
