@@ -617,7 +617,11 @@ var THEME_KEYWORDS = {
 
 /* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
 function detectTheme(evt) {
+  /* Cherche d'abord dans le nouveau format multi-thèmes */
   if (evt.themes && evt.themes.length > 0) return evt.themes[0];
+  /* Fallback de sécurité sur l'ancien format */
+  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
+  
   var txt = (evt.titre || '').toLowerCase();
   for (var i = 0; i < THEME_ORDER.length; i++) {
     var theme = THEME_ORDER[i];
