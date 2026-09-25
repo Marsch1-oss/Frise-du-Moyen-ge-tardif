@@ -282,10 +282,13 @@
             <input type="hidden" id="f-theme" value="">
             <div id="theme-buttons" class="theme-btns"></div>
             <small style="color:#777;display:block;margin-top:0.4rem;">Cliquez sur un th&egrave;me pour afficher son ic&ocirc;ne sur la frise ; recliquez dessus pour l'enlever.</small>
-            <div id="no-theme-block">
-              <button type="button" id="no-theme-toggle" class="no-theme-toggle" onclick="toggleNoThemeList()">
-                &#128203; Fiches sans th&egrave;me (<span id="no-theme-count">0</span>) <span id="no-theme-caret">&#9656;</span>
-              </button>
+           <div id="no-theme-block">
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <button type="button" id="no-theme-toggle" class="no-theme-toggle" style="flex: 1;" onclick="toggleNoThemeList()">
+                  &#128203; Fiches sans th&egrave;me (<span id="no-theme-count">0</span>) <span id="no-theme-caret">&#9656;</span>
+                </button>
+                <button type="button" class="btn btn-primary" style="padding: 0.3rem 0.8rem; font-size: 0.85rem;" onclick="saveEvent()">Enregistrer</button>
+              </div>
               <small id="no-theme-auto-hint" style="color:#8a7a55;display:none;margin-top:0.3rem;"></small>
               <div id="no-theme-list" class="no-theme-list" style="display:none;"></div>
             </div>
