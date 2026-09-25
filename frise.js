@@ -1569,15 +1569,18 @@ function themeIcon(evt) {
   }
   
   /* Nettoyage et déduplication */
-  var unique = [];
-  for (var j = 0; j < ths.length; j++) {
-    var t = ths[j].toLowerCase();
-    if (unique.indexOf(t) === -1 && THEME_DEFS[t]) unique.push(t);
-  }
-  evt._cachedThemes = unique;
-  return unique;
+/* Utilisé ailleurs dans le code pour récupérer l'icône / les icônes */
+function themeIcon(evt) {
+  return themePrefix(evt);
 }
 
+function toggleThemeLegend() {
+  var el = document.getElementById('theme-legend');
+  if (!el) return;
+  if (el.style.display === 'flex') { el.style.display = 'none'; return; }
+  renderThemeLegend();
+  el.style.display = 'flex';
+}
 function toggleThemeLegend() {
   var el = document.getElementById('theme-legend');
   if (!el) return;
