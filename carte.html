@@ -712,7 +712,6 @@ var THEME_KEYWORDS = {
 
 /* 1. Récupère TOUS les thèmes de la fiche (saisis manuellement + auto-détection de secours) */
 function getEventThemes(evt) {
-  if (evt._cachedThemes) return evt._cachedThemes;
   var ths = [];
   var evtThemes = evt.themes || evt.th; 
   
@@ -741,13 +740,8 @@ function getEventThemes(evt) {
     }
   }
   
-  /* C. Filtre spécial Atlas */
-  if (evt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
-  
-  evt._cachedThemes = ths;
   return ths;
 }
-
 /* 2. Filtre croisé : l'événement correspond-il aux boutons cochés ? */
 function eventMatchesTheme(evt) {
   var anyActive = false;
