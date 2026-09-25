@@ -649,16 +649,24 @@ function importJSON(input) {
         if (!ev.type)  ev.type  = 1;
         ev.zones = ev.zones.map(function(z) { return ALIASES[z] || z; });
         
-        /* --- Migration des thèmes au chargement --- */
-        ev.themes = [];
-if (ev.theme) {
-  ev.themes = Array.isArray(ev.theme) ? ev.theme.slice() : ev.theme.split(',').map(function(s){ return s.trim(); });
-  delete ev.theme; // Nettoyer l'ancienne clé
-}
-if (ev.atlas && ev.themes.indexOf('atlas') === -1) {
-  ev.themes.push('atlas');
-  delete ev.atlas; // Nettoyer l'ancienne clé
-}
+/* --- Migration des thèmes au chargement --- */
+        // Si le tableau "themes" n'existe pas encore, on le crée
+        if (!ev.themes) {
+          ev.themes = [];
+        }
+        
+        // Si l'ancien attribut singulier "theme" est présent, on le migre
+        if (ev.theme) {
+          var oldThemes = Array.isArray(ev.theme) ? ev.theme.slice() : ev.theme.split(',').map(function(s){ return s.trim(); });
+          oldThemes.forEach(function(t) {
+            if (ev.themes.indexOf(t) === -1) ev.themes.push(t);
+          });
+          delete ev.theme; // On nettoie l'ancienne clé
+        }
+        
+        // Migration de l'ancien attribut atlas
+        if (ev.atlas && ev.themes.indexOf('atlas') === -1) ev.themes.push('atlas');
+        delete ev.atlas;
         
         var idx = ev.zones ? ev.zones.indexOf('Atlas') : -1;
         if (idx !== -1) {
