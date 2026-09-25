@@ -345,9 +345,10 @@ function loadEvents() {
             });
 
             /* On s'assure que tous les thèmes sont en minuscules et propres pour le filtrage */
-            e.themes = e.themes.map(function(t) { return String(t).trim().toLowerCase(); });
+        e.themes = e.themes.map(function(t) { return String(t).trim().toLowerCase(); });
 
             e.type = Number(e.type) || 1;
+            e.regne = (e.type === 1); /* <-- LA LIGNE MAGIQUE À AJOUTER */
             allEvents.push(e);
             
           } catch (itemErr) {
