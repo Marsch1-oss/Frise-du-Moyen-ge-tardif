@@ -308,12 +308,20 @@ function loadEvents() {
         allEvents = data.map(function(e) {
           var rawZones = e.zones || (e.zone ? [e.zone] : []);
           e.zones = [];
-          e.themes = [];
           
-          /* 1. Récupération des thèmes existants (tableau ou texte séparé par des virgules) */
-          if (e.theme) {
-            e.themes = Array.isArray(e.theme) ? e.theme.slice() : e.theme.split(',').map(function(s){ return s.trim(); });
+          /* 1. Préservation du nouveau format "themes" en tableau s'il existe */
+          if (!e.themes) {
+            e.themes = [];
           }
+          
+          /* Rétrocompatibilité : récupération de l'ancien format "theme" */
+          if (e.theme) {
+            var oldTh = Array.isArray(e.theme) ? e.theme.slice() : e.theme.split(',').map(function(s){ return s.trim(); });
+            oldTh.forEach(function(t) { 
+              if (e.themes.indexOf(t) === -1) e.themes.push(t); 
+            });
+          }
+          
           /* Compatibilité ancien format atlas: true */
           if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
           
@@ -326,6 +334,10 @@ function loadEvents() {
               e.zones.push(nz);
             }
           });
+          
+          e.type = Number(e.type) || 1;
+          return e;
+        });
           
           e.type = Number(e.type) || 1;
           return e;
