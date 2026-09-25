@@ -2333,7 +2333,7 @@ function setLevel(lvl){
    - #theme-chips (bloc « Thèmes » de la zone .controls, sous la carte)
    - #theme-pop-chips (popover d'accès rapide, bandeau Niveau de détail)
    Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé). */
-function themeChipsHTML(){
+function themeChipsHTML(boxId) {
  var anyThemeActive = false;
   for (var t in activeThemes) { if (activeThemes[t]) anyThemeActive = true; }
   var keys=THEME_ORDER.slice().reverse();
