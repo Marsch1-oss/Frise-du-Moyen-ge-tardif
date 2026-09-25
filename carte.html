@@ -660,34 +660,42 @@ var THEME_DEFS = {
  'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
 var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas']
- var THEME_KEYWORDS = {
-  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
-  'revolte':     ['révolte','soulèvement','soulève','émeute'],
-  'diplomatie':  ['traité','paix','trêve'],
-  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
-  'economie':    ['monnaie','exportation','dévaluation'],
-  'idees':       ['université'],
-  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
-  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
-  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution']
-};
 var activeThemes = {};   /* thèmes cochés ; vide = aucun filtre */
 
-/* Détection sur l'objet ALLÉGÉ de la carte : champ manuel e.th prioritaire
-   (mode live, saisi dans l'admin), sinon mots-clés sur le titre e.t —
-   même logique que detectTheme(evt) de frise.js, adaptée aux noms de champs. */
-function detectThemeSlim(e){
-  if(e.th && THEME_DEFS[e.th]) return e.th;
-  var txt=(e.t||'').toLowerCase();
-  for(var i=0;i<THEME_ORDER.length;i++){
-    var kws=THEME_KEYWORDS[THEME_ORDER[i]];
-    if(!kws) continue;
-    for(var k=0;k<kws.length;k++){
-      if(txt.indexOf(kws[k])!==-1) return THEME_ORDER[i];
-    }
+/* 1. Récupère TOUS les thèmes de la fiche (format classique ou allégé de la carte) */
+function getEventThemes(evt) {
+  var ths = [];
+  var evtThemes = evt.themes || evt.th; 
+  
+  if (evtThemes && Array.isArray(evtThemes)) {
+    for (var i = 0; i < evtThemes.length; i++) ths.push(String(evtThemes[i]).toLowerCase().trim());
+  } else if (typeof evtThemes === 'string') {
+    ths.push(String(evtThemes).toLowerCase().trim());
+  } else if (evt.theme) {
+    ths.push(String(evt.theme).toLowerCase().trim());
   }
-  return null;
+  
+  if (evt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
+  return ths;
+}
+
+/* 2. Filtre croisé : l'événement correspond-il aux boutons cochés dans la légende ? */
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
+  if (!anyActive) return true;
+  
+  var ths = getEventThemes(evt);
+  for (var i = 0; i < ths.length; i++) {
+    if (activeThemes[ths[i]]) return true;
+  }
+  return false;
+}
+
+/* 3. Rétrocompatibilité : retourne le 1er thème (pour donner une couleur/icône par défaut à la pastille) */
+function detectThemeSlim(e) {
+  var ths = getEventThemes(e);
+  return ths.length > 0 ? ths[0] : null;
 }
 /* Récupère tous les thèmes d'un événement (saisies manuelles) et les standardise */
 function getEventThemes(evt) {
