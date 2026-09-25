@@ -25,41 +25,19 @@ var THEME_DEFS = {
   'atlas':       { icon: '\uD83D\uDDFA\uFE0F', label: 'Atlas / Cartes' }
 };
 var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
-var THEME_KEYWORDS = {
-  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
-  'revolte':     ['révolte','soulèvement','soulève','émeute'],
-  'diplomatie':  ['traité','paix','trêve'],
-  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
-  'economie':    ['monnaie','exportation','dévaluation'],
-  'idees':       ['université'],
-  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
-  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
-  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
-  'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
-};
-
+/* Détecte le thème principal (utilisé pour les aperçus rapides) */
 function detectTheme(evt) {
   if (evt.themes && evt.themes.length > 0) return evt.themes[0];
-  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme;
-  
-  var txt = (evt.titre || '').toLowerCase();
-  for (var i = 0; i < THEME_ORDER.length; i++) {
-    var theme = THEME_ORDER[i];
-    var kws = THEME_KEYWORDS[theme];
-    if (!kws) continue;
-    for (var k = 0; k < kws.length; k++) {
-      if (txt.indexOf(kws[k]) !== -1) return theme;
-    }
-  }
+  if (evt.theme && THEME_DEFS[evt.theme]) return evt.theme; // Fallback ancien format
+  if (evt.atlas) return 'atlas';
   return null;
 }
+
 function themeIcon(evt) {
   var t = detectTheme(evt);
   if (t && THEME_DEFS[t]) return THEME_DEFS[t].icon;
   return '';
 }
-
 const ZONE_GROUPS = [
   { label: 'Général',             zones: ['Europe', 'Monde'] },
   { label: 'Europe occidentale',  zones: ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'] },
@@ -230,10 +208,15 @@ function readForm() {
   evt.image = rawImg;
   
   var fTheme = document.getElementById('f-theme').value;
-  evt.themes = fTheme ? fTheme.split(',').map(function(s){return s.trim();}) : [];
-  
-  if (rawVideo) evt.video = rawVideo;
-  if (isRegne) evt.regne = true;
+var themes = fTheme ? fTheme.split(',').map(function(s){return s.trim();}) : [];
+var atlasCb = document.getElementById('f-atlas');
+// Si la case atlas existe et est cochée, on l'ajoute comme thème
+if (atlasCb && atlasCb.checked && themes.indexOf('atlas') === -1) {
+  themes.push('atlas');
+}
+if (themes.length > 0) {
+  evt.themes = themes;
+}
   
   var leg = document.getElementById('f-legende').value.trim();
   if (leg) evt.legende = cleanText(leg);
@@ -517,8 +500,7 @@ function updateJSON() {
     o.type  = e.type || 1;
     if (e.description) o.description = e.description;
     o.image = e.image || '';
-    if (e.themes && e.themes.length > 0) o.themes = e.themes;
-    else if (e.theme) o.themes = [e.theme];
+   if (e.themes && e.themes.length > 0) o.themes = e.themes;
     if (e.legende) o.legende = e.legende;
     if (e.video)   o.video   = e.video;
     if (e.regne)   o.regne   = true;
@@ -656,12 +638,14 @@ function importJSON(input) {
         
         /* --- Migration des thèmes au chargement --- */
         ev.themes = [];
-        if (ev.theme) {
-          ev.themes = Array.isArray(ev.theme) ? ev.theme.slice() : ev.theme.split(',').map(function(s){ return s.trim(); });
-          delete ev.theme;
-        }
-        if (ev.atlas && ev.themes.indexOf('atlas') === -1) ev.themes.push('atlas');
-        delete ev.atlas;
+if (ev.theme) {
+  ev.themes = Array.isArray(ev.theme) ? ev.theme.slice() : ev.theme.split(',').map(function(s){ return s.trim(); });
+  delete ev.theme; // Nettoyer l'ancienne clé
+}
+if (ev.atlas && ev.themes.indexOf('atlas') === -1) {
+  ev.themes.push('atlas');
+  delete ev.atlas; // Nettoyer l'ancienne clé
+}
         
         var idx = ev.zones ? ev.zones.indexOf('Atlas') : -1;
         if (idx !== -1) {
