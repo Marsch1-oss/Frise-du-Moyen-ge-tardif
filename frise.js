@@ -94,7 +94,6 @@ function matchZone(evt, zoneCible) {
   if (evt.zones.indexOf('Europe') !== -1 && EUROPE_PAYS.indexOf(zoneCible) !== -1) return true;
   return false;
 }
-
 var THEME_DEFS = {
   'guerre':      { icon: '\u2694\uFE0F',     label: 'Guerre' },
   'politique':   { icon: '\uD83D\uDC51',     label: 'Politique' },
@@ -1493,7 +1492,6 @@ var THEME_DEFS = {
 };
 
 var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
-/* --- DÉTECTION AUTOMATIQUE (THEME_KEYWORDS) SUPPRIMÉE --- */
 
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
 
@@ -1515,21 +1513,18 @@ function getEventThemes(evt) {
   if (evt._cachedThemes) return evt._cachedThemes;
   var ths = [];
   
-  /* 1. Nouveau format : tableau de thèmes saisis dans admin */
   if (evt.themes && Array.isArray(evt.themes)) {
     ths = evt.themes.slice();
   } 
-  /* 2. Rétrocompatibilité : ancien format à thème unique */
   else if (evt.theme) {
     ths.push(evt.theme);
   }
   
-  /* 3. Rétrocompatibilité : l'ancien booléen atlas */
   if (evt.atlas && ths.indexOf('atlas') === -1) {
     ths.push('atlas');
   }
   
-  evt._cachedThemes = ths; /* Mise en cache pour les performances */
+  evt._cachedThemes = ths;
   return ths;
 }
 
@@ -1539,36 +1534,13 @@ function themePrefix(evt) {
   var prefix = '';
   for (var i = 0; i < ths.length; i++) {
     var t = ths[i];
-    if (THEME_DEFS[t]) {
-      prefix += THEME_DEFS[t].icon + '\u202F'; /* Icône + espace fine */
+    if (THEME_DEFS && THEME_DEFS[t]) {
+      prefix += THEME_DEFS[t].icon + '\u202F'; 
     }
   }
   return prefix;
 }
 
-/* Utilisé ailleurs dans le code pour récupérer l'icône / les icônes */
-function themeIcon(evt) {
-  return themePrefix(evt);
-}
-
-/* IMPORTANT : Assurez-vous de bien supprimer l'ancienne fonction detectTheme(evt) si elle traîne encore juste en dessous */
-  /* Si aucun thème explicite, détection automatique par mots-clés dans le titre */
-  if (ths.length === 0) {
-    var txt = (evt.titre || '').toLowerCase();
-    for (var i = 0; i < THEME_ORDER.length; i++) {
-      var theme = THEME_ORDER[i];
-      var kws = THEME_KEYWORDS[theme];
-      if (!kws) continue;
-      for (var k = 0; k < kws.length; k++) {
-        if (txt.indexOf(kws[k]) !== -1) {
-          ths.push(theme);
-          break; /* Passe au thème suivant dès qu'un mot-clé correspond */
-        }
-      }
-    }
-  }
-  
-  /* Nettoyage et déduplication */
 /* Utilisé ailleurs dans le code pour récupérer l'icône / les icônes */
 function themeIcon(evt) {
   return themePrefix(evt);
