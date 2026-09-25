@@ -689,17 +689,48 @@ function detectThemeSlim(e){
   }
   return null;
 }
-function eventMatchesTheme(e){
-  var anyActive=false;
-  for(var t in activeThemes){ if(activeThemes[t]){ anyActive=true; break; } }
-  if(!anyActive) return true;
- if (activeThemes['atlas'] && e.atlas) return true;
-  var th = (e._th!==undefined) ? e._th : (e._th = detectThemeSlim(e));
-  return !!(th && activeThemes[th]);
+/* Récupère tous les thèmes d'un événement (saisies manuelles) et les standardise */
+function getEventThemes(evt) {
+  if (evt._cachedThemes) return evt._cachedThemes;
+  var ths = [];
+  
+  /* S'adapte au format de la carte (themes ou th selon ce que vous avez mis dans admin.js) */
+  var evtThemes = evt.themes || evt.th;
+  
+  if (evtThemes && Array.isArray(evtThemes)) {
+    for (var i = 0; i < evtThemes.length; i++) {
+      ths.push(evtThemes[i].toLowerCase().trim());
+    }
+  } else if (evt.theme) {
+    ths.push(evt.theme.toLowerCase().trim());
+  }
+  
+  if (evt.atlas && ths.indexOf('atlas') === -1) {
+    ths.push('atlas');
+  }
+  
+  evt._cachedThemes = ths;
+  return ths;
 }
-function anyThemeActive(){
-  for(var t in activeThemes){ if(activeThemes[t]) return true; }
+
+/* Un événement passe-t-il le filtre thématique sur la carte ? */
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { 
+    if (activeThemes[t]) { anyActive = true; break; } 
+  }
+  
+  /* Si aucun filtre n'est coché, on affiche tout */
+  if (!anyActive) return true;
+  
+  var ths = getEventThemes(evt);
+  /* Vérifie TOUS les thèmes de l'événement */
+  for (var i = 0; i < ths.length; i++) {
+    if (activeThemes[ths[i]]) return true;
+  }
+  
   return false;
+}
 }
 
 /* ---- Mode Parcours -------------------------------------------------------
