@@ -1493,20 +1493,8 @@ var THEME_DEFS = {
 };
 
 var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','idees','sciences','techniques','art','litterature','societe','guerre','politique','atlas'];
-var THEME_KEYWORDS = {
-  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
-  'revolte':     ['révolte','soulèvement','soulève','émeute'],
-  'diplomatie':  ['traité','paix','trêve'],
-  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
-  'economie':    ['monnaie','exportation','dévaluation'],
-  'idees':       ['université'],
-  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
-  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
-  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
-  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
-  'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
-};
-/* Détecte le thème : champ explicite prioritaire, sinon mots-clés, sinon 'politique' */
+/* --- DÉTECTION AUTOMATIQUE (THEME_KEYWORDS) SUPPRIMÉE --- */
+
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
 
 /* Un événement passe-t-il le filtre thématique ? */
@@ -1522,16 +1510,48 @@ function eventMatchesTheme(evt) {
   return false;
 }
 
-/* Récupère tous les thèmes d'un événement (déclarés ou détectés automatiquement) */
+/* Récupère tous les thèmes d'un événement (UNIQUEMENT les saisies manuelles) */
 function getEventThemes(evt) {
   if (evt._cachedThemes) return evt._cachedThemes;
   var ths = [];
   
-  /* Ajoute les thèmes explicites de l'événement */
-  if (evt.themes && evt.themes.length > 0) {
+  /* 1. Nouveau format : tableau de thèmes saisis dans admin */
+  if (evt.themes && Array.isArray(evt.themes)) {
     ths = evt.themes.slice();
+  } 
+  /* 2. Rétrocompatibilité : ancien format à thème unique */
+  else if (evt.theme) {
+    ths.push(evt.theme);
   }
   
+  /* 3. Rétrocompatibilité : l'ancien booléen atlas */
+  if (evt.atlas && ths.indexOf('atlas') === -1) {
+    ths.push('atlas');
+  }
+  
+  evt._cachedThemes = ths; /* Mise en cache pour les performances */
+  return ths;
+}
+
+/* Préfixe titre : génère TOUTES les icônes associées à l'événement */
+function themePrefix(evt) {
+  var ths = getEventThemes(evt);
+  var prefix = '';
+  for (var i = 0; i < ths.length; i++) {
+    var t = ths[i];
+    if (THEME_DEFS[t]) {
+      prefix += THEME_DEFS[t].icon + '\u202F'; /* Icône + espace fine */
+    }
+  }
+  return prefix;
+}
+
+/* Utilisé ailleurs dans le code pour récupérer l'icône / les icônes */
+function themeIcon(evt) {
+  return themePrefix(evt);
+}
+
+/* IMPORTANT : Assurez-vous de bien supprimer l'ancienne fonction detectTheme(evt) si elle traîne encore juste en dessous */
   /* Si aucun thème explicite, détection automatique par mots-clés dans le titre */
   if (ths.length === 0) {
     var txt = (evt.titre || '').toLowerCase();
