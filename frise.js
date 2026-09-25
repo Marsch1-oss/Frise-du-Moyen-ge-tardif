@@ -297,39 +297,80 @@ function getSynthese(zone, dec) {
   return generateSynthese(zone, dec);
 }
 
-function loadEvents() {
+unction loadEvents() {
   var xhr = new XMLHttpRequest();
-  /* Anti-cache : force la lecture de la dernière version du fichier à chaque ouverture */
   xhr.open('GET', 'events.json?v=' + Date.now(), true);
   xhr.onload = function() {
     if (xhr.status === 200 || xhr.status === 0) {
       try {
         var data = JSON.parse(xhr.responseText);
-        allEvents = data.map(function(e) {
-          
-          /* Sécurisation absolue : garantit que les zones sont bien un tableau */
-          var rawZones = [];
-          if (Array.isArray(e.zones)) rawZones = e.zones;
-          else if (typeof e.zones === 'string') rawZones = [e.zones];
-          else if (e.zone) rawZones = [e.zone];
-          
-          e.zones = [];
-          
-          /* Sécurisation du nouveau format "themes" */
-          if (!e.themes) {
-            e.themes = [];
-          } else if (typeof e.themes === 'string') {
-            e.themes = [e.themes];
-          }
-          
-          /* Rétrocompatibilité : récupération de l'ancien format "theme" */
-          if (e.theme) {
-            var oldTh = Array.isArray(e.theme) ? e.theme.slice() : e.theme.split(',').map(function(s){ return s.trim(); });
-            oldTh.forEach(function(t) { 
-              if (e.themes.indexOf(t) === -1) e.themes.push(t); 
+        allEvents = [];
+        
+        /* Boucle sécurisée : si une fiche plante, on la signale mais on charge le reste */
+        for (var i = 0; i < data.length; i++) {
+          try {
+            var e = data[i];
+            
+            var rawZones = [];
+            if (Array.isArray(e.zones)) rawZones = e.zones;
+            else if (typeof e.zones === 'string') rawZones = [e.zones];
+            else if (e.zone) rawZones = [e.zone];
+            
+            e.zones = [];
+            
+            /* Sécurisation absolue des thèmes */
+            if (!e.themes) e.themes = [];
+            else if (typeof e.themes === 'string') e.themes = [e.themes];
+            else if (!Array.isArray(e.themes)) e.themes = [];
+
+            if (e.theme) {
+              var oldTh = Array.isArray(e.theme) ? e.theme : String(e.theme).split(',');
+              oldTh.forEach(function(t) {
+                var st = String(t).trim().toLowerCase();
+                if (st && e.themes.indexOf(st) === -1) e.themes.push(st);
+              });
+            }
+
+            if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
+
+            rawZones.forEach(function(z) {
+              if (!z) return;
+              var nz = normalizeZone(String(z));
+              if (nz.toLowerCase() === 'atlas') {
+                if (e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
+              } else {
+                e.zones.push(nz);
+              }
             });
+
+            /* On s'assure que tous les thèmes sont en minuscules et propres pour le filtrage */
+            e.themes = e.themes.map(function(t) { return String(t).trim().toLowerCase(); });
+
+            e.type = Number(e.type) || 1;
+            allEvents.push(e);
+            
+          } catch (itemErr) {
+            console.error("Fiche ignorée à cause d'une erreur (ID " + (data[i] ? data[i].id : 'inconnu') + ") :", itemErr);
           }
-          
+        }
+        
+        getAllParcours();
+        buildFilterBar();
+        loadSyntheses();
+        wzInit();
+        
+      } catch(err) {
+        alert("Erreur majeure lors de la lecture du fichier events.json.\nAppuyez sur F12 pour voir la console.\nDétail : " + err.message);
+      }
+    } else {
+      alert("Impossible de charger events.json (Erreur " + xhr.status + ")");
+    }
+  };
+  xhr.onerror = function() {
+    alert("Impossible de charger events.json (problème réseau ou local)");
+  };
+  xhr.send();
+}
           /* Compatibilité ancien format atlas: true */
           if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
           
