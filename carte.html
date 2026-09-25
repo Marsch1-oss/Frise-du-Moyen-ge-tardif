@@ -593,6 +593,32 @@ function matchZone(evt, zoneCible) {
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
+/* --- INJECTION FORCEE DES THEMES DEPUIS LE FICHIER COMPLET --- */
+fetch('events.json?v=' + Date.now())
+  .then(function(response) { return response.json(); })
+  .then(function(liveData) {
+    var themesById = {};
+    liveData.forEach(function(liveEvt) {
+      var ths = [];
+      if (liveEvt.themes && Array.isArray(liveEvt.themes)) ths = liveEvt.themes;
+      else if (liveEvt.theme) ths = [liveEvt.theme];
+      if (liveEvt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
+      themesById[liveEvt.id] = ths;
+    });
+    
+    /* On greffe les thèmes complets sur les fiches de la carte */
+    EVENTS.forEach(function(e) {
+      if (themesById[e.id]) {
+        e.themes = themesById[e.id];
+      }
+    });
+    
+    /* On rafraîchit l'affichage si la carte est déjà chargée */
+    if (typeof refreshAfterFilter === 'function') refreshAfterFilter();
+  })
+  .catch(function(err) { console.log('Erreur lors du chargement des thèmes:', err); });
+/* ------------------------------------------------------------- */
+ 
 /* Région d'ouverture par défaut : « Europe & Méditerranée (vue large) ».
    Repli sur la première région du bundle si l'id venait à disparaître. */
 var DEFAULT_REGION_ID = 'europe_med';
@@ -692,35 +718,41 @@ function eventMatchesTheme(evt) {
   return false;
 }
 
+/* 1. Récupère TOUS les thèmes de la fiche (format classique ou allégé de la carte) */
+function getEventThemes(evt) {
+  var ths = [];
+  var evtThemes = evt.themes || evt.th; 
+  
+  if (evtThemes && Array.isArray(evtThemes)) {
+    for (var i = 0; i < evtThemes.length; i++) ths.push(String(evtThemes[i]).toLowerCase().trim());
+  } else if (typeof evtThemes === 'string') {
+    ths.push(String(evtThemes).toLowerCase().trim());
+  } else if (evt.theme) {
+    ths.push(String(evt.theme).toLowerCase().trim());
+  }
+  
+  if (evt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
+  return ths;
+}
+
+/* 2. Filtre croisé : l'événement correspond-il aux boutons cochés dans la légende ? */
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
+  if (!anyActive) return true;
+  
+  var ths = getEventThemes(evt);
+  for (var i = 0; i < ths.length; i++) {
+    if (activeThemes[ths[i]]) return true;
+  }
+  return false;
+}
+
 /* 3. Rétrocompatibilité : retourne le 1er thème (pour donner une couleur/icône par défaut à la pastille) */
 function detectThemeSlim(e) {
   var ths = getEventThemes(e);
   return ths.length > 0 ? ths[0] : null;
 }
-/* Récupère tous les thèmes d'un événement (saisies manuelles) et les standardise */
-function getEventThemes(evt) {
-  if (evt._cachedThemes) return evt._cachedThemes;
-  var ths = [];
-  
-  /* S'adapte au format de la carte (themes ou th selon ce que vous avez mis dans admin.js) */
-  var evtThemes = evt.themes || evt.th;
-  
-  if (evtThemes && Array.isArray(evtThemes)) {
-    for (var i = 0; i < evtThemes.length; i++) {
-      ths.push(evtThemes[i].toLowerCase().trim());
-    }
-  } else if (evt.theme) {
-    ths.push(evt.theme.toLowerCase().trim());
-  }
-  
-  if (evt.atlas && ths.indexOf('atlas') === -1) {
-    ths.push('atlas');
-  }
-  
-  evt._cachedThemes = ths;
-  return ths;
-}
-
 /* Un événement passe-t-il le filtre thématique sur la carte ? */
 function eventMatchesTheme(evt) {
   var anyActive = false;
