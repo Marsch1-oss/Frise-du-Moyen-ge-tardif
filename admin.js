@@ -362,6 +362,19 @@ function saveEvent() {
   updateJSON();
   markEvtDirty();
 }
+function deleteEvent() {
+  if (editingId === null) return;
+  
+  if (!confirm('Supprimer définitivement cet événement ?')) return;
+  
+  // Filtre la liste pour exclure l'événement en cours d'édition
+  events = events.filter(function(e) { return e.id !== editingId; });
+  
+  resetForm();     // Vide le formulaire
+  updateJSON();    // Met à jour la liste et le code JSON exporté
+  markEvtDirty();  // Indique qu'il faut télécharger la nouvelle version
+  toast('Événement supprimé \u2713');
+}
 
 function getNoThemeEvents() {
   return events.filter(function(e) { return !detectTheme(e); })
