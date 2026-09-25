@@ -2334,6 +2334,8 @@ function setLevel(lvl){
    - #theme-pop-chips (popover d'accès rapide, bandeau Niveau de détail)
    Même ordre d'affichage que la légende de la frise (THEME_ORDER inversé). */
 function themeChipsHTML(){
+ var anyThemeActive = false;
+  for (var t in activeThemes) { if (activeThemes[t]) anyThemeActive = true; }
   var keys=THEME_ORDER.slice().reverse();
   for(var key in THEME_DEFS){ if(keys.indexOf(key)===-1) keys.push(key); }
   var html=keys.map(function(t){
