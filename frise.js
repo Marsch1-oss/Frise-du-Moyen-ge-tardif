@@ -401,7 +401,7 @@ function renderLevel(level, rangeStart) {
   var sharedZoneOf = {};
   for (var j = 0; j < allEvents.length; j++) {
     var e = allEvents[j];
-    if (e.zones.length <= 1) continue;
+    if (e.zones.length <= 1 && e.zones.indexOf('Europe') === -1) continue;
     if (!visibleAtLevel(e, level)) continue;
     if (e.regne) continue;
     for (var zi = 0; zi < ZONES.length; zi++) {
