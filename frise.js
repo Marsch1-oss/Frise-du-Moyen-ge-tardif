@@ -297,8 +297,9 @@ function getSynthese(zone, dec) {
   return generateSynthese(zone, dec);
 }
 
-unction loadEvents() {
+function loadEvents() {
   var xhr = new XMLHttpRequest();
+  /* Anti-cache : force la lecture de la dernière version du fichier à chaque ouverture */
   xhr.open('GET', 'events.json?v=' + Date.now(), true);
   xhr.onload = function() {
     if (xhr.status === 200 || xhr.status === 0) {
@@ -368,44 +369,6 @@ unction loadEvents() {
   };
   xhr.onerror = function() {
     alert("Impossible de charger events.json (problème réseau ou local)");
-  };
-  xhr.send();
-}
-          /* Compatibilité ancien format atlas: true */
-          if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
-          
-          /* Tri : si une zone est "Atlas", on la bascule dans les thèmes de façon sécurisée */
-          rawZones.forEach(function(z) {
-            if (!z) return;
-            var nz = normalizeZone(z);
-            if (typeof nz === 'string' && nz.toLowerCase() === 'atlas') {
-              if (e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
-            } else {
-              e.zones.push(nz);
-            }
-          });
-          
-          e.type = Number(e.type) || 1;
-          return e;
-        });
-        
-        getAllParcours();
-        buildFilterBar();
-        loadSyntheses();   /* charge les synthèses rédigées (optionnel) */
-        wzInit();
-      } catch(err) {
-        console.error("Erreur de traitement des données :", err);
-        document.getElementById('frise-container').innerHTML =
-          '<p class="error" style="color:red; font-weight:bold; background:#fff; padding:10px; position:relative; z-index:9999;">Erreur JS : ' + err.message + '</p>';
-      }
-    } else {
-      document.getElementById('frise-container').innerHTML =
-        '<p class="error">Impossible de charger events.json.</p>';
-    }
-  };
-  xhr.onerror = function() {
-    document.getElementById('frise-container').innerHTML =
-      '<p class="error">Impossible de charger events.json.</p>';
   };
   xhr.send();
 }
