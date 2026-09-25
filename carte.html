@@ -695,11 +695,28 @@ function anyThemeActive() {
   return false;
 }
 
-/* 1. Récupère TOUS les thèmes de la fiche (format classique ou allégé de la carte) */
+/* Dictionnaire de secours pour la détection automatique */
+var THEME_KEYWORDS = {
+  'catastrophe': ['peste','épidémie','séisme','tremblement de terre','inondation','famine','disette','sécheresse'],
+  'revolte':     ['révolte','soulèvement','soulève','émeute'],
+  'diplomatie':  ['traité','paix','trêve'],
+  'religion':    ['bulle','vaudois','hérétique','hérési','inquisition'],
+  'economie':    ['monnaie','exportation','dévaluation'],
+  'idees':       ['université'],
+  'techniques':  ['imprimerie','horloge','boussole','mécanique','métier à tisser','arquebuse'],
+  'art':         ['fresque','retable','polyptyque','triptyque','mosaïque','vitrail','enluminure','tapisserie','sculpt','madone','maestà','vierge','peint','œuvre'],
+  'guerre':      ['croisade','chevauchée','bataille','guerre','raid','siège','routiers','invasion'],
+  'politique':   ['roi','arrestation','procès','ordonnance','sacre','maréchal','exécution'],
+  'atlas':       ['carte', 'atlas', 'géographie', 'mappemonde']
+};
+
+/* 1. Récupère TOUS les thèmes de la fiche (saisis manuellement + auto-détection de secours) */
 function getEventThemes(evt) {
+  if (evt._cachedThemes) return evt._cachedThemes;
   var ths = [];
   var evtThemes = evt.themes || evt.th; 
   
+  /* A. Thèmes saisis manuellement (prioritaires) */
   if (evtThemes && Array.isArray(evtThemes)) {
     for (var i = 0; i < evtThemes.length; i++) ths.push(String(evtThemes[i]).toLowerCase().trim());
   } else if (typeof evtThemes === 'string') {
@@ -708,11 +725,30 @@ function getEventThemes(evt) {
     ths.push(String(evt.theme).toLowerCase().trim());
   }
   
+  /* B. S'il n'y a pas de thème manuel, on utilise la détection automatique sur le titre */
+  if (ths.length === 0) {
+    var txt = String(evt.t || evt.titre || '').toLowerCase();
+    for (var j = 0; j < THEME_ORDER.length; j++) {
+      var tk = THEME_ORDER[j];
+      var kws = THEME_KEYWORDS[tk];
+      if (!kws) continue;
+      for (var k = 0; k < kws.length; k++) {
+        if (txt.indexOf(kws[k]) !== -1) {
+          ths.push(tk);
+          break; /* Thème trouvé, on passe au thème suivant */
+        }
+      }
+    }
+  }
+  
+  /* C. Filtre spécial Atlas */
   if (evt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
+  
+  evt._cachedThemes = ths;
   return ths;
 }
 
-/* 2. Filtre croisé : l'événement correspond-il aux boutons cochés dans la légende ? */
+/* 2. Filtre croisé : l'événement correspond-il aux boutons cochés ? */
 function eventMatchesTheme(evt) {
   var anyActive = false;
   for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
@@ -725,58 +761,10 @@ function eventMatchesTheme(evt) {
   return false;
 }
 
-/* 1. Récupère TOUS les thèmes de la fiche (format classique ou allégé de la carte) */
-function getEventThemes(evt) {
-  var ths = [];
-  var evtThemes = evt.themes || evt.th; 
-  
-  if (evtThemes && Array.isArray(evtThemes)) {
-    for (var i = 0; i < evtThemes.length; i++) ths.push(String(evtThemes[i]).toLowerCase().trim());
-  } else if (typeof evtThemes === 'string') {
-    ths.push(String(evtThemes).toLowerCase().trim());
-  } else if (evt.theme) {
-    ths.push(String(evt.theme).toLowerCase().trim());
-  }
-  
-  if (evt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
-  return ths;
-}
-
-/* 2. Filtre croisé : l'événement correspond-il aux boutons cochés dans la légende ? */
-function eventMatchesTheme(evt) {
-  var anyActive = false;
-  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
-  if (!anyActive) return true;
-  
-  var ths = getEventThemes(evt);
-  for (var i = 0; i < ths.length; i++) {
-    if (activeThemes[ths[i]]) return true;
-  }
-  return false;
-}
-
-/* 3. Rétrocompatibilité : retourne le 1er thème (pour donner une couleur/icône par défaut à la pastille) */
+/* 3. Rétrocompatibilité : retourne le 1er thème (couleur/icône) */
 function detectThemeSlim(e) {
   var ths = getEventThemes(e);
   return ths.length > 0 ? ths[0] : null;
-}
-/* Un événement passe-t-il le filtre thématique sur la carte ? */
-function eventMatchesTheme(evt) {
-  var anyActive = false;
-  for (var t in activeThemes) { 
-    if (activeThemes[t]) { anyActive = true; break; } 
-  }
-  
-  /* Si aucun filtre n'est coché, on affiche tout */
-  if (!anyActive) return true;
-  
-  var ths = getEventThemes(evt);
-  /* Vérifie TOUS les thèmes de l'événement */
-  for (var i = 0; i < ths.length; i++) {
-    if (activeThemes[ths[i]]) return true;
-  }
-  
-  return false;
 }
 
 /* ---- Mode Parcours -------------------------------------------------------
