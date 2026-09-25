@@ -1495,37 +1495,48 @@ var THEME_ORDER = ['catastrophe','revolte','diplomatie','religion','economie','i
 
 var activeThemes = {};  /* thèmes cochés dans la légende ; vide = aucun filtre */
 
-/* Un événement passe-t-il le filtre thématique ? */
-function eventMatchesTheme(evt) {
-  var anyActive = false;
-  for (var t in activeThemes) { if (activeThemes[t]) { anyActive = true; break; } }
-  if (!anyActive) return true;
-  
-  var ths = getEventThemes(evt);
-  for (var i = 0; i < ths.length; i++) {
-    if (activeThemes[ths[i]]) return true;
-  }
-  return false;
-}
-
-/* Récupère tous les thèmes d'un événement (UNIQUEMENT les saisies manuelles) */
+/* Récupère tous les thèmes d'un événement (saisies manuelles) et les standardise */
 function getEventThemes(evt) {
   if (evt._cachedThemes) return evt._cachedThemes;
   var ths = [];
   
+  /* 1. Nouveau format : tableau de thèmes saisis dans admin */
   if (evt.themes && Array.isArray(evt.themes)) {
-    ths = evt.themes.slice();
+    for (var i = 0; i < evt.themes.length; i++) {
+      ths.push(evt.themes[i].toLowerCase().trim()); /* Sécurise la casse et les espaces */
+    }
   } 
+  /* 2. Rétrocompatibilité : ancien format à thème unique */
   else if (evt.theme) {
-    ths.push(evt.theme);
+    ths.push(evt.theme.toLowerCase().trim());
   }
   
+  /* 3. Rétrocompatibilité : l'ancien booléen atlas */
   if (evt.atlas && ths.indexOf('atlas') === -1) {
     ths.push('atlas');
   }
   
-  evt._cachedThemes = ths;
+  evt._cachedThemes = ths; /* Mise en cache pour les performances */
   return ths;
+}
+
+/* Un événement passe-t-il le filtre thématique ? */
+function eventMatchesTheme(evt) {
+  var anyActive = false;
+  for (var t in activeThemes) { 
+    if (activeThemes[t]) { anyActive = true; break; } 
+  }
+  
+  /* Si aucun filtre n'est coché dans la légende, on affiche tout */
+  if (!anyActive) return true;
+  
+  var ths = getEventThemes(evt);
+  /* Si l'événement possède au moins un thème correspondant aux filtres actifs */
+  for (var i = 0; i < ths.length; i++) {
+    if (activeThemes[ths[i]]) return true;
+  }
+  
+  return false; /* Le thème ne correspond pas -> on masque l'événement */
 }
 
 /* Préfixe titre : génère TOUTES les icônes associées à l'événement */
@@ -1535,23 +1546,15 @@ function themePrefix(evt) {
   for (var i = 0; i < ths.length; i++) {
     var t = ths[i];
     if (THEME_DEFS && THEME_DEFS[t]) {
-      prefix += THEME_DEFS[t].icon + '\u202F'; 
+      prefix += THEME_DEFS[t].icon + '\u202F'; /* Icône + espace fine */
     }
   }
   return prefix;
 }
 
-/* Utilisé ailleurs dans le code pour récupérer l'icône / les icônes */
+/* Utilisé ailleurs dans le code pour récupérer l'icône unique (rétrocompatibilité) */
 function themeIcon(evt) {
   return themePrefix(evt);
-}
-
-function toggleThemeLegend() {
-  var el = document.getElementById('theme-legend');
-  if (!el) return;
-  if (el.style.display === 'flex') { el.style.display = 'none'; return; }
-  renderThemeLegend();
-  el.style.display = 'flex';
 }
 function toggleThemeLegend() {
   var el = document.getElementById('theme-legend');
