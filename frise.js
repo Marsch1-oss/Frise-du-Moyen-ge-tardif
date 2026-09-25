@@ -306,12 +306,20 @@ function loadEvents() {
       try {
         var data = JSON.parse(xhr.responseText);
         allEvents = data.map(function(e) {
-          var rawZones = e.zones || (e.zone ? [e.zone] : []);
+          
+          /* Sécurisation absolue : garantit que les zones sont bien un tableau */
+          var rawZones = [];
+          if (Array.isArray(e.zones)) rawZones = e.zones;
+          else if (typeof e.zones === 'string') rawZones = [e.zones];
+          else if (e.zone) rawZones = [e.zone];
+          
           e.zones = [];
           
-          /* 1. Préservation du nouveau format "themes" en tableau s'il existe */
+          /* Sécurisation du nouveau format "themes" */
           if (!e.themes) {
             e.themes = [];
+          } else if (typeof e.themes === 'string') {
+            e.themes = [e.themes];
           }
           
           /* Rétrocompatibilité : récupération de l'ancien format "theme" */
@@ -325,10 +333,11 @@ function loadEvents() {
           /* Compatibilité ancien format atlas: true */
           if (e.atlas && e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
           
-          /* 2. Tri : si une zone est "Atlas", on la bascule dans les thèmes */
+          /* Tri : si une zone est "Atlas", on la bascule dans les thèmes de façon sécurisée */
           rawZones.forEach(function(z) {
+            if (!z) return;
             var nz = normalizeZone(z);
-            if (nz.toLowerCase() === 'atlas') {
+            if (typeof nz === 'string' && nz.toLowerCase() === 'atlas') {
               if (e.themes.indexOf('atlas') === -1) e.themes.push('atlas');
             } else {
               e.zones.push(nz);
@@ -338,17 +347,15 @@ function loadEvents() {
           e.type = Number(e.type) || 1;
           return e;
         });
-          
-          e.type = Number(e.type) || 1;
-          return e;
-        });
+        
         getAllParcours();
         buildFilterBar();
         loadSyntheses();   /* charge les synthèses rédigées (optionnel) */
         wzInit();
       } catch(err) {
+        console.error("Erreur de traitement des données :", err);
         document.getElementById('frise-container').innerHTML =
-          '<p class="error">Erreur JSON : ' + err.message + '</p>';
+          '<p class="error" style="color:red; font-weight:bold; background:#fff; padding:10px; position:relative; z-index:9999;">Erreur JS : ' + err.message + '</p>';
       }
     } else {
       document.getElementById('frise-container').innerHTML =
@@ -361,7 +368,6 @@ function loadEvents() {
   };
   xhr.send();
 }
-
 /* ── Filtre zones ────────────────────────────────────────────────────*/
 function buildFilterBar() {
   var container = document.getElementById('zone-filters');
