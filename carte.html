@@ -593,6 +593,7 @@ function matchZone(evt, zoneCible) {
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
 var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
 var LIVE = null;                     // map id -> event complet (si live)
+
 /* --- INJECTION FORCEE DES THEMES DEPUIS LE FICHIER COMPLET --- */
 fetch('events.json?v=' + Date.now())
   .then(function(response) { return response.json(); })
@@ -600,13 +601,19 @@ fetch('events.json?v=' + Date.now())
     var themesById = {};
     liveData.forEach(function(liveEvt) {
       var ths = [];
-      if (liveEvt.themes && Array.isArray(liveEvt.themes)) ths = liveEvt.themes;
-      else if (liveEvt.theme) ths = [liveEvt.theme];
+      
+      /* MODIFICATION ICI : On force les minuscules et on nettoie les espaces */
+      if (liveEvt.themes && Array.isArray(liveEvt.themes)) {
+        ths = liveEvt.themes.map(function(t) { return String(t).trim().toLowerCase(); });
+      } else if (liveEvt.theme) {
+        ths = [String(liveEvt.theme).trim().toLowerCase()];
+      }
+      
       if (liveEvt.atlas && ths.indexOf('atlas') === -1) ths.push('atlas');
       themesById[liveEvt.id] = ths;
     });
     
-    /* On greffe les thèmes complets sur les fiches de la carte */
+    /* On greffe les thèmes formatés sur les fiches de la carte */
     EVENTS.forEach(function(e) {
       if (themesById[e.id]) {
         e.themes = themesById[e.id];
