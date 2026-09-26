@@ -652,8 +652,11 @@ function tryLoadLive(done){
         /* CORRECTION ICI : On récupère "themes" (pluriel) ou "theme" (singulier) */
         var lesThemes = e.themes || e.theme || null;
         
-        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0,
-                  th: lesThemes, /* <-- On injecte les thèmes récupérés ! */
+        /* NOUVELLE CORRECTION : On déduit si c'est un règne grâce au type 1 */
+        var estUnRegne = (Number(e.type) === 1);
+        
+        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:estUnRegne, img:e.image?1:0,
+                  th: lesThemes, 
                   s:(e.serie||null),
                   lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
         LIVE[e.id] = e;
