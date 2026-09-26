@@ -280,14 +280,21 @@
   .panel-empty{padding:1.4rem 1rem;color:var(--ink-muted);font-style:italic;font-size:0.9rem;text-align:center}
   .ev-row{display:flex;gap:0.6rem;align-items:baseline;padding:0.45rem 0.6rem;border-radius:6px;cursor:pointer;transition:background .12s}
   .ev-row:hover{background:var(--parchment-dk)}
-  /* ── Surbrillance liste → carte ──
+/* ── Surbrillance liste → carte ──
      Survoler une ligne de la liste éclaire l'objet correspondant sur la carte :
      le point s'il est dessiné, sinon le cluster qui le contient, sinon la ou les
      pastilles de zone (vue d'ensemble, ou événement sans position précise). */
   .point-g.hl,.cluster-g.hl,.pastille-g.hl{filter:drop-shadow(0 0 3px rgba(154,107,26,0.95))}
-  .point-g.hl .point{fill:#c62828;stroke:var(--gold);stroke-width:2.6}
-  .point-g.hl .point.reign{fill:#c08a2a}
-  .cluster-g.hl .pastille,.pastille-g.hl .pastille{fill:#a82020;stroke:var(--gold);stroke-width:2.6}
+  
+  /* NOUVEAU : On éclaire la pastille quelle que soit sa couleur de base */
+  .point-g.hl .point { filter: brightness(1.3); stroke: var(--gold); stroke-width: 2.6; }
+  .cluster-g.hl .pastille,.pastille-g.hl .pastille { fill: #a82020; stroke: var(--gold); stroke-width: 2.6; }
+  
+  /* NOUVEAU : Application de la variable dynamique --dot-color */
+  .point { fill: var(--dot-color, var(--red)); stroke: var(--parchment-lt); stroke-width: 1.2; vector-effect: non-scaling-stroke; transition: fill .12s, filter .12s; }
+  .point-g:hover .point, .point-g:focus .point { filter: brightness(1.3); stroke: var(--gold); }
+  .point.reign { fill: var(--dot-color, var(--gold)); }
+  
   .ev-date{font-family:'IM Fell English',serif;color:var(--red);font-size:0.82rem;flex:0 0 auto;min-width:3.4rem}
   .ev-title{font-size:0.9rem;color:var(--ink-soft);line-height:1.35}
   .ev-row .reigntag{font-size:0.62rem;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:0 0.25rem;margin-left:0.3rem}
@@ -1574,6 +1581,32 @@ function shieldSVG(zone, x, y, s){
    drill-down d'une zone ET par le mode thématique global (tous les points du
    thème affichés d'un coup). Alimente state.currentClusters pour que les
    interactions de clic/survol des clusters restent cohérentes. ------------- */
+/* ---- Détermination de la couleur selon le thème ---- */
+function getEventColor(e) {
+  if (e.r) return 'var(--gold)'; /* Règle d'or absolue pour les Règnes */
+
+  var themes = e.th || [];
+  if (!Array.isArray(themes)) themes = [themes];
+  var premierTheme = themes.length > 0 ? String(themes[0]).toLowerCase().trim() : '';
+
+  switch(premierTheme) {
+    case 'techniques':
+    case 'sciences': return '#1A3D7C'; /* Bleu marine */
+    case 'litterature':
+    case 'idees': return '#5A9BD5'; /* Bleu ciel */
+    case 'art': return '#D87093'; /* Rose */
+    case 'guerre':
+    case 'revolte': return 'var(--red)'; /* Rouge */
+    case 'catastrophe': return '#8A4A24'; /* Brun */
+    case 'diplomatie':
+    case 'politique': return '#E3A857'; /* Jaune (assombri pour lisibilité) */
+    case 'religion': return '#7030A0'; /* Violet */
+    case 'atlas': return '#FFFFFF'; /* Blanc */
+    case 'economie': return '#C0C0C0'; /* Argent */
+    default: return 'var(--red)'; /* Défaut */
+  }
+}
+
 function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
   opts = opts || {};
   /* Mode numéroté (drill-down de zone) : chaque point porte le rang
@@ -1589,12 +1622,15 @@ function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
   /* Rayon des points numérotés : légèrement agrandi pour la lisibilité du chiffre. */
   var rN = rDot*1.7;
   function ordFont(ord){ var s=String(ord).length; return rN*(s>=3?0.95:(s===2?1.15:1.4)); }
+  
   function numberedDot(x, y, e, ord){
+    var color = getEventColor(e);
     return '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+ord+'. '+escapeHtml(e.t)+'">'+
-        '<circle class="point'+(e.r?' reign':'')+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rN.toFixed(1)+'"><title>'+ord+'. '+escapeHtml(e.t)+'</title></circle>'+
+        '<circle class="point'+(e.r?' reign':'')+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rN.toFixed(1)+'" style="--dot-color:'+color+'"><title>'+ord+'. '+escapeHtml(e.t)+'</title></circle>'+
         '<text class="point-ord" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" font-size="'+ordFont(ord).toFixed(1)+'">'+ord+'</text>'+
       '</g>';
   }
+  
   clusters.forEach(function(group, ci){
     if(group.length===1){
       var p=group[0], e=p.e;
@@ -1602,9 +1638,10 @@ function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
         parts.push(numberedDot(p.x, p.y, e, p.ord));
         return;
       }
+      var color = getEventColor(e); // <-- RÉCUPÉRATION DE LA COULEUR
       parts.push(
         '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
-          '<circle class="point'+(e.r?' reign':'')+'" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
+          '<circle class="point'+(e.r?' reign':'')+'" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+rDot.toFixed(1)+'" style="--dot-color:'+color+';"><title>'+escapeHtml(e.t)+'</title></circle>'+
         '</g>'
       );
     } else if(numbered){
@@ -1633,10 +1670,11 @@ function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
         var ang = (2*Math.PI*gi/group.length) - Math.PI/2;
         var sx=scx+Math.cos(ang)*legR, sy=scy+Math.sin(ang)*legR;
         var e=p.e;
+        var color = getEventColor(e); // <-- RÉCUPÉRATION DE LA COULEUR
         parts.push('<line class="spider-leg" x1="'+scx.toFixed(1)+'" y1="'+scy.toFixed(1)+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'"/>');
         parts.push(
           '<g class="point-g" data-id="'+e.id+'" tabindex="0" role="button" aria-label="'+escapeHtml(e.t)+'">'+
-            '<circle class="point'+(e.r?' reign':'')+'" cx="'+sx.toFixed(1)+'" cy="'+sy.toFixed(1)+'" r="'+rDot.toFixed(1)+'"><title>'+escapeHtml(e.t)+'</title></circle>'+
+            '<circle class="point'+(e.r?' reign':'')+'" cx="'+sx.toFixed(1)+'" cy="'+sy.toFixed(1)+'" r="'+rDot.toFixed(1)+'" style="--dot-color:'+color+';"><title>'+escapeHtml(e.t)+'</title></circle>'+
           '</g>'
         );
       });
@@ -1657,7 +1695,6 @@ function renderLocatedPoints(ptsArr, parts, rDot, fNum, opts){
     }
   });
 }
-
 /* ---- Rendu de la carte -------------------------------------------------- */
 /* ── Barre de contexte (titre : lieu + période) ──────────────────────────
    Affichée tout en haut, avant la synthèse et la carte. Reflète l'état
