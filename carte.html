@@ -591,9 +591,9 @@ function matchZone(evt, zoneCible) {
 
 "use strict";
 var BUNDLE = JSON.parse(document.getElementById('bundle-data').textContent);
-var EVENTS = BUNDLE.events;          // sera remplacé par events.json live si dispo
-var LIVE = null;                     // map id -> event complet (si live)
-
+var EVENTS = BUNDLE.events || [];    /* Le "|| []" sauve la carte du plantage ! */
+var LIVE = null;
+ 
 /* --- INJECTION FORCEE DES THEMES DEPUIS LE FICHIER COMPLET --- */
 fetch('events.json?v=' + Date.now())
   .then(function(response) { return response.json(); })
@@ -647,8 +647,13 @@ function tryLoadLive(done){
       LIVE = {};
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
+        
+        /* CORRECTION ICI : On récupère "themes" (pluriel) ou "theme" (singulier) */
+        var lesThemes = e.themes || e.theme || null;
+        
         var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:!!e.regne, img:e.image?1:0,
-                  th:(e.theme||null), s:(e.serie||null),
+                  th: lesThemes, /* <-- On injecte les thèmes récupérés ! */
+                  s:(e.serie||null),
                   lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
         LIVE[e.id] = e;
         return o;
@@ -657,7 +662,6 @@ function tryLoadLive(done){
     })
     .catch(function(){ done('embed'); });
 }
-
 /* ---- Synthèses décennales (syntheses.json, partagé avec frise.js) --------
    Clé "Zone|décennie" -> { titre, texte, auto? }. Le texte peut contenir des
    références [[id]] vers des événements : elles sont rendues comme des liens
