@@ -1886,14 +1886,21 @@ function renderNonGeo(){
   /* Sans objet pendant un parcours : les étapes sans coordonnées figurent déjà
      dans le panneau latéral (badge doré tireté). */
   if(parcoursActive()){ el.style.display='none'; return; }
-  BUNDLE.nonGeo.forEach(function(zone){
+  
+  /* LIGNE CORRIGÉE : On ajoute un filet de sécurité avec vos 3 zones sans coordonnées */
+  var zonesNonGeo = BUNDLE.nonGeo || ['Europe', 'Monde', 'Atlas'];
+  
+  zonesNonGeo.forEach(function(zone){
     var n=eventsFor(zone, currentRange()).length;
     if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
   });
+  
   if(bits.length){
     el.style.display='block';
-    el.innerHTML='Non localisé sur la carte : '+bits.join(' · ');
-  } else el.style.display='none';
+    el.innerHTML='Non localisé sur la carte : '+bits.join(' &middot; ');
+  } else {
+    el.style.display='none';
+  }
 }
 
 /* ---- Panneau latéral ---------------------------------------------------- */
