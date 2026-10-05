@@ -11081,6 +11081,23 @@
     "lng": 19.5034
   },
   {
+    "id": 2273,
+    "titre": "Achèvement du portulan d'Angelino Dulcert, œuvre fondatrice de l'école majorquine de cartographie",
+    "date": 1339,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "la réalisation de cette carte en 1339 constitue un jalon fondamental pour comprendre l'expansion européenne, marquant la transition entre la navigation purement méditerranéenne et l'ouverture sur l'océan Atlantique.\n\nRéalisée à Palma de Majorque, cette carte marine (ou portulan) est l'une des plus anciennes conservées à ce jour — la toute première connue étant la Carta Pisana, datée des années 1290. L'œuvre d'Angelino Dulcert se distingue toutefois par son ambition inédite : elle ne se contente pas de tracer les contours côtiers utiles aux marins, mais s'aventure à décrire l'intérieur des terres et l'océan inconnu.\n\nCe chef-d'œuvre cartographique intègre pour la première fois des éléments géographiques, politiques et mythologiques majeurs :\n\nLes îles Canaries : La carte documente officiellement la redécouverte de l'archipel en 1312. L'île de Lanzarote y figure formellement, surmontée de la croix rouge sur fond blanc (les armoiries de la république de Gênes) en hommage à son découvreur génois, Lancelot Maloisel.\n\nL'Afrique saharienne et le roi du Mali : Dulcert y trace la chaîne de l'Atlas et fait figurer les routes transsahariennes de l'or. Il y mentionne le « roi du Mali » (faisant écho au célèbre souverain Mansa Moussa et à son fastueux pèlerinage à la Mecque de 1324), préfigurant la célèbre représentation qui sera faite dans l'Atlas catalan de 1375.\n\nLes îles mythiques : Reflet de l'imaginaire médiéval et des légendes celtiques, l'océan Atlantique est parsemé d'îles fantômes censées exister au-delà du monde connu, notamment l'île d'Antilia (la mythique île des Sept Cités) et l'île de Brasil.( 1. voir note en bas de page )\nL'intégration de ces nouvelles données fait de ce document la pierre angulaire de la célèbre école cartographique majorquine, qui dominera la science de la navigation en Europe jusqu'au XVe siècle.\nL'historiographie déploie un long débat sur le nom de ce cartographe. La théorie la plus acceptée aujourd'hui est qu'Angelino Dalorto, un brillant cartographe ligure (originaire de Gênes), a émigré aux îles Baléares et a catalanisé son nom en Angelino Dulcert. Cette assimilation explique pourquoi son œuvre de 1339 réalise la synthèse parfaite entre la rigueur mathématique et maritime des cartes génoises et le riche style pictural, coloré et encyclopédique qui deviendra la marque de fabrique de l'école majorquine.\n\nNote (1)  : l'apparition du nom Brasil en 1339 n'a strictement aucun rapport avec le futur pays d'Amérique du Sud (découvert par les Portugais en 1500). Il s'agit de Hy-Brasil, une île fantôme issue de la mythologie irlandaise, prétendument perdue dans les brumes de l'océan Atlantique. Lorsque le Brésil sera découvert au XVIe siècle, il sera d'abord nommé Terra da Santa Cruz ; c'est seulement plus tard que l'exploitation du bois de braise (pau-brasil) amènera les Européens à lui attribuer, par glissement sémantique et mythologique, le nom de cette île légendaire.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Map_of_Angelino_Dulcert_cropped.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "themes": [
+      "sciences"
+    ],
+    "legende": "Le portulan d'Angelino Dulcert",
+    "lat": 39.5696,
+    "lng": 2.6501
+  },
+  {
     "id": 572,
     "titre": "Palais des Doges",
     "date": 1340,
@@ -12701,24 +12718,6 @@
     "legende": "Triptyque de la Mère de Dieu. Walters Art Museum, Baltimore",
     "lat": 41.4038,
     "lng": 0.2497
-  },
-  {
-    "id": 1973,
-    "titre": "Guerre des Crochets et des Cabillauds",
-    "date": 1345,
-    "date_fin": 1354,
-    "zones": [
-      "St Empire"
-    ],
-    "type": 5,
-    "description": "La guerre des Crochets et des Cabillauds ou guerre des Hameçons et des Cabillauds[1] (en néerlandais Hoekse en Kabeljauwse twisten), est un conflit politique qui se déroule en Hollande de 1345[2] à 1490, entre deux factions appelées parti du Crochet et parti des Cabillauds.\nAu XIVe comme au XVe siècle, le comté de Hollande est un fief du Saint-Empire romain germanique, dont les souverains, les comtes de Hollande, appartiennent à la maison d'Avesnes jusqu'en 1345, puis à la maison de Wittelsbach jusqu'en 1433, enfin à la maison de Valois-Bourgogne (issue de la famille royale française des Valois) à partir de 1433 (sous le règne de Philippe le Bon).\nTout en continuant de relever du Saint-Empire (jusqu'en 1581), il devient alors un des fiefs réunis par les puissants ducs de Bourgogne au sein de ce qu'on appelle l'État bourguignon.\n\nAprès la mort de son père Charles le Téméraire (janvier 1477), l'héritière, Marie de Bourgogne (1457-1482), épouse Maximilien d'Autriche (1459-1519), de la maison de Habsbourg : le comté de Hollande passe alors à cette famille avec le duc Philippe le Beau (1478-1506), à qui succède Charles de Habsbourg (futur Charles Quint[4]). Maximilien, qui devient empereur en 1493, est régent des possessions bourguignonnes de 1482 à 1494. C'est donc sous sa régence que prend fin la guerre des Cabillauds.\nLe comte Guillaume IV de Hollande (1317-1345), est tué lors d'une bataille livrée à Stavoren contre l'armée de la principauté épiscopale d'Utrecht.\n\nComme il ne laisse pas de descendance, il revient à l'empereur, Louis IV (1282-1347), duc de Bavière, de désigner un successeur dans la dynastie d'Avesnes : il choisit (janvier 1346) sa propre épouse Marguerite (1311-1356), sœur du défunt. Il écarte notamment Jean de Beaumont, oncle du défunt, Philippa de Hainaut, autre sœur du défunt, épouse du roi d'Angleterre Edouard III et Jeanne de Hainaut, épouse du duc de Jülich.\n\nMarguerite prend possession des trois comtés concernés (Hollande, Zélande et Hainaut) et en septembre 1346, nomme son fils Guillaume (1330-1389), futur héritier, son lieutenant (stathouder) en Hollande et Zélande.\n\nLa mort de Louis IV en 1347 affaiblit la position de Marguerite : le roi d'Angleterre et le duc de Jülich contestent le choix de Louis IV et réclament une révision de la succession. Les nobles mécontents de Guillaume, accusé de favoritisme, se manifestent aussi. La situation est aggravée par le conflit qui se poursuit avec la principauté d'Utrecht.\nSon fils Guillaume entre en conflit avec elle en 1349.\n\nC'est en 1350 que se forme le parti des Cabillauds, puis celui des Hameçons. Le parti des Cabillauds soutient Guillaume, duc de Bavière en 1347. Ce parti est composé principalement de bourgeois des villes de Hollande, qui connaissent alors un grand développement, plus tardif que celui des villes du comté de Flandre (Bruges et Gand notamment).\n\nLe parti du Crochet, soutenu par Marguerite II de Hainaut, mère de Guillaume, représentait la noblesse conservatrice.\n\nLa paix est rétablie en 1354 : Guillaume devient comte de Hollande et de Zélande ; Marguerite conserve le Hainaut, dont Guillaume hérite à sa mort en 1356.\n\nCe conflit débute après la mort du comte Guillaume IV[3] en 1345, à l'occasion d'un conflit survenu en 1349 entre la comtesse Marguerite d'Avesnes, sœur et successeur du défunt, et son fils Guillaume de Wittelsbach, héritier présomptif. Mais en arrière-plan, il s'agit aussi d'un conflit entre la bourgeoisie urbaine et la noblesse féodale de Hollande.\n\nLe conflit se poursuit ensuite en prenant de l'importance à l'occasion des problèmes dynastiques touchant les Pays-Bas et particulièrement le comté de Hollande : notamment lors de la succession de Jacqueline de Bavière à Philippe le Bon vers 1430 et après la mort de la duchesse Marie de Bourgogne, fille de Charles le Téméraire, sous la régence de son époux Maximilien d'Autriche.\n\nLa défaite en juillet 1490 du soulèvement des Hameçons dirigé par Frans van Brederode (la « guerre du jonker Frans ») marque la fin de la guerre des Hameçons et des Cabillauds.\n\nD'autres conflits politiques ont lieu durant cette période aux Pays-Bas, comme celui des Hekerens et des Bronkhorsten dans le duché de Gueldre lors de la guerre de Succession de Gueldre ; celui des Schieringers et des Vetkopers en Frise ; celui des Lichtenbergers et des Fresingen dans la principauté épiscopale d'Utrecht ; celui des Klauwaerts et des Leliaerts dans le comté de Flandre.",
-    "image": "",
-    "themes": [
-      "guerre"
-    ],
-    "lat": 52.1014,
-    "lng": 5.9516,
-    "sources": "https://fr.wikipedia.org/wiki/Guerre_des_Crochets_et_des_Cabillauds"
   },
   {
     "id": 2032,
@@ -14674,6 +14673,24 @@
     "serie": "Guerre sardo-catalane"
   },
   {
+    "id": 1973,
+    "titre": "Guerre civile hollandaise ou Guerre des Crochets et des Cabillauds",
+    "date": 1350,
+    "date_fin": 1490,
+    "zones": [
+      "Flandre"
+    ],
+    "type": 5,
+    "description": "La guerre des Crochets et des Cabillauds ou guerre des Hameçons et des Cabillauds[1] (en néerlandais Hoekse en Kabeljauwse twisten), est un conflit politique qui se déroule en Hollande de 1345[2] à 1490, entre deux factions appelées parti du Crochet et parti des Cabillauds.\nAu XIVe comme au XVe siècle, le comté de Hollande est un fief du Saint-Empire romain germanique, dont les souverains, les comtes de Hollande, appartiennent à la maison d'Avesnes jusqu'en 1345, puis à la maison de Wittelsbach jusqu'en 1433, enfin à la maison de Valois-Bourgogne (issue de la famille royale française des Valois) à partir de 1433 (sous le règne de Philippe le Bon).\nTout en continuant de relever du Saint-Empire (jusqu'en 1581), il devient alors un des fiefs réunis par les puissants ducs de Bourgogne au sein de ce qu'on appelle l'État bourguignon.\n\nAprès la mort de son père Charles le Téméraire (janvier 1477), l'héritière, Marie de Bourgogne (1457-1482), épouse Maximilien d'Autriche (1459-1519), de la maison de Habsbourg : le comté de Hollande passe alors à cette famille avec le duc Philippe le Beau (1478-1506), à qui succède Charles de Habsbourg (futur Charles Quint[4]). Maximilien, qui devient empereur en 1493, est régent des possessions bourguignonnes de 1482 à 1494. C'est donc sous sa régence que prend fin la guerre des Cabillauds.\nLe comte Guillaume IV de Hollande (1317-1345), est tué lors d'une bataille livrée à Stavoren contre l'armée de la principauté épiscopale d'Utrecht.\n\nComme il ne laisse pas de descendance, il revient à l'empereur, Louis IV (1282-1347), duc de Bavière, de désigner un successeur dans la dynastie d'Avesnes : il choisit (janvier 1346) sa propre épouse Marguerite (1311-1356), sœur du défunt. Il écarte notamment Jean de Beaumont, oncle du défunt, Philippa de Hainaut, autre sœur du défunt, épouse du roi d'Angleterre Edouard III et Jeanne de Hainaut, épouse du duc de Jülich.\n\nMarguerite prend possession des trois comtés concernés (Hollande, Zélande et Hainaut) et en septembre 1346, nomme son fils Guillaume (1330-1389), futur héritier, son lieutenant (stathouder) en Hollande et Zélande.\n\nLa mort de Louis IV en 1347 affaiblit la position de Marguerite : le roi d'Angleterre et le duc de Jülich contestent le choix de Louis IV et réclament une révision de la succession. Les nobles mécontents de Guillaume, accusé de favoritisme, se manifestent aussi. La situation est aggravée par le conflit qui se poursuit avec la principauté d'Utrecht.\nSon fils Guillaume entre en conflit avec elle en 1349.\n\nC'est en 1350 que se forme le parti des Cabillauds, puis celui des Hameçons. Le parti des Cabillauds soutient Guillaume, duc de Bavière en 1347. Ce parti est composé principalement de bourgeois des villes de Hollande, qui connaissent alors un grand développement, plus tardif que celui des villes du comté de Flandre (Bruges et Gand notamment).\n\nLe parti du Crochet, soutenu par Marguerite II de Hainaut, mère de Guillaume, représentait la noblesse conservatrice.\n\nLa paix est rétablie en 1354 : Guillaume devient comte de Hollande et de Zélande ; Marguerite conserve le Hainaut, dont Guillaume hérite à sa mort en 1356.\n\nCe conflit débute après la mort du comte Guillaume IV[3] en 1345, à l'occasion d'un conflit survenu en 1349 entre la comtesse Marguerite d'Avesnes, sœur et successeur du défunt, et son fils Guillaume de Wittelsbach, héritier présomptif. Mais en arrière-plan, il s'agit aussi d'un conflit entre la bourgeoisie urbaine et la noblesse féodale de Hollande.\n\nLe conflit se poursuit ensuite en prenant de l'importance à l'occasion des problèmes dynastiques touchant les Pays-Bas et particulièrement le comté de Hollande : notamment lors de la succession de Jacqueline de Bavière à Philippe le Bon vers 1430 et après la mort de la duchesse Marie de Bourgogne, fille de Charles le Téméraire, sous la régence de son époux Maximilien d'Autriche.\n\nLa défaite en juillet 1490 du soulèvement des Hameçons dirigé par Frans van Brederode (la « guerre du jonker Frans ») marque la fin de la guerre des Hameçons et des Cabillauds.\n\nD'autres conflits politiques ont lieu durant cette période aux Pays-Bas, comme celui des Hekerens et des Bronkhorsten dans le duché de Gueldre lors de la guerre de Succession de Gueldre ; celui des Schieringers et des Vetkopers en Frise ; celui des Lichtenbergers et des Fresingen dans la principauté épiscopale d'Utrecht ; celui des Klauwaerts et des Leliaerts dans le comté de Flandre.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 52.1014,
+    "lng": 5.9516,
+    "sources": "https://fr.wikipedia.org/wiki/Guerre_des_Crochets_et_des_Cabillauds"
+  },
+  {
     "id": 759,
     "titre": "le futur dauphin Charles, épouse Jeanne de Bourbon",
     "date": 1350,
@@ -15636,8 +15653,11 @@
       "Papaute"
     ],
     "type": 2,
-    "description": "Les Statute of Praemunire, votés par le Parlement anglais, interdisent aux sujets anglais de recourir à une justice étrangère (en particulier à celle de la Papauté, alors transférée à Avignon).\n\nLes statuts de Praemunire est le nom donné en Angleterre à divers actes qui prohibaient, entre autres choses :\n\nl'introduction en Angleterre des provisions papales; l'intervention du pape dans les élections ecclésiastiques; l'évocation des sujets du roi en cour de Rome sur des points dont la connaissance appartenait aux cours royales; l'acceptation en cour étrangère de bénéfices ecclésiastiques du royaume d'Angleterre.\n\nLes principaux de ces actes sont de 1343, 51, 53, 64. Grégoire XI indiqua pour discuter ces statuts une conférence à Bruges (1375); Wiclef y fut l'un des commissaires d’Édouard III; la convention qui y fut signée admit une partie de ces statuts.\n\nNotre seigneur le roi, avec l'assentiment et à la demande des seigneurs et des communes de son royaume d'Angleterre, réuni en son grand conseil à Westminster le lundi suivant la fête de saint Matthieu l'Apôtre, la vingt-septième année de son règne, c'est-à-dire en Angleterre ; en France la quatorzième, pour le bien de son royaume et pour le maintien de ses lois et coutumes, a ordonné et établi les mesures ci-dessous :\n\nPremièrement, considérant que les plaintes véhémentes et graves de ses seigneurs et des communes susmentionnés ont montré à Notre seigneur le roi combien de personnes ont été et sont encore amenées hors du royaume pour répondre dans des affaires relevant de la compétence de la cour de Notre seigneur le roi ; et aussi comment les jugements rendus par la même cour sont contestés devant une autre cour, au préjudice et au déshonneur de Notre Seigneur le Roi, de sa Couronne et de tout le peuple de son royaume, et à l'annulation du droit coutumier dudit royaume en tout temps : par conséquent, après mûre délibération des seigneurs et autres membres dudit conseil, il est accordé et convenu par Notre Seigneur le Roi et par lesdits seigneurs et communes que toute personne d'allégeance au Roi, quelle que soit sa condition, qui fait sortir quiconque du royaume dans une affaire relevant de la compétence de la cour du Roi ou dans des affaires ayant fait l'objet de jugements rendus par la cour du Roi, ou qui intente une action devant une autre cour pour annuler ou entraver les jugements rendus par la cour du Roi, se verra accorder un jour… [pour]\n\ncomparaître devant le Roi et son conseil, ou devant sa chancellerie, ou devant les juges du Roi dans leurs cours. Soit devant l'un ou l'autre tribunal, soit devant d'autres juges du roi désignés à cet effet, ils devront répondre devant le roi en personne de l'outrage que constitue un tel acte. Et s'ils ne se présentent pas en personne le jour dit pour être jugés, qu'eux, leurs procureurs, avocats, exécuteurs testamentaires, notaires et soutiens, à compter de ce jour, soient tenus de comparaître.\n\nQu'ils soient mis hors de la protection du roi, que leurs terres, leurs biens et leurs effets personnels soient confisqués au profit du roi, et que leurs corps, où qu'ils soient trouvés, soient capturés, emprisonnés et rachetés au bon vouloir du roi...",
+    "description": "Les Statute of Praemunire, votés par le Parlement anglais, interdisent aux sujets anglais de recourir à une justice étrangère (en particulier à celle de la Papauté, alors transférée à Avignon).\n\nLes statuts de Praemunire est le nom donné en Angleterre à divers actes qui prohibaient, entre autres choses :\n\nl'introduction en Angleterre des provisions papales; l'intervention du pape dans les élections ecclésiastiques; l'évocation des sujets du roi en cour de Rome sur des points dont la connaissance appartenait aux cours royales; l'acceptation en cour étrangère de bénéfices ecclésiastiques du royaume d'Angleterre.\n\nLes principaux de ces actes sont de 1343, 51, 53, 64. Grégoire XI indiqua pour discuter ces statuts une conférence à Bruges (1375); Wiclef y fut l'un des commissaires d’Édouard III; la convention qui y fut signée admit une partie de ces statuts.\n\nNotre seigneur le roi, avec l'assentiment et à la demande des seigneurs et des communes de son royaume d'Angleterre, réuni en son grand conseil à Westminster le lundi suivant la fête de saint Matthieu l'Apôtre, la vingt-septième année de son règne, c'est-à-dire en Angleterre ; en France la quatorzième, pour le bien de son royaume et pour le maintien de ses lois et coutumes, a ordonné et établi les mesures ci-dessous :\n\nPremièrement, considérant que les plaintes véhémentes et graves de ses seigneurs et des communes susmentionnés ont montré à Notre seigneur le roi combien de personnes ont été et sont encore amenées hors du royaume pour répondre dans des affaires relevant de la compétence de la cour de Notre seigneur le roi ; et aussi comment les jugements rendus par la même cour sont contestés devant une autre cour, au préjudice et au déshonneur de Notre Seigneur le Roi, de sa Couronne et de tout le peuple de son royaume, et à l'annulation du droit coutumier dudit royaume en tout temps : par conséquent, après mûre délibération des seigneurs et autres membres dudit conseil, il est accordé et convenu par Notre Seigneur le Roi et par lesdits seigneurs et communes que toute personne d'allégeance au Roi, quelle que soit sa condition, qui fait sortir quiconque du royaume dans une affaire relevant de la compétence de la cour du Roi ou dans des affaires ayant fait l'objet de jugements rendus par la cour du Roi, ou qui intente une action devant une autre cour pour annuler ou entraver les jugements rendus par la cour du Roi, se verra accorder un jour… [pour]\ncomparaître devant le Roi et son conseil, ou devant sa chancellerie, ou devant les juges du Roi dans leurs cours. Soit devant l'un ou l'autre tribunal, soit devant d'autres juges du roi désignés à cet effet, ils devront répondre devant le roi en personne de l'outrage que constitue un tel acte. Et s'ils ne se présentent pas en personne le jour dit pour être jugés, qu'eux, leurs procureurs, avocats, exécuteurs testamentaires, notaires et soutiens, à compter de ce jour, soient tenus de comparaître.\n\nQu'ils soient mis hors de la protection du roi, que leurs terres, leurs biens et leurs effets personnels soient confisqués au profit du roi, et que leurs corps, où qu'ils soient trouvés, soient capturés, emprisonnés et rachetés au bon vouloir du roi...\n\nce premier statut pose les fondations du protectionnisme juridique anglais. Il interdit pour la première fois de contester un jugement rendu par une cour royale en faisant appel à une cour de justice « étrangère » (ciblant, sans la nommer directement, la cour papale).\nEn 1393 (Le « Grand Statut ») , texte adopté sous Richard II,  est une version beaucoup plus radicale. Face aux ingérences persistantes de la papauté, le Parlement réécrit la loi de 1353 en nommant cette fois explicitement le pape, les bulles pontificales et les menaces d'excommunication. Les peines deviennent impitoyables, prévoyant la confiscation totale des terres et des biens du contrevenant.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 51.5,
     "lng": -0.13
   },
@@ -32828,6 +32848,9 @@
     "type": 5,
     "description": "L' Universitas Studii Erfordiensis a été créée sur la base d'une charte de fondation délivrée par le pape Urbain VI le 4 mai.\nUniversitas Studii Erfordiensis est le nom historique de l'ancienne université d'Erfurt , qui a existé de 1392 à 1816. Le nom plus récent Hierana fait référence à la rivière Gera ( en latin : hiera ), qui traverse Erfurt et sur les rives de laquelle se trouvaient les propriétés et les installations de l'université : « celle située sur la Gera ».\nDepuis le XIIIe siècle, un système d'enseignement général de type universitaire, soutenu par des collèges, était établi à Erfurt. Cependant, ce système scolaire florissant connut une crise au milieu du XIVe siècle, car il ne disposait pas du droit de décerner des doctorats, contrairement aux universités émergentes d'Europe centrale. C'est pourquoi, en 1378, la ville d'Erfurt adressa une requête au pape Clément VII , antipape d' Avignon , afin d'obtenir la création de sa propre université et reçut une charte fondatrice en 1379. Cette initiative était principalement motivée par le fort engagement des citoyens d'Erfurt. Toutefois, le ralliement de l'archevêque Adolf de Mayence , souverain du territoire, au pape Urbain VI à Rome, rendit impossible l'ouverture de l'université.\n\nCependant, après que le conseil de Cologne eut réussi à établir l' Universitas Studii Coloniensis dans sa ville en 1388 , les autorités municipales d'Erfurt reprirent leurs activités et sollicitèrent une seconde fois l'autorisation de fonder une université. Cette autorisation leur fut accordée par le pape Urbain VI de Rome, par une charte datée du 4 mai 1389 [ 1 ] .\n\nLa charte accordée par le pape Clément VII en 1379 à la demande des citoyens d'Erfurt, bien qu'elle n'ait pas encore conduit à la fondation de l'université en raison du Grand Schisme d'Occident , est considérée par certains chercheurs comme la véritable date de fondation, ce qui ferait d'Erfurt la plus ancienne université d'Allemagne actuelle. Avec son programme d'études générales remontant au XIIIe siècle, elle jouit assurément de la plus longue tradition universitaire. [ 2 ]\n\nAu cours de la deuxième semaine suivant Pâques 1392, l'université d'Erfurt fut ouverte , devenant ainsi la troisième université à l'intérieur des frontières de l'actuelle Allemagne , après l'université de Heidelberg (1386) et l'université de Cologne (1388) (la plus ancienne université du Saint-Empire romain germanique au nord des Alpes est l'université Charles de Prague, fondée en 1348 ). Le premier recteur fut élu la même année et les cours commencèrent au semestre d'été.\n\nLes bâtiments d'enseignement se situaient dans le Quartier latin , en face de l'église Saint-Michel , qui servait d'église universitaire. Le bâtiment principal et emblématique était le Collegium Maius, construit entre 1511 et 1550 .\n\nDes recherches récentes sur l'histoire de la fondation de l'université suggèrent que la charte fondatrice de 1379 devrait être considérée comme son « acte de naissance », ce qui ferait d'Erfurt la plus ancienne université d'Allemagne actuelle, devant Heidelberg (1385) et Cologne (1388). Vienne , où près de vingt ans se sont écoulés entre la charte fondatrice de 1365 et le début des études régulières, ainsi que d'autres universités anciennes, font également référence à cette première date.\n\npremière période de floraison\nLe premier recteur fut Ludwig Mollner, originaire d'Arnstadt . Sous son mandat et celui de ses successeurs, l'université d'Erfurt connut un essor rapide. La jeune université se développa rapidement en une université pluridisciplinaire regroupant les quatre facultés ( philosophie , médecine , droit séculier et canonique , et théologie ). La faculté des Lettres , où étaient enseignés les sept arts libéraux ( artes liberales ), jouissait d'une grande renommée. Grâce notamment à la situation centrale de la ville, au carrefour des routes commerciales européennes, l'université devint bientôt l'un des établissements d'enseignement les plus prestigieux d'Europe centrale.\n\nIl en va de même, en particulier, pour la faculté de théologie, dont les diplômés exerçaient leur profession dans toute l'Allemagne et au-delà, et pour la faculté de droit, où le droit civil ,  parallèlement au droit canonique, acquit une importance considérable au début du XVe siècle. En 1392, les ordres franciscain , augustinien et dominicain intégrèrent leurs maisons d'études d'Erfurt à la faculté de théologie ; Erfurt obtint alors le statut de centre d'études général pour ces ordres , où leurs supérieurs furent envoyés pour approfondir leurs connaissances. [ 3 ] Pendant un temps, l'université d'Erfurt fut le centre d'études juridiques le plus renommé au nord des Alpes et fut surnommée la « Bologne du Nord ». Le prestige de ces deux facultés était également dû en grande partie à leurs représentants, qui participèrent aux conciles de Constance (1414-1418) et de Bâle (1431-1449) et jouèrent un rôle d'experts importants dans de nombreux litiges ecclésiastiques. Ils se firent également un nom comme conseillers des princes.\n\nAinsi, au XVe  siècle, l'université d'Erfurt devint l'université la plus fréquentée d'Allemagne et comptait le plus grand nombre d'étudiants. Ses érudits affluaient de toute l'Europe. De plus, elle servit de modèle à de nombreuses autres fondations universitaires du XVe siècle, telles  que Rostock (1419), Bâle (1460), Trèves (1473) et Mayence (1477).\n\nDe cette période date également une importante bibliothèque, la célèbre Bibliotheca Amploniana , fondée par Amplonius Rating de Berka , qui acheva ses études de médecine à Erfurt et y obtint son doctorat en 1393. Du  5 mai 1394 au  31 janvier 1395, il fut le deuxième recteur de l'université d'Erfurt. Vers 1410, il dressa lui-même le catalogue de sa bibliothèque, organisé par discipline (théologie, médecine, etc.), qui est encore conservé aujourd'hui. Le 1er mai 1412, Amplonius fit don de sa bibliothèque au Collegium Porta Coeli  (Collegium Amplonianum) d'Erfurt , qu'il avait fondé . La bibliothèque d'Amplonius embrasse tout le savoir de la fin du Moyen Âge. Environ les deux tiers de la collection originale nous sont parvenus. La Bibliotheca Amploniana est conservée à la bibliothèque universitaire d'Erfurt depuis 2001. Elle est considérée comme l'une des plus importantes collections de manuscrits d'Allemagne et constitue la plus grande collection de manuscrits intacts au monde d'un érudit de la fin du Moyen Âge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Universit%C3%A4tssiegel_Hierana.png?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "litterature"
+    ],
     "lat": 50.9778,
     "lng": 11.0287
   },
@@ -33737,6 +33760,23 @@
     "lng": 139.7639
   },
   {
+    "id": 2264,
+    "titre": "Prise de la ville d'Afyonkarahisar par l'Empire ottoman",
+    "date": 1390,
+    "zones": [
+      "Ottomans"
+    ],
+    "type": 3,
+    "description": "Si l'Empire ottoman mène une politique d'expansion agressive dans les Balkans, le sultan Bayezid Ier (Bajazet) se tourne également vers l'est avec une ambition claire : unifier l'Anatolie sous sa bannière en soumettant les divers beylicats (émirats) turcomans indépendants. Ces principautés musulmanes, issues de la dislocation du sultanat seldjoukide, constituent des freins à l'hégémonie ottomane.\n\nAfyonkarahisar (littéralement « le château noir de l'opium », en référence à la roche sombre sur laquelle est bâtie sa citadelle et aux champs de pavot environnants) est une place forte d'importance stratégique au cœur de l'Anatolie occidentale. Elle appartient alors au puissant beylicat de Germiyan. Bayezid Ier, fort de son prestige militaire après ses victoires européennes, lance une série de campagnes foudroyantes en Asie Mineure pour annexer ses voisins musulmans (les beylicats d'Aydın, de Saruhan, de Menteşe et de Germiyan).\n\nL'annexion d'Afyonkarahisar s'inscrit dans cette vague de conquêtes. Elle permet aux Ottomans de consolider un vaste glacis territorial en Anatolie centrale, verrouillant les routes commerciales et militaires. Cette expansion rapide et brutale aux dépens d'autres souverains musulmans va toutefois inquiéter les puissances situées plus à l'est, provoquant l'hostilité de la principauté de Karaman et attirant plus tard l'attention funeste du conquérant turco-mongol Tamerlan (qui restituera temporairement la ville à la dynastie de Germiyan après sa victoire sur Bayezid en 1402).\nBien que l'année 1392 soit fréquemment citée dans les chronologies générales en ligne pour la chute d'Afyonkarahisar, l'historiographie ottomane spécialisée situe le cœur de la conquête du beylicat de Germiyan (dont faisait partie la ville) un peu plus tôt, généralement en 1390. C'est en effet en 1390 que le souverain de Germiyan, Yakup II, est capturé et emprisonné par Bayezid Ier. La date de 1392 correspond probablement à l'achèvement de la pacification de la région ou à la chute des toutes dernières forteresses d'Anatolie centrale, au moment où Bayezid se tourne plus au nord vers le beylicat de Kastamonu (Candaroğulları).\nFace à l'écrasante supériorité de l'armée de Bayezid (surnommé Yıldırım, « la Foudre », pour la rapidité de ses déplacements), la plupart des centres urbains du beylicat de Germiyan, y compris Afyonkarahisar, ont capitulé sans opposer de résistance majeure, la population turco-musulmane locale s'intégrant sans heurts à l'administration ottomane.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Burgberg_Afyonkarahisar_01.jpg/1920px-Burgberg_Afyonkarahisar_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "guerre"
+    ],
+    "legende": "Colline du château d'Afyonkarahisar, Turquie centrale",
+    "lat": 38.6853,
+    "lng": 30.6427
+  },
+  {
     "id": 192,
     "titre": "Manuel II Paléologue",
     "date": 1391,
@@ -34588,7 +34628,7 @@
   },
   {
     "id": 2241,
-    "titre": "Prise de Skopje par les armées ottomanes et création du sandjak d'Üsküb",
+    "titre": "Prise de Skopje, l’État serbe semi-indépendant ( sanjak ) d’ Uskup est annexé par l’ Empire ottoman",
     "date": 1392,
     "mois": 1,
     "zones": [
@@ -34614,7 +34654,7 @@
       "Italie"
     ],
     "type": 4,
-    "description": "À la fin du XIVe siècle, le nord et le centre de la péninsule italienne sont le théâtre d'une lutte acharnée pour l'hégémonie. Jean Galéas Visconti (Gian Galeazzo Visconti), le puissant et ambitieux seigneur de Milan, mène une politique d'expansion territoriale agressive visant à unifier une grande partie de l'Italie sous sa domination. Face à cette menace autocratique, la république de Florence, farouche défenseuse de son indépendance, de ses routes commerciales et de ses idéaux républicains, prend la tête d'une vaste coalition. Elle rallie notamment Bologne ainsi que des seigneurs déchus par Milan, comme Francesco Novello da Carrara, l'ancien maître de Padoue.\n\nAprès deux années d'une guerre d'usure ruineuse (1390-1392) menée par des compagnies de mercenaires (les condottières), les belligérants, épuisés militairement et financièrement, acceptent d'entamer des pourparlers. Le 28 janvier 1392, sous la médiation du doge de Gênes, Antoniotto Adorno, un traité de paix est officiellement signé dans la cité ligure.\n\nCe traité fige un équilibre des forces temporaire en Italie du Nord. L'accord entérine notamment la restauration de Francesco Novello da Carrara à la tête de Padoue, ce qui marque un net coup d'arrêt à l'expansionnisme milanais vers l'est et la Vénétie. Florence, de son côté, voit son indépendance sauvegardée et son rôle de puissance d'équilibre confirmé.\n\nToutefois, la paix de Gênes se révèle n'être qu'une pause tactique. Elle ne résout en rien l'antagonisme fondamental entre le modèle républicain florentin et l'impérialisme milanais. L'équilibre instauré en 1392 volera en éclats quelques années plus tard lorsque Jean Galéas Visconti, devenu officiellement duc de Milan en 1395, relancera une vaste offensive contre Florence, un conflit existentiel qui ne s'achèvera qu'avec la mort soudaine du duc en 1402.",
+    "description": "20 janvier – Un traité met fin à la première guerre florentino-milanaise après la libération de Padoue par la République de Florence du contrôle du duché de Milan . Le traité confirme les frontières de Florence et de Milan telles qu'elles existaient avant la guerre, à l'exception de l'indépendance nouvellement acquise de Padoue.\nÀ la fin du XIVe siècle, le nord et le centre de la péninsule italienne sont le théâtre d'une lutte acharnée pour l'hégémonie. Jean Galéas Visconti (Gian Galeazzo Visconti), le puissant et ambitieux seigneur de Milan, mène une politique d'expansion territoriale agressive visant à unifier une grande partie de l'Italie sous sa domination. Face à cette menace autocratique, la république de Florence, farouche défenseuse de son indépendance, de ses routes commerciales et de ses idéaux républicains, prend la tête d'une vaste coalition. Elle rallie notamment Bologne ainsi que des seigneurs déchus par Milan, comme Francesco Novello da Carrara, l'ancien maître de Padoue.\n\nAprès deux années d'une guerre d'usure ruineuse (1390-1392) menée par des compagnies de mercenaires (les condottières), les belligérants, épuisés militairement et financièrement, acceptent d'entamer des pourparlers. Le 28 janvier 1392, sous la médiation du doge de Gênes, Antoniotto Adorno, un traité de paix est officiellement signé dans la cité ligure.\n\nCe traité fige un équilibre des forces temporaire en Italie du Nord. L'accord entérine notamment la restauration de Francesco Novello da Carrara à la tête de Padoue, ce qui marque un net coup d'arrêt à l'expansionnisme milanais vers l'est et la Vénétie. Florence, de son côté, voit son indépendance sauvegardée et son rôle de puissance d'équilibre confirmé.\n\nToutefois, la paix de Gênes se révèle n'être qu'une pause tactique. Elle ne résout en rien l'antagonisme fondamental entre le modèle républicain florentin et l'impérialisme milanais. L'équilibre instauré en 1392 volera en éclats quelques années plus tard lorsque Jean Galéas Visconti, devenu officiellement duc de Milan en 1395, relancera une vaste offensive contre Florence, un conflit existentiel qui ne s'achèvera qu'avec la mort soudaine du duc en 1402.",
     "image": "",
     "themes": [
       "diplomatie"
@@ -34648,7 +34688,7 @@
       "Pologne"
     ],
     "type": 3,
-    "description": "Depuis 1389, le grand-duché de Lituanie est ravagé par une violente guerre intestine. Elle oppose le roi de Pologne Ladislas II Jagellon (qui a laissé la régence de la Lituanie à son frère, l'impopulaire Skirgaila) à son très ambitieux cousin, Vytautas. S'estimant spolié de son héritage légitime (le duché de Trakai), Vytautas n'a pas hésité à s'allier avec l'ennemi juré de la région, l'ordre des chevaliers Teutoniques. Fort de ce soutien, il mène des raids dévastateurs qui menacent jusqu'à la capitale, Vilnius.\n\nConscient que cette guerre d'usure ruine ses terres patrimoniales et renforce dangereusement l'État monastique teutonique, Ladislas II Jagellon se résout à un compromis politique majeur. Il entame des négociations secrètes avec son cousin, qui aboutissent à la signature du traité d'Ostrów le 4 août 1392.\n\nPar cet accord, Ladislas écarte son frère Skirgaila et confie le gouvernement absolu de la Lituanie à Vytautas, lui accordant le titre de grand-duc. En échange, Vytautas reconnaît la suzeraineté nominale de Ladislas (qui conserve le titre de « duc suprême ») et rompt de façon spectaculaire son alliance avec les chevaliers Teutoniques — il ordonne même de brûler les forteresses que l'Ordre lui avait confiées avant de retourner ses armes contre eux.\nL'accord d'Ostrów constitue un tournant géopolitique décisif pour l'Europe orientale. Il pacifie la Lituanie et scelle une réconciliation durable entre les deux cousins, consolidant ainsi l'union personnelle polono-lituanienne. Fort de son nouveau statut, Vytautas (qui gagnera le surnom de « Grand ») va étendre le grand-duché de Lituanie jusqu'à son apogée territorial, de la mer Baltique à la mer Noire. Surtout, ce front dynastique unifié prépare le terrain pour l'affrontement inévitable avec l'ordre Teutonique, qui sera définitivement brisé dix-huit ans plus tard lors de la célèbre bataille de Grunwald (Tannenberg) en 1410.",
+    "description": "Le 4 août , le roi Jogaila de Pologne et de Lituanie nomme son cousin Vytautas le Grand régent de Lituanie, en échange de l'abandon par ce dernier de ses prétentions au trône lituanien. Vytautas remplace Skirgaila, frère impopulaire de Jogaila , comme régent.\nDepuis 1389, le grand-duché de Lituanie est ravagé par une violente guerre intestine. Elle oppose le roi de Pologne Ladislas II Jagellon (qui a laissé la régence de la Lituanie à son frère, l'impopulaire Skirgaila) à son très ambitieux cousin, Vytautas. S'estimant spolié de son héritage légitime (le duché de Trakai), Vytautas n'a pas hésité à s'allier avec l'ennemi juré de la région, l'ordre des chevaliers Teutoniques. Fort de ce soutien, il mène des raids dévastateurs qui menacent jusqu'à la capitale, Vilnius.\n\nConscient que cette guerre d'usure ruine ses terres patrimoniales et renforce dangereusement l'État monastique teutonique, Ladislas II Jagellon se résout à un compromis politique majeur. Il entame des négociations secrètes avec son cousin, qui aboutissent à la signature du traité d'Ostrów le 4 août 1392.\n\nPar cet accord, Ladislas écarte son frère Skirgaila et confie le gouvernement absolu de la Lituanie à Vytautas, lui accordant le titre de grand-duc. En échange, Vytautas reconnaît la suzeraineté nominale de Ladislas (qui conserve le titre de « duc suprême ») et rompt de façon spectaculaire son alliance avec les chevaliers Teutoniques — il ordonne même de brûler les forteresses que l'Ordre lui avait confiées avant de retourner ses armes contre eux.\nL'accord d'Ostrów constitue un tournant géopolitique décisif pour l'Europe orientale. Il pacifie la Lituanie et scelle une réconciliation durable entre les deux cousins, consolidant ainsi l'union personnelle polono-lituanienne. Fort de son nouveau statut, Vytautas (qui gagnera le surnom de « Grand ») va étendre le grand-duché de Lituanie jusqu'à son apogée territorial, de la mer Baltique à la mer Noire. Surtout, ce front dynastique unifié prépare le terrain pour l'affrontement inévitable avec l'ordre Teutonique, qui sera définitivement brisé dix-huit ans plus tard lors de la célèbre bataille de Grunwald (Tannenberg) en 1410.",
     "image": "",
     "themes": [
       "diplomatie"
@@ -34689,6 +34729,362 @@
     ],
     "lat": 56.3265,
     "lng": 44.0051
+  },
+  {
+    "id": 2252,
+    "titre": "Mariage de l'empereur byzantin Manuel II Paléologue avec la princesse serbe Helena Dragaš",
+    "date": 1392,
+    "mois": 2,
+    "zones": [
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "10 février – Helena Dragaš , une descendante du roi Stefan III Dečanski de Serbie , épouse l'empereur byzantin Manuel II Paléologue , [ 4 ] et est couronnée le lendemain impératrice consort de l'Empire byzantin.\nEn 1391, Manuel II Paléologue accède au trône d'un Empire byzantin exsangue, territorialement réduit à sa capitale, au despotat de Morée et à quelques îles. Confronté à la pression écrasante du sultan ottoman Bayezid Ier, dont il est contraint d'être le vassal, le nouvel empereur cherche à consolider la légitimité de sa dynastie et à tisser des liens de solidarité avec les autres seigneurs chrétiens des Balkans, eux-mêmes soumis à l'avancée turque.\n\nLe 10 février 1392, Manuel II épouse Helena Dragaš (Hélène Dragaš), fille du despote serbe Constantin Dragaš (Dejanović), qui gouverne une principauté en Macédoine orientale. Par cette union, l'empereur s'associe à une prestigieuse lignée balkanique, la jeune femme comptant parmi ses ancêtres le puissant roi de Serbie Stefan III Uroš Dečanski (issu de la dynastie des Nemanjić). Le lendemain de la cérémonie nuptiale, le 11 février, Helena est solennellement couronnée impératrice consort (Augusta) à Constantinople.\n\nBien que cette alliance matrimoniale n'apporte pas de secours militaire décisif à un empire aux abois (le père d'Helena périra d'ailleurs en combattant en tant que vassal pour les Ottomans lors de la bataille de Rovine en 1395), ce mariage s'avère fondamental sur le plan dynastique. Le couple impérial donnera naissance à une nombreuse progéniture, assurant la continuité de la maison Paléologue dans ses ultimes décennies. Helena sera notamment la mère des deux derniers empereurs de l'histoire de Byzance : Jean VIII et Constantin XI (qui adoptera d'ailleurs le nom de Dragasés en hommage à la lignée de sa mère avant de mourir sur les remparts lors de la chute de la ville en 1453). Reconnue pour son immense piété, l'impératrice terminera sa vie comme moniale sous le nom d'Hypomone et sera vénérée comme sainte par l'Église orthodoxe.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 41.0064,
+    "lng": 28.9759
+  },
+  {
+    "id": 2253,
+    "titre": "Échec d'une expédition navale aragonaise contre Brancaleone Doria",
+    "date": 1392,
+    "mois": 3,
+    "zones": [
+      "Naples",
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au début des années 1390, l'île de Sardaigne est le théâtre d'une vigoureuse guerre de libération menée par le dernier État indépendant de l'île, le judicat d'Arborée, contre la domination de la Couronne d'Aragon. Les forces sardes sont dirigées par le redoutable Brancaleone Doria, l'époux de la souveraine Éléonore d'Arborée. Libéré des geôles aragonaises en 1390, Brancaleone mène une campagne militaire foudroyante. Dès février 1392, il annonce avoir reconquis la quasi-totalité des châteaux et territoires sardes cédés aux Aragonais lors du traité de 1388.\n\nPour mater cette insurrection qui menace l'hégémonie aragonaise en Méditerranée occidentale, une intervention navale est déclenchée. Le 16 mars 1392, une escadre dirigée par Martin d'Aragon (l'infant Martin l'Humain ou son fils, Martin le Jeune) se présente au large du Capo San Marco. Ce promontoire est un objectif hautement stratégique : il verrouille l'entrée du golfe d'Oristano, au fond duquel se trouve la capitale du judicat d'Arborée. Le but de l'opération est clair : réaliser un coup de force pour capturer Brancaleone Doria et décapiter militairement la rébellion sarde.\n\nL'assaut se solde par un échec complet. Les défenses du judicat repoussent la tentative aragonaise, forçant la flotte à abandonner son objectif. Cette victoire défensive sarde est lourde de conséquences : elle sanctuarise le territoire de l'Arborée et offre à Oristano une sécurité totale. C'est d'ailleurs ce climat de triomphe et de stabilité militaire restaurée qui permettra à Éléonore d'Arborée de promulguer, à peine un mois plus tard (avril 1392), son célèbre code civil et pénal, la Carta de Logu.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 39.8601,
+    "lng": 8.4355
+  },
+  {
+    "id": 2254,
+    "titre": "Création de la Ligue de Bologne, alliance militaire et diplomatique défensive contre l'expansionnisme milanais",
+    "date": 1392,
+    "mois": 4,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Malgré la signature de la paix de Gênes en janvier 1392, qui a mis fin à deux années de guerre ouverte en Italie du Nord, la méfiance reste absolue entre la république de Florence et le seigneur de Milan, Jean Galéas Visconti (Gian Galeazzo Visconti). Les dirigeants florentins ont parfaitement conscience que ce traité n'est qu'une trêve tactique et que l'ambitieux Visconti n'a nullement renoncé à son rêve d'hégémonie sur l'ensemble de la péninsule. Pour prévenir toute nouvelle offensive milanaise et sanctuariser le fragile équilibre des forces, Florence déploie une diplomatie préventive particulièrement active.\n\nLe 11 avril 1392, la diplomatie florentine parvient à cimenter une vaste coalition défensive connue sous le nom de Ligue de Bologne. Ce pacte regroupe les principales puissances d'Italie centrale et nord-orientale qui se sentent menacées par l'appétit milanais. Autour du pivot formé par Florence et Bologne (qui verrouille l'accès à la Toscane), l'alliance intègre Padoue — dont le seigneur Francesco Novello da Carrara vient tout juste de recouvrer son indépendance face à Milan — ainsi que les principautés d'Émilie-Romagne contrôlées par les grandes familles seigneuriales : les Este à Ferrare, les Alidosi à Imola, les Manfredi à Faenza et les Da Polenta à Ravenne.\n\nCette architecture diplomatique crée un puissant cordon sanitaire à l'est et au sud des territoires viscontiens. En s'engageant à se porter mutuellement assistance en cas d'agression, ces cités-États figent la situation géopolitique dans une configuration de « guerre froide » italienne. La Ligue de Bologne réussira à dissuader Milan de lancer une attaque frontale immédiate, bien que cet endiguement finisse par céder à la fin de la décennie lorsque Jean Galéas Visconti relancera ses armées pour tenter, une ultime fois, d'écraser la république florentine.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 44.4938,
+    "lng": 11.3426
+  },
+  {
+    "id": 2255,
+    "titre": "Émeute de Fleet Street, prétexte utilisé par  Richard II pour sanctionner la Cité de Londres",
+    "date": 1392,
+    "mois": 5,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Au printemps 1392, les relations entre le roi d'Angleterre Richard II et la puissante Cité de Londres sont particulièrement délétères. Le souverain, dont le train de vie fastueux nécessite des fonds constants, vient d'essuyer un refus humiliant de la part des marchands londoniens à qui il réclamait un prêt important. Dans ce climat de tension, une banale altercation de rue va mettre le feu aux poudres et déclencher une crise politique majeure.\n\nL'incident éclate sur Fleet Street : un valet de boulanger, portant un panier de pains, croise un serviteur de John Waltham, évêque de Salisbury et, surtout, Lord Trésorier d'Angleterre. Une querelle éclate et le serviteur de l'évêque blesse gravement le valet à la tête. Face à cette agression perpétrée par un homme de la cour, la population londonienne, déjà exaspérée par l'arrogance des officiers royaux, se soulève. L'émeute enfle rapidement : une foule furieuse poursuit le serviteur qui se réfugie dans la résidence londonienne de l'évêque (Salisbury House). Les émeutiers menacent d'incendier le palais et de lyncher ses occupants, avant que le maire de Londres et les shérifs ne parviennent in extremis à rétablir le calme.\n\nBien que l'ordre ait été restauré par les autorités municipales, l'évêque de Salisbury se plaint directement au roi. Pour Richard II, cette émeute constitue le prétexte inespéré pour briser l'indépendance de la capitale et la punir de son insubordination financière. Le souverain réagit avec une sévérité implacable : il fait arrêter et emprisonner le maire et les shérifs de Londres, révoque les libertés et privilèges de la ville (la plaçant sous l'autorité directe d'un gardien royal), et lui inflige une amende colossale de 100 000 livres. Pour parachever l'humiliation et ruiner l'économie locale, Richard II ordonne même le transfert temporaire de l'administration royale, de la cour de la Chancellerie et de l'Échiquier vers la ville d'York.\n\nLa Cité de Londres ne retrouvera ses privilèges (et ne verra son amende réduite à 10 000 livres) qu'à la fin de l'été 1392, au prix d'une soumission totale et de l'organisation d'une procession fastueuse et ruineuse en l'honneur du roi et de la reine lors de leur retour dans la capitale au mois d'août.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/London_1300_Historical_Atlas_William_R_Shepherd_%28died_1934%29.PNG?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+    "themes": [
+      "revolte"
+    ],
+    "lat": 51.5074,
+    "lng": -0.1278
+  },
+  {
+    "id": 2256,
+    "titre": "Louis de Valois  duc d'Orléans",
+    "date": 1392,
+    "mois": 6,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Le 4 juin 1392, le roi de France Charles VI procède à un remaniement majeur des apanages de la famille royale pour asseoir le prestige de son frère cadet, Louis de Valois. Jusqu'alors duc de Touraine, le jeune prince, âgé de vingt ans, reçoit le prestigieux duché d'Orléans. Cette élévation fait de lui l'un des princes les plus puissants et les mieux dotés du royaume, lui assurant des revenus considérables et une position stratégique au cœur du domaine royal.\n\nCette investiture marque un tournant fondamental dans l'histoire politique française de la fin du Moyen Âge. En recevant cet apanage, Louis devient le fondateur de la seconde maison d'Orléans. Ce statut de premier plan va nourrir ses immenses ambitions politiques. À peine deux mois plus tard, lorsque Charles VI sombrera dans sa première crise de folie (en août 1392), Louis d'Orléans se positionnera comme le rival naturel de son oncle, le duc de Bourgogne Philippe le Hardi, pour le contrôle de la régence et des finances du royaume. Cette rivalité, qui s'exacerbera avec le successeur de Philippe, Jean sans Peur, jettera les bases de la désastreuse guerre civile entre Armagnacs et Bourguignons.\nSous l'Ancien Régime, un apanage concédé à un cadet de la famille royale fait retour au domaine de la Couronne si son titulaire meurt sans héritier mâle légitime. La « première création » du duché d'Orléans remontait à 1344, lorsque le roi Philippe VI l'avait érigé pour son fils cadet, Philippe d'Orléans. Ce dernier étant mort sans descendance légitime en 1375, le duché était logiquement revenu à la Couronne. L'acte de Charles VI en 1392 constitue donc bien la recréation (ou seconde création) de ce titre, qui sera porté par la descendance de Louis jusqu'à l'accession au trône de son petit-fils, Louis XII, en 1498 (le duché retournant alors à nouveau au domaine royal).",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/LudvikOrlean_Pizan.jpg/960px-LudvikOrlean_Pizan.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie",
+      "politique"
+    ],
+    "legende": "Louis de Valois, duc d'Orléans",
+    "lat": 47.9027,
+    "lng": 1.9086
+  },
+  {
+    "id": 2257,
+    "titre": "Assassinat d'Aleid van Poelgeest et de Willem Cuser par la faction des Hameçons",
+    "date": 1392,
+    "mois": 9,
+    "zones": [
+      "Flandre"
+    ],
+    "type": 4,
+    "description": "Dans la seconde moitié du XIVe siècle, le comté de Hollande est rongé par une guerre civile endémique et complexe : la guerre des Hameçons et des Cabillauds (Hoekse en Kabeljauwse twisten). Ce conflit oppose schématiquement la noblesse conservatrice (les Hameçons) à la bourgeoisie des villes et une partie de la noblesse montante (les Cabillauds). Le comte Albert Ier de Bavière (qui gouverne la Hollande, la Zélande et le Hainaut) s'appuie de plus en plus sur la faction des Cabillauds, une tendance fortement encouragée par sa jeune et influente maîtresse, Aleid van Poelgeest.\n\nLa faveur dont jouit Aleid, combinée à l'ascension de ses protégés à la cour, suscite la haine féroce des nobles de la faction des Hameçons. Considérant qu'elle accapare le pouvoir et l'oreille du comte à leur détriment, un complot est ourdi. Dans la nuit du 22 au 23 septembre 1392, alors qu'Aleid van Poelgeest se promène dans les rues de La Haye avec Willem Cuser, le maître d'hôtel (ou chambellan) du comte, un groupe d'une cinquantaine de nobles conjurés les prend en embuscade. Les deux victimes sont brutalement assassinées à l'arme blanche, frappées de dizaines de coups d'épée.\n\nLe meurtre de sa favorite et de son haut dignitaire plonge le comte Albert dans un chagrin insondable et une colère implacable. Cet attentat déclenche une répression étatique d'une violence inouïe. Refusant toute clémence, Albert lance une véritable campagne d'éradication militaire et judiciaire contre les Hameçons. Il confisque leurs terres, exile les suspects, et fait assiéger puis raser systématiquement la quasi-totalité de leurs châteaux forts à travers la Hollande. Cette violente purge modifie durablement le rapport de force politique dans le comté au profit exclusif de la faction des Cabillauds pour les années suivantes.",
+    "image": "",
+    "themes": [
+      "revolte"
+    ],
+    "lat": 52.0749,
+    "lng": 4.2697
+  },
+  {
+    "id": 2258,
+    "titre": "Epuration du parti des Hameçons par le comte Albert Ier",
+    "date": 1392,
+    "mois": 10,
+    "date_fin": 1394,
+    "zones": [
+      "Flandre"
+    ],
+    "type": 3,
+    "description": "Le meurtre de la maîtresse comtale Aleid van Poelgeest et du chambellan Willem Cuser en septembre 1392 agit comme le détonateur de l'une des phases les plus sanglantes de la guerre des Hameçons et des Cabillauds. La réaction du comte Albert Ier de Bavière dépasse la simple vengeance personnelle pour se transformer en une véritable opération de démantèlement du pouvoir de l'ancienne noblesse (les Hameçons) au profit exclusif de la faction des Cabillauds.\n\nLa phase aiguë de cette crise se déploie en trois actes majeurs tout au long de l'année 1393 :\n\n1. L'offensive judiciaire et la mise au ban :\nImmédiatement après le double assassinat, le comte Albert Ier convoque un tribunal spécial à La Haye, composé presque exclusivement de partisans Cabillauds. Cinquante-quatre nobles appartenant à la faction des Hameçons, accusés de complicité ou de participation au complot, sont sommés de comparaître. La quasi-totalité d'entre eux, sachant leur sort scellé d'avance, refusent de se présenter. Ils sont alors officiellement déclarés hors-la-loi, frappés de bannissement et leurs vastes domaines sont confisqués par le pouvoir comtal.\n\n2. La campagne militaire et la destruction des châteaux :\nLes seigneurs Hameçons bannis se retranchent dans leurs forteresses, espérant résister à l'orage. Le comte lève alors une armée et lance en 1393 une campagne de sièges systématiques. Des châteaux réputés inexpugnables tombent les uns après les autres sous les coups des troupes régulières du comte et des milices urbaines acquises aux Cabillauds. Le puissant château d'Altena est assiégé et rasé, tout comme ceux de Kralingen, de Paddepoel ou encore de Capelle. Les murailles sont démantelées pour empêcher la noblesse rurale de s'y fortifier à nouveau.\n\n3. La crise dynastique et l'exil de l'héritier :\nCette radicalisation politique provoque une fracture au sommet même de l'État. Le fils et héritier du comte, le futur Guillaume VI, s'inquiète de l'emprise totale des Cabillauds sur son père vieillissant. Pour contrecarrer cette hégémonie, Guillaume prend le parti de plusieurs nobles Hameçons exilés. Cette opposition frontale déclenche un conflit ouvert entre le père et le fils en 1393. Vaincu politiquement, Guillaume est contraint de fuir la Hollande pour se réfugier dans le comté de Hainaut.\n\nLa crise ne s'apaisera véritablement qu'à la fin de l'année 1394, lorsqu'une réconciliation officielle sera négociée entre le comte Albert et son fils. Cependant, l'objectif d'Albert est atteint : la faction des Hameçons sort de cette crise durablement ruinée et décimée, assurant la domination absolue des Cabillauds pour les décennies suivantes.\nCet épisode aigu illustre parfaitement à quel point les factions des Hameçons et des Cabillauds n'étaient pas des blocs idéologiques figés, mais des réseaux d'alliances opportunistes. Le fait que le propre fils du comte (Guillaume VI) soutienne les assassins présumés de la maîtresse de son père démontre que ces étiquettes servaient souvent de paravent à des luttes de pouvoir dynastiques.\nFocaliser sur l'année 1393 permet de comprendre pourquoi l'historiographie parle de « guerre ». En dehors de ces phases de destruction de châteaux et de bannissements massifs (comme en 1350, 1393, ou plus tard dans les années 1420), ce long conflit hollandais ressemblait davantage à une guerre d'usure politique et institutionnelle qu'à des batailles rangées permanentes.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 51.9995,
+    "lng": 4.3627
+  },
+  {
+    "id": 2259,
+    "titre": "Édit de l'empereur Hongwu (Zhu Yuanzhang) imposant le retour à la coiffure traditionnelle Han",
+    "date": 1392,
+    "mois": 9,
+    "zones": [
+      "Chine"
+    ],
+    "type": 5,
+    "description": "Fondateur de la dynastie Ming après avoir chassé les dirigeants mongols de la dynastie Yuan qui dominaient la Chine, l'empereur Hongwu (Zhu Yuanzhang) mène une politique agressive de restauration de la culture traditionnelle Han. Pour asseoir la légitimité de sa nouvelle dynastie, il s'efforce d'éradiquer toutes les coutumes, les vêtements et les habitudes imposés par les anciens maîtres nomades.\n\nLe 24 septembre 1392, l'empereur promulgue une loi stricte régissant l'apparence physique de ses sujets : il ordonne à tous les hommes de laisser pousser l'intégralité de leurs cheveux afin de pouvoir les nouer en un chignon traditionnel au sommet du crâne (souvent maintenu par un filet appelé wangjin). Par cet édit, il rend strictement illégal le fait de se raser une partie de la tête ou le front, une pratique caractéristique des coiffures mongoles. Cette législation capillaire est un acte politique majeur : elle réaffirme le dogme confucéen (selon lequel le corps et les cheveux, hérités des parents, ne doivent pas être altérés) et marque une purification culturelle de l'Empire.\nL'obligation stricte pour tous les hommes de se raser le front et de porter une longue tresse (la tristement célèbre « queue de rat ») interviendra des siècles plus tard. Elle sera imposée par la force en 1645 par la dynastie Qing (les conquérants d'origine mandchoue) lors du décret de la tonsure, sous peine de décapitation (le fameux adage : « Garde tes cheveux et perds ta tête, ou perds tes cheveux et garde ta tête »). L'édit Ming de 1392 est donc l'antithèse politique et culturelle de l'édit Qing de 1645.",
+    "image": "",
+    "themes": [
+      "societe",
+      "politique"
+    ],
+    "lat": 32.0438,
+    "lng": 118.7789
+  },
+  {
+    "id": 2260,
+    "titre": "Avènement de Mohammed VII sur le trône nasride",
+    "date": 1392,
+    "mois": 10,
+    "zones": [
+      "Castille",
+      "Aragon",
+      "Monde islamique"
+    ],
+    "type": 3,
+    "description": "Le 5 octobre 1392, l'émirat de Grenade, ultime bastion de la présence musulmane en péninsule ibérique (Al-Andalus), connaît un changement dynastique brutal. Le sultan Yusuf II meurt subitement après un règne extrêmement bref d'à peine un an. Durant sa courte gouvernance, Yusuf II s'était distingué par une politique pacifique, cherchant à renouveler les trêves avec ses puissants voisins chrétiens, notamment la Couronne de Castille, afin de préserver la stabilité de son royaume.\n\nDès l'annonce de son trépas, son fils prend le pouvoir sous le nom de Mohammed VII. Ce changement de souverain marque une rupture géopolitique immédiate et radicale. Contrairement à son père, le nouveau sultan, jeune et ambitieux, est soutenu par la faction la plus belliciste de l'aristocratie grenadine. Mohammed VII refuse de renouveler les traités de paix avec la Castille (alors gouvernée par le jeune roi Henri III). Il va rapidement relancer une politique d'agressions frontalières et de razzias meurtrières, ciblant particulièrement les régions de Murcie et de Jaén.\nCe basculement relance un état de guerre endémique sur la frontière andalouse qui va épuiser les ressources économiques de l'émirat nasride au cours des années suivantes.\nLa disparition prématurée de Yusuf II est entourée de fortes suspicions dans les chroniques de l'époque. De nombreux historiens arabes et espagnols soupçonnent un assassinat politique. Une célèbre légende (souvent reprise dans la littérature romantique ultérieure) prétend même qu'il aurait été tué par une tunique empoisonnée offerte par le sultan mérinide de Fès, bien que la probabilité d'un complot interne orchestré par les partisans de son fils soit l'hypothèse la plus crédible.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 37.3888,
+    "lng": -3.2393
+  },
+  {
+    "id": 2261,
+    "titre": "Condamnation par contumace et destitution du connétable Olivier V de Clisson",
+    "date": 1392,
+    "mois": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "10 décembre – Le Parlement français condamne le connétable du royaume, Olivier V de Clisson , pour s'être enrichi illégalement aux dépens du roi Charles VI. \nL'année 1392 marque la chute spectaculaire d'Olivier V de Clisson, connétable de France et l'un des seigneurs les plus riches et les plus puissants d'Europe. Chef de file des « Marmousets » (les conseillers réformateurs qui gouvernent au nom de Charles VI), Clisson s'est attiré l'inimitié féroce des oncles du roi — principalement Philippe le Hardi, duc de Bourgogne — ainsi que celle du duc Jean IV de Bretagne.\n\nLe point de bascule politique de l'année survient en août 1392. Alors que le roi Charles VI mène une armée vers la Bretagne pour venger une tentative d'assassinat perpétrée contre Clisson (par le tueur à gages Pierre de Craon en juin), le souverain sombre dans sa première crise de folie dans la forêt du Mans. Cet effondrement brutal de l'autorité royale permet aux oncles de Charles VI de reprendre immédiatement la régence. Leur première action est de purger le conseil royal et d'anéantir le parti des Marmousets.\n\nConscient que sa vie est directement menacée par ce coup de force, Olivier de Clisson s'enfuit précipitamment de Paris pour se retrancher dans ses châteaux en Bretagne. Le nouveau gouvernement princier utilise alors la justice pour le liquider politiquement. Après plusieurs assignations à comparaître restées sans réponse, le Parlement rend son arrêt le 10 décembre 1392. Clisson est condamné par contumace pour avoir détourné les deniers publics et s'être enrichi de manière illicite. La sentence est impitoyable : il est destitué de son prestigieux office militaire de connétable (qui sera confié à Philippe d'Artois), définitivement banni du royaume de France, et condamné à une amende astronomique de 100 000 marcs d'argent, assortie de la confiscation de toutes ses terres situées dans le domaine royal.\nBien que ce soit le motif officiel de la condamnation, s'arrêter à cette formulation occulte la nature réelle de l'événement : c'est un procès politique organisé de toutes pièces. S'il est vrai que Clisson avait amassé une fortune colossale et ambiguë (il prêtait de l'argent à des taux usuraires au roi lui-même), sa condamnation en décembre 1392 n'est pas une opération \"mains propres\" ou un assainissement financier. C'est l'arme juridique utilisée par le duc de Bourgogne pour détruire légalement son pire adversaire politique à la faveur de la démence du roi.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 48.8589,
+    "lng": 2.32
+  },
+  {
+    "id": 2262,
+    "titre": "Condamnation du faux évêque franciscain Jacques de Juliers",
+    "date": 1392,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Au cours de l'année 1392, un scandale ecclésiastique retentissant éclate au sein du Saint-Empire. Un frère franciscain nommé Jacques de Juliers (également connu sous le nom néerlandais de Jacob van Gulik ou anglais de James of Jülich) usurpe l'identité et les prérogatives d'un évêque. Poussant l'imposture au blasphème, il va jusqu'à accomplir les fonctions sacrées strictement réservées à l'épiscopat, et ordonne lui-même plusieurs prêtres sans avoir jamais reçu les ordres sacrés adéquats ni l'investiture pontificale.\n\nUne fois la supercherie découverte, le faux évêque est arrêté et traduit en justice. Jugé par un tribunal exceptionnel composé de sept magistrats, il est reconnu coupable de sacrilège et d'usurpation frauduleuse. Pour punir ce crime — qui s'apparente dans le droit médiéval à une contrefaçon spirituelle majeure —, le tribunal le condamne à une méthode d'exécution particulièrement atroce, traditionnellement réservée aux pires faussaires et faux-monnayeurs : être bouilli vif.\nLa formulation selon laquelle il « est bouilli vif », très fréquente dans les chronologies simplifiées en ligne, nécessite une correction factuelle. Si le tribunal a bel et bien prononcé cette effroyable sentence en 1392, l'étude des imposteurs historiques (notamment relayée par la Catholic Answers Encyclopedia) indique que la peine a finalement été « atténuée lors de l'exécution » (mitigated in execution). Dans la pratique pénale de la fin du Moyen Âge, cette mitigation d'une peine de mort par ébullition ou par le feu signifiait généralement que le condamné bénéficiait d'un retentum : il était discrètement étranglé (ou décapité) par le bourreau avant que son corps ne soit plongé dans le chaudron, lui épargnant ainsi les souffrances d'une mort consciente.",
+    "image": "",
+    "themes": [
+      "religion"
+    ],
+    "lat": 50.9221,
+    "lng": 6.3611
+  },
+  {
+    "id": 2263,
+    "titre": "Reconquête de la Sicile par l'armée aragonaise face à l'oligarchie des barons.",
+    "date": 1392,
+    "mois": 4,
+    "zones": [
+      "Naples",
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Depuis la fin des années 1370, le royaume de Sicile est plongé dans l'anarchie, gouverné de fait par une oligarchie de quatre puissantes familles nobles (les vicaires : Alagona, Ventimiglia, Peralta et Chiaramonte) qui ont confisqué le pouvoir royal. La reine légitime, Marie de Sicile, avait même été enlevée durant sa jeunesse et emmenée en Catalogne où elle a été mariée à Martin le Jeune, neveu du roi d'Aragon.\n\nEn 1392, l'heure de la reconquête sonne. Appuyés par une puissante flotte catalano-aragonaise commandée par Martin l'Ancien (le père de Martin le Jeune) — cette même flotte qui avait vainement attaqué la Sardaigne en mars —, Marie et son époux débarquent à Trapani le 22 mars. Face à cette force d'intervention, le front des barons rebelles se fissure. Plusieurs d'entre eux, réalisant l'écrasante supériorité militaire aragonaise, font rapidement soumission pour sauver leurs terres.\n\nCependant, le plus puissant et le plus riche des barons, Andrea Chiaramonte, qui contrôle la capitale Palerme, refuse de céder et choisit la résistance armée. Les troupes royales mettent le siège devant Palerme, qui finit par capituler au mois de mai. Andrea Chiaramonte est capturé. Pour faire un exemple et restaurer l'autorité monarchique par la terreur, les dynastes aragonais le font juger pour haute trahison. Le 1er juin 1392, Andrea Chiaramonte est décapité sur la Piazza Marina de Palerme, juste devant son fastueux palais (le Palazzo Chiaramonte-Steri). Cette exécution spectaculaire brise la colonne vertébrale de la rébellion nobiliaire et permet à Marie et Martin de s'installer fermement sur le trône de Sicile.\nLa victoire de 1392 est  une campagne navale et terrestre faite de redditions négociées et de sièges, culminant avec la chute de Palerme. De plus, bien que le chef de file (Chiaramonte) ait été exécuté en 1392, la rébellion nobiliaire en Sicile ne sera pas totalement et définitivement éradiquée cette année-là (la famille Alagona continuera par exemple de mener une guérilla sporadique dans l'est de l'île pendant encore quelques années).",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 38.1112,
+    "lng": 13.3524
+  },
+  {
+    "id": 2265,
+    "titre": "Ouverture de l'Université d'Erfurt (Universitas Studii Erfordiensis)",
+    "date": 1392,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "À la fin du XIVe siècle, la ville d'Erfurt est l'une des métropoles les plus riches et les plus peuplées du Saint-Empire romain germanique. Ce carrefour commercial florissant, dont la prospérité repose notamment sur le commerce de la guède (le pastel des teinturiers), souhaite se doter d'un centre intellectuel prestigieux pour asseoir son influence et rivaliser avec Prague (qui possède une université depuis 1348), Vienne (1365) ou encore Heidelberg (1386).\n\nL'année 1392 marque l'aboutissement matériel de ce long projet institutionnel. Au cours de la dernière semaine de septembre (autour de la fête de la Saint-Michel), la ville célèbre l'inauguration solennelle de l'Université d'Erfurt et l'ouverture effective des enseignements. Conçue comme un Studium Generale, elle s'organise autour des quatre facultés classiques du Moyen Âge : théologie, droit, médecine et arts libéraux.\n\nDès ses premières années, l'établissement attire des centaines d'étudiants venus de toute l'Europe centrale et nordique, s'imposant rapidement comme l'un des pôles intellectuels les plus rayonnants du monde germanique. Contrairement à de nombreuses universités fondées et financées par des princes, l'institution d'Erfurt présente la particularité d'être une université essentiellement urbaine, financée et soutenue par le conseil des bourgeois de la ville. L'université conservera ce prestige intellectuel tout au long du XVe siècle et accueillera, un siècle plus tard (de 1501 à 1505), son étudiant le plus célèbre : le futur réformateur Martin Luther.\nRque : L'acte fondateur d'une université médiévale est la bulle papale. Or, la bulle de création d'Erfurt a été accordée treize ans plus tôt, en 1379, par le pape d'Avignon Clément VII.\na création d'Erfurt s'inscrit en pleine crise de la papauté. La ville étant dans une région d'obédience romaine, la bulle avignonnaise de 1379 a posé des problèmes de légitimité. Le conseil municipal d'Erfurt a dû solliciter une seconde charte de fondation auprès du pape de Rome, Urbain VI, qui fut promulguée en 1389. L'année 1392 n'est donc ni la première ni la seconde charte de fondation, mais l'année du début effectif des cours.\nL'Université de Heidelberg a ouvert ses portes en 1386, ce qui en fait matériellement la plus ancienne université d'Allemagne encore en activité. Cependant, en s'appuyant sur sa charte papale originelle de 1379, l'Université d'Erfurt revendique souvent le titre de plus ancienne fondation universitaire du pays.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Collegium_Maius_-_ehemaliges_Hauptgeb%C3%A4ude_der_Alten_Universit%C3%A4t.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "litterature",
+      "sciences"
+    ],
+    "legende": "Collegium Maius",
+    "lat": 50.9778,
+    "lng": 11.0287
+  },
+  {
+    "id": 2266,
+    "titre": "Fondation de la Penistone Grammar School, l'une des plus anciennes écoles d'Angleterre",
+    "date": 1392,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "En 1392, la petite ville de Penistone, située près de Barnsley, voit la création de ce qui deviendra l'une des plus anciennes écoles fonctionnant sans interruption en Angleterre. D'après les archives, sa fondation résulte d'une dotation foncière concédée par la famille des seigneurs locaux, les Clarel (les textes mentionnent Thomas Clarel [cite: 1.1.3] ou John Clarel [cite: 1.1.7]).   Durant ses origines médiévales, cette Free Grammar School est intimement liée à l'Église [cite: 1.1.2]. Son tout premier directeur (ou headmaster) est John Del Rodes, qui exerce alors la fonction de gardien de la chapelle Saint-Jean [cite: 1.1.3]. Jusqu'en 1556, la direction de l'établissement sera d'ailleurs exclusivement confiée à des membres du clergé [cite: 1.1.2]. Leur mission consiste à dispenser une éducation classique (notamment le latin et la grammaire) aux jeunes garçons locaux. L'exigence de cet enseignement se reflète dans la devise traditionnelle de l'école : Disce aut discede (« Apprends ou pars ») [cite: 1.1.3].   Au fil des siècles, l'institution va se laïciser (John Hyde devenant le premier directeur non ecclésiastique en 1556) [cite: 1.1.2] et s'agrandir. Elle commencera à admettre des filles pour la première fois en 1907, ouvrant la voie à un enseignement mixte [cite: 1.1.3]. Cette longévité exceptionnelle lui a permis de survivre aux nombreuses réformes de l'éducation britannique.   \nC'est la capacité à faire le pont entre le modèle éducatif paroissial du XIVe siècle et le système d'enseignement public britannique moderne qui fait la spécificité historique de la Penistone Grammar School.",
+    "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/33/Penistone_Grammar_School_-_Badge_-_Never_Stop_Flying.svg/960px-Penistone_Grammar_School_-_Badge_-_Never_Stop_Flying.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "litterature"
+    ],
+    "lat": 53.5247,
+    "lng": -1.6294
+  },
+  {
+    "id": 2267,
+    "titre": "Traité d'Ostrowo",
+    "date": 1392,
+    "mois": 8,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 4,
+    "description": "Depuis 1389, une violente guerre civile ravage le grand-duché de Lituanie. Elle oppose le roi de Pologne Ladislas II Jagellon (qui a délégué le gouvernement de la Lituanie à son frère, le régent Skirgaila) à son ambitieux cousin, le prince Vytautas. Ce dernier, frustré d'avoir été écarté du pouvoir et spolié de son héritage patrimonial (le duché de Trakai), s'est allié à l'ordre des chevaliers Teutoniques pour mener une guerre d'usure dévastatrice au cœur même du pays.   Conscient que ce conflit fratricide affaiblit dangereusement l'union polono-lituanienne au seul profit de l'État monastique teutonique, Ladislas II Jagellon se résout à un compromis politique majeur. Des négociations secrètes aboutissent à la signature de l'accord d'Ostrów (ou Ostrowo) le 4 août 1392.Par ce traité, Ladislas écarte son frère Skirgaila de la régence et confie la gouvernance du grand-duché de Lituanie à Vytautas. En échange, Vytautas reconnaît la suzeraineté de Ladislas (qui conserve le titre de « duc suprême ») et rompt de façon spectaculaire son alliance avec les chevaliers Teutoniques — allant jusqu'à incendier les châteaux qu'ils lui avaient confiés avant de retourner ses armes contre eux. Ce pacte scelle une réconciliation durable entre les deux cousins et permet de réunifier les forces polono-lituaniennes.   \nSi le processus de compensation territoriale accordé à Skirgaila débute bien l'année suivante (en 1393) avec l'attribution de terres en Volhynie (incluant Jytomyr), l'obtention officielle de la prestigieuse principauté de Kiev n'intervient qu'un peu plus tard. C'est en 1394, lorsque Vytautas et Skirgaila marchent sur Kiev pour obtenir la reddition sans combat de l'ancien prince en place (leur demi-frère Vladimir Olgerdovich), que Skirgaila y est formellement installé comme duc. Il occupera le trône de Kiev jusqu'à sa mort en 1397.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_of_the_Grand_Duchy_of_Lithuania_%28pink%29_and_the_Crown_of_the_Kingdom_of_Poland_%28red%29_and_its_neighborhood_in_1386_%E2%80%93_1434_%28English_version%29.png/960px-Map_of_the_Grand_Duchy_of_Lithuania_%28pink%29_and_the_Crown_of_the_Kingdom_of_Poland_%28red%29_and_its_neighborhood_in_1386_%E2%80%93_1434_%28English_version%29.png?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "Pologne et Lituanie 1392",
+    "lat": 51.6495,
+    "lng": 17.8167
+  },
+  {
+    "id": 2268,
+    "titre": "traité de Landshut 3e  partage de la Bavière",
+    "date": 1392,
+    "mois": 10,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "roisième partage de la Bavière, mettant fin à l'administration conjointe des fils d'Étienne II et créant les duchés de Bavière-Landshut, Bavière-Munich et Bavière-Ingolstadt.\nDepuis la mort de leur père le duc Étienne II en 1375, les trois frères de la maison de Wittelsbach — Étienne III, Frédéric et Jean II — administrent conjointement les territoires bavarois hérités (qui excluent le duché de Bavière-Straubing, déjà séparé et gouverné par une autre branche de la famille). Cependant, cette co-gouvernance devient rapidement insoutenable en raison de profonds désaccords politiques et financiers. Jean II, de tempérament plus prudent, refuse de continuer à financer le train de vie fastueux de la cour de son frère aîné Étienne III. Il rejette également la ruineuse politique d'intervention en Italie menée par ses deux frères (qui nouent des alliances coûteuses avec la famille Visconti de Milan).\n\nPour éviter la ruine financière et politique, Jean II pousse à une division territoriale des domaines. C'est l'objet du traité de Landshut, conclu le 18 octobre 1392 (et ratifié en novembre).\n\nCet accord entérine un partage en trois nouveaux duchés distincts :\n\nFrédéric (le Sage) reçoit le duché de Bavière-Landshut, la région de loin la plus riche et la plus prospère économiquement.\n\nJean II (le Pacifique) obtient le duché de Bavière-Munich, un territoire économiquement moins développé mais géographiquement cohérent.\n\nÉtienne III (le Magnifique) se voit attribuer le duché de Bavière-Ingolstadt, une construction territoriale précaire composée de possessions très dispersées le long du Danube et dans les contreforts alpins.\n\nLoin d'apporter la paix, ce partage porte immédiatement en lui les germes de nouveaux conflits. L'évidente inégalité économique entre la riche Landshut, la modeste Munich et la très fragmentée Ingolstadt génère une forte frustration, en particulier chez Étienne III. S'estimant lésé, ce dernier ne tardera pas à contester ce découpage, déclenchant dès 1395 la première guerre bavaroise (ou guerre des Munichois) en attaquant les terres de son frère Jean II.\nIl est important de garder à l'esprit que la Bavière de 1392 n'est pas divisée en trois, mais en quatre. Le duché de Bavière-Straubing (associé aux comtés de Hollande, Zélande et Hainaut avec le comte Albert Ier de Bavière) est totalement exclu de ce partage, car il appartient déjà à une branche cousine des Wittelsbach.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Bayern_nach_der_Teilung_1392.png/1280px-Bayern_nach_der_Teilung_1392.png?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "Les quatre duchés bavarois (y compris la région de Straubing, qui n'a pas été concernée par le partage) après le partage du territoire en 1392",
+    "lat": 48.5362,
+    "lng": 12.1517
+  },
+  {
+    "id": 2269,
+    "titre": "Rédaction et diffusion du Llibre dels àngels (Livre des Anges) par le moine franciscain Francesc Eiximenis.",
+    "date": 1392,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Installé à Valence depuis 1382, le frère franciscain catalan Francesc Eiximenis est l'une des figures intellectuelles les plus influentes de la Couronne d'Aragon. Fortement impliqué dans la vie spirituelle et politique de la cité, il rédige en 1392 le Llibre dels àngels (Livre des Anges). Cet ouvrage est un traité d'angélologie exhaustif, rédigé en langue vernaculaire (le catalan) afin d'être accessible aux laïcs lettrés, notamment à la bourgeoisie urbaine marchande qu'Eiximenis cherche à édifier.\n\nLe livre ne se contente pas de théories théologiques abstraites : il détaille la hiérarchie céleste, le rôle des anges gardiens au quotidien et la lutte contre les démons, répondant ainsi aux profondes angoisses spirituelles d'une société traumatisée par les épidémies de peste et le Grand Schisme d'Occident.\n\nL'ouvrage connaît un succès foudroyant, bien au-delà des frontières aragonaises. Il devient l'un des livres les plus lus et copiés de la fin du Moyen Âge en Europe, rapidement traduit en latin, en castillan, en français et même en flamand. À travers cette œuvre et les suivantes, Eiximenis s'impose comme l'un des grands architectes de la prose littéraire catalane.\nBien que souvent associé à cette même période créative valencienne, la critique littéraire moderne et l'historiographie datent la rédaction du Llibre de les dones un peu plus tard, aux alentours de 1396. Il s'agit d'un manuel de conduite morale destiné aux femmes, détaillant leurs devoirs selon leur statut (jeune fille, femme mariée, veuve, religieuse).",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Portada_Libro_de_los_Santos_%C3%81ngeles.jpg/250px-Portada_Libro_de_los_Santos_%C3%81ngeles.jpg?utm_source=de.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "religion",
+      "litterature"
+    ],
+    "legende": "Page de couverture de la traduction espagnole du Llibre dels Àngels (Livre des Anges), imprimée à Alcalá de Henares en 1527 par Miguel de Eguía",
+    "lat": 39.4697,
+    "lng": -0.3763
+  },
+  {
+    "id": 2270,
+    "titre": "Achèvement du projet encyclopédique Lo Crestià",
+    "date": 1392,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "L'année 1392 marque  la fin d'une aventure littéraire titanesque : la rédaction de Lo Crestià (Le Chrétien). Commandée treize ans plus tôt, en 1379, par le roi d'Aragon Pierre IV le Cérémonieux (Pere el Cerimoniós), cette œuvre ambitionnait de compiler l'ensemble du savoir théologique, moral, politique et sociologique de l'époque en langue catalane. Le projet initial d'Eiximenis était vertigineux : il prévoyait la rédaction de treize volumes distincts.\n\nCependant, face à l'immensité de la tâche et accaparé par d'autres écrits (comme le Llibre dels àngels) et ses fonctions de conseiller municipal à Valence, Eiximenis met un terme définitif à ce projet en 1392.\n\nSur les treize volumes prévus, seuls quatre ont finalement vu le jour : le Premier (fondements du christianisme), le Deuxième (les tentations), le Troisième (les péchés) et le titanesque Douzième volume (El Dotzè del Crestià). Ce dernier tome, achevé quelques années auparavant, constitue à lui seul une véritable somme de philosophie politique consacrée au « bon gouvernement » des villes et des princes. Bien qu'inachevée dans sa structure globale, Lo Crestià demeure, en 1392, la plus vaste entreprise encyclopédique laïque de l'Europe médiévale, offrant un témoignage inestimable sur la société, les mœurs et la pensée politique aragonaise du XIVe siècle.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Terc_Crestia.jpg/250px-Terc_Crestia.jpg?utm_source=de.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "sciences",
+      "litterature",
+      "idees"
+    ],
+    "legende": "Page de Terç del Crestià d'après le manuscrit de 1792 de la Bibliothèque nationale de Madrid",
+    "lat": 39.4697,
+    "lng": -0.3763
+  },
+  {
+    "id": 2271,
+    "titre": "Signature du traité de Meitoku, réunification des cours impériales japonaises et fin de la période Nanboku-chō.",
+    "date": 1392,
+    "mois": 11,
+    "zones": [
+      "Japon"
+    ],
+    "type": 3,
+    "description": "Depuis 1336, le Japon est déchiré par une longue et épuisante guerre civile connue sous le nom d'époque Nanboku-chō (la période des cours du Nord et du Sud). Le pays est scindé entre deux lignées impériales rivales revendiquant la légitimité : la lignée Jimyōin (la Cour du Nord, installée à Kyoto et soutenue par les shoguns) et la lignée Daikakuji (la Cour du Sud, exilée dans les montagnes de Yoshino).\n\nÀ l'automne 1392, le troisième shogun de la dynastie Muromachi, le puissant Ashikaga Yoshimitsu, parvient à imposer une issue diplomatique à ces soixante années de troubles. Il négocie le traité de Meitoku, un accord de paix fondé sur la promesse d'une alternance au pouvoir entre les deux lignées. En novembre 1392, l'empereur de la Cour du Sud, Go-Kameyama, se rend à Kyoto pour abdiquer et remettre solennellement les Trois Trésors Sacrés (les insignes impériaux de légitimité) à l'empereur de la Cour du Nord, Go-Komatsu. Cet acte réunifie officiellement l'Empire sous l'autorité absolue du shogunat Ashikaga.\n\nCependant, cette pacification officielle laisse de nombreux vaincus sur la touche. Des seigneurs et des fonctionnaires loyaux à la Cour du Sud, se sentant trahis et refusant de se soumettre, perdent leurs terres. Devenus des samouraïs sans maître (rōnin), nombre d'entre eux fuient par la mer. S'alliant à des marchands armés et à des contrebandiers, ils viennent gonfler les rangs des redoutables flottes de pirates japonais, les Wakō (ou Wokou en chinois). Ces groupes navals vont dès lors intensifier leurs raids dévastateurs et leurs pillages le long des côtes de la péninsule coréenne et de la Chine de la dynastie Ming.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 35.0116,
+    "lng": 135.7681,
+    "sources": "https://zh.wikipedia.org/wiki/1392%E5%B9%B4"
+  },
+  {
+    "id": 2287,
+    "titre": "Prise de pouvoir par les oncles du roi, disgrâce des « Marmousets »",
+    "date": 1392,
+    "mois": 8,
+    "date_fin": 1393,
+    "mois_fin": 12,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "L'éviction des Marmousets ne s'est pas faite en un jour en 1393, mais est le résultat direct de l'effondrement mental de Charles VI amorcé l'année précédente. Depuis 1388, le roi avait écarté ses puissants oncles (les ducs de Bourgogne, de Berry et d'Anjou) pour gouverner seul, en s'appuyant sur les anciens conseillers de son père (Charles V). Ce gouvernement réformateur s'était attaqué à la corruption, avait assaini les finances royales et restauré l'autorité de l'État au détriment des privilèges de la haute noblesse.\n\nDès le 5 août 1392, lorsque Charles VI sombre dans la démence dans la forêt du Mans, ses oncles saisissent immédiatement l'opportunité pour reprendre le contrôle du royaume. Philippe le Hardi (duc de Bourgogne) et Jean de Berry font aussitôt arrêter les figures de proue du gouvernement réformateur : Bureau de La Rivière et Jean Le Mercier sont emprisonnés, tandis que Jean de Montaigu parvient de justesse à fuir vers Avignon. Leurs biens sont confisqués et des procès politiques sont instruits contre eux sous des accusations de trahison, de corruption et même de sorcellerie (pour expliquer la folie du roi).\n\nAu cours de l'année 1393, alors que Charles VI connaît de brèves périodes de rémission, il parvient à bloquer l'exécution de ses anciens conseillers et ordonne leur libération, leur restituant une partie de leurs biens. Cependant, la violente rechute du souverain à l'été 1393 scelle définitivement le sort des Marmousets. Privés de la protection royale, ils sont écartés à jamais des affaires de l'État. Le Conseil royal passe alors sous la domination absolue des grands princes apanagés.\n« Marmousets » : Ce surnom, qui désigne étymologiquement de petites figures grotesques ou de jeunes garçons de peu d'importance, est un terme profondément péjoratif inventé par la haute aristocratie pour les disqualifier. Les grands féodaux méprisaient ces hommes qu'ils jugeaient de trop basse extraction pour gouverner la France (bien qu'ils fussent issus de la petite noblesse de robe, de la bourgeoisie ou du bas clergé). Eux-mêmes ne se sont jamais appelés ainsi ; les documents officiels parlent des « conseillers du roi ».\nLa chute des Marmousets en 1392-1393 marque un coup d'arrêt brutal pour le développement de l'État moderne centralisé initié sous Charles V. Le pouvoir repasse d'une haute administration technique à un régime princier.\nUne fois les Marmousets éliminés, les oncles du roi (et bientôt son frère, Louis d'Orléans) ont le champ libre pour puiser sans retenue dans le trésor royal afin de financer leurs propres principautés. Cette compétition féroce pour l'accaparement des finances publiques entre les différentes branches de la famille royale sera la cause directe de la sanglante guerre civile entre Armagnacs et Bourguignons qui ravagera la France au XVe siècle.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 48.8589,
+    "lng": 2.32
   },
   {
     "id": 834,
@@ -34774,13 +35170,466 @@
       "Ottomans"
     ],
     "type": 4,
-    "description": "Lieu : Veliko Tarnovo (capitale du tsarat de Tarnovo, centre-nord de la Bulgarie)\n\nDate : 17 juillet 1393\n\nÉvénement : Chute de Tarnovo après trois mois de siège ottoman et exil du patriarcat\n\nAu printemps 1393, le sultan ottoman Bayezid Ier, soucieux de sécuriser définitivement ses arrières balkaniques, lance une vaste offensive militaire contre le tsarat de Tarnovo, le plus puissant des vestiges du Second Empire bulgare. Face à l'avancée turque, le tsar Ivan Chichman abandonne sa capitale, Veliko Tarnovo, pour chercher refuge dans la forteresse danubienne de Nikopol. La défense de la cité impériale, bâtie sur des collines escarpées dominant la rivière Yantra, est alors assumée par la plus haute autorité spirituelle du pays : le patriarche Euthyme (Evtimiy de Tarnovo).\n\nLe siège ottoman s'étire sur trois mois. Affamée et épuisée, la ville finit par céder le 17 juillet 1393, marquant un traumatisme culturel et politique majeur pour le monde slave orthodoxe. La répression menée par les troupes de Bayezid est impitoyable. Les églises sont pillées ou converties en mosquées, et le palais impérial du Tsarevets est dévasté. Pour décapiter toute résistance future, les Ottomans convoquent l'élite de l'aristocratie locale (plus d'une centaine de boyards) et la font exécuter. Le patriarche Euthyme, figure tutélaire de la résistance, échappe de justesse à la mort mais est envoyé en exil en Thrace, ce qui met fin de facto à l'autocéphalie du patriarcat bulgare (qui repasse sous l'autorité de Constantinople).",
+    "description": "17 juillet 1393\nÉvénement : Chute de Tarnovo après trois mois de siège ottoman et exil du patriarcat\nAu printemps 1393, le sultan ottoman Bayezid Ier, soucieux de sécuriser définitivement ses arrières balkaniques, lance une vaste offensive militaire contre le tsarat de Tarnovo, le plus puissant des vestiges du Second Empire bulgare. Face à l'avancée turque, le tsar Ivan Chichman abandonne sa capitale, Veliko Tarnovo, pour chercher refuge dans la forteresse danubienne de Nikopol. La défense de la cité impériale, bâtie sur des collines escarpées dominant la rivière Yantra, est alors assumée par la plus haute autorité spirituelle du pays : le patriarche Euthyme (Evtimiy de Tarnovo).\n\nLe siège ottoman s'étire sur trois mois. Affamée et épuisée, la ville finit par céder le 17 juillet 1393, marquant un traumatisme culturel et politique majeur pour le monde slave orthodoxe. La répression menée par les troupes de Bayezid est impitoyable. Les églises sont pillées ou converties en mosquées, et le palais impérial du Tsarevets est dévasté. Pour décapiter toute résistance future, les Ottomans convoquent l'élite de l'aristocratie locale (plus d'une centaine de boyards) et la font exécuter. Le patriarche Euthyme, figure tutélaire de la résistance, échappe de justesse à la mort mais est envoyé en exil en Thrace, ce qui met fin de facto à l'autocéphalie du patriarcat bulgare (qui repasse sous l'autorité de Constantinople).",
     "image": "",
     "themes": [
       "guerre"
     ],
     "lat": 43.0821,
     "lng": 25.6321
+  },
+  {
+    "id": 2272,
+    "titre": "Razzia espagnole sur  Lanzarote aux îles Canaries",
+    "date": 1393,
+    "zones": [
+      "Monde",
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Expédition et razzia castillane commanditée par le seigneur d'Almonaster pour capturer des esclaves et piller les ressources de l'île.\nDepuis sa redécouverte pour l'Europe en 1312 par le navigateur génois Lancelot Maloisel (Lancelotto Malocello, qui donna son nom à l'île, nom apparu pour la première fois sur le portulan d'Angelino Dulcert en 1339), Lanzarote subit les assauts répétés des flottes européennes. En raison de leur situation géographique, Lanzarote et la petite île voisine de La Graciosa constituent la toute première escale des expéditions ibériques ou génoises à la recherche d'esclaves, de peaux et de teintures naturelles.\nAu fil du XIVe siècle, ces incursions répétées provoquent un déclin démographique dramatique des populations aborigènes. Les rencontres prennent parfois un tour romanesque, entre mythe et histoire : en 1377, le commandant corsaire castillan Martin Ruiz de Avendaño fait naufrage sur l'île. Il est accueilli pacifiquement par le roi local, Zonzamas. Selon la légende, de l'hospitalité offerte (qui incluait de partager la couche de la reine Fayna) naîtra la princesse Ico — décrite dans les récits comme blanche et blonde — qui sera la mère de Guardafia, le dernier souverain aborigène de Lanzarote.\nC'est dans ce climat de piraterie endémique qu'en 1393, une importante escadre andalouse financée par le noble castillan Gonzalo Pérez Martel, seigneur d'Almonaster, débarque à Lanzarote. L'expédition se livre à une vaste opération de pillage. La flotte rentre en Andalousie chargée d'un riche butin : de nombreux autochtones capturés pour être vendus comme esclaves, ainsi qu'une précieuse cargaison de cire, de peaux de boucs, d'animaux vivants et de produits agricoles locaux.\n\nCe raid dévastateur illustre la violence de cette période pré-coloniale. La population insulaire formée de  peuples d'origine libyco-berbère, déjà exsangue et en net recul après des décennies de razzias de ce type, ne pourra opposer qu'une résistance résiduelle lorsque s'amorcera la conquête territoriale définitive quelques années plus tard (à partir de 1402). Celle-ci sera menée par les aventuriers normands Jean de Béthencourt et Gadifer de La Salle, agissant sous la suzeraineté du roi Henri III de Castille.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Map_of_Angelino_Dulcert_cropped.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "themes": [
+      "guerre",
+      "sciences"
+    ],
+    "legende": "L'île apparaît pour la première fois sur la carte d'Angelino Dulcert en 1339",
+    "lat": 29.0397,
+    "lng": -13.6363
+  },
+  {
+    "id": 2274,
+    "titre": "Raid de corsaires d'Ifriqiya à Syracuse",
+    "date": 1393,
+    "mois": 6,
+    "zones": [
+      "Naples",
+      "Monde islamique"
+    ],
+    "type": 4,
+    "description": "Au début de l'été 1393, la Sicile est un territoire vulnérable. Bien que la reine Marie et son époux Martin le Jeune aient écrasé la rébellion du puissant baron Andrea Chiaramonte à Palerme l'année précédente, le royaume reste profondément déstabilisé par les séquelles de l'anarchie nobiliaire. Les défenses côtières, négligées et désorganisées par ces conflits internes, offrent des cibles de choix. En juin 1393, une flotte de corsaires originaires d'Ifriqiya tire profit de ce vide sécuritaire et lance une attaque foudroyante contre Syracuse.   Syracuse, port stratégique et commercial majeur de la côte est, subit un raid dévastateur. Comme il est de coutume dans la guerre de course méditerranéenne de la fin du Moyen Âge, l'objectif de cette incursion n'est pas la conquête territoriale, mais la prédation économique et humaine. Les assaillants s'emparent de riches butins et capturent de nombreux habitants. Ces captifs sont ensuite emmenés outre-mer pour être réduits en esclavage sur les marchés d'Afrique du Nord ou pour servir de monnaie d'échange contre de lucratives rançons. Cette attaque brutale démontre l'incapacité temporaire de la nouvelle monarchie aragonaise de Sicile à protéger ses propres rivages.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 37.0316,
+    "lng": 15.2124
+  },
+  {
+    "id": 2275,
+    "titre": "Le « Bal des Ardents »",
+    "date": 1393,
+    "mois": 1,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Le 28 janvier 1393, la reine Isabeau de Bavière organise une fastueuse fête à l'Hôtel Saint-Pol pour célébrer le troisième mariage de l'une de ses  demoiselles d'honneur, Catherine l'Allemande, veuve du sire de Hainceville avec Etzel d'Ortenburg . À l'occasion de ce remariage (qui autorise les coutumes du charivari, souvent licencieuses), le roi Charles VI, qui se remet doucement de sa première crise de folie de l'été 1392, décide de se produire dans une mascarade avec cinq jeunes seigneurs de sa cour.\n\nLes six hommes se déguisent en « sauvages ». Leurs costumes, cousus à même le corps, sont constitués de toile de lin enduite de poix (une résine extrêmement inflammable) et recouverts d'étoupe pour imiter un pelage animal. Conscient du danger, le roi avait formellement interdit l'entrée de toute torche dans la salle de bal.\n\nCependant, le jeune frère du roi, Louis, duc d'Orléans, arrive tardivement à la fête, accompagné de porteurs de torches. Intrigué par ces danseurs masqués et enchaînés les uns aux autres, il approche une torche de trop près pour tenter de découvrir leur identité. Une étincelle jaillit et embrase instantanément l'étoupe et la poix. Les danseurs se transforment en torches humaines devant une cour paniquée.\nCharles VI est sauvé in extremis grâce à l'intervention de sa jeune tante, la duchesse de Berry, qui le reconnaît et l'enveloppe de ses larges jupes pour étouffer les flammes. Un autre seigneur, Jean de Nantouillet, parvient à survivre en brisant ses chaînes et en se jetant dans une cuve de vin (ou d'eau pour laver la vaisselle). Les quatre autres compagnons du roi (dont le puissant Huguet de Guisay) périssent brûlés vifs sur place ou décèdent de leurs atroces brûlures dans les jours qui suivent.\nCette tragédie provoque une onde de choc à travers tout le royaume. La population parisienne, exaspérée par le train de vie dispendieux de la cour alors que le pays est encore affaibli, y voit un châtiment divin. Face à la colère populaire qui menace de déclencher une émeute (rappelant l'affaire de Fleet Street l'année précédente, la tension urbaine est un enjeu fort), le roi et son frère doivent faire amende honorable en organisant une grande procession expiatoire pieds nus jusqu'à Notre-Dame.\nL'incident du Bal des Ardents  marque le début de la profonde impopularité du duc d'Orléans. Accusé d'irresponsabilité, voire d'avoir délibérément tenté d'assassiner son frère aîné pour s'emparer du trône, il donne d'importantes munitions politiques à ses rivaux, notamment le duc de Bourgogne.\nCe traumatisme psychologique absolu ruine la fragile convalescence de Charles VI. Les frayeurs et la culpabilité liées à ce drame vont contribuer à l'enfoncer définitivement dans l'alternance de lucidité et de démence qui caractérisera tout le reste de son long règne, paralysant le pouvoir royal français.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Le_Bal_des_Ardents.jpg/960px-Le_Bal_des_Ardents.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
+    "legende": "Le Bal des Ardents. Miniature enluminée des Chroniques de Jean Froissart, BL Harley 4380.",
+    "lat": 48.8589,
+    "lng": 2.32
+  },
+  {
+    "id": 2276,
+    "titre": "Torture et exécution de Jean de Pomuk (futur St Jean Népomucène), vicaire général de Prague",
+    "date": 1393,
+    "mois": 3,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Au printemps 1393, le royaume de Bohême est le théâtre d'une lutte de pouvoir féroce entre l'autorité royale et l'autorité ecclésiastique. Le roi Venceslas IV (fils du grand empereur Charles IV) est en conflit ouvert avec l'ambitieux archevêque de Prague, Jean de Jenštejn. Le point d'orgue de cette crise éclate à l'occasion de la succession à la tête de la riche abbaye bénédictine de Kladruby.\n\nLe roi Venceslas projette de supprimer cette abbaye à la mort de son abbé pour en faire un nouvel évêché, qu'il confierait à l'un de ses favoris afin de réduire l'influence et les revenus de l'archevêque. Cependant, lorsque le vieil abbé meurt au début de l'année 1393, les moines élisent immédiatement un successeur. En tant que vicaire général de l'archevêché, Jean de Pomuk (le bras droit de l'archevêque) valide cette élection en un temps record, prenant le roi de vitesse et ruinant son projet politique.\n\nFou de rage, Venceslas IV convoque l'archevêque et ses conseillers. Si l'archevêque parvient à fuir Prague in extremis, Jean de Pomuk et d'autres dignitaires ecclésiastiques sont arrêtés. Le 20 mars 1393, ils sont violemment torturés (le roi aurait lui-même participé aux sévices avec des torches). Les autres prisonniers finissent par céder et prêter serment au roi, mais Jean de Pomuk, mortellement blessé par la torture, est traîné jusqu'au pont Charles. Ses bourreaux le jettent, pieds et poings liés, dans les eaux glaciales de la Vltava (la Moldau).\n\nLa tradition populaire et religieuse catholique affirme que Jean Népomucène a été martyrisé parce qu'il aurait refusé de révéler au roi Venceslas (réputé jaloux) les péchés que la reine Sophie de Bavière lui aurait confessés. Cette version romanesque et édifiante est une construction hagiographique postérieure, apparue au milieu du XVe siècle et popularisée au XVIIe siècle lors de son processus de canonisation (il deviendra le saint patron des confesseurs et des ponts). Les documents historiques stricts de 1393 (notamment la plainte déposée par l'archevêque Jenštejn au pape) prouvent indiscutablement que le motif de son exécution était le conflit juridico-politique de l'abbaye de Kladruby, et non une affaire de confession.\nIl est plus exact historiquement de le nommer Jean de Pomuk (Jan de Pomuk) pour l'année 1393, Pomuk étant son bourg de naissance en Bohême. L'appellation « Népomucène » (Nepomucenus) est la forme latinisée qui s'imposera plus tard avec son culte.\n\nLe développement fulgurant du culte de saint Jean Népomucène, fondé sur la légende de son martyre pour le secret de la confession, est avant tout une formidable construction politique et religieuse orchestrée par l'Église catholique et la dynastie des Habsbourg lors de la Contre-Réforme.\nBien que la mort de Jean de Pomuk remonte à 1393, son culte ne prend véritablement son essor qu'aux XVIIe et XVIIIe siècles. À cette époque, la Bohême, passée sous la domination de la très catholique dynastie des Habsbourg, est profondément marquée par l'héritage de Jan Hus (le réformateur brûlé vif en 1415, devenu un héros national tchèque). Pour recatholiciser la région et effacer la figure rebelle de Jan Hus, les jésuites et le pouvoir impérial ont besoin d'un nouveau héros local, d'un martyr catholique irréprochable.\n\nIls s'emparent alors de la figure de Jean de Pomuk et popularisent la légende de la confession de la reine. Ce récit sert un double objectif théologique et politique : il exalte le sacrement de la pénitence (fortement remis en cause par les protestants) et promeut la loyauté absolue à l'Église face au pouvoir séculier. Le culte culmine avec sa béatification en 1721, puis sa canonisation par le pape Benoît XIII en 1729, après la découverte prétendue miraculeuse de sa langue restée intacte (incorrompue) lors de l'exhumation de son corps.\nJean Népomucène est l'un des saints les plus facilement identifiables de l'art statuaire baroque grâce à des attributs très spécifiques :\n'auréole aux cinq étoiles : C'est son attribut le plus distinctif. Selon la légende, cinq étoiles brillèrent à la surface de la Vltava à l'endroit où son corps fut jeté. Ces cinq étoiles forment également l'acrostiche du mot latin TACUI (« je me suis tu »).\n\nLe vêtement de chanoine : Il est systématiquement représenté en habit ecclésiastique traditionnel : la soutane, le rochet (tunique blanche en dentelle), la mosette (petite pèlerine) et la barrette (le chapeau carré) sur la tête.\n\nLe doigt sur les lèvres : Il est souvent sculpté avec l'index posé sur la bouche, symbolisant le silence absolu et le sceau de la confession.\n\nLe crucifix et la palme : Il serre généralement un grand crucifix contre sa poitrine, accompagné de la palme, symbole universel des martyrs.\n\nPatronages : En raison de son mode de mort (jeté dans le fleuve), il est le saint patron des ponts, des bateliers, des meuniers, et il est invoqué pour se protéger des inondations et des noyades. Sur le plan moral, il est le protecteur des confesseurs, de la bonne renommée, et le défenseur contre les calomnies et les indiscrétions.\nSon culte se diffuse ... \nEn Bohême (République tchèque) : Il est le saint patron principal du pays. Son sanctuaire le plus célèbre est la cathédrale Saint-Guy de Prague, où se trouve son monumental tombeau en argent massif, ainsi que le pont Charles, lieu de son supplice, marqué par une célèbre statue de bronze.\n\nDans toute l'Europe centrale (Mitteleuropa) : Poussé par les Habsbourg, son culte s'est diffusé massivement en Autriche, en Allemagne (notamment en Bavière et en Rhénanie), en Pologne, en Slovaquie et en Hongrie.\n\nDans le reste du monde : Grâce aux missions jésuites, sa dévotion s'est exportée en Italie, en Espagne, et jusqu'en Amérique latine et aux Philippines. Il est devenu une figure omniprésente du paysage rural et urbain européen, ses statues étant traditionnellement érigées sur ou à proximité des ponts.\n\nL'Alsace conserve de nombreuses traces du culte de saint Jean Népomucène, héritage direct de son ancienne appartenance au Saint-Empire romain germanique et de la forte influence de la maison des Habsbourg sur la région. En tant que saint patron protecteur contre les inondations et gardien des ponts, ses effigies ont été stratégiquement placées le long des cours d'eau alsaciens.\n\nEnsisheim : Une statue se dresse à proximité immédiate du pont traversant l'Ill, historiquement placée à cet endroit précis pour prémunir la ville contre les crues de la rivière.\n\nCernay : Une statue polychrome dotée de l'auréole aux cinq étoiles trônait depuis 1802 dans le centre-ville. Plus récemment, une nouvelle copie en grès a été commandée par la municipalité et installée directement sur les berges de la Thur. Cette réinstallation a permis de renouer avec un rite local d'avant 1914 qui consistait à fleurir la statue annuellement et à confier une couronne de fleurs au courant de l'eau.\nLutterbach : Une figure du saint est érigée dans la commune pour la protéger spécifiquement des débordements parfois violents de la Doller.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/2025_Nepomuk_w_Nowej_Wsi_K%C5%82odzkiej_%283%29.jpg/960px-2025_Nepomuk_w_Nowej_Wsi_K%C5%82odzkiej_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "religion"
+    ],
+    "legende": "Statue de Jean de Népomucène à Nowa Wieś Kłodzka",
+    "lat": 50.0875,
+    "lng": 14.4213
+  },
+  {
+    "id": 2278,
+    "titre": "Prorogation de la trêve de Leulinghem",
+    "date": 1393,
+    "mois": 4,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "En 1393, la guerre de Cent Ans est en suspens, les deux belligérants étant épuisés ou entravés par leurs situations politiques intérieures. En Angleterre, le roi Richard II (qui gouverne désormais seul) souhaite ardemment instaurer une paix durable avec le continent pour asseoir son pouvoir. En France, le roi Charles VI vient de subir un grave choc psychologique lors de la tragédie du Bal des Ardents (28 janvier 1393), fragilisant encore sa santé mentale après sa première crise de démence de 1392. Ce sont par conséquent ses oncles qui le représentent et dirigent les négociations côté français.\n\nLe village de Leulinghem est un lieu de rencontre diplomatique privilégié, géographiquement situé sur la ligne de démarcation entre l'enclave anglaise de Calais et le territoire français. Le 28 avril 1393, les ambassades s'y réunissent et actent la prolongation de la trêve. Surtout, ces tractations posent les jalons concrets d'un rapprochement politique de grande ampleur : les diplomates y négocient la remise de la place forte de Cherbourg à la France, et jettent les bases d'une alliance matrimoniale majeure prévoyant le mariage du roi Richard II avec la jeune princesse Isabelle de France (fille de Charles VI).\n\nIl est essentiel de préciser que la \"trêve de Leulinghem\" ne désigne pas un traité unique apparu en 1393. Il s'agit d'un long processus diplomatique ponctué de plusieurs accords signés au même endroit (avec des trêves antérieures signées en 1384 et en 1389). L'acte du 28 avril 1393 est techniquement une prorogation d'une trêve existante, assortie de nouvelles perspectives de paix.\n\nCe rapprochement franco-anglais consolidé en 1393 atteindra son véritable apogée trois ans plus tard. Le 9 mars 1396, les deux royaumes scelleront une immense trêve prévue pour durer 28 ans (à partir de 1398). Cette période de paix relative ne volera en éclats qu'au début du XVe siècle, à la suite de la destitution de Richard II par la maison de Lancastre.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 50.7347,
+    "lng": 2.1643,
+    "serie": "Guerre de Cent ans"
+  },
+  {
+    "id": 2281,
+    "titre": "Expulsion de la noblesse à Pérouse et  prise de pouvoir du condottière Biordo Michelotti.",
+    "date": 1393,
+    "mois": 8,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "L'année 1393 marque un tournant politique majeur et sanglant pour la commune de Pérouse. Comme de nombreuses cités-États de la péninsule italienne à cette époque, la ville est déchirée par une guerre civile endémique opposant deux factions inconciliables : les Raspanti (la faction populaire, représentant la bourgeoisie, les riches marchands et les guildes) et les Beccherini (la faction aristocratique, liée à l'ancienne noblesse patricienne).\n\nAu cours de l'été 1393, ces tensions dégénèrent en de féroces combats de rue. La faction des Raspanti prend définitivement le dessus et déclenche une violente répression, menant au massacre et à l'expulsion massive des familles nobles hors des murs de la cité. Pour consolider ce coup de force et protéger la ville contre les représailles des nobles exilés, les bourgeois font appel au plus illustre de leurs concitoyens : le célèbre condottière Biordo Michelotti.\n\nRentrant triomphalement dans sa ville natale au mois d'août, fort du soutien de ses troupes mercenaires et de la ferveur populaire, Michelotti est nommé « Capitaine général » et défenseur de la cité. En s'appuyant sur ce titre militaire, il confisque rapidement les institutions républicaines et s'impose comme le maître absolu de Pérouse.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Biordo_Michelotti_da_Perugia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "politique"
+    ],
+    "legende": "Biordo Michelotti dans un portrait d' Ariodante Fabretti de 1842",
+    "lat": 44.4938,
+    "lng": 11.3426
+  },
+  {
+    "id": 2282,
+    "titre": "1ere prise de Bagdad par Tamerlan",
+    "date": 1393,
+    "mois": 10,
+    "zones": [
+      "Monde islamique",
+      "Orient"
+    ],
+    "type": 3,
+    "description": "En 1393, le conquérant turco-mongol Tamerlan poursuit sa vaste expédition militaire connue sous le nom de « campagne de Cinq Ans » (1392-1396), destinée à soumettre définitivement la Perse et le Moyen-Orient. Son armée fond sur la Mésopotamie, territoire alors contrôlé par le puissant sultanat des Djalayirides. Face à l'avancée fulgurante des forces timourides, le sultan Ahmad Djalayir choisit de ne pas s'enfermer dans Bagdad. Il abandonne sa capitale et fuit précipitamment vers l'ouest pour trouver refuge auprès de l'Empire mamelouk, en Syrie puis en Égypte.\n\nPrivée de son souverain et sans espoir de secours, la ville de Bagdad capitule sans combattre à la fin du mois d'août 1393. Tamerlan y fait une entrée triomphale. En échange de cette reddition pacifique, la cité échappe au pillage total et à la destruction. Le conquérant se contente d'exiger le versement d'un lourd tribut financier de sauvegarde et procède, comme à son habitude, à une déportation ciblée. Les meilleurs artisans, architectes, tisserands et érudits de Bagdad sont arrachés à leur ville et envoyés de force à Samarcande (la capitale de Tamerlan, en Ouzbékistan actuel) pour participer à son embellissement.\n\nEn 1393, la prise de Bagdad est relativement incruente grâce à la capitulation. En revanche, lorsque la ville se rebellera et sera reprise par Tamerlan en 1401, elle subira l'un des massacres les plus effroyables de son histoire (le conquérant exigeant de chacun de ses soldats qu'il lui rapporte deux têtes d'habitants), entraînant la destruction de la cité.\nLa dynastie djalayiride qu'évince Tamerlan est elle-même d'ascendance mongole, issue de la fragmentation de l'ancien Ilkhanat de Perse. La guerre entre Tamerlan et Ahmad Djalayir s'inscrit donc dans une lutte féroce pour revendiquer et unifier l'héritage territorial de l'empire de Gengis Khan au Moyen-Orient.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Emp%C3%A8ri_Timurida.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "guerre",
+      "atlas"
+    ],
+    "lat": 33.3062,
+    "lng": 44.3872
+  },
+  {
+    "id": 2283,
+    "titre": "Prise de Chiraz par Tamerlan, anéantissement de la dynastie des Muzaffarides",
+    "date": 1393,
+    "mois": 5,
+    "zones": [
+      "Monde islamique",
+      "Orient"
+    ],
+    "type": 3,
+    "description": "Au printemps 1393, la « campagne de Cinq Ans » menée par le conquérant turco-mongol Tamerlan (Timour Leng) atteint le sud de la Perse. Son objectif est de soumettre le Fars, une région riche et culturellement rayonnante alors gouvernée par la dynastie des Muzaffarides. Ce sultanat est cependant miné par de profondes divisions internes et de violentes querelles de succession. L'un des souverains muzaffarides, l'intrépide Shah Mansur, tente de s'opposer à l'écrasante machine de guerre timouride. Il lance une attaque désespérée contre le camp de Tamerlan mais finit par être vaincu et décapité au combat.\n\nDébarrassé de son principal adversaire, Tamerlan fait une entrée triomphale dans la prestigieuse cité de Chiraz dans le courant du mois de mai. Pour asseoir son pouvoir et couper court à toute future velléité de rébellion, Tamerlan applique sa stratégie habituelle de terreur politique. Le 22 mai 1393 (mois de Rajab de l'an 795 de l'Hégire), il ordonne l'arrestation et l'exécution systématique de tous les princes de sang muzaffaride survivants (qui avaient pourtant, pour la plupart, fait soumission). Ce massacre dynastique met fin de manière brutale et définitive au sultanat muzaffaride.\n\nLa province du Fars étant désormais pacifiée par la terreur et fermement intégrée à son empire, Tamerlan en confie le gouvernement à l'un de ses fils, Oumar Cheikh. Dès le mois de juin, le conquérant et le gros de son armée quittent Chiraz. Ils remontent vers le nord en direction d'Ispahan puis d'Hamadan, ouvrant la voie vers l'ouest pour la suite de la campagne qui aboutira, à la fin de l'été de la même année, à la prise de Bagdad.\n\nTamerlan est célèbre pour la brutalité de ses sièges, mais il sait faire preuve de pragmatisme . Contrairement à la ville voisine d'Ispahan — qui avait subi un effroyable massacre punitif de sa part en 1387, marqué par l'édification de pyramides de crânes —, Chiraz est épargnée de la destruction totale en 1393. La ville est soumise à un lourd tribut, mais Tamerlan, grand admirateur de la culture persane, en préserve les mosquées et les bibliothèques. Comme il le fera plus tard à Bagdad, il déporte les meilleurs artisans, lettrés et architectes de Chiraz vers sa propre capitale, Samarcande.\nLes chroniques persanes de l'époque (notamment celles de l'historien Nizam al-Din Shami) précisent que l'exécution collective du 22 mai ne s'est pas déroulée dans les murs de Chiraz, mais un peu plus tard dans le village de Mahyar (ou Qumishah), sur la route menant à Ispahan, où Tamerlan avait rassemblé les différents émirs muzaffarides (dont Shah Yahya de Yazd) sous couvert de leur accorder des faveurs royales avant de les faire mettre à mort.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 29.606,
+    "lng": 52.5378
+  },
+  {
+    "id": 2284,
+    "titre": "Le recensement de la population chinoise indique 60,5 millions d’habitants",
+    "date": 1393,
+    "zones": [
+      "Chine"
+    ],
+    "type": 4,
+    "description": "L'année 1393 marque l'aboutissement d'un immense effort administratif mené par l'empereur Hongwu (Zhu Yuanzhang), fondateur de la dynastie Ming. Après avoir chassé la dynastie mongole des Yuan et réunifié l'empire, Hongwu a cherché à restaurer l'économie agricole et à stabiliser les revenus de l'État. Pour ce faire, il s'est appuyé sur le système du Lijia (une organisation territoriale regroupant les familles par dizaines et centaines) pour établir les « Registres Jaunes » (Huangce), nommés ainsi en raison de la couleur impériale de leur couverture.\n\nLe recensement achevé en 1393 est le premier grand recensement exhaustif de l'ère Ming et l'un des plus documentés du monde prémoderne. Il enregistre méticuleusement 10 652 870 foyers pour un total d'environ 60,5 millions d'individus (le chiffre exact retenu par les annales impériales est de 60 545 812 habitants). Ce document monumental permet à l'administration centrale de Nankin de répartir précisément l'impôt foncier et de réquisitionner la corvée (le travail obligatoire dû à l'État).\n\nlimites : ce recensement ne visait pas à compter chaque être humain à des fins statistiques, mais à identifier les unités fiscales (les foyers contribuables). Par conséquent, de nombreuses personnes cherchaient à échapper à l'enregistrement pour éviter la lourdeur des impôts et des corvées, notamment en fuyant vers des régions isolées ou en se plaçant illégalement sous la protection de puissants propriétaires terriens exemptés.\nEn raison de cette évasion fiscale endémique, de la mortalité infantile souvent non déclarée, et de l'exclusion de certaines franges de la population (comme les minorités ethniques non assimilées du Sud-Ouest ou le clergé bouddhiste et taoïste), les historiens et démographes modernes estiment que le chiffre officiel est sous-évalué. La population réelle de la Chine Ming en 1393 se situait très probablement entre 65 et 75 millions d'habitants.",
+    "image": "",
+    "themes": [
+      "societe",
+      "politique"
+    ],
+    "lat": 32.0438,
+    "lng": 118.7789
+  },
+  {
+    "id": 2285,
+    "titre": "Le roi Jean Ier d'Aragon restaure la communauté juive de Barcelone",
+    "date": 1393,
+    "mois": 5,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "n août 1391, le quartier juif de Barcelone a été pris d'assaut, pillé et incendié. Des centaines de Juifs y ont été massacrés, tandis que la majorité des survivants ont été contraints au baptême (devenant des conversos) ou ont fui.\n\nDeux ans plus tard, le roi Jean Ier d'Aragon (Joan I) dresse un bilan catastrophique de ces événements. Dans le système juridique médiéval aragonais, les Juifs sont considérés comme la propriété directe de la Couronne (servi regis). Leur disparition entraîne un effondrement des rentes royales, car ces communautés, souvent aisées et très impliquées dans l'administration financière, l'artisanat et le commerce, fournissaient une part écrasante des impôts.\n\nPour sauver les finances de l'État, le roi décide en mai 1393 de ressusciter artificiellement la communauté barcelonaise. Il confie cette tâche immense à Hasdaï Crescas, un éminent philosophe, rabbin et conseiller royal, lui-même originaire de Barcelone mais installé à Saragosse (où il a pu protéger sa communauté en 1391, bien qu'il y ait perdu son propre fils). Le plan royal autorise Crescas à sélectionner des familles juives issues des villes épargnées ou moins touchées par les massacres — en Aragon (Saragosse, Huesca, Calatayud, Daroca), en Catalogne (Lérida, Gérone) et dans le royaume de Valence (Murviedro / Sagonte) — pour les transplanter de force à Barcelone et y relancer la vie économique.\n\nSi judería est le terme générique castillan (et aragonais) pour désigner un quartier juif, en Catalogne et aux îles Baléares, le terme historique exact est le Call (du latin callum signifiant \"rue\" ou \"passage\"). À Barcelone, on parlait du Call Major et du Call Menor.\n\nCette tentative de repeuplement fut un échec cuisant. Le traumatisme des massacres de 1391 était trop profond, et la sécurité offerte par le roi ne convainquait plus. De plus, les communautés d'origine rechignaient à se séparer de leurs élites économiques. Le Call de Barcelone ne retrouva jamais sa population ni son rayonnement d'antan. Dès 1401, le successeur de Jean Ier, le roi Martin Ier l'Humain, finira par interdire définitivement le rétablissement d'une communauté juive institutionnelle à Barcelone, actant la mort de ce foyer intellectuel pluriséculaire.",
+    "image": "",
+    "themes": [
+      "societe",
+      "religion",
+      "politique"
+    ],
+    "lat": 41.3826,
+    "lng": 2.1771
+  },
+  {
+    "id": 2286,
+    "titre": "Seconde crise majeure de démence du roi Charles VI",
+    "date": 1393,
+    "mois": 6,
+    "zones": [
+      "France"
+    ],
+    "type": 3,
+    "description": "Seconde crise majeure de démence du roi Charles VI, confirmant le caractère chronique de son affection et scellant la régence de ses oncles.\nQuelques mois après le grave choc psychologique du Bal des Ardents (janvier 1393), la santé mentale de Charles VI s'effondre à nouveau. Au début du mois de juin 1393, alors que la cour séjourne à Abbeville dans le cadre des tractations diplomatiques avec l'Angleterre (dans le prolongement de la trêve de Leulinghem), le souverain commence à montrer des signes de grande agitation et d'égarement.\n\nRapatrié en urgence vers Paris et confiné au château de Vincennes, le roi plonge dans une crise d'aliénation bien plus longue et étrange que la première crise de l'été 1392 (dans la forêt du Mans). Durant cette rechute, Charles VI souffre d'une amnésie totale : il oublie son propre nom, ignore qu'il est roi de France, et mutile les armoiries royales (les fleurs de lys) cousues sur ses vêtements ou peintes sur sa vaisselle. Son hostilité se focalise particulièrement sur son épouse, la reine Isabeau de Bavière, qu'il ne reconnaît plus et dont il exige qu'on la chasse de sa vue. Il refuse de se laver ou de se changer pendant des semaines, développant un comportement de fuite sauvage.\nSeule la présence de sa belle-sœur, Valentine Visconti (l'épouse de son frère Louis d'Orléans), parvient mystérieusement à l'apaiser, le souverain la réclamant constamment auprès de lui.\n\nCette seconde crise de l'été 1393 est un tournant psychologique pour le royaume. Elle prouve aux contemporains que l'épisode du Mans de 1392 n'était pas un accident isolé (qui aurait pu être attribué à une simple insolation ou à une fièvre ponctuelle), mais le début d'une maladie récurrente. L'historiographie médicale moderne penche pour une schizophrénie, un trouble bipolaire sévère ou éventuellement une porphyrie, caractérisée par des phases de rémission et de rechute.\n\nL'affection exclusive que le roi dément porte à la duchesse d'Orléans va avoir de graves conséquences pour elle. Originaire de Milan (fille du puissant Jean Galéas Visconti), elle attire rapidement la suspicion de la cour. Ses ennemis politiques propageront la rumeur selon laquelle elle aurait empoisonné ou envoûté le roi par des sortilèges (son père ayant la réputation d'utiliser le poison et la magie noire). Elle finira par être éloignée de la cour quelques années plus tard.\nL'incapacité prolongée de Charles VI permet à ses oncles (en particulier Philippe le Hardi, duc de Bourgogne, et Jean, duc de Berry) de reprendre la mainmise absolue sur le Conseil royal. Les conseillers réformateurs du roi (les Marmousets) sont définitivement écartés. Cette régence de fait cristallise les rivalités entre la maison de Bourgogne et la maison d'Orléans, plantant le décor de la future guerre civile entre Armagnacs et Bourguignons.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 50.1061,
+    "lng": 1.8337
+  },
+  {
+    "id": 2288,
+    "titre": "Renversement temporaire du doge Antoniotto di Montaldo",
+    "date": 1393,
+    "mois": 7,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "L'été 1393 illustre parfaitement le chaos politique et institutionnel qui ronge la puissante République de Gênes à la fin du Moyen Âge. La cité maritime est déchirée par une guerre de factions impitoyable, opposant non seulement les grandes familles patriciennes aux classes populaires, mais aussi les grandes dynasties entre elles.\n\nLe doge en place depuis 1392, Antoniotto di Montaldo (souvent francisé en Antoine Montalto), est contraint de démissionner le 15 juillet 1393. Comme le relève sa biographie sur Wikipedia, ce renversement pour des raisons obscures déclenche une crise politique si violente et confuse que la République va connaître une succession vertigineuse de doges en l'espace de 24 heures :\n\nLe 15 juillet, Pietro Fregoso, âgé de 63 ans, est élu doge, mais ne conserve son titre qu'une seule journée selon Prabook.\n\nDès le lendemain, Fregoso cède sa place à Clemente Promontorio, qui ne parvient à se maintenir que quelques heures.\n\nC'est finalement Francesco Giustiniani Garibaldo (François Giustiniani) qui s'impose le 16 juillet.\n\nIssu d'une grande famille de marchands, Francesco Giustiniani ne réussit cependant pas à apaiser les tensions. Son mandat est de très courte durée et s'achève le 30 août 1393. Un nouveau retournement de situation permet alors à Antoniotto di Montaldo de récupérer le titre dogal, qu'il conservera jusqu'en mai 1394.\nCet épisode rocambolesque, qui voit se succéder quatre doges différents en deux jours, n'est pas une simple anomalie. Il est le symptôme d'un système politique bloqué. L'impossibilité pour les factions de s'entendre conduira d'ailleurs la République de Gênes, épuisée, à se soumettre volontairement au roi de France, Charles VI, trois ans plus tard (en 1396), renonçant temporairement à son indépendance pour retrouver un semblant de paix civile.",
+    "image": "",
+    "themes": [
+      "revolte"
+    ],
+    "lat": 44.4073,
+    "lng": 8.9339
+  },
+  {
+    "id": 2289,
+    "titre": "Lois renforçant l'autorité de la Couronne sur la justice religieuse et régulant le commerce.",
+    "date": 1393,
+    "mois": 2,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Le 10 février 1393, le Parlement anglais, réuni depuis la fin du mois de janvier, s'ajourne après avoir adopté une série de mesures législatives fondamentales pour l'affirmation de l'État royal sous Richard II. Cette session parlementaire traduit la volonté de la Couronne anglaise de centraliser ses pouvoirs et de protéger ses intérêts économiques et juridiques contre les ingérences extérieures, qu'elles soient marchandes ou pontificales.\n\nL'acte le plus retentissant de cette session est le Statute of Praemunire (le Statut de Praemunire). Ce texte législatif majeur interdit formellement de porter en appel une affaire judiciaire devant la cour papale (à Rome ou à Avignon) si cela va à l'encontre des intérêts du roi, ou d'introduire en Angleterre des bulles pontificales excommuniant des officiers royaux. Quiconque enfreint cette loi s'expose à de très lourdes peines, incluant la confiscation de ses biens et l'emprisonnement. Par ce statut, Richard II réaffirme la suprématie de la juridiction royale sur son territoire face aux ambitions de la papauté, alors affaiblie par le Grand Schisme d'Occident.\n\nSur le plan économique, le Parlement adopte des mesures fortement protectionnistes et centralisatrices :\n\nLe Trade Act (Loi sur le commerce) : Il interdit aux marchands étrangers de commercer entre eux sur le sol anglais pour revendre ensuite, protégeant ainsi le monopole et les marges des guildes marchandes locales (notamment les riches marchands londoniens) contre la concurrence des réseaux internationaux, comme les Italiens ou la Ligue hanséatique.\n\nLe Weights and Measures Act (Loi sur les poids et mesures) : En imposant aux commis des marchés de n'utiliser que des poids et mesures officiellement certifiés et signés, la Couronne tente d'unifier l'espace économique du royaume et de lutter contre les fraudes qui pénalisent le commerce intérieur.\n\nPrécision sur la datation : ces textes portent souvent l'année 1392 alors qu'ils sont promulgués en février 1393. Cela est dû au calendrier julien en vigueur à l'époque en Angleterre (le style de l'Annonciation), où la nouvelle année ne commençait que le 25 mars. Le mois de février 1393 (selon notre calendrier moderne) appartenait donc encore officiellement à l'année 1392 pour les clercs de l'époque. De plus, ces lois sont classées sous l'année parlementaire correspondant à la 16ème année du règne de Richard II (qui s'étend de juin 1392 à juin 1393).\n\nCe statut de 1393 (qui renforce un premier texte de 1353) aura une postérité immense. Bien qu'il soit peu appliqué sous Richard II, il deviendra, plus d'un siècle plus tard, l'arme juridique fatale utilisée par le roi Henri VIII pour faire chuter le cardinal Wolsey et amorcer la rupture définitive de l'Angleterre avec l'Église catholique romaine.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 51.4973,
+    "lng": -0.1371
+  },
+  {
+    "id": 2290,
+    "titre": "Venise forme secrètement une coalition militaire contre la Compagnie de Navarre",
+    "date": 1393,
+    "zones": [
+      "Italie",
+      "Byzance"
+    ],
+    "type": 4,
+    "description": "En 1393, la péninsule grecque (alors couramment appelée Morée) est un véritable échiquier géopolitique, morcelé par les reliquats des croisades (la « Francocratie ») et la reconquête byzantine. La République de Venise y possède des places fortes côtières vitales pour son empire maritime et commercial (notamment Modon, Coron, ou encore Argos et Nauplie). Cependant, la sécurité de ces territoires est gravement menacée par la Compagnie de Navarre, une redoutable troupe de mercenaires lourdement armés qui s'est emparée d'une grande partie de la principauté franque d'Achaïe, sous le commandement de Pedro de San Superano.\n\nFace à l'agressivité et aux pillages incessants des Navarrais, le Sénat vénitien décide de passer à l'offensive diplomatique. Le 27 février 1393, il ordonne l'ouverture de tractations secrètes pour isoler et écraser ces mercenaires. La Sérénissime se tourne vers les deux autres grandes puissances régionales qui ont tout à fait intérêt à voir disparaître cette menace : le Florentin Nerio Ier Acciaioli, qui a récemment conquis le duché d'Athènes, et le despote Théodore Ier Paléologue, gouverneur de la province byzantine de Morée (et propre frère de l'empereur de Constantinople).\n\nCette tentative d'alliance tripartite illustre le pragmatisme absolu de la diplomatie vénitienne, capable de s'allier simultanément à un seigneur italien et à un prince grec orthodoxe pour sécuriser ses routes marchandes.\n\nPaolo Foscari n'est pas un simple ambassadeur laïc de passage. Issu du grand patriciat vénitien, il est alors le puissant archevêque latin de Patras (en poste depuis 1375). À cette époque, l'archevêché de Patras est une véritable principauté séculière. Foscari utilise sa fonction ecclésiastique et ses ressources locales comme un relais direct de l'impérialisme vénitien dans le Péloponnèse.\n\nApparue dans les années 1370, cette compagnie (composée de Gascons et de Navarrais) opérait au départ pour le compte du roi Charles II de Navarre. Comme les Grandes Compagnies en France ou les condottières en Italie, elle s'est ensuite émancipée pour agir pour son propre compte en Grèce, vendant ses services au plus offrant ou rançonnant les seigneurs locaux.\n\nCette diplomatie byzantine, franque et vénitienne de 1393, obsédée par la menace mercenaire, est dramatiquement myope. Pendant que ces seigneurs chrétiens complotent les uns contre les autres pour le contrôle du Péloponnèse, le sultan ottoman Bayezid Ier (qui vient de soumettre la Bulgarie et la Serbie la même année) s'apprête à déferler sur la Grèce. L'Empire ottoman balayera d'ailleurs bientôt ces querelles locales en imposant sa propre domination sur la région.",
+    "image": "",
+    "themes": [
+      "guerre",
+      "diplomatie"
+    ],
+    "lat": 37.3634,
+    "lng": 22.2395
+  },
+  {
+    "id": 2291,
+    "titre": "Coup de force de l'archevêque Philippe III de Thurey, qui expulse les officiers royaux de Lyon",
+    "date": 1393,
+    "mois": 4,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "La ville de Lyon occupe une position juridique complexe à la fin du Moyen Âge. Historiquement terre d'Empire gouvernée par ses puissants archevêques (les Primats des Gaules), elle a été rattachée au Royaume de France au début du XIVe siècle (traité de Vienne, 1312). Depuis lors, une lutte sourde et constante oppose l'administration royale centralisatrice aux prérogatives féodales et judiciaires de l'archevêché.\n\nLe 3 avril 1393, l'archevêque Philippe III de Thurey décide de passer à l'offensive pour récupérer ses pleins pouvoirs de justice temporelle. Fort de l'appui diplomatique et canonique du pape d'Avignon, Clément VII (Robert de Genève), il émet des mandats formels d'expulsion. L'archevêque fait chasser manu militari le sénéchal du roi (le représentant direct de l'autorité de Charles VI) ainsi que tous ses députés et officiers de justice hors des murs de Lyon, réaffirmant brutalement l'indépendance de l'Église locale face à la Couronne.\nL'implication de Clément VII dans ce coup de force est particulièrement audacieuse. En pleine période du Grand Schisme d'Occident, le pape d'Avignon dépend presque entièrement du soutien financier et militaire du roi de France. En soutenant la rébellion de l'archevêque de Lyon contre les officiers de Charles VI, Clément VII joue un jeu diplomatique dangereux, cherchant à s'assurer la loyauté inébranlable du puissant clergé lyonnais, quitte à froisser la cour de Paris.\nCette victoire ecclésiastique fut de courte durée. Le pouvoir royal (alors tenu d'une main de fer par les oncles du roi suite à la folie de Charles VI) ne pouvait tolérer une telle humiliation. Le gouvernement royal ripostera en dépêchant des troupes, saisissant le temporel de l'archevêque et rétablissant définitivement l'autorité du sénéchal à Lyon, marquant la fin des illusions d'indépendance politique des archevêques lyonnais.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Lyon_5e_-_Mont%C3%A9e_Saint-Barth%C3%A9lemy_-_Vue_sur_la_cath%C3%A9drale_Saint-Jean.jpg/960px-Lyon_5e_-_Mont%C3%A9e_Saint-Barth%C3%A9lemy_-_Vue_sur_la_cath%C3%A9drale_Saint-Jean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "legende": "Vue sur la cathédrale Saint-Jean.",
+    "lat": 45.7578,
+    "lng": 4.832
+  },
+  {
+    "id": 2292,
+    "titre": "Arrivée d'une ambassade du royaume birman d'Ava à la cour impériale Ming",
+    "date": 1393,
+    "mois": 4,
+    "zones": [
+      "Orient",
+      "Chine"
+    ],
+    "type": 3,
+    "description": "En 1393, la Birmanie est déchirée par ce que les historiens appellent la « guerre de Quarante Ans » (1385-1424). Ce conflit d'usure oppose les deux grandes puissances régionales nées de l'éclatement du vieil empire de Pagan : le royaume d'Ava au nord (dominé par les Birmans) et le royaume d'Hanthawaddy au sud (dominé par les Môns, avec pour capitale Pegu). La première phase de ce conflit (souvent qualifiée de « guerre de six ans », de 1385-1386 à 1391-1392) a épuisé les deux camps sans faire émerger de vainqueur décisif, malgré plusieurs trêves fragiles.\n\nCherchant à briser l'impasse, le roi d'Ava, Swa Saw Ke (Mingyi Swasawke), tente une manœuvre diplomatique de grande envergure. Il envoie une délégation auprès de la superpuissance régionale : la Chine de la dynastie Ming. Le 14 avril 1393, l'ambassade birmane arrive à Nankin, la capitale impériale, et est reçue à la cour de l'empereur Zhu Yuanzhang (le fondateur de la dynastie, connu sous son nom de règne Hongwu).\n\nL'objectif de l'ambassade est clair : obtenir l'aide militaire ou l'arbitrage coercitif de la Chine pour soumettre Hanthawaddy. Cependant, la mission se solde par un échec politique. L'empereur Ming refuse catégoriquement de s'impliquer militairement dans ce conflit lointain.\n\nL'échec de cette ambassade illustre parfaitement la politique étrangère de l'empereur Hongwu. Soucieux de stabiliser son empire après avoir chassé les Mongols, Zhu Yuanzhang a formellement dressé une liste d'États voisins (dont ceux d'Asie du Sud-Est) contre lesquels la Chine ne devait jamais lancer d'expéditions militaires, les jugeant trop éloignés et coûteux à conquérir.\n\nPour la cour de Nankin, les royaumes birmans sont considérés comme des vassaux périphériques. L'empereur Ming accepte volontiers les présents (le tribut) de l'ambassade d'Ava, ce qui flatte la vanité impériale, mais il se contente en retour d'envoyer des édits moralisateurs ordonnant à Ava et Hanthawaddy de cesser leurs querelles, refusant de verser le sang chinois pour les ambitions territoriales de Swa Saw Ke. La guerre entre les deux royaumes birmans reprendra d'ailleurs de plus belle quelques années plus tard.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Map-of-southeast-asia_1400_CE-es.svg/960px-Map-of-southeast-asia_1400_CE-es.svg.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "themes": [
+      "diplomatie",
+      "atlas"
+    ],
+    "legende": "Carte de l'Asie du Sud est vers 1400",
+    "lat": 32.0438,
+    "lng": 118.7789
+  },
+  {
+    "id": 2293,
+    "titre": "Jean de Gand (duc d'Aquitaine) négocie une paix définitive avec le roi Henri III de Castille",
+    "date": 1393,
+    "mois": 4,
+    "zones": [
+      "Angleterre",
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Le 17 avril 1393, une importante mission diplomatique est lancée depuis les possessions anglaises du sud-ouest de la France afin de stabiliser les relations avec la péninsule Ibérique. Le duc d'Aquitaine dépêche deux de ses plus fidèles collaborateurs : le chevalier et militaire expérimenté Sir Walter Blount (qui s'était déjà illustré en Castille) et le juriste et ecclésiastique Henry Bowet (futur archevêque d'York).   Leur objectif est de négocier un traité de paix permanent avec le jeune roi Henri III de Castille (surnommé l'Infirme), qui a accédé au trône en 1390. Cette démarche s'inscrit dans la continuité du traité de Bayonne (1388), par lequel le duc d'Aquitaine avait renoncé à ses propres revendications sur la couronne castillane en échange du mariage de sa fille, Catherine de Lancastre, avec ce même Henri III. La mission de 1393 vise ainsi à consolider cette alliance dynastique par une paix politique et militaire durable entre l'Aquitaine sous domination anglaise et la Castille.\nSir Walter Blount, l'un des deux émissaires envoyés le 17 avril, connaîtra une fin tragique et littéraire. Resté un fervent partisan de la maison de Lancastre, il sera tué à la bataille de Shrewsbury en 1403 en servant de leurre (portant l'armure du roi Henri IV) pour protéger le souverain. Cet acte de bravoure lui vaudra d'être immortalisé par William Shakespeare dans sa célèbre pièce Henry IV.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 44.8412,
+    "lng": -0.58
+  },
+  {
+    "id": 2294,
+    "titre": "Répression de la révolte de Leyde",
+    "date": 1393,
+    "mois": 4,
+    "zones": [
+      "Flandre"
+    ],
+    "type": 3,
+    "description": "Répression d'un soulèvement urbain par le comte Albert Ier de Bavière, révocation des franchises locales et reprise en main du conseil de ville au profit de ses partisans.\n\nL'année 1393 est marquée dans les anciens Pays-Bas par une violente résurgence des « guerres des Crochets et des Cabillauds » (Hoekse en Kabeljauwse twisten). Ce conflit civil endémique, qui déchire le comté de Hollande depuis 1350, oppose deux factions : les « Crochets » (généralement soutenus par la noblesse conservatrice) et les « Cabillauds » (soutenus par la bourgeoisie des villes florissantes et favorables au pouvoir central du comte).\n\nLe conflit s'est brusquement rallumé en septembre 1392 avec l'assassinat à La Haye d'Aleid van Poelgeest, la jeune maîtresse du comte Albert Ier de Bavière, par des nobles de la faction des Crochets. Ivre de vengeance, le comte lance en 1393 une vaste campagne de répression contre les bastions et les partisans des Crochets à travers toute la Hollande.\n\nLa ville de Leyde, l'une des plus prospères du comté, est alors agitée par une révolte menée par des membres de l'élite locale et des guildes affiliés aux Crochets. Le 4 juin 1393, Albert Ier de Bavière met fin à la rébellion avec une grande fermeté. Il annule les promesses d'autonomie politique qu'il avait précédemment concédées à la faction des Crochets, purge l'administration municipale et nomme un nouveau conseil d'échevins (magistrats) exclusivement composé de Cabillauds qui lui sont fidèles.\n\nLa répression judiciaire est sévère mais révélatrice des pratiques de l'époque : de nombreux rebelles échappent à l'exécution mais sont condamnés au bannissement ou se voient infliger la peine du pèlerinage expiatoire obligatoire vers la Terre sainte (Moyen-Orient).\n\nRemarques : Si le mot néerlandais Kabeljauw désigne bien le même poisson, l'historiographie française a définitivement consacré l'expression « guerre des Crochets et des Cabillauds » (et non des Morues).\nLa condamnation à participer à un pèlerinage lointain (Jérusalem, Saint-Jacques-de-Compostelle ou Rome) est une spécificité pénale très courante dans le droit urbain des anciens Pays-Bas et du nord de la France au Moyen Âge. Elle permettait d'écarter physiquement les fauteurs de troubles de la cité pendant plusieurs mois, voire plusieurs années, tout en leur offrant une réhabilitation spirituelle (et en évitant de faire couler le sang de bourgeois influents).\nL'intervention d'Albert à Leyde illustre la véritable nature de ces guerres de factions. Derrière les querelles aristocratiques, l'enjeu politique majeur à la fin du XIVe siècle est le contrôle des conseils d'échevins dans ces cités drapières devenues de véritables puissances économiques régionales.",
+    "image": "",
+    "themes": [
+      "revolte"
+    ],
+    "lat": 52.1595,
+    "lng": 4.4909
+  },
+  {
+    "id": 2295,
+    "titre": "Ouverture de pourparlers diplomatiques entre la Lituanie et l'Ordre Teutonique à Torun",
+    "date": 1393,
+    "mois": 7,
+    "zones": [
+      "St Empire",
+      "Pologne"
+    ],
+    "type": 3,
+    "description": "Entre 1389 et 1392, le duché de Lituanie a été ravagé par une cruelle guerre civile opposant Vytautas (Vitold) à son cousin Ladislas II Jagellon (Jogaila), par ailleurs devenu roi de Pologne. Durant ce conflit, Vytautas s'était allié à l'Ordre Teutonique contre son propre cousin. Cependant, en août 1392, les deux cousins se réconcilient secrètement et signent le traité d'Ostrów : Vytautas obtient le pouvoir sur la Lituanie et, en échange, trahit brusquement ses alliés teutoniques en brûlant leurs forteresses.\n\nFous de rage face à cette trahison, les chevaliers Teutoniques reprennent immédiatement leurs violentes chevauchées (les Reysen) contre la Lituanie.\n\nC'est dans ce climat de tension extrême que s'ouvre la conférence de Thorn le 13 juillet 1393. Vytautas a un besoin vital de pacifier sa frontière occidentale avec les chevaliers. Son ambition géopolitique est en effet tournée vers l'Est et le Sud : il souhaite conquérir les vastes territoires russes et affronter la Horde d'Or tartare. Il envoie donc des émissaires à Thorn pour tenter de négocier une trêve avec le grand maître de l'Ordre, Konrad von Wallenrode. Bien que ces tractations n'aboutissent pas immédiatement à une paix définitive (le conflit larvé avec l'Ordre se poursuivra jusqu'au traité de Salynas en 1398, puis jusqu'à la bataille de Grunwald en 1410), elles marquent le début d'un complexe jeu diplomatique où Vytautas tente de neutraliser la menace teutonique par la négociation.\nEn 1393, la ville de Thorn (Toruń) ne fait pas partie du Saint-Empire romain germanique. Elle appartient à l'État monastique des chevaliers Teutoniques (Ordensstaat), une entité théocratique souveraine et indépendante, située en Prusse, hors des frontières juridiques de l'Empire (bien que l'Ordre soit culturellement et politiquement lié au monde germanique).\nDepuis le pacte d'Ostrów de 1392, Vytautas porte officiellement le titre de Grand-duc de Lituanie (Magnus Dux Lituaniae). Son cousin Ladislas II Jagellon, roi de Pologne, conserve certes une autorité de suzeraineté sous le titre inédit de « Duc suprême » (Supremus Dux), mais dans les faits, Vytautas gouverne la Lituanie en souverain quasi absolu et mène sa propre politique étrangère, comme l'illustre cette conférence.\n23 juillet – Konrad von Wallenrode , Grand Maître des Chevaliers Teutoniques depuis 1391, meurt d'une attaque cérébrale dix jours après avoir ouvert une conférence de paix à Thorn.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 53.0145,
+    "lng": 18.5966
+  },
+  {
+    "id": 2296,
+    "titre": "Les Cortes (états généraux) déclarent la majorité du roi Henri III, entraînant la dissolution du Conseil de régence",
+    "date": 1393,
+    "mois": 8,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "L'accession au trône de la Couronne de Castille d'Henri III (Enrique III) s'était faite dans des circonstances tragiques : son père, Jean Ier (Juan I), s'était tué d'une chute de cheval en octobre 1390. Henri n'ayant alors que onze ans, le royaume avait été placé sous l'autorité d'un Conseil de régence. Cette période de minorité (1390-1393) s'était révélée désastreuse pour l'État. Le Conseil fut rapidement paralysé par les luttes de pouvoir féroces entre la haute noblesse (notamment les princes de la dynastie des Trastamare), le haut clergé (comme l'archevêque de Tolède) et les représentants des villes, plongeant la Castille dans l'anarchie.\n\nPour mettre fin à ce chaos institutionnel, les Cortes réunies à Madrid décident d'anticiper la majorité légale du jeune roi. Le 2 août 1393, à l'âge de 13 ans (à quelques mois de son quatorzième anniversaire), Henri III assume officiellement la plénitude du pouvoir royal. Il renvoie immédiatement les régents qui s'étaient disputé le royaume.\n\nMalgré son très jeune âge et une santé extrêmement fragile, le nouveau monarque va se révéler être un souverain énergique et autoritaire. Son premier objectif sera de pacifier le pays, de restaurer les finances royales pillées durant sa minorité, et de briser l'influence de cette aristocratie turbulente.\nLe surnom d'Henri III, El Doliente (le Maladif, ou le Souffreteux), lui vient de ses nombreuses maladies chroniques (qui l'emporteront d'ailleurs prématurément à 27 ans). Il est cependant essentiel de noter que ce handicap physique contraste totalement avec sa vigueur politique. Il fut l'un des rois les plus actifs de sa dynastie, relançant même l'expansion outre-mer\nLa prise de pouvoir d'Henri III en 1393 permet d'éclairer un événement antérieur. Si les effroyables pogroms anti-juifs de 1391 (qui ont frappé Séville puis toute l'Espagne, forçant l'intervention d'Hasdaï Crescas en Aragon) ont pu prendre une telle ampleur en Castille, c'est précisément parce que le Conseil de régence, faible et divisé, s'est montré totalement incapable de maintenir l'ordre public face aux prédicateurs fanatiques. La majorité du roi marque le retour à un semblant d'autorité étatique.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 40.4168,
+    "lng": -3.7035
+  },
+  {
+    "id": 2297,
+    "titre": "Mariage de Léopold IV de Habsbourg (duc d'Autriche antérieure) et de Catherine de Bourgogne.",
+    "date": 1393,
+    "mois": 8,
+    "zones": [
+      "France",
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "15 août – Léopold IV, duc d'Autriche, épouse Catherine de Bourgogne , fille de Philippe le Téméraire , duc de Bourgogne.\nLe 15 août 1393 marque l'aboutissement concret d'une longue tractation diplomatique entre deux des plus puissantes maisons d'Europe : la maison de Valois-Bourgogne et la maison de Habsbourg. Les fiançailles et le traité de mariage avaient en réalité été conclus dès septembre 1387. Cependant, en raison du jeune âge de la mariée (Catherine est née en 1378), son départ pour la cour d'Autriche et la célébration définitive des noces ont été repoussés à l'été 1393, alors qu'elle atteint l'âge de 15 ans.   Ce mariage répond à une stratégie géopolitique précise de la part du duché de Bourgogne. En mariant sa fille à Léopold IV (qui administre notamment le Tyrol et les possessions antérieures des Habsbourg, proches de l'Alsace et de la Franche-Comté), le duc de Bourgogne cherche à sécuriser ses frontières orientales, à neutraliser d'éventuelles alliances hostiles au sein du Saint-Empire et à consolider son influence sur l'échiquier européen.   L'union restera cependant stérile. À la mort de Léopold IV en 1411, Catherine de Bourgogne, veuve et sans enfant, se retirera en Alsace avant de se remarier quelques années plus tard.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Leopold_IV%2C_Duke_of_Austria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "Léopold IV, duc d'Autriche",
+    "lat": 48.2084,
+    "lng": 16.3725
+  },
+  {
+    "id": 2298,
+    "titre": "Offensive politico-religieuse contre le mouvement lollard",
+    "date": 1393,
+    "mois": 9,
+    "zones": [
+      "Angleterre"
+    ],
+    "type": 4,
+    "description": "Offensive politico-religieuse contre le mouvement lollard, marquée par la commission militaire de Sir Walter Devereux et le procès pour hérésie du théologien laïc Walter Brut devant l'évêque de Hereford.\nÀ la fin du XIVe siècle, l'Église anglaise est défiée par les Lollards, un mouvement réformateur inspiré par les thèses du théologien John Wycliffe (mort en 1384). Les Lollards traduisent la Bible en anglais, rejettent l'autorité papale, critiquent l'Eucharistie et dénoncent la richesse du clergé. Dans la région frontalière des Marches galloises (diocèse de Hereford), ce mouvement trouve un porte-parole exceptionnel en la personne de Walter Brut, un laïc lettré (et non un simple paysan), diplômé de l'Université d'Oxford.\n\nFace à la popularité grandissante des prêches lollards dans cette région, le pouvoir séculier et le pouvoir ecclésiastique unissent leurs forces. Le 13 septembre 1393, le roi Richard II émet un mandat commissionnant Sir Walter Devereux, un chevalier influent de la région, pour arrêter les prédicateurs hérétiques et disperser leurs rassemblements illégaux.\n\nParallèlement, la justice ecclésiastique se met en marche. Walter Brut est convoqué devant le tribunal de Thomas Trefnant, évêque de Hereford. Loin de se dérober, Brut produit pour sa défense un immense manifeste théologique en latin, dans lequel il va jusqu'à défendre le droit des femmes à prêcher et à administrer les sacrements. Le procès culmine le 3 octobre 1393. Sous l'immense pression du tribunal, Walter Brut finit par capituler publiquement à la croix du cimetière de la cathédrale de Hereford.\nIl est inexact sur le plan du droit canonique de dire que Walter Brut a été « acquitté ». Il a en réalité abjuré ses erreurs (ou fait une soumission conditionnelle). L'acquittement signifierait que l'Église l'a reconnu innocent. Or, en 1393, l'objectif des tribunaux ecclésiastiques anglais n'était pas de brûler les hérétiques (la loi de mort De heretico comburendo ne sera votée qu'en 1401), mais d'obtenir leur rétractation publique et de leur imposer une pénitence pour les réintégrer. Sa soumission du 3 octobre lui a simplement sauvé la vie.\nL'originalité de Walter Brut : Sa défense écrite de 1393 est un document précieux pour les historiens. L'argumentation de Brut sur l'égalité spirituelle radicale — affirmant que si les prêtres échouent dans leur mission, les laïcs, y compris les femmes, ont l'autorité divine pour les remplacer — en fait l'un des penseurs les plus radicaux de la pré-Réforme anglaise.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Hereford-England--Cathedral--May-1991.jpg/960px-Hereford-England--Cathedral--May-1991.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "religion",
+      "revolte",
+      "politique"
+    ],
+    "legende": "La cathédrale de Hereford",
+    "lat": 52.0554,
+    "lng": -2.7152
+  },
+  {
+    "id": 2299,
+    "titre": "Konrad von Jungingen e 25e Grand Maître (Hochmeister) de l'Ordre Teutonique",
+    "date": 1393,
+    "mois": 11,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 4,
+    "description": "Le 23 juillet 1393, le Grand Maître Konrad von Wallenrode meurt subitement, quelques jours seulement après l'ouverture de la conférence de paix de Thorn (abordée dans votre fiche précédente) avec le Lituanien Vytautas. Cette disparition laisse l'État monastique sans chef militaire et diplomatique face à la menace grandissante de l'union polono-lituanienne.\n\nAprès une vacance du pouvoir de plusieurs mois, le chapitre général de l'Ordre (Generalkapitel) se réunit à la forteresse de Marienbourg, le siège de l'État. Le 30 novembre 1393, les grands dignitaires élisent Konrad von Jungingen pour lui succéder. Contrairement à son prédécesseur, réputé pour sa brutalité et ses expéditions militaires frontales contre la Lituanie, Konrad von Jungingen est d'abord un administrateur et un diplomate hors pair.\n\nSon élection inaugure ce que l'historiographie considère comme l'« Âge d'or » de l'État teutonique. Sous son mandat, l'Ordre va atteindre son extension territoriale maximale. Il parviendra notamment à pacifier temporairement la frontière lituanienne (traité de Salynas en 1398), à racheter la Nouvelle-Marche (Neumark) au Brandebourg, et même à chasser les pirates des îles de la mer Baltique (prise de Gotland en 1398).\nLe règne de Konrad von Jungingen (1393-1407) est souvent mis en opposition avec celui de son propre frère, Ulrich von Jungingen, qui lui succédera. Sur son lit de mort en 1407, Konrad aurait d'ailleurs supplié les dignitaires de l'Ordre de ne pas élire son frère, le jugeant trop belliqueux. L'histoire lui donnera raison : c'est Ulrich qui, par son agressivité, entraînera l'Ordre dans la désastreuse défaite de Grunwald (Tannenberg) en 1410 face aux Polono-Lituaniens, marquant le début du déclin irrémédiable des chevaliers Teutoniques.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Wg_jungingen.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "politique"
+    ],
+    "legende": "Ordre Teutonique - Armoiries du Grand Maître Konrad et Ulrich von Jungingen",
+    "lat": 54.0287,
+    "lng": 19.0394
+  },
+  {
+    "id": 2300,
+    "titre": "Prise de Takrit par Tamerlan",
+    "date": 1393,
+    "mois": 12,
+    "zones": [
+      "Monde islamique",
+      "Orient"
+    ],
+    "type": 4,
+    "description": "Chute et destruction de la citadelle imprenable de Takrit après un siège de trois semaines par l'armée de Timur.\nÀ la fin de l'année 1393, le conquérant turco-mongol Timur (Tamerlan) poursuit sa vaste campagne militaire de « cinq ans » à travers le Moyen-Orient. Après avoir soumis Bagdad quelques mois plus tôt, son armée remonte le cours du Tigre et s'attaque à la forteresse de Takrit.Cette place forte est alors réputée inexpugnable en raison de son emplacement, perchée sur un promontoire rocheux surplombant le fleuve, et de ses défenses naturelles. Les chroniques persanes contemporaines la décrivent comme un repaire de bandits de grand chemin qui rançonnaient les caravanes régionales. Timur s'en sert comme prétexte moral pour justifier son siège, se présentant en restaurateur de l'ordre public et en protecteur des routes commerciales.   Malgré une résistance féroce et la difficulté de saper les fondations rocheuses, la technologie de siège timouride finit par avoir raison des murs de la cité. La ville tombe le 11 décembre 1393. La répression est implacable : la forteresse est entièrement rasée et, fidèle à sa pratique de terreur militaire, Timur fait exécuter les défenseurs pour ériger des pyramides avec leurs crânes, servant d'avertissement macabre aux régions voisines.\nL'essentiel des détails contemporains sur la prise de Takrit provient des historiens de la cour timouride, comme Sharaf al-Din Ali Yazdi dans son Zafarnama (Livre des Victoires). La qualification de « forteresse de bandits » doit être lue avec une certaine prudence, car il s'agit d'un argument classique de la propagande impériale visant à dé-légitimer un pouvoir local qui refuse de se soumettre.\nLa destruction totale de la citadelle ne répond pas qu'à une volonté punitive. Contrairement à d'autres empires qui cherchaient à occuper chaque forteresse, Timur préférait raser les places fortes isolées pour ne pas avoir à y immobiliser des garnisons. Cela nivelait militairement le territoire et empêchait de futures rébellions de s'y retrancher.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Timur_takes_Baghdad_in_August_1401._Zafarnama_of_1436._Facing_folios_346v_%28left%29_345r_%28right%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "themes": [
+      "guerre"
+    ],
+    "legende": "Timur prend Bagdad en août 1401. Zafarnama de 1436. Face aux folios 346v (gauche) 345r (droite) Référence : Sims, E. G. (1991) : Ibrahim-Sultan's Illustrated Zafar-nameh of 839/1436. Art islamique 4, pp. 175-217",
+    "lat": 34.6158,
+    "lng": 43.6786
+  },
+  {
+    "id": 2301,
+    "titre": "Mission commerciale javanaise en Chine",
+    "date": 1393,
+    "mois": 12,
+    "zones": [
+      "Orient",
+      "Chine"
+    ],
+    "type": 4,
+    "description": "Arrivée d'une ambassade et de marchands javanais à la cour impériale pour officialiser des relations commerciales maritimes directes avec l'Empire Ming.\n\nLa date du 26 décembre 1393 marque une étape importante dans l'histoire des relations maritimes en Asie du Sud-Est. Une délégation de marchands et d'émissaires originaires de l'île de Java (alors divisée entre plusieurs royaumes, dont le puissant empire hindou-bouddhiste de Majapahit) arrive à Nankin pour se présenter devant l'empereur Hongwu.\n\nIl ne s'agit pas d'un simple échange de marchandises privées, mais d'une ambassade officielle s'inscrivant dans le système du tribut (tribute system) mis en place par la dynastie Ming. Java cherche à s'assurer des accords commerciaux officiels et à légitimer son influence maritime dans l'archipel, tandis que l'empereur de Chine y voit une reconnaissance de sa suprématie cosmique et politique. Cet événement illustre l'ouverture progressive de la Chine Ming vers les routes maritimes de l'océan Indien et des mers du Sud, bien avant les célèbres expéditions de Zheng He au début du XVe siècle.\nÀ cette époque (fin du XIVe siècle), l'île de Java est dominée par l'empire de Majapahit, l'une des thalassocraties les plus puissantes de l'Asie du Sud-Est maritime. Ses flottes dominent le commerce des épices (girofle, muscade) et contrôlent les détroits stratégiques de Malacca et de la Sonde.\nS'il s'agit d'une date clé enregistrée dans les chroniques officielles des Ming pour officialiser les liens directs de cette période, le commerce entre Java et la Chine était en réalité très ancien et ancré dans les réseaux marchands de l'océan Indien depuis des siècles. L'apport des Ming est de le canaliser strictement à travers le cadre rigide des ambassades tributaires pour contrôler la contrebande et affirmer le monopole impérial.",
+    "image": "",
+    "themes": [
+      "economie",
+      "diplomatie"
+    ],
+    "lat": -7.328,
+    "lng": 109.6139
   },
   {
     "id": 163,
@@ -34880,6 +35729,24 @@
     ],
     "lat": 41.0064,
     "lng": 28.9759
+  },
+  {
+    "id": 2277,
+    "titre": "Capture et emprisonnement du roi Venceslas IV par la Ligue des seigneurs de Bohême",
+    "date": 1394,
+    "mois": 5,
+    "zones": [
+      "St Empire"
+    ],
+    "type": 3,
+    "description": "Au printemps 1394, le mécontentement de la haute noblesse de Bohême atteint un point de rupture. Le roi Venceslas IV s'est aliéné les élites traditionnelles du royaume en confiant les postes clés de l'administration à des membres de la petite noblesse (ses favoris) et en menant une politique perçue comme erratique et brutale. Le conflit avec l'Église, qui a culminé l'année précédente avec la torture et l'exécution de Jean de Pomuk (futur saint Jean Népomucène) et la fuite de l'archevêque de Prague, a fini de discréditer le souverain.\n\nProfitant de cette faiblesse, les membres les plus puissants de l'aristocratie s'unissent au sein de l'Union seigneuriale (Panská jednota). Ils trouvent un chef de file naturel en la personne du propre cousin du roi, l'ambitieux margrave Josse de Moravie (Jobst). Le 8 mai 1394, alors que Venceslas retourne vers Prague, il est intercepté et arrêté à Beroun par les nobles ligués.\n\nPrivé de sa liberté, le souverain est d'abord enfermé au château de Prague, puis déplacé de forteresse en forteresse pour éviter qu'il ne soit secouru par ses partisans, terminant sa captivité au château de Wildberg en Haute-Autriche. Pendant ce temps, Josse de Moravie se fait nommer administrateur du royaume et s'empare des rênes du pouvoir avec l'appui de l'Union seigneuriale.\n\nCependant, le coup d'État n'est pas total. Le demi-frère cadet de Venceslas, le duc Jean de Görlitz, lève une armée loyaliste pour libérer le roi. Face à la menace d'une guerre civile totale, un compromis est négocié. Venceslas IV est libéré le 2 août 1394, mais au prix d'une sévère humiliation politique : il est contraint de pardonner à ses ravisseurs, d'accepter les exigences de la haute noblesse et de nommer Josse de Moravie à des postes d'influence. Cette libération n'est qu'une trêve ; elle inaugure une décennie de chaos dynastique qui mènera finalement à la destitution de Venceslas du trône du Saint-Empire en 1400.\n\nBien qu'il ait été roi de Bohême et élu « roi des Romains » (le titre préparatoire à la dignité impériale), Venceslas IV n'a jamais été couronné empereur du Saint-Empire romain germanique par le pape (contrairement à son père Charles IV ou, plus tard, à son frère Sigismund). L'historiographie rigoureuse le désigne donc comme le roi des Romains ou le roi de Bohême",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Bible_Vaclav4_1.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "revolte"
+    ],
+    "legende": "Le roi Venceslas. Illustration tirée de la Bible de Venceslas , vers 1398/1395.",
+    "lat": 49.964,
+    "lng": 14.0734
   },
   {
     "id": 902,
@@ -35004,6 +35871,45 @@
     ],
     "lat": 43.9857,
     "lng": 22.8772
+  },
+  {
+    "id": 2279,
+    "titre": "Entrevue d'Ardres et la trêve de 28 ans",
+    "date": 1396,
+    "mois": 10,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Rencontre au sommet entre Charles VI et Richard II, et ratification solennelle d'une trêve de longue durée.\nFin octobre 1396, le patient travail diplomatique amorcé à Leulinghem (prolongé en 1393) trouve son aboutissement spectaculaire. Les rois Charles VI de France et Richard II d'Angleterre se rencontrent personnellement lors d'un sommet fastueux organisé à la frontière de l'enclave anglaise de Calais, entre les bourgades de Guînes et d'Ardres. Cet événement est d'une portée majeure : c'est la première fois depuis des décennies que les souverains des deux royaumes ennemis se retrouvent face à face dans un climat pacifique.\n\nLe 27 octobre, sous des tentes richement décorées, les deux monarques jurent solennellement de respecter une trêve d'une durée exceptionnelle de 28 ans. Cet accord diplomatique gèle le conflit de la guerre de Cent Ans et consacre un statu quo territorial. Pour Charles VI, cette paix permet de soulager le royaume, toujours politiquement instable en raison de ses accès de folie. Pour Richard II, résolument francophile, ce succès diplomatique doit lui permettre de se concentrer sur la soumission de son aristocratie turbulente et de ses opposants internes en Angleterre.\nBien que ce sommet se tienne près d'Ardres, les historiens englobent souvent cet accord sous le nom générique de « Trêve de Leulinghem » (ou parfois trêve de Paris, où les clauses avaient été pré-négociées en mars 1396). L'événement du 27 octobre est la ratification et la célébration majestueuse de ce long processus diplomatique.\nCette entrevue est célèbre pour son incroyable luxe (tentes en velours, banquets somptueux, échanges de cadeaux hors de prix), conçu pour étaler la puissance des deux couronnes. Cette débauche de richesses préfigure, à une échelle moindre, la célèbre entrevue du Camp du Drap d'Or qui aura lieu un siècle plus tard (en 1520) exactement dans la même région.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 50.8536,
+    "lng": 1.9786,
+    "serie": "Guerre de Cent ans"
+  },
+  {
+    "id": 2280,
+    "titre": "Mariage entre le roi Richard II d'Angleterre et la princesse Isabelle de France",
+    "date": 1396,
+    "mois": 11,
+    "zones": [
+      "France",
+      "Angleterre"
+    ],
+    "type": 3,
+    "description": "Pour garantir la solidité de la trêve fraîchement ratifiée à Ardres, les deux monarchies scellent l'accord par une alliance matrimoniale du plus haut niveau. Le 4 novembre 1396, le roi Richard II d'Angleterre épouse Isabelle de Valois (également appelée Isabelle de France), la fille aînée du roi Charles VI et d'Isabeau de Bavière, lors d'une cérémonie grandiose célébrée à Calais.\n\nCette union est strictement politique. Richard II, veuf de sa première épouse (Anne de Bohême) depuis 1394, est alors âgé de 29 ans. Isabelle, née en novembre 1389, n'est encore qu'une enfant et s'apprête tout juste à fêter ses 7 ans. À l'issue des festivités calaisiennes, la toute jeune reine traverse la Manche pour s'installer à la cour d'Angleterre, emportant avec elle une dot considérable. Elle s'attirera d'ailleurs rapidement l'affection de la cour et de son époux, qui lui rendra de fréquentes visites et la traitera avec un grand respect malgré l'absence évidente de consommation du mariage.\nSi cette union visait à consolider la paix jusqu'en 1424, elle sera de très courte durée. Dès 1399, Richard II est renversé par son cousin Henri de Lancastre (le futur Henri IV) et meurt en captivité l'année suivante.\nÀ la mort de Richard, Isabelle se retrouve reine douairière d'Angleterre à seulement 10 ans. Le nouveau roi usurpateur, Henri IV, tente de la remarier à son propre fils (le futur Henri V) pour légitimer sa dynastie et conserver la riche dot. La cour de France refuse catégoriquement. Isabelle, faisant preuve d'une grande fermeté pour son âge, s'y opposera également et finira par être rapatriée en France en 1401, devenant un symbole tragique de l'échec de la pacification franco-anglaise.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Richard_II_et_Isabelle_de_France_en_1396.jpg/960px-Richard_II_et_Isabelle_de_France_en_1396.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "Charles VI et sa fille Isabelle promise à Richard II d'Angleterre (1396). Enluminure du XVe siècle réalisée pour les Chroniques de Jean Froissart, BnF, ms. Français 2646, folio 245 verso.",
+    "lat": 50.9525,
+    "lng": 1.8538,
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 951,
