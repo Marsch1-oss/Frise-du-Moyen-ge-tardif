@@ -1965,15 +1965,21 @@
     <button class="ctrl-nav-btn pb-nav" id="btn-next" onclick="navigatePeriod(1)" style="display:none;" title="P&eacute;riode suivante">P&eacute;riode suivante &rarr;</button>
     <!-- Affichage / niveau de détail : 2e ligne du bandeau, au même niveau que
          les commandes Période préc./suiv. — comme #ctx-bar .ctx-level de carte.html. -->
-    <div id="detail-bar" style="display:none;">
+  <div id="detail-bar" style="display:none;">
       <span class="detail-title">&#128270; Affichage&nbsp;:</span>
       <button class="detail-btn" data-level="1" onclick="setDetailLevel(1)" title="Type 2 uniquement — événements Siècle">Si&egrave;cle</button>
       <button class="detail-btn active" data-level="2" onclick="setDetailLevel(2)" title="Types 2 et 3 — événements importants">Important</button>
       <button class="detail-btn" data-level="3" onclick="setDetailLevel(3)" title="Types 2, 3 et 4 — vue détaillée">D&eacute;taill&eacute;</button>
       <button class="detail-btn" data-level="4" onclick="setDetailLevel(4)" title="Tous les types — vue complète">Complet</button>
-      <!-- NOUVEAU BOUTON AJOUTÉ ICI -->
+      
       <span class="nav-sep" style="height: 1.2rem; margin: 0 0.2rem;"></span>
-      <button class="detail-btn" id="btn-toggle-panel" onclick="toggleFrisePanel()" title="Afficher la liste en vis-à-vis">&#9776; Liste</button>
+      
+      <!-- Premier bouton : La grande liste en plein écran -->
+      <button class="detail-btn" id="btn-list" onclick="openEventList()">&#9776; Liste</button>
+      
+      <!-- Deuxième bouton : Le panneau latéral -->
+      <button class="detail-btn" id="btn-toggle-panel" onclick="toggleFrisePanel()" title="Afficher la liste en vis-à-vis">&#9776; Liste lat&eacute;rale</button>
+      
       <span class="detail-hint" id="detail-hint"></span>
     </div>
   </div>
@@ -2053,8 +2059,7 @@
   <div class="control-bar">
     <span id="decade-label" class="period-label"></span>
     <button class="ctrl-nav-btn" id="btn-other" onclick="openPeriodPicker()" style="display:none;" title="Choisir une autre p&eacute;riode">&#128197; Autres p&eacute;riodes</button>
-    <button class="ctrl-list-btn" id="btn-list" onclick="openEventList()">&#9776; Liste des &eacute;v&eacute;nements</button>
-    <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="L&eacute;gende et tri th&eacute;matique">&#127991; L&eacute;gende &ndash; tri th&eacute;matique</button>
+        <button class="ctrl-legend-btn" id="btn-legend" onclick="toggleThemeLegend()" title="L&eacute;gende et tri th&eacute;matique">&#127991; L&eacute;gende &ndash; tri th&eacute;matique</button>
     <label class="zoom-ctrl" title="Niveau de zoom d'affichage de la frise (mémorisé sur cet appareil)">&#128270;
       <select id="zoom-select" onchange="applyFriseZoom(this.value)">
         <option value="1">100&#8201;%</option>
