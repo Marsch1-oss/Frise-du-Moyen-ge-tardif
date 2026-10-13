@@ -343,7 +343,7 @@ function resetForm() {
   wpReset();
   trReset();
   document.getElementById('btn-delete').style.display = 'none';
-  renderList();
+  ;
 }
 
 function saveEvent() {
@@ -439,6 +439,7 @@ function renderNoThemeList() {
 
 function renderList() {
   refreshNoTheme();
+  refreshNoDesc();
   geoTodoRefresh();
   var q = (document.getElementById('search-input').value || '').toLowerCase();
   var filtered = events.filter(function(e) {
@@ -2401,3 +2402,59 @@ updateJSON();
 refreshDirtyUI();
 showOpenReminder();
 wdInit();
+
+/* ==================================================================== */
+/* LISTE DES FICHES SANS DESCRIPTION                                    */
+/* ==================================================================== */
+function getNoDescEvents() {
+  return events.filter(function(e) {
+    // On cherche toutes les fiches dont la description est vide (y compris les règnes)
+    return !(e.description || '').trim();
+  }).slice().sort(function(a, b) { return a.date - b.date; });
+}
+
+function refreshNoDesc() {
+  var c = document.getElementById('no-desc-count');
+  if (c) c.textContent = getNoDescEvents().length;
+  var box = document.getElementById('no-desc-list');
+  if (box && box.style.display === 'block') renderNoDescList();
+}
+
+function toggleNoDescList() {
+  var box   = document.getElementById('no-desc-list');
+  var caret = document.getElementById('no-desc-caret');
+  if (!box) return;
+  if (box.style.display === 'block') {
+    box.style.display = 'none';
+    if (caret) caret.style.transform = '';
+  } else {
+    renderNoDescList();
+    box.style.display = 'block';
+    if (caret) caret.style.transform = 'rotate(90deg)';
+  }
+}
+
+function renderNoDescList() {
+  var box = document.getElementById('no-desc-list');
+  if (!box) return;
+  var list = getNoDescEvents();
+  box.innerHTML = '';
+  if (list.length === 0) {
+    box.innerHTML = '<div class="no-theme-empty">Toutes les fiches ont une description !</div>';
+    return;
+  }
+  list.forEach(function(e) {
+    var it = document.createElement('div');
+    it.className = 'no-theme-item';
+    var zones = (e.zones || []).join(', ');
+    it.textContent = e.date + ' \u2014 ' + (e.titre || '') + (zones ? '  (' + zones + ')' : '');
+    it.title = 'Ouvrir la fiche #' + e.id;
+    it.addEventListener('click', function() {
+      fillForm(e);
+      // Fait défiler la page pour centrer sur la description
+      var f = document.getElementById('f-desc');
+      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    box.appendChild(it);
+  });
+}
