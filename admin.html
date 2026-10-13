@@ -248,6 +248,14 @@
         <div class="field">
           <label>Description</label>
           <textarea id="f-desc" placeholder="Texte de la fiche événement..."></textarea>
+          <!-- DÉBUT DE L'AJOUT : Liste sans description -->
+          <div id="no-desc-block" style="margin-top: 0.6rem;">
+            <button type="button" id="no-desc-toggle" class="no-theme-toggle" style="border-color: #1A4A6B; color: #1A4A6B;" onclick="toggleNoDescList()">
+              &#128203; Fiches sans description (<span id="no-desc-count">0</span>) <span id="no-desc-caret" style="float: right; transition: transform .15s;">&#9656;</span>
+            </button>
+            <div id="no-desc-list" class="no-theme-list" style="display:none; border-color: #b8c8d4; background: #FBFDFE;"></div>
+          </div>
+          <!-- FIN DE L'AJOUT -->
           <div style="background:#eaf0f4;border:2px solid #1A4A6B;border-radius:8px;padding:0.6rem;margin-top:0.5rem;">
             <label style="font-weight:700;color:#1A4A6B;">&#128196; Wikip&eacute;dia <small style="font-weight:400;color:#777;">(introduction de l'article correspondant &mdash; facultatif)</small></label>
             <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
