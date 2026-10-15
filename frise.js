@@ -2,21 +2,22 @@
 /* frise.js — Frise chronologique medievale 1300-1500 — 2026-07-14 : fil d'Ariane retiré + THEME_KEYWORDS synchronisé (art) + barre Affichage remontée dans le bandeau */
 
 var ZONES = [
- 'Europe', 'France', 'Angleterre', 'St Empire',
+  'Europe', 'France', 'Angleterre', 'St Empire',
   'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre',
   'Scandinavie', 'Pologne', 'Russie',
   'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans',
-  'Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde',
-  'Afrique', 'Amerique', 'Monde'
+  'Monde islamique', 'Orient', 'Mesopotamie', 'Asie centrale', 'Inde', 'Asie du Sud-Est', 'Chine', 'Japon',
+  'Afrique', 'Afrique du Nord', 'Egypte', 'Amerique', 'Monde'
 ];
 
 var ZONES_GROUPS = {
-'Continents': ['Europe', 'Afrique', 'Amerique', 'Monde'],
-  'Europe occidentale': ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
-  'Europe du Nord':     ['Scandinavie'],
-  'Europe orientale':   ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
-  'Asie & Islam':       ['Monde islamique', 'Orient', 'Japon', 'Chine', 'Inde'],
-   };
+  'Continents':          ['Europe', 'Afrique', 'Amerique', 'Monde'],
+  'Europe occidentale':  ['France', 'Angleterre', 'St Empire', 'Naples', 'Italie', 'Castille', 'Aragon', 'Portugal', 'Papaute', 'Alsace', 'Flandre'],
+  'Europe du Nord':      ['Scandinavie'],
+  'Europe orientale':    ['Pologne', 'Russie', 'Hongrie', 'Europe C. & Or.', 'Byzance', 'Ottomans'],
+  'Asie & Islam':        ['Monde islamique', 'Orient', 'Mesopotamie', 'Asie centrale', 'Inde', 'Asie du Sud-Est', 'Chine', 'Japon'],
+  'Afrique':             ['Afrique du Nord', 'Egypte']
+};
 
 var COLORS = {
 'Europe':              { bg: '#3B5998', light: '#E8ECF5', text: '#1A2A5A' },
@@ -51,6 +52,12 @@ var COLORS = {
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
   'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
+/* Nouvelles zones */
+  'Afrique du Nord':     { bg: '#A65E2E', light: '#F7E8DC', text: '#5C3014' },
+  'Egypte':              { bg: '#B8860B', light: '#FAF0D2', text: '#5C4305' },
+  'Mesopotamie':         { bg: '#7A3E10', light: '#F5E4D6', text: '#452208' },
+  'Asie centrale':       { bg: '#5C6B28', light: '#ECF0DC', text: '#323B14' },
+  'Asie du Sud-Est':     { bg: '#2E6B5E', light: '#DCF0EC', text: '#173830' }
 };
 
 var ZONE_ALIASES = {
@@ -83,6 +90,13 @@ var ZONE_ALIASES = {
   'Amérique':            'Amerique',
   'America':             'Amerique',
   'Africa':              'Afrique'
+/* Alias pour les nouvelles zones */
+  'Égypte':              'Egypte',
+  'Mésopotamie':         'Mesopotamie',
+  'Asie du Sud est':     'Asie du Sud-Est',
+  'Asie du Sud-est':     'Asie du Sud-Est',
+  'Asie du sud-est':     'Asie du Sud-Est',
+  'Asie Centrale':       'Asie centrale'
 };
 
 /* --- NOUVEAU CODE : GESTION DE LA ZONE EUROPE --- */
