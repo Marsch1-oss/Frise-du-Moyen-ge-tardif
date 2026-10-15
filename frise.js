@@ -51,7 +51,7 @@ var COLORS = {
   'Litterature':         { bg: '#2A5C2A', light: '#E0F0E0', text: '#163316' },
   'Scandinavie':         { bg: '#2A4A6B', light: '#DCE8F5', text: '#162B40' },
   'Afrique':             { bg: '#7A4A10', light: '#F5EAD8', text: '#4A2A08' },
-  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' }
+  'Amerique':            { bg: '#2A6B4A', light: '#D8F0E8', text: '#163A28' },
 /* Nouvelles zones */
   'Afrique du Nord':     { bg: '#A65E2E', light: '#F7E8DC', text: '#5C3014' },
   'Egypte':              { bg: '#B8860B', light: '#FAF0D2', text: '#5C4305' },
@@ -89,7 +89,7 @@ var ZONE_ALIASES = {
   'Literature':          'Litterature',
   'Amérique':            'Amerique',
   'America':             'Amerique',
-  'Africa':              'Afrique'
+  'Africa':              'Afrique',
 /* Alias pour les nouvelles zones */
   'Égypte':              'Egypte',
   'Mésopotamie':         'Mesopotamie',
