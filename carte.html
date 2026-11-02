@@ -1815,25 +1815,15 @@ function renderMap(){
   }
 
   var anyDot=false, totalRegion=0;
-  /* Mode Parcours : l'itinéraire prime sur tout le reste (région, période,
-     thèmes). Les étapes géolocalisées sont numérotées dans l'ordre
-     chronologique — même rendu que le drill-down de zone (renderLocatedPoints
-     numbered:true, donc éclatement automatique des lieux confondus) — et
-     reliées par un tracé en pointillés dans ce même ordre. La numérotation
-     couvre TOUTES les étapes (localisées ou non) pour rester alignée sur les
-     badges du panneau latéral. */
   var pcActive = parcoursActive();
   if(pcActive){
     var pcAll = parcoursEvents(state.parcours);
-    var pcVis = parcoursVisible();                       /* étapes de la période courante */
+    var pcVis = parcoursVisible();
     var pcPts = pcVis.filter(function(x){ return hasCoord(x.e); })
       .map(function(x){ return { x:projX(x.e.lng), y:projY(x.e.lat), e:x.e, ord:x.ord }; });
     parts.push(cityLabelsSVG(v));
-    /* Filigrane : l'itinéraire complet, sans points, pour situer la décennie
-       affichée dans l'ensemble du parcours. */
     var ghost = pcAll.filter(hasCoord).map(function(e){ return projX(e.lng).toFixed(1)+','+projY(e.lat).toFixed(1); });
     if(ghost.length > 1) parts.push('<polyline class="parcours-ghost" points="'+ghost.join(' ')+'"/>');
-    /* Trait appuyé : les seules étapes de la période. */
     if(pcPts.length > 1){
       parts.push('<polyline class="parcours-line" points="'+
         pcPts.map(function(p){ return p.x.toFixed(1)+','+p.y.toFixed(1); }).join(' ')+'"/>');
@@ -1842,56 +1832,12 @@ function renderMap(){
     anyDot = pcVis.length > 0;
     totalRegion = pcVis.length;
   }
-  /* Mode thématique global : quand au moins un thème est coché et qu'aucune
-     zone n'est sélectionnée, on n'affiche plus les pastilles agrégées par
-     zone mais directement TOUS les points géolocalisés du thème sur toute la
-     carte (dédupliqués : un événement multi-zones = un seul point). Les
-     événements sans coordonnées restent signalés par une petite pastille
-     dorée « sans position » près du centroïde de leur zone. */
+
   var themeGlobal = !pcActive && anyThemeActive() && !state.selZone;
-  /* Toponymes de repère : uniquement en mode thématique (points individuels),
-     placés sous les points d'événements pour ne rien masquer. */
   if(themeGlobal){ parts.push(cityLabelsSVG(v)); }
   var gPts=[], gSeen={}, overviewPastilles=[];
-  if(!pcActive) reg.zones.forEach(function(zone){
-    /* Une zone est sélectionnée : on n'affiche qu'elle, les autres sont masquées
-       pour faciliter la lecture (au lieu de laisser toutes les pastilles visibles). */
-    if(state.selZone && state.selZone!==zone) return;
-    var c=BUNDLE.centroids[zone];
-    if(!c) return;
-    var evs=eventsFor(zone, currentRange());
-    if(evs.length===0) return;
-    anyDot=true; totalRegion+=evs.length;
 
-    if(state.selZone===zone){
-      /* Vue détaillée : un point à la position réelle de chaque événement géolocalisé,
-         regroupé en pastilles-clusters quand plusieurs événements sont trop proches
-         pour être distingués à l'échelle actuelle (clic pour zoomer davantage). */
-      var located = evs.filter(hasCoord);
-      var noloc   = evs.length - located.length;
-      /* Rang chronologique : evs est déjà trié par date (eventsFor). Le rang
-         couvre TOUS les événements de la zone (localisés ou non) afin que la
-         numérotation des points de la carte corresponde exactement aux badges
-         de la liste du panneau latéral (les rangs des événements sans
-         coordonnées sont simplement absents de la carte). */
-      var ptsArr = located.map(function(e){ return { x:projX(e.lng), y:projY(e.lat), e:e, ord:evs.indexOf(e)+1 }; });
-      renderLocatedPoints(ptsArr, parts, rDot, fNum, { numbered:true });
-      /* Les événements sans coordonnées restent regroupés près du centroïde de la zone,
-         légèrement décalés pour ne pas se superposer à un événement géolocalisé qui
-         coïnciderait avec ce même centroïde (ex. capitale = centroïde de la zone). */
-      if(noloc>0){
-        var rr=rBase*(1+Math.min(0.9, Math.sqrt(noloc)/6));
-        var offAng = -2.3, offDist = rBase*2.1;
-        var ncx = c.x + Math.cos(offAng)*offDist, ncy = c.y + Math.sin(offAng)*offDist;
-        parts.push(
-          '<g class="pastille-g sel" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+noloc+' sans position précise">'+
-            '<circle class="pastille nocoord" cx="'+ncx.toFixed(1)+'" cy="'+ncy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
-            '<text class="pastille-num" x="'+ncx.toFixed(1)+'" y="'+ncy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
-            '<text class="pastille-lbl" x="'+ncx.toFixed(1)+'" y="'+(ncy+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
-          '</g>'
-        );
-      }
-   if(!pcActive) reg.zones.forEach(function(zone){
+  if(!pcActive) reg.zones.forEach(function(zone){
     if(state.selZone && state.selZone!==zone) return;
     var c=BUNDLE.centroids[zone];
     if(!c) return;
@@ -1925,7 +1871,6 @@ function renderMap(){
       evs.forEach(function(e){
         if(hasCoord(e) && !gSeen[e.id]){ gSeen[e.id]=true; gPts.push({ x:projX(e.lng), y:projY(e.lat), e:e }); }
       });
-      /* Même en filtre thématique ou à l'échelle annuelle, on mémorise la zone pour afficher son souverain */
       if(state.layers.regnes && reigns.length>0){
         overviewPastilles.push({ zone:zone, x:c.x, y:c.y, r:rBase*0.6 });
       }
@@ -1949,14 +1894,10 @@ function renderMap(){
       overviewPastilles.push({ zone:zone, x:c.x, y:c.y, r:r });
     }
   });
-  /* Mode thématique : rendu global des points collectés (clustering commun
-     à toute la carte, indépendant des frontières de zones). */
+
   if(themeGlobal && gPts.length){
     renderLocatedPoints(gPts, parts, rDot, fNum);
   }
-  /* Cartouches « règnes » accolés (vue d'ensemble, calque Règnes) : rendus
-     en dernier, avec connaissance de TOUTES les pastilles pour l'évitement
-     de collisions. Dessinés au-dessus mais pointer-events:none. */
   if(state.layers.regnes && overviewPastilles.length){
     parts.push(renderReignCartouches(overviewPastilles, fLbl));
   }
@@ -1986,7 +1927,7 @@ function renderMap(){
     g.addEventListener('click', onClick);
     g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();onClick();} });
     g.addEventListener('mouseenter', function(evt){
-      if(isHub || idx===state.spiderfied) return; /* déjà éclaté : les points ont leur propre survol */
+      if(isHub || idx===state.spiderfied) return;
       var grp = state.currentClusters && state.currentClusters[idx];
       if(grp) showHoverList(grp, evt);
     });
@@ -2005,11 +1946,7 @@ function renderMap(){
          +(anyThemeActive() ? ' Des filtres thématiques sont actifs.' : '')
          +(state.level<4 ? ' Niveau de détail : '+(state.level===2?'Important':'Détaillé')+'.' : ''));
   } else { emptyEl.style.display='none'; }
-  /* Bouton « Retour à la carte générale » : visible en drill-down de zone,
-     mais aussi après un zoom sur un cluster en mode thématique global (sinon
-     plus aucun moyen de dézoomer depuis la carte). Il vit désormais dans
-     #ctx-bar (sticky) : on masque aussi son séparateur quand il disparaît,
-     pour ne pas laisser de trait orphelin dans le bandeau. */
+
   var backOn = !!(state.selZone || state.zoomView);
   document.getElementById('back-to-full').style.display = backOn ? 'inline-flex' : 'none';
   var backSep = document.getElementById('back-sep');
@@ -2018,7 +1955,7 @@ function renderMap(){
   renderReignBanner();
   renderSyntheseBanner();
   renderNonGeo();
-  refreshZoomCtrl();   /* état des loupes (bornes atteintes, vue recentrée) */
+  refreshZoomCtrl();
 }
 
 /* ---- Bandeau zones non localisées (Monde, Atlas) ------------------------ */
