@@ -717,17 +717,27 @@ function tryLoadLive(done){
       LIVE = {};
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
-        
-        /* CORRECTION ICI : On récupère "themes" (pluriel) ou "theme" (singulier) */
         var lesThemes = e.themes || e.theme || null;
         
-        /* NOUVELLE CORRECTION : On déduit si c'est un règne grâce au type 1 */
-        var estUnRegne = (Number(e.type) === 1);
-        
-        var o = { id:e.id, t:e.titre||'', d:e.date, df:e.date_fin, z:z, ty:+e.type||1, r:estUnRegne, img:e.image?1:0,
-                  th: lesThemes, 
-                  s:(e.serie||null),
-                  lat:(typeof e.lat==='number'?e.lat:null), lng:(typeof e.lng==='number'?e.lng:null) };
+        /* On détecte le règne via type == 1 OU le booléen e.regne */
+        var estUnRegne = (Number(e.type) === 1) || Boolean(e.regne);
+        var dDeb = (e.date !== undefined && e.date !== null && e.date !== '') ? Number(e.date) : null;
+        var dFin = (e.date_fin !== undefined && e.date_fin !== null && e.date_fin !== '') ? Number(e.date_fin) : dDeb;
+
+        var o = {
+          id: e.id,
+          t: e.titre || '',
+          d: dDeb,
+          df: dFin,
+          z: z,
+          ty: +e.type || 1,
+          r: estUnRegne,
+          img: e.image ? 1 : 0,
+          th: lesThemes,
+          s: (e.serie || null),
+          lat: (typeof e.lat === 'number' ? e.lat : null),
+          lng: (typeof e.lng === 'number' ? e.lng : null)
+        };
         LIVE[e.id] = e;
         return o;
       });
@@ -1881,36 +1891,61 @@ function renderMap(){
           '</g>'
         );
       }
+   if(!pcActive) reg.zones.forEach(function(zone){
+    if(state.selZone && state.selZone!==zone) return;
+    var c=BUNDLE.centroids[zone];
+    if(!c) return;
+    var evs=eventsFor(zone, currentRange());
+    var reigns=reignsFor(zone, currentRange());
+
+    /* Si la zone n'a ni événement ni règne actif cette année/décennie, on passe */
+    if(evs.length===0 && (!state.layers.regnes || reigns.length===0)) return;
+    if(evs.length>0) anyDot=true;
+    if(state.layers.regnes && reigns.length>0) anyDot=true;
+    totalRegion+=evs.length;
+
+    if(state.selZone===zone){
+      var located = evs.filter(hasCoord);
+      var noloc   = evs.length - located.length;
+      var ptsArr = located.map(function(e){ return { x:projX(e.lng), y:projY(e.lat), e:e, ord:evs.indexOf(e)+1 }; });
+      renderLocatedPoints(ptsArr, parts, rDot, fNum, { numbered:true });
+      if(noloc>0){
+        var rr=rBase*(1+Math.min(0.9, Math.sqrt(noloc)/6));
+        var offAng = -2.3, offDist = rBase*2.1;
+        var ncx = c.x + Math.cos(offAng)*offDist, ncy = c.y + Math.sin(offAng)*offDist;
+        parts.push(
+          '<g class="pastille-g sel" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+noloc+' sans position précise">'+
+            '<circle class="pastille nocoord" cx="'+ncx.toFixed(1)+'" cy="'+ncy.toFixed(1)+'" r="'+rr.toFixed(1)+'"></circle>'+
+            '<text class="pastille-num" x="'+ncx.toFixed(1)+'" y="'+ncy.toFixed(1)+'" font-size="'+fNum.toFixed(1)+'">'+noloc+'</text>'+
+            '<text class="pastille-lbl" x="'+ncx.toFixed(1)+'" y="'+(ncy+rr+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+' · sans position</text>'+
+          '</g>'
+        );
+      }
     } else if(themeGlobal){
-      /* Filtre thématique actif : pas de pastille agrégée. Les points
-         géolocalisés sont collectés ici puis rendus après la boucle.
-         NOTE : les anciennes pastilles dorées « Zone · sans position » ont été
-         supprimées de la carte en mode thème (elles ré-introduisaient les noms
-         de zones et surchargeaient la vue). Les événements non géolocalisés du
-         thème restent accessibles : ils sont listés dans le panneau latéral
-         (renderThemePanel), signalés sans point de localisation. */
       evs.forEach(function(e){
         if(hasCoord(e) && !gSeen[e.id]){ gSeen[e.id]=true; gPts.push({ x:projX(e.lng), y:projY(e.lat), e:e }); }
       });
+      /* Même en filtre thématique ou à l'échelle annuelle, on mémorise la zone pour afficher son souverain */
+      if(state.layers.regnes && reigns.length>0){
+        overviewPastilles.push({ zone:zone, x:c.x, y:c.y, r:rBase*0.6 });
+      }
     } else {
-      /* Vue d'ensemble : une pastille agrégée par zone */
       var n=evs.length;
-      var r=rBase*(1+Math.min(0.9, Math.sqrt(n)/6)); // grossit ~sqrt(n)
-      parts.push(
-        '<g class="pastille-g" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+n+' événement'+(n>1?'s':'')+'">'+
-          '<circle class="pastille" cx="'+c.x+'" cy="'+c.y+'" r="'+r.toFixed(1)+'"></circle>'+
-          '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+n+'</text>'+
-          '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+r+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+'</text>'+
-        '</g>'
-      );
+      var r=rBase*(1+Math.min(0.9, Math.sqrt(Math.max(1,n))/6));
+      if(n>0){
+        parts.push(
+          '<g class="pastille-g" data-zone="'+zone+'" tabindex="0" role="button" aria-label="'+zone+', '+n+' événement'+(n>1?'s':'')+'">'+
+            '<circle class="pastille" cx="'+c.x+'" cy="'+c.y+'" r="'+r.toFixed(1)+'"></circle>'+
+            '<text class="pastille-num" x="'+c.x+'" y="'+c.y+'" font-size="'+fNum.toFixed(1)+'">'+n+'</text>'+
+            '<text class="pastille-lbl" x="'+c.x+'" y="'+(c.y+r+fLbl*0.9).toFixed(1)+'" font-size="'+fLbl.toFixed(1)+'">'+zone+'</text>'+
+          '</g>'
+        );
+      }
       if(state.layers.shields && SHIELD_ART[zone]){
         var ssc = rBase*0.075;
         var sx = c.x - r - 20*ssc*0.75, sy = c.y - r - 24*ssc*0.9;
         parts.push(shieldSVG(zone, sx, sy, ssc));
       }
-      /* Pastille mémorisée : les cartouches « règnes » sont dessinés après
-         la boucle (renderReignCartouches) pour pouvoir éviter les collisions
-         avec les pastilles et libellés des AUTRES zones. */
       overviewPastilles.push({ zone:zone, x:c.x, y:c.y, r:r });
     }
   });
@@ -2526,15 +2561,24 @@ function initThemeAccess(){
    frise (frise.js). Ne pas réintroduire ici sans nécessité avérée. */
 function setMode(mode){
   if(state.mode===mode) return;
+  var keepZone = state.selZone, prevView = state.zoneZoomView;
   state.mode=mode;
   document.getElementById('decade-chips').style.display = (mode==='decade') ? 'flex' : 'none';
   document.getElementById('year-row').style.display = (mode==='year') ? 'flex' : 'none';
   renderModeChips();
   if(mode==='year'){
-    if(state.year===null) state.year = (state.decade!==null) ? state.decade : YEARRANGE.min;
+    /* Si l'année mémorisée n'appartient pas à la décennie courante, on se cale au début de la décennie */
+    if(state.year===null || (state.decade!==null && (state.year < state.decade || state.year > state.decade+9))){
+      state.year = (state.decade!==null) ? state.decade : YEARRANGE.min;
+    }
+    state.selZone = keepZone;
+    state.zoneZoomView = prevView;
     setYear(state.year);
   } else {
-    setDecade(state.decade!==null ? state.decade : DECADES[0]);
+    var targetDec = (state.year!==null) ? Math.floor(state.year/10)*10 : (state.decade!==null ? state.decade : DECADES[0]);
+    state.selZone = keepZone;
+    state.zoneZoomView = prevView;
+    setDecade(targetDec);
   }
 }
 /* ---- Changement de période : le contexte SPATIAL est conservé --------------
