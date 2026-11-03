@@ -488,14 +488,57 @@
 
 
   <!-- ══ 4. Outils de navigation (sous la carte) ══ -->
-  <div class="controls collapsed" id="controls">
+  
+  <!-- Menu Région sorti du volet déroulant pour être toujours visible -->
+  <div class="controls" style="border-top: 2px solid var(--border-dark); padding-top: 0.7rem; margin-bottom: 0;">
+    <div class="ctrl-block">
+      <span class="ctrl-label">Région</span>
+      <div class="chips" id="region-chips"></div>
+    </div>
+  </div>
+
+  <div class="controls collapsed" id="controls" style="margin-top: 0.5rem; border-top: none; padding-top: 0;">
     <button class="controls-title" id="controls-toggle" type="button"
             aria-expanded="false" aria-controls="controls-body"
             title="Afficher / masquer la navigation et les filtres">
       <span class="ct-caret" aria-hidden="true">&#9654;</span>
-      <span>Navigation &amp; filtres</span>
+      <span>Filtres supplémentaires (Thèmes, Période, Calques)</span>
     </button>
     <div class="controls-body" id="controls-body">
+
+    <div class="ctrl-block" id="parcours-block" style="display:none">
+      <span class="ctrl-label">Parcours</span>
+      <select id="parcours-select" title="Afficher un itinéraire historique complet (toutes étapes, toutes périodes)">
+        <option value="">— aucun —</option>
+      </select>
+    </div>
+    
+    <div class="ctrl-block" id="theme-block">
+      <span class="ctrl-label">Thèmes</span>
+      <div class="chips" id="theme-chips"></div>
+    </div>
+
+    <div class="ctrl-block" id="period-block">
+      <span class="ctrl-label">Période</span>
+      <div class="decade-row">
+        <div class="chips" id="mode-chips" style="margin-right:0.4rem"></div>
+        <span class="dec-current" id="dec-current">—</span>
+        <div class="chips" id="decade-chips" style="margin-left:0.6rem"></div>
+      </div>
+      <div class="year-row" id="year-row" style="display:none">
+        <input type="range" id="year-slider" class="year-slider" min="0" max="0" value="0" step="1">
+      </div>
+    </div>
+    
+    <div class="ctrl-block">
+      <span class="ctrl-label">Repères géographiques</span>
+      <div class="chips" id="layer-chips"></div>
+    </div>
+    
+    </div><!-- /.controls-body -->
+  </div>
+  <div class="note" id="status-note"></div>
+</main>
 
     <!-- Outils les plus utilisés placés en tête, juste sous la carte.
          Mode Parcours : itinéraires historiques multi-étapes (champ "serie" des
@@ -710,16 +753,42 @@ function tryLoadLive(done){
       LIVE = {};
       EVENTS = data.map(function(e){
         var z = e.zones || (e.zone ? [e.zone] : []);
+        if(typeof z === 'string') z = [z];
         var lesThemes = e.themes || e.theme || null;
+        var titre = e.titre || '';
         
-        /* On détecte le règne via type == 1 OU le booléen e.regne */
-        var estUnRegne = (Number(e.type) === 1) || Boolean(e.regne);
-        var dDeb = (e.date !== undefined && e.date !== null && e.date !== '') ? Number(e.date) : null;
-        var dFin = (e.date_fin !== undefined && e.date_fin !== null && e.date_fin !== '') ? Number(e.date_fin) : dDeb;
+        var estUnRegne = (Number(e.type) === 1) || Boolean(e.regne) || /^r[èe]gne\b/i.test(titre);
+        var dDeb = null, dFin = null;
+        
+        if(typeof e.date === 'number'){
+          dDeb = e.date;
+        } else if(typeof e.date === 'string'){
+          var mDate = e.date.match(/(\d{3,4})\D+(\d{3,4})/);
+          if(mDate){ dDeb = +mDate[1]; dFin = +mDate[2]; }
+          else { var nDate = parseInt(e.date, 10); if(!isNaN(nDate)) dDeb = nDate; }
+        }
+
+        if(e.date_fin !== undefined && e.date_fin !== null && e.date_fin !== ''){
+          var nFin = parseInt(e.date_fin, 10);
+          if(!isNaN(nFin)) dFin = nFin;
+        }
+
+        if(estUnRegne && dFin === null && titre){
+          var mTitre = titre.match(/(\d{3,4})\s*[-–—/]\s*(\d{3,4})/);
+          if(mTitre){
+            if(dDeb === null) dDeb = +mTitre[1];
+            dFin = +mTitre[2];
+          }
+        }
+        if(dFin === null) dFin = dDeb;
+
+        /* CORRECTION : On force la lecture des coordonnées même si ce sont des chaînes de caractères ("48.85") */
+        var pLat = parseFloat(e.lat);
+        var pLng = parseFloat(e.lng);
 
         var o = {
           id: e.id,
-          t: e.titre || '',
+          t: titre,
           d: dDeb,
           df: dFin,
           z: z,
@@ -728,8 +797,8 @@ function tryLoadLive(done){
           img: e.image ? 1 : 0,
           th: lesThemes,
           s: (e.serie || null),
-          lat: (typeof e.lat === 'number' ? e.lat : null),
-          lng: (typeof e.lng === 'number' ? e.lng : null)
+          lat: isNaN(pLat) ? null : pLat,
+          lng: isNaN(pLng) ? null : pLng
         };
         LIVE[e.id] = e;
         return o;
