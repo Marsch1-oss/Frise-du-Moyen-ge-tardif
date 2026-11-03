@@ -1951,24 +1951,55 @@ function renderMap(){
   refreshZoomCtrl();
 }
 
-/* ---- Bandeau zones non localisées (Monde, Atlas) ------------------------ */
+/* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
 function renderNonGeo(){
-  var el=document.getElementById('nongeo'), bits=[];
+  var el=document.getElementById('nongeo'), bitsNonGeo=[], bitsHorsCarte=[];
+  
   /* Sans objet pendant un parcours : les étapes sans coordonnées figurent déjà
      dans le panneau latéral (badge doré tireté). */
   if(parcoursActive()){ el.style.display='none'; return; }
   
-  /* LIGNE CORRIGÉE : On ajoute un filet de sécurité avec vos 3 zones sans coordonnées */
   var zonesNonGeo = BUNDLE.nonGeo || ['Europe', 'Monde', 'Atlas'];
   
+  /* 1. Événements purement non localisés (Europe globale, Monde, etc.) */
   zonesNonGeo.forEach(function(zone){
-    var n=eventsFor(zone, currentRange()).length;
-    if(n>0) bits.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
+    var n = eventsFor(zone, currentRange()).length;
+    if(n > 0) bitsNonGeo.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
+  });
+
+  /* 2. Événements "Hors Région" : situés dans une zone géographique non couverte par la vue actuelle */
+  Object.keys(BUNDLE.centroids).forEach(function(zone){
+    /* On ignore les catégories non-géo et les zones qui sont déjà dans la région actuelle */
+    if(zonesNonGeo.indexOf(zone) !== -1 || state.region.zones.indexOf(zone) !== -1) return;
+    
+    var n = eventsFor(zone, currentRange()).length;
+    var r = state.layers.regnes ? reignsFor(zone, currentRange()).length : 0;
+    
+    /* Si la zone a des événements ponctuels OU au moins un règne actif, on l'affiche */
+    if (n > 0) {
+      bitsHorsCarte.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
+    } else if (r > 0) {
+      /* Le pays est inactif mais son souverain est affichable */
+      bitsHorsCarte.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> (souverain)</button>');
+    }
   });
   
-  if(bits.length){
+  if(bitsNonGeo.length > 0 || bitsHorsCarte.length > 0){
     el.style.display='block';
-    el.innerHTML='Non localisé sur la carte : '+bits.join(' &middot; ');
+    var html = '';
+    if (bitsNonGeo.length > 0) {
+      html += 'Non localisé sur la carte : ' + bitsNonGeo.join(' &middot; ');
+    }
+    if (bitsNonGeo.length > 0 && bitsHorsCarte.length > 0) {
+      html += '<br><span style="margin-top:0.4rem; display:inline-block;">';
+    }
+    if (bitsHorsCarte.length > 0) {
+      html += 'Ailleurs dans le monde : ' + bitsHorsCarte.join(' &middot; ');
+    }
+    if (bitsNonGeo.length > 0 && bitsHorsCarte.length > 0) {
+      html += '</span>';
+    }
+    el.innerHTML = html;
   } else {
     el.style.display='none';
   }
@@ -1993,9 +2024,15 @@ function selectZone(zone){
     if(vw < vh*1.25) vw=vh*1.25;
     var cx=(minx+maxx)/2, cy=(miny+maxy)/2;
     state.zoneZoomView={ x:cx-vw/2, y:cy-vh/2, w:vw, h:vh };
+  } else if (BUNDLE.centroids[zone]) {
+    /* NOUVEAU : Si la zone lointaine a un centroïde mais aucun événement avec coordonnées exactes (ex: un souverain seul) */
+    var c = BUNDLE.centroids[zone];
+    var defaultW = 350, defaultH = 220; 
+    state.zoneZoomView = { x: c.x - defaultW/2, y: c.y - defaultH/2, w: defaultW, h: defaultH };
   } else {
-    state.zoneZoomView=null;   /* aucune coordonnée : on reste sur la vue région */
+    state.zoneZoomView=null;   /* aucune coordonnée (Europe globale, Monde) : on reste sur la vue région */
   }
+  
   state.zoomView = state.zoneZoomView;
   state.clusterZoomView = null;
   state.spiderfied = null;
@@ -2011,9 +2048,7 @@ function selectZone(zone){
     var dd=e.d + (typeof e.df==='number' && e.df!==e.d ? '–'+e.df : '');
     var isLoc=hasCoord(e);
     var pin=isLoc?'<span class="locdot" title="Localisé précisément"></span>':'';
-    /* Badge de rang chronologique : même numéro que le point correspondant
-       sur la carte (doré tireté = événement sans position, donc absent de la
-       carte mais présent dans la numérotation). */
+    /* Badge de rang chronologique */
     var ord='<span class="ev-ord'+(isLoc?'':' noloc')+'" title="'+(isLoc?'N° sur la carte':'Sans position sur la carte')+'">'+(i+1)+'</span>';
     return '<div class="ev-row" data-id="'+e.id+'">'+
       ord+
