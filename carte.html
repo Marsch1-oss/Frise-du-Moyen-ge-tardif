@@ -2058,14 +2058,12 @@ function renderMap(){
 }
 
 /* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
+/* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
+/* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
 function renderNonGeo(){
-  var el=document.getElementById('nongeo'), bitsNonGeo=[], bitsHorsCarte=[];
-  
-  /* Sans objet pendant un parcours : les étapes sans coordonnées figurent déjà
-     dans le panneau latéral (badge doré tireté). */
-  if(parcoursActive()){ el.style.display='none'; return; }
-  
-  var zonesNonGeo = BUNDLE.nonGeo || ['Europe', 'Monde', 'Atlas'];
+  var el = document.getElementById('nongeo');
+  if(el) el.style.display = 'none';
+}
   
   /* 1. Événements purement non localisés (Europe globale, Monde, etc.) */
   zonesNonGeo.forEach(function(zone){
