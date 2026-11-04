@@ -2051,62 +2051,16 @@ function renderMap(){
   var backSep = document.getElementById('back-sep');
   if(backSep) backSep.style.display = backOn ? 'block' : 'none';
 
-  renderReignBanner();
+ renderReignBanner();
   renderSyntheseBanner();
   renderNonGeo();
   refreshZoomCtrl();
 }
 
 /* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
-/* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
-/* ---- Bandeau zones non localisées (Monde, Atlas) et Hors région --------- */
 function renderNonGeo(){
   var el = document.getElementById('nongeo');
   if(el) el.style.display = 'none';
-}
-  
-  /* 1. Événements purement non localisés (Europe globale, Monde, etc.) */
-  zonesNonGeo.forEach(function(zone){
-    var n = eventsFor(zone, currentRange()).length;
-    if(n > 0) bitsNonGeo.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
-  });
-
-  /* 2. Événements "Hors Région" : situés dans une zone géographique non couverte par la vue actuelle */
-  Object.keys(BUNDLE.centroids).forEach(function(zone){
-    /* On ignore les catégories non-géo et les zones qui sont déjà dans la région actuelle */
-    if(zonesNonGeo.indexOf(zone) !== -1 || state.region.zones.indexOf(zone) !== -1) return;
-    
-    var n = eventsFor(zone, currentRange()).length;
-    var r = state.layers.regnes ? reignsFor(zone, currentRange()).length : 0;
-    
-    /* Si la zone a des événements ponctuels OU au moins un règne actif, on l'affiche */
-    if (n > 0) {
-      bitsHorsCarte.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> ('+n+')</button>');
-    } else if (r > 0) {
-      /* Le pays est inactif mais son souverain est affichable */
-      bitsHorsCarte.push('<button onclick="selectZone(\''+zone+'\')"><b>'+zone+'</b> (souverain)</button>');
-    }
-  });
-  
-  if(bitsNonGeo.length > 0 || bitsHorsCarte.length > 0){
-    el.style.display='block';
-    var html = '';
-    if (bitsNonGeo.length > 0) {
-      html += 'Non localisé sur la carte : ' + bitsNonGeo.join(' &middot; ');
-    }
-    if (bitsNonGeo.length > 0 && bitsHorsCarte.length > 0) {
-      html += '<br><span style="margin-top:0.4rem; display:inline-block;">';
-    }
-    if (bitsHorsCarte.length > 0) {
-      html += 'Ailleurs dans le monde : ' + bitsHorsCarte.join(' &middot; ');
-    }
-    if (bitsNonGeo.length > 0 && bitsHorsCarte.length > 0) {
-      html += '</span>';
-    }
-    el.innerHTML = html;
-  } else {
-    el.style.display='none';
-  }
 }
 
 /* ---- Panneau latéral ---------------------------------------------------- */
