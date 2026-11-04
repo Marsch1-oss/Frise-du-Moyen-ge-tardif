@@ -33056,7 +33056,6 @@
     "date": 1383,
     "mois": 5,
     "zones": [
-      "Orient",
       "Asie du Sud-Est"
     ],
     "type": 3,
@@ -33558,6 +33557,9 @@
     "type": 3,
     "description": "24-25 juillet 1384 – Le chef tuchin Étienne Augier, dit Ferragut, allié de Charles III de Naples, s'empare de la ville d'Arles avec l'aide de complicités internes. Après quelques heures d'occupation, les habitants se soulèvent et chassent les insurgés de la cité.\nÀ l'été 1384, la ville d'Arles devient l'un des théâtres majeurs de la guerre de l'Union d'Aix (1382-1387), conflit opposant en Provence les partisans de la maison d'Anjou à ceux de Charles de Duras, prétendant au royaume de Naples.\n\nDans ce contexte de guerre civile provençale, le chef tuchin Étienne Augier, surnommé Ferragut, prend le parti de Charles de Duras contre les Angevins. Issu du mouvement des Tuchins, initialement né en Auvergne et en Languedoc comme mouvement de résistance aux exactions des routiers et à la pression fiscale, Ferragut dirige désormais une troupe armée mêlant insurgés, aventuriers et combattants attirés par les troubles politiques du Midi.\n\nAu printemps 1384, Ferragut établit sa base dans les Alpilles et mène plusieurs opérations dans la région arlésienne. Ses troupes imposent leur domination sur les campagnes environnantes avant de tenter une opération spectaculaire contre Arles, l'une des principales villes de Provence.\n\nLe 24 juillet 1384, grâce à l'appui de complices présents dans la cité, les Tuchins parviennent à pénétrer dans Arles et à s'en emparer. Le viguier de la ville est tué lors des troubles qui suivent. Cependant, l'occupation est de courte durée : la population arlésienne, rapidement hostile aux violences et aux pillages, se mobilise contre les insurgés. Après seulement quelques heures, les habitants reprennent le contrôle de la ville et contraignent Ferragut et ses hommes à se retirer.\n\nDès le lendemain, 25 juillet, une sévère répression est menée contre les personnes accusées d'avoir soutenu les Tuchins. Cet épisode marque un tournant dans l'attitude des populations locales : si les Tuchins avaient pu bénéficier d'un certain soutien au début de leurs actions, leurs méthodes violentes contribuent progressivement à leur isolement.\n\nLa tentative de prise d'Arles illustre la complexité des conflits méridionaux de la fin du XIVᵉ siècle, où se mêlent rivalités dynastiques (Anjou contre Duras), revendications sociales, révoltes fiscales et action de bandes armées issues de la guerre de Cent Ans. Elle constitue l'un des derniers grands épisodes de l'activisme tuchin en Provence avant le déclin du mouvement.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 43.6776,
     "lng": 4.631,
     "serie": "Guerre de l'Union d'Aix"
@@ -33574,6 +33576,10 @@
     "type": 5,
     "description": "3 septembre 1384 – Après près de quatre mois de siège, Jean Ier de Castille abandonne le siège de Lisbonne en raison des lourdes pertes causées par une épidémie de peste qui décime son armée. La résistance portugaise sort renforcée de cette victoire, consolidant la position du maître d'Aviz.",
     "image": "",
+    "themes": [
+      "catastrophe",
+      "guerre"
+    ],
     "lat": 38.7078,
     "lng": -9.1366
   },
@@ -33588,13 +33594,16 @@
     "type": 3,
     "description": "29 septembre 1384 – Le seigneur français Enguerrand VII de Coucy s'empare de la ville toscane d'Arezzo au cours de ses campagnes en Italie. Il revend la cité aux Florentins quelques semaines plus tard, le 5 novembre 1384, pour une somme importante.\nEn 1384, Enguerrand VII de Coucy, l'un des plus puissants seigneurs français de son temps, intervient dans les conflits qui déchirent l'Italie centrale. Ancien compagnon d'armes de plusieurs expéditions chevaleresques en Orient et en Prusse, il cherche à maintenir son influence militaire et politique dans la péninsule italienne, où les cités-États rivalisent pour étendre leur domination territoriale.\n\nLe 29 septembre 1384, Coucy s'empare d'Arezzo, ville stratégique de Toscane située au carrefour des routes reliant Florence, les États pontificaux et l'Italie centrale. La cité, autrefois commune indépendante et foyer important de la tradition guelfe, connaît depuis plusieurs décennies une période d'instabilité politique, marquée par les luttes entre factions locales et les ambitions des grandes puissances voisines.\n\nLa prise d'Arezzo ne correspond toutefois pas à un projet d'installation durable. Coucy agit dans une logique de chef de guerre mercenaire et de seigneur militaire, cherchant à tirer profit des rivalités entre les puissances italiennes. Après avoir pris possession de la ville, il négocie rapidement sa cession avec la République de Florence, qui cherche depuis longtemps à contrôler ce territoire afin de sécuriser son arrière-pays oriental.\n\nLe 5 novembre 1384, Enguerrand de Coucy vend ainsi Arezzo aux Florentins, permettant à Florence d'étendre son influence en Toscane. Cette acquisition constitue une étape importante dans la formation de l'État territorial florentin, même si la domination florentine sur Arezzo reste contestée et connaît encore plusieurs épisodes de résistance au cours des décennies suivantes.\n\nCet épisode illustre le rôle joué par les grands chevaliers occidentaux dans les guerres italiennes de la fin du XIVᵉ siècle. Les seigneurs comme Coucy peuvent intervenir comme commandants indépendants, mettre leurs forces au service d'un camp, conquérir des villes puis négocier leur restitution ou leur vente selon les opportunités politiques et financières du moment.\nnguerrand de Coucy est déjà une figure majeure de la chevalerie européenne lorsqu'il intervient en Italie. Il avait notamment participé aux Reisen prussiennes aux côtés de l'Ordre Teutonique dans les années 1360 et jouera encore un rôle important dans les expéditions françaises de la fin du XIVᵉ siècle, notamment la croisade de Nicopolis (1396).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blason_Enguerrand_VII%2C_Seigneur_de_Coucy.svg/langfr-960px-Blason_Enguerrand_VII%2C_Seigneur_de_Coucy.svg.png",
+    "themes": [
+      "guerre"
+    ],
     "legende": "Blason Enguerrand VII, Seigneur de Coucy",
     "lat": 43.5171,
     "lng": 11.7639
   },
   {
     "id": 1866,
-    "titre": "Les Écossais reprennent Lochmaben et le Teviotdale faux anglais",
+    "titre": "Les Écossais reprennent Lochmaben et le Teviotdale aux anglais",
     "date": 1384,
     "mois": 2,
     "zones": [
@@ -33603,8 +33612,12 @@
     "type": 4,
     "description": "4 février 1385 – Les forces écossaises lancent une offensive contre les garnisons anglaises installées dans le sud de l’Écosse et reprennent le château de Lochmaben ainsi que la région du Teviotdale, renforçant la résistance du royaume écossais contre l’occupation anglaise.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.1289,
-    "lng": -3.4413
+    "lng": -3.4413,
+    "serie": "Guerres écossaises"
   },
   {
     "id": 1867,
@@ -33617,6 +33630,9 @@
     "type": 3,
     "description": "7 février 1385 – Nicholas Brembre, lord-maire de Londres, fait arrêter son rival politique John Northampton pour sédition après avoir empêché sa réélection municipale.\n\n11 février 1385 – En réaction à l'arrestation de Northampton, le marchand londonien John Constantine appelle les commerçants à fermer leurs boutiques et à suspendre leurs activités. Accusé d'avoir fomenté une révolte, il est arrêté, exécuté par décapitation à Cheapside, et sa tête est exposée à la porte de Newgate comme avertissement aux opposants.\n\nLes événements de février 1385 témoignent des profondes tensions sociales et politiques qui traversent la ville de Londres à la fin du XIVᵉ siècle, dans un contexte marqué par les rivalités entre les élites urbaines, les intérêts commerciaux et les luttes d'influence autour du gouvernement du royaume d'Angleterre.\n\nDepuis plusieurs années, la vie politique londonienne oppose deux courants. D'un côté, John Northampton, ancien lord-maire (1381-1383), représente une tendance favorable à une plus grande participation des artisans et des petits marchands au gouvernement municipal. Il avait notamment soutenu des réformes visant à limiter le pouvoir des grands marchands et des compagnies dominantes de la cité. De l'autre côté, Nicholas Brembre, riche marchand et allié du roi Richard II d'Angleterre, défend une politique plus conservatrice favorable aux grandes corporations commerciales et au maintien de l'ordre établi.\n\nLe 7 février 1385, Brembre, alors lord-maire de Londres, réussit à empêcher le retour de Northampton à la tête de la ville et fait arrêter son adversaire sous l'accusation de sédition. Cette arrestation vise à neutraliser définitivement un rival politique qui conserve une importante influence auprès d'une partie de la population londonienne.\n\nL'arrestation provoque une réaction immédiate dans les milieux populaires et marchands. Le 11 février, John Constantine, fabricant de chaussures et homme d'affaires londonien, appelle les commerçants à fermer leurs boutiques afin de protester contre le traitement réservé à Northampton et de perturber l'activité économique de la cité. Cette action, qui prend la forme d'une grève commerciale avant l'heure, est interprétée par les autorités comme une tentative d'insurrection.\n\nConstantine est rapidement arrêté. Jugé pour avoir provoqué un soulèvement, il est exécuté par décapitation à Cheapside, lieu traditionnel des exécutions publiques à Londres. Sa tête est ensuite exposée à la porte de Newgate, pratique destinée à intimider les opposants et à afficher l'autorité du gouvernement municipal.",
     "image": "",
+    "themes": [
+      "revolte"
+    ],
     "lat": 51.5074,
     "lng": -0.1278
   },
@@ -33632,6 +33648,9 @@
     "type": 4,
     "description": "19 juillet 1384 – La flotte portugaise, composée d'environ 34 navires, force le blocus maritime de Lisbonne assiégée par les Castillans et remporte la bataille du Tage contre une flotte castillane de près de 53 bâtiments, permettant le ravitaillement de la capitale et renforçant la résistance du parti d'Aviz.\ne 19 juillet 1384, la lutte pour le contrôle de Lisbonne connaît un épisode décisif avec la bataille navale du Tage, pendant laquelle la flotte portugaise parvient à rompre l'encerclement maritime imposé par les forces de Jean Ier de Castille.\n\nDepuis le 6 mai 1384, Lisbonne est assiégée par l'armée castillane qui cherche à contraindre la ville à reconnaître les droits de Béatrice de Portugal, épouse de Jean Ier de Castille et héritière dynastique du défunt roi Ferdinand Ier. La capitale portugaise, favorable au maître d'Aviz, Jean, refuse cependant de se soumettre et devient le principal foyer de résistance à l'intégration du Portugal dans la monarchie castillane.\n\nAfin d'affaiblir la ville, les Castillans mettent en place un blocus terrestre et maritime. Le contrôle du Tage est essentiel : Lisbonne dépend fortement des approvisionnements arrivant par voie fluviale et maritime, notamment pour nourrir une population assiégée depuis plusieurs mois.\n\nUne flotte portugaise d'environ 34 navires, chargée de vivres et de renforts, tente alors de forcer le passage. Elle affronte une flotte castillane plus nombreuse, comptant environ 53 navires. Malgré leur infériorité numérique, les Portugais réussissent à franchir le dispositif ennemi et remportent l'affrontement. La victoire permet l'entrée de ravitaillements indispensables dans Lisbonne et empêche les Castillans d'obtenir une reddition rapide de la ville.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 38.7078,
     "lng": -9.1366,
     "serie": "Guerres Fernandines"
@@ -33665,6 +33684,9 @@
     "type": 5,
     "description": "Le 5 août , un tremblement de terre frappe l'île de Lesbos en Grèce , faisant de nombreuses victimes, dont le seigneur génois de Lesbos , Francesco Ier Gattilusio , ainsi que ses deux fils aînés, Andronico et Domenico. Son fils Jacopo Gattilusio survit et règne sur l'île sous le nom de Francesco II",
     "image": "",
+    "themes": [
+      "catastrophe"
+    ],
     "lat": 39.1758,
     "lng": 25.9989
   },
@@ -33678,6 +33700,10 @@
     "type": 3,
     "description": "1384 – Les princes nasrides du royaume de Grenade favorisent le remplacement du souverain mérinide Abû al-Abbâs Ahmad al-Mustansir par Abu Faris Musa ibn Faris, qui devient le nouveau souverain de la dynastie des Mérinides au Maroc.\nEn 1384, la succession au sein de la dynastie des Mérinides connaît une nouvelle crise, dans un contexte de forte instabilité politique au Maghreb occidental. Les souverains mérinides, qui règnent sur le Maroc depuis le XIIIᵉ siècle, sont alors affaiblis par les rivalités internes, les luttes entre factions de cour et l'influence croissante de puissances voisines.\n\nLe sultan Abû al-Abbâs Ahmad al-Mustansir avait pris le pouvoir dans une période troublée, mais son autorité reste contestée. Les princes de la dynastie nasride de Grenade, soucieux de préserver leurs intérêts dans la péninsule Ibérique et au Maghreb, interviennent dans les affaires mérinides afin de favoriser un souverain qui leur soit favorable.\n\nIls soutiennent ainsi l'accession au trône d'Abû Fâris Mûsâ ibn Fâris, membre de la famille mérinide et petit-fils du puissant sultan Abû Inân Fâris. Son arrivée au pouvoir constitue une tentative de restaurer l'autorité dynastique après plusieurs années de divisions.\n\nCependant, le règne d'Abû Fâris Mûsâ II reste marqué par les difficultés structurelles du pouvoir mérinide. Le sultan doit composer avec les ambitions des vizirs, les rivalités entre branches de la famille royale et la montée en puissance des groupes tribaux et militaires qui limitent progressivement l'autorité centrale.",
     "image": "",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
     "lat": 33.3157,
     "lng": -6.5489
   },
@@ -33692,6 +33718,9 @@
     "type": 5,
     "description": "1384 – Peu avant sa mort, le théologien anglais John Wycliffe adresse des pamphlets critiques contre le pape Urbain VI, estimant que celui-ci n'a pas engagé les réformes profondes de l'Église qu'il espérait.\nDans les derniers mois de sa vie, en 1384, John Wycliffe poursuit son combat intellectuel contre les abus qu'il attribue à l'Église de son temps. Alors qu'il avait initialement placé certains espoirs dans l'élection du pape Urbain VI en 1378, il finit par se détourner de lui, considérant que le nouveau pontife ne réalise pas les réformes nécessaires.\n\nWycliffe, professeur à l'Université d'Oxford et figure majeure du mouvement réformateur anglais du XIVᵉ siècle, critique depuis plusieurs années la richesse de l'Église, le pouvoir temporel de la papauté et certaines pratiques ecclésiastiques qu'il juge éloignées de l'idéal évangélique. Ses idées trouvent un écho auprès d'une partie de la noblesse anglaise et de ses disciples, les Lollards.\n\nL'élection d'Urbain VI intervient dans le contexte du Grand Schisme d'Occident (à partir de 1378), qui oppose deux papes rivaux : Urbain VI à Rome et Clément VII à Avignon. Dans un premier temps, Wycliffe voit dans Urbain VI un possible agent de réforme, notamment parce que le pape romain semble vouloir restaurer une certaine discipline au sein du clergé et s'opposer aux pratiques financières de la cour pontificale.\n\nCependant, Wycliffe est rapidement déçu. Il considère que le pape, malgré ses critiques envers certains abus, ne remet pas suffisamment en cause la structure ecclésiastique qu'il juge corrompue. Dans ses derniers écrits, il élargit donc sa critique et s'en prend également à la papauté romaine, affirmant que l'autorité religieuse doit avant tout être fondée sur l'Écriture sainte plutôt que sur la puissance institutionnelle.\n\nCes pamphlets s'inscrivent dans l'évolution finale de sa pensée, qui devient de plus en plus radicale : Wycliffe défend une Église plus pauvre, plus proche des premiers temps du christianisme, et affirme la primauté de la Bible sur l'autorité pontificale.\n\nJohn Wycliffe meurt le 31 décembre 1384 à Lutterworth, en Angleterre. Ses idées continueront cependant à circuler, notamment grâce aux Lollards, puis influenceront plus tard certains réformateurs comme Jan Hus en Bohême au début du XVe siècle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/John_wyclif.jpg",
+    "themes": [
+      "religion"
+    ],
     "legende": "John Wyclif. (Auteur inconnuAuteur inconnu, Domaine public — Wikimedia Commons)",
     "lat": 52.4552,
     "lng": -1.1998
@@ -33706,6 +33735,9 @@
     "type": 3,
     "description": "1384 – Le conquérant turco-mongol Timour s'empare des territoires septentrionaux de l'Empire jalayiride, poursuivant son expansion dans l'ouest de la Perse.\nEn 1384, Timour (Tamerlan) poursuit l'expansion de son empire en direction de la Perse occidentale, où il profite de l'affaiblissement des États issus de la fragmentation de l'empire mongol. Parmi ses principaux adversaires figure la dynastie des Jalayirides, qui domine alors l'Irak et une partie de l'ouest de l'Iran depuis le milieu du XIVᵉ siècle.\n\nAprès avoir consolidé son autorité en Transoxiane, puis soumis le Khorassan et une grande partie de la Perse orientale, Timour lance une série de campagnes contre les principautés iraniennes. En 1384, il s'empare des régions septentrionales contrôlées par les Jalayirides, notamment en Azerbaïdjan perse et dans les provinces voisines, réduisant considérablement leur influence.\n\nCette conquête s'inscrit dans une stratégie plus vaste visant à réunifier sous son autorité les anciens territoires de l'empire mongol en Asie centrale et au Moyen-Orient. Timour combine une remarquable mobilité militaire, fondée sur sa cavalerie, avec une politique de terreur destinée à décourager toute résistance. Les villes qui se soumettent conservent souvent leurs élites et leurs activités économiques, tandis que celles qui résistent s'exposent à des représailles particulièrement sévères.\n\nPour les Jalayirides, cette perte territoriale marque le début d'un déclin irréversible. Bien qu'ils conservent encore Bagdad et une partie de la Mésopotamie pendant quelques années, leur puissance est durablement affaiblie par les offensives timourides. Timour poursuivra d'ailleurs ses campagnes dans la région, s'emparant de Tabriz puis de Bagdad en 1393, mettant pratiquement fin à la domination jalayiride.\n\nLes conquêtes de 1384 constituent ainsi une étape importante dans la formation de l'Empire timouride, qui deviendra, à la fin du XIVᵉ siècle, l'une des plus vastes puissances d'Asie, s'étendant de l'Asie centrale jusqu'au Caucase, à la Perse, à la Mésopotamie et, plus tard, au nord de l'Inde.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 33.9684,
     "lng": 52.3478
   },
@@ -33720,6 +33752,10 @@
     "type": 3,
     "description": "384 – Le duc Léopold III d'Autriche vend la ville de Trévise à Francesco I da Carrara, renforçant la puissance de la maison des Carrare dans le nord-est de l'Italie.\nEn 1384, le duc Léopold III d'Autriche, membre de la maison de Habsbourg, se défait de la ville de Trévise en la vendant à Francesco I da Carrara, seigneur de Padoue. Cette transaction met fin à plusieurs années de domination autrichienne sur cette importante cité de la Vénétie.\n\nLes Habsbourg avaient acquis Trévise en 1381, lorsque la République de Venise, affaiblie par la guerre de Chioggia contre Gênes, avait cédé la ville à l'Autriche afin d'obtenir la paix. Toutefois, éloignée des possessions héréditaires des Habsbourg et difficile à défendre face aux ambitions des puissances italiennes, Trévise représente davantage une charge qu'un véritable atout stratégique.\n\nFrancesco I da Carrara, qui gouverne Padoue depuis 1355, cherche quant à lui à étendre son autorité sur la Vénétie continentale. L'acquisition de Trévise lui permet de renforcer considérablement son État et de contrôler un axe commercial essentiel entre les Alpes, la plaine du Pô et la lagune de Venise.\n\nCette expansion suscite cependant l'inquiétude de la République de Venise, qui considère Trévise comme faisant naturellement partie de sa sphère d'influence. Les ambitions territoriales des Carrare alimentent ainsi une rivalité durable avec Venise, laquelle débouchera sur plusieurs conflits au début du XVe siècle. En 1388, Venise profitera de l'affaiblissement des Carrare pour reprendre Trévise, avant de mettre définitivement fin à la seigneurie de Padoue en 1405.",
     "image": "",
+    "themes": [
+      "diplomatie",
+      "politique"
+    ],
     "lat": 45.6659,
     "lng": 12.2455
   },
@@ -33734,6 +33770,9 @@
     "type": 4,
     "description": "Novembre 1384 – Un ancien religieux, John Latimer, accuse publiquement **Jean de Gand> de conspirer pour assassiner le roi Richard II d'Angleterre et usurper le trône d'Angleterre. Après enquête, ces accusations sont reconnues comme mensongères et Latimer est exécuté. L'affaire, connue sous le nom de « complot de l'Abbaye » (Abbey Plot), révèle toutefois la profonde défiance dont Jean de Gand est l'objet.\nÀ l'automne 1384, le règne du jeune Richard II est secoué par une affaire politique qui met en lumière les divisions de la cour et l'impopularité de son puissant oncle, Jean de Gand, duc de Lancastre.\n\nLe complot de l'Abbaye (Abbey Plot) tire son nom de l'abbaye de Westminster, où se déroule une partie des événements au moment de la réunion du Parlement. L'accusateur est John Latimer, un ancien frère carme devenu dénonciateur. Il affirme que Jean de Gand prépare l'assassinat du roi Richard II afin de s'emparer de la couronne. Selon son témoignage, plusieurs complices seraient impliqués dans ce projet de coup d'État.\n\nCes accusations provoquent une vive émotion à la cour. Depuis plusieurs années, Jean de Gand exerce une influence déterminante sur le gouvernement en raison de la jeunesse du roi. Sa richesse, ses ambitions politiques et son rôle dans la conduite des affaires du royaume lui valent de nombreuses inimitiés. Une partie de la noblesse, du clergé et de la population londonienne le rend responsable des difficultés financières du royaume, des impôts élevés et des échecs militaires de la fin du règne d'Édouard III.\n\nRichard II ordonne une enquête approfondie. Les investigations démontrent rapidement que les accusations de Latimer reposent sur des faux témoignages et ne sont étayées par aucune preuve. L'ancien religieux est reconnu coupable de diffamation et de faux complot. Il est condamné à mort et exécuté peu après.\n\nSi le complot se révèle imaginaire, l'affaire a une portée politique considérable. Elle montre à quel point Jean de Gand est devenu une figure controversée, au point que l'idée même d'une tentative d'usurpation paraît crédible à nombre de contemporains. Elle révèle également la fragilité du pouvoir de Richard II, encore dépendant de ses oncles, ainsi que le climat de méfiance qui règne au sommet de l'État.",
     "image": "",
+    "themes": [
+      "revolte"
+    ],
     "lat": 51.5074,
     "lng": -0.1278
   },
@@ -33747,6 +33786,9 @@
     ],
     "type": 4,
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 42.6977,
     "lng": 23.3217
   },
@@ -33761,6 +33803,9 @@
     "type": 4,
     "description": "Soulevèment des barons contre le règne d’Élisabeth, qui entend marier sa fille non point à Sigismond, mais au frère du roi de France. Une partie des insurgés soutient comme prétendant au trône de Hongrie le roi de Naples, Charles III (Durazzo), le seul Anjou de sexe masculin vivant.",
     "image": "",
+    "themes": [
+      "revolte"
+    ],
     "lat": 47.4979,
     "lng": 19.0402
   },
@@ -33774,7 +33819,9 @@
     "type": 1,
     "description": "L'époque de Kamakura (鎌倉時代, Kamakura jidai?, 1185–1333) est l'une des 14 subdivisions traditionnelles de l'histoire du Japon. Cette période, qui commence en 1185 et s'achève en 1333, est placée sous l'autorité politique du shogunat de Kamakura. Elle constitue la première partie du « Moyen Âge » de l'histoire japonaise, qui va jusqu'à la fin du XVIe siècle.\n\nLe XIIe siècle vit le pouvoir impérial et l'aristocratie civile laisser les premiers rôles aux familles de l'élite guerrière, d'abord les Taira, puis, à l'issue de la guerre de Genpei (1180-1185), aux Minamoto de la lignée Seiwa-Genji, dont le chef de clan, Yoritomo, devint alors le personnage le plus puissant du Japon. Installé à Kamakura, il reçut de l'empereur le titre de shōgun, qui donna son nom au régime qu'il fonda, le shogunat (ou Bakufu), qui voyait les guerriers exercer les premiers rôles.\n\nAprès la mort de Yoritomo en 1199, sa veuve Hōjō Masako prit en main la direction du shogunat, qui passa sous la coupe de son clan, les Hōjō, dont les chefs devinrent les « régents » (shikken) du shogun, exerçant de fait le pouvoir suprême, leur triomphe étant confirmé après qu'une nouvelle réaction de la cour impériale eut échoué en 1221.\n\nL'époque de Kamakura vit donc l'élite guerrière s'élever au rang de catégorie dominante, les hommes-liges du régime shogunal recevant en récompense de leurs services des charges importantes et le contrôle de domaines dans tout le pays. Les empereurs retirés et la noblesse de Kyoto continuèrent cependant à jouer un rôle politique, administratif et culturel notable, de même que les grands temples du Kinai. Cette période vit donc une forme de partage de pouvoir entre ces différents groupes pour l'administration du pays, même si les chefs des principaux clans guerriers installés à Kamakura et dans le Kantō, dirigés par les Hōjō, gardaient la direction du pays.\n\nLes provinces étaient organisées suivant un modèle domanial, les domaines publics et privés étant dirigés par les membres de la haute élite, et gérés par des administrateurs locaux, encadrant la vie des communautés de paysans, pêcheurs, forestiers, artisans et autres professions. Les élites locales, avant tout d'extraction guerrière, augmentèrent progressivement leur emprise sur les domaines, au détriment de l'aristocratie civile et des temples. Les échanges avec l'extérieur connurent un essor à cette période, ce qui se voit dans le fait que les monnaies en circulation à partir du XIIIe siècle avaient toutes été importées depuis la Chine.",
     "image": "",
-    "regne": true,
+    "themes": [
+      "politique"
+    ],
     "lat": 35.32,
     "lng": 139.55
   },
@@ -33789,6 +33836,9 @@
     "type": 3,
     "description": "Jean VII Paléologue (en grec : Ioannès Palaiologos – Ιωάννης Zʹ Παλαιολόγος), né en 1370 et mort le 22 septembre 1408 au mont Athos[1], est le fils d'Andronic IV Paléologue et de Marie Keratsa de Bulgarie. Il est proclamé empereur byzantin après une révolte qui l'oppose à son grand-père Jean V Paléologue et son oncle Manuel II Paléologue. Son règne à Constantinople est toutefois très court, entre avril et septembre 1390, puisqu'il est chassé du pouvoir par Manuel II. Après plusieurs années de fuite, il se réconcilie avec son oncle et est choisi pour exercer la régence en 1399 lors du départ de Manuel II pour l'Europe. Au retour de l'empereur en 1403, il part pour Thessalonique, où il règne jusqu'à sa mort en 1408",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 41.0742,
     "lng": 28.2482
   },
@@ -33805,7 +33855,9 @@
     "type": 1,
     "description": "Premier souverain portugais issu de la maison d'Aviz, après la crise de 1383-1385. L'excellente image laissée par son règne dans l'esprit des Portugais lui vaut le surnom de « le Prince de Bon Souvenir ».\nIl est le fils illégitime du roi Pierre Ier et de Thérèse Lourenço, une dame galicienne ou une fille de Vasco Lourenço da Praça, un marchand de Lisbonne. Il a grandi avec son grand-père maternel. En 1364, il est investi grand maître de l'ordre d'Aviz puis est placé sous la garde du commandant en chef Fernão Rodrigues de Sequeira. Il visite la cour de temps en temps, développant une amitié avec son demi-frère, Jean de Portugal, duc de Valência de Campos et fils d'Inés de Castro.\n\nSous le règne du roi Ferdinand Ier de Portugal, son demi-frère, Jean est arrêté en 1382 à Évora et condamné à être exécuté, en raison des intrigues de la reine Éléonore Teles de Menezes. Il demande l'aide d'Edmond de Langley, oncle de Philippa de Lancastre, et est libéré. Cet épisode rend Jean prudent.\n\nÀ la mort du roi Ferdinand Ier de Portugal, sans héritier mâle direct, le Portugal risque de perdre son indépendance parce que l’héritière légitime, la princesse Béatrice, est mariée au roi Jean Ier de Castille, avec un contrat de mariage qui prévoit qu'au cas où Béatrice mourrait sans héritier, l'annexion du royaume par la Castille, avec la condition qu'« alors les peuples du Royaume reçussent le roi de Castille par son roi et seigneur ». Cette même condition est d'ailleurs nécessaire pour que Béatrice devienne reine (l'expression « recevoir comme roi » a une signification semblable à celui de l'expression « recevoir comme mari ou épouse »).\n\nLa régence est donc confiée à la reine veuve Éléonore Teles de Menezes, qui reconnaît sa fille Béatrice comme reine de Portugal, mais qui n'organise son acclamation que le 22 novembre 1383, trente jours après la mort du roi Ferdinand, et ce uniquement dans certaines villes. À Lisbonne, à Santarém et en d'autres villes, le peuple empêche l'acclamation. De plus, la classe moyenne et une partie de la noblesse rejoint le peuple dans son opposition à la reine Béatrice et son mari, le roi de Castille, par peur de la transformation du Portugal en une province de Castille.\n\nÀ ce rejet s'ajoute un profond dégoût pour la reine veuve dont le prétendu amant, João Fernandes Andeiro, comte d'Ourém, est assassiné par le grand-maître d'Aviz le 6 décembre (un crime politique qui, commis par d’autres, aurait soulevé l'indignation générale mais qui est ici considéré, par les âmes plus poétiques, comme un « crime shakespearien qui soulève les émotions tragiques », et, par les âmes plus prosaïques, comme une réaction aux tentatives d'acclamation de Béatrice).\n\nDeux prétendants s'opposent à Béatrice : Jean, duc de Valencia de Campos, fils illégitime de Pierre Ier de Portugal et d'Inés de Castro (qui se prévaut d'une légitimité issue d'un prétendu mariage secret de ses parents), puis, en second rang, Jean, le grand maître d'Aviz.\n\nCette situation débouche sur ce qu'il est convenu d'appeler la crise de 1383-1385, une période d’anarchie et d’instabilité politique pendant laquelle le Portugal n’est gouverné par personne.\n\nFinalement, le 6 avril 1385, les Cortes de Portugal, réunies à Coimbra, proclament le grand maître d'Aviz, Jean Ier, roi de Portugal. Il s'agit, en pratique, d'une véritable déclaration de guerre à la Castille. Peu après, le souverain castillan envahit le Portugal avec la participation d’un détachement de cavalerie française. En face, les Anglais sont alliés à Jean d’Aviz. Jean Ier nomme Nuno Álvares Pereira, connétable de Portugal et l’invasion est repoussée durant l’été après la victoire portugaise d'Aljubarrota le 14 août 1385.\n\nLa Castille se retire et la couronne de Jean Ier lui est définitivement acquise.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/960px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg",
-    "regne": true,
+    "themes": [
+      "politique"
+    ],
     "lat": 38.72,
     "lng": -9.14,
     "geo_auto": true
@@ -33823,8 +33875,10 @@
     "type": 1,
     "description": "Charles, duc de Duras ou Charles, duc de Durazzo (Durrës), dit le Petit, né en 1345, mort empoisonné à Visegrád le 24 février 1386, est roi de Naples de 1381 à 1386 (sous le nom de Charles III), roi de Dalmatie, de Croatie, de Rascie, de Serbie, de Galicie, de Lodomérie, de Cumanie, de Bulgarie, et brièvement roi de Hongrie de 1385 à 1386 (sous le nom de Charles II), comte de Provence, de Forcalquier et de Piémont fils de Louis d'Anjou-Durazzo, comte de Gravina, et de Marguerite de San-Severino.\nLouis Ier d'Anjou, que Jeanne avait adopté et à qui cette princesse avait cédé ses droits, tente de faire valoir ses droits sur Naples. Charles garnit ses places, évita le combat et laisse l'armée ennemie s'épuiser par les fatigues et le climat. Louis d'Anjou meurt en septembre en 1384, mettant un coup d'arrêt aux prétentions de la seconde dynastie angevine sur le trône de Naples. Charles finit par avoir lui aussi des démêlés avec le pape qui, l'ayant placé sur le trône, prétendait le dominer.\nPendant ce temps, Louis Ier de Hongrie est mort en 1382 et Charles, qui se considère comme son héritier parce que le roi Louis Ier ne laisse que des filles, revendique le trône de Hongrie. Marie Ire, la fille aînée de Louis, est élue par la Diète, mais Charles se rend en Hongrie pour s'y faire proclamer roi en 1385. Marie Ire abdique en sa faveur et il est couronné le 31 décembre 1385.\n\nAu moment où il pense avoir triomphé de tous les obstacles, la jeune reine et sa mère, Élisabeth de Bosnie, composent, lui laissant croire qu'elles l'admettent comme roi ; mais, plus tard, au cours d'une fête où Charles est invité, elles l'arrêtent et massacrent son entourage le 7 février 1386. Charles, blessé, est jeté en prison à Visegrád où il meurt le 24 février[1]. Son fils Ladislas lui succède sur le trône de Naples et un parti cherche à l'imposer comme roi en Hongrie.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Kis_Karoly_TK.jpg",
+    "themes": [
+      "politique"
+    ],
     "legende": "Charles III de Naples. Enluminure hongroise de 1488.",
-    "regne": true,
     "lat": 40.8359,
     "lng": 14.2488
   },
@@ -33841,7 +33895,9 @@
     "type": 1,
     "description": "Il était le fils de Galéas II Visconti et de Blanche de Savoie. En juin 1360, l'année de ses neuf ans, son père lui fait épouser Isabelle de Valois, âgée de douze ans, fille du roi de France Jean II le Bon, mariage qui consacre l'union entre Galéas II et la famille royale française. Jean Galéas devient ainsi comte de Vertus (de la cité de Vertus en Champagne), titre créé par Jean II et apporté en dot par son épouse.\n\nL'union, assurément ultérieure, est prolifique mais ne dure guère :\n\nleur premier enfant Jean Galéas naît le 4 mars 1366 et meurt en 1373, âgé de sept ans ; le second Azzone naît en 1368 et meurt le 2 octobre 1380, âgé de 12 ans ; Valentine naît en 1370 ou 1371 ; le dernier, Carlo naît en septembre 1372 et meurt bébé tandis que la mère, Isabelle, meurt des suites de l'accouchement le 11 septembre 1372, âgée de seulement 24 ans.\n\nLe père de Jean Galéas était co-seigneur de Milan avec son frère Barnabé. À la mort de son père, le 4 août 1378, son oncle Barnabé lui concède le gouvernement de la partie occidentale de la Lombardie mais, se considérant seul seigneur de Milan, il désigne ses deux fils Ludovico et Rodolfo comme ses héritiers en mars 1379.\n\nJean Galéas demande à l'empereur Venceslas Ier la charge de vicaire impérial à la suite de son père, charge qui lui est concédée en janvier 1380. Barnabé néglige cette formalité et reste seul au pouvoir.\n\nLe 2 octobre 1380, pour satisfaire les projets de son oncle, Jean Galéas épouse sa cousine Catherine, fille de Barnabé. En 1385, aidé par sa mère Blanche, Jean Galéas met au point un coup d'État au détriment de son oncle beau-père.\n\nLe 6 mai 1385, avec Jacopo dal Verme, Ottone di Mandello et Giovanni Malaspina et à la tête d'une troupe de 500 lances, il fait prisonnier Barnabé et ses deux fils Ludovico et Rodolfo et les enferme dans le château de Porta Giovia et prend le pouvoir. Barnabé meurt en prison, le 19 décembre 1385, empoisonné par les soins de Jean Galéas. Jean Galéas a attendu plus de six ans pour se venger des brimades de son oncle.\n\nLe 7 mai, Jean Galéas se rend à la forteresse de la porte Romaine (it) (Porta Romana). Le Conseil général lui confère le pouvoir sur la cité et du 8 au 14 mai, il occupe toutes les villes du fief. Seules les forteresses résistent plus longtemps.\n\nDès lors, ses ambitions n'ont plus de limites : en 1387, il soumet Vicence et Vérone ; en 1390, c'est Padoue qui est annexée ; le 11 mai 1395 il obtient de l'empereur Venceslas Ier l'élévation au titre de duc contre 100 000 florins d'or  ; ses prétentions de soumettre tout le nord de la péninsule italienne le lancent ensuite à la conquête de Pise, Pérouse, Assise et Sienne.\n\nFlorence, qui se sent directement menacée par les Visconti, arme une ligue qui met un terme à ses projets pan-italiens.\n\nJean Galéas est resté dans l'histoire pour sa folie des grandeurs. Il dépensa, par exemple, 300 000 florins d'or dans de gigantesques travaux d'endiguements pour dévier à son profit le Mincio de Mantoue et la Brenta de Padoue et enlever ainsi tous leurs moyens de défense à ces deux villes. C'est aussi à Jean Galéas que l'on doit l'église et le monastère de la Certosa à Pavie, le début des travaux d'édification de la cathédrale (il Duomo), faisant appel aux meilleurs artistes disponibles en Europe, ainsi que le château de Pavie commencé sous son père Galéas II et achevé par ses soins.\n\nCe palais était alors, de loin, la plus splendide résidence princière d'Europe. Il y transféra sa célèbre bibliothèque et sa grande collection de reliques sacrées en lesquelles il avait une foi tout à fait particulière.\n\nAvant de mourir, Jean Galéas partagea l'État entre ses fils, laissant à Jean Marie le duché, à Philippe Marie le comté de Pavie et à Gabriel Marie, un enfant naturel, la seigneurie de Pise.\n\nIl succomba à l'épidémie de peste de 1402, dans le château de Melegnano, laissant les caisses de l'État exsangues et une veuve en sérieuses difficultés financières. Après sa mort, l'état autoritaire qu'il avait maintenu avec toutes sortes de violences partit rapidement en pièces.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/GiovAmbrogiodePredisattribGianGaleazzoVisconti.jpg",
-    "regne": true,
+    "themes": [
+      "politique"
+    ],
     "lat": 45.46,
     "lng": 9.19,
     "geo_auto": true
@@ -33856,6 +33912,9 @@
     "type": 3,
     "description": "Llorenç Saragossà en catalan, ou Lorenzo Zaragoza en castillan, est un peintre aragonais, né à Cariñena, dans la province de Saragosse. Il représente le style gothique international de l'école de Valence et est considéré comme le premier à avoir introduit ce style à la Cour d'Aragon. Il est actif de 1363 à 1406.\n\nIl a travaillé au service du roi Pierre le Cérémonieux à partir de 1367. Il a d'abord travaillé à Barcelone depuis au moins 1363 jusqu'en 1374. C'est probablement durant cette période qu'il a pu entrer en contact avec le style des frères Serra, Jaume, Pere. L'année suivante, il déménage à Valence où il réside jusqu'en 1406.\n\nBien que son travail soit peu documenté, il est considéré comme l'auteur du retable de la Vierge allaitant l'Enfant avec le concert des anges musiciens à Jérica, qui représente un modèle iconographique repris par d'autres peintres.\n\nIl a réalisé plusieurs retables pour l'église de la Nativité de Notre-Dame (Villahermosa del Rio) entre 1380 et 1395.\n\n1366 : triptyque dédié a saint Nicolas pour les religieuses franciscaines de Calatayud 1366 : triptyque de sainte Catherine pour le couvent franciscain de Teruel, à la demande de la reine Léonore les tableaux avec sainte Catherine et saint Michel archange conservé au musée diocésain de Teruel 1373 : une série de peintures sur sainte Suzanne, vénérée à Maella 1377 : retable de sainte Apolonia pour l'église de San Lorenzo de Saragosse 1378 : retable de saint Narcisse de la cathédrale de Valence 1382 : grand retable de l'église de San Salvador à Valence 1383 : retable pour Bernat Ordi chanoine de Valence 1387-1389 : retable pour la chapelle de l'église de Santa María d'el Puig 1389 : retable des saints Pierre apôtre et saint Bernard 1392 : retable de saint Sébastien et sainte Anastasie pour la chapelle d'Antoni Pujalt dans l'église d'Alzira 1394-1395 : retable de la Vierge, saint Martín et sainte Agueda, qui se trouve dans la chapelle majeure de Santa Águeda la Antigua ou ermitage de San Roque de Jérica.\n\nPérez Martín a étudié cette œuvre. C'est la peinture la plus sûre permettant d'identifier le style de Llorenç Saragossà. Il a diffusé la manière italianisante des frères Jaume Serra et Pere Serra.\n\n1380-1390 Retable de l'Eucharistie de l'église de la Nativité de Notre-Dame (Villahermosa del Rio)\n\n1385-1390 Retable de saint Laurent et saint Étienne de l'église de la Nativité de Notre-Dame (Villahermosa del Rio)\n\n1390-1395 Retable majeur de l'église de la Nativité de Notre-Dame (Villahermosa del Rio)\n\n1402 : retable du Christ pour l'église d'Onda 1404-1405 : retable de San Salvador pour l'église de Borriana Le musée national d'art de Catalogne conserve le panneau central représentant la Mère de Dieu allaitant l'Enfant d'un retable de la cathédrale d'Albarracín ainsi qu'un retable de la Mère de Dieu allaitant l'Enfant avec sainte Claire et saint Antoine abbé\n\nLa collection Godia possède un tableau représentant la Vierge allaitant l'Enfant entourée d'anges de Torroella de Montgrí.\n\nPlusieurs de ses œuves sont exposées au musée des deaux-arts de Valence comme le tableau de saint François et sainte Catalina, le retable de saint Luc de la confrérie des charpentiers de Valence.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Retable_Eucharistie_panneau_central.jpg/960px-Retable_Eucharistie_panneau_central.jpg",
+    "themes": [
+      "art"
+    ],
     "legende": "Panneau central. La Cène. Jean l'évangéliste est endormi sur la table.",
     "lat": 39.4697,
     "lng": -0.3763
@@ -33872,6 +33931,9 @@
     "type": 4,
     "description": "La mort, dans les Pouilles de Louis 1er d'Anjou, facilite le règlement du conflit en Provence pour le parti angevin : en effet, de nombreux Provençaux avaient gardé le souvenir de l’invasion de Louis Ier, en 1368, et refusaient de se soumettre à lui. Son fils, Louis II, n’avait pas ces antécédents.\n\nCependant, cette mort facilite les choses pour le parti angevin : en effet, de nombreux Provençaux avaient gardé le souvenir de l’invasion de Louis Ier, en 1368, et refusaient de se soumettre à lui. Son fils, Louis II, n’avait pas ces antécédents.\n\nMarie de Blois, accompagnée de son fils Louis II, vient s'établir à Avignon d'où elle continue la guerre et les transactions, sans parvenir encore à obtenir des ralliements. Elle reçoit l’hommage des seigneurs et des représentants de communautés qui la soutiennent les 7 et 8 juin 1385 à Apt. Elle missionne de nombreux représentants chargés de promettre des réductions de taxes et une plus grande autonomie : le mouvement de ralliement débute à la fin de l’été, et s’accélère pendant l’hiver 1385-1386.\n\nAinsi Arles, prudente, ne s’engage qu’après plusieurs mois d’atermoiements et ne se décide à accueillir dans ses murs Marie de Blois et Louis II son fils que le 7 décembre 1385, lors d'une assemblée générale de 300 chefs de familles arlésiens devant le palais comtal.\n\nAprès avoir négocié des contreparties et établi une nouvelle convention, Arles reconnaît alors ce dernier comme son nouveau seigneur., vient s'établir à Avignon d'où elle continue la guerre et les transactions, sans parvenir encore à obtenir des ralliements. Elle reçoit l’hommage des seigneurs et des représentants de communautés qui la soutiennent les 7 et 8 juin 1385 à Apt. Elle missionne de nombreux représentants chargés de promettre des réductions de taxes et une plus grande autonomie : le mouvement de ralliement débute à la fin de l’été, et s’accélère pendant l’hiver 1385-1386.\n\nAinsi Arles, prudente, ne s’engage qu’après plusieurs mois d’atermoiements et ne se décide à accueillir dans ses murs Marie de Blois et Louis II son fils que le 7 décembre 1385, lors d'une assemblée générale de 300 chefs de familles arlésiens devant le palais comtal.\n\nAprès avoir négocié des contreparties et établi une nouvelle convention, Arles reconnaît alors ce dernier comme son nouveau seigneur.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 43.6776,
     "lng": 4.631,
     "serie": "Guerre de l'Union d'Aix"
@@ -33886,6 +33948,9 @@
     "type": 3,
     "description": "Chaucer démissionne de son poste de contrôleur des douanes du port de Londres en 1385 et part pour le Kent, peut-être à Greenwich, où il représente la justice royale pendant quelques années. C'est peut-être de cette période que date La Légende des femmes vertueuses (The Legend of Good Women).\na Légende des femmes vertueuses (The Legend of Good Women) est un poème de Geoffrey Chaucer. Il compte 2 723 vers, répartis en neuf sections et un prologue, mais il n'est pas achevé. Comme son titre l'indique, il s'agit d'une collection de biographies de femmes célèbres de la mythologie et de l'histoire antique. Il s'agit de la première œuvre de Chaucer en pentamètres iambiques, un mètre qu'il réutilise par la suite dans les Contes de Canterbury.\nDans un rêve, Chaucer rencontre le dieu de l'amour et son épouse Alceste. Ils lui reprochent d'avoir donné une mauvaise image des femmes et de l'amour dans son poème Troïlus et Criseyde (où Criseyde abandonne Troïlus), ainsi que dans sa traduction du Roman de la rose. Il implore leur pardon, et Alceste lui impose comme épreuve d'écrire les vies de femmes vertueuses et fidèles, trahies par les hommes. Chaucer s'exécute dès son réveil en entreprenant la rédaction de la Légende des femmes vertueuses :\n\nCléopâtre, reine d'Égypte, qui se suicide après la mort de son bien-aimé Antoine ;\nThisbé et son amour interdit pour Pyrame ;\nDidon, la reine de Carthage abandonnée par Énée ;\nHypsipyle et Médée, aimées puis abandonnées par Jason ;\nLucrèce, violée par Tarquin, le dernier roi de Rome ;\nAriane, abandonnée par Thésée ;\nPhilomèle, violée par Térée, le mari de sa sœur Procné ;\nPhyllis, oubliée par Démophon ;\net Hypermnestre, la seule des Danaïdes à refuser de tuer son mari.\nLa rédaction de la Légende des femmes vertueuses prend nécessairement place après celle de Troïlus et Criseyde, mais elle précède ou prend place en même temps que celle des Contes de Canterbury, car ce poème est mentionné dans le Conte du juriste et dans la Rétractation qui conclut le recueil.\n\nChaucer ne semble pas s'être inspiré du De mulieribus claris de Boccace, bien que la plupart de ses « femmes vertueuses » aient également droit à une biographie chez le poète italien. Sa principale source semble plutôt avoir été les Héroïdes d'Ovide. Les récits puisent également à d'autres sources classiques, comme les Métamorphoses pour Thisbé et Philomèle ou l'Énéide pour Didon.",
     "image": "",
+    "themes": [
+      "litterature"
+    ],
     "lat": 51.2071,
     "lng": 0.721
   },
@@ -33895,11 +33960,14 @@
     "date": 1385,
     "date_fin": 1424,
     "zones": [
-      "Orient"
+      "Asie du Sud-Est"
     ],
     "type": 3,
     "description": "La guerre de Quarante Ans est un conflit militaire ayant opposé de 1385 à 1424 le royaume d'Ava de Haute-Birmanie, parlant birman, et le royaume d'Hanthawaddy de Basse-Birmanie, qui parlait môn. \nCasus belli\t: Le royaume d'Ava tente de réunifier la Birmanie et d'obtenir un accès à la mer.\nElle se déroula en deux temps, de 1385 à 1391 et de 1404 à 1424, et fut interrompue par deux trêves, une de 1391 à 1404 et la seconde de 1406 à 1407. Le théâtre des opérations fut principalement l'actuelle Basse-Birmanie, ainsi que la Haute-Birmanie, l'Arakan et les États Shans. La guerre se conclut par un statu quo : le royaume d'Hanthawaddy conserva son indépendance et le royaume d'Ava renonça à reconstituer le royaume de Pagan.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Burma_in_1450.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "guerre"
+    ],
     "legende": "Myanmar vers 1450",
     "lat": 17.175,
     "lng": 96
@@ -33910,11 +33978,14 @@
     "date": 1385,
     "date_fin": 1391,
     "zones": [
-      "Orient"
+      "Asie du Sud-Est"
     ],
     "type": 4,
     "description": "Swasawke, roi d'Ava, lança les hostilités en envahissant le royaume d'Hanthawaddy, alors en proie à une crise de succession. Mais le nouveau roi Razadarit, aidé de généraux compétents, Lagun Ein et Emuntaya, repoussa les nombreuses invasions d'Ava. En 1391, Ava dut accepter une trêve, qui dura jusqu'en 1404.\nSwasawke (birman စွာစော်ကဲ, swà sɔ̀kέ; 1330-1400), aussi appelé Mingyi Tarabya Swasawke, fut le deuxième souverain du royaume d'Ava, en Haute-Birmanie. Il régna de 1367 à 1400. Quand il fut élu par les ministres pour succéder au roi Thadominbya, mort sans héritier, le royaume avait moins de quatre ans et était encore menacé. À la fin de ses 33 ans de règne, il l'avait établi durablement en Haute-Birmanie.\n\nDans le nord, il repoussa les raids des Shans, un problème récurrent depuis les royaumes de Sagaing et de Pinya. Il maintint des relations d'amitié avec le royaume thaï de Lanna dans l'Est et le royaume de Launggyet en Arakan. Dans le sud, il vassalisa les royaumes semi-indépendants de Taungû et Prome. Mais ses autres tentatives furent des échecs. Ses invasions du royaume d'Hanthawaddy déclenchèrent la guerre de Quarante ans (1385–1424) entre les Birmans et les Môns de Pégou (Hanthawaddy). Swasawke décida d'envahir Hanthawaddy après la mort en 1384 du roi Binnya U, avec lequel il était en bons termes. Le fils adolescent de Binnya U Razadarit s'était proclamé roi, mais il était aux prises de tous côtés avec des révoltes ouvertes. Laukpya, seigneur de Myaungmya, avait gouverné le delta de l'Irrawaddy comme un roi sous l'autorité de son frère Binnya U, et n'était pas prêt à se soumettre à un neveu adolescent. En 1385, alors que Razadarit se préparait à marcher contre lui, Laukpya demanda l'aide de Swasawke, en promettant de se soumettre à Ava. L'acceptation de Swasawke provoqua la guerre de Quarante ans entre Ava et Pégou.\n\nEn 1386, Swasawke lança une double invasion du royaume d'Hanthawaddy le long des vallées de l'Irrawaddy et de la Sittang, tandis que Laukpya attaquait depuis le delta. Razadarit garda son sang-froid et repoussa les trois invasions. En 1387, Swasawke l'attaqua à nouveau en vain. En 1388, Razadarit vainquit Martaban et se retourna rapidement vers le delta, battant Laukpya à Myaungmya. Laukpya fut tué au combat ; son fils et ses deux gendres se réfugièrent à Ava.\n\nSwasawke était à son tour sur la défensive. En 1390, Razadarit, ayant renforcé les trois régions de Basse-Birmanie, songea à s'étendre vers le nord. Il attaqua et conquit Myanaung, la ville la plus au nord du delta encore en possession d'Ava. Il mit ensuite le siège devant Prome, plus au nord sur l'Irrawaddy. Swasawke envoya des forces terrestres et navales qui l'empêchèrent de réussir. En 1391, les deux rois conclurent une trêve qui donnait à Hanthawaddy le contrôle de Myanaung[11]. Ce royaume contrôlait maintenant toute la Basse-Birmanie au sud de Prome et Swasawke abandonna son rêve d'unifier tout le pays.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 17.175,
     "lng": 96
   },
@@ -33930,6 +34001,9 @@
     "type": 3,
     "description": "Le 15 janvier 1385  Charles Duras met le siège devant le château de Nocera où s'est réfugié le pape dès la fin du mois.\nLe siège de Nocera constitue un épisode particulièrement révélateur de la crise du pouvoir pontifical à la fin du XIVe siècle. Il ne s’agit pas seulement d’un affrontement militaire entre un pape et le roi de Naples : l'événement met en évidence l'imbrication étroite entre schisme ecclésiastique, politique dynastique, luttes féodales et exercice de la souveraineté pontificale.\nLe pape ne se trouve pas seulement assiégé par un souverain laïque : une partie de son propre collège cardinalice envisage sa déposition, ce qui donne à l'affaire une dimension exceptionnelle.\nÀ la mort de Grégoire XI, le 27 mars 1378, le conclave réuni à Rome élit le 8 avril Bartolomeo Prignano, archevêque de Bari, qui prend le nom d'Urbain VI.\n\nI. Le contexte : le Grand Schisme et l'échec du compromis de 1378\n1. L'élection d'Urbain VI\n\nÀ la mort de Grégoire XI, le 27 mars 1378, le conclave réuni à Rome élit le 8 avril Bartolomeo Prignano, archevêque de Bari, qui prend le nom d'Urbain VI.\n\nL'élection intervient dans un contexte extrêmement tendu. Après près de soixante-dix ans de papauté à Avignon, le retour de la Curie à Rome avait ravivé les tensions entre cardinaux français et italiens. La population romaine exigeait avec insistance l'élection d'un pape italien ou, à défaut, d'un pape suffisamment acceptable pour maintenir le siège pontifical à Rome.\n\nUrbain VI apparaît initialement comme un candidat de compromis. Mais son comportement après l'élection déçoit rapidement une partie du Sacré Collège.\n\nIl entend notamment réformer la Curie, lutter contre la simonie, limiter les pratiques de distribution des bénéfices et imposer aux cardinaux une résidence plus effective à Rome. Surtout, il ne se comporte pas comme un pontife dépendant du collège qui vient de l'élire.\n\nCette rupture entre le pape et les cardinaux est essentielle pour comprendre la suite des événements.\n\n2. L'élection de Clément VII et la naissance du schisme\n\nUne partie des cardinaux considère bientôt que l'élection d'Urbain VI a été viciée par la pression populaire exercée pendant le conclave.\n\nLe 9 août 1378, des cardinaux se réunissent à Anagni puis à Fondi. Le 20 septembre, ils élisent Robert de Genève, qui prend le nom de Clément VII.\n\nDeux obédiences pontificales apparaissent alors :\n\nl'obédience romaine, autour d'Urbain VI ;\nl'obédience avignonnaise, autour de Clément VII.\n\nLe Grand Schisme d'Occident est ainsi moins une simple opposition entre « pape » et « antipape » qu'une crise de légitimité institutionnelle : pendant plusieurs décennies, une partie de la chrétienté considère Urbain VI comme le véritable pape tandis qu'une autre reconnaît Clément VII.\n\nLes contemporains eux-mêmes ne disposent pas d'un moyen incontestable de trancher juridiquement la question. La validité des deux élections demeure longtemps discutée, et même le concile de Constance, au début du XVe siècle, ne rend pas une décision doctrinale simple sur la validité respective des élections de 1378.\n\nII. Urbain VI, le royaume de Naples et la constitution d'une alliance fragile\n1. Le choix de Charles III\n\nLe schisme se transforme rapidement en conflit politique.\n\nLe royaume de Naples constitue un enjeu majeur parce que sa monarchie est directement liée aux équilibres pontificaux. Urbain VI soutient Charles III d'Anjou-Durazzo contre la reine Jeanne Ire de Naples, favorable à l'obédience de Clément VII.\n\nEn 1380, Urbain excommunie Jeanne et cherche à lui substituer Charles.\n\nLe 1er juin 1381, il couronne Charles III roi de Naples.\n\nCette alliance est cependant profondément circonstancielle. Urbain espère obtenir de Charles un soutien politique et militaire durable, tandis que Charles entend consolider son pouvoir dans le royaume.\n\nUne difficulté supplémentaire apparaît autour des ambitions familiales du pape. Urbain cherche à favoriser son neveu Francesco Prignano, auquel Charles doit attribuer certains territoires. Or le roi ne tient pas toutes les promesses que le pape estime avoir obtenues.\n\nLa relation entre les deux hommes se dégrade donc progressivement.\n\nIII. De Naples à Nocera : la rupture entre Urbain VI et Charles III\n1. Le refuge du pape\n\nÀ partir de 1384, Urbain VI se rapproche de Nocera.\n\nLe Castello del Parco, dominant la ville, appartient alors au domaine de son neveu Francesco Prignano et constitue une position fortifiée particulièrement favorable. Le château devient ainsi, pendant plusieurs mois, le centre politique et militaire de l'obédience romaine.\n\nIl faut ici corriger une simplification fréquente : le siège militaire de 1385 ne commence pas au moment où Urbain arrive à Nocera. Le pape s'y installe dès juin 1384 ; c'est la détérioration ultérieure de ses relations avec Charles III qui conduit à la confrontation armée de 1385. Les sources consacrées à Charles III soulignent notamment qu'après la mort de Louis d'Anjou en septembre 1384, Charles dispose de davantage de liberté pour s'occuper du problème pontifical.\n\n2. Le conflit politique devient conflit féodal\n\nUrbain VI ne se contente plus de soutenir Charles : il intervient directement dans la politique du royaume de Naples et nourrit l'ambition de modifier son équilibre dynastique.\n\nCette attitude menace directement les intérêts du roi.\n\nLe pape apparaît progressivement à Charles non plus comme un allié, mais comme un acteur susceptible de remettre en cause son pouvoir.\n\nLe paradoxe est considérable :\n\nUrbain VI avait contribué à faire de Charles III le roi de Naples ; quelques années plus tard, il entre en conflit avec le souverain qu'il avait lui-même contribué à légitimer.\n\nC'est cette contradiction qui constitue l'arrière-plan politique immédiat du siège.\n\nIV. La « conspiration des cardinaux » : une crise au cœur même de l'Église\n1. La question de la capacité du pape à gouverner\n\nLa situation se complique encore lorsque plusieurs cardinaux envisagent de limiter ou de déposer Urbain VI.\n\nLes sources rapportent que les cardinaux s'interrogent sur la possibilité de placer le pape sous une forme de tutelle cardinalice, en raison de son comportement jugé excessivement autoritaire, violent ou irrationnel.\n\nLe juriste Bartolino da Piacenza aurait notamment été consulté sur la possibilité de soumettre à une forme de contrôle un pape dont le comportement mettait en péril l'Église.\n\nCette question est fondamentale sur le plan institutionnel :\n\nUn pape peut-il être déposé ou placé sous tutelle s'il est considéré comme incapable de gouverner l'Église ?\n\nLa question ne relève plus seulement de la politique personnelle. Elle touche au problème, encore mal stabilisé au XIVe siècle, de la supériorité éventuelle du concile ou du collège cardinalice sur le pape.\n\n2. Les six cardinaux arrêtés\n\nUrbain VI est averti de la conspiration, notamment par le cardinal Tommaso Orsini.\n\nLe 11 janvier 1385, il fait arrêter six cardinaux :\n\nGiovanni da Amelia ;\nGentile di Sangro ;\nAdam Easton, bénédictin anglais ;\nLudovico da Venezia/Donati ;\nBartolomeo da Cogorno ;\nMarino del Giudice.\n\nLes prisonniers sont enfermés au Castello del Parco.\n\nLes sources divergent cependant sur certains détails du déroulement de la conspiration et sur les intentions précises des conspirateurs. Il convient donc de présenter avec prudence l'affirmation selon laquelle ils auraient tous été destinés à être immédiatement brûlés comme « hérétiques ».\n\nLa tradition historiographique rapporte néanmoins qu'une procédure de déposition et de condamnation était envisagée et que certains projets prévoyaient un jugement extrêmement radical contre le pape.\n\nL'affaire devient ainsi une crise constitutionnelle au sommet de l'Église.\n\nAdam Easton constitue un cas particulièrement intéressant : cardinal anglais, bénédictin et intellectuel de premier plan, il est emprisonné avec les autres mais sera finalement le seul des six à survivre. Son cardinalat lui sera rendu en 1389 par Boniface IX.\n\nV. Le siège de Nocera en 1385\n1. L'intervention militaire de Charles III\n\nAprès l'arrestation des cardinaux, la situation entre Urbain VI et Charles III devient irréversible.\n\nLe pape accuse le roi et son entourage de participer à la conspiration. Charles réagit militairement.\n\nLes troupes royales commandées par Alberico da Barbiano arrivent devant Nocera et commencent le siège du Castello del Parco.\n\nLes chronologies générales situent le siège au début de 1385 et son dénouement au mois de juillet.\n\nLa ville est prise par les forces royales, mais le château, situé sur la hauteur, continue de résister.\n\nCette distinction entre la ville et la forteresse est essentielle : la possession de Nocera ne signifie pas immédiatement la capture du pape.\n\n2. Le pape comme acteur de guerre\n\nLa situation donne lieu à une scène particulièrement spectaculaire : Urbain VI apparaît depuis les murailles du château et excommunie régulièrement les assiégeants.\n\nL'acte religieux devient ainsi une arme politique.\n\nLe pape ne se présente pas simplement comme un prince assiégé : il affirme être le véritable pontife et le représentant de l'Église persécuté par ceux qui s'opposent à lui.\n\nCette mise en scène possède une importante dimension symbolique. La forteresse devient presque un théâtre où s'affrontent deux formes de légitimité :\n\nla légitimité militaire et dynastique de Charles III ;\nla légitimité spirituelle et juridictionnelle revendiquée par Urbain VI.\n\nCertaines sources décrivent Urbain se rendant régulièrement sur les remparts avec les signes liturgiques de son autorité et renouvelant ses condamnations de Charles et de ses partisans.\n\nVI. La population de Nocera et les dimensions locales du conflit\n\nLe siège ne doit pas être étudié uniquement à l'échelle du pape et du roi.\n\nNocera est une communauté directement impliquée dans le conflit. Une partie de la population prend le parti d'Urbain VI, ce qui entraîne des violences contre ses adversaires après l'arrestation des cardinaux.\n\nLa tradition locale conserve une mémoire particulièrement forte de cet épisode. Le Castello del Parco est aujourd'hui identifié comme le lieu où Urbain VI fut assiégé en 1385 ; la documentation patrimoniale locale rappelle également que le pape aurait récompensé Nocera en rétablissant son statut diocésain après les événements.\n\nPour l'historien, il faut toutefois distinguer :\n\nles faits documentaires établis ;\nla mémoire civique et religieuse construite ultérieurement autour de l'événement.\n\nLe récit du siège a en effet été progressivement intégré à l'identité historique de Nocera.\n\nVII. La résistance et le secours des ennemis de Charles III\n1. L'importance de Raimondo Orsini\n\nUrbain VI ne peut cependant compter uniquement sur la résistance du château.\n\nIl espère l'intervention de forces hostiles à Charles III, notamment celles de Raimondo del Balzo Orsini, dit Ramondello Orsini, comte de Nola, ainsi que de Tommaso Sanseverino.\n\nCes personnages appartiennent au réseau des puissances angevines opposées à Charles de Durazzo.\n\nLeur intervention illustre une caractéristique fondamentale de la politique italienne du XIVe siècle : les conflits ne sont pas strictement bipolaires. Les fidélités dynastiques, les intérêts territoriaux et les rivalités nobiliaires s'entrecroisent constamment.\n\nTreccani souligne notamment qu'en mars 1385 des troupes angevines commandées par Raimondo del Balzo Orsini arrivent à Nocera et que le conflit culmine avec l'intervention de forces favorables à Urbain, permettant finalement la libération du pape le 7 juillet.\n\n2. La rupture du siège\n\nLe siège finit par atteindre une phase critique pour Urbain VI.\n\nLes troupes royales ont progressé jusqu'aux défenses du château et la situation du pape devient extrêmement dangereuse.\n\nMais les forces d'Orsini et de Sanseverino parviennent à intervenir.\n\nLe 7 juillet 1385, le dispositif de Charles III est finalement brisé et Urbain VI peut quitter Nocera.\n\nL'épisode constitue donc une victoire militaire pour les adversaires de Charles III, mais il ne signifie pas que le pouvoir urbain a définitivement triomphé dans le royaume de Naples.\n\nVIII. La fuite de Nocera et la recomposition de l'obédience urbaine\n\nAprès sa libération, Urbain VI se dirige vers la côte.\n\nSon itinéraire passe notamment par Sanseverino et Buccino, avant qu'il n'atteigne la région de Paestum. Le 7 juillet, il embarque sur des galères génoises envoyées à son secours par le doge Antoniotto Adorno.\n\nIl gagne ensuite la Sicile puis Gênes.\n\nL'épisode transforme profondément la géographie de la papauté urbaine : le pape, qui entendait défendre sa légitimité depuis le royaume de Naples, doit désormais chercher refuge auprès d'autres puissances italiennes.\n\nÀ Gênes, il s'installe à la commanderie de San Giovanni di Pré en septembre 1385.\n\nLe déplacement de Nocera à Gênes est donc à interpréter comme un repli stratégique, mais aussi comme le signe de la dépendance croissante du pape à l'égard des réseaux politiques et militaires qui soutiennent son obédience.\n\nIX. Le sort des cardinaux : de la prison de Nocera aux exécutions\n\nL'un des aspects les plus sombres de l'affaire concerne les six cardinaux emprisonnés.\n\nUrbain VI les emmène avec lui dans sa fuite.\n\nCinq d'entre eux meurent ensuite dans des circonstances violentes, entre la fin de 1385 et 1386 selon les sources et les reconstructions historiographiques.\n\nAdam Easton constitue l'exception majeure.\n\nSon origine anglaise et ses relations avec la cour de Richard II permettent finalement son intervention et sa survie. Il est ensuite réhabilité par Boniface IX.\n\nIl faut donc éviter une formulation trop simple selon laquelle « Urbain fit exécuter les six cardinaux ». La réalité est plus précise : six cardinaux furent arrêtés et emprisonnés ; cinq moururent ultérieurement de manière violente, tandis qu'Adam Easton survécut et fut rétabli dans ses dignités.\n\nLa mort de ces cardinaux constitue l'un des éléments les plus compromettants de la politique d'Urbain VI et contribue durablement à l'image d'un pontife autoritaire et violent.\n\nX. Le sens historique du siège de Nocera\n1. Une crise de la monarchie pontificale\n\nLe premier enseignement du siège est la fragilité du pouvoir pontifical lorsqu'il se trouve directement engagé dans les conflits politiques italiens.\n\nUrbain VI entend exercer son autorité comme un véritable souverain : il intervient dans la succession napolitaine, distribue des terres, soutient des factions et cherche à imposer ses propres intérêts familiaux.\n\nMais cette politique l'oblige à dépendre de forces militaires et aristocratiques dont les intérêts ne coïncident pas toujours avec les siens.\n\nNocera révèle ainsi une contradiction fondamentale :\n\nLe pape revendique une autorité universelle, mais sa capacité à l'exercer dépend concrètement de ressources militaires, financières et territoriales profondément locales.\n\n2. Une crise de l'autorité pontificale\n\nLa conspiration des cardinaux révèle une deuxième dimension.\n\nLe problème n'est plus seulement de savoir quel homme est pape, mais de déterminer qui possède l'autorité pour juger la capacité d'un pape à gouverner.\n\nL'affaire de Nocera préfigure ainsi certaines des interrogations qui seront au cœur du mouvement conciliariste et, plus largement, de la réflexion ecclésiologique de la fin du Moyen Âge.\n\nMême si le conciliarisme ne peut être réduit à la conspiration de Nocera, l'épisode montre que l'idée selon laquelle le pape pouvait être soumis à un contrôle institutionnel n'était pas étrangère aux milieux ecclésiastiques.\n\n3. Le schisme comme guerre politique\n\nNocera démontre enfin que le Grand Schisme n'est pas seulement un conflit théologique.\n\nIl possède simultanément plusieurs dimensions :\n\necclésiologique : qui est le véritable pape ?\njuridique : l'élection d'Urbain VI est-elle valide ?\ndiplomatique : quelles puissances reconnaissent chaque obédience ?\ndynastique : qui doit gouverner Naples ?\nféodale : quels territoires et quels fiefs doivent revenir aux différents protagonistes ?\nmilitaire : quelles forces permettent à chaque obédience de survivre ?\nfamiliale : jusqu'où le pape peut-il favoriser ses proches ?\n\nLe siège de Nocera se situe précisément à l'intersection de ces différentes dimensions.\n\nXI. Chronologie synthétique\n\n1378\n\n27 mars : mort de Grégoire XI.\n8 avril : élection de Bartolomeo Prignano, devenu Urbain VI.\nAoût-septembre : rupture avec une partie du Sacré Collège.\n20 septembre : élection de Robert de Genève, Clément VII.\nDébut du Grand Schisme d'Occident.\n\n1379\n\nVictoire d'Urbain VI sur les forces de Clément VII dans la région de Rome.\nClément VII quitte l'Italie et établit son obédience à Avignon.\n\n1380\n\nUrbain VI excommunie Jeanne Ire de Naples.\n\n1381\n\n1er juin : Urbain VI couronne Charles III roi de Naples.\n\n1382\n\nMort de Jeanne Ire.\nConsolidation du pouvoir de Charles III.\n\n1384\n\nMort de Louis d'Anjou en septembre.\nUrbain VI s'installe à Nocera en juin et entre progressivement en conflit ouvert avec Charles III.\n\n11 janvier 1385 environ\n\nUrbain VI fait arrêter six cardinaux soupçonnés de conspiration.\n\nFévrier 1385\n\nLes troupes de Charles III commencent le siège du Castello del Parco.\n\nMars 1385\n\nLes forces de Raimondo del Balzo Orsini arrivent dans la région pour soutenir Urbain VI.\n\nPrintemps-été 1385\n\nRésistance du château.\nProgression des troupes royales.\nUrbain VI continue d'affirmer son autorité spirituelle depuis la forteresse.\n\n7 juillet 1385\n\nRupture du siège.\nUrbain VI quitte Nocera.\nEmbarquement à Paestum sur des galères génoises.\n\nSeptembre 1385\n\nUrbain VI s'installe à Gênes.\n\nFin 1385-1386\nMort violente de cinq des six cardinaux emprisonnés.\nAdam Easton survit.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Assedio_di_UrbanoVI.jpg/1920px-Assedio_di_UrbanoVI.jpg?utm_source=it.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "revolte"
+    ],
     "legende": "Urbain VI assiégé par Charles III dans le château de Nocera, d'après les Chroniques de Giovanni Sercambi",
     "lat": 40.7472,
     "lng": 14.6433
@@ -33945,6 +34019,9 @@
     "type": 3,
     "description": "6 avril : début du règne de Jean Ier (João I°), roi du Portugal, fondateur de la dynastie d'Aviz (jusqu'en 1433).\nLes Cortes de Coimbra , réunies en mars pour délibérer sur la succession de Ferdinand Ier, décédé en 1383 , prennent une décision : elles n'élisent ni Béatrice , fille de Ferdinand et épouse de Jean Ier de Castille - et -León , ni Jean de Portugal , demi-frère de Ferdinand et prisonnier en Castille, mais Jean d' Avis , demi-frère illégitime , comme roi du Portugal . Jean Ier est le premier souverain issu de la maison d'Avis . La dynastie bourguignonne s'éteint. Jean Ier de Castille envahit alors de nouveau le Portugal avec le soutien de la France. Jean Ier de Portugal, que les Cortes proclament régent et défenseur du royaume de Portugal, reçoit le soutien du royaume d' Angleterre .\n L’orateur du tiers état, João das Regras, convainc l’assemblée de la nécessité de confirmer la désignation populaire de Jean d’Avis : Jean Ier de Portugal, grand maître de l’ordre militaire d’Aviz et demi-frère de Ferdinand Ier de Portugal, lui succède après deux années de troubles. Il fera du Portugal une puissance de premier rang.\nNuno Álvares Pereira devient connétable de Portugal. Le séfarade Mossé Navarro trésorier général du royaume",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/960px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "lat": 40.2112,
     "lng": -8.4291
   },
@@ -33960,6 +34037,9 @@
     "type": 4,
     "description": "12 avril : Lors du double mariage de Cambrai, Jean sans Peur épouse Marguerite de Straubing-Hollande , et sa sœur Marguerite épouse son frère Guillaume II. Parmi les plus de 20 000 invités figure également le roi de France Charles VI .\nNé le 28 mai 1371 au palais des ducs de Bourgogne à Dijon, Jean de Bourgogne, futur Jean sans Peur, est le fils aîné de Philippe II le Hardi, duc de Bourgogne, et de Marguerite III de Flandre. Par sa naissance, il est destiné à succéder à son père à la tête du duché de Bourgogne, que Philippe le Hardi avait reçu en pleine possession du roi de France Jean II le Bon en 1363. Petit-fils du roi de France, Jean appartient ainsi à l’une des familles les plus puissantes du royaume et se trouve au cœur des stratégies matrimoniales de la haute aristocratie européenne.\n\nSon mariage avec Marguerite de Bavière doit être replacé dans le contexte de l’expansion et de la consolidation de la puissance bourguignonne à la fin du XIVe siècle. En 1385, la maison de Bourgogne cherche notamment à renforcer ses liens avec les territoires du nord, où les intérêts politiques, dynastiques et territoriaux de Philippe le Hardi et de son épouse Marguerite de Flandre sont particulièrement importants. Le mariage de Jean avec Marguerite de Bavière participe de cette stratégie.\n\nL’union est célébrée le 12 avril 1385 à Cambrai, dans le cadre des célèbres « doubles noces de Cambrai ». Le même jour, Guillaume de Bavière, futur Guillaume IV de Hainaut, épouse Marguerite de Bourgogne, sœur de Jean. Les deux mariages forment donc une véritable alliance croisée entre les maisons de Bourgogne et de Bavière-Straubing : Jean épouse Marguerite de Bavière, tandis que sa sœur Marguerite épouse Guillaume de Bavière. Cette double union dépasse ainsi le cadre d’un mariage dynastique individuel : elle organise un rapprochement durable entre deux familles princières et crée un réseau d’alliances réciproques.\n\nLe choix de la Bavière-Straubing revêt une importance particulière dans la politique de la maison de Bourgogne. Les territoires du nord — notamment le Hainaut, la Hollande, la Zélande et les espaces flamands — constituent alors un enjeu majeur pour les ambitions bourguignonnes. Le mariage de Jean permet de consolider les relations avec une dynastie qui possède elle-même des intérêts et des possessions dans ces régions. Il contribue ainsi à inscrire la future puissance de Jean dans un espace politique qui dépasse largement le seul duché de Bourgogne.\n\nLes doubles noces de Cambrai peuvent donc être interprétées comme un instrument de la politique dynastique de Philippe le Hardi. Par le mariage de ses enfants, le duc cherche à établir des liens avec les principales familles princières des Pays-Bas et à favoriser l’insertion de la maison de Bourgogne dans les réseaux politiques du nord de l’Europe. Pour Jean, cette union intervient alors qu’il est encore héritier du duché : elle prépare son avenir politique en lui donnant des attaches dynastiques qui deviendront particulièrement importantes dans le développement ultérieur de la puissance bourguignonne.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Jean_Ier_de_Bourgogne.jpg/960px-Jean_Ier_de_Bourgogne.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
     "legende": "École flamande, Jean sans Peur (vers 1500), Vienne, Hofburg.",
     "lat": 50.1758,
     "lng": 3.2346
@@ -33977,6 +34057,9 @@
     "type": 4,
     "description": "À la fin du XIVe siècle, la guerre de Cent Ans connaît des périodes d’accalmie. Après les grandes victoires anglaises du XIVe siècle, notamment à Crécy (1346) et Poitiers (1356), la France a progressivement repris l’initiative sous Charles V.\nÀ la mort de Charles V en 1380, son fils Charles VI lui succède alors qu’il est encore mineur. Le gouvernement du royaume est principalement assuré par ses oncles, parmi lesquels Philippe le Hardi, duc de Bourgogne.\nLa trêve de Leulinghem, conclue en 1384 puis prolongée, associe à la France l’Écosse et la Castille, tandis que l’Angleterre bénéficie notamment de l’appui des Gantois. Elle est finalement prorogée jusqu’au 1er mai 1385.\nLa situation est particulièrement complexe en 1385.\n\nLe comte de Flandre, Louis de Male, meurt en 1384. Sa succession passe à son gendre, Philippe le Hardi, duc de Bourgogne et proche parent du roi de France. La Flandre entre ainsi progressivement dans l’orbite bourguignonne.\nMais la ville de Gand demeure en révolte. Les Gantois bénéficient du soutien anglais, ce qui transforme leur soulèvement en un enjeu direct de la confrontation franco-anglaise.\nLa reprise des hostilités en mai 1385 doit donc être comprise comme une tentative française de rétablir son autorité sur la Flandre et de neutraliser l’influence anglaise dans la région.\nLe conflit prend rapidement une dimension militaire importante avec la campagne menée par Charles VI en Flandre à partir du mois d’août 1385. Le roi de France intervient personnellement contre les forces flamandes soutenues par les Anglais.\nCette campagne aboutit à la défaite des Gantois à Westrozebeke et à leur soumission progressive.\nLa guerre ne se limite cependant pas à la Flandre : la France et ses alliés cherchent également à mettre l’Angleterre sous pression sur plusieurs fronts. En juin 1385, une expédition française est ainsi envoyée en Écosse, alliée traditionnelle de la France contre l’Angleterre.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 51.0538,
     "lng": 3.725,
     "serie": "Guerre de Cent ans"
@@ -33992,6 +34075,9 @@
     "type": 4,
     "description": "6 mai : Gian Galeazzo Visconti mène un coup d'État contre son oncle, Bernabò Visconti , seigneur de Milan , et entreprend des conquêtes pour transformer Milan en duché , dont il devient le duc de Milan. Ambitieux et sans pitié, il réussit à rassembler les différentes cités autour de Milan en un État centralisé sous son contrôle. Il renforce sa puissance par une politique matrimoniale avec les grandes familles européennes. Sa sœur épouse Lionel, duc de Clarence, second fils d’Édouard III d'Angleterre, et sa fille Valentine Visconti Louis, duc d’Orléans, union à l’origine des revendications françaises sur le Milanais.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 45.4642,
     "lng": 9.1896
   },
@@ -34008,6 +34094,9 @@
     "type": 1,
     "description": "Jean Galéas Visconti est un prince italien né en mille trois cent cinquante et un et mort en mille quatre cent deux. Issu de la famille Visconti, il est le fils de Galéas deuxième Visconti et de Blanche de Savoie. Il devient l’une des figures majeures de l’Italie du Nord à la fin du quatorzième siècle, en transformant la seigneurie de Milan en une véritable principauté territoriale. Son parcours illustre l’évolution des États italiens à la fin du Moyen Âge, marquée par la montée en puissance de dynasties princières capables d’étendre leur domination bien au-delà d’une seule ville.\n\nDès son enfance, Jean Galéas est intégré dans les réseaux politiques européens. En mille trois cent soixante, alors qu’il n’a que neuf ans, il épouse Isabelle de Valois, fille du roi de France Jean deuxième le Bon. Cette union, avant tout politique, rapproche la famille Visconti de la monarchie française et inscrit Milan dans un ensemble d’alliances européennes. Isabelle lui apporte également le titre de comte de Vertus en Champagne, ce qui donne à Jean Galéas une double implantation, en Italie et dans le royaume de France. Le mariage est cependant de courte durée, car Isabelle meurt en mille trois cent soixante-douze après avoir donné naissance à plusieurs enfants.\n\nLa situation politique de Milan est alors marquée par des tensions familiales. Le pouvoir est partagé entre Galéas deuxième Visconti et son frère Barnabé Visconti. À la mort de Galéas deuxième en mille trois cent soixante-dix-huit, Jean Galéas hérite d’une partie de la Lombardie, mais son oncle conserve une position dominante et désigne ses propres fils comme héritiers. Pour renforcer sa légitimité, Jean Galéas obtient en mille trois cent quatre-vingt le titre de vicaire impérial auprès de l’empereur Venceslas de Luxembourg, ce qui lui confère une reconnaissance officielle dans le cadre du Saint Empire romain germanique.\n\nMalgré cette légitimité impériale, la rivalité avec Barnabé s’intensifie. En mille trois cent quatre-vingt, Jean Galéas épouse Catherine Visconti, fille de Barnabé, dans une tentative d’apaisement familial. Mais ce mariage ne fait que masquer une lutte de pouvoir. Soutenu par sa mère Blanche de Savoie et par plusieurs alliés militaires, Jean Galéas prépare un coup d’État. Le six mai mille trois cent quatre-vingt-cinq, il fait arrêter Barnabé et ses fils et s’empare du pouvoir à Milan. Dans les jours qui suivent, il prend le contrôle des principales villes de son territoire. Barnabé meurt en captivité quelques mois plus tard, ce qui consolide définitivement l’autorité de Jean Galéas.\n\nSon accession au pouvoir s’inscrit dans un contexte européen marqué par la guerre de Cent Ans entre la France et l’Angleterre et par la fragmentation politique de l’Italie. La péninsule est alors divisée entre de nombreuses cités-États, des principautés et des territoires ecclésiastiques. Dans cet espace instable, la puissance d’un prince dépend de sa capacité à conquérir des villes, à contrôler les routes commerciales et à obtenir une légitimité politique forte.\n\nAprès sa prise de pouvoir, Jean Galéas engage une politique d’expansion ambitieuse. Il conquiert Vicence et Vérone en mille trois cent quatre-vingt-sept, puis annexe Padoue en mille trois cent quatre-vingt-dix. Il étend ensuite son influence vers la Toscane et l’Italie centrale, en direction de villes comme Pise, Pérouse, Assise et Sienne. Son objectif est de constituer un vaste État territorial dominant le nord de l’Italie.\n\nEn mille trois cent quatre-vingt-quinze, il obtient de l’empereur Venceslas le titre de duc de Milan, en échange d’une importante somme d’argent. Cette élévation transforme profondément son statut politique. Milan devient un duché reconnu, et les Visconti accèdent au rang des grandes dynasties princières européennes. Ce titre renforce la légitimité de Jean Galéas et consolide la transmission héréditaire du pouvoir.\n\nL’expansion milanaise suscite toutefois de fortes résistances. Florence, en particulier, voit dans la montée en puissance des Visconti une menace directe. Une coalition se forme alors pour contenir les ambitions de Jean Galéas, illustrant le fonctionnement politique de l’Italie de l’époque, où les équilibres de pouvoir sont constamment réajustés par des alliances entre cités.\n\nParallèlement à ses conquêtes, Jean Galéas développe une politique de prestige fondée sur de grands projets architecturaux et culturels. Il finance la Chartreuse de Pavie, les travaux du Dôme de Milan, l’achèvement du château de Pavie et la constitution d’une importante bibliothèque. Il fait également réaliser des travaux hydrauliques gigantesques destinés à détourner des rivières afin d’affaiblir certaines villes ennemies. Ces projets témoignent de sa volonté de mettre en scène sa puissance et d’affirmer son autorité par la grandeur matérielle.\n\nSon règne est cependant marqué par des dépenses considérables qui fragilisent les finances de l’État. Son pouvoir repose largement sur sa personne, sur son autorité militaire et sur un réseau de fidélités politiques. À sa mort en mille quatre cent deux, victime de la peste, il laisse un État étendu mais financièrement affaibli. Ses possessions sont partagées entre ses fils, ce qui entraîne rapidement une fragmentation du pouvoir.\n\nJean Galéas Visconti apparaît ainsi comme une figure centrale de la transition entre le Moyen Âge et la Renaissance italienne. Il transforme une seigneurie urbaine en une principauté territoriale puissante, fondée sur la conquête, la diplomatie dynastique et la légitimation impériale. Son œuvre politique, bien que fragile dans sa continuité, marque une étape essentielle dans l’histoire des États italiens de la fin du Moyen Âge.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/GiovAmbrogiodePredisattribGianGaleazzoVisconti.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "politique"
+    ],
     "lat": 45.4642,
     "lng": 9.1896,
     "sources": "https://fr.wikipedia.org/wiki/Jean_Gal%C3%A9as_Visconti"
@@ -34024,6 +34113,9 @@
     "type": 4,
     "description": "21 mai : le jeune Louis II d'Anjou est investi du royaume de Naples par l'antipape d'Avignon Clément VII. \nLouis II, né le 5 octobre 1377 à Toulouse et mort le 29 avril 1417 à Angers, est roi titulaire de Jérusalem et roi de Sicile, duc d'Anjou, comte du Maine, de Provence et de Forcalquier et seigneur de Guise.\nFils de Louis Ier d'Anjou et de Marie de Blois, il est le cousin du roi Charles VI.\nil est proclamé Louis II, roi de Sicile en la cathédrale de Bari en 1384. Il est couronné roi de Sicile à Avignon le 1er novembre 1389, en présence du roi Charles VI de France.\nLe fils de Louis Ier de Naples et de Marie de Blois n'obtient cependant la soumission de la Provence qu'en 1387 à la suite de la désagrégation de l'Union d'Aix.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/15th-century_unknown_painters_-_Louis_II_of_Anjou_-_WGA23561.jpg/500px-15th-century_unknown_painters_-_Louis_II_of_Anjou_-_WGA23561.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "lat": 41.1258,
     "lng": 16.862
   },
@@ -34039,6 +34131,9 @@
     "type": 4,
     "description": "Juin 1385 expédition française en Écosse sous le commandement de l'amiral Jean de Vienne (fin en octobre). \nEn 1385, après avoir conseillé l'opération au roi de France, le roi missionne Jean de Vienne pour mener un débarquement en Écosse avec une armée française transportée par 180 navires, dans le but de prendre à revers les Anglais et d'envahir l'Angleterre par le nord. En route, il bat une flotte anglaise qui tentait d'empêcher les Français de rejoindre l'Angleterre lors de la seconde bataille de l'Écluse. Malgré la victoire de Wark, après la défection des Écossais, il est contraint de faire retraite et à ré-embarquer.\nAprès que Charles VI eut succédé à son père Charles V sur le trône de France, la Marine connut un déclin car Charles VI ne partageait pas l'intérêt de son père.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Blason_famille_fr_De_Vienne.svg/langfr-960px-Blason_famille_fr_De_Vienne.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.0882,
     "lng": -2.2207,
     "serie": "Guerre de Cent ans"
@@ -34054,6 +34149,9 @@
     "type": 4,
     "description": "Depuis Saint Louis, la modernisation du système juridique attire dans la sphère culturelle française de nombreuses régions limitrophes. En particulier en terres d'Empire, les villes du Dauphiné ou du comté de Bourgogne (future Franche-Comté) recourent depuis Saint Louis à la justice royale pour régler des litiges. Le roi envoie par exemple le bailli de Mâcon, qui intervient à Lyon pour régler des différends, comme le sénéchal de Beaucaire intervient à Viviers ou à Valence[48]. Les rois de France ont aussi su élargir l'influence culturelle du Royaume en attirant à leur cour la noblesse de ces régions, lui allouant des rentes et se livrant à une habile politique matrimoniale. Ainsi, les comtes de Savoie prêtent hommage au roi de France contre l'octroi de pensions, Jean de Luxembourg, dit l'Aveugle, roi de Bohême, est un habitué de la cour de France tout comme son fils Wenceslas, le futur empereur Charles IV, ce qui permet aux Valois de sceller de précieuses alliances (Charles IV est l'oncle de Philippe le Hardi)[3]. Ainsi le royaume de France a pu avancer en terre d'Empire en rachetant le Dauphiné ou en tenant de Jean de Bohême l'autorisation de revendiquer la Provence, ce qu'a fait Louis d'Anjou.\n\nDe par son mariage avec Marguerite de Flandre, Philippe règne sur le comté de Bourgogne qui est en terre d'Empire. Ses visées vont alors vers les Pays-Bas. Leur contrôle permettrait d'élargir notablement sa principauté. D'un autre côté, la Flandre a beaucoup souffert de la rivalité franco-anglaise et le temps est plutôt à la recherche d'un compromis. Les princes germaniques ne voient pas d'un bon œil les avancées françaises en terre d'Empire, mais, d'une part, il existe une forte rivalité entre leurs marins et marchands et ceux de Gand ou du royaume anglais et, d'autre part, les princes germaniques sont à la recherche d'alliances puissantes susceptibles de faire basculer l'élection impériale dans leur clan. Les Anglais sont liés (relativement mollement dans les faits) aux Luxembourg par le mariage de Richard II avec Anne de Bohême ; dès lors, il est logique pour les Wittelsbach de rechercher l'alliance française. Enfin, la plus fervente ambassadrice d'une stabilisation des Pays-Bas sous influence française est la duchesse Jeanne de Brabant. Celle-ci est veuve depuis 1383 et l'héritier du duché n'est autre que Philippe le Hardi (il est le mari de la nièce de la duchesse). L'empereur pourrait reprendre le duché plutôt que de le laisser à un étranger, mais cela renforcerait les Luxembourg et il n'en est pas question pour Albert de Hainaut qui contrôle la Hollande et le Hainaut qui fait partie de la maison de Wittelsbach. Parallèlement, les Anglais sont peu actifs diplomatiquement, Richard II et son entourage étant plutôt enclins à rechercher la paix avec la France que de remettre le pied dans le bourbier flamand. Son oncle, le puissant Jean de Lancastre, a plutôt des visées en Espagne et se désintéresse rapidement d'une alliance aux Pays-Bas. Dès lors, un accord se fait sur un double mariage : Jean sans Peur, le premier fils de Philippe le Hardi, se marie à Marguerite de Bavière tandis que sa sœur Marguerite de Bourgogne épouse Guillaume IV de Hainaut, le premier fils d'Albert Ier de Hainaut. On propose à Charles VI la main d'Isabeau de Bavière (qu'il a choisie sur portrait entre trois prétendantes de la maison de Bavière[50]), le jeune roi est immédiatement séduit et se marie quelques jours à peine après avoir fait sa connaissance à Amiens. Il ne s'agit pas pour Charles uniquement d'un mariage politique ; le jeune roi est grand lecteur de littérature courtoise et surtout il avait fait savoir que le mariage ne se ferait que si l'élue lui plaisait. Ainsi se noue une solide alliance entre les Wittelsbach et les Valois, ce qui permet de faire entrer tous les Pays-Bas dans l'orbite française, mais en particulier permet à Philippe le Hardi d'espérer encore agrandir sa principauté. Le mariage est célébré par le premier bal de cour de France.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Charles_VI-Isabeau_de_Bavi%C3%A8re.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "diplomatie"
+    ],
     "legende": "Charles VI en train de chasser, pendant qu'Isabeau de Bavière le suit sur un palefroi. Miniature du Maître de Spencer 6, tirée de la Chronique d'Enguerrand de Monstrelet, vers 1493-1500.",
     "lat": 50.291,
     "lng": 2.7772
@@ -34070,6 +34168,9 @@
     "type": 4,
     "description": "À l’été 1385, les Gantois occupent Damme, port stratégique situé près de Bruges et du Zwin. Cette prise contrarie également les projets français : une flotte et une armée avaient été réunies à L’Écluse en vue d’une expédition contre l’Angleterre. Charles VI décide donc de détourner son armée vers la Flandre. Il intervient personnellement, aux côtés de Philippe le Hardi, et entreprend le siège de Damme à la fin du mois d’août. La ville tombe après environ six semaines de siège, le 28 août 1385.\n\nAprès la reprise de Damme, les Français ne tentent pas de donner immédiatement l’assaut à Gand, ville beaucoup plus importante et fortement défendue. Ils cherchent plutôt à l'isoler en contrôlant ses voies de communication et de ravitaillement. Cette pression militaire, ajoutée à plusieurs années de guerre, affaiblit progressivement la position des Gantois et les pousse à rechercher un accord.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 51.2515,
     "lng": 3.2815,
     "serie": "Guerre des Flandres"
@@ -34086,6 +34187,9 @@
     "type": 3,
     "description": "La campagne de Charles VI en Flandre intervient après la reprise des hostilités avec l’Angleterre au printemps 1385. Depuis plusieurs années, la ville de Gand se révolte contre son comte. La situation change avec la mort de Louis de Male en 1384 : son gendre Philippe le Hardi, frère de Charles V et oncle du jeune Charles VI, devient comte de Flandre. Il doit alors imposer son autorité sur un comté où les Gantois bénéficient du soutien de l’Angleterre.\n\nÀ l’été 1385, les Gantois occupent Damme, port stratégique situé près de Bruges et du Zwin. Cette prise contrarie également les projets français : une flotte et une armée avaient été réunies à L’Écluse en vue d’une expédition contre l’Angleterre. Charles VI décide donc de détourner son armée vers la Flandre. Il intervient personnellement, aux côtés de Philippe le Hardi, et entreprend le siège de Damme à la fin du mois d’août. La ville tombe après environ six semaines de siège, le 28 août 1385.\n\nAprès la reprise de Damme, les Français ne tentent pas de donner immédiatement l’assaut à Gand, ville beaucoup plus importante et fortement défendue. Ils cherchent plutôt à l'isoler en contrôlant ses voies de communication et de ravitaillement. Cette pression militaire, ajoutée à plusieurs années de guerre, affaiblit progressivement la position des Gantois et les pousse à rechercher un accord.\n\nLa campagne s'achève ainsi sans prise de Gand, mais elle permet à Philippe le Hardi de rétablir son autorité sur la Flandre. Les négociations aboutissent quelques mois plus tard au traité de Tournai, le 18 décembre 1385. Les Gantois reconnaissent l'autorité de leur nouveau comte, tandis que Philippe leur accorde notamment son pardon et la confirmation de leurs privilèges. Le règlement met fin à plusieurs années de conflit et consolide l'installation des Valois-Bourgogne en Flandre.\nEn définitive, la campagne de 1385 est moins une conquête militaire de Gand qu'une opération destinée à reprendre les points stratégiques de la Flandre et à contraindre les Gantois à négocier. Elle constitue surtout une étape décisive dans la consolidation du pouvoir de Philippe le Hardi sur son nouveau comté.\n\nLes Gantois, eux, reçoivent un renfort anglais de 100 hommes d'armes et 300 archers. Ils reprennent les hostilités dès la fin de la trêve de Leulinghem en mai 1385. Ils tentent de prendre Bruges et parviennent à occuper le port de Damme. Les Français, qui montaient une armée pour débarquer en Angleterre dans le port de l'Écluse, marchent contre eux. La troupe commandée par Charles VI et Philippe reprend Damme le 28 août 1385[42]. Mais, une nouvelle fois, les Français ne marchent pas sur Gand[39]. Par contre, la ville est isolée, ses voies de ravitaillement sont bloquées et sa population menacée par la famine : il faut négocier[42]. Après plus de six ans de guerre, les Flamands sont las. Philippe sait que son intérêt converge avec celui des bourgeois flamands. Il reçoit donc des envoyés flamands avec lesquels il conclut le 18 décembre 1385 le traité de Tournai qui rétablit la paix dans le comté de Flandre.\n\nLa volonté d'apaisement de Philippe le Hardi est évidente dans ce texte qui va plus loin que les demandes des Gantois : il leur accorde son pardon (même à tous ceux qui, en Flandre, ont été bannis à condition qu'à leur retour ils jurent de respecter les clauses du traité) tandis qu'il confirme tous leurs privilèges en échange de leur soumission et de leur engagement à être « de bons, loyaux et vrais sujets »[42]. Il sait être conciliant, permettant à chacun de choisir son obédience ou faisant rédiger les lettres de la chancellerie en flamand. Toute la Flandre lui fait allégeance, ce qui règle le conflit[43]. Il veille, aussi bien dans son action au gouvernement du roi Charles VI que dans les conséquences des évènements du grand schisme d'Occident, aux intérêts économiques des villes drapières. Il bénéficie à ce sujet des conseils d'hommes d'affaires parmi lesquels Dino Rapondi tient le premier rang.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 51.2515,
     "lng": 3.2815,
     "serie": "Guerre des Flandres"
@@ -34101,8 +34205,12 @@
     "type": 4,
     "description": "Début d'une campagne de Richard II d'Angleterre en Écosse. Il prend brièvement Édimbourg",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.9533,
-    "lng": -3.1884
+    "lng": -3.1884,
+    "serie": "Guerres écossaises"
   },
   {
     "id": 1893,
@@ -34115,6 +34223,9 @@
     "type": 5,
     "description": "Edmond de Langley devient duc d'York et Thomas de Woodstock duc de Gloucester.\nDuc d’York est un titre de noblesse de la pairie du Royaume-Uni associé à la ville d'York.\nDepuis le XVe siècle, il est généralement attribué au deuxième fils du monarque britannique.\nDepuis 1461, le titre de duc d'York n'a jamais été transmis ; soit les porteurs n'ont pas eu de descendance masculine, soit ils sont devenus rois d'Angleterre.\nLe titre de duc de Gloucester[1] est un titre de la pairie du Royaume-Uni souvent conféré à l'un des fils du monarque régnant. Les quatre premières créations furent dans la pairie d'Angleterre, et la suivante dans la pairie de Grande-Bretagne. Il a un temps été créé joint à celui d'Édimbourg sous la forme duc de Gloucester et Édimbourg.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Coat_of_Arms_of_Richard%2C_Duke_of_Gloucester.svg/960px-Coat_of_Arms_of_Richard%2C_Duke_of_Gloucester.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "lat": 53.9657,
     "lng": -1.0743
   },
@@ -34130,6 +34241,9 @@
     "type": 3,
     "description": "La fuite d’Urbain VI (Bartolomeo Prignano) de Nocera, en juillet 1385, constitue l’un des épisodes les plus spectaculaires du Grand Schisme d’Occident. Le pape, reconnu par l’obédience romaine, se trouve alors dans une situation paradoxale : il est à la fois le chef spirituel d’une partie de la chrétienté et un prince engagé directement dans les luttes politiques et militaires du royaume de Naples.\n\nRéfugié depuis 1384 au Castello del Parco de Nocera, Urbain VI est progressivement entré en conflit avec Charles III d’Anjou-Durazzo, roi de Naples qu’il avait pourtant contribué à installer sur le trône. Après avoir fait arrêter six cardinaux qu’il soupçonne de comploter contre lui, le pape est assiégé par les troupes royales commandées notamment par Alberico da Barbiano.\nSon salut dépend finalement de l’intervention de plusieurs adversaires de Charles III, notamment Raimondello Orsini, comte de Nola, et Tommaso Sanseverino, ainsi que du soutien naval de la République de Gênes. L’épisode s’achève par l’évacuation du pape vers Gênes, où il établit provisoirement une nouvelle cour pontificale.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 40.7472,
     "lng": 14.6433
   },
@@ -34146,6 +34260,9 @@
     "type": 3,
     "description": "14 août : L'armée portugaise, numériquement et techniquement inférieure, bat de manière décisive Jean Ier de Castille et León à la bataille d'Aljubarrota entre Leiria et Alcobaça grâce à l'habileté tactique de Nuno Álvares Pereira , assurant ainsi l'indépendance du Portugal pendant près de 200 ans. L'amiral castillan et héros de guerre Juan Fernández de Tovar est tué dans la bataille. Jean Ier de Castille, époux de Béatrix de Portugal, qui tentait de conquérir le royaume de sa femme, est vaincu à la  par Jean Ier de Portugal aidé par des archers Anglais.\nContexte\nLa bataille d’Aljubarrota s’inscrit dans la crise de succession portugaise de 1383-1385. À la mort du roi Ferdinand Ier sans héritier mâle, sa fille Béatrice, mariée au roi Jean Ier de Castille, devient l’héritière dynastique. Une partie des élites portugaises refuse cependant le risque d’une absorption du royaume par la Castille et soutient Jean, maître de l’ordre d’Aviz, fils naturel du roi Pierre Ier. Proclamé roi par les Cortes de Coimbra le 6 avril 1385, Jean Ier doit désormais défendre militairement sa légitimité face à l'intervention castillane.\n\nLe conflit prend une dimension internationale dans le contexte de la guerre de Cent Ans : le Portugal bénéficie du soutien anglais, tandis que la Castille est alliée à la France. Après les victoires portugaises des Atoleiros (1384) et de Trancoso (juin 1385), Jean Ier de Castille lance une nouvelle invasion au cours de l’été 1385, avec pour objectif de soumettre le Portugal et de faire valoir les droits de son épouse.\n\nLe déroulement de la bataille\n\nLe 14 août 1385, l’armée portugaise commandée par le roi Jean Ier et surtout par son connétable Nuno Álvares Pereira prend position près d’Aljubarrota, sur une hauteur présentant d’importants avantages défensifs. Les Portugais, renforcés par des contingents anglais, aménagent le terrain au moyen de fossés, obstacles et chausse-trapes, afin de ralentir la cavalerie ennemie. Cette préparation est essentielle : elle permet à une armée nettement inférieure en nombre de compenser son désavantage numérique.\n\nJean Ier de Castille, confronté à la difficulté d’une attaque frontale, entreprend de contourner la position portugaise. Les Portugais se repositionnent alors pour conserver l’avantage du terrain. Lorsque l’affrontement commence, la cavalerie franco-castillane peine à pénétrer le dispositif portugais. Les obstacles défensifs, le terrain resserré et l'action des archers anglais désorganisent les premières attaques. L'importante armée castillane se trouve progressivement comprimée dans un espace défavorable, ce qui réduit considérablement l'avantage que lui procure son nombre.\n\nLa bataille tourne rapidement à la déroute. La mort supposée du roi, propagée par une rumeur après la chute de l’étendard royal, contribue à la panique des troupes castillanes. Jean Ier de Castille doit fuir, tandis qu’une grande partie de son armée est tuée, capturée ou dispersée. Les Portugais poursuivent les fuyards après la bataille. Les récits ultérieurs ont amplifié cette phase de poursuite et ont notamment fait naître la légende de la Padeira de Aljubarrota, figure populaire de la mémoire nationale portugaise.\n\nUne victoire décisive\n\nAljubarrota constitue un tournant majeur de la crise portugaise. La victoire rend pratiquement impossible une conquête militaire du Portugal par Jean Ier de Castille et consolide la position de Jean Ier d’Aviz. Elle assure ainsi la survie de la nouvelle dynastie d’Aviz et contribue à affirmer durablement l’indépendance portugaise.\n\nLa bataille renforce également l’alliance avec l’Angleterre, qui aboutira au traité de Windsor de 1386 puis au mariage de Jean Ier avec Philippa de Lancastre en 1387. Sur le plan symbolique, Jean Ier présente sa victoire comme une manifestation de la protection divine : il fait édifier le monastère de Batalha, monument destiné à commémorer la victoire et à célébrer la légitimité de la nouvelle dynastie.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Batalha_de_Aljubarrota_02.jpg/1920px-Batalha_de_Aljubarrota_02.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "guerre"
+    ],
     "legende": "La bataille d'Aljubarrota (Castille contre Portugal, 1385). ( British Library , Royal 14 E IV f. 204 reto)",
     "lat": 39.5429,
     "lng": -8.9196
@@ -34161,6 +34278,9 @@
     "type": 3,
     "description": "Union de Krewo entre le grand-duché de Lituanie et le royaume de Pologne par l'alliance de Jagellon (Jagiello) et Jadwiga (Edwige) d'Anjou, héritière de la couronne polonaise. \nJagellon est adopté par la reine mère de Pologne, Élisabeth, veuve de Louis Ier d’Anjou, qui le fait baptiser dans la religion catholique (janvier 1386). Devenu Ladislas, il épouse Hedwige, la plus jeune fille du roi Louis, qui avait été couronnée en 1384 roi (rex) à Cracovie, à l’âge de dix ans. Il devient Ladislas II Jagellon.\nL'union de Krewo est une alliance politique et dynastique signée en 1385 entre la monarchie polonaise, au nom de la reine de Pologne Hedwige Ire, et le grand-duc de Lituanie, Jogaila Algirdaitis, qui crée une union personnelle des deux États sous l’autorité d’un seul roi. En échange de la main d'Hedwige et de la couronne de Pologne, le prince lituanien s'engage à embrasser la religion chrétienne et à faire baptiser l'ensemble de son peuple. C'est le premier acte d'une série d'accords préparant le rapprochement du royaume de Pologne et du grand-duché de Lituanie qui aboutit à la république des Deux Nations.\nLe document signé dans la ville de Krewo (aujourd'hui Kreva, en Biélorussie) le 14 août 1385 stipule :\n\nla conversion du grand-duc Władysław II (en français, Ladislas II Jagellon ; en lituanien, Jogaila Algirdaitis) et des nobles lituaniens à la religion catholique ;\nla libération de tous les prisonniers polonais détenus par les Lituaniens ;\nle mariage de la reine de Pologne Hedwige Ire et du grand-duc lituanien ;\nle couronnement de Jogaila Algirdaitis comme roi de Pologne sous le nom de Władysław II Jagiełło (en français, Ladislas II Jagellon) ;\nl'union des terres de Lituanie et de Pologne sous la règlementation des lois de la Pologne « pour toute l'éternité » ;\nla récupération des possessions et des territoires perdus par le royaume de Pologne, sans toutefois préciser lesquels.\nL'union de la Couronne polonaise et de la grande-principauté de Lituanie par l’union personnelle n'est pas dirigée contre l'ordre Teutonique, mais son existence gêne les projets de ce dernier[1]. La noblesse polonaise est partagée entre l'opposition aux chevaliers teutoniques et la menace croissante des Russes, mais tout le monde tombe d'accord sur le fait que l'union ferait une plus grande force face aux menaces extérieures.\nLe baptême du prince a lieu le 14 février 1386 et le mariage est célébré le 18 février 1386. Le grand maître de l'ordre Teutonique se voit demandé de jouer le rôle de parrain mais il refuse et entreprend une action militaire contre la Lituanie qu'il juge toujours païenne. Dans même temps, le pape érige Vilnius en évêché.\n\nTandis que Władysław II et Hedwige règnent sur la Pologne et la Lituanie à Cracovie, le pouvoir réel en grande principauté de Lituanie est entre les mains du cousin de Władysław, Vytautas le Grand, qui suit une politique généralement indépendante. À la mort de la reine Hedwige en 1399, Władysław reste le souverain de la Pologne et devient ainsi le fondateur de la dynastie Jagiellon.\n\nL'alliance démontre son efficacité lorsqu'elle vient à bout des chevaliers teutoniques en leur infligeant une défaite décisive à la bataille de Grunwald en 1410.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Union_of_Krewo500x333.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "diplomatie"
+    ],
     "legende": "L'acte de l'union de Krewo.",
     "lat": 54.3109,
     "lng": 26.2827
@@ -34176,6 +34296,10 @@
     "type": 4,
     "description": "18 août : . Les droits de Louis II sont reconnus par la majorité des seigneurs provençaux",
     "image": "",
+    "themes": [
+      "diplomatie",
+      "politique"
+    ],
     "lat": 43.2964,
     "lng": 5.3778,
     "serie": "Guerre de l'Union d'Aix"
@@ -34193,6 +34317,9 @@
     "type": 3,
     "description": "18 septembre : – Bataille de Savra : les forces serbes dirigées par Balša II et Ivaniš Mrnjavčević sont vaincues par le commandant ottoman Hayreddin Pacha, près de Berat .Défaite et mort du roi serbe de Zeta Balša II ,l’Albanie est envahie par les Ottomans (1385-1386).",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 40.7019,
     "lng": 19.9581
   },
@@ -34208,6 +34335,9 @@
     "type": 4,
     "description": "Sigismond de Luxembourg est le fils cadet de l'empereur Charles IV de la maison de Luxembourg, roi de Bohême, et de sa quatrième épouse, Élisabeth de Poméranie.\nIl devient margrave de Brandebourg en 1378, après la mort de son père, roi de Hongrie en 1387 par mariage avec la reine Marie Ire ; il est élu roi des Romains en 1411 (mais couronné empereur seulement le 31 mai 1433). Succédant à son frère aîné Venceslas, il devient roi de Bohême et duc de Luxembourg en 1419.\nSon règne en Hongrie est marqué par la défaite de Nicopolis face aux Turcs ottomans (1396), par la rébellion des Croates et par l'opposition de la maison d'Anjou à son maintien sur le trône.\nDès les années 1370, le roi Louis Ier de Hongrie a promis à l'empereur de marier sa fille Marie (1371-1395) à Sigismond.\n\nLe mariage a lieu en octobre 1385 à Buda (la ville haute de Budapest).\n\nMais il y a un prétendant au trône, Charles III de Naples (1345-1386). Ce n'est qu'après l'assassinat de celui-ci par Élisabeth de Bosnie que Sigismond peut devenir roi de Hongrie. Il est couronné à Székesfehérvár (Albe Royale) (31 mars 1387)\nMais il est confronté à des résistances et doit faire appel à Venceslas ( son frère ainé empereur du St Empire) pour garantir sa mainmise sur le royaume de Hongrie.",
     "image": "",
+    "themes": [
+      "diplomatie"
+    ],
     "lat": 47.4979,
     "lng": 19.0402
   },
@@ -34222,6 +34352,9 @@
     "type": 5,
     "description": "15 décembre 1385  : les De la Pole deviennent comtes de Suffolk par la faveur royale (ducs en 1448).\nLe titre de comte de Suffolk a été créé trois fois dans la pairie d'Angleterre, la dernière fois en 1603 pour Thomas Howard. Il y eut aussi trois créations de duc de Suffolk, et une de marquis de Suffolk.\nLe titre est associé au comté de Suffolk dans l'est de l'Angleterre, l'un des dix plus importants du pays.\nMichael de la Pole (v. 1330[1] – 5 septembre 1389, Paris), 1er comte de Suffolk, fut un financier anglais et Lord chancelier d'Angleterre.\nIl est le fils aîné de William de la Pole, de Kingston-upon-Hull (mort en 1366), financier et marchand d'origine inconnue, et de Katherine Norwich, fille de Walter Norwich[1]. Son père est un marchand de laine de Hull qui devient un personnage clé pendant le règne d'Édouard III d'Angleterre. Après la chute des familles Bardi et Peruzzi, il devient responsable des finances d’Édouard. Michael jouit d’une popularité encore plus grande que celle de son père à la cour, devenant l’un des plus intimes amis du successeur d’Édouard, Richard II.\n\nMichael de la Pole est nommé chancelier en 1383[2], et fait comte de Suffolk en 1385, devenant ainsi le premier dans sa famille à porter un quelconque titre. Toutefois, à la fin des années 1380, il voit sa chance tourner. Au cours du Merveilleux Parlement de 1386, il est démis de ses fonctions de chancelier pour négligence et détournement de fonds, victime des tensions croissantes entre le Parlement et Richard[3],[2].\n\nMême après cette disgrâce, il conserve la confiance du roi. Mais il sera l’un des nombreux proches du roi accusés de trahison par les Lords Appellant. Après la victoire des Appellant à la bataille de Radcot Bridge (décembre 1387) et avant que l’Impitoyable Parlement ne se réunisse en février 1388, de la Pole s’enfuit à Paris, échappant ainsi au funeste destin de Nicolas Brembre et Robert Tresilian. Il demeure en France pour le restant de ses jours. Condamné en son absence, ses titres lui sont retirés.\n\nJean Froissart décrit de la Pole dans ses Chroniques comme un conseiller incompétent, qui dissuade Richard de poursuivre une victoire certaine sur les Français et les Écossais à Cumberland, et ayant des suspicions déplacées sur Jean de Gand\nLes descendants de la Pole ont un rôle important dans la vie politique des deux siècles suivants :\n\nSon fils Michael de la Pole (1367-1415), 2e comte de Suffolk est un partisan d’Henri IV et opposant à Richard. Il retrouve les titres de son père lors de l’accession au trône d’Henri en 1399, et meurt lors du siège d'Harfleur. Il épouse Katherine Stafford, fille d'Hugh[5]. Ses deux fils Michael et William ainsi que sa fille Élisabeth, suivent :\nÉlisabeth de la Pole est la mère de Marguerite Kerdeston, comtesse de Kendal, femme de Jean de Foix, d'où les Foix-Candale.\nMichael de la Pole (1394-1415), 3e comte de Suffolk, meurt à la bataille d'Azincourt.\nWilliam de la Pole (1396-1450), 4e comte puis 1er duc de Suffolk, époux d'Alice Chaucer (fille de Thomas Chaucer et petite-fille du poète Geoffrey Chaucer), est nommé Lord Chamberlain sous Henri VI et devient le véritable maître du pouvoir en Angleterre en 1447-1450, avant d’être assassiné en exil en mai 1450.\nJohn de La Pole (1442-1492), 2e duc de Suffolk, fils de William, épouse la princesse Élisabeth d'York (tante par alliance d'Henri VII Tudor, et sœur d'Édouard IV).",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Charterhouse_Masters_House_Founder%27s_Arms.jpg/500px-Charterhouse_Masters_House_Founder%27s_Arms.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "legende": "Les armes des fondateurs de la Chartreuse Saint-Michel de Kingston au-dessus de la porte de la maison du prieur.",
     "lat": 52.241,
     "lng": 1.0466
@@ -34238,6 +34371,9 @@
     "type": 3,
     "description": "Philippe le Hardi, oncle du roi de France, met fin à la révolte des Gantois et se fait reconnaître comte de Flandre à la paix de Tournai.\nLe traité de Tournai fut signé le 18 décembre 1385 par Philippe II de Bourgogne et les habitants de la ville de Gand. Il donnait aux Gandois une totale liberté et leur accordait le choix entre les deux papes, Urbain VI et Clément VII.\nContexte : La ville de Gand est en révolte contre ses suzerains, à savoir le comte Louis II de Flandre dit Louis de Male, puis son successeur Philippe II de Bourgogne dit Philippe le Hardi et le roi de France Charles VI, depuis 1379[1]. La ville souffre du conflit et constate que sa révolte ne l'amène pas aux résultats escomptés. Elle risque l'anéantissement du fait de s'opposer à de tels puissants seigneurs (Charles VI est rentré en France après avoir fait le siège et pris la ville de Damme en 1385 puis pillé les environs[2] mais Gand sait qu'il reviendra probablement l'été prochain) et cela malgré le soutien de l'Angleterre. Elle constate en outre que son état de guerre ne lui permet pas de commercer normalement, ce dont profitent des villes rivales telles Bruges, Damme, ou L'Écluse. Enfin la guerre coûte cher et fait de nombreuses victimes[3].\n\nLe duc Philippe II de Bourgogne, et le roi de France Charles VI, caressent quant à eux le projet de mener une expédition pour débarquer en Angleterre. À cette fin, il est nécessaire que l'affaire de Gand soit réglée[3]. Philippe le Hardi prend également en considération le fait que la guerre nuise à l'économie du pays de Flandre, qui est sien depuis peu, c'est-à-dire depuis janvier 1384 à la mort de Louis de Male, alors que son intérêt est que la région connaisse la prospérité. Toutes les parties prenantes étant désireuses de trouver une solution, les conditions sont réunies pour aboutir à une conclusion satisfaisante pour toutes les parties.\nNégociations : \nUne condition primordiale devait toutefois être remplie pour qu'une négociation puisse aboutir : une majorité de Gantois, sauf les plus proches partisans de l'Angleterre, souhaitait la paix mais redoutait que les conditions imposées à cette fin par le Duc de Bourgogne ne soient trop dures. En tant que ville rebelle, Gand pouvait craindre en effet le pire à cet égard.\n\nLa ville envoie donc un émissaire \"messire Jean Delle\"[3] (il semble qu'il s'agisse du chevalier Jean Van Heyle[4]) auprès du Duc pour connaitre sa position.\n\nSelon la chronique de Froissart, Philippe le Hardi se montre d'emblée disposé à trouver un accord en se montrant magnanime et en accordant des conditions très favorables à la ville de Gand[5]. Cette position lui aurait été suggérée par Jean Canard, son chancelier depuis mars 1385, (ancien avocat parisien, conseiller du Roi de France et du Duc[6]), lequel chancelier participa ensuite activement à la négociation, voire pour reprendre les termes de Philippe Le hardi, y aurait \"pris la principale part\"[\nSignature du Traité \nLes négociations ayant bien avancé, une trêve est prononcée par Philippe Le Hardi jusqu'au 1er janvier. Elle fut bien utilisée, les pourparlers aboutirent avant cette date. Il fut convenu de signer un traité en la ville de Tournai.\n\nLes Gantois, une délégation de cinquante personnes, arrivèrent les premiers. Puis le 5 décembre arrivèrent le Duc de Bourgogne et son épouse accueillis par les Gantois puis la duchesse de Brabant (Jeanne de Brabant, duchesse de Brabant et de Limbourg, la maison de Brabant étant considérée comme une sorte de protecteur de la Flandre)[8].\n\nLes Gantois ne se montrèrent pas soumis : \"ils ne font pas preuve de l’humilité attendue et commettent une transgression des hiérarchies sociales en saluant le couple ducal sans descendre de leurs montures\"[1].\nLes dernières négociations eurent lieu puis le 18 décembre 1385 le traité put être signé par les deux parties, le Duc agissant en son nom propre et au nom du Roi de France.\nContenu du Traité \nFroissart donne le contenu du traité dans son chapitre CCXL[9]. Il est extrêmement favorable aux Gantois qui semblent avoir obtenu tout ce qu'ils demandaient.\n\nLa ville de Gand promet d'observer la plus grande loyauté envers le Duc, fait acte de soumission, s'engage à observer obéissance, renonciation à la guerre, renonciation à l'alliance avec l'Angleterre.\n\nEn échange, elle obtient le pardon le plus large, aucune amende ou peine ou charge ou rançon ou réparation ne lui est imposée.\n\nElle obtient la confirmation de ses privilèges, franchises, chartes pour elle-même et des villes qui lui sont liées et citées dans Froissart (Courtrai, Audenarde, Grammont, Ruppelmonde, Alost, etc.).\n\nLes Gantois obtinrent également l'autorisation de retour des personnes bannies pour raison de révolte, la récupération des biens et fiefs confisqués.\n\nLe traité prévoit enfin la libération par les deux parties des personnes retenues prisonnières.\n\nFurent apposés sur le document les sceaux des parties prenantes ainsi que nombre de témoins (la duchesse de Brabant, plusieurs hauts seigneurs des environs, les villes de Bruges, Ypres, Malines, Anvers,..)\nConséquences : \nLa paix de Tournai vient ainsi conclure sept ans de révolte.\n\nLa ville de Gand en ressort d'une certaine manière grandie, elle n'a perdu aucun des avantages dont elle peut bénéficier en tant que ville et ne doit acquitter aucune sanction pour s'être révoltée.\n\nToutefois le Duc de Bourgogne ressort également vainqueur de cette paix : en se montrant magnanime, il tranche avec l'attitude moins accommodante de son beau-père Louis de Male, il s'assure de la fidélité des villes flamandes qui représentent un réel pouvoir, son autorité est ainsi plus facilement acceptée, et il se libère les mains pour pouvoir s'occuper des autres affaires de son duché. Jusqu'à sa mort en 1404, Philippe ne connut plus de soulèvement en Flandre.",
     "image": "",
+    "themes": [
+      "diplomatie"
+    ],
     "lat": 50.6056,
     "lng": 3.3878,
     "serie": "Guerre des Flandres"
@@ -34253,6 +34389,9 @@
     "type": 4,
     "description": "Le 6 mai 1385, alors que Barnabé est sur le point de mener à bien son projet de marier sa fille Lucia à Louis II d'Anjou, devenu roi titulaire de Naples[12], Jean Galéas avec Jacopo dal Verme, Ottone di Mandello et Giovanni Malaspina et à la tête d'une troupe de 500 lances, fait prisonnier Barnabé et ses deux fils Ludovico et Rodolfo, les enferme dans le château de Porta Giovia à Trezzo sull'Adda et prend le pouvoir.\nBarnabé meurt en prison, le 19 décembre 1385, empoisonné par les soins de Jean Galéas qui a attendu plus de six ans pour se venger des brimades de son oncle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Milano_-_Castello_sforzesco_-_Bonino_da_Campione_%28sec._XIV%29_-_Tomba_Bernab%C3%B2_Visconti_-_Foto_Giovanni_Dall%27Orto_-_6-1-2007_-_06.jpg/960px-Milano_-_Castello_sforzesco_-_Bonino_da_Campione_%28sec._XIV%29_-_Tomba_Bernab%C3%B2_Visconti_-_Foto_Giovanni_Dall%27Orto_-_6-1-2007_-_06.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "revolte"
+    ],
     "legende": "Monument funéraire de Barnabé et Béatrice Reine Visconti (sculpture de Bonino da Campione, Castello Sforzesco)",
     "lat": 45.4642,
     "lng": 9.1896
@@ -34269,12 +34408,15 @@
     "type": 3,
     "description": "31 décembre: couronnement de Charles de Duras (1345-1386), roi de Hongrie. , Charles III , souverain du royaume de Naples , est couronné roi Károly II de Hongrie par l’ archevêque Déméter d’ Esztergom à Székesfehérvár après qu’un groupe de nobles hongrois l’ait aidé à renverser la reine Maria . \nIl conteste les droits à la couronne de Marie Ire de Hongrie. Les partisans de Marie, au premier rang desquels se trouve la famille Cillei, font appel à Sigismond de Luxembourg qui rétablit Marie dans ses droits et l’épouse.\n Louis Ier de Hongrie est mort en 1382 et Charles, qui se considère comme son héritier parce que le roi Louis Ier ne laisse que des filles, revendique le trône de Hongrie. Marie Ire, la fille aînée de Louis, est élue par la Diète, mais Charles se rend en Hongrie pour s'y faire proclamer roi en 1385. Marie Ire abdique en sa faveur et il est couronné le 31 décembre 1385.\n\nAu moment où il pense avoir triomphé de tous les obstacles, la jeune reine et sa mère, Élisabeth de Bosnie, composent, lui laissant croire qu'elles l'admettent comme roi ; mais, plus tard, au cours d'une fête où Charles est invité, elles l'arrêtent et massacrent son entourage le 7 février 1386. Charles, blessé, est jeté en prison à Visegrád où il meurt le 24 février[1]. Son fils Ladislas lui succède sur le trône de Naples et un parti cherche à l'imposer comme roi en Hongrie.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Coat_of_Arms_of_Charles_III_of_Naples_%28Codex_of_Saint_Martha%29.svg/langfr-960px-Coat_of_Arms_of_Charles_III_of_Naples_%28Codex_of_Saint_Martha%29.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "lat": 43.7864,
     "lng": 19.2941
   },
   {
     "id": 1905,
-    "titre": "Urbain VI ordonne l'arrestation de ses cardinaux à sa disposition",
+    "titre": "Urbain VI ordonne l'arrestation de ses cardinaux",
     "date": 1385,
     "mois": 1,
     "zones": [
@@ -34283,6 +34425,10 @@
     "type": 4,
     "description": "11 janvier – Ayant appris que plusieurs de ses cardinaux débattaient de l'opportunité de le déposer pour cause de démence, le pape Urbain VI ordonne l'arrestation de tous les cardinaux à sa disposition. Giovanni da Amelia , Gentile di Sangro , Adam Eston , Ludovico Donato , Bartolomeo da Cogorno et Marino del Giudice sont arrêtés, emprisonnés et torturés au château de Nocera. [ 1 ] À l'exception d'Eston, les cardinaux arrêtés sont exécutés à Gênes avant la fin de l'année 1386.",
     "image": "",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
     "lat": 40.7472,
     "lng": 14.6433
   },
@@ -34297,6 +34443,9 @@
     "type": 3,
     "description": "Le 3 février (2 Muharram 787 AH ), la madrasa (école religieuse) de l'émir de l' empire artouqid , Majd al-Din Isa Al-Zahir , est inaugurée et la date est inscrite sur un mur. [ 3 ] L'édifice est aujourd'hui un monument historique de la ville de Mardin , située actuellement en Turquie.\nLa médersa Sultan Isa ( en turc : Sultan İsa Medresesi ), [ 1 ] [ 2 ] [ 3 ] également connue sous le nom de médersa Zinciriye [ 2 ] [ 4 ] ou médersa Isa Bey , est un monument historique et une ancienne médersa située à Mardin , en Turquie . Commandée par le sultan Isa (r. 1376-1407), avant-dernier souverain artuqid de Mardin, sa construction s'acheva en 1385. [ 2 ] [ 1 ] L'édifice était en réalité un külliye , ou complexe religieux, comprenant une médersa, une mosquée, un mausolée pour le fondateur et d'autres éléments disposés autour de deux cours. Le bâtiment abritait auparavant le musée de Mardin.\nLa fondation du complexe est bien documentée grâce à plusieurs inscriptions subsistant sur le bâtiment, mentionnant le fondateur, Isa l' Artuqid , et la date, le 2 Muharram 787 AH (3 février 1385 ap. J.-C.). [ 6 ] Le complexe comprend ce qui semble être une chambre funéraire destinée au fondateur, mais Isa n'y fut jamais inhumé. [ 3 ] Le bâtiment a fait l'objet d'une importante restauration durant la période ottomane, au cours de laquelle une grande partie de la maçonnerie a été refaite",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Sultan_Isa_Medrese_DSCF0904.jpg/1280px-Sultan_Isa_Medrese_DSCF0904.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
     "legende": "Vue du complexe ci-dessus, montrant les deux cours et les deux dômes.",
     "lat": 37.3611,
     "lng": 40.8959
@@ -34312,6 +34461,10 @@
     "type": 4,
     "description": "14 février – Jean de Gand , duc de Lancastre, fils du défunt roi Édouard III d'Angleterre et oncle du roi Richard II, fuit Londres après avoir appris lors d'une joute qu'il est la cible d'un assassinat commandité par les conseillers du roi Thomas Mowbray, 1er duc de Norfolk et Robert de Vere, 9e comte d'Oxford ; et John de Montacute, comte de Salisbury.\nEn 1386, Jean qbriguera le trône de Castille , qu'il revendiquait de droit de sa seconde épouse, Constance de Castille , qu'il avait épousée en 1371. Cependant, une crise éclata presque aussitôt en son absence, et en 1387, la mauvaise gouvernance du roi Richard mena l'Angleterre au bord de la guerre civile. Jean dut renoncer à ses ambitions en Espagne et rentrer précipitamment en Angleterre en 1389. Seule son intervention dans la crise politique parvint à persuader les Lords Appellant et le roi Richard de faire des compromis, instaurant ainsi une période de relative stabilité. Au cours des années 1390, la réputation de dévouement de Jean au bien-être du royaume fut largement rétablie.",
     "image": "",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
     "lat": 51.5074,
     "lng": -0.1278
   },
@@ -34327,6 +34480,9 @@
     "type": 1,
     "description": "Février – Bugaya devient le nouveau sultan de Kano dans ce qui est aujourd’hui le nord du Nigéria , à la mort de son frère Yaji.\nMuhammad Bugaya Dan Tsamiya,connu sous le nom de Bugaya, était un roi de Kanoqui a régné de 1385 à 1390.\nMuhammad était le fils de Tsamiya et de Maganarku. Après la trahison et le meurtre de son père par son oncle Usman Zamnagawa, ce dernier tenta de séduire Maganarku, mais elle lui révéla être enceinte. Zamnagawa lui donna alors des herbes pour provoquer un avortement, sans son consentement. Elle donna néanmoins naissance à un enfant en bonne santé. C'est ainsi qu'il reçut le surnom de « Bugaya ». Sa naissance se situerait donc entre 1343 et 1344.\nBugaya accéda au pouvoir en 1385 après la mort de son frère, Yaji Ier . On raconte qu'il chassa les Maguzawa du rocher de Fongui et les contraignit à se disperser à travers le sultanat. Son règne fut marqué par la paix et la tranquillité, profitant sans doute de la réputation de son défunt frère aîné. Le jizya était régulièrement payé dans tout le sultanat et aucune rébellion ne se déclara. Cela lui permit de se retirer et de mener une vie paisible après avoir délégué toutes ses fonctions royales à son galadima (administrateur).\nBugaya mourut en 1390 après cinq ans de règne. Son corps fut lavé et préparé selon les rites islamiques par Lawal, Jigawa, Turbana et Kusuba, sur ordre de Liman Madatai, qui pria sur sa dépouille. D'après la Chronique de Kano , Bugaya fut le premier souverain de Kano à être inhumé à Madatai. Son neveu, Kanajeji Dan Yaji, lui succéda.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 11.994,
     "lng": 8.522,
     "sources": "https://en.wikipedia.org/wiki/Bugaya"
@@ -34342,6 +34498,9 @@
     "type": 5,
     "description": "13 mars – Les autorités du Royaume d’Écosse découvrent que 700 livres sterling de lingots ont été soustraites aux collecteurs des douanes d’ Édimbourg par John Stewart, comte de Carrick , qui a détourné les fonds alors qu’il agissait en tant que Gardien de l’Écosse .",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 55.9533,
     "lng": -3.1884
   },
@@ -34357,6 +34516,9 @@
     "type": 4,
     "description": "Le 22 mars , depuis le port de Sluis (aujourd'hui aux Pays-Bas), le royaume de France envoie une flotte transportant une armée de 1 315 soldats, 300 arbalétriers et 200 auxiliaires, afin de soutenir le royaume d'Écosse face à une invasion du royaume d'Angleterre.  La flotte arrive au port écossais de Leith , près d'Édimbourg , la capitale de l'Écosse , le 25 mars.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.9725,
     "lng": -3.1709,
     "serie": "Guerre de Cent ans"
@@ -34373,6 +34535,9 @@
     "type": 4,
     "description": "14 mai – La bataille de Sluys, qui dure deux jours, s'achève en mer du Nord, au large des côtes néerlandaises. La Royal Navy anglaise, commandée par l' amiral Thomas Percy , 1er comte de Worcester, tente de bloquer le port flamand de Sluys et plus de 100 navires qui y sont stationnés. L'amiral français Jean de Vienne mène une contre-attaque victorieuse et les navires de la Royal Navy rentrent en Angleterre pour défendre Londres .",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 52.6221,
     "lng": 3.9158,
     "serie": "Guerre de Cent ans"
@@ -34389,6 +34554,9 @@
     "type": 3,
     "description": "29 mai – La bataille de Trancoso oppose le royaume du Portugal à la couronne de Castille après le pillage et l'incendie de la ville de Viseu par l'armée castillane . Alors que les Castillans rebroussent chemin avec leur butin et leurs prisonniers, ils sont interceptés par l'armée portugaise, qui tue plus de 400 soldats ainsi que six des sept officiers castillans, puis récupère le trésor volé et libère tous les citoyens portugais faits prisonniers. \nAprès le couronnement de Jean d'Aviz , Jean Ier de Castille envoya une armée dans la région portugaise de Beira en représailles à la rébellion portugaise. Les Castillans y commirent toutes sortes d'atrocités.  La ville de Viseu fut pillée et incendiée,  mais lorsque les Castillans retournèrent en Castille avec leur butin et les prisonniers qu'ils avaient faits, une armée portugaise les intercepta, mit pied à terre et se déploya en formation défensive. Les Castillans s'épuisèrent à l'attaque mais furent finalement mis en déroute, subissant de très lourdes pertes dans leurs rangs, et six de leurs sept capitaines furent tués. Les Portugais libérèrent tous les captifs castillans et récupérèrent tout le butin pris dans leurs villes.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 40.7785,
     "lng": -7.3491
   },
@@ -34403,12 +34571,15 @@
     "type": 4,
     "description": "10 juin – Invasion anglaise de l'Écosse (1385) : Se préparant à envahir l'Écosse dès l'expiration de la trêve entre l'Angleterre et l'Écosse le 15 juillet, le roi Richard II d'Angleterre rassemble une armée à Nottingham",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 52.9534,
     "lng": -1.1496
   },
   {
     "id": 1914,
-    "titre": "Pillage du Northumberland parles Ecossais",
+    "titre": "Pillage du Northumberland par les Ecossais",
     "date": 1385,
     "mois": 7,
     "zones": [
@@ -34418,6 +34589,9 @@
     "type": 3,
     "description": "8 juillet – Invasion anglaise de l'Écosse (1385) : Le roi Robert II d'Écosse envoie deux armées de soldats écossais et de mercenaires français au sud d'Édimbourg et pille le comté anglais de Northumberland",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.25,
     "lng": -2.0006
   },
@@ -34432,6 +34606,9 @@
     "type": 3,
     "description": "Invasion anglaise de l'Écosse (1385) : Après avoir quitté Berwick-upon-Tweed , l'armée anglaise envahit l'Écosse.  Les soldats anglais se retrouvent rapidement à court de vivres, car aucune ligne de ravitaillement n'a été établie et les habitants des villes frontalières écossaises ont fui, emportant leurs provisions avec eux.\n11 août – Invasion anglaise de l'Écosse (1385) : L'armée anglaise atteint Édimbourg , capitale de l'Écosse, et la trouve déserte, ses habitants civils ayant fui et les soldats écossais et français s'étant repliés dans la forêt d'Ettrick . [ 13 ] Les soldats anglais, frustrés , incendient et pillent la ville.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.9533,
     "lng": -3.1884,
     "serie": "Guerres écossaises"
@@ -34448,6 +34625,9 @@
     "type": 4,
     "description": "L'armée anglaise ayant laissé ses frontières sans défense, les troupes écossaises et françaises envahissent l'Angleterre et pillent le Cumberland en représailles à l'incendie d'Édimbourg.\n17 août –N’ayant accompli que des destructions matérielles, l’armée anglaise entame son retrait d’Écosse et retourne en Angleterre\n31 août – Le roi Richard II d’Angleterre entame une invasion de l’Écosse . Les Anglais incendient Holyrood et Édimbourg , mais rentrent chez eux sans bataille décisive. \n7 septembre – Les troupes écossaises et françaises tentent sans succès d’assiéger la ville fortifiée de Carlisle en Angleterre, mais Sir Henry Percy , surnommé « Hotspur », brise le siège et les assaillants se retirent en Écosse, mettant fin à la guerre entre les deux royaumes",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 55.5296,
     "lng": -3.9893,
     "serie": "Guerre de Cent ans"
@@ -34463,6 +34643,9 @@
     "type": 5,
     "description": "23 août – Pour célébrer le mariage de Guillaume le Courtois , duc d’Autriche , avec Jadwiga , reine de Pologne , les dirigeants de la ville de Cracovie accordent l’amnistie aux prisonniers de la prison de la ville",
     "image": "",
+    "themes": [
+      "diplomatie"
+    ],
     "lat": 50.0469,
     "lng": 19.9972
   },
@@ -34478,6 +34661,9 @@
     "type": 4,
     "description": "15 octobre – Bataille de Valverde : Les armées du Portugal vainquent la Castille .\nLa bataille de Valverde s'est déroulée le 15 octobre 1385, près de Valverde de Mérida , en Castille , entre le royaume du Portugal et la couronne de Castille, et s'inscrivait dans le cadre de la crise portugaise de 1383-1385 .\nDeux mois après la victoire décisive des Portugais à la bataille d'Aljubarrota , le connétable du Portugal, Nuno Álvares Pereira, avait décidé de passer à l'offensive et d'envahir la Castille .\n\nL'armée portugaise partit d' Estremoz , passant par Vila Viçosa et Olivença . Elle entra ensuite en territoire castillan, où elle prit Villagarcia, qu'elle trouva sans défense, [ 3 ] de là elle se dirigea ensuite vers la ville de Valverde.\n\nEn attendant des renforts, les Castillans marchèrent sur les Portugais pour les empêcher de franchir le Guadiana . Les renforts castillans étaient principalement composés d'habitants des villes environnantes et l'armée comptait environ 20 000 hommes, parmi lesquels figuraient plusieurs nobles. On y trouvait notamment Gonzalo Núñez de Guzman, maître de l' ordre de Calatrava , le Portugais Martim Anes de Barbuda et Pedro Muñiz de Godoy y Sandoval , grand maître de l' ordre de Santiago .\nUne partie de l'armée castillane traversa le fleuve et se positionna sur la rive opposée, tandis que le reste demeura en place, avec l'intention d'encercler les Portugais pendant leur traversée. [ 3 ] Nuno Álvares Pereira ordonna alors à son armée de former un carré, les bagages au centre, et traversa impétueusement le fleuve, bravant les forces castillanes qui tentèrent de lui résister. Parvenu sur la rive, il ordonna à son arrière-garde de protéger les bagages et de combattre l'ennemi, tandis qu'avec son avant-garde , il traversait. Les forces castillanes sur la rive opposée, fortes d'environ 10 000 hommes, s'opposèrent en vain à leur débarquement. [ 3 ] Après avoir positionné l'avant-garde portugaise pour défendre la rive contre les Castillans, Nuno Álvares Pereira traversa de nouveau le fleuve pour rejoindre son arrière-garde, qui subissait une pluie de flèches tirées par les Castillans. Le connétable du Portugal, constatant que les Castillans avaient épuisé leurs munitions, ordonna une attaque. Nuno Álvares Pereira lui-même, apercevant la bannière du Grand Maître de Santiago, se fraya un chemin à travers l'armée castillane jusqu'à le rencontrer. Après un bref duel, le Grand Maître tomba mortellement blessé. [ 5 ] Sa chute et la destruction de son étendard démoralisèrent l'armée castillane, qui fut rapidement brisée et désorganisée, incapable d'arrêter l'attaque portugaise et subit une défaite rapide et totale.\nL'armée portugaise poursuivit les Castillans jusqu'à la tombée de la nuit, puis regagna le Portugal au matin. [ 7 ] Le désastre subi par la Castille à Aljubarrota fut ainsi rapidement suivi d'une autre défaite cuisante à Valverde. La plupart des villes portugaises encore occupées par les Castillans se rendirent bientôt à Jean Ier de Portugal .",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Nuno_%C3%81lvares%2C_praying_during_the_battle_of_Valverde_-_Hist%C3%B3ria_de_Portugal%2C_popular_e_ilustrada.jpg/1280px-Nuno_%C3%81lvares%2C_praying_during_the_battle_of_Valverde_-_Hist%C3%B3ria_de_Portugal%2C_popular_e_ilustrada.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "guerre"
+    ],
     "legende": "Nuno Álvares, priant pendant la bataille de Valverde - História de Portugal, popular e ilustrada",
     "lat": 38.9118,
     "lng": -6.2198
@@ -34487,11 +34673,16 @@
     "titre": "Tokhtamysh de la Horde d'Or conquiert l'ouest de la Perse",
     "date": 1385,
     "zones": [
-      "Orient"
+      "Russie",
+      "Mesopotamie",
+      "Asie centrale"
     ],
     "type": 4,
     "description": "Tokhtamysh de la Horde d'Or conquiert des parties du sultanat jalaïride dans l'ouest de la Perse , provoquant une rupture entre lui et Timur de l'empire timouride, qui souhaitait également conquérir la Perse.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 35.7503,
     "lng": 53.9124
   },
@@ -34505,6 +34696,9 @@
     "type": 4,
     "description": "Le 3 mai 1385, les Ferrarais, exaspérés par les impôts et les inondations qui les avaient ruinés, se rendirent au palais du marquis Niccolò II d'Este pour demander conseil à Tommaso da Tortona, haut fonctionnaire tenu pour responsable de cette grave situation. Niccolò tenta de calmer la révolte toute la journée, mais le soir venu, il était clair que la colère du peuple montait et que la sécurité même des Estensi était menacée. On ordonna donc de faire venir Tommaso, tombé en disgrâce, qui reçut confession et communion, puis fut livré à la foule qui le mit en pièces.\nCet épisode, qui entraîna plus tard la mort des meneurs de la révolte, convainquit le marquis que le palais familial (aujourd'hui le Palazzo Comunale ) était insuffisant pour garantir la sécurité de la noblesse en cas d'émeutes. Il ordonna donc la construction d'une forteresse défensive au nord du palais, confiant le projet à l'architecte Bartolino da Novara. Ce dernier utilisa une tour préexistante (la Torre dei Leoni), qui faisait partie des remparts, situés à l'époque bien plus au sud que les remparts actuels, suivant approximativement le tracé actuel du Corso Giovecca et du Viale Cavour. La tour fut reliée par des courtines à trois autres tours nouvellement construites pour ce projet. Entre la résidence des Este et la nouvelle forteresse fut aménagée une passerelle aérienne (probablement en bois) permettant la fuite de l'une à l'autre.\nAvec l'expansion de la ville, les remparts furent déplacés, réduisant ainsi l'importance de la fonction défensive du château. Des appartements commencèrent à être aménagés à l'intérieur, le château étant désormais considéré comme une annexe du palais de la cour. Dès le règne d' Hércole Ier d'Este , de nombreux documents attestent de la construction, de l'agrandissement et de l'embellissement de ces appartements. Les travaux de transformation définitifs furent ordonnés par Hercule II après un incendie en 1544 qui avait endommagé les bâtiments précédents. L'architecte Girolamo da Carpi donna au château l'aspect extérieur que l'on peut encore admirer aujourd'hui, bien que l'intérieur ait été remanié à plusieurs reprises au fil des siècles.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Il_Castello_Estense_di_Ferrara.jpg/1920px-Il_Castello_Estense_di_Ferrara.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "revolte"
+    ],
     "lat": 44.8373,
     "lng": 11.6186
   },
@@ -34518,6 +34712,10 @@
     "type": 4,
     "description": "Le château de Bodiam ( / ˈboʊdiəm / ) est un château à douves du XIVe siècle situé près de Robertsbridge , dans le Sussex de l'Est, en Angleterre. Il fut construit en 1385 par Sir Edward Dalyngrigge avec l'autorisation de Richard II , officiellement pour défendre la région contre une invasion française durant la guerre de Cent Ans . De plan quadrangulaire , le château de Bodiam ne possède pas de donjon ; ses différentes salles sont construites autour des remparts extérieurs et des cours intérieures. Ses angles et son entrée sont marqués par des tours, surmontées de créneaux . Sa structure, ses détails et sa situation dans un paysage aquatique artificiel indiquent que la démonstration de puissance était un aspect important de sa conception, au même titre que sa défense. Il fut la demeure de la famille Dalyngrigge et le centre du domaine de Bodiam .\n\nLa possession du château de Bodiam se transmit de génération en génération au sein de la famille Dalyngrigge, jusqu'à l'extinction de leur lignée. Le château passa alors, par mariage, à la famille Lewknor. Durant la guerre des Deux-Roses , Sir Thomas Lewknor soutint la maison de Lancastre . Lorsque Richard III de la maison d'York devint roi en 1483, une armée fut envoyée assiéger le château de Bodiam. On ignore si le siège eut lieu, mais il est probable que Bodiam se rendit sans grande résistance. Le château fut confisqué, mais revint aux Lewknor lorsque Henri VII de la maison Tudor devint roi en 1485. Les descendants des Lewknor en restèrent propriétaires au moins jusqu'au XVIe siècle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Bodiam-castle-10My8-1197.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "techniques",
+      "art"
+    ],
     "lat": 51.0026,
     "lng": 0.5388
   },
@@ -34532,6 +34730,9 @@
     "type": 5,
     "description": "28 juin : Lors du siège du château du baron brigand à Ricklingen, Albrecht , prince régnant de Lunebourg , est tué. La guerre de succession de Lunebourg reprend alors de plus belle.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/DEU_Fuerstentum_Lueneburg_COA.svg/960px-DEU_Fuerstentum_Lueneburg_COA.svg.png?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
     "lat": 53.2487,
     "lng": 10.4079
   },
@@ -34546,6 +34747,9 @@
     "type": 5,
     "description": "L'église Sainte- Marthe, classée monument historique, est un édifice gothique situé sur la Königstraße, au sud-est de la vieille ville de Nuremberg , en diagonale face à l'église Sainte-Claire, entre la porte du Roi et l'église Saint-Laurent . Son emplacement en retrait, dans un espace entre deux bâtiments, est remarquable.\n\nL'église Sainte-Marthe a été gravement endommagée par un incendie dans la nuit du 5 juin 2014. [ 1 ] Après sa reconstruction, elle a rouvert ses portes en 2018.\nKonrad et Johann von Waldstromer fondèrent l'église et l'hôpital pour pèlerins Sainte-Marthe en 1363. Ils accomplirent ainsi une promesse de fondation faite par leurs parents, Agnes Pfinzing et Konrad von Waldstromer, en 1356. Le 24 mars 1385, l'église Sainte-Marthe fut consacrée à Sainte Marthe et ses trois autels furent dédiés à la Sainte Trinité , à la Vierge Marie et aux douze apôtres .\n\nVers 1390, le chœur de l'église fut orné d'un cycle de vitraux gothiques, offerts individuellement par des familles patriciennes de Nuremberg. D'autres vitraux furent ajoutés entre 1410 et 1430.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/St_Martha_-_N%C3%BCrnberg_-_Chorbereich-A.jpg/960px-St_Martha_-_N%C3%BCrnberg_-_Chorbereich-A.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
     "lat": 49.4539,
     "lng": 11.0773
   },
@@ -34577,6 +34781,9 @@
     "type": 4,
     "description": "La chapelle Castellani (également connue sous le nom de chapelle Santissimo) est située dans le transept droit de la basilique Santa Croce à Florence . Elle a été ornée de fresques en 1385 par Agnolo Gaddi et son atelier pour la famille Castellani . Les fresques des murs et de la voûte ont été réalisées par Agnolo Gaddi et des artistes de son atelier, dont Gherardo Starnina. Le cycle illustre des épisodes de la vie de quatre saints : saint Jean l’Évangéliste, saint Antoine l’Abbé, saint Jean-Baptiste et saint Nicolas de Bari. Des figures de saints franciscains, présentées dans des niches en trompe-l’œil, ornent les pilastres, tandis que les voûtes abritent les quatre évangélistes et les quatre docteurs de l’Église.\nAgnolo Gaddi ( vers 1350 – 15 octobre 1396 ) était un peintre italien . Fils de Taddeo Gaddi , lui aussi peintre renommé et peut-être le principal disciple de Giotto , son art, souvent empreint d'une délicate poésie féerique, témoigne d'une continuité avec les schématismes giottosques de la première moitié du XIVe siècle , enrichis de quelques influences gothiques tardives .\nEntre 1383 et 1385 , il réalisa les fresques de la chapelle Castellani . Le cycle narratif comprend des scènes de la vie de saint Antoine, de saint Jean-Baptiste, de saint Jean l'Évangéliste et de saint Nicolas (la première étant peut-être l'œuvre de Gherardo Starnina )",
     "image": "",
+    "themes": [
+      "art"
+    ],
     "lat": 43.7698,
     "lng": 11.2556,
     "sources": "https://it.wikipedia.org/wiki/Cappella_Castellani"
@@ -34592,6 +34799,9 @@
     "type": 4,
     "description": "La cathédrale Saint-Pierre de Ratisbonne appelée communément cathédrale de Ratisbonne (Dom St. Peter en allemand), est la plus grande église de la ville de Ratisbonne, dans le land de Bavière, en Allemagne et la cathédrale du diocèse de Ratisbonne. L'église constitue le premier exemple d'architecture gothique en Allemagne méridionale.\nElle est mondialement connue pour son chœur de garçons, créé il y a un millénaire : les Regensburger Domspatzen (en français, les « Moineaux de la cathédrale de Ratisbonne »).\n1273\tDébut de la construction du nouvel édifice à l'ouest de l'ancienne cathédrale, détruite par un incendie (probablement vers 1250)\nvers 1285/90\tNouvelle conception, de style gothique\nvers 1320\tLes trois chœurs de la nouvelle cathédrale peuvent être utilisés. Les restes de l'ancien édifice sont détruits.\n1385–1415\tAchèvement du portail principal très élaboré sur le flanc ouest\n1442\tConstruction de la charpente au-dessus du vaisseau central1613–1649\tRestauration de la cathédrale et remodelage baroque (construction d'une coupole au-dessus de la croisée du transept)\n1828–1841\tSur ordre de Louis Ier de Bavière, la cathédrale retrouve son aspect gothique (suppression des fresques baroques), notamment via la déconstruction de la croisée, remplacée par une voûte ogivale.\n1859–1869\tAgrandissement des tours et finition des flèches\n1870/72\tAchèvement de la construction avec la finition du gable du transept et du clocheton après 600 ans de travaux.\nLe portail central, dont le trumeau arbore une statue de saint-Pierre, est précédé d'un porche à plan triangulaire assez inattendu, dont le pilier en saillie figure les apôtres. Les sculptures du tympan et des archivoltes retracent des épisodes de la vie de la Vierge Marie.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Regensburg_Dom_160910.jpg/960px-Regensburg_Dom_160910.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
     "lat": 49.0195,
     "lng": 12.0975
   },
@@ -34605,6 +34815,9 @@
     "type": 3,
     "description": "Achevée en 1500 ; sa tour de 130 m de hauteur constitue la plus haute structure en brique.\nL'église Saint-Martin-et-Castule (basilique mineure), abrégée en Saint-Martin ou église Saint-Martin, est une église paroissiale et collégiale catholique, en brique, située à Landshut en Bavière en Allemagne. Elle été commencée par le maître d'œuvre Hans Krumenauer (de) vers 1385 en tant qu'église-halle et achevée avec la participation significative de Hans von Burghausen (de), également maître d'œuvre, jusqu'à environ l'an 1500. Avec son architecture exceptionnelle, verticalisée au-delà des normes, où se mêlent des éléments de l'architecture gothique et gothique tardif, l'église fait partie des monuments les plus importants de cette architecture en Allemagne du Sud. La tour de l'église Saint-Martin de Landshut, avec ses 130,1 mètres, est la plus haute tour en briques du monde ainsi que la plus haute tour d'église de Bavière.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2012-10-06_Landshut_068_Altstadt%2C_St._Martin_%288062400324%29.jpg/1280px-2012-10-06_Landshut_068_Altstadt%2C_St._Martin_%288062400324%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
     "legende": "2012-10-06 Landshut 068 Altstadt, St. Martin.jpg",
     "lat": 48.5362,
     "lng": 12.1517
@@ -34619,6 +34832,9 @@
     "type": 3,
     "description": "Le château de Cooling est un château quadrangulaire du XIVe siècle situé dans le village de Cooling, dans le Kent, sur la péninsule de Hoo, à environ 9,7 km au nord de Rochester . Il fut construit dans les années 1380 par la famille Cobham , seigneurs locaux , afin de protéger la région des raids français dans l' estuaire de la Tamise . Le château présente une disposition inhabituelle : deux cours fortifiées de dimensions inégales sont accolées et entourées de douves et de fossés. Il fut le premier château anglais conçu pour permettre l'utilisation d' armes à poudre par ses défenseurs.\nLe château fut initialement construit sur la rive sud de la Tamise , bien que le rivage ait reculé depuis lors suite à des travaux de remblaiement ; le fleuve se situe désormais à environ 3,2 km au nord du château, séparé de celui-ci par des marais. Il fut édifié par John de Cobham, 3e baron Cobham (mort en 1408), du manoir voisin de Cobham Hall , dont la famille avait acquis le manoir de Cooling au milieu du XIIIe siècle. En 1379, durant la seconde phase de la guerre de Cent Ans , un raid français dévasta les villes et villages situés le long de l’estuaire de la Tamise. Cobham sollicita l’autorisation de la Couronne pour fortifier son manoir et l’obtint en février 1380. Les travaux furent achevés en 1385",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cooling_Castle_gatehouse.jpg/1280px-Cooling_Castle_gatehouse.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
     "lat": 51.4581,
     "lng": 0.5358,
     "sources": "https://en.wikipedia.org/wiki/Cooling_Castle"
@@ -34633,6 +34849,10 @@
     "type": 3,
     "description": "La victoire anglo-portugaise a de grandes conséquences. La première et la plus évidente est d'éteindre les prétentions de la Castille sur le royaume de . La bataille d'Aljubarrota met en effet un terme à la crise de 1383-1385 portant sur la succession au trône de  et confirme la légitimité de Jean Ier, fondateur de la dynastie d'Aviz. Au Moyen Âge, la victoire sur le champ de bataille était considérée comme le signe de la reconnaissance divine. L'autorité de Jean Ier de  s'en trouve donc affermie. En terme diplomatique, la bataille renforce les liens, datant du traité de 1373, entre le  et l'Angleterre, qui aboutissent à la signature du traité de Windsor et au mariage entre Jean Ier de  et de Philippa de Lancastre le 11 février 1387. 11 février : Jean Ier de Portugal épouse une princesse anglaise, Philippa de Lancastre, fille du duc de Lancastre, Jean de Gand.Pour commémorer l'éclat de sa victoire et remercier Dieu, Jean Ier de  fait construire le monastère de Batalha, de style gothique puis manuélin, situé aujourd'hui dans le district de Leiria.\nBatalha fut pendant deux siècles le grand chantier de la monarchie portugaise où se développa un style gothique national original, profondément influencé par l'art manuélin, dont le cloître royal, véritable chef-d'œuvre, est l'illustration parfaite. L'ensemble rappelle celui du monastère d'Alcobaça. La chapelle du fondateur, chapelle funéraire, sera ajoutée par le roi Jean Ier. Quant à la rotonde funéraire, communément désignée par le nom de chapelles imparfaites, elle est de l'initiative du roi Édouard Ier de .(Xve) Les Cortes de  se réunissent à Coïmbra en avril en vue d’imposer la solution prévue lors des engagements matrimoniaux de 1383. L’orateur du tiers état, João das Regras, convainc l’assemblée de la nécessité de confirmer la désignation populaire de Jean d’Avis : Jean Ier de , grand maître de l’ordre militaire d’Aviz et demi-frère de Ferdinand Ier de , lui succède après deux années de troubles. Il fera du  une puissance de premier rang[4].\nNuno Álvares Pereira devient connétable de [3]. Le séfarade Mossé Navarro trésorier général du royaume[",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mosteiro_da_Batalha_78a.jpg/1280px-Mosteiro_da_Batalha_78a.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "art"
+    ],
     "lat": 39.6579,
     "lng": -8.8244
   },
@@ -34646,6 +34866,9 @@
     "type": 4,
     "description": "Le comté d'Évreux et le Cotentin, possessions du roi Charles II de Navarre, avaient été occupées par Charles V en 1378. En 1381, Charles VI avait accepté de les restituer à l'infant Charles, fils de Charles II[44]. Toutefois, prenant le prétexte d'une tentative d'empoisonnement perpétrée par les hommes du roi de Navarre, Charles VI confisqua définitivement ces terres le 20 mars 1385[",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 49.0269,
     "lng": 1.151
   },
@@ -34660,6 +34883,9 @@
     "type": 3,
     "description": "En prenant possession du comté de Flandre, en janvier 1384, Philippe le Hardi sait que pour être accepté par les Flamands, il doit leur rendre leur prospérité économique. Celle-ci dépend en premier lieu des échanges avec l'Angleterre qui est à l'époque le principal fournisseur de laine de l'industrie textile du Nord du Royaume, et celle-ci exige d'être payée en nobles d'or. Philippe fait donc battre des nobles flamands contenant très légèrement moins d'or que la monnaie anglaise. L'effet est rapide : l'économie est relancée et le duc y puise de substantielles plus-values. Au vu de ce succès, le conseil du roi se rend compte des méfaits du franc fort et de la raréfaction de la monnaie sur la circulation des marchandises. En avril 1385, cédant aux pressions des milieux d'affaires, le roi dévalue le franc et augmente le prix du marc de métal précieux. L'effet de cette politique associée au retour de la paix est très favorable, l'économie est relancée. La paix est enfin faite entre les sujets qui ont accepté l'impôt et le roi qui apporte paix et prospérité économique",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Agnel_d%27or_sous_Charles_VI_le_Fou.jpg/1920px-Agnel_d%27or_sous_Charles_VI_le_Fou.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "economie"
+    ],
     "legende": "Agnel d'or du règne de Charles VI.",
     "lat": 48.8589,
     "lng": 2.32
@@ -34674,6 +34900,11 @@
     "type": 3,
     "description": "Vénitiens et Génois deviennent  ainsi les arbitres des querelles dynastiques de Constantinople pendant que les Ottomans s'enfonçaient dans les Balkans.\nÀ la fin du XIVe siècle, l’Empire byzantin, considérablement réduit par les guerres civiles et l’expansion ottomane, est également déchiré par les rivalités entre les membres de la dynastie des Paléologues. Jean V Paléologue, empereur depuis 1341, doit notamment affronter les ambitions de son fils aîné, Andronic IV.\n\nEn 1376, Andronic IV, soutenu par les Génois de Galata et par le sultan ottoman Mourad Ier, renverse son père et s’empare de Constantinople. Il emprisonne Jean V et son frère Manuel II. En échange de leur soutien, Andronic accorde d'importantes concessions à ses alliés : il restitue notamment Gallipoli aux Ottomans et favorise les intérêts génois, notamment dans la question de Ténédos, alors disputée entre Gênes et Venise.\n\nMais cette alliance se retourne contre lui. En 1379, Jean V et Manuel II parviennent à s'évader et obtiennent l'appui des Vénitiens et de Mourad Ier. Avec leur soutien, Jean V reprend Constantinople et Andronic IV doit se réfugier à Galata, sous protection génoise. Jean V est ainsi rétabli sur le trône, mais son pouvoir reste fragile et largement dépendant des puissances étrangères.\n\nUn compromis conclu en 1382 tente de mettre fin aux conflits dynastiques. Andronic IV est reconnu comme héritier et reçoit un apanage en Thrace autour de Sélymbrie, tandis que Manuel II conserve un rôle essentiel auprès de son père et gouverne Thessalonique. L'Empire se trouve ainsi partagé entre plusieurs branches de la famille impériale.\n\nEn 1385, Andronic IV se révolte une dernière fois contre Jean V. Il est vaincu et meurt peu après à Sélymbrie. Sa disparition élimine le principal rival de Jean V et permet à Manuel II de retrouver pleinement sa place d'héritier présomptif.\n\nBilan\n\nLa défaite et la mort d'Andronic IV renforcent donc temporairement l'autorité de Jean V, soutenu par Manuel II. Elles marquent également le recul de l'influence génoise dans les affaires dynastiques de Constantinople, alors que Venise, en s'opposant aux ambitions génoises, contribue au rétablissement de Jean V.\n\nCependant, cette victoire reste fragile. L'Empire byzantin demeure profondément affaibli et dépendant des Ottomans, tandis que les rivalités entre Génois et Vénitiens se superposent aux luttes internes de la dynastie. La mort d'Andronic IV ne met d'ailleurs pas définitivement fin à la menace dynastique : son fils Jean VII Paléologue conservera ses prétentions au trône et reprendra à son tour la lutte contre Jean V et Manuel II.",
     "image": "",
+    "themes": [
+      "guerre",
+      "revolte",
+      "politique"
+    ],
     "lat": 41.0064,
     "lng": 28.9759
   },
@@ -34689,6 +34920,9 @@
     "type": 3,
     "description": "En septembre 1382, Louis Ier de Hongrie décède, laissant le trône à sa fille Marie . Dès que le différend avec le pape fut réglé, Charles se précipita à Buda pour revendiquer le trône en tant qu'unique héritier mâle de la branche principale des Angevins. En décembre 1385, avec le soutien d'une grande partie du peuple et de la noblesse, il déposa la reine Marie et s'empara de la couronne de Hongrie sous le nom de Charles II. Mais la veuve de Louis, Élisabeth, déterminée à se débarrasser de l'usurpateur, ourdit un complot contre lui et le fit assassiner le 7 février 1386. Emprisonné à Visegrád , Charles mourut empoisonné le 24 février 1386.",
     "image": "",
+    "themes": [
+      "guerre"
+    ],
     "lat": 43.5003,
     "lng": 16.8156
   },
@@ -34701,6 +34935,9 @@
     ],
     "type": 5,
     "image": "",
+    "themes": [
+      "diplomatie"
+    ],
     "lat": 47.4979,
     "lng": 19.0402
   },
@@ -34715,6 +34952,10 @@
     "type": 3,
     "description": "Diète des partisans de Charles à Buda avec participation massive de la noblesse moyenne. Fuite de Sigismond en Bohême, Marie abdique.",
     "image": "",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
     "lat": 47.4979,
     "lng": 19.0402
   },
@@ -34729,6 +34970,9 @@
     "type": 3,
     "description": "En 1385, une nouvelle révolte renverse les Réformateurs. Le pouvoir revient à une coalition plus large associant notamment les Dodicini et les anciens Noveschi, ainsi que des groupes populaires. Le système politique repose désormais sur un collège de Prieurs, dont le nombre varie.\n\nOn peut distinguer :\n\n1385-1387 : Dix Prieurs ;\n1388-1398 : Onze Prieurs ;\n1398-1399 : Douze Prieurs.Après la chute des Réformateurs, en 1385, on instaure d'abord un collège de 10 prieurs :\n4 représentants des Douze ;\n4 représentants des Neuf ;\n2 représentants du nouveau popolo.\nLe système devient donc explicitement proportionnel aux forces politiques. Une étude sur la formation de l'État siennois souligne que les différentes catégories politiques doivent désormais être représentées dans les charges administratives selon des proportions déterminées.\nCette période est marquée par une très forte instabilité politique, les factions siennoises se disputant successivement l'accès aux magistratures. Elle coïncide aussi avec la reprise de la guerre contre Florence, la perte de Montepulciano en 1390 et l'affaiblissement général de la République.",
     "image": "",
+    "themes": [
+      "politique"
+    ],
     "lat": 43.1672,
     "lng": 11.4676
   },
@@ -34743,6 +34987,10 @@
     "type": 4,
     "description": "Le 6 janvier , des représentants du canton suisse de Lucerne arrivent au village de Sempach , alors sous contrôle autrichien et de la famille des Habsbourg, et proposent la citoyenneté et les droits suisses. Ils concluent des accords similaires avec d'autres villes sous domination autrichienne, dont Meienberg, et amènent avec eux des soldats de la Confédération suisse . [ 1 ]",
     "image": "",
+    "themes": [
+      "diplomatie",
+      "politique"
+    ],
     "lat": 47.1354,
     "lng": 8.192
   },
@@ -34758,7 +35006,9 @@
     ],
     "type": 1,
     "image": "",
-    "regne": true,
+    "themes": [
+      "politique"
+    ],
     "lat": 40.8359,
     "lng": 14.2488
   },
@@ -34775,8 +35025,10 @@
     "type": 1,
     "description": "Ladislas II Jagellon (en polonais Władysław Jagiełło, en lituanien Jogaila Algirdaitis), né entre 1351 et 1362 à Vilnius et mort le 1er juin 1434 à Gródek Jagielloński, est grand-duc de Lituanie de 1377 à 1392 et roi de Pologne de 1386 à 1434.\n\nD'abord polythéiste, il se convertit au catholicisme en 1386 lors de son accession au trône de Pologne. Avec lui commence la dynastie des Jagellon[1], qui règne sur la Pologne en union personnelle avec le grand-duché de Lituanie pendant près de deux siècles[2].\nL'union de la Pologne et de la Lituanie renforce les deux nations face aux chevaliers Teutoniques et à la menace grandissante du grand-duché de Moscou. En 1410, Ladislas remporte une victoire éclatante contre l'ordre Teutonique lors de la bataille de Grunwald.\nJagellon (en lituanien Jogaila), né entre 1351 et 1362, est le petit-fils de Ghédimin, grand-duc de Lituanie.\n\nÀ la mort de celui-ci en 1341, ses deux fils se partagent le pouvoir : Algirdas reçoit le titre de grand-duc de Lituanie et règne sur la partie orientale du grand-duché, tandis que Kęstutis, duc de Trakai, est maître en Lituanie occidentale.\nLorsque Algirdas meurt en 1377, son fils Jogaila lui succède, mais Kęstutis n'est pas d'accord.\nJagellon recherche l'alliance des chevaliers Teutoniques qui, depuis le XIIIe siècle, dirigent l'État monastique de Prusse, officiellement pour combattre et convertir les tribus prussiennes et lituaniennes, à cette date encore païennes. En 1380, Jagellon conclut avec l’ordre le traité de Dovydiškės (en), acceptant la conversion au christianisme de la Lituanie en échange du soutien des chevaliers dans son conflit avec Kęstutis.\n\nEn 1382, ignorant un sauf-conduit octroyé par son frère Skirgaila, Jagellon capture Kęstutis et le fait assassiner. Vytautas, le fils de Kęstutis, parvient à s’échapper. Le conflit familial s’intensifie et les deux factions demandent l'aide des chevaliers Teutoniques, qui en profitent pour étendre leur influence. Mais en 1384, Vytautas se désolidarise de l’ordre, fait la paix avec Jagellon, et commence une guerre contre les chevaliers Teutoniques.\nLe 14 août 1385, Jagellon signe avec des dignitaires polonais l'union de Krewo. Il promet de se convertir au christianisme romain et d’unir la Lituanie à la Pologne, en échange de la main d'Hedwige Ire de Pologne et de la couronne polonaise[4].\n\nLe mariage est célébré à Cracovie le 18 février 1386, trois jours après le baptême de Jagellon. Le 4 mars 1386, il est couronné roi de Pologne, sous le nom de Ladislas II Jagellon (Władysław II Jagiełło). Il établit la dynastie des Jagellon, qui règnera sur la Pologne et la Lituanie jusqu'en 1572.\n\nLe 17 juillet 1399, la reine meurt des complications de l'accouchement de son premier enfant, Élisabeth Bonifacia (née le 22 juin et décédée le 13 juillet 1399).\nLadislas, à la requête des États du royaume unanimes, reste roi de Pologne. Il règne 48 ans.\nFin 1401, le conflit avec les chevaliers Teutoniques reprend. Jagellon et Vytautas entament en décembre 1408 des négociations, où ils décident d’essayer d’en finir définitivement avec la puissance des Chevaliers Teutoniques. Les deux camps cherchent des alliances dans toute l’Europe. Wenceslas IV de Bohème choisit le camp polonais et lituanien, tandis que son frère, Sigismond de Luxembourg, s’allie avec l’ordre.\nLe 15 juillet 1410, le roi Ladislas et ses alliés sont victorieux à la bataille de Grunwald (bataille de Tannenberg dans l'historiographie allemande), qui les oppose aux chevaliers Teutoniques et où périssent des milliers de ceux-ci, dont le grand maître Ulrich von Jungingen.\n\nL'année suivante, Ladislas impose la paix de Toruń qui oblige les chevaliers teutoniques à verser à la Pologne une indemnité de guerre qui met leur État au bord de la faillite.\n\nMais les affrontements continuent[6]. Pour trancher leurs différends, la Pologne et l'ordre font appel au concile de Constance, où Paweł Włodkowic se rend célèbre en défendant les intérêts polonais.\n\nFin du règne de Ladislas Jagellon\nLe restant de son règne, Jagellon essaye de consolider l’alliance entre la Pologne et la Lituanie. Il accorde aux nobles catholiques de Lituanie les mêmes privilèges que ceux dont jouissaient déjà la noblesse polonaise.\n\nIl meurt le 1er juin 1434, laissant deux fils de sa quatrième épouse, en très bas âge. L’aîné deviendra roi de Pologne sous le nom de Ladislas III Jagellon, le cadet, Casimir, devenant grand-duc de Lituanie. Il succédera plus tard à son frère sur le trône de Pologne sous le nom de Casimir IV Jagellon.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Kingdom_of_Poland_1400.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "politique"
+    ],
     "legende": "La nouvelle République des Deux Nations (Pologne-Lituanie) est créée.",
-    "regne": true,
     "lat": 50.0619,
     "lng": 19.9369
   },
@@ -34793,7 +35045,9 @@
     "type": 1,
     "description": "Marie est la fille aînée du roi Louis Ier de Hongrie. Fiancée en 1372 à Sigismond de Luxembourg, elle succède à son père en Hongrie et est couronnée le 17 septembre 1382, tandis que sa sœur Hedwige occupe le trône de Pologne à la demande de la noblesse locale, qui souhaite ainsi mettre fin à l'union personnelle entre les deux royaumes.\nDans l'attente de la venue en Hongrie du fiancé de Marie, sa mère, la reine Élisabeth de Bosnie, assure la régence avec l'appui du palatin Nicolas Garai. En août 1384, un important parti de barons qui ne veut pas de Sigismond de Luxembourg comme roi se soulève. Ils font appel à Charles II de Durazzo : élevé à la cour de Hongrie, il prétend avoir été adopté par Louis Ier. Il débarque en Dalmatie en septembre 1385. Élisabeth se réconcilie avec les partisans de Sigismond, qui épouse Marie en octobre. Charles II de Durazzo occupe Buda, Sigismond s'enfuit en Bohême et Marie Ire doit renoncer au trône en décembre 1385.\n\nCharles II de Durazzo est couronné le 31 décembre 1385 mais, le 7 février, il est capturé et blessé par les partisans de la reine mère lors d'un attentat puis assassiné en prison le 24 février suivant.\n\nMarie retrouve son trône mais, le 25 juillet 1386, Jean Horvati, chef des partisans de Charles de Durazzo, capture la reine, sa mère et Nicolas Garai, qui est exécuté avec plusieurs membres de sa famille. En janvier 1387, le ban Jean Horváti fait étrangler la reine mère dans le château de Novigrád afin de venger la mort de son prétendant.\n\nLe 31 mars 1387, Sigismond de Luxembourg (1368 † 1437), futur empereur germanique, est élu et couronné roi de Hongrie à Székesfehérvár et il obtient la libération de Marie. En juillet 1394, Jean Horváti est fait prisonnier par Sigismond en Bosnie et Marie Ire le fait exécuter à Pécs\nMarie et son époux n'ont pas d'enfant et, à sa mort le 17 mai 1395, Sigismond conserve le royaume de Hongrie.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/M%C3%A1ria_Thur%C3%B3czy.jpg/960px-M%C3%A1ria_Thur%C3%B3czy.jpg",
-    "regne": true,
+    "themes": [
+      "politique"
+    ],
     "lat": 40.8359,
     "lng": 14.2488
   },
@@ -34808,6 +35062,9 @@
     "type": 3,
     "description": "14 février - 15 février ?  – Le grand-duc Jogaila de Lituanie est baptisé par l’évêque catholique romain Bodzanta de Gniezno à la cathédrale de Wawel , à Cracovie, après sa conversion au christianisme, et prend le nom de Wladyslaw II. \nLe 19, il épouse Hedwige Ire de Pologne[1]. Il devient Ladislas II Jagellon (fin en 1434). Il tente d’unifier la Pologne et la Lituanie. Il doit mater la turbulente noblesse polonaise et évangéliser la Lituanie. La Pologne peut faire échec aux progrès du germanisme (1410).\n4 mars : Sacre de Ladislas II Jagellon, roi de Pologne[1].\nLe royaume des Jagellon comprend la Pologne, la Lituanie, la Biélorussie et une grande partie de l’Ukraine. C’est la première puissance d’Europe orientale.\nLe statut de 1386 accorde aux boyards lituaniens l’égalité avec les nobles polonais à condition qu’ils soient catholiques.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Map_of_the_Grand_Duchy_of_Lithuania_%28pink%29_and_the_Crown_of_the_Kingdom_of_Poland_%28red%29_and_its_neighborhood_in_1386_%E2%80%93_1434_%28English_version%29.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+    "themes": [
+      "diplomatie"
+    ],
     "legende": "La Pologne et la Lituanie de 1386 à 1434",
     "lat": 50.0619,
     "lng": 19.9369
