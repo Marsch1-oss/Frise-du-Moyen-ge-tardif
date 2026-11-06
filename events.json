@@ -1069,6 +1069,25 @@
     "lng": -4.726
   },
   {
+    "id": 3053,
+    "titre": "Lois somptuaires contre les dhimmis",
+    "date": 1301,
+    "mois": 4,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Promulgation des lois somptuaires contre les dhimmis (1301) : réactivation du « Pacte d'Umar », fermeture des églises cairotes et raidissement confessionnel sous la régence de Salar et Baybars al-Jashnakir.\nAu printemps 1301, sous le second règne nominal du jeune sultan Al-Nâsir Muhammad ben Qalâ'ûn — alors sous la tutelle exclusive du grand atabak Salar et de l'émir Baybars al-Jashnakir —, un envoyé officiel du sultanat mérinide de Fès (ou un vizir maghrébin en pèlerinage) traverse Le Caire. Scandalisé par la prospérité ostentatoire des chrétiens coptes et des juifs, qu'il voit monter de superbes chevaux, vêtus de soieries luxueuses et occupant les plus hautes charges de la comptabilité d'État (mubāshirūn), il proteste vivement auprès des émirs régents contre le non-respect des règles séculaires de soumission de la dhimma.\n\nRelayée par les milieux rigoristes des oulémas (au sein desquels la prédication d'Ibn Taymiyya commence à trouver un écho redoutable) et exploitée par le petit peuple cairote appauvri par les crises fiscales, la contestation tourne à l'émeute urbaine. Le 9 avril 1301, Salar et Baybars réunissent les quatre grands cadis des écoles sunnites à la Citadelle du Caire et font proclamer un édit réactivant avec une rigueur absolue le statut d'infériorité des non-musulmans :\n\nSégrégation vestimentaire somptuaire (ghiyār) : Interdiction absolue du turban blanc ('imāma). Obligation stricte pour les chrétiens de porter un turban bleu, pour les juifs un turban jaune, et pour les samaritains un turban rouge. Leurs ceintures de tissu (zunnār) doivent être apparentes en permanence.\n\nHumiliation dans l'espace public : Interdiction pour les dhimmis de monter des chevaux ou des mulets (seuls les ânes montés en amazone sur des bâts rustiques sans étriers métalliques sont tolérés) ; obligation de céder le haut du pavé aux musulmans et interdiction de pénétrer dans les bains publics (hammams) sans suspendre une clochette ou un anneau de fer au cou.\n\nÉpuration administrative : Révocation formelle de l'ensemble des scribes et secrétaires coptes et juifs employés dans les ministères financiers (dīwān al-jaysh, dīwān al-khāṣṣ), sauf conversion immédiate et publique à l'islam.\n\nAtteinte aux édifices du culte : Ordre de fermeture immédiate de toutes les églises et synagogues du Caire, de Fustat et des faubourgs. Plusieurs sanctuaires coptes font l'objet de tentatives de pillage ou de démolition par la foule avant que la troupe ne rétablisse l'ordre public.\nSur le plan de la sociologie politique et religieuse, la flambée de 1301 s'inscrit dans le traumatisme collectif de l'invasion mongole de la Syrie en 1299–1300 (désastre de Wadi al-Khazandar). Face à l'avancée de l'Ilkhanat ilkhanide — dont les armées comptaient d'importants contingents chrétiens arméniens et géorgiens —, l'oligarchie mamelouke, contestée sur le plan militaire, instrumentalise le zèle religieux pour resserrer la cohésion de la majorité sunnite. Faire appliquer les règles du « Pacte d'Umar » (Shurūṭ ‘Umar) permet aux régents Salar et Baybars II de faire la preuve de leur orthodoxie islamique et de détourner la rancœur des masses populaires contre des minorités servant de boucs émissaires.\n\nSur le plan institutionnel, la mesure met à nu la contradiction structurelle de l'administration mamelouke. L'État ne pouvait se passer des compétences séculaires des coptes pour la levée de l'impôt foncier (kharāj), le calcul des crues et la tenue des cadastres. De ce fait, l'interdiction professionnelle de 1301 provoqua une vague massive de conversions de façade (musālima) : nombre de hauts fonctionnaires chrétiens embrassèrent l'islam pour conserver leurs charges, nourrissant l'amertume des lettrés musulmans traditionnels qui dénoncèrent ces convertis récents continuant de favoriser secrètement leurs coreligionnaires dans l'appareil d'État.\nLes annales des chroniqueurs musulmans : Al-Maqrizi consacre dans son Khitat et le Kitāb al-Sulūk un récit très précis de l'événement. Tout en adoptant une posture d'orthodoxie sunnite justifiant le respect des codes vestimentaires, Maqrizi décrit froidement l'agitation démagogique de la populace et souligne les conséquences délétères de l'inquisition fiscale. Chez Ibn Taghribirdi (Al-Nujūm al-zāhira), l'accent est mis sur le rôle des juristes hanbalites et la réception populaire de la prédication d'Ibn Taymiyya, alors en pleine ascension doctrinale entre Damas et Le Caire.\n\nL'historiographie ecclésiastique copte : L'Histoire des Patriarches de l'Église d'Alexandrie (continuateurs arabophones de Sévère d'Ashmounayn) consigne l'impact destructeur de 1301 sur la communauté chrétienne. Le texte décrit la terreur des clercs, l'abandon forcé des liturgies publiques et les tractations d'ambassadeurs étrangers : il fallut des délégations envoyées par l'empereur byzantin Andronic II Paléologue et le roi d'Aragon pour obtenir, à coups de dons somptueux au sultan, la réouverture graduelle d'une partie des sanctuaires cairotes fermés en 1301.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Inside_the_Church_of_St._George_in_Coptic_Cairo%2C_Egypt.jpg/960px-Inside_the_Church_of_St._George_in_Coptic_Cairo%2C_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "societe",
+      "politique"
+    ],
+    "legende": "L'intérieur de l'église Saint-Georges dans le Caire copte, en Égypte.",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 63,
     "titre": "1eres dissections à l’université de Bologne par Bartolomeo da Varignana",
     "date": 1302,
@@ -1422,6 +1441,23 @@
     "legende": "Fresque peinte au Latran à l'époque même des faits, elle montre Boniface VIII coiffé de la haute tiare pontificale, revêtu de la pourpre et entouré de ses clercs tenant le rouleau scellé de la constitution pontificale, illustrant la majesté hiératique et la mise en scène solennelle de l'autorité dogmatique romaine au tournant des années 1300-1302.",
     "lat": 41.8933,
     "lng": 12.4829
+  },
+  {
+    "id": 3054,
+    "titre": "Prise de l'île de Ruad (Arwad) par la flotte mamelouke",
+    "date": 1302,
+    "mois": 9,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "À la suite de la chute de Saint-Jean-d'Acre en 1291, les Francs ont perdu l'intégralité de leurs possessions continentales en Terre sainte. Toutefois, l'Ordre du Temple parvient à maintenir une ultime tête de pont militaire sur le minuscule îlot de Ruad (Arwad), situé à trois kilomètres au large de Tortose (côte syrienne). Depuis cette base navale fortifiée, les Templiers tentent de coordonner des opérations de débarquement et de sceller une alliance stratégique avec les Mongols ilkhanides de Perse (dirigés par Ghazan) pour prendre le sultanat mamelouk en tenaille.\n\nConscient de la menace navale et géopolitique que représente cet avant-poste, le gouvernement oligarchique du Caire décide de l'éradiquer. À la fin de l'été 1302, une flotte mamelouke d'une quinzaine de navires cingle vers Ruad et débarque un important corps expéditionnaire. Assiégés dans leur donjon et rapidement à court de vivres, les Templiers résistent farouchement avant de capituler en septembre 1302, sur la promesse de pouvoir se retirer en lieu sûr.\n\nLa promesse n'est pas tenue : une partie des défenseurs est massacrée sur place, et les survivants sont emmenés en captivité dans les geôles du Caire, où la plupart périront au fil des années. La prise de Ruad est un événement charnière de l'histoire médiévale : elle marque la liquidation absolue et définitive de la présence militaire croisée au Levant, sécurisant intégralement la façade méditerranéenne de l'empire mamelouk.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 34.8561,
+    "lng": 35.8585
   },
   {
     "id": 72,
@@ -3800,6 +3836,41 @@
     "serie": "Reconquista"
   },
   {
+    "id": 3048,
+    "titre": "Khanqah du sultan Baybars al-Jashnakir au Caire",
+    "date": 1309,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Au cours de l'année 1306, l'émir Baybars al-Jashnakir (« l'Échanson » ou maître d'hôtel princier), l'un des deux hommes forts de l'oligarchie mamelouke exerçant la tutelle sur le jeune sultan Al-Nâsir Muhammad, entreprend la construction d'un vaste complexe conventuel destiné aux mystiques soufis (khanqah), doublé d'un mausolée personnel et d'une école coranique (maktab). Le site choisi se situe au cœur du tissu urbain fatimide, dans la prestigieuse rue al-Gamaliyya, à l'emplacement de l'ancien palais viziriel fatimide d'Al-Ma'mun al-Bata'ihi.\n\nAchevé à la fin de l'année 1309, au moment même où Baybars usurpe le trône sous le nom de Baybars II, le complexe constitue la plus ancienne khanqah préservée dans son intégralité au Caire. L'ensemble architectural s'organise autour d'une cour oblongue flanquée de deux grands iwans axiaux (l'un abritant la qibla et le mihrab) et de deux façades latérales percées de petites cellules individuelles (khalwât) étagées sur plusieurs niveaux pour loger quatre cents derviches soufis et voyageurs. La façade sur rue, appareillée en calcaire soigné, se distingue par un porche monumental en retrait doté d'une voûte semi-circulaire à pendentifs de muqarnas, et par un linteau d'entrée remarquable réemployant une dalle de granit pharaonique couverte de hiéroglyphes.\n\nL'histoire du monument est brutalement interrompue dès le mois de mars 1310 lorsque Al-Nâsir Muhammad reprend le pouvoir. Après avoir fait étrangler Baybars II le 15 avril 1310, Al-Nâsir ordonne la fermeture immédiate du sanctuaire, la confiscation des biens fonciers qui le finançaient (awqāf), l'expulsion des soufis et le martelage systématique des bandeaux épigraphiques mentionnant le titre de sultan de Baybars. Les portes de bronze et de fer forgé sont scellées. Le monument demeure à l'abandon comme une coquille vide durant seize années, jusqu'à ce qu'Al-Nâsir Muhammad, apaisé et sollicité par son favori l'émir Qawsun, consente à sa réouverture officielle en 1326. Le corps de Baybars II, initialement enterré à la hâte dans le désert, y est alors discrètement transféré pour reposer sous la coupole de son mausolée.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Cairo%2C_kanqa_di_baybars_al_jashankin%2C_1306-09%2C_cortile.JPG/1920px-Cairo%2C_kanqa_di_baybars_al_jashankin%2C_1306-09%2C_cortile.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
+    "legende": "Khanqah Baybars al-Jashankir",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
+    "id": 3055,
+    "titre": "Exil volontaire du sultan Al-Nâsir Muhammad et usurpation de Baybars II",
+    "date": 1309,
+    "mois": 4,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Au cours de son deuxième règne (1299-1309), le jeune sultan mamelouk baharite Al-Nâsir Muhammad se trouve virtuellement prisonnier sur son propre trône, totalement privé de pouvoir par une oligarchie militaire dominée par deux émirs tout-puissants : Salar (le vice-sultan) et Baybars al-Jashnakir (le grand maître d'hôtel). Constamment humilié et tenu à l'écart des affaires de l'État, le sultan élabore un stratagème pour se soustraire à cette tutelle étouffante.\n\nAu printemps 1309, prétextant vouloir accomplir le grand pèlerinage à La Mecque, Al-Nâsir Muhammad quitte Le Caire avec sa suite. Cependant, une fois arrivé en Transjordanie, il bifurque vers la puissante forteresse d'Al-Karak dont il prend le contrôle, et annonce son abdication. Ce coup de théâtre politique plonge la capitale égyptienne dans l'incertitude.\n\nAu Caire, après le refus de Salar de prendre la couronne, l'émir Baybars al-Jashnakir s'empare du pouvoir et se fait proclamer sultan sous le nom d'Al-Muzaffar Baybars (Baybars II). Cette usurpation est toutefois de courte durée : privé de véritable légitimité et confronté à une grave crise économique, Baybars II suscite rapidement l'hostilité de la population et des gouverneurs syriens, ouvrant la voie au retour triomphal d'Al-Nâsir Muhammad sur le trône dès 1310, marquant le début de son troisième règne, le plus long et le plus fastueux du sultanat mamelouk.",
+    "image": "",
+    "themes": [
+      "revolte",
+      "politique"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 211,
     "titre": "Persécution des coptes par le sultan Mamelouk",
     "date": 1310,
@@ -4144,6 +4215,25 @@
     "lng": 14.27
   },
   {
+    "id": 3047,
+    "titre": "Restauration d'Al-Nâsir Muhammad ben Qalâ'ûn contre l'usurpateur Baybars II",
+    "date": 1310,
+    "mois": 3,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Au début de l'année 1309, le jeune sultan Al-Nâsir Muhammad, âgé de vingt-quatre ans mais régnant pour la seconde fois sous la tutelle étouffante de deux puissants émirs — le grand atabak Salar et le maître d'hôtel princier Baybars al-Jashnakir —, se trouve dans une impasse politique. Dépourvu de contrôle sur le Trésor et surveillé jusque dans ses appartements privés de la Citadelle du Caire, il conçoit une audacieuse manœuvre de contournement : il sollicite l'autorisation de quitter la capitale pour accomplir le pèlerinage à La Mecque. Parvenu en Transjordanie en avril 1309, il bifurque brusquement et s'enferme dans la puissante forteresse d'al-Karak, où il annonce son refus de revenir au Caire tant que les deux régents confisqueront le pouvoir souverain.\n\nAu Caire, Salar et Baybars al-Jashnakir prennent acte de la rupture. Fin avril 1309, Baybars ceint la couronne royale sous le nom d'Al-Muzaffar Baybars II. Cependant, le règne de l'usurpateur est immédiatement frappé d'illégitimité et de malchance : une terrible sécheresse abaisse le niveau du Nil, provoquant une hausse dramatique du prix du blé, des disettes et des émeutes populaires où la foule réclame le retour du fils légitime de Qalâ'ûn.\n\nPendant ce temps, à al-Karak, Al-Nâsir Muhammad active méthodiquement ses réseaux diplomatiques. Bénéficiant du soutien financier de fidèles locaux et de l'alliance des tribus bédouines du désert jordanien, il reçoit le ralliement successif des gouverneurs provinciaux mamelouks du Levant : les vice-rois de Damas (Asandamur), de Tripoli (Qarasunqur), de Hama et de Safed basculent les uns après les autres dans son camp. À la tête d'une armée coalisée syro-bédouine irrésistible, Al-Nâsir se met en marche vers l'Égypte au début de l'année 1310. Paniqué, lâché par son allié Salar et rejeté par la garnison cairote, Baybars II s'enfuit de la Citadelle vers le désert oriental avec ses trésors personnels. Le 5 mars 1310, Al-Nâsir Muhammad fait son entrée triomphale au Caire au milieu des acclamations populaires et réinvestit la Citadelle, inaugurant son troisième et glorieux règne personnel (1310–1341). Baybars al-Jashnakir est rattrapé à Akhmîm, ramené enchaîné devant le sultan et étranglé en sa présence le 15 avril 1310.\nSur le plan institutionnel, le coup d'éclat de 1309–1310 constitue l'acte de naissance de l'absolutisme mamelouk sous la maison de Qalâ'ûn. En brisant la dyarchie prétorienne incarnée par Salar et Baybars II, Al-Nâsir Muhammad démontre la force de la légitimité dynastique héréditaire au sein d'une société militaire pourtant fondée à l'origine sur la sélection méritocratique de l'esclavage armé. Les émirs ont compris que, face aux crises climatiques et aux soubresauts économiques, seule l'aura charismatique du sang de Qalâ'ûn conférait une stabilité acceptable aux yeux des masses urbaines et des troupes du rang.\n\nSur le plan géopolitique, l'épisode met en lumière la centralité stratégique de la Syrie mamelouke comme contre-pouvoir opérationnel face à la capitale égyptienne. C'est l'arbitrage militaire des armées de Damas, d'Alep et des principautés syriennes, adossé aux contingents bédouins de Transjordanie, qui a permis de faire plier la garnison d'élite de la Citadelle du Caire. Conscient de ce risque pour l'avenir, Al-Nâsir Muhammad s'empressera, sitôt réinstallé, de purger les gouverneurs syriens trop puissants pour les remplacer par des créatures dociles et entamera la profonde réforme administrative et cadastrale du Rawk al-Nâsirî.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Khanqah_of_Baybars_al-Jashankir_%281310%29_%28cropped%29_DSCF5884.jpg/960px-Khanqah_of_Baybars_al-Jashankir_%281310%29_%28cropped%29_DSCF5884.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
+    "legende": "Dôme de la Khanqah de Baybars al-Jashankir, construit en 1310, Le Caire, Égypte.",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 230,
     "titre": "Révolte des villes Lombardes contre Henri VII",
     "date": 1311,
@@ -4364,6 +4454,25 @@
     "legende": "Domaine de Matthieu Csák",
     "lat": 48.7412,
     "lng": 19.4529
+  },
+  {
+    "id": 3051,
+    "titre": "Grands travaux hydrauliques d'An-Nâsir Muhammad ben Qalâ'ûn",
+    "date": 1311,
+    "date_fin": 1325,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Les grands travaux hydrauliques d'An-Nâsir Muhammad ben Qalâ'ûn : le redéploiement du canal d'Alexandrie (Khalîj al-Iskandariyya, 1311–1320) et le creusement du Khalîj al-Nâsirî au Caire (1325)\nLes chantiers d'ingénierie fluviale majeurs conduits sous le troisième règne d'An-Nâsir Muhammad s'échelonnent sur deux décennies (calendrier julien standard) :\n\nPremière grande campagne de curage et d'élargissement du canal d'Alexandrie : Printemps 1311 (710–711 H.).\n\nSeconde campagne d'approfondissement du canal d'Alexandrie : 1320 (720 H.), mobilisant des dizaines de milliers de corvéables pour rétablir la navigabilité permanente jusqu'au port méditerranéen.\n\nCreusement et ouverture solennelle du canal nasirien du Caire (al-Khalîj al-Nâsirî) : 1325 (725 H.), inauguré lors de la crue du Nil à la fin de l'été 1325.\nDès sa reprise définitive du pouvoir en 1310, le sultan Al-Nâsir Muhammad ben Qalâ'ûn place la gestion hydraulique au cœur de son programme de redressement impérial. L'Égypte fait alors face à deux défis structurels : à l'échelle du Delta, le déclin alarmant du port d'Alexandrie, asphyxié par l'ensablement progressif de la branche canopique du Nil et de son canal d'alimentation ; à l'échelle de la capitale, la saturation spatiale du Caire historique, enserré entre les murailles fatimides, le Khalîj al-Misrî (le canal de Trajan réaménagé sous l'Islam) et la plaine d'inondation nilotique.   Pour désenclaver Alexandrie, An-Nâsir Muhammad décrète au printemps 1311 un chantier de grande ampleur sur le canal d'Alexandrie (Khalîj al-Iskandariyya). Partant du bras occidental du Nil (branche de Rosette) près de Fuwah, le tracé est recalibré, dragué et curé afin d'acheminer sans interruption l'eau douce indispensable au remplissage des centaines de citernes souterraines alexandrines et de permettre aux convois de barques lourdement chargées de céréales, d'épices et de textiles de circuler entre Le Caire et la Méditerranée sans affronter la périlleuse barre d'embouchure de Rosette. Une seconde tranche de travaux en 1320 parachève ce sauvetage logistique.En 1325, le souverain engage une opération d'urbanisme hydraulique complémentaire dans la métropole cairote : le creusement d'une voie d'eau artificielle entièrement nouvelle, baptisée en son honneur al-Khalîj al-Nâsirî. Prenant sa prise d'eau sur le Nil au sud, au niveau de Fumm al-Khalîj, ce canal court parallèlement à l'ancien canal égyptien (al-Khalîj al-Kabīr ou al-Misrî), mais plus à l'ouest. Il draine les eaux du fleuve à travers les terrains vagues occidentaux jusqu'au nord de la cité, reliant le port fluvial de Boulaq et les plaines maraîchères septentrionales jusqu'au domaine royal et à la khanqah de Siryâqûs.   4. Analyse et contextualisation de l'évènement (Niveau universitaire)Sur le plan géoéconomique et fiscal, la réfection du canal d'Alexandrie constitue la condition matérielle sine qua non du grand commerce mamelouk au XIVᵉ siècle. En garantissant l'accès direct des navires fluviaux aux bassins portuaires alexandrins, l'État abaisse drastiquement les coûts de rupture de charge pour le transit des épices orientales acheminées de la mer Rouge vers les entrepôts des marchands vénitiens et génois. Les taxes douanières prélevées à Alexandrie (dīwān al-thughūr) alimentent directement le Trésor centralisé, confortant les excédents issus de la réforme cadastrale du Rawk al-Nâsirî (1313–1325).Sur le plan de l'urbanisme et de la sociologie de cour, le creusement du Khalîj al-Nâsirî en 1325 redessine la géographie du Caire. En drainant les marécages et en alimentant de nouveaux étangs d'agrément (birkāt, notamment Birkat al-Fil et les pièces d'eau occidentales), le canal ouvre un front d'urbanisation aristocratique. Les grands émirs de l'entourage d'An-Nâsir Muhammad (tels que Qawsun, Bashtak et Tankiz) y font ériger d'immenses palais bordés de jardins arrosés par des roues élévatrices (sāqiyas), déplaçant pour plusieurs siècles le centre de gravité résidentiel de l'élite militaire hors du vieux noyau urbain médiéval.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Khalij_bridge_Description_de_l%27Egypte_150649.jpg/1920px-Khalij_bridge_Description_de_l%27Egypte_150649.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "techniques",
+      "economie"
+    ],
+    "legende": "Illustration d'un pont le long du canal Khalij au Caire, d'après la Description de l'Égypte Légende originale : \"Ponts situés sur le canal du Kaire\"",
+    "lat": 31.1992,
+    "lng": 29.8952
   },
   {
     "id": 236,
@@ -4747,6 +4856,23 @@
     "legende": "Agnolo Gaddi , portrait présumé de son père Taddeo dans les fresques de la chapelle principale de Santa Croce, Florence",
     "lat": 43.7698,
     "lng": 11.2556
+  },
+  {
+    "id": 3049,
+    "titre": "Réforme cadastrale du Rawk al-Nâsirî",
+    "date": 1313,
+    "date_fin": 1315,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "La réforme cadastrale du Rawk al-Nâsirî (1313–1325) : restructuration de l'assiette foncière, centralisation fiscale et domestication de l'oligarchie mamelouke par An-Nâsir Muhammad.\n\nLa mise en œuvre de cette gigantesque opération administrative et géodésique s'étale sur une douzaine d'années, découpée en deux grandes phases géographiques (calendrier julien standard) :\n\nLe Rawk de Syrie (Damas, Alep, Tripoli, Safed) : Engagé à l'automne 1313 et parachevé au cours de l'année 1314.\n\nLe Rawk d'Égypte (Haute et Basse-Égypte) : Décrété au Caire en 1315 (chantiers d'arpentage d'avril à juin 1315, suivi de la réallocation solennelle des titres en octobre 1315).\n\nAjustements cadastraux et consolidation levantine : Révisions et harmonisations foncières jusqu'en 1325.\n\nAu lendemain de sa reprise définitive du pouvoir en 1310, le sultan Al-Nâsir Muhammad ben Qalâ'ûn entreprend de briser la puissance financière autonome des grands émirs qui avaient profité de ses exils successifs pour accaparer les terroirs les plus productifs de la vallée du Nil et du Levant. Pour ce faire, il ordonne un réarpentage généralisé et une réévaluation des revenus agricoles du sultanat, opération désignée sous le terme technique de rawk.\n\nL'opération débute en Syrie en 1313 sous la direction de l'émir Tankiz, gouverneur de Damas, avant d'être lancée en Égypte en 1315. Une commission mixte de scribes et d'ingénieurs arpenteurs, composée de fonctionnaires coptes du bureau fiscal (dīwān) et d'officiers mamelouks d'élite, est dépêchée dans chaque province pour mesurer les parcelles cultivables, évaluer le rendement moyen des terres selon les bassins de crue du Nil et fixer la valeur théorique en monnaie de compte (‘ibra) de chaque village.\n\nLe cœur politique de la réforme réside dans la modification radicale de la clé de répartition des terres, qui obéissait depuis le XIIIᵉ siècle au modèle fixé par le Rawk al-Husâmî (1298) :\n\nSous l'ancien système : Les terres du royaume étaient divisées en 24 parts (qīrāṭ), dont seulement 4 parts étaient réservées à la Couronne royale (khāṣṣ al-sulṭān), tandis que les 20 parts restantes étaient réparties entre les grands émirs de l'oligarchie militaire et les mamelouks du rang (halqa).\n\nSous le Rawk al-Nâsirî : Le sultan s'arroge désormais 10 parts entières sur 24 au profit direct de la cassette royale et de son administration privée (dīwān al-khāṣṣ), ne laissant que 14 parts à redistribuer à l'ensemble du corps d'officiers et aux troupes régulières.\n\nEn octobre 1315, réunis à la Citadelle du Caire, les émirs sont contraints de rendre l'intégralité de leurs anciens diplômes de concession (manshūr). En échange, le sultan leur redistribue de nouveaux actes fonciers fragmentés, divisant les terroirs d'un même officier entre des villages éloignés afin d'empêcher l'émergence de fiefs territoriaux continus et cohérents.\n\nSur le plan institutionnel, le Rawk al-Nâsirî constitue l'acte fondateur de l'absolutisme patrimonial mamelouk. En faisant passer la part foncière de la Couronne de 16,6 % à plus de 41,6 % du territoire égyptien, An-Nâsir Muhammad subordonne matériellement l'oligarchie militaire. Les émirs cessent d'être des seigneurs de guerre quasi indépendants pour devenir des officiers étroitement tributaires des gratifications directes du Palais. Cette centralisation fiscale permet de financer directement la garde royale personnelle du souverain (les mamelouks Nâsiriyya), garantissant une armée loyale capable de dissuader toute tentative de rébellion des casernes.\n\nSur le plan économique et social, la réforme fragmente les liens traditionnels entre le détenteur de l'iqtâ' et la paysannerie indigène (fallāḥīn). En dispersant géographiquement les parcelles d'un même titulaire et en confiant la perception des taxes à des régisseurs d'État, le système réduit l'implication des émirs dans la gestion hydraulique locale. Si cette concentration des rentes au Caire a permis de financer les grands travaux monumentaux et la splendeur curiale du troisième règne d'An-Nâsir, elle a également paupérisé les troupes auxiliaires de la halqa (soldats libres ou vieillissants), dont les concessions foncières furent rognées ou dévaluées, affaiblissant à terme l'infanterie mamelouke face aux futures menaces extérieures.",
+    "image": "",
+    "themes": [
+      "economie"
+    ],
+    "lat": 26.254,
+    "lng": 29.2675
   },
   {
     "id": 251,
@@ -7527,6 +7653,44 @@
     ],
     "lat": 47.4979,
     "lng": 19.0402
+  },
+  {
+    "id": 3050,
+    "titre": "Traité de paix mamelouko-ilkhanide",
+    "date": 1323,
+    "mois": 7,
+    "zones": [
+      "Mesopotamie",
+      "Asie centrale",
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Le traité de paix mamelouko-ilkhanide (1323) : normalisation diplomatique, pacification du front syrien et apogée commercial du troisième règne d'An-Nâsir Muhammad.\nDepuis le sac de Bagdad (1258) et la bataille d'Aïn Djalout (1260), le Proche-Orient était déchiré par un état de guerre endémique entre le Sultanat mamelouk et l'Ilkhanat mongol de Perse. Malgré la conversion officielle des Ilkhans à l'islam sunnite à l'époque de Ghazan (1295–1304), les invasions dévastatrices de la Syrie avaient perduré jusqu'à la victoire mamelouke de Marj al-Saffar en 1303, maintenant un blocus commercial et militaire rigide entre les deux puissances.\n\nLa situation se débloque avec l'avènement à Tabriz du jeune ilkhan Abu Sa'id Bahadur Khan (1316–1335) et l'ascension de son puissant grand émir et tuteur, Chupan (Amīr Chūpān). Confronté à des soulèvements intérieurs et désireux de réintégrer l'Iran mongol dans le grand commerce international, Chupan mandate un riche marchand, Taj al-Din 'Ali Shah, puis un négociateur chevronné, 'Abd al-Rahim al-Bukhari, pour sonder Le Caire. Reçu en grande pompe à la Citadelle en mai–juin 1323, l'émissaire mongol transmet une lettre d'Abu Sa'id proposant la fin des hostilités, la fraternité islamique et la garantie réciproque de la sécurité des frontières.\n\nLe sultan Al-Nâsir Muhammad ben Qalâ'ûn, alors au sommet de son autorité après le succès de son grand cadastre (Rawk al-Nâsirî), saisit l'opportunité. Le traité ratifié à l'été 1323 stipule :\n\nLa cessation définitive des raids militaires le long de la ligne de fracture de l'Euphrate.\n\nL'amnistie et la protection des réfugiés et des transfuges des deux camps.\n\nL'accès sans entrave des caravanes marchandes et la protection mutuelle des marchands mamelouks et persans.\n\nLe libre accès accordé aux pèlerins mongols pour accomplir le hajj vers les Lieux saints du Hedjaz (La Mecque et Médine) sous escorte mamelouke, avec le droit d'arborer l'étendard ilkhanide à l'entrée de la Ville sainte.\n\nCe dégel spectaculaire permet immédiatement à An-Nâsir Muhammad de stabiliser ses autres fronts extérieurs : il conforte son alliance traditionnelle avec le khanat de la Horde d'Or (les Mongols de la Volga, rivaux héréditaires de l'Ilkhanat) scellée par son mariage avec la princesse Tulunbay en 1320 ; il consolide les accords de paix et de protection des sanctuaires chrétiens de Jérusalem avec l'Empire byzantin d'Andronic II ; et il régule par des chartes commerciales avantageuses la présence des marchands de Venise et de Gênes dans les ports d'Alexandrie et de Beyrouth.\nSur le plan de l'histoire des relations internationales, le traité de 1323 consacre la sécularisation relative de la diplomatie islamique au bas Moyen Âge. Tant que les Ilkhans étaient perçus comme des envahisseurs païens ou infidèles, la chancellerie mamelouke légitimait son pouvoir par le devoir absolu de djihad défensif, appuyé par les fatwas d'Ibn Taymiyya (qui déclarait les Mongols musulmans hérétiques en raison de leur fidélité à la Yassa de Gengis Khan). En signant une paix formelle d'égal à égal avec Tabriz, An-Nâsir Muhammad abandonne la posture de guerre sainte permanente pour adopter un pragmatisme fondé sur la souveraineté territoriale et la cohabitation d'empires musulmans rivaux.\n\nSur le plan économique, cette pacification lève les verrous du commerce eurasien. La reprise des flux caravaniers directs entre l'Asie centrale, le golfe Persique, la Mésopotamie et les ports méditerranéens contrôlés par Le Caire et Damas engendre une prospérité financière éclatante. La perception des droits de douane sur les épices de l'océan Indien et les soieries orientales alimente directement la cassette royale mamelouke, procurant les excédents budgétaires nécessaires pour financer l'explosion monumentale du Caire dans les décennies 1320 et 1330.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/In_the_Court_of_Abu_Sa%CA%BFid%2C_folio_from_a_manuscript_of_Nigaristan%2C_Iran%2C_probably_Shiraz%2C_dated_1573-74_%28Abu_Sa%CA%BFid_detail%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "À la Cour d'Abou Said, folio d'un manuscrit du Nigaristan, Iran, probablement Shiraz, daté de 1573-74 (détail d'Abou Said)",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
+    "id": 3052,
+    "titre": "Essor du grand commerce maritime mamelouk et la tutelle sur les Lieux saints",
+    "date": 1323,
+    "date_fin": 1341,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Essor du grand commerce maritime mamelouk et la tutelle sur les Lieux saints (1323–1341) : l'axe mer Rouge–Alexandrie, la manne des marchands Karimi et l'apogée urbain du Caire nasirien.\nCe cycle de prospérité économique et d'affirmation diplomatique s'étend sur les deux dernières décennies du troisième règne d'An-Nâsir Muhammad ben Qalâ'ûn (calendrier julien standard) :\n\nRatification du traité de paix mamelouko-ilkhanide : Juin–juillet 1323.\n\nApogée des flux commerciaux des marchands Karimi : Années 1320–1335.\n\nGrand pèlerinage impérial d'An-Nâsir Muhammad à La Mecque : 1332 (affirmation solennelle du protectorat sur les Lieux saints).\n\nAchèvement des grands chantiers urbains du Caire et de Jérusalem : 1335–1341.\n\nAu lendemain de la paix de 1323 conclue avec l'Ilkhan Abu Sa'id, le sultanat mamelouk s'affranchit de la charge budgétaire écrasante imposée par l'entretien des armées de campagne en Syrie du Nord. Dès lors, le sultan Al-Nâsir Muhammad concentre les efforts de l'État sur la sécurisation, la captation et la taxation du grand commerce eurasiatique. L'Égypte s'impose comme l'unique point de passage maritime entre l'océan Indien et le bassin méditerranéen.\n\nLes marchandises de luxe venues d'Inde et des îles de la Sonde (poivre du Malabar, cannelle, clou de girofle, noix de muscade, soieries orientales) transitent par la mer Rouge sous la surveillance d'une corporation marchande d'élite : les marchands Karimi (al-Kārimiyya). Ces armateurs et négociants musulmans opèrent sous la protection directe des escadres mameloukes qui nettoient les côtes yéménites et le golfe d'Aden de la piraterie. Débarquées dans les ports d'Aydhab puis d'al-Qusayr ou de Tor, les cargaisons remontent la vallée du Nil en barques jusqu'au port fluvial de Boulaq, avant de gagner Alexandrie via le canal restauré (Khalîj al-Iskandariyya). Là, les marchands des républiques maritimes italiennes (Venise et Gênes), munis de sauf-conduits et cantonnés dans leurs fondouks (funduq), achètent ces épices à prix d'or contre des lingots d'argent européen, du bois d'œuvre, du fer et des draps de laine.\n\nL'État mamelouk prélève à chaque étape une fiscalité douanière méthodique : le maks portuaire, les droits de transit fluvial et la taxe de protection maritime, gérés par l'administration des douanes côtières (dīwān al-khums ou dīwān al-thughūr).\n\nCette opulence budgétaire sans précédent permet à An-Nâsir Muhammad d'asseoir son hégémonie politique et symbolique sur l'ensemble de la chrétienté et du monde musulman :\n\nSur les Lieux saints du Hedjaz (La Mecque et Médine) : Le sultan impose son protectorat exclusif face aux prétentions yéménites (Rassoulides) et mongoles. Il fait parvenir chaque année, lors du pèlerinage (hajj), la prestigieuse tente processionnelle du Mahmal escortant la tenture de soie noire brodée d'or (kiswa) destinée à recouvrir la Kaaba.\n\nSur Jérusalem (Al-Quds) : Par l'intermédiaire de son vice-roi de Syrie, l'émir Tankiz, le sultan finance une campagne monumentale sans équivalent depuis les Omeyyades : réaménagement des abords de l'Esplanade des Mosquées (al-Haram al-Sharīf), érection de portiques, de bains publics (hammams) et de madrasas d'élite (dont la prestigieuse Tankiziyya en 1328).\n\nAu Caire : La manne des épices finance la métamorphose de la capitale : construction de la grande Mosquée de la Citadelle (1318–1335), élévation de dizaines de palais princiers le long du nouveau canal (al-Khalîj al-Nâsirî) et multiplication des fondations pieuses dotées de riches rentes perpétuelles (waqf).\nSur le plan de l'économie-monde médiévale, l'Égypte mamelouke des années 1320–1340 réalise une synthèse géopolitique exceptionnelle : elle cumule le monopole douanier sur les routes de la mer Rouge et le rôle de chambre de compensation monétaire entre l'argent métallique produit par les mines de l'Europe centrale et l'or africain acheminé par les caravanes transsahariennes. En canalisant les épices indiennes vers Alexandrie, le sultanat dicte ses conditions tarifaires à l'Europe occidentale tout en maintenant une balance commerciale structurellement excédentaire.\n\nSur le plan de la théorie politique islamique, cette manne financière permet aux Mamelouks de résoudre leur déficit de légitimité originel. Issus de la servitude militaire païenne des steppes kiptchakes ou du Caucase, les sultans de la maison de Qalâ'ûn ne peuvent revendiquer aucune parenté avec le lignage du Prophète. Ils bâtissent dès lors leur souveraineté (salṭana) sur le mécénat et le rôle de Protecteurs des deux nobles sanctuaires (Khādim al-Haramayn al-Sharīfayn). En assurant la sécurité matérielle, l'approvisionnement en blé de l'Égypte et l'embellissement architectural de La Mecque, Médine et Jérusalem, An-Nâsir Muhammad surpasse l'autorité purement symbolique du calife abbasside fantoche résidant au Caire, érigeant l'empire mamelouk en arbitre incontesté de l'orthodoxie sunnite face aux dynasties rivales (Ilkhanides, Mérinides et Hafsides).",
+    "image": "",
+    "themes": [
+      "economie",
+      "religion"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 188,
