@@ -4234,6 +4234,23 @@
     "lng": 31.2357
   },
   {
+    "id": 3056,
+    "titre": "Exécution de l'émir Salar",
+    "date": 1310,
+    "mois": 9,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "1310 — Exécution de l'émir Salar et anéantissement de la vieille garde baharite.\nDe retour triomphalement sur le trône du Caire en mars 1310 pour inaugurer son troisième règne, le sultan Al-Nâsir Muhammad s'emploie à liquider impitoyablement l'oligarchie militaire qui l'avait maintenu en tutelle durant la décennie précédente. Si l'usurpateur Baybars II est rapidement capturé et étranglé, le cas de l'émir Salar, ancien vice-sultan (na'ib al-saltana) et figure tutélaire de l'État mamelouk, est traité avec une duplicité redoutable. Salar, qui s'était soumis à l'approche de l'armée légitimiste, se voit d'abord accorder une amnistie de façade et le gouvernement de la forteresse de Shawbak (Transjordanie).\n\nCependant, résolu à s'affranchir définitivement du passé et à récupérer la colossale fortune amassée par le vieil émir au fil de ses extorsions, Al-Nâsir Muhammad le convoque sous un faux prétexte à la Citadelle du Caire à la fin de l'été 1310. Dès son arrivée, Salar est brutalement arrêté et jeté au cachot. Le sultan le condamne à un supplice implacable : la mort par inanition. Malgré ses supplications, l'émir est privé d'eau et de nourriture jusqu'à son décès à la mi-septembre 1310. Les chroniques rapportent que le sultan lui aurait fait parvenir des plateaux couverts d'or et de perles pour railler sa cupidité déchue.\n\nCette exécution tragique constitue un tournant absolutiste majeur : elle consacre l'anéantissement de la vieille garde baharite. Affranchi de toute tutelle, immensément enrichi par la confiscation des biens de ses rivaux, Al-Nâsir Muhammad peut désormais remodeler l'appareil d'État en s'appuyant sur une nouvelle génération de mamelouks qui lui sont exclusivement fidèles.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 230,
     "titre": "Révolte des villes Lombardes contre Henri VII",
     "date": 1311,
@@ -4750,6 +4767,24 @@
     "legende": "Les provinces gouvernées par les « oligarques » (seigneurs puissants) au début du XIVe siècle",
     "lat": 47.1818,
     "lng": 19.5061
+  },
+  {
+    "id": 3057,
+    "titre": "Défection de l'émir Qara-Sonqur et incursion ilkhanide en Syrie",
+    "date": 1312,
+    "mois": 9,
+    "zones": [
+      "Mesopotamie",
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "1312 — Défection de l'émir Qara-Sonqur et incursion ilkhanide en Syrie.\nLa politique d'épuration implacable menée par le sultan Al-Nâsir Muhammad contre l'ancienne oligarchie mamelouke (marquée par l'exécution de Salar en 1310) provoque un vent de panique parmi les grands dignitaires postés en province. En 1312, le puissant émir Qara-Sonqur, gouverneur en Syrie et figure respectée de la vieille garde, craint d'être la prochaine cible des purges royales. Il prend alors la décision radicale de faire défection et s'enfuit vers la cour de l'Ilkhanat de Perse, l'ennemi juré du sultanat.\n\nAccueilli avec de grands honneurs par le khan Oldjaïtou, Qara-Sonqur persuade le souverain mongol de profiter des supposées dissensions internes mameloukes pour relancer les hostilités au Levant. À l'automne 1312, une vaste armée ilkhanide franchit l'Euphrate et met le siège devant la forteresse stratégique d'Al-Rahba, aux portes de la Syrie.\n\nCependant, l'expédition tourne court. Face à la résistance opiniâtre de la garnison mamelouke, aux difficultés logistiques et aux rigueurs de l'hiver approchant, les troupes d'Oldjaïtou sont contraintes de lever le siège et de battre en retraite avec de lourdes pertes. Cet événement est géopolitiquement crucial : il démontre la solidité du dispositif défensif syrien restauré par Al-Nâsir Muhammad et constitue la toute dernière véritable tentative d'invasion mongole contre les territoires mamelouks, ouvrant la voie à la paix durable de 1322.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 34.6402,
+    "lng": 39.0494
   },
   {
     "id": 245,
