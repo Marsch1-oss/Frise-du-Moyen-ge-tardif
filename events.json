@@ -6861,6 +6861,23 @@
     "lng": 2.1771
   },
   {
+    "id": 3062,
+    "titre": "Répression de l'insurrection bédouine en Haute-Égypte",
+    "date": 1320,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Au tournant des années 1318–1320, les confédérations bédouines de Haute-Égypte (al-Sa‘îd), notamment les Banû Hilâl et les factions locales des Banû Kalb et Qays/Yaman, se soulèvent contre l'administration centrale mamelouke, refusant le versement des redevances fiscales, pillant les domaines céréaliers et coupant les pistes caravanières reliant la vallée du Nil aux rives de la mer Rouge (notamment l'axe reliant Qûs au port d'Aydhâb). En réponse, le sultan al-Nâsir Muhammad ordonne l'envoi d'expéditions militaires punitives composées de contingents de cavalerie mamelouke réguliers (halqa et émirs de haut rang) épaulés par des auxiliaires loyalistes. L'armée mamelouke opère un ratissage méthodique de la Haute-Égypte : les chefs tribaux rebelles sont traqués, plusieurs centaines de combattants bédouins sont défaits et passés au fil de l'épée ou capturés, leurs troupeaux de dromadaires et de chevaux sont confisqués au profit du domaine sultanien, et les places fortes administratives régionales sont réoccupées militairement, réaffirmant l'autorité absolue du Caire.   \nPortée fiscale et agraire : Cette révolte découle directement de l'application du Rawk al-Nâsirî (1315-1316), la grande réforme cadastrale par laquelle al-Nâsir Muhammad a redistribué les concessions territoriales (iqtâ‘), rogné les prérogatives des émirs et soumis les territoires ruraux périphériques à une ponction fiscale centralisée. Les tribus semi-nomades, habituées à percevoir des taxes de protection (khuwwa) et à jouir de pâturages non immatriculés, voient leur autonomie violemment entravée.\n\nEnjeu géostratégique et commercial : La Haute-Égypte constitue l'arrière-pays nourricier de la capitale et le corridor logistique vital pour le pèlerinage mecquois (hajj) ainsi que pour le commerce lucratif des épices transitant par l'océan Indien et la mer Rouge (Kârimî). La maîtrise sécuritaire du couloir Qûs-Aydhâb conditionne la solvabilité de l'État mamelouk.\n\nÉvolution structurelle des équilibres nomades/sédentaires : La répression brise les velléités d'autonomie politique bédouine pour plusieurs décennies, instaurant une subordination durable des cheikhs tribaux intégrés de force comme percepteurs et gardiens des pistes pour le compte du pouvoir central mamelouk, jusqu'aux résurgences de la fin du XIVe siècle (les Banû ‘Umar).\n\nCorpus narratif mamelouk : Les événements sont principalement documentés par les grands chroniqueurs cairotes du XIVe et XVe siècles : Taqî al-Dîn al-Maqrîzî (Kitâb al-Sulûk li-Ma‘rifat Duwal al-Mulûk), Ibn Taghrî Birdî (al-Nujûm al-Zâhira) et Ibn Duqmâq.\n\nBiais idéologique et urbain : Les sources sont rédigées par des lettrés urbains inféodés ou rattachés à l'appareil d'État mamelouk. Le discours historiographique dépeint invariablement les Bédouins sous les traits de « fauteurs de troubles » (mufsidûn), de brigands sauvages menaçant l'ordre islamique et la paix civile. Cette grille de lecture occulte la rationalité économique et la résistance des tribus face à la spoliation foncière et fiscale du sultanat.",
+    "image": "",
+    "themes": [
+      "guerre",
+      "revolte"
+    ],
+    "lat": 26.7625,
+    "lng": 32.091
+  },
+  {
     "id": 328,
     "titre": "La « peur des lépreux »",
     "date": 1321,
@@ -7071,6 +7088,26 @@
     "lat": 45.4385,
     "lng": 10.9924,
     "sources": "https://fr.wikipedia.org/wiki/Divine_Com%C3%A9die"
+  },
+  {
+    "id": 3059,
+    "titre": "Les grands incendies du Caire et la vague d'émeutes anti-chrétiennes",
+    "date": 1321,
+    "mois": 5,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Malgré la prospérité économique et la stabilité politique du troisième règne du sultan Al-Nâsir Muhammad, la société mamelouke reste traversée par de lourdes tensions interconfessionnelles, exacerbées par l'application stricte des lois discriminatoires contre les minorités (dhimmis). Au printemps 1321, une série d'incendies mystérieux, spectaculaires et d'une ampleur inédite ravage plusieurs quartiers stratégiques du Caire, menaçant de réduire en cendres de grandes mosquées, des palais d'émirs et des marchés entiers.\n\nFace à l'incapacité de circonscrire les flammes, la rumeur se propage rapidement au sein de la population musulmane accusant des moines et des membres de la communauté copte d'avoir déclenché ces brasiers de manière coordonnée, à l'aide de chiffons imbibés de naphte, en représailles aux récentes destructions d'églises. Cette accusation déclenche une fureur populaire incontrôlable. De violentes émeutes anti-chrétiennes éclatent dans la capitale avant de s'étendre au reste du pays. Des foules fanatisées attaquent, pillent et détruisent méthodiquement près d'une soixantaine d'églises et de monastères à travers toute l'Égypte en l'espace de quelques semaines.\n\nDébordé par cette explosion de violence urbaine qui s'apparente à une sédition, le sultan Al-Nâsir Muhammad peine à rétablir l'ordre. Pour apaiser la rue, l'État fait supplicier et exécuter plusieurs chrétiens accusés d'incendie volontaire, mais le souverain ordonne également la pendaison de nombreux émeutiers musulmans coupables de pillages afin de restaurer l'autorité régalienne. Cette crise de 1321 marque un point de non-retour dans le déclassement de la minorité copte et provoque un retentissement international : c'est en réponse directe à ces destructions massives que le puissant roi chrétien d'Éthiopie, Amda Seyon Iᵉʳ, adressera en 1325 un ultimatum menaçant au sultanat d'Égypte.",
+    "image": "",
+    "themes": [
+      "catastrophe",
+      "societe",
+      "politique",
+      "religion"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 344,
@@ -7348,6 +7385,23 @@
     "lat": 54.2662,
     "lng": -1.157,
     "serie": "Guerres écossaises"
+  },
+  {
+    "id": 3061,
+    "titre": "Campagne mamelouke contre la Petite Arménie et prise du port d'Ayas",
+    "date": 1322,
+    "zones": [
+      "Byzance",
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Au début des années 1320, le royaume chrétien de Petite Arménie (Cilicie) constitue une double menace pour le Sultanat mamelouk. Sur le plan diplomatique et militaire, il demeure la principale tête de pont et le plus fidèle allié régional de l'Ilkhanat mongol de Perse. Sur le plan économique, son grand port d'Ayas (Lajazzo), situé sur le golfe d'Alexandrette, s'affirme comme le grand débouché méditerranéen de la route de la soie terrestre, attirant les marchands génois et vénitiens, et concurrençant directement le monopole maritime égyptien.\n\nPour liquider cette concurrence et isoler définitivement les Mongols, le sultan Al-Nâsir Muhammad ordonne une vaste offensive. En 1322, les troupes mameloukes franchissent le Taurus, envahissent la plaine cilicienne et s'emparent de la riche cité marchande d'Ayas. La ville est mise à sac et ses puissantes fortifications terrestres et maritimes sont méthodiquement démantelées afin de la rendre indéfendable.\n\nCette campagne punitive est un coup de maître stratégique. En ruinant les infrastructures d'Ayas, l'Égypte force les flottes européennes à se détourner vers Alexandrie, sécurisant ainsi son monopole absolu sur le commerce transcontinental des épices. Par ailleurs, l'incapacité criante des Mongols à secourir leur plus précieux allié arménien démontre l'incontestable suprématie mamelouke au Levant, un rapport de force qui acculera directement l'Ilkhanat à la table des négociations pour signer le traité de paix d'Alep l'année suivante (1323).",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 36.7676,
+    "lng": 35.7916
   },
   {
     "id": 331,
@@ -8281,6 +8335,22 @@
     "lng": 19.0402
   },
   {
+    "id": 3064,
+    "titre": "Extension du cadastre impérial (Rawk al-Nâsirî) à l'ensemble de la Syrie mamelouke",
+    "date": 1325,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Après le succès éclatant de la refonte foncière menée en Égypte entre 1313 et 1315 (le premier volet du Rawk al-Nâsirî), le sultan Al-Nâsir Muhammad décide d'étendre cette réforme structurelle monumentale aux provinces syriennes de son empire. En 1325, l'administration cairote lance un vaste arpentage de toutes les terres arables de Syrie afin de réévaluer minutieusement leur rendement fiscal et de procéder à une redistribution totale des concessions agricoles, les iqtâ'.\n\nL'objectif de cette entreprise gigantesque n'est pas seulement d'optimiser les rendements agricoles, il est avant tout profondément politique. Il s'agit pour le souverain de briser définitivement l'indépendance financière des puissants gouverneurs et émirs postés au Levant, traditionnellement enclins à l'autonomie, à la rébellion ou à la défection (à l'image de Qara-Sonqur en 1312). En s'attribuant les domaines les plus riches pour le Trésor royal (le Khass) et en morcelant les fiefs restants pour affaiblir les officiers, le sultan rend l'ensemble de la noblesse d'épée financièrement dépendante de sa seule bienveillance.\n\nL'achèvement de ce cadastre syrien en 1325 marque le point d'orgue de la politique de centralisation d'Al-Nâsir Muhammad. Il parachève la domestication absolue de l'oligarchie militaire sur l'intégralité des territoires du sultanat mamelouk. Dépouillés de leurs immenses domaines, les émirs deviennent les rouages disciplinés d'un État autocratique devenu immensément riche et parfaitement centralisé.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 34.6247,
+    "lng": 36.6094
+  },
+  {
     "id": 149,
     "titre": "Frédéric le Bel",
     "date": 1326,
@@ -8542,6 +8612,23 @@
     "lng": -2.7152
   },
   {
+    "id": 3063,
+    "titre": "Inauguration et réaménagement de la mosquée royale d'al-Nâsir Muhammad",
+    "date": 1326,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Le sultan bahrite al-Nâsir Muhammad ibn Qalâwûn inaugure en grande pompe les aménagements de la grande mosquée congrégationnelle royale érigée sur l'enceinte sud de la Citadelle de la Montagne (Qal‘at al-Jabal), en remplacement de l'ancienne mosquée fatimide/ayyoubide de la citadelle. Le souverain y accomplit la prière officielle du vendredi entouré de ses grands émirs, des oulémas et du calife abbasside fantoche résidant au Caire. L'édifice se distingue par son plan hypostyle à cour centrale, ses colonnes antiques de granit rouge remployées d'Assouan et d'Eshmounein, sa vaste coupole de bois au-dessus du mihrab et ses deux minarets remarquables dont les sommets bulbeux sont recouverts de carreaux de céramique faïencée verte et bleue à motifs floraux, attribuables à des artisans tabrizis.\nCentralité palatiale et mise en scène du pouvoir : Située au cœur de la Citadelle, attenante au Grand Palais de justice (Qasr al-Ablaq) et à l'Iwan al-Kabir, la mosquée n'est pas seulement un lieu de culte : elle constitue la chapelle royale d'État où le sultan manifeste la théâtralisation de son autorité suprême lors des cérémonies publiques hebdomadaires.   Symbolisme dynastique et diplomatique : Ce chantier incarne l'apogée du troisième règne d'al-Nâsir Muhammad (1310–1341), période d'intense prospérité financière permise par la paix conclue avec les Ilkhanides mongols (traité de 1323) et la sécurisation des flux commerciaux d'Alexandrie et de la mer Rouge. L'intégration de céramiques émaillées d'inspiration persane reflète directement l'ouverture des réseaux artisanaux et diplomatiques avec l'Iran mongol converti à l'islam.   Légitimation religieuse : En édifiant une mosquée de cette envergure au sein même du siège militaire, le sultan affirme son statut de champion de l'orthodoxie sunnite et protecteur des institutions religieuses face aux prétentions extérieures.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Mosque_of_Sultan_al-Nasir_Muhammad_in_the_Citadel%2C_Cairo%2C_1318-35_%288%29.jpg/1280px-Mosque_of_Sultan_al-Nasir_Muhammad_in_the_Citadel%2C_Cairo%2C_1318-35_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
+    "legende": "Mosquée du sultan al-Nasir Muhammad dans la Citadelle, au Caire",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 144,
     "titre": "Edouard III",
     "date": 1327,
@@ -8740,6 +8827,23 @@
     "legende": "Buste de Laure de Noves (Musée Pétrarque de Fontaine-de-Vaucluse )",
     "lat": 43.9492,
     "lng": 4.8059
+  },
+  {
+    "id": 3060,
+    "titre": "Fuite de l'émir mongol Timourtash au Caire et son exécution par le sultan :",
+    "date": 1327,
+    "mois": 12,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "En 1327, le khan de Perse Abu Saïd décide de s'affranchir brutalement de la tutelle écrasante de la famille des Tchoupanides, qui exerçait la réalité du pouvoir sur l'Ilkhanat. Visé par ces purges sanglantes, l'émir Timourtash, fils du grand régent Tchoupan et gouverneur mongol d'Anatolie, choisit de fuir vers le sud pour demander l'asile politique à l'ancien grand rival de son empire : le sultanat mamelouk.\n\nArrivé en Égypte à la fin de l'année 1327, Timourtash est d'abord accueilli avec de grands honneurs au Caire par le sultan Al-Nâsir Muhammad. Le dignitaire mongol espère obtenir des troupes mameloukes pour reconquérir ses territoires. Cependant, la cour ilkhanide d'Abu Saïd ne tarde pas à réagir et exige l'extradition ou la mise à mort du transfuge, laissant entendre qu'un refus remettrait en cause le traité de paix d'Alep (1323) qui avait mis fin à plus d'un demi-siècle de guerres.\n\nPlacé devant un dilemme diplomatique, Al-Nâsir Muhammad choisit le pragmatisme absolu de la raison d'État. Refusant de compromettre la précieuse Pax Mamelucana pour les ambitions d'un réfugié encombrant, le sultan ordonne l'exécution de Timourtash en août 1328. Sa tête est embaumée et expédiée à la cour d'Abu Saïd à Tabriz. Cet acte d'une grande froideur politique rassure définitivement le khan mongol sur les intentions pacifiques du Caire et cimente l'entente cordiale entre les deux superpuissances du Proche-Orient.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 140,
