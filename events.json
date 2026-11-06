@@ -4910,6 +4910,24 @@
     "lng": 29.2675
   },
   {
+    "id": 3058,
+    "titre": "Siège de la forteresse d'Al-Rahba par l'armée de l'Ilkhanat de Perse",
+    "date": 1313,
+    "mois": 1,
+    "zones": [
+      "Mesopotamie",
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Au tournant des années 1310, la politique d'épuration implacable menée par le sultan Al-Nâsir Muhammad pour asseoir son pouvoir absolu au Caire pousse plusieurs grands dignitaires de l'ancienne oligarchie mamelouke à la fuite. Le plus illustre d'entre eux, l'émir de Damas Qara-Sonqur, fait défection et trouve refuge à la cour de l'Ilkhanat de Perse. Désireux de se venger, il persuade le souverain mongol Oldjaïtou que les dissensions internes au Sultanat mamelouk rendent la Syrie vulnérable à une attaque surprise.\n\nÀ la fin de l'année 1312, une vaste armée ilkhanide franchit l'Euphrate et vient mettre le siège devant la citadelle d'Al-Rahba (Mayadine), un verrou stratégique défendant la frontière orientale de la Syrie mamelouke. Les troupes mongoles, équipées de puissantes machines de siège, bombardent intensément la forteresse. Cependant, la garnison mamelouke oppose une résistance acharnée. L'enlisement des opérations, combiné à un hiver particulièrement rigoureux et à une grave pénurie de fourrage pour la cavalerie mongole, brise la logistique de l'assaillant.\n\nDès le mois de janvier 1313, avant même l'arrivée de l'armée de secours dépêchée depuis Le Caire et Damas, Oldjaïtou est contraint de lever le siège et d'ordonner une retraite désastreuse vers Bagdad. Cet événement revêt une importance géopolitique capitale : il s'agit de l'ultime tentative d'invasion mongole contre le Levant. Cet échec cuisant valide la robustesse du dispositif militaire d'Al-Nâsir Muhammad et contraint définitivement l'Ilkhanat à abandonner ses ambitions méditerranéennes, pavant la voie au traité de paix historique d'Alep en 1322.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 34.8257,
+    "lng": 36.4007
+  },
+  {
     "id": 251,
     "titre": "Maître Eckhart à Strasbourg",
     "date": 1314,
