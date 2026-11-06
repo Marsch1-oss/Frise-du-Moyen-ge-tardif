@@ -4910,24 +4910,6 @@
     "lng": 29.2675
   },
   {
-    "id": 3058,
-    "titre": "Siège de la forteresse d'Al-Rahba par l'armée de l'Ilkhanat de Perse",
-    "date": 1313,
-    "mois": 1,
-    "zones": [
-      "Mesopotamie",
-      "Egypte"
-    ],
-    "type": 3,
-    "description": "Au tournant des années 1310, la politique d'épuration implacable menée par le sultan Al-Nâsir Muhammad pour asseoir son pouvoir absolu au Caire pousse plusieurs grands dignitaires de l'ancienne oligarchie mamelouke à la fuite. Le plus illustre d'entre eux, l'émir de Damas Qara-Sonqur, fait défection et trouve refuge à la cour de l'Ilkhanat de Perse. Désireux de se venger, il persuade le souverain mongol Oldjaïtou que les dissensions internes au Sultanat mamelouk rendent la Syrie vulnérable à une attaque surprise.\n\nÀ la fin de l'année 1312, une vaste armée ilkhanide franchit l'Euphrate et vient mettre le siège devant la citadelle d'Al-Rahba (Mayadine), un verrou stratégique défendant la frontière orientale de la Syrie mamelouke. Les troupes mongoles, équipées de puissantes machines de siège, bombardent intensément la forteresse. Cependant, la garnison mamelouke oppose une résistance acharnée. L'enlisement des opérations, combiné à un hiver particulièrement rigoureux et à une grave pénurie de fourrage pour la cavalerie mongole, brise la logistique de l'assaillant.\n\nDès le mois de janvier 1313, avant même l'arrivée de l'armée de secours dépêchée depuis Le Caire et Damas, Oldjaïtou est contraint de lever le siège et d'ordonner une retraite désastreuse vers Bagdad. Cet événement revêt une importance géopolitique capitale : il s'agit de l'ultime tentative d'invasion mongole contre le Levant. Cet échec cuisant valide la robustesse du dispositif militaire d'Al-Nâsir Muhammad et contraint définitivement l'Ilkhanat à abandonner ses ambitions méditerranéennes, pavant la voie au traité de paix historique d'Alep en 1322.",
-    "image": "",
-    "themes": [
-      "guerre"
-    ],
-    "lat": 34.8257,
-    "lng": 36.4007
-  },
-  {
     "id": 251,
     "titre": "Maître Eckhart à Strasbourg",
     "date": 1314,
@@ -6032,6 +6014,22 @@
     ],
     "lat": 43.7864,
     "lng": 19.2941
+  },
+  {
+    "id": 3058,
+    "titre": "Réception de la première ambassade de paix de l'Ilkhanat mongol au Caire",
+    "date": 1317,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Après l'échec cuisant du siège d'Al-Rahba (1312) et la mort du khan Oldjaïtou en 1316, l'Ilkhanat de Perse traverse une phase de transition politique majeure. Le nouveau souverain mongol, le jeune Abu Saïd, opère sous l'étroite tutelle de son grand émir et régent, Tchoupan. Prenant acte de l'épuisement financier de leur empire et de l'impossibilité militaire de percer les défenses syriennes, les nouveaux maîtres de la Perse décident de rompre avec plus d'un demi-siècle de guerre d'usure contre le Sultanat mamelouk.\n\nEn 1317, la cour ilkhanide prend l'initiative diplomatique inédite de dépêcher une ambassade officielle au Caire. Les émissaires mongols ont pour mission de sonder les intentions du sultan Al-Nâsir Muhammad et de lui proposer formellement une cessation des hostilités. Fort de sa supériorité stratégique et de la consolidation de son pouvoir autocratique, le souverain mamelouk accueille cette délégation avec faste, actant la reconnaissance par les Mongols de l'invincibilité mamelouke au Levant.\n\nCette réception marque un basculement géopolitique décisif au Proche-Orient. Elle met fin à l'idéologie de la conquête mongole universelle en direction de la Méditerranée et amorce un processus de normalisation diplomatique. Les échanges d'ambassades qui s'ensuivent aboutiront, quelques années plus tard, à la signature du traité d'Alep (1322), scellant la paix définitive entre les deux superpuissances régionales et ouvrant la voie à une ère d'échanges commerciaux et culturels florissants.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 302,
