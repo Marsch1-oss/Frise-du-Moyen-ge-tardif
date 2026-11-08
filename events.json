@@ -19833,6 +19833,22 @@
     "lng": -5.8045
   },
   {
+    "id": 3084,
+    "titre": "Début de la construction du complexe monumental du sultan Hasan au Caire",
+    "date": 1356,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Au milieu des années 1350, alors qu'il est encore sous la tutelle de la puissante junte militaire dirigée par l'émir Taz, le sultan An-Nâsir al-Hasan initie un projet d'une envergure colossale : la construction d'une immense mosquée-madrasa au pied de la Citadelle du Caire, centre du pouvoir mamelouk. Débuté en 1356, ce chantier pharaonique va s'étaler sur plusieurs années pour donner naissance au plus vaste et au plus coûteux complexe religieux de toute l'histoire de l'Égypte islamique.\n\nLe financement de ce chef-d'œuvre absolu de l'architecture mamelouke repose sur une réalité macabre : l'État réinvestit les fortunes vertigineuses (terres, biens, or) récupérées par le Trésor public et l'administration des fondations pieuses (awqaf) à la suite du décès sans héritiers de milliers de dignitaires et de marchands terrassés par la Peste noire de 1347-1349. Gorgé de cet argent de la mort, le sultan bâtit un édifice dont le gigantisme (avec son immense cour centrale et ses quatre iwan monumentaux abritant les quatre écoles de droit sunnite) défie l'imagination de ses contemporains.\n\nAu-delà de l'exploit architectural, cette fondation répond à un impératif éminemment politique. Par ses proportions écrasantes et sa proximité immédiate avec la Citadelle, la mosquée du sultan Hasan a pour but de rabaisser visuellement les palais ostentatoires que les grands émirs de l'oligarchie avaient fait ériger dans la capitale au début de la décennie. Elle matérialise dans la pierre la majesté inaltérable de la fonction sultanienne et prépare psychologiquement le terrain à la reprise en main autocratique du pouvoir que le souverain orchestrera deux ans plus tard, en 1358.",
+    "image": "",
+    "themes": [
+      "art"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 286,
     "titre": "Pierre Ier de Portugal, dit « le Cruel »",
     "date": 1357,
@@ -20812,6 +20828,22 @@
     "lng": 46.2979
   },
   {
+    "id": 3082,
+    "titre": "Coup de filet du sultan al-Hasan et arrestation de l'émir Taz",
+    "date": 1358,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Depuis sa restauration sous condition en 1354, le jeune sultan An-Nâsir al-Hasan avait feint de se désintéresser totalement des affaires publiques, se réfugiant dans une vie curiale dispendieuse pour laisser la réalité du pouvoir aux mains de la puissante junte militaire dirigée par l'émir Taz. Cette apparente apathie n'était en vérité qu'une longue stratégie de dissimulation destinée à endormir la méfiance de ses tuteurs, tandis qu'il constituait secrètement son propre réseau de loyauté parmi les rangs intermédiaires de l'armée.\n\nEn 1358, estimant ses soutiens suffisamment solides, le souverain passe brusquement à l'offensive. Lors d'une opération minutieusement préparée au cœur de la Citadelle du Caire, al-Hasan orchestre un coup de filet magistral : il fait arrêter par surprise le tout-puissant émir Taz ainsi que ses principaux lieutenants, les neutralisant sans laisser le temps à leurs armées personnelles de réagir. Les prisonniers sont exilés ou jetés dans les geôles d'Alexandrie, et leurs immenses fortunes, accumulées pendant les années de peste, sont confisquées par le Trésor.\n\nCet événement marque un tournant institutionnel majeur de la décennie. Il met un coup d'arrêt brutal à l'hégémonie oligarchique qui confisquait l'État depuis 1351. En reprenant en main les rênes de l'empire et les finances publiques, le sultan al-Hasan restaure brièvement le pouvoir autocratique sultanien et consolide le financement de son chantier titanesque (le grand complexe de la mosquée-madrasa), avant qu'une nouvelle conspiration d'émirs ne finisse par l'assassiner trois ans plus tard, en 1361.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 996,
     "titre": "Les Zaïnanides  reprennent le royaume de Tlemcen",
     "date": 1359,
@@ -21281,6 +21313,22 @@
     "legende": "Chapelle des espagnols Andrea di Bonaiuto da Firenze : Innocent VI, entouré du cardinal Albornoz et de l'empereur Charles IV, à ses pieds l'archevêque de Pise Simone Saltarelli sermonne Michele da Cesena et Guillaume d'Ockham",
     "lat": 44.49,
     "lng": 11.34
+  },
+  {
+    "id": 3083,
+    "titre": "Conquête mamelouke de la plaine cilicienne (chute d'Adana et Tarse)",
+    "date": 1359,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Dans le prolongement des offensives de la décennie précédente (chute du port d'Ayas en 1347) et des expéditions initiées en 1354, le sultanat mamelouk décide de porter l'estocade finale au royaume chrétien de Petite Arménie. En 1359, le sultan An-Nâsir al-Hasan, qui a récemment repris les rênes du pouvoir autocratique en éliminant l'émir Taz (1358), cherche à consolider son prestige intérieur par une grande victoire extérieure et à sécuriser définitivement la frontière septentrionale de l'empire syrien.\n\nSur ordre du Caire, les armées mameloukes stationnées au Levant franchissent massivement la frontière. Elles déferlent sur la riche plaine cilicienne et s'emparent méthodiquement des trois plus grandes cités de la région : Adana, Tarse et Massisa (Mopsueste). Les défenses arméniennes s'effondrent face à cette offensive d'envergure.\n\nLes conséquences de cette campagne sont décisives. Le royaume de Petite Arménie se retrouve définitivement amputé de ses terres agricoles et de ses accès maritimes, réduit à un simple réduit montagneux autour de sa capitale, Sis (qui tombera à son tour en 1375). La vaste plaine cilicienne est formellement annexée au Sultanat mamelouk et confiée à des tribus turcomanes vassales pour en assurer la défense. Cette victoire éclatante repousse la frontière de l'empire jusqu'aux contreforts des monts Taurus et démontre de manière spectaculaire la redoutable résilience de la machine de guerre mamelouke, capable de vastes conquêtes malgré le déclin démographique causé par la Peste noire.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 36.9864,
+    "lng": 35.3253
   },
   {
     "id": 1283,
@@ -24271,6 +24319,23 @@
     "serie": "Guerre sardo-catalane"
   },
   {
+    "id": 3086,
+    "titre": "Rétorsion économique et arrestation des marchands occidentaux en Égypte",
+    "date": 1365,
+    "date_fin": 1369,
+    "zones": [
+      "Italie",
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "Au lendemain du sac dévastateur d'Alexandrie par la flotte du roi de Chypre en octobre 1365, le sultanat mamelouk se trouve confronté à une impasse stratégique. L'Égypte, dont l'armée est fondamentalement basée sur la cavalerie lourde, ne possède pas de flotte de guerre capable de mener une expédition punitive contre l'île chypriote. Pour venger l'affront et compenser les pertes colossales subies par sa métropole portuaire, le gouvernement cairote (alors sous la houlette de l'émir Yalbugha) choisit l'arme des représailles asymétriques : la rétorsion économique.\n\nImmédiatement après le retrait des croisés, les autorités mameloukes ordonnent l'arrestation de tous les marchands occidentaux (Francs) résidant en Égypte et au Levant, qu'ils soient impliqués ou non dans la croisade chypriote. Les Vénitiens, Génois et Catalans sont jetés en prison, et leurs navires, capitaux et précieuses cargaisons d'épices sont purement et simplement confisqués par le Trésor sultanien.\n\nCe coup de filet paralyse brutalement le grand commerce méditerranéen. L'embargo étouffe l'économie des républiques maritimes italiennes, qui dépendaient vitalement du monopole égyptien sur la route des Indes. Prises en otage, Venise et Gênes se retournent alors contre Chypre et font pression sur la papauté pour forcer la fin des hostilités. Cette crise commerciale majeure perdure plusieurs années, jusqu'à la signature de nouveaux traités de paix et de commerce à l'aube des années 1370, démontrant de manière éclatante que si l'Égypte mamelouke est vulnérable sur mer, elle demeure la maîtresse absolue de l'économie mondiale.",
+    "image": "",
+    "themes": [
+      "economie",
+      "politique"
+    ]
+  },
+  {
     "id": 817,
     "titre": "Acamapitzin  1er roi des Aztèques",
     "date": 1366,
@@ -24541,6 +24606,23 @@
     ],
     "lat": 42.8804,
     "lng": -8.5459
+  },
+  {
+    "id": 3085,
+    "titre": "Mutinerie mamelouke et assassinat du grand émir Yalbugha al-Umari",
+    "date": 1366,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Depuis son coup d'État sanglant contre le sultan al-Hasan en 1361, le puissant émir Yalbugha al-Umari gouvernait l'Égypte en dictateur implacable, se dissimulant derrière de jeunes sultans fantoches. Pour asseoir son autorité face aux autres factions, il avait bâti une colossale armée personnelle (les Yalbughawiyya), recrutant massivement de nouveaux esclaves-soldats d'origine circassienne. Cependant, Yalbugha soumettait ses recrues à une discipline d'une brutalité extrême, multipliant les châtiments corporels, les exils et les exécutions arbitraires.\n\nEn 1366, cette cruauté se retourne fatalement contre lui. Exaspérés par la tyrannie de leur maître et redoutant de nouvelles purges, les propres mamelouks de Yalbugha se mutinent. La rébellion éclate au grand jour dans les rues du Caire. L'émir perd rapidement le contrôle de la capitale, ses forces se dispersent, et il est finalement capturé, lynché puis décapité par les soldats qu'il avait lui-même formés.\n\nL'assassinat de l'omnipotent dictateur provoque un séisme politique inespéré. Contre toute attente, le jeune sultan Al-Achraf Chabân, qu'on pensait n'être qu'une marionnette effacée, saisit cette occasion historique. Habilement, il rallie à la Couronne une partie des mutins et prend véritablement les rênes de l'empire mamelouk. Cet événement met un terme à l'hégémonie oligarchique de la décennie et restaure temporairement l'absolutisme du trône, tout en laissant subsister une faction militaire puissante (les Yalbughawiyya) qui finira par renverser la dynastie baharite moins de vingt ans plus tard.",
+    "image": "",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 1373,
@@ -26593,6 +26675,24 @@
     "lng": 4.8059
   },
   {
+    "id": 3087,
+    "titre": "Traité d'Alexandrie , paix générale avec les puissances chrétiennes",
+    "date": 1370,
+    "mois": 9,
+    "zones": [
+      "Italie",
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Le traité d'Alexandrie et la paix générale avec les puissances chrétiennes (1370) : fin de la guerre chypriote, levée de l'embargo maritime et rétablissement du commerce levantin au Caire.\nAu lendemain du sac dévastateur d'Alexandrie mené en octobre 1365 par le roi Pierre Iᵉʳ de Lusignan, un état de belligérance larvée et d'embargo maritime asphyxiait les échanges commerciaux en Méditerranée orientale. Les raids et contre-attaques navales entrepris entre 1366 et 1369 sur les côtes syro-égyptiennes (Tripoli, Lattaquié, Beyrouth) n'avaient débouché sur aucun gain territorial durable pour la couronne chypriote, tandis que la papauté d'Urbain V maintenait l'interdiction faite aux marchands chrétiens de commercer avec les ports du sultanat mamelouk.L'assassinat de Pierre Iᵉʳ en janvier 1369 à Nicosie bouleverse l'équilibre géopolitique. La régence établie au nom du jeune Pierre II de Lusignan, dominée par Jean de Lusignan (prince d'Antioche) et la reine-mère Éléonore d'Aragon, cherche une porte de sortie honorable face à un conflit ruineux. Parallèlement, les républiques maritimes de Venise et de Gênes, sévèrement pénalisées par l'interruption des cargaisons d'épices, de soieries et de sucre mamelouks, intensifient leur médiation auprès du Caire et de Nicosie pour forcer la reprise des affaires.À l'été 1370, une conférence diplomatique plénipotentiaire s'ouvre à Alexandrie réunissant les émissaires du roi de Chypre (menés par le sénéchal Jean de Morpho), les consuls vénitiens et génois, ainsi que les plénipotentiaires du sultan mamelouk Al-Ashraf Zayn al-Dīn Sha'bān et de son puissant grand atabak Yalbogha al-Khassaki (puis de ses successeurs émirs). Le traité, scellé à la fin septembre 1370, stipule :   La cessation définitive des hostilités et des actes de course corsaire entre Chypre et l'ensemble des possessions maritimes mameloukes.   La libération réciproque des prisonniers de guerre et des esclaves civils capturés depuis 1365.La réouverture intégrale des ports égyptiens et syriens (Alexandrie, Damiette, Beyrouth, Tripoli) aux marchands de Chypre, de Venise, de Gênes et de la couronne d'Aragon.La restitution et la confirmation des privilèges capitulaires traditionnels dans les fondouks (fanādiq), assorties de garanties de protection personnelle pour les consuls et les marchands latins.L'abandon tacite de toute indemnité de guerre imposée à l'Égypte pour le sac de 1365, consacrant le statu quo territorial et la sécurité des convois caravaniers et maritimes.\nSur le plan de l'histoire économique globale, la paix de 1370 démontre l'échec structurel des stratégies occidentales d'asphyxie économique contre l'Islam méditerranéen. Les décrets pontificaux de blocus et l'esprit de croisade tardif incarné par Pierre de Lusignan se sont heurtés à la réalité incontournable des intérêts mercantiles : les économies de Venise et de Gênes ne pouvaient pas survivre sans les débouchés douaniers et les réexportations des épices venues de la mer Rouge. Dès que la pulsion martiale des Lusignan s'est éteinte avec la mort du roi, les républiques italiennes ont imposé le retour à la diplomatie contractuelle.   Sur le plan de la diplomatie mamelouke, l'issue de 1370 consacre la victoire de ce que les historiens qualifient de diplomatie asymétrique. Dépourvu d'une marine de guerre de haute mer capable de rivaliser avec les galères occidentales ou de reconquérir Chypre, le sultanat a utilisé son arme maîtresse : l'interdiction d'accès à ses marchés intérieurs. En fermant ses ports et en emprisonnant temporairement les facteurs italiens après le raid de 1365, Le Caire a transféré le coût économique de la guerre sur les cités marchandes d'Europe. Ce sont les oligarchies marchandes italiennes qui ont contraint Chypre à déposer les armes, restaurant la suprématie politique et fiscale de l'État mamelouk sans qu'il ait eu à remporter une seule bataille navale.\n\nLe point de vue des chroniqueurs mamelouks : Al-Maqrizi (Kitāb al-Sulūk) et Ibn Taghribirdi (Al-Nujūm al-zāhira) enregistrent l'arrivée des délégations franques au Caire et à Alexandrie avec une tonalité triomphale. Ils insistent sur l'humilité des ambassadeurs chrétiens venant supplier le sultan de rétablir les relations commerciales et sur la satisfaction populaire provoquée par la libération des captifs musulmans détenus à Famagouste.\n\nLes chroniques chypriotes contemporaines : La chronique de Léonce Machairas (Récit d'une ancienne chronique de la douce terre de Chypre) apporte un éclairage interne indispensable sur les tractations de Nicosie. Machairas montre l'épuisement financier du royaume des Lusignan, les divisions féroces entre la haute noblesse franque et l'amertume des chevaliers croisés, contraints de capituler devant les exigences des marchands italiens qui refusaient de sacrifier leurs comptoirs alexandrins au nom d'un idéal de croisade devenu obsolète.",
+    "image": "",
+    "themes": [
+      "diplomatie"
+    ],
+    "lat": 31.1992,
+    "lng": 29.8952
+  },
+  {
     "id": 452,
     "titre": "Robert II (roi d'Écosse)",
     "date": 1371,
@@ -28572,6 +28672,27 @@
     "serie": "Guerre sardo-catalane"
   },
   {
+    "id": 3088,
+    "titre": "Crise frumentaire et la résurgence épidémique",
+    "date": 1374,
+    "mois": 7,
+    "date_fin": 1375,
+    "mois_fin": 7,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "La crise frumentaire et la résurgence épidémique en Égypte (1374–1375) : déficit de la crue du Nil, spéculation céréalière et fragilisation structurelle du règne d'Al-Ashraf Sha'bân.\nDurant l'été 1374, la crue annuelle du Nil enregistre un étiage exceptionnellement bas sur la colonne graduée du nilomètre de l'île de Roda (al-Miqyās). Les eaux n'atteignant pas la cote minimale de crue plénière (wafā' al-Nīl), indispensable à l'inondation naturelle des bassins du Delta et de la Haute-Égypte, de vastes étendues de terroirs agricoles demeurent totalement sèches (sharāqī). La récolte frumentaire de l'hiver 1374–1375 est catastrophique : le rendement des céréales s'effondre, provoquant une pénurie immédiate sur les marchés urbains.\n\nAu Caire, le prix de l'ardebb de blé décuple en l'espace de quelques semaines, déclenchant des émeutes de la faim devant les boulangeries et les silos à grains. Les couches populaires, réduites à consommer des herbes, des carcasses d'animaux et des déchets, subissent une dénutrition aiguë.\n\nProfitant de la pénurie, les grands émirs mamelouks et certains hauts fonctionnaires du Trésor se livrent à une spéculation effrénée (iḥtikār), retenant leurs stocks de blé dans les greniers de l'armée pour faire monter les cours. Pour enrayer la crise, le sultan Al-Ashraf Zayn al-Dīn Sha'bān impose des distributions d'urgence, ordonne l'ouverture forcée des réserves privées et mandate le préfet de police (wālī) et le censeur des marchés (muḥtasib) pour tarifer le pain et châtier les marchands spéculateurs.\n\nCependant, le choc nutritionnel prépare le terrain au retour du désastre sanitaire. Dès la fin de l'automne 1374 et durant l'année 1375, une violente résurgence de la peste frappe une population affaiblie. L'épidémie emporte des dizaines de milliers d'habitants au Caire, à Alexandrie et dans les campagnes du Delta. Les cadavres s'accumulent dans les rues et devant les mosquées, tandis que les fellahs survivants abandonnent en masse les villages non irrigués pour mendier dans la capitale, accentuant la désertification agraire.\nSur le plan de l'économie agraire et environnementale, la crise de 1374–1375 met en lumière la vulnérabilité structurelle de l'Égypte mamelouke post-peste noire. Depuis la grande pandémie de 1348, le pays n'a jamais reconstitué son capital démographique. La disparition d'un tiers des bras paysans avait déjà entraîné l'ensablement progressif des canaux secondaires et la dégradation des digues transversales. Dès lors qu'une crue nilotique se révélait insuffisante, l'appareil hydraulique, faute d'entretien suffisant, s'avérait incapable de retenir l'eau dans les bassins résiduels, transformant un simple aléa climatique en famine de grande ampleur.\n\nSur le plan institutionnel et politique, cet enchaînement calamiteux fragilise mortellement le sultanat d'Al-Ashraf Sha'bân. Alors que le souverain avait réussi à consolider son autorité personnelle après la chute du régent Yalbogha al-Khassaki, la crise assèche les finances de la cassette royale (khāṣṣ) et prive les émirs de la rente de leurs concessions foncières (iqtā‘āt). Ne pouvant plus compter sur les revenus réguliers de leurs terroirs, les factions militaires se disputent avec une férocité renouvelée le Trésor central et les gratifications extraordinaires (nafaqa). La misère générale, combinée au ressentiment des troupes impayées, crée le terreau insurrectionnel qui mènera directement, deux ans plus tard en mars 1377, à la mutinerie militaire sur la route du pèlerinage et à l'assassinat brutal du sultan à la Citadelle du Caire.\n\nLa perspective économique et monétaire d'Al-Maqrizi : Dans son traité majeur sur les disettes (Ighāthat al-Umma bi-Kashf al-Ghumma) et dans les annales du Kitāb al-Sulūk, Al-Maqrizi analyse cet événement non comme une fatalité divine, mais comme une faillite de gouvernance. Tout en constatant l'insuffisance objective du Nil, Maqrizi dénonce vigoureusement la prédation de l'élite mamelouke, l'affermage abusif des grains et les manipulations monétaires. Ses relevés de prix au mois le mois fournissent aux historiens quantitativistes modernes des séries statistiques précises sur le coût de la vie et le rapport or-argent durant la famine.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Cairo_Roda_Nilometer_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "themes": [
+      "catastrophe",
+      "economie"
+    ],
+    "legende": "puits de mesure et la colonne graduée du Nilomètre de l'île de Roda au Caire (al-Miqyās), monument hydraulique fondamental où les agents de l'État surveillaient chaque été l'élévation du fleuve pour fixer les taux d'imposition et anticiper les disettes.  Cette structure illustre le pivot matériel de la crise de 1374 : c'est sur cette colonne centrale que fut constaté l'étiage alarmant du Nil, annonciateur du dessèchement des terres arables et de la famine qui allait submerger le pays.",
+    "lat": 26.254,
+    "lng": 29.2675
+  },
+  {
     "id": 862,
     "titre": "Frédéric de Blankenheim évêque de Strasbourg",
     "date": 1375,
@@ -30202,6 +30323,26 @@
       "politique"
     ],
     "legende": "La citadelle Saladin du Caire  fortifié par le souverain ayyubide Salah al-Din , la Citadelle fut la prison dorée où le jeune Al-Mansûr Ali fut confiné durant les quatre années de son règne symbolique, pendant que la cour de l'édifice bruissait des complots orchestrés par l'atabak Barquq pour confisquer définitivement le pouvoir.",
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
+    "id": 3089,
+    "titre": "Ascension de l'émir Barquq et  prise de contrôle de la faction circassienne",
+    "date": 1377,
+    "mois": 3,
+    "date_fin": 1378,
+    "mois_fin": 7,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "L'ascension de l'émir Barquq et la prise de contrôle de la faction circassienne (1377–1378) : éviction des émirs rivaux à la Citadelle du Caire et prélude à la fondation du sultanat burjite.\nAu lendemain de la conspiration militaire de mars 1377 qui a coûté la vie au sultan Al-Ashraf Sha'bân sur la route du pèlerinage, le pouvoir est théoriquement confié à son tout jeune fils, Al-Mansûr 'Alî II, alors âgé d'à peine sept ans. Le gouvernement réel sombre immédiatement dans une guerre civile féroce entre les différentes factions d'émirs qui se disputent la régence à la Citadelle du Caire.\n\nAu sein de ce chaos émerge la confrérie des Yalbughawiyya (anciens mamelouks formés par le grand émir Yalbogha al-Khassaki, assassiné en 1366). Parmi eux figure le jeune émir Al-Zâhir Sayf al-Dîn Barquq, d'origine circassienne (jarkasī), remarquable par sa vivacité politique, son habileté manœuvrière et son autorité sur les troupes de caserne. Allié dans un premier temps à un autre officier yalbughawi influent, l'émir Baraka, Barquq engage une élimination méthodique des chefs de guerre de la génération antérieure.\n\nÀ l'été 1378, Barquq et Baraka renversent l'atabak Tashtamur al-Alâ'î (surnommé Hummus Akhdar), qui est destitué et relégué dans une province syrienne, tandis que le régent Aynabak al-Badrî, assiégé dans ses appartements, est capturé et exécuté.\n\nMaîtres incontestés de la capitale, les deux officiers se partagent les leviers de l'État : Baraka prend le titre de grand émir du conseil (amīr majlis), tandis que Barquq se fait attribuer la charge suprême de grand atabak des armées (atābak al-‘asākir) au cours du mois de juillet 1378. Dès son installation, Barquq s'assure le contrôle direct du Trésor royal et de la cassette privée (dīwān al-khāṣṣ).\n\nIl entame aussitôt une politique systématique de promotion de ses compatriotes circassiens aux postes clés de l'état-major militaire et des gouvernorats provinciaux (Damas, Alep, Tripoli), marginalisant les éléments turcs kiptchaks traditionnels. Il prépare ainsi l'élimination ultérieure de son complice Baraka (qui interviendra en 1380) et la déposition finale du dernier souverain qalawunide en 1382.\nSur le plan de la sociologie militaire, l'ascension de Barquq en 1378 marque le début du basculement ethnique du sultanat mamelouk. Durant plus d'un siècle, depuis la prise de pouvoir de Baybars et de Qalâ'ûn (1260–1279), le régime reposait quasi exclusivement sur l'élément turc originaire des steppes du Kiptchak (le littoral de la mer Noire et la vallée de la Volga). L'épuisement démographique de ces viviers, combiné aux perturbations politiques en Eurasie septentrionale et aux effets durables de la Peste noire, a incité les marchands d'esclaves italiens et levantins à se tourner vers les populations caucasiennes (Circassiens, Géorgiens, Abkhazes). En promouvant massivement ses pairs circassiens cantonnés dans les tours de la Citadelle (les burjiyya), Barquq brise l'hégémonie des lignages turcs bahrites et structure un nouveau réseau de solidarité (khushdāshiyya) ethniquement cohérent.\n\nSur le plan institutionnel, l'année 1378 consacre le passage de la légitimité dynastique héréditaire au prétorianisme collégial. Bien que les fils d'Al-Ashraf Sha'bân soient maintenus sur le trône comme des souverains fantoches dépourvus de tout pouvoir d'ordonnancement, la fiction de la maison de Qalâ'ûn est vidée de sa substance. La charge d'atabak exercée par Barquq devient le véritable siège du pouvoir exécutif, judiciaire et militaire. Ce fonctionnement préfigure la règle de succession non héréditaire qui définira le sultanat burjite (1382–1517), où le trône n'est plus transmis de père en fils mais conquis par le plus puissant des émirs circassiens à l'issue de négociations ou d'arbitrages de caserne.\n\nL'historiographie mamelouke de la fin du XIVᵉ siècle a documenté l'ascension de Barquq avec un sens aigu de la dramaturgie politique :\n\nLe regard contemporain et apologétique d'Ibn Khaldoun : Résidant au Caire à partir de 1382, Ibn Khaldoun est devenu un intime du sultan Barquq, qui le nomma grand cadi malékite. Dans le Kitāb al-‘Ibar, Ibn Khaldoun analyse la prise de pouvoir de Barquq à travers sa théorie philosophique de l'esprit de corps (‘aṣabiyya). Pour le philosophe maghrébin, les Mamelouks turcs ayant perdu leur cohésion tribale originelle sous l'effet du luxe et de la sédentarisation urbaine, la Providence divine a suscité une race nouvelle et vigoureuse issue des montagnes du Caucase (les Circassiens de Barquq) pour régénérer la puissance militaire de l'Islam contre les menaces extérieures.\n\nLa sévérité critique d'Al-Maqrizi : À l'inverse, Al-Maqrizi (Kitāb al-Sulūk), très attaché à la mémoire de la dynastie de Qalâ'ûn, dresse un réquisitoire sévère contre Barquq et sa faction. Il date de son accession en 1378 le début d'une vénalité généralisée des charges publiques (rishwa), la dégradation monétaire (prolifération du cuivre au détriment de l'argent) et la montée en puissance d'une soldatesque circassienne indisciplinée qui n'hésitait plus à piller les souks cairotes pour obtenir des hausses de solde.\n\nLes annales détaillées d'Ibn Taghribirdi : Fils d'un grand émir de Barquq, Ibn Taghribirdi (Al-Nujūm al-zāhira) fournit la relation la plus circonstanciée des combats de rue de 1377–1378. Il retrace avec précision les manœuvres d'artillerie (mangonneaux dressés sur les toits des madrasas surplombant la Citadelle) et la façon dont Barquq a su neutraliser ses rivaux un à un par une feinte soumission avant de porter le coup fatal.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Barqouqy_mosque_-_Moez_street.jpg/1920px-Barqouqy_mosque_-_Moez_street.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
+    "legende": "À l'intérieur de la mosquée-médersa du sultan Barquq",
     "lat": 30.0444,
     "lng": 31.2357
   },
@@ -39625,6 +39766,25 @@
     "lng": 30.6427
   },
   {
+    "id": 3092,
+    "titre": "« circassianisation » de l'appareil militaire et institutionnel mamelouk",
+    "date": 1390,
+    "mois": 2,
+    "date_fin": 1399,
+    "mois_fin": 6,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 4,
+    "description": "La « circassianisation » de l'appareil militaire et institutionnel mamelouk (1390–1399) : restructuration ethnique des casernes, ascension des Burjites et enracinement du nouvel ordre prétorien sous Al-Zâhir Barquq.\nAu lendemain de sa réinstallation victorieuse à la Citadelle du Caire en février 1390 — après avoir été renversé en 1389 par la coalition de Mintash et Yalbugha al-Nâsirî puis emprisonné à al-Karak —, Al-Zâhir Sayf al-Dîn Barquq tire les leçons de sa vulnérabilité passée. Conscient que la vieille garde des mamelouks turcs kiptchaks (al-atrāk) demeure viscéralement attachée au principe dynastique de la maison de Qalâ'ûn, le sultan prend la décision délibérée de transformer en profondeur la composition ethnique et corporatiste de l'armée d'Égypte et de Syrie.\n\nDurant toute la décennie 1390, Barquq réoriente massivement les flux de la traite militaire en concertation étroite avec les marchands négriers génois et vénitiens de la mer Noire. Le recrutement ne s'effectue plus dans les steppes eurasiennes de la Volga, mais dans les vallées du Caucase septentrional et occidental, d'où proviennent des milliers de jeunes recrues d'ethnie circassienne (jarkas), complétées par des Géorgiens, des Abkhazes et des Arméniens.\n\nCes nouveaux arrivants sont cantonnés dans les casernes supérieures des tours de la Citadelle du Caire (ṭibāq al-Qal‘a), d'où dérive leur désignation générique de Burjites (al-burjiyya, « ceux des tours »). Éduqués dans les écoles militaires impériales sous l'œil direct de Barquq, ils sont immédiatement intégrés à son corps personnel de mamelouks royaux (al-mamālīk al-sulṭāniyya).\n\nParallèlement, le sultan procède à l'éviction méthodique des officiers aînés d'origine turque :\n\nLes régiments de la halqa (troupes non serviles de cavalerie) voient leurs soldes réduites et leurs concessions foncières (iqtā‘āt) confisquées ou réattribuées.\n\nLes grands commandements d'émirs de mille (umarā' ulūf), la charge de grand atabak et les gouvernorats provinciaux de premier ordre (les vice-royautés de Damas, d'Alep, de Tripoli et de Safed) sont confiés exclusivement à ses mamelouks d'élite circassiens (les zâhiriyya), à l'instar d'émirs comme Julban, Taghribirdi (le père du chroniqueur), ou Yashbak.\n\nÀ sa mort en juin 1399, Barquq laisse une armée entièrement refondue, encadrée par une oligarchie caucasienne homogène et loyale à sa mémoire, consacrant l'avènement définitif du sultanat circassien (burjite) jusqu'à la conquête ottomane de 1517.\n\n4. Analyse et contextualisation de l'évènement (Niveau universitaire)\nSur le plan de la sociologie politique et militaire, cette mutation structurelle consacre le remplacement de l'esprit de corps nomade des steppes par un solidarisme montagnard caucasien. Les Turcs kiptchaks partageaient une culture linguistique et équestre homogène issue de l'univers des steppes altaïques ; les Circassiens introduisent des structures de parenté et des loyautés lignagères différentes. Barquq inaugure d'ailleurs une pratique inédite : celle d'inviter des membres libres de sa propre famille restés au Caucase (notamment son père Anas, qu'il fait venir au Caire et qu'il titre émir, fait sans précédent au sein d'une élite où seule l'entrée par l'esclavage conférait l'honorabilité). Ce recours au népotisme familial et ethnique permet de verrouiller l'État contre toute résurgence bahrite.\n\nSur le plan institutionnel, la « circassianisation » transforme la nature même du pouvoir monarchique. La transmission du sultanat ne repose plus sur la légitimité dynastique héréditaire (qui avait prévalu sous les descendants de Qalâ'ûn de 1279 à 1382), mais sur une oligarchie élective et prétorienne. Bien que Barquq parvienne à faire monter son fils Faraj sur le trône en 1399, ce dernier sera constamment l'otage des grands émirs circassiens rivaux.\n\nEn outre, la formation plus rapide et moins rigoureuse des recrues caucasiens à la fin du XIVᵉ siècle entraîne une baisse de la discipline militaire traditionnelle et un accroissement des violences urbaines au Caire, où les factions de casernes s'affrontent régulièrement pour des augmentations de solde (jāmagiyya).\n\nCe tournant sociopolitique a suscité des jugements contrastés et passionnés au sein des chroniques mameloukes du XVᵉ siècle :\n\nLe réquisitoire conservateur d'Al-Maqrizi : Dans son Kitāb al-Sulūk et ses traités historiques, Al-Maqrizi — profondément nostalgique de l'ordre bahrite classique — attribue le déclin économique, institutionnel et moral de l'Égypte à cette prise de contrôle circassienne. Il reproche aux mamelouks de Barquq leur manque d'instruction religieuse, leur corruption, la vénalité systématique des offices judiciaires et civils (rishwa) et leur mépris pour la population autochtone du Caire, contrastant avec la discipline austère des premiers sultans turcs comme Baybars ou Qalâ'ûn.\n\nLe témoignage interne d'Ibn Taghribirdi : Issu lui-même de cette aristocratie circassienne de premier rang, Ibn Taghribirdi (Al-Nujūm al-zāhira) défend au contraire la mémoire de Barquq et de ses pairs. Il insiste sur la bravoure, la générosité envers les savants et la piété du sultan, tout en reconnaissant avec une remarquable lucidité sociologique que l'esprit de corps (khushdāshiyya) des Circassiens était plus prompt aux querelles intestines que celui de l'époque turque.\n\nLa perspective théorique d'Ibn Khaldoun : Dans le Kitāb al-‘Ibar, Ibn Khaldoun apporte une caution philosophique à cette transition. Il analyse la prise de pouvoir des Circassiens comme une manifestation de la régénération cyclique de la ‘aṣabiyya (la solidarité de groupe) : les Turcs d'Égypte s'étant ramollis au contact de l'opulence urbaine et de la sédentarité, l'arrivée d'une race fraîche et vigoureuse issue des montagnes rudes du Caucase était historiquement indispensable pour préserver la suprématie militaire du monde islamique face aux menaces extérieures.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 30.0444,
+    "lng": 31.2357
+  },
+  {
     "id": 192,
     "titre": "Manuel II Paléologue",
     "date": 1391,
@@ -40277,6 +40437,27 @@
     ],
     "lat": 55.7946,
     "lng": 49.1115
+  },
+  {
+    "id": 3090,
+    "titre": "Écrasement de la rébellion syrienne, capture et supplice de l'émir Mintash",
+    "date": 1391,
+    "mois": 5,
+    "date_fin": 1393,
+    "mois_fin": 8,
+    "zones": [
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Écrasement de la rébellion syrienne, capture et supplice de l'émir Mintash (1391–1393) : pacification du Levant et consolidation définitive du trône d'Al-Zâhir Barquq.\nBien que le sultan circassien Al-Zâhir Sayf al-Dîn Barquq ait repris le contrôle de la Citadelle du Caire en février 1390 après son évasion de la forteresse d'al-Karak et la déposition finale du dernier souverain bahrite Al-Hâjjî II, son empire demeure fracturé. Son ancien geôlier et ennemi juré, l'émir Timurbugha Mintash, gouverneur d'Alep, refuse d'abdiquer et transforme les provinces syriennes en un bastion insurrectionnel autonome.\n\nSoutenu par des émirs dissidents et les cavaliers des tribus bédouines et turcomanes de la Djézireh (notamment les Banu Nu'ayr et les Dulkadirides), Mintash mène une guerre d'usure contre les garnisons loyales de Damas et de Tripoli. Face à ce péril existentiel, Barquq quitte personnellement Le Caire en mai 1391 à la tête de l'armée d'Égypte. Durant deux années d'opérations militaires âpres et coûteuses, le sultan mamelouk reprend méthodiquement les places fortes de Syrie centrale, infligeant de lourdes défaites aux insurgés sous les remparts de Damas et de Hama.\n\nTraqué et privé de ses bases urbaines, Mintash s'enfonce dans la clandestinité dans le désert syro-mésopotamien, tentant même de solliciter l'intervention des armées d'Asie centrale. À l'été 1393, trahi par des chefs de clans turcomans auprès desquels il cherchait asile, l'émir rebelle est cerné et capturé dans la province d'Alep par les troupes du vice-roi loyaliste Julban.\n\nSur ordre exprès de Barquq, Mintash est immédiatement mis aux fers, interrogé sous la torture pour révéler l'emplacement de ses trésors cachés, puis exécuté par décapitation à Alep en août 1393. Sa tête est d'abord clouée au-dessus de la porte de Bab al-Faraj à Alep, avant d'être convoyée en trophée jusqu'au Caire, où elle est exhibée solennellement à la porte de Bab Zuwayla sous les acclamations des troupes circassiennes, signifiant la clôture définitive de cinq années de guerre civile.\n\nSur le plan institutionnel et dynastique, l'anéantissement de la révolte de Mintash constitue l'acte de clôture de la transition bahrite-burjite. Tant que Mintash tenait la Syrie, la restauration de Barquq en 1390 demeurait précaire et contestable du point de vue de la légalité militaire. L'élimination du dernier grand chef de guerre turco-kipchak dissident scelle l'hégémonie politique sans partage de l'oligarchie circassienne (jarkasiyya) sur les deux rives de l'empire (Égypte et Levant). Les charges de gouverneurs (nuwwāb al-salṭana) de Damas, Alep, Homs et Tripoli sont définitivement confiées à des mamelouks formés dans les casernes des tours de la Citadelle (al-burjiyya), brisant le séparatisme traditionnel des états-majors syriens.\n\nSur le plan géopolitique international, cette victoire intervient à un moment critique : elle intervient au seuil de la confrontation avec Tamerlan (Timour). Dès 1393, les armées timourides achèvent la conquête de l'Irak (prise de Bagdad et fuite du sultan jalayiride Ahmad vers Le Caire) et s'approchent des frontières mameloukes de l'Euphrate. Si Barquq n'avait pas pacifié l'arrière-pays syrien et éradiqué la rébellion de Mintash avant cette date, le sultanat se serait trouvé pris en étau entre une révolte intérieure au Levant et le rouleau compresseur venu de Samarcande. La liquidation de Mintash a permis à Barquq de reconstituer un front défensif uni et d'offrir l'asile aux princes musulmans déchus d'Iran et d'Irak face à l'hégémonie timouride.\n\nLa traque et la chute de Mintash sont documentées par les plus grands chroniqueurs cairotes et syriens du XVᵉ siècle, témoins de la fin de l'ère classique :\n\nLa perspective de cour chez Ibn Taghribirdi et Ibn Hajar : Dans Al-Nujūm al-zāhira, Ibn Taghribirdi (dont le père était un général circassien sous Barquq) livre le récit militaire le plus détaillé des campagnes de 1391–1393. Il décrit Mintash comme un officier d'un courage physique indéniable mais incapable de modération politique, dont l'obstination fanatique a fini par lasser ses propres partisans bédouins. Ibn Hajar al-Asqalani (Inbā' al-Ghumr bi-Abnā' al-‘Umr) corrobore les dates de la capture et souligne le soulagement de la population marchande de Syrie, rançonnée sans trêve durant les cinq années de troubles.\n\nL'analyse socio-économique d'Al-Maqrizi : Dans le Kitāb al-Sulūk, Al-Maqrizi insiste sur le coût budgétaire exorbitant de cette pacification : pour financer la marche de ses troupes et payer les gratifications extraordinaires (nafaqa) des mamelouks circassiens en Syrie, Barquq a dû recourir à des emprunts forcés sur les biens de mainmorte (waqf) et à des taxes exceptionnelles, accentuant l'inflation et l'épuisement financier des terroirs ruraux syro-égyptiens.\n\nLe reflet chez Ibn Khaldoun : Résidant au Caire durant ces événements, Ibn Khaldoun assiste au retour triomphal de Barquq. Dans son autobiographie (Al-Ta‘rīf), il note combien cette victoire militaire consolidait la stature providentielle du souverain, confirmant sa théorie selon laquelle seule une autorité monarchique ferme fondée sur un esprit de corps (‘aṣabiyya) cohérent pouvait sauver l'État islamique de la dislocation féodale.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Aleppo_Citadel_01.jpg/1280px-Aleppo_Citadel_01.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
+    "legende": "entrée monumentale, la passerelle voûtée et les bastions fortifiés de la Citadelle d'Alep, forteresse maîtresse du nord de la Syrie dont le contrôle stratégique fut au centre des affrontements sanglants entre les loyalistes de Barquq et les insurgés de Mintash jusqu'à la capture de ce dernier en 1393.  Cette architecture militaire mamelouke illustre la puissance défensive des garnisons levantines : c'est sous la juridiction du gouvernorat de cette place forte que Mintash fut jugé et décapité, avant que sa tête ne soit exposée aux portes de la ville.",
+    "lat": 30.0444,
+    "lng": 31.2357
   },
   {
     "id": 952,
@@ -41951,6 +42132,26 @@
     "legende": "Carte nautique historique chinoise issue du traité militaire Wubei Zhi de Mao Yuanyi (XVIIᵉ siècle, dressée d'après les relevés hydrographiques originaux du début du XVᵉ siècle issus des expéditions de l'amiral Zheng He). Elle identifie expressément le secteur du détroit de Singapour avec les mentions de Danmaxi (淡馬錫, transcription de Temasek) et le passage maritime de Long Ya Men (龍牙門, détroit de Keppel). C'est ce comptoir fortifié de l'estuaire qui subit l'invasion armée de Majapahit vers 1398, contraignant son dirigeant Parameswara à fuir pour fonder le sultanat de Malacca.",
     "lat": 1.3571,
     "lng": 103.8195
+  },
+  {
+    "id": 3091,
+    "titre": "Rupture diplomatique avec Samarcande",
+    "date": 1393,
+    "mois": 9,
+    "date_fin": 1394,
+    "mois_fin": 11,
+    "zones": [
+      "Asie centrale",
+      "Egypte"
+    ],
+    "type": 3,
+    "description": "Le péril timouride et la rupture diplomatique avec Samarcande (1393–1394) : la prise de Bagdad par Tamerlan, l'asile cairote d'Ahmad Jalâyir et la mise en défense du Levant par Barquq.\nAu cours de sa « Campagne de cinq ans » (1392–1396) menée à travers l'Iran et la Mésopotamie, le conquérant turco-mongol Tamerlan (Timour Leng) écrase les dynasties locales issues de l'éclatement de l'Ilkhanat. À la fin de l'été 1393, les avant-gardes timourides investissent l'Irak et s'emparent de Bagdad. Le souverain d'Irak et d'Azerbaïdjan, le sultan Ahmad Jalâyir, abandonne sa capitale précipitamment et prend la fuite vers l'ouest avec ses trésors rescapés et son allié Qara Youssouf, chef de la confédération turcomane du Mouton Noir (Qara Qoyunlu).\n\nLes fugitifs trouvent refuge auprès des garnisons mameloukes de Syrie avant d'être convoyés sous haute escorte vers l'Égypte. En janvier 1394, le sultan circassien Al-Zâhir Sayf al-Dîn Barquq réserve à Ahmad Jalâyir un accueil d'une solennité grandiose : le cortège est reçu aux portes du Caire par les grands émirs, logé dans les palais royaux et comblé de subsides en numéraire, de chevaux et d'étoffes précieuses. Par ce geste, Barquq affirme la primauté protectrice du Caire sur les souverains musulmans déchus.\n\nLa réponse de Tamerlan ne tarde pas. Une ambassade timouride parvient en Syrie puis au Caire, porteuse d'une lettre à la tonalité impérieuse et menaçante rédigée dans le plus pur style gengiskhanide : Timour y rappelle la sentence divine qui anéantit les princes rebelles, exige la soumission inconditionnelle du sultanat mamelouk, la restitution immédiate d'Ahmad Jalâyir et la reconnaissance de la suzeraineté de Samarcande.\n\nFidèle aux traditions de fermeté mamelouke et conforté par l'éradication récente de la rébellion de Mintash en Syrie, Barquq choisit l'escalade totale. Il rejette avec mépris l'ultimatum, fait arrêter et exécuter les émissaires timourides — rompant brutalement avec l'immunité diplomatique universelle —, et scelle une alliance de revers avec le sultan ottoman Bayezid Iᵉʳ, le khan de la Horde d'Or Tokhtamysh et les émirs turcomans d'Anatolie.\n\nDurant l'été 1394, Barquq se rend en personne à Damas et Alep à la tête de l'armée régulière d'Égypte pour fortifier les places fortes de l'Euphrate, inspecter les arsenaux et lever des contingents de cavalerie bédouine. Il fournit à Ahmad Jalâyir des troupes et des armes qui permettent à ce dernier de réinvestir brièvement Bagdad à la fin de l'année 1394, alors que Tamerlan s'éloigne temporairement vers le Caucase pour affronter la Horde d'Or.\n\nSur le plan de l'histoire des doctrines politiques et de la légitimité impériale, la crise de 1393–1394 constitue un choc frontal entre deux univers juridiques islamiques. Tamerlan fonde son impérialisme sur le double héritage du droit coutumier mongol (la Yassa de Gengis Khan) et de sa qualité autoproclamée d'« Épée de l'Islam » régénératrice, considérant tout souverain refusant de s'incliner devant son autorité comme un rebelle à l'ordre cosmique.\n\nFace à lui, Barquq s'érige en champion exclusif de la stricte orthodoxie sunnite et de la loi coranique (Sharī‘a). Hébergeant le calife abbasside au Caire et contrôlant les Lieux saints du Hedjaz, l'État mamelouk dénie toute légitimité canonique aux prétentions de Samarcande, assimilant Tamerlan à un tyran sanguinaire et hérétique dont les ravages contre les cités musulmanes justifient le recours au djihad défensif.\n\nSur le plan géopolitique, l'intransigeance de Barquq retarde d'une demi-décennie le déferlement timouride sur la Méditerranée orientale. En constituant un axe de résistance quadripartite reliant Le Caire, Bursa (Ottomans), Saraï (Horde d'Or) et Tabriz/Bagdad, Barquq contraint Tamerlan à sécuriser d'abord ses arrières septentrionaux dans les steppes russes (campagne contre Tokhtamysh en 1395) puis en Inde (sac de Delhi en 1398).\n\nToutefois, ce répit s'avère trompeur : la mort de Barquq en 1399 et l'avènement de son jeune fils inexpérimenté, An-Nâsir Faraj, laisseront la Syrie mamelouke tragiquement vulnérable lorsque Tamerlan décidera, en 1400, de venger l'affront diplomatique de 1394 lors du terrible sac d'Alep et de Damas.",
+    "image": "",
+    "themes": [
+      "guerre"
+    ],
+    "lat": 33.3062,
+    "lng": 44.3872
   },
   {
     "id": 163,
