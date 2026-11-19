@@ -1662,6 +1662,7 @@
     "mois": 9,
     "zones": [
       "France",
+      "Italie",
       "Papaute"
     ],
     "type": 2,
@@ -3159,6 +3160,25 @@
     "sources": "Charles-André Julien, Histoire de l'Afrique du Nord : Des origines à 1830, Paris, Payot, 1994 (l'analyse de référence sur l'affrontement mérinido-zianide)."
   },
   {
+    "id": 3145,
+    "titre": "Sièges et reddition des forteresses templières",
+    "date": 1307,
+    "mois": 12,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Lorsque le roi de France Philippe IV le Bel fait arrêter les Templiers de son royaume en octobre 1307 et exhorte les souverains d'Europe à l'imiter, le roi d'Aragon et de Valence Jacques II le Juste réagit initialement avec une extrême prudence. L'Ordre du Temple constitue en effet le pilier militaire indispensable de la Reconquista méditerranéenne : maître d'un empire foncier et castral considérable s'étendant de l'Èbre jusqu'au royaume de Valence (Peñíscola, Chivert, Ares del Maestre, Burriana, Cuevas de Vinromá), l'ordre assure la garde des marches face à l'émirat de Grenade et aux corsaires maghrébins.\n\nCependant, face aux injonctions pressantes du pape Clément V (bulle Pastoralis praeeminentiae du 22 novembre 1307), Jacques II se résout à ordonner la saisie conservatoire des personnes et des commanderies le 1ᵉʳ décembre 1307. Refusant de se laisser arrêter sans jugement et proclamant leur innocence absolue, les chevaliers du Temple d'Aragon et de Catalogne se retranchent dans leurs citadelles inexpugnables (Miravet sur l'Èbre, Monzón, Cantavieja, Castellote), soutenant des sièges poliorcétiques acharnés face à l'ost royal jusqu'à la reddition de Monzón au printemps 1309.\n\nAu printemps 1312, alors que le concile de Vienne débat du sort de l'institution, Jacques II dépêche une ambassade d'élite auprès de Clément V, dirigée par l'évêque de Valence Ramón Despont et l'archidiacre Vidal de Vilanova.\n\nL'enjeu est crucial pour la sécurité de l'État :\n\nLa dissolution et l'exception ibérique (mars–mai 1312) : Le 22 mars 1312, la bulle Vox in excelso abolit définitivement l'Ordre du Temple par voie de provision apostolique. Le 2 mai 1312, la bulle Ad providam dévolue l'ensemble de son patrimoine européen aux Hospitaliers de Saint-Jean de Jérusalem. Toutefois, sous la pression énergique des ambassadeurs aragonais, castillans et portugais, Clément V accepte d'exclure explicitement du transfert automatique les biens situés dans les couronnes d'Aragon, de Castille, du Portugal et de Majorque, réservant leur affectation ultérieure au Saint-Siège en concertation avec les rois ibériques.\n\nL'acquittement juridique d'Aragon (novembre 1312) : Soumis à la procédure d'enquête canonique (sans les tortures systématiques pratiquées en France), les frères aragonais et valenciens sont solennellement déclarés innocents de tout chef d'hérésie ou d'idolâtrie par le concile provincial de Tarragone le 4 novembre 1312, obtenant des pensions viagères confortables prélevées sur leurs anciens revenus.\n\nLe verrouillage des commanderies valenciennes : Jacques II s'oppose catégoriquement à ce que les Hospitaliers — déjà immensément riches en Aragon et en Catalogne — mettent la main sur les forteresses templières du Royaume de Valence, ce qui aurait créé une principauté militaire écclésiastique incontrôlable sur la frontière maritime face à l'Islam. Le roi maintient l'administration directe de ces commanderies sous séquestre royal dès 1312, amorçant cinq années de négociations diplomatiques ardues qui aboutiront, sous le pape Jean XXII en 1317, à la fondation d'un ordre national strictement valencien : l'Ordre de Santa María de Montesa, doté de la totalité des biens templiers et hospitaliers du royaume de Valence.\n\nSur le plan de l'histoire constitutionnelle et géopolitique de la Couronne d'Aragon, la crise de 1312 illustre le triomphe de la raison d'État monarchique sur l'universalisme supranational de la papauté avignonnaise. Jacques II a compris que le transfert du patrimoine templier valencien aux Hospitaliers — ordre international dépendant directement du Saint-Siège et tourné vers la Méditerranée orientale (conquête de Rhodes en 1309) — aurait privé la Couronne d'Aragon du contrôle militaire de son littoral méridional et drainé les rentes foncières valenciennes hors de la péninsule. En imposant l'exception ibérique dans la bulle Ad providam, le monarque transforme une crise religieuse européenne en un instrument de renforcement de sa souveraineté territoriale.\n\nSur le plan de l'histoire des ordres militaires, le règlement valencien amorcé en 1312 inaugure la nationalisation ibérique des milices religieuses (parallèle exact de l'action menée au Portugal par le roi Denis Iᵉʳ avec la création de l'Ordre du Christ en 1319).\n\nContrairement au Temple ou à l'Hôpital, le futur Ordre de Montesa conçu pour recueillir l'héritage templier valencien (Chivert, Peñíscola, Ares, Culla, Burriana) est placé dès sa genèse sous le patronage étroit et l'inspection directe du roi d'Aragon et de Valence. Le patrimoine templier cesse ainsi d'être une enclave d'autonomie féodo-ecclésiastique pour devenir l'armature défensive permanente de la frontière méridionale valencienne face aux raids des flottes mérinides et nasrides.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Pe%C3%B1%C3%ADscola_-_aerial_view.jpg/1920px-Pe%C3%B1%C3%ADscola_-_aerial_view.jpg?utm_source=es.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "religion",
+      "politique"
+    ],
+    "legende": "Château de Peñíscola (province de Castellón, Communauté valencienne), forteresse maritime maîtresse édifiée par les Templiers entre 1294 et 1307 sur le presqu'île rocheuse dominant la Méditerranée.  Ce bastion monumental incarne le joyau du patrimoine templier valencien au cœur de la crise de 1312 : saisi par les agents de Jacques II et soustrait à la convoitise des Hospitaliers lors des négociations de Vienne, ce château fut directement intégré au domaine du nouvel Ordre de Montesa pour verrouiller la côte du Maestrazgo.",
+    "lat": 40.3578,
+    "lng": 0.4074
+  },
+  {
     "id": 119,
     "titre": "Édouard II d'Angleterre épouse à Boulogne Isabelle de France",
     "date": 1308,
@@ -3723,10 +3743,30 @@
     "lng": 0.3402
   },
   {
+    "id": 121,
+    "titre": "Échec de la conjuration de Corso Donati",
+    "date": 1308,
+    "mois": 10,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Échec de la conjuration de Corso Donati qui est assassiné à Florence. Corso Donati fut le chef de la faction des magnats, désignée sous le nom de « guelfes noirs » ou « Noirs », qui s'opposa au gouvernement du Popolo. C'est à Castello della Pieve, que le 4 octobre 1301, comme le rappelle une plaque apposée sur la tour du bourg médiéval, Charles de Valois, frère du roi de France décréta avec Corso Donati, recteur de Massa Trabaria l'exil de Dante Alighieri de Florence.\n\nDante, qui le détestait pour son attitude altière et autoritaire le cita indirectement dans le Purgatoire (Chant XXIV, v. 79-87) par l'intermédiaire d'une prophétie récitée par son frère Forese Donati. Dans ces vers on remarque une certaine satisfaction du poète pour le triste sort de son adversaire.\n\n« La bestia ad ogni passo va più ratto, crescendo sempre, finch'ella il percuote e lascia il corpo vilmente disfatto »\n\n— Purgatoire XXIV, 85-87",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Corso_Donati.jpg",
+    "themes": [
+      "revolte"
+    ],
+    "legende": "La fin de Corso Donati, miniature de la Nuova Cronica de Giovanni Villani",
+    "lat": 43.77,
+    "lng": 11.26,
+    "sources": "https://fr.wikipedia.org/wiki/Corso_Donati"
+  },
+  {
     "id": 4,
     "titre": "Début de la papauté d'Avignon",
     "date": 1309,
     "zones": [
+      "Italie",
       "Papaute"
     ],
     "type": 2,
@@ -3948,6 +3988,26 @@
     ],
     "lat": 30.0444,
     "lng": 31.2357
+  },
+  {
+    "id": 3152,
+    "titre": "Gouvernement de l'île tunisienne de Djerba par Ramon Muntaner",
+    "date": 1309,
+    "date_fin": 1315,
+    "zones": [
+      "Aragon",
+      "Afrique du Nord"
+    ],
+    "type": 5,
+    "description": "Au tournant du XIVᵉ siècle, l'archipel tunisien composé des îles de Djerba (Jarba / Gerba) et des Kerkennah (Qarqanna), situé au débouché méridional du golfe de Gabès, constitue un verrou stratégique de premier ordre sur la route maritime reliant le bassin occidental de la Méditerranée à Tripoli, Alexandrie et la Terre sainte. Conquise en 1284 par le grand amiral Roger de Lauria, l'île de Djerba avait été érigée en seigneurie féodale héréditaire rattachée à la couronne sicilo-aragonaise de Palerme. Cependant, à la mort de Roger de Lauria en 1305 et face aux querelles entre ses héritiers et les populations berbères ibadites de l'île (les clans des Wahbiyya et des Nakkara) soutenues par le califat hafside de Tunis, la domination chrétienne menace de s'effondrer.\n\nC'est dans ce contexte de péril que le roi Frédéric III de Sicile, en étroite concertation avec son frère aîné Jacques II le Juste d'Aragon, fait appel en 1309 à un homme d'expérience aguerri par les guerres d'Orient : Ramon Muntaner, ancien chancelier et trésorier de la Grande Compagnie catalane, tout juste revenu de Grèce. Investi des pleins pouvoirs civils et militaires avec le titre de capitaine et gouverneur de Djerba et des Kerkennah, Muntaner débarque sur l'île à la tête d'une escadre de galères et d'une garnison d'élite de fantassins almogavres et d'arbalétriers catalans.\n\nDurant six années d'une administration énergique (1309–1315), Ramon Muntaner transforme l'île en une colonie militaire et commerciale redoutable :\n\nLa pacification impitoyable de l'intérieur et le système d'otages : Confronté à l'insurrection des cheikhs berbères locaux appuyés par les troupes continentales venues de Zarzis et de Gabès, Muntaner mène une guerre d'escarmouches incessante. Il brise la résistance des tribus indigènes en s'emparant de leurs citernes d'eau douce, en détruisant leurs palmeraies rebelles et en enfermant les fils des principaux notables djerbiens comme otages dans le donjon du château fort côtier (Castell de Gerba, l'actuel Borj El Kebir à Houmt Souk).\n\nLe blocus maritime et le siège de 1311–1312 : Lorsque les forces hafsides tentent de franchir l'étroit chenal d'El-Kantara reliant le continent à l'île sur des barques à fond plat et des pontons, Muntaner organise une défense amphibie méthodique : ses galères incendient la flottille tunisienne et ses arbalétriers déciment les assaillants embourbés dans les hauts-fonds, contraignant les chefs continentaux à solliciter une trêve tributaire.\n\nL'exploitation fiscale et douanière : Rétabli dans son autorité, Muntaner perçoit régulièrement le lourd tribut annuel en dinars d'or, en huile d'olive, en laine et en draps tissés dû par les communautés insulaires, tout en sécurisant les escales marchandes des nefs catalanes, majorquines et siciliennes commerçant avec Tunis, Sfax et Mahdia.\n\nEn 1315, l'île étant totalement soumise et rentabilisée, Ramon Muntaner remet son commandement à son successeur désigné par la cour de Palerme pour regagner la Catalogne et le royaume de Valence, emportant avec lui une fortune considérable et le prestige d'un administrateur colonial modèle.\n\nSur le plan de la géostratégie méditerranéenne du début du XIVᵉ siècle, l'occupation de Djerba administrée par Muntaner incarne le système d'impérialisme insulaire et portuaire (« thalassocratie des comptoirs ») déployé par la maison d'Aragon. Contrairement aux croisades continentales coûteuses et aléatoires d'Orient, les souverains de Barcelone et de Palerme privilégient le contrôle d'îles et de présides maritimes (Minorque, Sardaigne, Sicile, Malte, Pantelleria, Djerba) capables d'être ravitaillés par mer et tenus par des garnisons réduites. Djerba fonctionne alors comme une véritable « base avancée » (presidio) permettant à la flotte catalano-aragonaise d'exercer une pression militaire et douanière constante sur le califat hafside de Tunis.\n\nSur le plan des relations diplomatiques et commerciales entre la Couronne d'Aragon et l'Ifriqiya, ce verrouillage naval explique la subordination tributaire des sultans hafsides envers Barcelone au premier tiers du XIVᵉ siècle. À travers les grands traités de paix et de commerce négociés par les ambassadeurs de Jacques II (notamment les accords de 1301, 1308 et 1314 conclus avec les califes Abû Asida Muhammad II puis Abû Yahyâ Zakariyyâ Iᵉʳ al-Lihyânî), la Couronne d'Aragon obtient :\n\nLe versement annuel d'un tribut financier (paria) prélevé sur les douanes de Tunis et de Bougie pour solder les milices chrétiennes catalano-aragonaises (farfanes) au service du calife.\n\nL'installation de fondouks (alfòndecs) exclusifs administrés par des consuls catalans dans les grands ports tunisiens (Tunis, Sousse, Sfax, Bizerte), garantissant le quasi-monopole du transport maritime des laines, cuirs, céréales et épices d'Ifriqiya vers Barcelone, Valence et Palma de Majorque.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Fort_Djerba_Tunisia.jpg/1920px-Fort_Djerba_Tunisia.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "litterature",
+      "economie"
+    ],
+    "legende": "imposantes murailles côtières en pierre taillée, les bastions semi-circulaires et les contreforts talutés du fort médiéval de Borj El Kebir (également appelé Borj Ghazi Mustapha) à Houmt Souk, sur la côte nord de l'île de Djerba.  Cette citadelle maritime matérialise l'emplacement exact du Castell de Gerba : édifié à partir de 1289 par Roger de Lauria sur les vestiges d'une forteresse antique et tenu sous blocus par Ramon Muntaner entre 1309 et 1315, cet ouvrage abritait la garnison almogavre, les réserves d'eau douce et les otages des tribus insurgées de l'île.",
+    "lat": 33.7736,
+    "lng": 10.8862
   },
   {
     "id": 211,
@@ -4349,6 +4409,25 @@
     "lng": -5.0162
   },
   {
+    "id": 3165,
+    "titre": "Création du Conseil des Dix à Venise",
+    "date": 1310,
+    "mois": 7,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "Au tournant du XIVᵉ siècle, la République de Venise traverse une crise constitutionnelle et sociale profonde. La réforme de la Serrata del Maggior Consiglio (« Fermeture du Grand Conseil ») opérée en 1297 sous le dogat de Pietro Gradenigo avait restreint l'accès aux magistratures souveraines à un cercle fermé de familles patriciennes héréditaires, excluant de nombreuses lignées anciennes ainsi que les élites marchandes nouvelles. Parallèlement, la désastreuse guerre de Ferrare contre le pape Clément V (1308–1310), marquée par l'excommunication de Venise et l'interdit commercial frappant ses marchands dans toute l'Europe, exaspère le mécontentement contre le doge.\n\nLe 15 juin 1310, une coalition de grands nobles mécontents conduite par Bajamonte Tiepolo (petit-fils du doge Lorenzo Tiepolo), son beau-père Marco Querini et Badoero Badoer tente de renverser le gouvernement par un coup d'État armé. Leurs colonnes convergent vers la place Saint-Marc pour assassiner Pietro Gradenigo, mais sont brisées dans un combat de rue acharné autour du pont du Rialto et des Mercerie par la garde ducale et les corporations d'artisans demeurées loyales.\n\nAfin d'éradiquer les ramifications secrètes de ce complot et de prévenir toute récidive, le Grand Conseil vote le 10 juillet 1310 la création d'un tribunal d'exception temporaire chargé de veiller à la sûreté intérieure de l'État : le Conseil des Dix (Consiglio dei Dieci).\n\nConçu initialement pour deux mois seulement (jusqu'à la Saint-Michel, le 29 septembre 1310), cet organe est doté d'une architecture institutionnelle redoutable destinée à empêcher toute dictature individuelle tout en garantissant une efficacité inquisitoriale absolue :\n\nUne composition collégiale et tournante : L'assemblée réunit dix patriciens élus pour un an par le Grand Conseil (issus obligatoirement de dix familles différentes, sans lien de parenté proche et non rééligibles immédiatement), siégeant conjointement avec le Doge et ses six conseillers ducaux (la Seigneurie), soit dix-sept votants effectifs, assistés d'un procureur de l'État (Avogador di Comun) sans droit de vote.\n\nLa présidence tournante des trois chefs (Capi dei Dieci) : L'exécutif quotidien du Conseil est confié à trois de ses membres désignés par tirage au sort pour un mandat d'un mois seulement, durant lequel il leur est formellement interdit de sortir en ville ou de fréquenter des particuliers afin de prévenir toute corruption.\n\nDes prérogatives judiciaires et policières illimitées : Habilités à recevoir les dénonciations anonymes (glissées dans les célèbres « bouches de lion », Bocche di Leone), à procéder à des arrestations secrètes, à instruire des procès sans appel ni avocat et à prononcer la peine capitale par strangulation dans les cachots du Palais ducal (Piombi et Pozzi), les Dix exercent un contrôle implacable sur les mœurs politiques de la noblesse vénitienne.\nSur le plan de l'histoire constitutionnelle comparée, l'institution du Conseil des Dix explique le paradoxe célèbre de la stabilité millénaire de la Sérénissime République de Venise au sein d'une Italie communale ravagée par les guerres civiles entre Guelfes et Gibelins et par la montée des seigneuries tyranniques (Signorie, comme les Visconti à Milan ou les Scaligeri à Vérone). En créant un organe policier et judiciaire implacable chargé avant tout de surveiller les membres mêmes de l'aristocratie dirigeante, l'oligarchie vénitienne se dote d'un mécanisme d'autodéfense collective qui brise dans l'œuf toute tentative d'ambition personnelle, de faction familiale ou de clientélisme électoral.\n\nSur le plan de l'évolution des institutions de l'État moderne, le Conseil des Dix outrepasse rapidement sa mission initiale de répression des complots pour devenir le véritable organe secret de gouvernement et de diplomatie de Venise (notamment avec la création en son sein du collège restreint des trois Inquisiteurs d'État au XVIᵉ siècle).\n\nEn raison de la lourdeur des délibérations du Grand Conseil (qui comptait plus de mille membres), les Dix s'emparent progressivement de la conduite des affaires étrangères confidentielles, du chiffrement diplomatique, du contre-espionnage, du contrôle des corporations et de la censure, réalisant un équilibre unique entre la légitimité républicaine large des assemblées et le secret d'État expéditif d'un cabinet restreint.\n\nLes registres secrets des Archives d'État de Venise (Archivio di Stato di Venezia, ASV) : Conservées dans le fonds monumental du Consiglio dei Dieci (séries Misti, Secreti et Criminali), les délibérations consignées dès 1310 permettent de reconstituer avec une précision clinique le fonctionnement réel de l'institution. Contrairement à la légende forgée au XIXᵉ siècle par Pierre Daru ou Lord Byron d'un tribunal sanguinaire et arbitraire frappant aveuglément les innocents, les procès-verbaux prouvent que les Dix obéissaient à une procédure juridique rigoureuse, exigeant une majorité qualifiée pour toute mise à la question et prononçant un nombre relativement restreint de condamnations à mort (dont la plus retentissante fut celle du propre doge Marino Faliero, décapité en 1355 pour avoir conspiré contre la constitution aristocratique).\n\nLe regard de la philosophie politique moderne (Machiavel, Bodin, Montesquieu) : Dès la Renaissance, les théoriciens de l'État analysèrent le Conseil des Dix comme le secret de la longévité vénitienne. Dans ses Discours sur la première décade de Tite-Live (livre I, chapitre 34), Nicolas Machiavel salue cette magistrature comme l'équivalent fonctionnel de la dictature romaine républicaine : une autorité extraordinaire légale permettant à une république libre de réagir instantanément aux périls extrêmes sans détruire ses lois fondamentales.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e4/Venice-government_updated.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "politique",
+      "idees"
+    ],
+    "legende": "La structure gouvernementale de la République de Venise",
+    "lat": 45.4372,
+    "lng": 12.3346
+  },
+  {
     "id": 230,
     "titre": "Révolte des villes Lombardes contre Henri VII",
     "date": 1311,
@@ -4588,6 +4667,42 @@
     "legende": "Illustration d'un pont le long du canal Khalij au Caire, d'après la Description de l'Égypte Légende originale : \"Ponts situés sur le canal du Kaire\"",
     "lat": 31.1992,
     "lng": 29.8952
+  },
+  {
+    "id": 3148,
+    "titre": "Mort d'Arnau de Vilanova (Arnaud de Villeneuve)",
+    "date": 1311,
+    "mois": 9,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au début du mois de septembre 1311, alors qu'il navigue de Sicile vers la Provence pour rejoindre le pape Clément V à la veille de l'ouverture du concile général de Vienne, le plus célèbre médecin et penseur de la Méditerranée occidentale, Arnau de Vilanova (né vers 1240, très probablement dans le royaume de Valence nouvellement conquis), s'éteint brutalement en mer à bord de sa nef au large de Gênes le 6 septembre 1311. \nSa disparition interrompt une carrière hors norme, au carrefour de la médecine clinique, de la diplomatie monarchique et du prophétisme eschatologique.\n\nÉduqué à Montpellier et parfait connaisseur de la langue arabe, Arnau de Vilanova avait révolutionné la science médicale occidentale grâce à ses traductions directes de traités de Galien, d'Avicenne (Ibn Sina), d'Al-Kindi et d'Avenzoar (Ibn Zuhr), ainsi que par la rédaction d'œuvres majeures telles que le Regimen sanitatis ad regem Aragonum (dédié au roi d'Aragon) et les Aphorismi de gradibus.\n\nAttaché comme médecin personnel et conseiller intime au roi d'Aragon Jacques II le Juste, ainsi qu'à son frère Frédéric III de Sicile et aux papes Boniface VIII, Benoît XI et Clément V, il jouissait d'un ascendant considérable à la cour de Barcelone et de Valence.\n\nCependant, dès le tournant du XIVᵉ siècle, Arnau avait doublé son autorité médicale d'une intense prédication religieuse inspirée des courants joachimites et des Franciscains spirituels (Fraticelles) et Béguins du Languedoc et de Catalogne.\n\nDans des traités incendiaires rédigés tant en latin qu'en langue vernaculaire catalane (tels que le De tempore adventus Antichristi, la Confessió de Barcelona de 1305 et l'Informació espiritual al rei Frederic de 1310), il annonçait l'imminence de la venue de l'Antéchrist, fustigeait la richesse scandaleuse et la simonie de la hiérarchie ecclésiastique, et exhortait les souverains d'Aragon et de Sicile à imposer par le glaive une réforme évangélique fondée sur la pauvreté apostolique et la charité active envers les indigents.\n\nProtégé de son vivant par la faveur inébranlable de Jacques II, il n'échappa aux foudres de l'Inquisition que par sa mort en mer : dès 1316, l'archevêque de Tarragone fera condamner et livrer au bûcher quatorze de ses ouvrages spirituels.\n\nSur le plan de l'histoire des sciences médiévales, Arnau de Vilanova incarne le chaînon décisif entre la médecine arabo-andalouse et la scolastique médicale de Montpellier et de Valence. En introduisant la théorie mathématique des degrés des médicaments composés (inspirée d'Al-Kindi) et en systématisant la diététique préventive (regimina sanitatis), il a contribué à faire de Valence et de Barcelone des pôles d'excellence scientifique capables de rivaliser avec Bologne et Paris. Son enseignement nourrira directement l'école médicale valencienne du XIVᵉ siècle et préparera l'essor des premiers grands hôpitaux civiques de la Couronne d'Aragon.\n\nSur le plan de l'histoire religieuse et politique, l'influence d'Arnau sur Jacques II d'Aragon et sur l'élite intellectuelle valencienne éclaire les racines du messianisme monarchique catalano-aragonais. Arnau a persuadé le monarque que la dynastie de Barcelone était investie d'une mission providentielle : purifier l'Église romaine, soumettre les royaumes musulmans d'Espagne et d'Afrique du Nord et mener la reconquête finale de Jérusalem.\n\nCet idéal de monarchie évangélique réformatrice imprégnera durablement la spiritualité laïque des élites urbaines de Valence (marchands, notaires et artisans béguins) tout au long du XIVᵉ siècle, suscitant une piété intérieure en langue vernaculaire qui s'épanouira chez des auteurs majeurs comme Francesc Eiximenis et saint Vincent Ferrier.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Nuremberg_Chronicle_f_224r_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "sciences"
+    ],
+    "legende": "Gravure sur bois extraite de la Chronique de Nuremberg (édition latine à Sao Paulo)",
+    "lat": 39.4697,
+    "lng": -0.3763
+  },
+  {
+    "id": 3149,
+    "titre": "Achèvement du Castell de Bellver à Palma de Majorque",
+    "date": 1311,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au lendemain de la restitution de son royaume insulaire par son neveu Jacques II d'Aragon en vertu du traité d'Anagni (1295), le roi Jacques II de Majorque (fils cadet de Jacques Iᵉʳ le Conquérant) entreprend un vaste programme de refondation urbanistique et monumentale destiné à affirmer la splendeur de sa jeune monarchie (englobant les îles Baléares, les comtés de Roussillon et de Cerdagne, et la seigneurie de Montpellier). À trois kilomètres à l'ouest de la cité maritime de Palma, sur une colline boisée culminant à plus de cent mètres d'altitude et offrant un panorama imprenable sur l'ensemble de la baie (« Bell ver » signifiant « belle vue » en catalan médiéval), le souverain ordonne dès 1300 l'édification d'une résidence fortifiée hors du commun, achevée en 1311.\n\nConçu sous la maîtrise d'œuvre de l'architecte royal Pere Salvà (qui dirigeait parallèlement la transformation du palais de l'Almudaina à Palma), le Castell de Bellver constitue un unicum absolu dans l'architecture gothique espagnole et européenne en raison de son plan géométrique parfaitement circulaire :\n\nL'enceinte annulaire et les tours flanquantes : L'édifice s'organise autour d'un anneau maçonné continu de deux étages flanqué de trois tours semi-circulaires engagées, orientées selon les points cardinaux, et d'une quatrième tour majeure totalement détachée du corps principal.\n\nLa Tour de l'Hommage (Torre de l'Homenatge) : D'une hauteur de plus de trente-trois mètres, ce donjon circulaire isolé s'élève au nord-est au milieu du fossé sec et n'est relié au chemin de ronde du palais que par un pont-levis aérien en pierre de sept mètres de portée soutenu par un arc brisé. Ce dispositif garantissait au monarque un ultime réduit inviolable en cas de prise de l'enceinte basse ou de mutinerie intérieure.\n\nLa cour d'honneur circulaire à double galerie (Pati d'armes) : Au centre de l'anneau s'ouvre un vaste patio circulaire pavé, abritant en son sous-sol une immense citerne recueillant les eaux pluviales. Le rez-de-chaussée présente un portique sobre de vingt-et-un arcs en plein cintre reposant sur de massifs piliers octogonaux, tandis que le bel étage (piano nobile) déploie une galerie gothique d'une légèreté aérienne composée de quarante-deux arcs brisés doublés d'oculi quadrilobés et portés par de fines colonnettes octogonales.\n\nBâti en pierre calcaire dorée extraite des carrières locales de Santanyí et de Portals Vells, Bellver offrait au roi et à sa cour des appartements royaux climatisés par la brise marine, une chapelle dédiée à saint Marc, de vastes cuisines et des salles de réception voûtées d'ogives.\nSur le plan de l'histoire de l'architecture et des transferts culturels méditerranéens, le plan circulaire intégral de Bellver témoigne de la position de carrefour civilisationnel du Royaume de Majorque entre l'Orient byzantino-islamique et l'Occident gothique. Si les historiens de l'art ont longtemps recherché des antécédents dans les donjons circulaires de Philippe Auguste en France ou dans les fortifications des croisés en Terre sainte, les travaux comparatifs modernes soulignent la filiation directe avec l'Hérodion de Judée et les palais omeyyades circulaires ou octogonaux d'Orient, ainsi qu'avec la géométrie savante du Castel del Monte édifié dans les Pouilles par l'empereur Frédéric II Hohenstaufen au XIIIᵉ siècle. Pere Salvà a réalisé la synthèse parfaite de la rationalité poliorcétique — la forme circulaire supprimant tout angle mort pour les tirs des défenseurs et déviant les projectiles des pierriers — et de l'esthétique courtoise du gothique méditerranéen (caractérisée par l'horizontalité des lignes, la sobriété murale et le raffinement des galeries à colonnettes).\n\nSur le plan politique et dynastique, l'érection de Bellver exprime la volonté d'affirmation souveraine de la branche cadette de Majorque face à la tutelle pesante de la Couronne d'Aragon. Contraint par le traité d'Anagni (1295) de reconnaître la suzeraineté vassalique du roi de Barcelone, Jacques II de Majorque utilise l'architecture de prestige comme un manifeste de majesté indépendante.\n\nÀ la fois observatoire maritime surveillant l'arrivée des flottes de Barcelone, de Gênes ou du Maghreb, et résidence de plaisance sécurisée à l'écart des turbulences urbaines de Palma, Bellver incarne l'âge d'or éphémère de cette monarchie maritime avant son annexion militaire définitive par Pierre IV le Cérémonieux en 1343–1344.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Mallorca_-_Palma_de_Mallorca_-_Castell_de_Bellver_1.jpg/1920px-Mallorca_-_Palma_de_Mallorca_-_Castell_de_Bellver_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "techniques",
+      "art"
+    ],
+    "legende": "Castell de Bellver niché au sommet de sa colline boisée dominant le port et la baie de Palma de Majorque.",
+    "lat": 39.5696,
+    "lng": 2.6501
   },
   {
     "id": 236,
@@ -4883,6 +4998,43 @@
     ],
     "lat": 34.6402,
     "lng": 39.0494
+  },
+  {
+    "id": 3150,
+    "titre": "1ere pierre du chevet gothique de la cathédrale de Gérone introduction du gothique rayonnant languedocien en Catalogne,",
+    "date": 1312,
+    "mois": 4,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au tournant du XIVᵉ siècle, l'antique cathédrale romane de Sainte-Marie de Gérone (Santa Maria de Girona), consacrée en 1038 à l'intérieur des murailles de la Força Vella, s'avère désormais trop exiguë et vétuste pour accueillir la liturgie capitulaire d'une cité en pleine expansion démographique et marchande. L'évêque Guillem de Vilamarí et les chanoines du chapitre cathédral forment le projet ambitieux de substituer à l'édifice roman un sanctuaire monumental digne des grandes métropoles d'Europe occidentale.\n\nLe 29 avril 1312, réuni en séance capitulaire extraordinaire, le chapitre de Gérone formalise officiellement la décision de bâtir un nouveau chevet gothique et institue une fabrique dotée de rentes perpétuelles prélevées sur les dîmes diocésaines.\n\nPour mener à bien cette entreprise, les chanoines recrutent un maître d'œuvre venu du Languedoc voisin, l'architecte français Henri de Narbonne (Enric de Narbona), formé sur le chantier de la cathédrale Saint-Just-et-Saint-Pasteur de Narbonne.\n\nLe parti architectural adopté en 1312 introduit en Catalogne les canons du gothique rayonnant méridional :\n\nLe plan à déambulatoire (girola) et chapelles rayonnantes : Contrairement à la sobriété traditionnelle des églises catalanes à abside unique, Henri de Narbonne dessine un vaste chœur polygonal entouré d'un déambulatoire ouvrant sur neuf chapelles rayonnantes polygonales dédiées aux saints patrons et aux fondations funéraires des grands lignages de l'Ampourdan.\n\nL'élévation à trois niveaux adaptée au climat méditerranéen : Le chevet est conçu pour s'élever à une hauteur vertigineuse (près de vingt-six mètres sous voûte), éclairé par de hautes baies lancettes surmontées d'oculi quadrilobés et soutenu à l'extérieur par un double réseau d'arcs-boutants en pierre calcaire extraite des carrières locales de Gérone.\n\nLa dynamique d'un chantier séculaire : Henri de Narbonne dirige le montage des fondations et des chapelles absidiales jusqu'à sa mort en 1320, date à laquelle lui succède un autre architecte languedocien, Jacques de Fauran (venu de la cathédrale de Narbonne).\n\nLorsque le chevet à trois vaisseaux est achevé vers 1347, sa largeur considérable pose un défi d'ingénierie inédit pour son raccordement à la nef occidentale. Après d'âpres débats techniques entre les plus grands architectes de la péninsule (réunis lors des fameuses consultations de 1386 et 1416), le maître d'œuvre Guillem Bofill imposera la solution audacieuse de couvrir l'ensemble de l'espace par une nef unique sans bas-côtés de 22,98 mètres de largeur intérieure (pour 34 mètres de hauteur), faisant de la cathédrale de Gérone le plus large vaisseau voûté d'ogives de toute l'architecture gothique médiévale.\nSur le plan de l'histoire de l'art médiéval, l'acte du 29 avril 1312 constitue le jalon décisif de la réception et de l'acclimatation du gothique français dans la Couronne d'Aragon. Jusqu'au début du XIVᵉ siècle, l'architecture catalane restait profondément attachée au style roman tardif (l'école dite de Lérida) ou à l'austérité des ordres mendiants. En faisant appel aux maîtres d'œuvre de Narbonne (au moment même où s'élevaient également les chevets des cathédrales de Barcelone et de Palma de Majorque), le chapitre de Gérone intègre la Catalogne dans l'aire culturelle du gothique rayonnant languedocien (inspiré par les recherches spatiales de Jean Deschamps à Clermont-Ferrand, Limoges et Narbonne).\n\nSur le plan sociopolitique et économique, ce chantier titanesque reflète l'apogée de la puissance fiscale des chapitres cathédraux et de l'oligarchie urbaine catalane sous le règne de Jacques II le Juste. La cathédrale n'est pas seulement un édifice cultuel ; elle est le monument civique par excellence où s'exprime le patriotisme local (patriotisme municipal) de Gérone face à Barcelone et Perpignan.\n\nL'investissement massif dans la pierre calcaire et les vitraux historiés témoigne de la prospérité commerciale et drapière de la Catalogne du premier tiers du XIVᵉ siècle, avant que la Peste noire de 1348 et les guerres contre la Castille ne viennent ralentir le rythme des constructions monumentales.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Catedral_de_Girona_-_Nau_central.JPG/1920px-Catedral_de_Girona_-_Nau_central.JPG?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "art"
+    ],
+    "legende": "Grande nef centrale , perspective monumentale de la grande nef unique voûtée d'ogives et la rosace occidentale de la Cathédrale de Gérone, aboutissement audacieux du chantier amorcé en 1312.  Ce document spatial permet de saisir l'ampleur titanesque du vaisseau : d'une portée record de près de vingt-trois mètres sans aucun pilier intermédiaire, cette voûte unifiée débouche directement sur l'arc triomphal ouvrant vers le chevet à trois vaisseaux conçu par Henri de Narbonne.",
+    "lat": 41.9793,
+    "lng": 2.8199
+  },
+  {
+    "id": 3166,
+    "titre": "De Monarchia (et diffusion de l'Enfer) par Dante Alighieri",
+    "date": 1312,
+    "date_fin": 1313,
+    "zones": [
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Condamné à l'exil perpétuel et au bûcher par la commune guelfe noire de Florence en 1302, le poète et ancien prieur florentin Dante Alighieri (1265–1321) voit se lever en 1310 une espérance politique inouïe : le nouveau roi des Romains, Henri VII de Luxembourg, franchit les Alpes à la tête d'une armée pour restaurer l'autorité impériale en Italie, pacifier les cités déchirées entre Guelfes et Gibelins et recevoir la couronne impériale à Rome. Enthousiasmé par ce prince qu'il salue comme un nouveau Messie pacificateur (« Ecce Agnus Dei »), Dante accompagne par ses écrits la progression impériale, fustigeant dans des lettres enflammées l'orgueil républicain de Florence qui organise la résistance militaire contre l'empereur (1311–1312).\n\nAu cœur de cette crise majeure opposant l'empereur Henri VII au pape d'Avignon Clément V et au roi angevin Robert de Naples (1312–1313), Dante entreprend de donner à sa vision politique une fondation philosophique et juridique irréfutable en rédigeant en latin le traité De Monarchia (« De la Monarchie universelle »), parallèlement à l'achèvement et à la diffusion des manuscrits de l'Enfer (Inferno).\n\nStructuré selon la rigueur logique du syllogisme scolastique en trois livres complémentaires, le De Monarchia bouleverse la pensée politique médiévale :\n\nLivre I — La nécessité d'une Monarchie temporelle universelle : S'appuyant sur la Politique d'Aristote, Dante démontre que la fin propre de l'humanité consiste à actualiser toute la puissance de l'intellect humain. Or, cette œuvre de civilisation exige la paix universelle, laquelle ne peut être garantie que par un arbitre suprême unique — l'Empereur — placé au-dessus de toutes les convoitises territoriales des rois et des cités particulières.\n\nLivre II — La légitimité providentielle de l'Empire romain : Dante établit que le peuple romain a conquis l'empire du monde non par la simple violence brutale, mais par un jugement de Dieu manifesté par ses vertus civiques héroïques et confirmé par le Christ lui-même, qui choisit de naître sous le recensement d'Auguste et d'être jugé sous l'autorité légale de Tibère.\n\nLivre III — L'indépendance directe du pouvoir impérial vis-à-vis de la papauté : Réfutant point par point les décrétales hiérocratiques (notamment la bulle Unam Sanctam promulguée par Boniface VIII en 1302) et la prétendue « Donation de Constantin » (qu'il déclare juridiquement nulle, l'empereur n'ayant pas le droit d'aliéner la tunique sans couture de l'Empire), Dante démontre que l'autorité de l'Empereur procède directement de Dieu, sans passer par la médiation du pape. L'homme étant ordonné à deux fins distinctes — la félicité terrestre (guidée par l'Empereur selon les enseignements de la philosophie) et la béatitude éternelle (guidée par le Pape selon la Révélation) —, les deux pouvoirs constituent « deux soleils » (due soli) autonomes et égaux dans leur sphère respective (comme Dante l'exprimera également au chant XVI du Purgatoire).\n\nSimultanément, la diffusion publique de l'Enfer (1313–1314) frappe les contemporains comme un coup de tonnerre : dans une langue vernaculaire toscane d'une puissance plastique inégalée, Dante damne sans pitié les papes simoniaques (Nicolas III, Boniface VIII et même Clément V, encore vivant lors de la composition du chant XIX), les traîtres à l'Empire (Brutus et Cassius broyés aux côtés de Judas dans les mâchoires de Lucifer au chant XXXIV) et les factions corrompues de Florence.\nSur le plan de l'histoire de la philosophie politique occidentale, le De Monarchia constitue le manifeste fondateur de l'autonomie du politique et de la laïcité de l'État moderne (en convergence directe avec le Defensor Pacis composé une décennie plus tard en 1324 par Marsile de Padoue). En arrachant la légitimité du pouvoir civil à la tutelle théocratique de la papauté, Dante affranchit la sphère temporelle de la subordination ecclésiale : l'État n'est plus un simple « bras séculier » subordonné au sacerdoce, mais une institution naturelle et divine autonome dotée de sa propre finalité rationnelle et morale.\n\nSur le plan de l'histoire littéraire et culturelle européenne, la publication conjointe du traité latin De Monarchia et de l'Enfer en langue vulgaire illustre le double magistère intellectuel revendiqué par Dante en exil. Privé de toute charge publique dans sa patrie florentine, le poète s'érige en conscience morale et prophétique de la chrétienté : tandis que la prose latine rigoureuse du De Monarchia s'adresse aux juristes bolonais, aux clercs et aux chancelleries impériales pour fonder en droit la séparation des pouvoirs, la poésie visionnaire de la Comédie s'adresse à l'ensemble des lecteurs laïcs pour opérer la réforme spirituelle et civique de l'Italie.\nLe débat philologique sur la datation du De Monarchia (1312–1313 contre 1317–1318) : Pendant longtemps, les éditeurs ont hésité entre deux hypothèses chronologiques. La majorité des historiens (notamment Bruno Nardi, Michele Barbi et Gustavo Vinay) situent la rédaction au cœur de l'expédition d'Henri VII en 1312–1313, soulignant l'urgence brûlante de la polémique contre les juristes guelfes de Robert de Naples et de Clément V. Toutefois, le philologue Pier Giorgio Ricci a relevé dans le livre I (chapitre 12) un renvoi explicite au Paradis (« sicut in Paradiso Comedie iam dixi »), ce qui conduit la critique moderne (Prue Shaw, Diego Quaglioni) à admettre que si le corps du traité fut bien conçu et rédigé en 1312–1313 dans l'enthousiasme de la descente d'Henri VII, Dante y apporta une ultime révision textuelle vers 1317–1318 à Vérone ou à Ravenne, peu avant sa mort en 1321.\n\nL'inquisition et le bûcher de Bologne en 1329 (le témoignage de Boccace) : Dans son Trattatello in laude di Dante, Jean Boccace relate que le traité politique de Dante demeura presque ignoré jusqu'en 1327–1328, date à laquelle les partisans de l'empereur Louis IV de Bavière (et notamment Marsile de Padoue et Jean de Jandun) l'exhumèrent comme arme de propagande contre le pape Jean XXII. En riposte, le légat pontifical Bertrand du Pouget fit solennellement condamner l'ouvrage au bûcher à Bologne en 1329 et menaça d'exhumer et de brûler les ossements mêmes de Dante à Ravenne, projet sacrilège qui ne fut empêché que par l'intervention ferme des seigneurs Guido Novello da Polenta et Pino della Tosa.\n\nL'attestation précoce de la diffusion de l'Enfer (1314) : L'achèvement et la circulation publique de l'Enfer dès 1313–1314 sont prouvés de manière irréfutable par les gloses marginales des Documenti d'Amore du poète et juriste toscan Francesco da Barberino (rédigées en 1314), qui cite explicitement l'œuvre de Dante sur les peines infernales, ainsi que par les registres des notaires de Bologne (Memoriali bolognesi) qui recopient des tercets de l'Enfer dès 1317.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Domenico_di_Michelino_Dante_und_die_drei_Reiche_Dom_Florenz-01-edit.jpg/960px-Domenico_di_Michelino_Dante_und_die_drei_Reiche_Dom_Florenz-01-edit.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "litterature",
+      "idees"
+    ],
+    "legende": "fresque peinte en 1465 par Domenico di Michelino dans la nef de la Cathédrale Santa Maria del Fiore (le Duomo) de Florence, intitulée La Divine Comédie illuminant Florence.  Cette œuvre monumentale synthétise l'ensemble de l'aventure intellectuelle et politique de Dante : debout aux portes de sa patrie florentine qui l'avait banni en 1302, le poète tient ouvert le livre de sa Comédie (publiée à partir de 1313–1314) tout en désignant de la main droite les cercles de l'Enfer et les damnés, tandis que s'élèvent derrière lui la montagne du Purgatoire et les sphères célestes du Paradis.",
+    "lat": 45.4385,
+    "lng": 10.9924
   },
   {
     "id": 245,
@@ -5916,7 +6068,6 @@
     "mois": 3,
     "zones": [
       "Castille",
-      "Aragon",
       "Afrique du Nord"
     ],
     "type": 4,
@@ -6182,6 +6333,25 @@
     ],
     "lat": 30.0444,
     "lng": 31.2357
+  },
+  {
+    "id": 3146,
+    "titre": "Création de l'Ordre de Montesa par la bulle Pia matris ecclesia",
+    "date": 1317,
+    "mois": 6,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "Depuis la suppression canonique de l'Ordre du Temple au concile de Vienne en mars 1312, le sort des immenses commanderies et forteresses templières du Royaume de Valence demeurait en suspens. Le roi d'Aragon Jacques II le Juste s'était farouchement opposé à ce que ce patrimoine stratégique fût transféré aux Hospitaliers de Saint-Jean de Jérusalem, redoutant qu'un ordre international puissant et autonome ne constituât une principauté ecclésiastique hors de contrôle sur sa frontière maritime méridionale face à l'émirat de Grenade et aux flottes mérinides.\n\nPendant cinq années (1312–1317), la diplomatie aragonaise mène un combat tenace auprès du Saint-Siège, freiné d'abord par l'indécision de Clément V puis par la longue vacance pontificale consécutive à sa mort en 1314. Dès l'élection du pape Jean XXII à Lyon en août 1316, Jacques II dépêche à Avignon son plus habile négociateur, le chevalier et diplomate Vidal de Vilanova, porteur d'un projet institutionnel inédit : la création d'un nouvel ordre religieux-militaire national exclusivement cantonné aux frontières du royaume de Valence.\n\nAprès d'âpres tractations financières et juridiques avec le grand maître de l'Hôpital Foulques de Villaret, Jean XXII cède aux vues du monarque aragonais. Le 10 juin 1317, il promulgue la bulle fondatrice « Pia matris ecclesia » (parallèle à la bulle Ad fructus uberes), qui institue officiellement l'Ordre militaire de Santa María de Montesa :\n\nLa dotation patrimoniale croisée : Le nouvel ordre reçoit l'intégralité des anciens biens, rentes et châteaux du Temple dans le royaume de Valence (les places fortes de Peñíscola, Chivert, Ares del Maestre, Culla, Cuevas de Vinromá, Burriana et Onda), mais également — par un coup de maître négocié — la quasi-totalité des biens que possédaient déjà les Hospitaliers dans ce même royaume (à l'exception de la commanderie de Torrent et d'un hôtel à Valence). En compensation, les Hospitaliers reçoivent la totalité des biens templiers situés en Aragon proprement dit et en Catalogne.\n\nL'ancrage castral et la règle cistercienne : Jacques II cède à la nouvelle milice le château fort royal et la ville de Montesa (au sud de Xàtiva), qui devient son chef-lieu conventuel. Sur le plan spirituel, l'ordre est affilié à l'Ordre de Cîteaux sous l'observance de la règle de saint Benoît et placé sous la visite canonique des abbés des monastères royaux catalans de Santes Creus et de Valldigna, adoptant l'habit blanc orné d'une croix fleurdelysée noire (à laquelle s'ajoutera plus tard la croix rouge de Saint-Georges d'Alfama).\n\nLa constitution effective en 1319 : Après le règlement des derniers inventaires fonciers, l'installation officielle a lieu le 22 juillet 1319 dans la chapelle du palais royal de Barcelone en présence de Jacques II : les premiers frères reçoivent l'habit des mains de l'abbé de Santes Creus et élisent comme premier grand maître le chevalier catalan Guillem d'Erill.\n\nSur le plan de l'histoire constitutionnelle et de la géopolitique péninsulaire, la bulle Pia matris ecclesia représente l'un des chefs-d'œuvre de la diplomatie monarchique du XIVᵉ siècle. Par un habile jeu d'échanges territoriaux, Jacques II réussit simultanément à éliminer l'implantation militaire des Hospitaliers dans le royaume de Valence et à empêcher l'émergence d'une puissance féodale autonome. L'Ordre de Montesa est conçu dès son acte de naissance comme une institution nationale strictement endogène : ses membres sont recrutés exclusivement au sein de la noblesse aragonaise, catalane et valencienne, ses biens ne peuvent en aucun cas être aliénés hors du royaume, et ses dignitaires prêtent un serment d'hommage direct au roi d'Aragon.\n\nSur le plan stratégique et défensif, la fondation de Montesa assure la sanctuarisation militaire de la frontière méridionale et maritime de Valence. Le nouvel ordre dispose d'un domaine continu couvrant tout le nord du royaume (le Maestrazgo, ainsi nommé en référence à la juridiction du grand maître de Montesa) jusqu'aux marches de Murcie.\n\nCet ordre-frontière devient le bouclier permanent de la Couronne d'Aragon contre les incursions des corsaires nord-africains et les tentatives de débarquement mérinides, démontrant avec deux ans d'avance la voie que suivra le roi Denis Iᵉʳ de Portugal lors de la création de l'Ordre du Christ en 1319.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Sala_Capitular_del_Castell_de_Montesa.JPG/1280px-Sala_Capitular_del_Castell_de_Montesa.JPG?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "religion",
+      "diplomatie"
+    ],
+    "legende": "vestiges monumentaux de l'ancien château fort et couvent royal de Montesa (province de Valence), perché sur son promontoire rocheux dominant la vallée de la Costera.  Cette citadelle de pierre incarne le cœur institutionnel de l'Ordre créé en 1317 : cédé par le roi Jacques II pour devenir la maison mère (Sacro Convento) de la nouvelle milice, ce complexe castral et monastique abrita le chapitre général, les archives et le trésor des grands maîtres jusqu'au tremblement de terre dévastateur de 1748.",
+    "lat": 38.9482,
+    "lng": -0.6493
   },
   {
     "id": 302,
@@ -6637,7 +6807,6 @@
     "mois": 6,
     "zones": [
       "Castille",
-      "Aragon",
       "Afrique du Nord"
     ],
     "type": 3,
@@ -6690,6 +6859,23 @@
     "lat": 37.2227,
     "lng": -3.6866,
     "serie": "Reconquista"
+  },
+  {
+    "id": 3147,
+    "titre": "Les Cortes générales de Tarragone et le Privilège d'Union perpétuelle",
+    "date": 1319,
+    "mois": 10,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au tournant de l'année 1319, la Couronne d'Aragon traverse une crise dynastique aiguë provoquée par le comportement imprévisible de son prince héritier, l'infant Jacques d'Aragon (né en 1296). En dépit des pressions répétées de son père le roi Jacques II le Juste, le jeune prince manifeste une aversion insurmontable envers le mariage et le gouvernement temporel : après avoir été contraint par la raison d'État d'épouser l'infante Éléonore de Castille à Gandesa en octobre 1319, il abandonne brutalement son épouse au pied de l'autel pour s'enfuir et prendre l'habit monastique.\n\nAfin d'éviter qu'un tel scandale ne fragilise l'unité de ses États ni ne provoque un démembrement patrimonial entre ses fils cadets, Jacques II convoque à Tarragone une assemblée générale extraordinaire réunissant les représentants des trois entités historiques de sa monarchie : le Royaume d'Aragon, la Principauté de Catalogne (comté de Barcelone) et le Royaume de Valence.\n\nLe 14 décembre 1319, avant même d'enregistrer officiellement la renonciation de l'aîné (qui sera proclamée huit jours plus tard le 22 décembre 1319 au couvent des Frères Mineurs), le roi promulgue un acte juridique solennel et irrévocable connu sous le nom de Privilège d'Union (Privilegio de Unión).\n\nCe diplôme royal pose les fondements constitutionnels de la monarchie composite :\n\nL'indivisibilité perpétuelle des trois États : Jacques II décrète sous serment, pour lui-même et pour tous ses successeurs à perpétuité, que les royaumes d'Aragon et de Valence ainsi que le comté de Barcelone (Catalogne) demeureront à jamais indissolublement unis sous un seul sceptre et une même couronne.\n\nL'interdiction absolue d'aliénation ou d'apanage : Le souverain s'interdit formellement de diviser, donner, vendre, échanger ou léguer en apanage à un infant cadet la moindre parcelle de l'un de ces trois territoires.\n\nLa consécration constitutionnelle du Royaume de Valence : Le texte énumère et place sur un pied d'égalité juridique stricte les trois entités constitutives. Le Royaume de Valence, conquis sur l'Islam par Jacques Iᵉʳ le Conquérant au siècle précédent, cesse définitivement d'être perçu comme une simple marche de colonisation ou une dépendance subordonnée à l'Aragon ou à la Catalogne : il est consacré comme un royaume souverain autonome, inaliénable et membre fondateur à part entière de la Couronne d'Aragon, doté de ses propres Furs (fors), de ses propres Corts et de sa propre personnalité juridique.\n\nSur le plan de l'histoire du droit constitutionnel européen, le Privilège d'Union de 1319 marque l'acte de naissance juridique définitif de la « Couronne d'Aragon » conçue comme une fédération monarchique unitaire et inaliénable. Contrairement aux pratiques patrimoniales encore vivaces en France ou en Castille (où les rois n'hésitaient pas à morceler leur royaume pour doter leurs fils puînés), Jacques II institue une véritable loi fondamentale de l'État (lex fundamentalis) : la Couronne est désormais une personne morale publique transcendant la volonté individuelle du monarque régnant, qui n'en est plus le propriétaire privé mais le dépositaire usufruitier.\n\nSur le plan de la structuration géopolitique et identitaire de la péninsule Ibérique, ce texte scelle la tripartition institutionnelle classique de l'Est hispanique (Aragon, Catalogne, Valence) qui perdurera intacte pendant près de quatre siècles, jusqu'aux décrets de Nueva Planta de Philippe V en 1707–1716.\n\nEn sanctuarisant le statut du royaume de Valence au moment même où l'Ordre militaire de Montesa venait d'être installé (juillet 1319), Jacques II protège ce territoire contre toute tentative d'absorption administrative par les barons aragonais (qui revendiquaient l'extension du Fuero de Aragón aux terres valenciennes).\n\nLe Privilège d'Union garantit ainsi l'équilibre interne de la monarchie composite, condition indispensable pour permettre l'expansion méditerranéenne ultérieure vers la Sardaigne (1323), la Sicile et la Grèce.",
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 41.0527,
+    "lng": 0.6268
   },
   {
     "id": 206,
@@ -7711,7 +7897,7 @@
     "titre": "1ere forge hydraulique",
     "date": 1323,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 3,
     "description": "Construction sur ordre du comte Édouard Ier de Bar d'une forge hydraulique à la confluence de l'Orne et du Conroy à Moyeuvre-Grande. Elle est la plus ancienne connue de la France actuelle.\n\nDepuis de nombreux siècles le travail du fer a donné de l’ouvrage aux habitants de la vallée de l’Orne. Des traces d’activité métallurgique datant des époques romaines et mérovingiennes ont été mises en évidence dans la contrée.\n\nEn 1323, le comte Édouard Ier de Bar fait construire, près de la confluence de l’Orne et du Conroy, une forge hydraulique, la plus ancienne forge de ce type connue de la France actuelle. Au XVIIe siècle, la forge de Moyeuvre est la plus importante d’Europe.\n\nLa sidérurgie Lorraine était en plein essor dans la seconde moitié du XVIe siècle. La forge de Moyeuvre, située dans le duché de Lorraine et de Bar, entre Metz et Thionville, était le fleuron tant au niveau quantitatif que qualitatif. Cette forge ducale très mal connue témoigne de la croissance de l’industrie du fer à l’époque prémoderne. La forge de Moyeuvre tire probablement son origine de la première forge hydraulique construite en Lorraine vers 1324. Édouard Ier de Bar né vers 1295, mort en novembre 1336 à Famagouste, est comte de Bar de 1302 à 1336.\n\nIl est fils d'Henri III, comte de Bar, et d'Aliénor d'Angleterre. En 1310, à l'âge de quinze ans, il épouse Marie de Bourgogne, l'une des filles du duc de Bourgogne Robert II et d'Agnès de France. Édouard est déclaré majeur à la suite de son mariage. Lors d'une bataille à Frouard, il est fait prisonnier en 1313 par le duc de Lorraine Ferry IV. Édouard est libéré quelques mois plus tard à la suite du versement d'une énorme rançon de 90 000 livres prévue par le traité de Bar-sur-Aube signé le 20 mai 1314, payée en partie sur les deniers messins.\n\nIl est à l'origine de la construction de la forge hydraulique de Moyeuvre-Grande en 1323. En 1324, il se lance dans la guerre des quatre seigneurs contre la ville de Metz, autant pour annuler ses dettes, contractées pour payer sa rançon, que pour faire valoir des droits seigneuriaux.\n\nEn 1328, il participe aux côtés de Philippe VI de Valois à la bataille de Cassel.\n\nIl part ensuite vers l'Orient, avec Philippe III de Namur et d'autres seigneurs du Saint-Empire, avec l'intention de faire croisade. Il débarque dans l'île de Chypre. L'expédition tourne mal et les habitants de Famagouste les massacrent.",
@@ -8031,6 +8217,24 @@
     "lng": 31.2357
   },
   {
+    "id": 3154,
+    "titre": "Les milices chrétiennes (farfanes) et les fondouks catalans à Tunis au XIVᵉ siècle",
+    "date": 1323,
+    "zones": [
+      "Aragon",
+      "Afrique du Nord"
+    ],
+    "type": 4,
+    "description": "Au XIVᵉ siècle, en dépit de l'idéologie officielle de croisade et de jihād proclamée des deux côtés de la Méditerranée, les relations entre la Couronne d'Aragon et le Califat hafside de Tunis reposent sur une coopération institutionnelle, militaire et commerciale d'une remarquable sophistication. Cette symbiose s'incarne dans deux institutions complémentaires ancrées au cœur même de la capitale tunisienne : la garde mercenaire chrétienne (les farfanes) et le réseau des fondouks (alfòndecs) et consulats catalans.\n\nD'une part, confrontés aux révoltes incessantes des tribus bédouines arabes et aux complots de palais, les souverains hafsides entretiennent à Tunis une garde prétorienne de chevaliers et d'arbalétriers chrétiens (originaires de Catalogne, d'Aragon, de Castille et de Majorque), désignés dans les sources arabes sous le nom de ‘ulūj ou d'Ifranj et dans les sources ibériques sous le terme de farfanes (de l'arabe farḥān, « joyeux/braves », ou fāris, « cavalier ») :\n\nCommandement et solde : Placé sous l'autorité d'un capitaine noble nommé ou agréé par le roi d'Aragon (le capità dels cristians ou alcayd, souvent issu des grands lignages catalans comme les Montcada ou les Despuig), ce corps d'élite réside dans un quartier fortifié attenant à la Kasbah de Tunis (Rabaḍ al-Naṣārā, le faubourg des Chrétiens).\n\nPrivilèges religieux et fiscaux : Les miliciens perçoivent une solde élevée versée directement par le Trésor califal (dont une fraction importante est rétrocédée au roi d'Aragon à titre de tribut), disposent d'une église dédiée à la Vierge Marie desservie par des chapelains catholiques, ont le droit de sonner les cloches à l'intérieur de leur enclos et bénéficient d'une immunité judiciaire complète sous la juridiction de leur propre capitaine.\n\nD'autre part, le négoce maritime est encadré par le système des fondouks (alfòndecs) et consulats nationaux, situés à proximité immédiate de la porte orientale de Tunis (Bab El Bhar) ouvrant sur la rade de La Goulette :\n\nExtraterritorialité et fonction économique : Le fondouk est un vaste caravansérail urbain clos de hauts murs et fermé la nuit par une porte massive, abritant des entrepôts de marchandises au rez-de-chaussée, des logements pour les marchands à l'étage, un four à pain, une taverne autorisée à débiter du vin pour les seuls chrétiens, une chapelle et un tribunal consulaire.\n\nL'autorité du Consul des Catalans : Nommé par le roi d'Aragon (ou par le Conseil des Cent de Barcelone à partir de la fin du XIVᵉ siècle), le consul représente souverainement ses compatriotes (Catalans, Aragonais, Valenciens et Majorquins) auprès de l'administration douanière hafside (al-Dīwān). Il juge tous les litiges civils et commerciaux entre sujets aragonais, enregistre les contrats de nolisement et perçoit les taxes consulaires destinées à l'entretien de la communauté.\n\nSur le plan de l'histoire du droit international et des relations interculturelles médiévales, l'institution des fondouks et des milices chrétiennes à Tunis préfigure directement le régime moderne des « Capitulations » méditerranéennes. Elle illustre le pragmatisme juridique exceptionnel de la civilisation islamique malékite et des monarchies marchandes ibériques : au cœur d'une grande capitale musulmane, une communauté chrétienne militaire et commerçante jouit d'un statut d'autonomie personnelle et d'extraterritorialité cultuelle pleinement reconnu par le droit public (amān ou sauf-conduit général).\n\nCette coexistence fonctionnelle démontre que les frontières religieuses du Moyen Âge n'étaient nullement étanches, mais perméables à des solidarités d'intérêts vitaux : le calife hafside assurait sa sécurité intérieure grâce aux lances catalanes, tandis que Barcelone et Valence alimentaient leur industrie textile grâce aux laines et aux cuirs d'Ifriqiya.\n\nSur le plan économique et financier, le couple « consulat – milice » constitue le moteur de la prospérité commerciale de la Couronne d'Aragon au XIVᵉ siècle. À travers les droits de douane perçus dans les ports tunisiens (généralement fixés à dix pour cent ad valorem, le célèbre dret del deu per cent, dont une quote-part revenait directement à la chancellerie de Barcelone), la Couronne d'Aragon drainait vers la Catalogne d'importantes quantités d'or soudanais transitant par les caravanes transsahariennes jusqu'à Tunis et Bougie.\n\nCe flux monétaire africain permit de financer la frappe des florins d'or d'Aragon et les campagnes navales méditerranéennes des successeurs de Jacques II.",
+    "image": "",
+    "themes": [
+      "diplomatie",
+      "economie"
+    ],
+    "lat": 36.8002,
+    "lng": 10.1858
+  },
+  {
     "id": 188,
     "titre": "Orhan",
     "date": 1324,
@@ -8092,6 +8296,7 @@
     "mois": 6,
     "zones": [
       "St Empire",
+      "Italie",
       "Papaute"
     ],
     "type": 2,
@@ -8397,7 +8602,7 @@
     "titre": "Philippe de Vitry Ars nova musicae",
     "date": 1325,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 3,
     "description": "Philippe de Vitry publie l’Ars nova musicae .\nPhilippe de Vitry (1291-1361) était un juriste qui a exercé des fonctions importantes dans l'administration royale secrétaire de Charles IV et de Philippe VI conseiller de Jean II évêque de Meaux, théoricien, compositeur, evêque et intellectuel français. Il est l'un des principaux artisans du courant musical dit de l’Ars nova en introduisant une nouvelle notation musicale qui permettait une plus grande diversité rythmique, notamment par l’utilisation de divisions temporelles inédites, l’introduction de la notation proportionnelle, l’emploi de notes de couleurs différentes (bicolore : rouge et noir) et la codification des valeurs rythmiques.\n\nCes avancées ont permis une complexification de l’écriture polyphonique et un raffinement des structures musicales, qui ont eu une influence durable rendant possible l’évolution ultérieure de la musique européenne. Vitry a contribué à la naissance d’un style polyphonique indépendant des contraintes antérieures dites « Ars antiqua », autorisant des arrangements rythmiques et des structures plus souples. En son temps, Philippe de Vitry était considéré comme un intellectuel et un musicien de premier rang, admiré par des figures comme Pétrarque, L’Ars nova développe davantage le motet isorythmique, où un motif rythmique (talea) et un motif mélodique (color) se répètent de manière structurée.\n\nDe nouvelles formes poétiques et musicales apparaissent, comme la ballade, le rondeau et le virelai, popularisées par Guillaume de MachautL’Ars antiqua est principalement associé à la musique sacrée et liturgique, développée dans les cathédrales, notamment à Paris. Elle est défendue par des théoriciens comme Jacques de Liège, qui critique l’Ars nova comme une musique trop profane et sensuelle. L’Ars nova, en revanche, marque une libéralisation de la musique : les compositeurs utilisent davantage la langue vulgaire, créent des œuvres profanes, et explorent des structures plus complexes.\n\nCette évolution est vue comme une menace par certaines autorités religieuses, comme le pape Jean XXII, qui condamne en 1322 les innovations de l’Ars nova pour leurs rythmes nouveaux et leur caractère mondain",
@@ -8734,6 +8939,25 @@
     "lat": 37.3398,
     "lng": -5.8408,
     "serie": "Reconquista"
+  },
+  {
+    "id": 3151,
+    "titre": "Crònica de Ramon Muntaner à Xirivella : mémoires d'un vétéran de la Grande Compagnie catalane",
+    "date": 1325,
+    "date_fin": 1328,
+    "mois_fin": 4,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Né à Peralada (Ampourdan, Catalogne) en 1265 au sein d'une famille de la bourgeoisie aisée liée à la maison royale, Ramon Muntaner a mené une existence d'aventure exceptionnelle à travers toute la Méditerranée. Témoin dans sa jeunesse du passage de Jacques Iᵉʳ le Conquérant et d'Alphonse X de Castille dans la demeure familiale, il participe à la conquête de Minorque (1287), défend Messine contre les Angevins lors de la guerre des Vêpres siciliennes, devient le chancelier, le trésorier et le chroniqueur de la redoutable Grande Compagnie catalane (Companya Catalana d'Orient) conduite par Roger de Flor en Anatolie et en Grèce (1302–1307), puis exerce la charge de gouverneur militaire de l'île tunisienne de Djerba (1309–1315) face aux assauts des Hafsides de Tunis.\n\nRetiré à l'âge de soixante ans dans sa propriété rurale (alqueria) de Xirivella, aux portes de la cité de Valence, Muntaner entreprend le 15 mai 1325 — poussé, écrit-il, par une vision nocturne d'un vieillard vêtu de blanc lui enjoignant de consigner les merveilles accomplies par Dieu en faveur de la maison d'Aragon — la rédaction monumentale de sa Crònica.\n\nAchevé au printemps 1328, l'ouvrage se déploie en deux cent quatre-vingt-dix-huit chapitres rédigés dans un catalan vivant, oral et épique, embrassant cent vingt années d'histoire (1208–1328) à travers cinq règnes successifs : Jacques Iᵉʳ le Conquérant, Pierre III le Grand, Alphonse III le Libéral, Jacques II le Juste et l'avènement d'Alphonse IV le Bénin :\n\nL'épopée navale et méditerranéenne : Muntaner relate avec une précision tactique remarquable les batailles navales de l'amiral Roger de Lauria, la croisade française de 1285 contre la Catalogne, la conquête de la Sardaigne (1323–1324) et les guerres d'Ifriqiya.\n\nL'expédition d'Orient (Anabasis catalane) : Le cœur palpitant de l'œuvre réside dans le récit oculaire des exploits des Almogavres de Roger de Flor au service de l'empereur byzantin Andronic II Paléologue contre les Turcs en Asie Mineure (1303–1304), l'assassinat traîtreux de Roger de Flor à Andrinople (1305), la terrible « Vengeance catalane » (Venjança catalana) ravageant la Thrace et la Macédoine, et la victoire du Céphise (1311) fondant les duchés catalans d'Athènes et de Néopatrie.\n\nLe testament politique (Sermó) : Au chapitre 272, Muntaner insère un célèbre discours versifié en noves rimades prodiguant des conseils stratégiques à l'infant Alphonse pour l'expédition de Sardaigne, illustrant la fusion entre l'art militaire et le conseil au prince.\n\nSur le plan de l'histoire littéraire et de l'historiographie médiévale européenne, la Crònica de Ramon Muntaner représente l'un des joyaux des « Quatre Grandes Chroniques » catalanes (aux côtés de celles de Jacques Iᵉʳ, de Bernat Desclot et de Pierre IV le Cérémonieux) et soutient la comparaison directe avec les mémoires contemporains de Jean de Joinville en France ou de Giovanni Villani à Florence. Muntaner invente une écriture historique à la première personne (« Jo, en Ramon Muntaner ») qui rompt avec l'aridité annalistique des chroniques monastiques latines. Conçue pour être lue à haute voix devant un auditoire chevaleresque et bourgeois, son œuvre transpose dans la prose historique le souffle des chansons de geste et des romans arthuriens.\n\nSur le plan idéologique et politique, l'ouvrage fonctionne comme le manifeste fondateur du messianisme impérial catalano-aragonais. À travers chaque bataille remportée par les galères catalanes ou les fantassins almogavres en infériorité numérique manifeste, Muntaner démontre que la dynastie de Barcelone est l'instrument élu de la Providence divine pour dominer la Méditerranée et abaisser l'orgueil des ennemis de la foi et de la justice.\n\nParallèlement, il théorise l'indissolubilité politique des peuples de la Couronne (Catalans, Aragonais, Valenciens, Majorquins et Siciliens) : dans une célèbre métaphore botanique (chapitre 29), il compare les branches cadettes de Majorque et de Sicile à des pousses issues d'un même tronc (una mateixa soca), affirmant que tant que les princes de la maison d'Aragon resteront unis par l'amour fraternel, nulle puissance au monde ne pourra les vaincre.\n\nL'incomparable valeur de source primaire sur Byzance et l'Orient : Pour l'histoire de l'Empire byzantin sous Andronic II Paléologue, des premiers émirats turkmènes d'Anatolie (Aydin, Menteshe, Ottomans) et de la Grèce franque au début du XIVᵉ siècle, le témoignage de Muntaner est capital. Confronté aux sources grecques contemporaines (Georges Pachymère et Nicéphore Grégoras), le récit du chancelier almogavre révèle avec une exactitude topographique et logistique saisissante les faiblesses structurelles de l'armée byzantine, la brutalité des guerres de mercenaires et les rouages financiers de la Compagnie.\n\nLes biais apologétiques et l'idéalisation chevaleresque : Comme l'ont démontré les philologues et historiens modernes (notamment Ferran Soldevila, Martí de Riquer et Stefano Maria Cingolani), Muntaner pratique une auto-censure sélective et une héroïsation systématique. Il passe sous silence ou atténue les exactions les plus atroces commises par les Almogavres contre les populations civiles grecques, exagère démesurément les effectifs des armées ennemies (turques, françaises ou génoises) pour magnifier la gloire des armes catalanes, et présente les souverains d'Aragon (même lorsqu'ils s'entre-déchirent comme Jacques II d'Aragon et Frédéric III de Sicile) sous les traits d'une harmonie familiale idéale.\n\nLa tradition manuscrite et les éditions princeps : Le texte original dicté ou rédigé à Xirivella nous est parvenu à travers une riche tradition manuscrite du XIVᵉ et XVᵉ siècles (dont le célèbre manuscrit n° 4 de la Bibliothèque de l'Université de Barcelone et le manuscrit de l'Escorial ms. K.I.6), avant de connaître sa première édition imprimée à Valence en 1558 chez Joan Mey, assurant sa diffusion durable dans toute l'Europe de la Renaissance.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Cr%C3%B2nica_de_Ramon_Muntaner.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "themes": [
+      "litterature"
+    ],
+    "legende": "Folio 13 recto du manuscrit 1803.",
+    "lat": 42.3085,
+    "lng": 3.009
   },
   {
     "id": 149,
@@ -9594,7 +9818,7 @@
     "date": 1328,
     "mois": 2,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 4,
     "description": "Jean Buridan, en latin Joannes Buridanus (vers 1300 - vers 1358), philosophe français, docteur scolastique, fut l'instigateur du scepticisme religieux en Europe. Il étudia à l'université de Paris sous la direction du philosophe scolastique Guillaume d'Ockham et fut un ardent nominaliste. Il fut, en Occident, le redécouvreur de la théorie de l'impetus, vers 1340 — une doctrine élaborée dans l'école néoplatonicienne d'Alexandrie, reprise au Moyen Âge par des savants arabes puis latins, pour améliorer la physique d'Aristote et expliquer le mouvement des corps physiques.\n\nSon nom est plus fréquemment connu pour l'expérience de pensée dite du paradoxe de l'âne de Buridan. Comme philosophe, Buridan a enseigné un nominalisme radical. À partir de 1340, il s'oppose à son mentor Guillaume d'Ockham : ils partagent une même orientation générale (refus des universaux comme réalités indépendantes), mais diffèrent sur la nature du langage, des concepts et du statut de la connaissance.\n\n## La controverse nominaliste avec Guillaume d'Ockham\n\nAu XIVe siècle, ce débat est interne au nominalisme médiéval : les deux penseurs refusent l'existence réelle des universaux, mais divergent sur leur statut mental et linguistique.\n\n### Guillaume d'Ockham\n\nNominalisme radical : seuls les individus existent réellement. Les universaux sont de simples signes mentaux sans réalité propre. Le langage n'est qu'un instrument pour parler des choses ; il ne reflète pas l'être. La connaissance vient de l'intuition des particuliers.\n\n### Jean Buridan\n\nNominalisme modéré et linguistique. Les concepts mentaux sont des signes naturels structurés, obéissant à une grammaire logique universelle. Le langage mental joue un rôle cognitif essentiel : il structure la pensée. Buridan fonde ainsi une approche logico-empirique du savoir.\n\n### L'enjeu de la controverse\n\nLà où Ockham réduit les universaux à de simples noms, Buridan leur reconnaît une fonction cognitive dans la pensée et le langage.\n\nCet acte a été interprété comme le début du scepticisme religieux et l'aube de la révolution scientifique. Persécuté par les réalistes, Buridan se retira en Allemagne, où il fonda une école et enseigna à Vienne. En tant que nominaliste, il ne pouvait admettre l'existence de la liberté humaine et discuta longuement la question du libre arbitre dans ses commentaires sur l'Éthique d'Aristote. Le paradoxe de l'âne de Buridan n'apparaît dans aucune de ses œuvres connues, bien qu'il soit tout à fait cohérent avec sa conception de la liberté et de l'animal.",
@@ -11324,10 +11548,8 @@
     "titre": "3e  siège de Gibraltar",
     "date": 1333,
     "mois": 2,
-    "mois_fin": 8,
     "zones": [
       "Castille",
-      "Aragon",
       "Afrique du Nord"
     ],
     "type": 4,
@@ -11913,6 +12135,42 @@
     "lng": 46.2979
   },
   {
+    "id": 3141,
+    "titre": "Achèvement d'El Conde Lucanor par Don Juan Manuel",
+    "date": 1335,
+    "zones": [
+      "Castille"
+    ],
+    "type": 3,
+    "description": "L'achèvement du Libro de los enxiemplos del Conde Lucanor et de Patronio en 1335 par l'infant Don Juan Manuel marque une étape fondatrice dans l'histoire de la prose vernaculaire castillane. Rédigée au cœur des tumultes politiques qui opposent ce puissant magnat à l'autoritarisme centralisateur du jeune roi Alphonse XI, cette œuvre didactique se structure autour de cinquante-et-un exempla (contes moraux), enchâssés dans un dialogue entre le jeune comte Lucanor et son sage conseiller Patronio.\n\nCe chef-d'œuvre illustre la remarquable hybridation culturelle de la Castille du XIVᵉ siècle. Don Juan Manuel y réalise une synthèse magistrale entre les traditions scolastiques européennes (fortement imprégnées par l'enseignement de l'ordre dominicain) et les modèles narratifs orientaux d'origine arabo-persane (tels que le Kalila wa-Dimna ou le Sendebar), dont l'héritage irrigue la péninsule depuis l'ère de l'École de traduction de Tolède sous son grand-père, Alphonse X le Sage.\n\nAu-delà de sa virtuosité littéraire, El Conde Lucanor constitue un véritable manifeste idéologique. À travers ses fables, Don Juan Manuel théorise et justifie le statut, les privilèges et l'éthique de la haute noblesse (ricoshombres). L'œuvre défend la nécessité d'une aristocratie autonome, moralement supérieure et politiquement indispensable, offrant ainsi une réponse culturelle et doctrinale cinglante aux ambitions absolutistes de la monarchie castillane de son temps.",
+    "image": "",
+    "themes": [
+      "litterature"
+    ],
+    "lat": 41.62,
+    "lng": -4.726
+  },
+  {
+    "id": 3153,
+    "titre": "Reconquête de Djerba par le calife hafside Abû Yahyâ Abû Bakr II",
+    "date": 1335,
+    "mois": 10,
+    "zones": [
+      "Naples",
+      "Aragon",
+      "Afrique du Nord"
+    ],
+    "type": 4,
+    "description": "Depuis la conquête de l'île de Djerba par le grand amiral Roger de Lauria en 1284 et l'administration implacable qu'y avait exercée Ramon Muntaner entre 1309 et 1315, la présence d'une garnison militaire siculo-aragonaise au débouché méridional du golfe de Gabès constituait une épine stratégique insupportable pour le califat hafside de Tunis. Soumise à un lourd tribut annuel et à un régime de surveillance policière, la population autochtone berbère de confession ibadite (divisée entre les fractions des Wahbiyya et des Nakkara) multipliait les insurrections contre la seigneurie féodale exercée par les héritiers de la maison de Lauria, soutenus par le roi Frédéric III de Sicile et le roi d'Aragon Alphonse IV le Bénin.\n\nParvenu à réunifier l'Ifriqiya après des années de guerres civiles contre les émirs dissidents de Constantine et de Bougie, le calife hafside Abû Yahyâ Abû Bakr II (r. 1318–1346) décide en 1335 de liquider cette enclave chrétienne. Il monte une opération amphibie coordonnée de grande ampleur :\n\nL'alliance avec les insurgés insulaires et l'investissement terrestre : Tandis que les tribus djerbiennes prennent les armes et refoulent les percepteurs chrétiens vers la côte nord, les troupes régulières hafsides franchissent le détroit d'El-Kantara sur des barges à fond plat. L'armée musulmane met aussitôt le siège devant le quartier général ennemi : le Castell de Gerba (l'actuel Borj El Kebir à Houmt Souk), verrouillant tous les puits et les citernes d'eau douce situés hors de l'enceinte.\n\nL'étranglement naval et l'échec du secours sicilien : Conscient que la forteresse ne peut survivre que par son ravitaillement maritime, Abû Yahyâ Abû Bakr II déploie une escadre de galères armées à Tunis, Mahdia et Sfax — appuyée par des contingents navals alliés — pour établir un blocus hermétique devant Houmt Souk. Une flotte de secours dépêchée en hâte depuis Messine et Palerme par Frédéric III de Sicile échoue à percer le cordon naval et se voit contrainte de virer de bord sans pouvoir débarquer de vivres ni de renforts.\n\nLa capitulation et l'expulsion : Épuisée par la faim, la soif et le pilonnage incessant des mangonneaux hafsides, la garnison siculo-catalane capitule à l'automne 1335 sous condition de vie sauve. Les survivants remettent les clés du donjon aux officiers du calife et sont rembarqués vers la Sicile, mettant un terme définitif à cinquante-et-un ans de souveraineté chrétienne médiévale sur Djerba.\n\nSur le plan géostratégique méditerranéen, la chute du Castell de Gerba en 1335 marque le coup d'arrêt brutal de la poussée territoriale directe des couronnes d'Aragon et de Sicile sur le littoral maghrébin. Au cours du dernier quart du XIIIᵉ siècle et du premier tiers du XIVᵉ siècle, Barcelone et Palerme avaient caressé le projet d'établir une chaîne de présides côtiers sur le modèle des comptoirs vénitiens et génois en Orient. La reconquête de Djerba démontre que dès lors que le pouvoir central de Tunis surmonte ses divisions dynastiques, la projection militaire terrestre des États chrétiens en Afrique du Nord se heurte à l'hostilité irréductible des populations rurales et aux limites logistiques de la guerre navale médiévale.\n\nSur le plan diplomatique et économique, cet événement ouvre une nouvelle ère d'équilibre pragmatique entre les Hafsides et la Couronne d'Aragon. Privés de leur base avancée dans le golfe de Gabès, les rois d'Aragon (Alphonse IV puis Pierre IV le Cérémonieux dès 1336) renoncent aux velléités de conquête insulaire en Tunisie pour privilégier la voie diplomatique et commerciale.\n\nDès 1336–1339, de nouveaux traités de paix et de commerce sont ratifiés entre Barcelone et Tunis : le calife Abû Yahyâ Abû Bakr II consolide son prestige religieux de champion du jihād défensif auprès des oulémas d'Ifriqiya, tout en maintenant les privilèges douaniers des marchands catalans et majorquins, indispensables à l'équilibre fiscal de ses ports.\n\nLa célébration triomphale chez Ibn Khaldoun et Al-Zarkashi : Dans le Kitāb al-‘Ibar, Ibn Khaldoun consacre un récit détaillé à la reprise de Djerba, saluant l'habileté stratégique du calife Abû Yahyâ Abû Bakr II et du vizir Ibn Tafragin (qui commençait alors son ascension politique). L'historien souligne que cette victoire effaça la honte de la défaite subie sous les règnes précédents et rétablit l'unité territoriale de l'Ifriqiya jusqu'aux confins de la Tripolitaine. Le chroniqueur tunisien Al-Zarkashi (Tārīkh al-Dawlatayn) confirme la date de 736 H. et insiste sur la liesse populaire qui accueillit à Tunis les trophées et les bannières pris dans le donjon chrétien.\n\nL'occultation relative des chroniques catalanes et siciliennes : Contrairement aux exploits glorieux de Roger de Lauria et de Ramon Muntaner abondamment exaltés dans la Crònica achevée en 1328, la perte humiliante de Djerba en 1335 est traitée avec une extrême discrétion par les historiographes officiels de la maison d'Aragon (tels que Pierre IV le Cérémonieux dans sa Crònica ou le Sicilien Michele da Piazza). Les détails matériels de la débâcle logistique ne nous sont connus que par les correspondances diplomatiques conservées aux Archives de la Couronne d'Aragon à Barcelone (registres d'Alphonse IV), dans lesquelles le roi d'Aragon reproche amèrement à son oncle Frédéric III de Sicile son impéritie navale et son incapacité à secourir à temps la garnison assiégée.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Borj_El_Kebir_on_Djerba_%28Tunisia%29.jpg/1280px-Borj_El_Kebir_on_Djerba_%28Tunisia%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "guerre"
+    ],
+    "legende": "Murailles du Borj el Kebir",
+    "lat": 33.7736,
+    "lng": 10.8862
+  },
+  {
     "id": 537,
     "titre": "Bataille de Minatogawa",
     "date": 1336,
@@ -12403,6 +12661,26 @@
     ],
     "lat": 38.1622,
     "lng": 13.1875
+  },
+  {
+    "id": 3168,
+    "titre": "Engagement financier des banques florentines (Bardi et Peruzzi) auprès d'Édouard III",
+    "date": 1337,
+    "date_fin": 1339,
+    "zones": [
+      "Angleterre",
+      "Italie"
+    ],
+    "type": 4,
+    "description": "Les prêts massifs des compagnies bancaires florentines des Bardi et des Peruzzi au roi Édouard III d'Angleterre (1337–1339) : financement initial de la guerre de Cent Ans, monopole d'exportation de la laine anglaise et genèse du krach financier européen des années 1340.\nAu premier tiers du XIVᵉ siècle, les grandes compagnies commerciales et bancaires de Florence — dominées par les trois « colonnes du commerce » que sont les Bardi, les Peruzzi et les Acciaiuoli — constituent les véritables maîtresses de la haute finance internationale européenne. Grâce à un réseau serré de succursales implantées de Londres et Bruges jusqu'à Paris, Avignon, Naples et Famagouste, elles collectent les décimes pontificales, financent les souverains et contrôlent la filière vitale de la draperie européenne : l'achat des laines brutes anglaises (les meilleures d'Europe, produites par les abbayes cisterciennes du Yorkshire et des Cotswolds) et leur acheminement vers les ateliers textiles de Flandre et de Florence (Arte di Calimala et Arte della Lana).\n\nLorsque le roi d'Angleterre Édouard III Plantagenêt engage en 1337 la guerre contre le roi de France Philippe VI de Valois et débarque aux Pays-Bas en juillet 1338 pour soudoyer une coûteuse coalition d'alliés continentaux (l'empereur Louis IV de Bavière, le duc de Brabant, les comtes de Hainaut et de Gueldre et les cités flamandes), ses ressources fiscales ordinaires s'avèrent dérisoires.\n\nPour soutenir son effort de guerre, Édouard III se tourne vers les directeurs des succursales londoniennes des Bardi et des Peruzzi, qui lui consentent entre 1337 et 1339 des avances de fonds colossales :\n\nL'ampleur vertigineuse des créances : En l'espace de deux ans, les deux compagnies florentines prêtent à la couronne anglaise des sommes dépassant plusieurs centaines de milliers de livres sterling (évaluées par les chroniqueurs contemporains à près de 900 000 florins d'or pour les Bardi et 600 000 florins d'or pour les Peruzzi — soit plusieurs fois le budget annuel de la République de Florence).\n\nLes garanties royales et le monopole de la laine : En gage de remboursement, Édouard III assigne aux banquiers florentins le produit des droits de douane sur l'exportation des laines anglaises (Great Custom), leur concède des licences exclusives pour exporter des dizaines de milliers de sacs de laine vers le continent, et leur remet en nantissement les joyaux de la Couronne d'Angleterre (y compris la couronne royale elle-même, mise en gage auprès de l'archevêque de Trèves et des banquiers italiens).\n\nLe piège de l'engrenage financier (1339) : Dès le printemps 1339, écrasé par les exigences astronomiques de ses alliés allemands et flamands, Édouard III se révèle incapable d'honorer ses échéances. Par un mandat du 6 mai 1339, il décrète un moratoire unilatéral sur le paiement de ses dettes. Pris au piège de leur propre exposition financière, les Bardi et les Peruzzi n'ont d'autre choix que de continuer à prêter de nouvelles sommes au roi d'Angleterre dans l'espoir illusoire de sauver leurs créances antérieures — jusqu'à l'effondrement final de leurs maisons mères à Florence en 1343–1346.\nSur le plan de l'histoire économique et financière du Moyen Âge, l'engagement des Bardi et des Peruzzi auprès d'Édouard III met en lumière la vulnérabilité structurelle du « capitalisme marchand et bancaire » médiéval face au risque souverain. Contrairement aux banques centrales modernes, les compagnies florentines opéraient avec des fonds propres relativement modestes par rapport au volume colossal des dépôts à terme confiés par des épargnants privés (nobles, bourgeois, institutions religieuses et le roi Robert d'Anjou de Naples lui-même) moyennant un intérêt fixe dissimulé sous forme de « dons » (discrezione). En immobilisant une part disproportionnée de leurs liquidités dans des prêts politiques non recouvrables à un seul monarque engagé dans une guerre interminable, elles violèrent le principe élémentaire de division des risques.\n\nSur le plan social et politique interne à Florence, cette crise financière provoque un séisme institutionnel majeur dans la commune toscane. Lorsque le roi de Naples Robert d'Anjou et les déposants florentins réclament le remboursement de leurs fonds en 1341–1343 tandis que les recettes d'Angleterre et les créances de la commune de Florence (engagée dans la guerre coûteuse de Lucques) demeurent gelées, la panique bancaire déclenche la brève dictature de Gautier VI de Brienne, duc d'Athènes (1342–1343), suivie d'une révolution populaire qui brise le monopole politique des grandes familles patriciennes (Popolo Grasso) au profit des arts moyens et mineurs.\n\nLa rectification critique de l'historiographie moderne (Edwin S. Hunt) : Pendant des siècles, sur la foi du célèbre chapitre de la Nuova Cronica de Giovanni Villani (qui était lui-même associé de la compagnie des Peruzzi et fut emprisonné pour dettes lors du krach), les historiens ont attribué la faillite des banques florentines uniquement au défaut de paiement d'Édouard III. Les travaux décisifs d'Edwin S. Hunt (The Medieval Super-Companies: A Study of the Peruzzi Company of Florence, 1994) et de Raymond de Roover ont nuancé cette vision : s'il est incontestable que les prêts de 1337–1339 à Édouard III agirent comme le détonateur fatal, les compagnies florentines étaient déjà fragilisées depuis le début des années 1330 par la baisse structurelle de la rentabilité du commerce des grains en Italie méridionale, le coût exorbitant des guerres menées par Florence elle-même et l'imprudence de leur structure financière fondée sur un endettement à court terme excessif.",
+    "image": "https://it.wikipedia.org/wiki/Fiorino_d%27oro",
+    "themes": [
+      "economie"
+    ],
+    "legende": "florin d'or de Florence (fiorino d'oro) du XIVᵉ siècle, monnaie de compte internationale dans laquelle étaient libellés l'ensemble des contrats de prêts et des bilans comptables des Bardi et des Peruzzi.",
+    "lat": 43.7698,
+    "lng": 11.2556,
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 551,
@@ -12907,6 +13185,24 @@
     "lat": 40.4168,
     "lng": -3.7035,
     "serie": "Reconquista"
+  },
+  {
+    "id": 3167,
+    "titre": "La paix de Venise et l'annexion de Trévise : naissance de la Terraferma",
+    "date": 1339,
+    "mois": 1,
+    "zones": [
+      "Italie"
+    ],
+    "type": 3,
+    "description": "La paix de Venise entre la Sérénissime et les Scaligeri de Vérone (24 janvier 1339) : cession définitive de la marche de Trévise, naissance de la Terraferma vénitienne et mutation géopolitique d'une thalassocratie en puissance territoriale italienne.\nPendant plus de quatre siècles, la République de Venise avait délibérément tourné le dos à la péninsule italienne pour édifier un empire strictement maritime et insulaire (Stato da Màr), s'étendant de l'Istrie et de la Dalmatie jusqu'à Candie (Crète) et aux comptoirs de Romanie. Les patriciens vénitiens évitaient de posséder des terres sur le continent proche (Terraferma), craignant que l'acquisition de domaines féodaux et l'engagement dans les guerres continentales ne corrompent les mœurs républicaines et ne détournent la cité de sa vocation navale.\n\nCependant, au début des années 1330, la montée en puissance fulgurante du seigneur de Vérone, Mastino II della Scala (neveu et successeur de Cangrande della Scala), bouleverse cet équilibre séculaire. Maître de Vérone, Vicence, Padoue, Trévise, Brescia, Parme et Lucques, Mastino II contrôle l'ensemble des cols alpins et des voies fluviales (l'Adige, la Brenta, le Sile et le Piave) par lesquels transitent les marchandises vénitiennes vers l'Allemagne et la Lombardie. Lorsqu'en 1335–1336 le seigneur de Vérone fait construire des salines fortifiées à Petabubula (dans la lagune méridionale près de Chioggia) et impose de lourds péages fluviaux pour briser le monopole fiscal du sel de Venise, la Seigneurie réagit par la guerre.\n\nAlliée à la République de Florence (qui convoite Lucques), aux Visconti de Milan et aux Gonzague de Mantoue, Venise engage pour la première fois de son histoire une vaste armée de mercenaires allemands et italiens sur le continent (1336–1338). Étranglé financièrement et militairement, Mastino II della Scala est contraint de solliciter la paix séparée.\n\nLe 24 janvier 1339, sous le dogat de Francesco Dandolo, est signé à Venise un traité de paix qui inaugure une ère nouvelle :\n\nL'annexion directe de Trévise et de sa marche (Marca Trevigiana) : Mastino II cède en pleine souveraineté perpétuelle à la République de Venise la ville fortifiée de Trévise ainsi que les châteaux et territoires stratégiques de Castelfranco Veneto et de Conegliano, complétés par la cession de Bassano del Grappa et de Castelbaldo en 1344.\n\nLa sécurisation des voies fluviales et des cols alpins : Venise obtient la destruction immédiate des salines concurrentes et la libre circulation exempte de péages de ses marchands sur tous les fleuves de Vénétie jusqu'aux Alpes dolomitiques.\n\nLa rupture diplomatique avec Florence : En concluant cette paix avantageuse sans avoir obtenu la restitution de Lucques à son alliée florentine (qu'elle laisse aux mains des Scaligeri moyennant de simples garanties commerciales), Venise privilégie froidement ses propres intérêts géopolitiques continentaux, provoquant l'indignation amère de la commune de Florence.\n\nSur le plan de l'histoire géopolitique italienne, l'acquisition de Trévise en janvier 1339 constitue le tournant matriciel de l'histoire moderne de Venise : la naissance du Stato da Terra (la Terraferma). Pour la première fois, la Sérénissime cesse d'être une cité-État purement lagunaire dépendante des seigneurs voisins pour son ravitaillement en blé, en vin, en bois de construction navale (les forêts du Cansiglio et du Cadore) et en eau douce. Trévise devient le « grenier et le jardin » de Venise (il giardino di Venezia), offrant un glacis défensif indispensable pour protéger la lagune contre les ambitions terrestres des princes de Padoue (les Carrara), des ducs d'Autriche et des rois de Hongrie.\n\nSur le plan administratif et institutionnel, cette première annexion sert de laboratoire juridique au gouvernement colonial continental vénitien. Contrairement aux seigneurs tyranniques d'Italie du Nord qui abolissaient les libertés municipales des villes conquises, Venise adopte à Trévise une politique habile de dominante fédérative et conservatrice : elle laisse subsister les statuts municipaux trévisans (Statuta Tarvisii), maintient les conseils locaux et les privilèges fiscaux de la noblesse et de la bourgeoisie urbaine, tout en plaçant au sommet de l'administration un patricien vénitien envoyé pour un an avec le titre de Podestat et Capitaine (Podestà e Capitano), chargé de la justice supérieure, de la fiscalité générale et de la garde des forteresses. Ce modèle éprouvé à Trévise en 1339 sera appliqué au siècle suivant lors de la conquête de Padoue, Vérone, Vicence, Brescia et Bergame.\n\nLa guerre contre les Scaligeri et la paix de 1339 bénéficient d'une documentation archivistique et chronistique exceptionnelle :\n\nLes registres des Commemoriali et du Sénat des Archives d'État de Venise (ASV) : Conservés dans les séries Libri Commemoriali (livre III) et Senato Misti, les instruments diplomatiques originaux du 24 janvier 1339 et les commissions ducales remises aux premiers podestats envoyés à Trévise (notamment Marin Falier, le futur doge décapité en 1355, qui fut l'un des premiers gouverneurs de Trévise en 1339) attestent la minutie avec laquelle le Sénat vénitien organisa l'intégration économique et militaire de la nouvelle province.\n\nLa colère historiographique du Florentin Giovanni Villani : Dans sa célèbre Nuova Cronica (livre XII, chapitres 89–92), le chroniqueur et banquier florentin Giovanni Villani livre un témoignage contemporain passionné et précieux. Villani dénonce avec virulence ce qu'il considère comme la « trahison » (tradimento) des Vénitiens : après avoir engagé Florence dans une guerre ruineuse qui coûta à la commune toscane plus de six cent mille florins d'or, Venise conclut secrètement la paix avec Mastino II pour s'approprier Trévise tout en abandonnant Lucques. Ce récit témoigne de la méfiance durable qui s'installa dès 1339 entre les deux grandes républiques marchandes d'Italie.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Piazza_dei_Signori_e_Palazzo_dei_Trecento.jpg/1280px-Piazza_dei_Signori_e_Palazzo_dei_Trecento.jpg?utm_source=it.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "Palazzo dei Trecento (Palais des Trois-Cents) et la tour civique sur la Piazza dei Signori au cœur historique de Trévise, siège de l'administration communale puis du podestat vénitien à partir de 1339.  Cet ensemble monumental illustre la continuité institutionnelle de la cité vénète intégrée à la République : c'est sous les loggias ouvertes de ce palais civique roman-gothique que les représentants de la Seigneurie de Venise reçurent le serment de fidélité des citoyens de Trévise et exercèrent la justice souveraine de Saint-Marc.",
+    "lat": 45.6659,
+    "lng": 12.2455
   },
   {
     "id": 572,
@@ -14458,6 +14754,22 @@
     "lng": 19.94
   },
   {
+    "id": 3157,
+    "titre": "Promulgation des Ordinacions de Cort par Pierre IV",
+    "date": 1344,
+    "mois": 10,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "image": "",
+    "themes": [
+      "politique"
+    ],
+    "lat": 39.4697,
+    "lng": -0.3763
+  },
+  {
     "id": 643,
     "titre": "Les Ottomans  sur les Dardanelles",
     "date": 1345,
@@ -14691,7 +15003,7 @@
     "titre": "Triptyque de la Mère de Dieu. Maître de Baltimore",
     "date": 1345,
     "zones": [
-      "Italie"
+      "Aragon"
     ],
     "type": 5,
     "description": "Le maître de Baltimore est un miniaturiste et un peintre gothique dont l'identité n'est pas connue, actif en Catalogne au XIVe siècle dans l'entourage d'Arnau Bassa. Le nom de « maître de Baltimore » lui a été donné parce que l'un de ses chefs-d'œuvre, un triptyque représentant des scènes de la vie de Marie, est conservé au Walters Art Museum de Baltimore (États-Unis).\n\nŒuvres attribuées Triptyque de la Mère de Dieu, Walters Art Museum, Baltimore Retable de saint Vincent de Cardona, vers 1347-1360, dont deux fragments subsistent : L'Annonciation et l'Épiphanie, panneau latéral gauche, acquis par le Musée national d'art de Catalogne en 1906, et une scène du haut du panneau droit, La Nativité, au Fogg Art Museum de Cambridge (Massachusetts)\n\nLivres d'heures de la reine Marie de Navarre (miniatures et marges), Biblioteca Marciana, Venise.",
@@ -14775,6 +15087,23 @@
     "legende": "​Kaiyuan Temple, Quanzhou, pagodes jumelles en pierre du temple Kaiyuan à Quanzhou (province du Fujian), monumentales structures bouddhiques du XIIIᵉ siècle qui dominaient le port cosmopolite de Zaiton lors de l'arrivée d'Ibn Battuta à l'automne 1345.  Cette vue illustre la monumentalité de la métropole maritime chinoise des Yuan : au pied de ces tours de pierre se côtoyaient les entrepôts de soieries, les fonderies de monnaie et les quartiers réservés de la diaspora musulmane d'Asie occidentale où le juriste tangérois fut hébergé.",
     "lat": 39.9057,
     "lng": 116.3913
+  },
+  {
+    "id": 3143,
+    "titre": "Historiographie régalienne : rédaction de la Crónica de Alfonso XI",
+    "date": 1345,
+    "zones": [
+      "Castille"
+    ],
+    "type": 5,
+    "description": "La décennie 1340 est marquée par la systématisation d'une propagande d'État s'appuyant sur l'historiographie. Sous l'égide de la chancellerie royale, et très probablement sous la direction du lettré et diplomate Fernán Sánchez de Valladolid, la Crónica de Alfonso XI est rédigée. Cette œuvre rompt avec le modèle des chroniques universelles de l'époque d'Alphonse X pour se concentrer exclusivement sur la geste du monarque régnant.\n\nLe texte répond à un double impératif idéologique. Premièrement, il vise à légitimer rétrospectivement la violente répression de la haute aristocratie menée par le roi dans les années 1320, justifiant la centralisation du pouvoir par la nécessité de rétablir l'ordre public face à l'anarchie féodale. Deuxièmement, il sacralise la figure royale en l'inscrivant dans une eschatologie de la croisade, particulièrement après la victoire du Rio Salado (1340) et la prise d'Algésiras (1344). Le souverain y est dépeint comme l'instrument de la justice divine, achevant ainsi l'édification de l'absolutisme castillan sur les plans juridique, militaire et mémoriel.",
+    "image": "",
+    "themes": [
+      "litterature",
+      "politique"
+    ],
+    "lat": 41.5501,
+    "lng": -5.1387
   },
   {
     "id": 642,
@@ -15864,7 +16193,7 @@
     "date": 1347,
     "mois": 4,
     "zones": [
-      "Italie"
+      "St Empire"
     ],
     "type": 5,
     "description": "Le 6 juin 1328, le pape excommunie Ockham pour avoir quitté Avignon sans permission (et non pour ses doctrines). Il est cependant incertain qu'il ait effectivement eu l'interdiction formelle de quitter la ville[3].\n\nIl aurait [Quand ?] prononcé à l’empereur ces mots célèbres : O Imperator, defende me gladio et ego defendam te verbo (« O empereur, défends-moi par l’épée, et je te défendrai par la parole »).[réf. souhaitée]\n\nVers 1329, l'empereur retourna d'Italie à Munich, et Ockham et ses confrères le suivirent[3].\n\nOckham consacra alors le reste de sa vie à son œuvre philosophique. A deux exceptions près, dont l'authenticité est contestée, il traita désormais de questions politiques[3]: il publia des pamphlets politico-religieux contre l'autorité pontificale, dont notamment Opus nonaginta dierum vers 1332.\n\nGuillaume d'Ockham mourut en 1347. Sa tombe porte la date du 10 avril\nOckham vit à une époque d'effervescence philosophique annonçant la Renaissance. Rompant avec le dogmatisme théologique et s'inscrivant dans l'héritage de la pensée de la Grèce antique, le nominalisme qu'il professe sème les germes de la modernité.\nL'un des personnages du Nom de la rose d'Umberto Eco, le moine franciscain Guillaume de Baskerville est, de l'aveu même d'Eco[18], une référence à Guillaume d'Ockham dont il partage le prénom. Premier jour, vêpres : « il ne faut pas multiplier les explications et les causes sans qu'on en ait une stricte nécessité. » (Entia non sunt multiplicanda praeter necessitatem).",
@@ -16048,25 +16377,6 @@
     "lat": 48.58,
     "lng": 7.75,
     "sources": "Le Journal Historique de l'Alsace Tome 2"
-  },
-  {
-    "id": 121,
-    "titre": "Échec de la conjuration de Corso Donati",
-    "date": 1348,
-    "mois": 10,
-    "zones": [
-      "Italie"
-    ],
-    "type": 4,
-    "description": "Échec de la conjuration de Corso Donati qui est assassiné à Florence. Corso Donati fut le chef de la faction des magnats, désignée sous le nom de « guelfes noirs » ou « Noirs », qui s'opposa au gouvernement du Popolo. C'est à Castello della Pieve, que le 4 octobre 1301, comme le rappelle une plaque apposée sur la tour du bourg médiéval, Charles de Valois, frère du roi de France décréta avec Corso Donati, recteur de Massa Trabaria l'exil de Dante Alighieri de Florence.\n\nDante, qui le détestait pour son attitude altière et autoritaire le cita indirectement dans le Purgatoire (Chant XXIV, v. 79-87) par l'intermédiaire d'une prophétie récitée par son frère Forese Donati. Dans ces vers on remarque une certaine satisfaction du poète pour le triste sort de son adversaire.\n\n« La bestia ad ogni passo va più ratto, crescendo sempre, finch'ella il percuote e lascia il corpo vilmente disfatto »\n\n— Purgatoire XXIV, 85-87",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Corso_Donati.jpg",
-    "themes": [
-      "revolte"
-    ],
-    "legende": "La fin de Corso Donati, miniature de la Nuova Cronica de Giovanni Villani",
-    "lat": 43.77,
-    "lng": 11.26,
-    "sources": "https://fr.wikipedia.org/wiki/Corso_Donati"
   },
   {
     "id": 619,
@@ -16690,6 +17000,25 @@
     "legende": "remière page de l'Ordonnance d'Alcalá.réalisée au XVIIIᵉ siècle par les juristes Asso et Manuel à l'Imprimerie royale de Joachin Ibarra à Madrid.  Cette page de titre monumentale illustre la transmission savante du texte : c'est par cette édition critique que les historiens du droit redécouvrirent l'ordonnance fondamentale par laquelle Alphonse XI fixa la hiérarchie des lois de la monarchie espagnole jusqu'à la codification contemporaine.",
     "lat": 37.462,
     "lng": -3.9224
+  },
+  {
+    "id": 3142,
+    "titre": "Impact de la Peste noire dans la Couronne de Castille",
+    "date": 1348,
+    "date_fin": 1350,
+    "zones": [
+      "Castille"
+    ],
+    "type": 3,
+    "description": "La pandémie de peste bubonique atteint les côtes et les territoires de la Couronne de Castille à l'automne 1348, s'infiltrant par les réseaux commerciaux maritimes et terrestres. Ce choc épidémiologique engendre une rupture démographique structurelle, la mortalité étant estimée, selon les régions, entre 20 % et 40 % de la population.\nSur le plan socio-économique, cette contraction brutale de la population provoque une raréfaction immédiate de la main-d'œuvre. Il en résulte une inflation rapide des salaires agricoles et artisanaux, ainsi qu'une déflation des revenus fonciers de la noblesse, entraînant une réorganisation des structures agraires et la désertion de nombreux villages (despoblados). L'État tente de réguler cette crise par des mesures d'encadrement strictes, ébauchées lors des Cortes de 1348, visant à figer les salaires et à réprimer le vagabondage. Sur le plan politique, l'épidémie désorganise l'appareil militaire et institutionnel, culminant en mars 1350 avec le décès d'Alphonse XI lors du cinquième siège de Gibraltar, faisant de lui le seul monarque régnant d'Europe victime de la Peste noire.",
+    "image": "",
+    "themes": [
+      "catastrophe",
+      "economie",
+      "societe"
+    ],
+    "lat": 41.5501,
+    "lng": -5.1387
   },
   {
     "id": 751,
@@ -17642,6 +17971,24 @@
     "legende": "Château maure vu de Willis's Road, Gibraltar, c'est au sommet de cette forteresse dominant le détroit que le voyageur vint contempler le camp abandonné par les troupes castillanes d'Alphonse XI après le passage foudroyant de l'épidémie de peste.",
     "lat": 37.1735,
     "lng": -3.5995
+  },
+  {
+    "id": 3158,
+    "titre": "fondation du Studium generale de Perpignan , 2e université de la Couronne d'Aragon",
+    "date": 1350,
+    "mois": 3,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "La réincorporation militaire du Roussillon, la promulgation de la charte royale de fondation et la reconnaissance pontificale s'échelonnent sur la seconde moitié du XIVᵉ siècle (calendrier julien standard) :\n\nAnnexion militaire des comtés de Roussillon et de Cerdagne par Pierre IV le Cérémonieux (au détriment de Jacques III de Majorque) : Juillet 1344 (à la suite de la conquête de Majorque en 1343).\n\nPromulgation solennelle du privilège royal de fondation du Studium generale de Perpignan (Estudi General de Perpinyà) : 20 mars 1349 selon le style de l'Incarnation florentin en usage en Catalogne (correspondant au 20 mars 1350 du calendrier moderne, daté de Saragosse).\n\nConfirmation apostolique par le pape d'Avignon Clément VII (octroyant le droit de conférer la licentia ubique docendi en droit civil, droit canonique et arts) : 28 novembre 1379 (bulle promulguée à Avignon au début du Grand Schisme d'Occident).\n\nAddition de la faculté de théologie par l'antipape Benoît XIII (Pedro de Luna) : 1397.\n\nDans la computistique de la chancellerie royale de Barcelone et de Saragosse (où l'année change le 25 mars, fête de l'Annonciation), le diplôme de fondation est daté du 20 mars 1349 de l'Incarnation (soit le 20 mars 1350 n. st., correspondant au 10 muḥarram de l'année 751 de l'Hégire).\n\n3. Description factuelle de l'évènement\nSix ans après avoir liquidé l'indépendance du Royaume de Majorque en réincorporant par les armes les îles Baléares (1343) puis les comtés de Roussillon et de Cerdagne (1344), le roi d'Aragon Pierre IV le Cérémonieux entreprend d'ancrer irréversiblement la cité de Perpignan — ancienne capitale continentale de la dynastie déchue de Majorque — dans l'armature administrative et culturelle de la Couronne d'Aragon.\n\nAlors que la Peste noire de 1348 vient de décimer les élites intellectuelles et les officiers de chancellerie du royaume, le monarque ressent l'urgence vitale de disposer d'un nouveau foyer de formation pour les juristes, les notaires et les administrateurs publics.\n\nLe 20 mars 1350 (20 mars 1349 a. st.), depuis la ville de Saragosse, Pierre IV promulgue la charte royale instituant officiellement le Studium generale de Perpignan (Estudi General de Perpinyà). Il s'agit de la deuxième université créée au sein de la Couronne d'Aragon, un demi-siècle après la fondation du Studium generale de Lérida par Jacques II en 1300.\n\nLe diplôme royal dote la nouvelle institution d'un statut juridique complet calqué sur les grandes universités méridionales de Bologne, Montpellier et Lérida :\n\nLe monopole d'enseignement et l'interdiction d'exode académique : À l'instar du privilège accordé jadis à Lérida, Pierre IV interdit formellement aux sujets de ses États d'aller étudier le droit civil, le droit canonique, la médecine ou les arts libéraux hors de la Couronne d'Aragon (notamment à Toulouse ou à Montpellier, alors passée sous la souveraineté directe du roi de France Philippe VI de Valois depuis l'achat de 1349). Perpignan est érigée en rempart universitaire catalan face à l'attraction culturelle du royaume de France.\n\nL'immunité juridictionnelle et fiscale de la communauté universitaire (universitas magistrorum et scholarium) : Les maîtres régents et les étudiants sont placés sous la sauvegarde spéciale du souverain (guidaticum), exemptés de tailles, de péages et de service d'ost, et soustraits aux tribunaux municipaux ordinaires au profit de la juridiction exclusive du chancelier et du recteur de l'université.\n\nLe financement civique et royal : Les consuls de la ville de Perpignan (cònsols) assument la construction des salles de cours (escoles majors) près du quartier Saint-Mathieu et le versement des gages annuels des professeurs, tandis que le souverain accorde le droit de conférer les grades universitaires de bachelier, licencié et docteur.\n\nSur le plan de l'histoire politique et territoriale, la fondation de l'Université de Perpignan représente un instrument raffiné de reconquête symbolique et d'intégration dynastique. Sous le règne de Jacques II et de Jacques III de Majorque, Perpignan avait connu un essor économique et artistique prodigieux, devenant une métropole drapière et financière rivale de Barcelone. En dotant la cité roussillonnaise d'une université royale prestigieuse dès 1350, Pierre IV dédommage l'oligarchie bourgeoise de la perte de son statut de capitale royale indépendante tout en liant son avenir intellectuel et fiscal à la maison de Barcelone.\n\nDe plus, le rachat de la seigneurie de Montpellier par le roi de France en 1349 ayant privé les sujets catalans d'un accès privilégié à sa célèbre faculté de médecine et de droit, Perpignan est délibérément conçue pour prendre le relais académique au nord des Pyrénées.\n\nSur le plan de l'histoire de l'État moderne, cet acte illustre l'ascension irrésistible des légistes de formation romano-canonique au sein de la bureaucratie royale aragonaise. Pierre IV le Cérémonieux — souverain lettré, auteur d'ordonnances palatines minutieuses (Ordinacions de Cort) et de sa propre chronique — gouverne par l'écrit, l'enquête administrative et le droit savant (ius commune).\n\nEn formant sur place une pépinière de docteurs in utroque iure (en droit civil et canonique), la Couronne s'assure un vivier permanent de juges d'appel, d'auditeurs des comptes (mestres racionals) et d'ambassadeurs capables de défendre les prérogatives régaliennes face aux prétentions féodales des barons et des prélats.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/%C3%89vocation_du_palais_des_rois_de_Majorque_au_XIVe_s._%C2%A9_Studio_Diff%C3%A9remment.jpg/1280px-%C3%89vocation_du_palais_des_rois_de_Majorque_au_XIVe_s._%C2%A9_Studio_Diff%C3%A9remment.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "litterature"
+    ],
+    "legende": "Évocation du palais des rois de Majorque au XIVe s, ancienne résidence souveraine des monarques majorquins réinvestie par Pierre IV le Cérémonieux lors de l'intégration administrative du Roussillon.  Cet ensemble palatin illustre l'ancrage royal de Perpignan au milieu du XIVᵉ siècle : c'est sous l'autorité de la couronne siégeant dans cette citadelle que s'organisa la nouvelle administration légiste et fiscale destinée à encadrer les comtés nord-catalans nouvellement annexés.",
+    "lat": 42.6985,
+    "lng": 2.8953
   },
   {
     "id": 780,
@@ -19745,7 +20092,7 @@
     "titre": "Nicolas Oresme  étudie la mutation des monnaies",
     "date": 1355,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 2,
     "description": "Les états généraux du royaume convoqués par Jean le Bon pour la Ste André, accordent au roi, pour les dépenses de guerre, un impôt sur toutes les ventes sauf celles des immeubles. Le ro s’engage en contrepartie à maintenir la monnaie à l’abri des variations.\n\nCondition avantageuse pour les marchands sensibilisé par les écrits du Normand Nicolas Oresme, disciple de Buridan, polymathe, conseiller du roi Charles V le Sage,traducteur et commentateur d’Aristote; qui dans son traité de l’origine, nature, droit et monnaies une théorie sur le caractère néfaste des fluctuations de monnaies. né à Fleury-sur-Orne (qui s'appelait alors Allemagne) vers 1320-1322 et mort à Lisieux le 11 juillet 1382 Le fait qu’il ait fait ses études au collège de Navarre, établissement commandité et subventionné par le roi pour les étudiants trop pauvres pour payer leurs frais de scolarité à l’université de Paris, constitue une indication probable de ses origines paysannes.\n\nLe roi Jean II nomme Oresme précepteur du Dauphin et futur roi. Le 2 novembre 1359, Oresme devient secrétaire du roi avant de devenir son aumônier et son conseiller. Le roi semble avoir tenu le caractère et les talents de Nicole Oresme en haute estime, suivant ses conseils et l'encourageant à développer le goût de l’étude dans son royaume. Il obtient le poste d'évêque de Lisieux en 1377. Il n’a pris résidence à Lisieux qu’en septembre 1380. À sa mort, survenue deux ans après celle de Charles V, il est enterré dans la cathédrale de Lisieux.\n\nL'une des principales contributions que l'on doit à Nicole Oresme est la traduction en français de nombreux textes anciens de référence — en mathématique, politique, biologie, etc. — comme les écrits d'Aristote. Il est donc l'inventeur de nombreux mots français courants aujourd'hui tels que : monarchie, démocratie, oligarchie, aristocratie, obligation légale, pour le lexique politique, numérateur, dénominateur dans le lexique des mathématiques.\n\nSes vues « économiques » (au sens moderne : on parlait alors de philosophie et d'éthique) sont contenues dans le Commentaire sur l’Éthique d’Aristote (1370), le Commentaire sur la Politique et les Économiques d’Aristote (1371) et le Traictié de la première invention des monnoies (De mutatione monetarum ac variatione facta per reges aut principes, rédigé en 1355), alors qu'il est conseiller du roi Charles V. Dans son traité sur les monnaies, Oresme avance des idées à la fois originales et bien ancrées dans son temps :\n\nprolongeant la pensée de Saint Augustin et d’Aristote, il considère comme inique l'usure ; s'inscrivant dans la lignée d'Aristote, il réaffirme que la monnaie n'est pas la propriété individuelle du prince, mais appartient à la collectivité qui seule peut en définir le statut ; les altérations monétaires décidées par le souverain sont mal venues : elles détruisent la raison d'être de l'outil d'échange, à savoir une valeur constante en laquelle on peut se fier.\n\nPar altérations, Oresme entend changements dans le poids, la dénomination, la quotité et la pureté des matières[Dans l’Algorismus proportionum et le De proportionibus proportionum, Oresme a développé la première méthode de calcul des puissances avec des exposants irrationnels fractionnaires, c’est-à-dire le calcul avec des proportions irrationnelles (proportio proportionum)",
@@ -20420,7 +20767,7 @@
     "titre": "Retrait du revêtement calcaire de la grande pyramide de Gizeh",
     "date": 1356,
     "zones": [
-      "Italie"
+      "Egypte"
     ],
     "type": 5,
     "description": "La majeure partie des pierres de revêtement en calcaire de la Grande Pyramide de Gizeh est enlevée par Bahri Sultan An-Nasir Hasan pour construire des forteresses et des mosquées dans la ville voisine du Caire, laissant ainsi la première des Sept Merveilles du monde antique dans l'état de dalles de pierre où elle se trouve encore aujourd'hui.",
@@ -20723,6 +21070,7 @@
     "date": 1357,
     "mois": 5,
     "zones": [
+      "Italie",
       "Papaute"
     ],
     "type": 3,
@@ -21205,7 +21553,7 @@
     "titre": "Retable de Sainte Anne et de la Mère de Dieu Ramon Destorents",
     "date": 1358,
     "zones": [
-      "Castille"
+      "Aragon"
     ],
     "type": 4,
     "description": "Ramon Destorrents, ou Ramòn Destorrents, est un peintre catalan de style italo-gothique, influencé par l'école siennoise, actif entre 1347 et 1391 et documenté à Barcelone entre 1351 et 1362.\n\nIl a été le peintre du roi Pierre le Cérémonieux après la mort de la peste de son maître Ferrer Bassa, en 1348. Il est le fils de Gregori Destorrents et le père de Rafael Destorrents.\n\nUn texte du 22 mai 1391 permet de connaître sa famille. Il octroie des pouvoirs à sa veuve, Laurence, et nomme trois de ses enfants, Jaume, l'héritier, Rafael qui n'a alors que 16 ans, et Angelina. Rafael Destorrents est signalé comme peintre en 1399 et enlumineur d'un missel de sainte Eulalie par l'évêque de Barcelone Jean Arengol en 1403.\n\nIl est parfois désigné comme le Maître d'Iravals (Latour-de-Carol) ayant réalisé le retable de Sainte-Marthe pour la chapelle d'Iravals bien que cette dénomination puisse être aussi rattachée au premier atelier des Serra, en particulier Francesc et Jaume Serra.\n\nBiographie Il a été formé dans l'atelier des Bassa dont il a subi l'influence visible dans la composition et les figures douces, dans le style italo-gothique introduit à la cour d'Aragon par Ferrer Bassa.\n\nÀ la mort de son maître et la disparition de l'atelier des Bassa, le roi d'Aragon Pierre le Cérémonieux lui a demandé de terminer la réalisation des ouvrages qu'il avait commandés. Il a été réalisé des retables, enluminé des livres et décoré divers objets.\n\nEn 1352, il a décoré un psaltérion pour le roi Pierre IV d'Aragon.\n\nIl est surtout connu pour le retable de Sainte Anne et de la Mère de Dieu qu'il a exécuté entre 1353 et 1358 pour le palais royal de l'Almudaina à Palma de Majorque. Le retable avait été commandé par le roi à Ferrer Bassa qui a dû le commencer avec la collaboration d'Arnau Bassa.\n\nAprès la mort d'Arnau et de Ferrer Bassa, victimes de la peste en 1348, la réalisation va être reprise en 1353 par Ramon Destorrents qui faisait partie de l'atelier des Bassa. Le retable est terminé en 1358. Le retable a été démembré. En 1921, le musée national d'art ancien de Lisbonne a acquis le panneau central représentant sainte Anne et la Vierge enfant. Un autre panneau représentant le Calvaire a été déposé par la société archéologique Lullienne.\n\nEn 1356, Ramon Destorrents a complété le retable de la chapelle du palais royal de Lérida (Suda de Lleida) qui avait été commandé à Ferrer Bassa.\n\nIl a formé le peintre Pere Serra qui est entré dans son atelier le 14 avril 1357.\n\nEn 1358, il travaille sur la commande du retable des Sept Joies de la Vierge de la chapelle royale de Saragosse commandé pour la reine Elionor de Sicílie, troisième épouse de Pierre le Cérémonieux.\n\nEn 1359, il décore une épée royale des douze signes du zodiaque.\n\nOn peut aussi lui attribuer le retaule de l’église d’Iravals, le tableau de sainte Marthe et sainte Marguerite et la prédelle de saint Onofre de la cathédrale de Barcelone, le calvaire d’un missel de Reus et el retable de Sant Celoni, reparti entre Lilla et le musée diocésain de Barcelone.\n\nDes notices citent un miniaturiste appelé Ramon Destorrents entre 1380 et 1391. Il est peut-être l'artiste qui a réalisé le Breviari d'Amor de Londres. Rosa Alcoy y Pedrós a proposé de voir en lui l'auteur principal du retable de Santa Maria de Rubió",
@@ -21931,7 +22279,6 @@
     "date": 1359,
     "zones": [
       "Castille",
-      "Aragon",
       "Afrique du Nord"
     ],
     "type": 4,
@@ -23643,6 +23990,26 @@
     "lng": -3.2393
   },
   {
+    "id": 3159,
+    "titre": "Corts générales de Monzón",
+    "date": 1362,
+    "mois": 11,
+    "date_fin": 1363,
+    "mois_fin": 3,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Au cours de l'été 1362, la Couronne d'Aragon se trouve au bord de l'effondrement militaire. Violant la paix de Terrer conclue un an plus tôt, le roi Pierre Iᵉʳ le Cruel de Castille, allié à Charles II de Navarre, lance une offensive surprise de grande envergure contre l'Aragon et Valence : la place forte stratégique de Calatayud tombe aux mains des Castillans le 29 août 1362 après un siège impitoyable, tandis que Teruel, Tarazona et les marches valenciennes sont directement menacées d'invasion. Les caisses royales du roi d'Aragon Pierre IV le Cérémonieux sont totalement exsangues, ravagées par les guerres méditerranéennes antérieures et les conséquences démographiques de la Peste noire.\n\nPour sauver la monarchie d'un démembrement imminent, Pierre IV convoque en urgence à Monzón (cité aragonaise située à la frontière linguistique et géographique de la Catalogne, traditionnellement choisie pour les assemblées communes) des Corts générales réunissant simultanément les représentants des trois ordres (clergé, noblesse et villes royales) du Royaume d'Aragon, de la Principauté de Catalogne, du Royaume de Valence et du Royaume de Majorque.\n\nEntre novembre 1362 et mars 1363, sous la pression directe de l'avancée des armées castillanes, l'assemblée adopte une série de résolutions financières et institutionnelles révolutionnaires :\n\nLe vote d'un subside de guerre sans précédent : Les quatre États s'engagent à lever et à entretenir à leurs frais une armée permanente de plusieurs milliers de cavaliers et de fantassins pendant deux ans, financée par un impôt direct par feu (fogatge / monedaje) et par des taxes indirectes sur le commerce et la consommation intérieure (generalitats / sisas).\n\nL'extension du modèle institutionnel de la Generalitat catalane (1359) : Afin d'empêcher que les officiers royaux ne détournent ces fonds considérables vers d'autres théâtres d'opérations ou les dépenses somptuaires de la cour, les parlementaires exigent que la collecte, la gestion comptable et le versement de la solde aux capitaines soient confiés non pas au trésorier du roi, mais à des commissions parlementaires permanentes émanant directement des Corts.\n\nLa naissance des Députations du Général d'Aragon et de Valence : Ce mécanisme de contrôle fiscal, déjà expérimenté en Catalogne lors des Corts de Cervera en 1359 (acte fondateur de la Diputació del General de Catalunya ou Generalitat), est formellement étendu en 1362–1363 au Royaume d'Aragon (Diputación del General del Reino de Aragón) et au Royaume de Valence (Diputació del General del Regne de València), dotant chacun des États constitutifs d'un organe exécutif permanent représentant la communauté politique face au monarque.\nSur le plan de l'histoire constitutionnelle européenne, les Corts de Monzón de 1362–1363 représentent l'acte de naissance définitif de l'État fiscal contractuel (pactismo) dans les pays de la Couronne d'Aragon. Contraint par l'urgence vitale de la guerre contre la Castille, Pierre IV le Cérémonieux — pourtant monarque autoritaire et centralisateur par tempérament — accepte une limitation structurelle de sa souveraineté financière : l'impôt extraordinaire cesse d'être une ressource royale discrétionnaire pour devenir le patrimoine propre du « Général » (el General, c'est-à-dire l'ensemble des trois ordres représentant la nation politique).\n\nSur le plan institutionnel et administratif, ces délégations parlementaires provisoires chargées de lever les generalitats (taxes sur les draps, la laine, le blé et les échanges extérieurs) vont très rapidement se pérenniser. Entre 1363 et la fin du XIVᵉ siècle, les Députations du Général de Barcelone, de Saragosse et de Valence acquièrent des sièges palatins propres, des archives autonomes, un corps de receveurs et d'auditeurs des comptes, ainsi qu'un pouvoir de représentation politique continue dans l'intervalle des sessions parlementaires.\n\nCe système dualiste — opposant l'administration royale aux Députations parlementaires — façonnera l'identité juridique et politique des territoires de l'Est hispanique jusqu'à leur abolition par les décrets de Nueva Planta de Philippe V au début du XVIIIᵉ siècle.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Castillo_de_Monzon_%2815530066601%29.jpg/960px-Castillo_de_Monzon_%2815530066601%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "themes": [
+      "politique"
+    ],
+    "legende": "silhouette monumentale en pierre et briques de la forteresse médiévale de Monzón (province de Huesca, Aragon), dominant la vallée du Cinca où se tinrent les sessions extraordinaires des Corts générales de 1362–1363.  Ancienne commanderie maîtresse des Templiers devenue place forte royale et hospitalière, cette citadelle incarne le lieu de convergence constitutionnel des États de la Couronne d'Aragon : c'est au pied de ces murailles que les représentants d'Aragon, de Catalogne, de Valence et de Majorque scellèrent l'union fiscale donnant naissance aux Députations du Général.",
+    "lat": 41.9128,
+    "lng": 0.1927
+  },
+  {
     "id": 1114,
     "titre": "Bataille navale du lac Poyang",
     "date": 1363,
@@ -24492,6 +24859,25 @@
     ],
     "lat": 36.8179,
     "lng": 10.2127
+  },
+  {
+    "id": 3160,
+    "titre": "Exécution de Bernat de Cabrera à Saragosse",
+    "date": 1364,
+    "mois": 7,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "La chute, le procès politique et la décapitation de Bernat de Cabrera à Saragosse (26 juillet 1364) : crise au sommet de la Couronne d'Aragon en pleine guerre contre la Castille, intrigues de cour et divergences stratégiques sur les Grandes Compagnies.\nPendant près de vingt ans (1347–1364), le vicomte catalan Bernat II de Cabrera (1298–1364) fut l'âme véritable du gouvernement de la Couronne d'Aragon. Diplomate hors pair, grand amiral victorieux des Génois à la bataille navale de la Loiera / Alghero en Sardaigne (1353), pacificateur des révoltes féodales de l'Union aragonaise et principal architecte des alliances diplomatiques de Pierre IV le Cérémonieux, Cabrera exerçait un ascendant quasi absolu sur le monarque et dirigeait l'éducation du prince héritier, l'infant Jean.\n\nCependant, au plus fort de la dramatique « guerre des Deux Pierre » contre la Castille (1356–1366), alors que l'armée de Pierre Iᵉʳ le Cruel assiège Valence et ravage l'Aragon, l'omnipotence de Cabrera suscite une coalition implacable au sein même du palais royal. Trois forces unissent leurs haines contre le vieux ministre :\n\nLa reine Éléonore de Sicile (troisième épouse de Pierre IV), qui reproche à Cabrera son autoritarisme et son contrôle exclusif sur les finances et l'éducation de son fils l'infant Jean.\n\nLe prince castillan exilé Henri de Trastamare (demi-frère bâtard et ennemi mortel de Pierre Iᵉʳ de Castille, réfugié en Aragon avec ses troupes), qui ambitionne de détrôner son frère avec l'aide des mercenaires français des Grandes Compagnies (conduits par Bertrand du Guesclin).\n\nLes grands barons aragonais et catalans (notamment le comte d'Urgell et les Luna), jaloux de la fortune colossale accumulée par le vicomte de Cabrera.\n\nLe nœud du conflit porte sur la conduite stratégique de la guerre. Pragmatique et soucieux d'épargner les finances exsangues de la Couronne, Bernat de Cabrera préconise une paix négociée rapide avec Pierre Iᵉʳ de Castille (la paix de Murviedro en 1363) et s'oppose farouchement au recrutement des Grandes Compagnies françaises, avertissant le roi que ces routiers pilleront l'Aragon et la Catalogne tout autant que la Castille. À l'inverse, la reine Éléonore et Henri de Trastamare poussent à la guerre à outrance et à l'intervention massive des mercenaires d'outre-Pyrénées.\n\nIsolé et sentant sa vie menacée, Bernat de Cabrera tente de se réfugier en France en passant par la Navarre au printemps 1364. Arrêté à Cárcar par les officiers du roi Charles II de Navarre — qui le livre aussitôt à Pierre IV pour monnayer une alliance —, l'ancien favori est transféré enchaîné à Saragosse. Soumis à la torture judiciaire et jugé par un tribunal d'exception présidé par Pierre IV lui-même, Cabrera est accusé d'avoir sciemment saboté les opérations militaires devant Murviedro, d'avoir entretenu des intelligences secrètes avec Pierre Iᵉʳ de Castille et d'avoir conspiré contre l'infant Jean.\n\nMalgré ses services passés incomparables, Pierre IV signe l'arrêt de mort : le 26 juillet 1364, âgé de soixante-six ans, Bernat de Cabrera est décapité publiquement à Saragosse, et ses immenses domaines catalans (la vicomté de Cabrera et le comté d'Osona) sont confisqués par la Couronne.\nSur le plan de l'histoire politique et des mécanismes de cour à la fin du Moyen Âge, la chute de Bernat de Cabrera illustre la fragilité structurelle du statut de « favori » (privado) dans les monarchies européennes du XIVᵉ siècle. À l'instar d'Enguerrand de Marigny en France sous Louis X ou d'Álvaro de Luna en Castille au siècle suivant, Cabrera a concentré sur sa seule personne l'ensemble des responsabilités fiscales, diplomatiques et militaires d'un État en guerre totale. Dès lors que les revers militaires s'accumulent (chute de Calatayud, siège de Valence), le monarque — pour préserver l'infaillibilité sacrée de la Couronne face au mécontentement des Corts et de la haute noblesse — sacrifie son principal ministre en en faisant le bouc émissaire universel des malheurs du royaume.\n\nSur le plan géopolitique ibérique, l'exécution de Saragosse marque le triomphe décisif du parti de l'intervention française et de la solution trastamare. L'élimination physique de Cabrera lève le dernier obstacle politique s'opposant à l'entrée en Espagne des Grandes Compagnies commandées par Bertrand du Guesclin en 1365–1366 : financées conjointement par Pierre IV d'Aragon, le roi de France Charles V et le pape d'Avignon Urbain V, ces troupes mercenaires renverseront Pierre Iᵉʳ de Castille (assassiné à Montiel en 1369) et installeront sur le trône de Castille l'allié d'Aragon, Henri II de Trastamare, bouleversant durablement l'équilibre des forces de toute la péninsule Ibérique.\n\n'embarras manifeste de la Crònica de Pierre IV le Cérémonieux : Dans sa propre chronique officielle, Pierre IV tente de justifier a posteriori la mise à mort de son ancien ami et mentor en accumulant contre lui les accusations de félonie et de concussions financières. Toutefois, les historiens modernes (notamment Ferran Soldevila et Josep Maria Roca) ont souligné le ton gêné et défensif de ce passage : quelques années plus tard, en 1372–1381, Pierre IV reconnaîtra publiquement l'innocence posthume de Bernat de Cabrera, réhabilitera sa mémoire et restituera l'intégralité du patrimoine familial à son petit-fils Bernat IV de Cabrera, aveu implicite de l'injustice politique commise sous l'emprise des intrigues de 1364.\n\nLes pièces originales du procès criminel (ACA) : Conservées aux Archives de la Couronne d'Aragon à Barcelone (Procesos históricos, legajo de Bernat de Cabrera, édité par Francisco de Bofarull y Sans), les minutes authentiques des interrogatoires et de la sentence rendue à Saragosse en juillet 1364 constituent un document juridique exceptionnel. Elles permettent de reconstituer avec une précision clinique les griefs formulés par le procureur fiscal du roi ainsi que la défense digne et ferme de Cabrera, qui rappela jusqu'au pied de l'échafaud qu'il n'avait jamais agi que pour éviter à la Catalogne et à l'Aragon la ruine d'une guerre interminable.\n\nL'analyse moderne des réseaux de pouvoir : Les travaux universitaires d'Antonio Gutiérrez de Velasco et de María Teresa Ferrer i Mallol ont mis en lumière le rôle déterminant joué dans cette affaire par les financiers barcelonais et la reine Éléonore de Sicile, démontrant que l'exécution de Cabrera fut le point culminant d'une lutte acharnée pour le contrôle des énormes subsides votés quelques mois plus tôt aux Corts générales de Monzón (1362–1363).",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Aljafer%C3%ADa_Palace.jpg/1920px-Aljafer%C3%ADa_Palace.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "revolte"
+    ],
+    "legende": "Palais de l'Aljafería, à Saragosse, Espagne, résidence royale des monarques d'Aragon dans la capitale du royaume où se déroula le procès criminel de Bernat de Cabrera en juillet 1364.  Cette forteresse palatine matérialise le théâtre politique de la disgrâce : c'est derrière ces murailles défensives que siégea le tribunal extraordinaire présidé par Pierre IV le Cérémonieux, avant que le vieux ministre et amiral ne soit conduit sur la place publique de Saragosse pour y être exécuté.",
+    "lat": 41.6916,
+    "lng": -0.9101
   },
   {
     "id": 1163,
@@ -25602,6 +25988,7 @@
     "mois": 10,
     "date_fin": 1370,
     "zones": [
+      "Italie",
       "Papaute"
     ],
     "type": 3,
@@ -25657,7 +26044,7 @@
     "titre": "Château d'eau de Lucerne",
     "date": 1367,
     "zones": [
-      "Italie"
+      "St Empire"
     ],
     "type": 4,
     "description": "Le château d'eau de Lucerne, situé au milieu du pont de la Chapelle, est mentionné pour la première fois dans un document.",
@@ -29339,7 +29726,6 @@
     "titre": "Beatrijs légende mariale du moyen néerlandais",
     "date": 1374,
     "zones": [
-      "Italie",
       "Flandre"
     ],
     "type": 4,
@@ -30150,6 +30536,26 @@
     "lat": 40.0266,
     "lng": 8.6796,
     "serie": "Guerre sardo-catalane"
+  },
+  {
+    "id": 3161,
+    "titre": "Traité d'Almazán fin officielle de la guerre des Deux Pierre",
+    "date": 1375,
+    "mois": 4,
+    "zones": [
+      "Castille",
+      "Aragon"
+    ],
+    "type": 3,
+    "description": "Déclenchée en août 1356 à la suite d'un incident naval à Sanlúcar de Barrameda, la « guerre des Deux Pierre » (Guerra de los Dos Pedros), opposant le roi Pierre Iᵉʳ le Cruel de Castille au roi Pierre IV le Cérémonieux d'Aragon, avait plongé les deux plus puissantes monarchies de la péninsule Ibérique dans près de vingt années de dévastations continues. Pour renverser son rival castillan, Pierre IV avait soutenu et financé les prétentions de son demi-frère bâtard, Henri de Trastamare, lui promettant par les traités secrets de Pina (1356) et de Monzón (1363) d'immenses cessions territoriales en Castille orientale (les royaumes de Murcie et de Tolède, ainsi que les places de Soria, Almazán, Molina et Requena) en échange de son appui militaire.\n\nCependant, une fois vainqueur de Pierre Iᵉʳ à Montiel en 1369 et solidement installé sur le trône de Castille sous le nom d'Henri II de Trastamare, le nouveau monarque refuse catégoriquement d'amputer son royaume des provinces promises lors de son exil. Entre 1369 et 1374, une guerre larvée et des tensions frontalières aiguës persistent entre les deux anciens alliés : les troupes aragonaises occupent encore Molina et Requena, tandis que le royaume de Valence et l'Aragon sont exsangues, ruinés par la fiscalité de guerre, les raids des mercenaires et les famines.\n\nContraint par l'épuisement financier de ses États et par la menace permanente d'une reprise des hostilités en Sardaigne contre les juges d'Arborée et Gênes, Pierre IV le Cérémonieux se résout à négocier une paix de compromis. Le 12 avril 1375, les plénipotentiaires des deux couronnes signent dans la ville castillane fortifiée d'Almazán (sur le haut Duero, dans la province de Soria) un traité de paix perpétuelle reposant sur un triple équilibre :\n\nLa renonciation aragonaise aux conquêtes territoriales en Castille : Pierre IV abandonne formellement l'ensemble des revendications foncières formulées dans les anciens pactes de Pina et de Monzón, acceptant le retour intégral au statu quo ante bellum de 1356. L'Aragon restitue à la Castille les places frontalières de Molina, Requena et Cañete encore tenues par ses garnisons.\n\nL'indemnisation financière versée par la Castille : En contrepartie de cet abandon territorial, Henri II s'engage à verser à la Couronne d'Aragon une indemnité de guerre considérable de cent quatre-vingt mille florins d'or d'Aragon (échelonnée sur plusieurs termes) afin de rembourser les frais engagés jadis pour l'intervention des Grandes Compagnies.\n\nLe scellement matrimonial dynastique : Pour garantir l'irrévocabilité de la réconciliation, il est stipulé que la fille de Pierre IV, l'infante Aliénor d'Aragon (Leonor de Aragón), épousera l'héritier du trône de Castille, l'infant Jean (futur Jean Iᵉʳ de Castille), union célébrée avec faste à Soria le 18 juin 1375 — mariage dont naîtra le futur infant Ferdinand d'Antequera, appelé à monter sur le trône d'Aragon lui-même lors du Compromis de Caspe en 1412.\n\nAnalyse et contextualisation : \nSur le plan de la géopolitique péninsulaire de la fin du Moyen Âge, le traité d'Almazán constitue le pivot de la stabilisation des frontières ibériques jusqu'à l'union dynastique des Rois Catholiques en 1469. En entérinant l'échec définitif des ambitions expansionnistes de Pierre IV vers le plateau castillan et le royaume de Murcie, cet accord consacre la suprématie démographique et territoriale de la Castille trastamare au sein de l'espace hispanique : désormais reconnue dans l'intégralité de ses frontières historiques, la dynastie des Trastamare peut tourner ses ressources vers l'alliance française dans la guerre de Cent Ans et vers le Portugal.\n\nSur le plan dynastique à long terme, l'union matrimoniale décidée à Almazán recèle une ironie historique majeure. En donnant sa fille Aliénor à l'héritier de Castille pour solder un conflit militaire, Pierre IV le Cérémonieux introduit sans le savoir le sang des Trastamare dans la ligne de succession directe de la maison de Barcelone : lorsque la descendance mâle directe de Pierre IV s'éteindra avec la mort de son fils Martin Iᵉʳ l'Humain en 1410, c'est précisément le fils cadet issu du mariage d'Almazán, Ferdinand Iᵉʳ d'Antequera, qui recueillera l'héritage de la Couronne d'Aragon en 1412, inaugurant l'unification dynastique progressive des deux couronnes.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Almazan_puerta_de_la_Villa.jpg/960px-Almazan_puerta_de_la_Villa.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "diplomatie"
+    ],
+    "legende": "remparts en pierre de la ville d'Almazán (province de Soria, Castille-et-León), cité frontalière stratégique surplombant le fleuve Duero où fut scellée la paix du 12 avril 1375.  Cette enceinte castrale matérialise le point de contact historique entre les deux monarchies ibériques : c'est derrière ces murailles défensives du plateau sorianais que les plénipotentiaires de Pierre IV d'Aragon et d'Henri II de Castille ratifièrent la fin de la guerre des Deux Pierre et négocièrent les noces royales célébrées quelques semaines plus tard à Soria.",
+    "lat": 41.4871,
+    "lng": -2.5336,
+    "serie": "Guerre des deux Pierre"
   },
   {
     "id": 152,
@@ -31549,6 +31955,8 @@
     "mois": 9,
     "date_fin": 1417,
     "zones": [
+      "Europe",
+      "Italie",
       "Papaute"
     ],
     "type": 3,
@@ -31909,7 +32317,7 @@
     "titre": "Le Songe du verger",
     "date": 1379,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 3,
     "description": "Le Songe du Verger est un texte français fondamental de doctrine sur le droit public du Bas Moyen Âge, en particulier sur les rapports entre pouvoir civil et ecclésiastique.\nÉdité à la fois en latin et en moyen français comme un dialogue entre un clerc et un chevalier, dédié au roi Charles V, il s'agit d'un ouvrage de droit public écrit entre 1376 et 1378. Son auteur, qui manifeste d'un certain esprit satirique, et dont on est sûr qu'il était membre du Conseil du roi, est resté longtemps incertain, une douzaine de noms ont été proposés, comme Philippe de Mézières, Charles de Louviers dont le nom est indiqué comme auteur sur le Manuscrit de Sens, ou encore Évrart de Trémaugon.\n\nPour expliquer ce nom on avance souvent l'hypothèse qu'il renvoie aux conditions dans lesquelles cette œuvre a été inspirée : l'auteur, endormi dans un verger, aurait vu dans un rêve le roi accompagné du pape, puis un clerc et un chevalier choisis comme avocats par les deux hommes pour débattre amicalement de points litigieux.\n\nFinalement, c'est plutôt le chevalier qui l'emporte.\n\nPlus largement, cette œuvre est un véritable traité politique, pionnier dans l'élaboration de la science politique. Elle porte sur la fiscalité royale, les relations entre souveraineté et droit et tend à définir précisément le pouvoir législatif. L'auteur s'inspire d'un Somnium de 1372 composé par le juriste bolonais Jean de Legnano. Le plus ancien manuscrit conservé se trouve à la British Library. C'est le manuscrit enluminé Royal 19 C IV qui a appartenu au roi Charles V en 1378 comme l'indiquait une inscription effacée à la fin du livre : « Cest livre nomme le Songe du Vergier est a nous Charles Ve de ce nom roy de France et le fimes compiler translater et escrire lan MIL CCC LXXVIII ».\n\nLe livre était mentionné dans l'inventaire de 1411 de la bibliothèque du roi qui signale la signature du roi aujourd'hui disparue. Le livre est passé en Angleterre où il a été la propriété de Humfrey, duc de Gloucester[",
@@ -32232,6 +32640,26 @@
     "lng": -1.3167
   },
   {
+    "id": 3162,
+    "titre": "Politique d'« indifférence » (indiferència) de Pierre IV face au Grand Schisme d'Occident",
+    "date": 1379,
+    "mois": 11,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Lorsque la chrétienté occidentale se déchire brutalement à l'automne 1378 entre deux papes rivaux s'excommuniant mutuellement — l'Italien Urbain VI siégeant à Rome et le Savoyard Clément VII bientôt replié à Avignon —, les grandes monarchies européennes basculent rapidement dans des camps opposés selon leurs alliances politiques : le roi de France Charles V et le roi de Castille Henri II rallient l'obédience avignonnaise de Clément VII (en 1379–1381), tandis que l'Angleterre, l'Empire et la Hongrie reconnaissent le pape romain Urbain VI.\n\nContre toute attente, le roi d'Aragon Pierre IV le Cérémonieux refuse de s'aligner sur l'une ou l'autre des deux curies. Déjouant les pressions incessantes du cardinal légat aragonais Pedro de Luna (le futur antipape Benoît XIII, ardent partisan de Clément VII) et des ambassadeurs français, le vieux monarque élabore une doctrine juridique et politique originale : la politique d'« indifférence » (indiferència).\n\nPar une série de mandements royaux promulgués en 1378–1379 et confirmés devant les assemblées du clergé de ses États, Pierre IV décrète que la Couronne d'Aragon suspend provisoirement sa reconnaissance envers les deux prétendants jusqu'à ce qu'un concile œcuménique libre et universel ait tranché canoniquement la légitimité de l'élection pontificale :\n\nL'interdiction absolue de toute obédience unilatérale : Le souverain défend sous peine de confiscation temporelle aux évêques, abbés et chapitres d'Aragon, de Catalogne, de Valence et de Majorque de publier les bulles ou d'exécuter les sentences émanant soit de Rome, soit d'Avignon.\n\nLa mise sous séquestre régaliens des revenus pontificaux : Tirant parti de la vacance de fait du siège apostolique dans ses royaumes, Pierre IV ordonne à ses officiers fiscaux de saisir et de placer en dépôt sous la garde de la Trésorerie royale l'intégralité des sommes normalement dues à la Chambre apostolique : les annates, les décimes ecclésiastiques, les revenus des évêchés et abbayes vacants (spolia) ainsi que le produit des indulgences.\n\nLe chantage diplomatique permanent auprès des deux curies : En se posant en arbitre impartial de la chrétienté, Pierre IV monnaye chèrement la perspective de son ralliement futur auprès des deux papes : il exige d'Urbain VI l'investiture légitime de la Sardaigne et de la Sicile (fiefs pontificaux contestés), tout en obtenant de Clément VII des concessions juridictionnelles majeures, telle la bulle de confirmation de l'Université de Perpignan en novembre 1379.\n\nCette neutralité lucrative et souveraine sera maintenue sans fléchir jusqu'au décès de Pierre IV en janvier 1387 ; ce n'est qu'à l'avènement de son fils Jean Iᵉʳ le Chasseur (en février 1387) que la Couronne d'Aragon basculera officiellement dans l'obédience avignonnaise de Clément VII.\n\nSur le plan de l'histoire des relations entre l'Église et l'État au bas Moyen Âge, la politique d'« indifférence » de Pierre IV le Cérémonieux constitue une anticipation saisissante du régalisme moderne et des doctrines conciliaristes. Bien avant la formalisation théologique de la « soustraction d'obédience » pratiquée par la monarchie française de Charles VI en 1398, le roi d'Aragon démontre qu'un souverain temporel peut suspendre unilatéralement la juridiction fiscale et administrative de la papauté sur son territoire sans pour autant rompre avec l'orthodoxie catholique.\n\nEn plaçant le clergé national sous la tutelle protectrice directe de la Couronne, Pierre IV réalise temporairement un véritable gallicanisme catalano-aragonais, tarissant l'hémorragie d'or qui drainait chaque année les richesses ecclésiastiques de ses royaumes vers Avignon ou Rome.\n\nSur le plan géopolitique méditerranéen, cette neutralité illustre la lucidité stratégique d'une monarchie maritime soucieuse de préserver son équilibre entre l'espace franco-ibérique et l'espace italien. Rallier immédiatement Clément VII aurait entraîné des représailles diplomatiques et commerciales d'Urbain VI, suzerain théorique des royaumes de Sardaigne et de Sicile où la Couronne d'Aragon défendait des intérêts vitaux face à Gênes et aux barons insulaires. Rallier Urbain VI aurait à l'inverse provoqué une rupture frontale avec la France et la Castille trastamare, menaçant la paix fraîchement acquise au traité d'Almazán (1375). L'« indifférence » permettait ainsi à Barcelone de naviguer habilement entre les deux blocs européens pendant près d'une décennie.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Peniscola_from_the_beach._Year_1985.jpg/1920px-Peniscola_from_the_beach._Year_1985.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "politique",
+      "religion",
+      "diplomatie"
+    ],
+    "legende": "Château templier et pontifical de Peñíscola (province de Castellón, Communauté valencienne), forteresse maritime de la Couronne d'Aragon qui deviendra quelques décennies plus tard le refuge ultime du cardinal aragonais Pedro de Luna, élu pape d'Avignon sous le nom de Benoît XIII (el Papa Luna).  Cette citadelle maritime incarne l'implication profonde et paradoxale de la Couronne d'Aragon dans le Grand Schisme d'Occident : après avoir maintenu sous Pierre IV une neutralité fiscale et diplomatique inflexible entre 1378 et 1387, l'Aragon deviendra le bastion irréductible de la papauté avignonnaise jusqu'au concile de Constance.",
+    "lat": 41.3826,
+    "lng": 2.1771
+  },
+  {
     "id": 143,
     "titre": "Charles VI, dit « le Bien-Aimé »",
     "date": 1380,
@@ -32451,7 +32879,8 @@
     ],
     "legende": "Les oncles font couronner rapidement Charles VI de manière à prendre le pouvoir au détriment des conseillers de Charles V. Jean Fouquet, Les Grandes Chroniques de France, vers 1455-1460.",
     "lat": 48.8535,
-    "lng": 2.3484
+    "lng": 2.3484,
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 1640,
@@ -32722,7 +33151,8 @@
     ],
     "lat": 51.507,
     "lng": -0.128,
-    "sources": "Jean Froissart, Chroniques"
+    "sources": "Jean Froissart, Chroniques",
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 197,
@@ -32767,7 +33197,7 @@
     "titre": "Plafond en bois du Palazzo Chiaramonte à Palerme",
     "date": 1381,
     "zones": [
-      "Italie"
+      "Naples"
     ],
     "type": 5,
     "description": "Le plafond en bois du Palazzo Chiaramonte à Palerme fut achevé après trois ans de travaux. Son décor peint lui confère une grande valeur. Bien que la qualité artistique ne dépasse pas le niveau habituel des artisans, l'iconographie compte parmi les collections de peintures les plus remarquables de la Sicile du XIVe siècle, un style que l'on retrouve également dans l'art normand, arabo-byzantin . Le plafond en bois de l'étage supérieur présente une charpente apparente.",
@@ -33382,26 +33812,6 @@
     "legende": "Armes des albizzi",
     "lat": 43.7698,
     "lng": 11.2556
-  },
-  {
-    "id": 1990,
-    "titre": "Assassinat de Hugues III d'Arborée",
-    "date": 1381,
-    "zones": [
-      "Italie",
-      "Aragon"
-    ],
-    "type": 5,
-    "description": "Hugues III, ainsi que sa fille unique, Benedetta, furent assassinés en 1383 lors d'une émeute. [ 10 ] Frédéric d'Arborée succéda à Hugues, suivi en 1387 par Marianus V ; tous deux étaient fils d' Éléonore d'Arborée et de Brancaleone Doria . Toutefois, étant mineurs, le trône revint de facto à leur mère qui, en 1388, stipula un traité de paix avec l'Aragon, s'engageant à restituer les territoires conquis par ses prédécesseurs.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/East_walls%2C_under_the_Cathedral_and_the_Royal_Palace.JPG/1280px-East_walls%2C_under_the_Cathedral_and_the_Royal_Palace.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "themes": [
-      "revolte",
-      "politique"
-    ],
-    "legende": "Les remparts orientaux de Cagliari",
-    "lat": 39.2172,
-    "lng": 9.1133,
-    "serie": "Guerre sardo-catalane"
   },
   {
     "id": 3040,
@@ -34476,6 +34886,27 @@
     "lng": 19.3479
   },
   {
+    "id": 1990,
+    "titre": "Assassinat de Hugues III d'Arborée",
+    "date": 1383,
+    "mois": 3,
+    "zones": [
+      "Italie",
+      "Aragon"
+    ],
+    "type": 5,
+    "description": "Hugues III, ainsi que sa fille unique, Benedetta, furent assassinés en 1383 lors d'une émeute. [ 10 ] Frédéric d'Arborée succéda à Hugues, suivi en 1387 par Marianus V ; tous deux étaient fils d' Éléonore d'Arborée et de Brancaleone Doria . Toutefois, étant mineurs, le trône revint de facto à leur mère qui, en 1388, stipula un traité de paix avec l'Aragon, s'engageant à restituer les territoires conquis par ses prédécesseurs.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/East_walls%2C_under_the_Cathedral_and_the_Royal_Palace.JPG/1280px-East_walls%2C_under_the_Cathedral_and_the_Royal_Palace.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "themes": [
+      "revolte",
+      "politique"
+    ],
+    "legende": "Les remparts orientaux de Cagliari",
+    "lat": 39.2172,
+    "lng": 9.1133,
+    "serie": "Guerre sardo-catalane"
+  },
+  {
     "id": 950,
     "titre": "L'Annonciation, Diptyque de Andrea di Bartolo",
     "date": 1383,
@@ -35028,7 +35459,8 @@
     "description": "7 avril 1383 – À Gênes, le doge Nicolò Guarco est renversé. Federico di Pagana lui succède, mais démissionne avant la fin de la journée. Les factions génoises s'accordent alors sur l'élection de Leonardo Montaldo, nouveau doge de la République. Cette succession de trois doges en une seule journée illustre l'instabilité politique chronique de Gênes au XIVᵉ siècle.\nÀ la fin du XIVᵉ siècle, la République de Gênes est profondément divisée entre les grandes familles patriciennes (Adorno, Fregoso, Guarco, Montaldo, Doria, Spinola, etc.). Les rivalités politiques, auxquelles s'ajoutent les difficultés financières et les conséquences de la guerre de Chioggia contre Venise (1378-1381), provoquent de fréquents changements de gouvernement.\n\nLe doge Nicolò Guarco, élu en 1378, a perdu une grande partie de son soutien.\n\nLe 7 avril 1383\n\nLe 7 avril 1383, un coup de force politique entraîne une succession extrêmement rapide :\n\nNicolò Guarco est contraint d'abandonner le pouvoir.\nFederico di Pagana est proclamé doge, probablement comme candidat de compromis.\nSon gouvernement ne dure que quelques heures. Faute d'un soutien suffisant, il renonce à la dignité ducale avant la fin de la journée.\nLes principaux groupes politiques s'accordent finalement sur Leonardo Montaldo, qui devient le nouveau doge.\nIl s'agit de l'un des mandats les plus courts de l'histoire génoise : celui de Federico di Pagana ne dépasse vraisemblablement pas une journée.",
     "image": "",
     "themes": [
-      "revolte"
+      "revolte",
+      "politique"
     ],
     "lat": 44.4073,
     "lng": 8.9339
@@ -35271,6 +35703,24 @@
     "lng": 11.5754
   },
   {
+    "id": 3163,
+    "titre": "Regiment de la cosa pública par Francesc Eiximenis",
+    "date": 1383,
+    "zones": [
+      "Aragon"
+    ],
+    "type": 4,
+    "description": "Originaire de Gérone (né vers 1330), le frère mineur franciscain Francesc Eiximenis s'établit à Valence en 1382–1383, à l'appel du gouvernement municipal (Consell et Jurats) qui souhaite s'attacher les conseils de ce théologien encyclopédiste formé dans les plus prestigieuses universités d'Europe (Oxford, Paris, Cologne et Toulouse). La cité de Valence connaît alors un essor démographique, portuaire et financier fulgurant qui en fait la métropole économique la plus dynamique de la Couronne d'Aragon.\n\nEn 1383, Eiximenis compose et dédie personnellement aux six jurats en exercice de la cité de Valence (Bernat Maler, Bernat de Gardó, Pere Joan, Jaume Romeu, Berenguer de Rojals et Jaume Marrades) un traité de philosophie politique et d'éthique civique rédigé dans une prose catalane claire, nerveuse et pédagogique : le Regiment de la cosa pública (« Le Gouvernement de la chose publique »).\n\nConçu à l'origine pour former le cœur de la douzième partie (Dotzè) de sa somme théologico-morale Lo Crestià, l'ouvrage circule immédiatement comme un manuel indépendant conservé dans la salle du conseil municipal (Casa de la Ciutat) pour éclairer l'action quotidienne des magistrats urbains.\n\nStructuré en trente-neuf chapitres, le Regiment de la cosa pública développe une conception novatrice de la cité médiévale et du pouvoir politique :\n\nL'éloge enthousiaste de la cité de Valence comme « paradis terrestre » : Dans une célèbre lettre dédicatoire et aux premiers chapitres, Eiximenis célèbre les trente-deux beautés naturelles, climatiques, agricoles, architecturales et morales de Valence, glorifiant le travail fécond de ses artisans, de ses laboureurs de la Huerta et surtout de ses marchands (mercaders), qu'il élève au rang de piliers indispensables de la prospérité et de la concorde sociale (en rupture nette avec la méfiance traditionnelle des théologiens scolastiques envers le négoce).\n\nLa primauté absolue du « Bien commun » (Bé comú) sur l'intérêt privé : Eiximenis démontre que la communauté politique (cosa pública) n'est pas la propriété patrimoniale des dirigeants ni du roi, mais une association morale ordonnée au salut matériel et spirituel de tous les citoyens, exigeant des magistrats une intégrité financière incorruptible, la chasse aux usuriers et aux monopoleurs, et l'assistance charitable aux pauvres et aux orphelins.\n\nLa théorie contractuelle de la souveraineté (pactisme) : L'auteur affirme avec une audace remarquable que toute autorité royale ou seigneuriale procède d'un pacte librement consenti par la communauté humaine (pacte comunitari), soumettant le monarque lui-même au respect scrupuleux des lois écrites (Furs), des privilèges urbains et du consentement fiscal des assemblées représentatives.\n\nSur le plan de l'histoire des idées politiques européennes, le Regiment de la cosa pública représente un jalon majeur de « l'humanisme civique » méditerranéen, contemporain des réflexions de Coluccio Salutati et de Leonardo Bruni dans la Florence républicaine. Bien que s'exprimant dans le cadre monarchique de la Couronne d'Aragon, Francesc Eiximenis élabore une véritable éthique républicaine de la cité autonome : la ville (ciutat) est pensée comme le cadre naturel de l'épanouissement rationnel et chrétien de l'homme, où le gouvernement collégial des bourgeois et des chevaliers tempère l'arbitraire monarchique.\n\nSur le plan de l'histoire constitutionnelle et sociale de Valence, l'œuvre d'Eiximenis fournit la légitimation théologique et juridique de l'hégémonie politique du patriciat urbain valencien au lendemain de la guerre de l'Union (1347–1348) et de la guerre des Deux Pierre (1356–1366). En sacralisant la fonction du marchand et du jurat municipal — qu'il n'hésite pas à présenter comme les véritables soutiens de la paix civile face aux guerres stériles de la noblesse féodale —, Eiximenis forge l'idéologie civique qui présidera au « Siècle d'Or valencien » (Segle d'Or valencià) du XVᵉ siècle, faisant de Valence le principal pôle financier et culturel de la monarchie.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Regiment_de_la_Cosa_Publica.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "litterature",
+      "idees"
+    ],
+    "legende": "Page de titre de l' édition incunable du Regiment de la Cosa Pública (Valence, Cristòfor Cofman, 1499). Francesc Eiximenis est à droite. Il offre son livre aux jurés de Valence. À gauche se trouve l'ange gardien de la ville et du royaume de Valence. Les six jurés de Valence sont agenouillés devant la porte gothique de Serrans , dans les anciens remparts de Valence.",
+    "lat": 39.4697,
+    "lng": -0.3763
+  },
+  {
     "id": 945,
     "titre": "Altichiero da Zevio Fresques de l'oratoire St George de Padoue",
     "date": 1384,
@@ -35305,24 +35755,6 @@
     "lat": 41.2408,
     "lng": 16.5019,
     "serie": "Guerre de l'Union d'Aix"
-  },
-  {
-    "id": 1821,
-    "titre": "Soulèvement contre l'impôt sur la viande à Gênes",
-    "date": 1384,
-    "mois": 3,
-    "zones": [
-      "Italie"
-    ],
-    "type": 5,
-    "description": "19 mars : soulèvement contre l'impôt sur la viande à Gênes. Le doge Niccolò Guarco est attaqué dans son palais (5 avril) et doit s'enfuir le lendemain.\n7 avril : Léonard Montalto est élu doge de Gênes (fin le 14 juin 1384)",
-    "image": "",
-    "themes": [
-      "revolte",
-      "economie"
-    ],
-    "lat": 44.4073,
-    "lng": 8.9339
   },
   {
     "id": 1852,
@@ -36961,6 +37393,24 @@
     "lng": 11.4676
   },
   {
+    "id": 3144,
+    "titre": "Pativité de Pero López de Ayala à Aljubarrota et  genèse carcérale du Rimado de Palacio.",
+    "date": 1385,
+    "date_fin": 1388,
+    "zones": [
+      "Castille"
+    ],
+    "type": 4,
+    "description": "Au mois d'août 1385, le roi Jean Iᵉʳ de Castille (fils d'Henri II de Trastamare) envahit le royaume de Portugal pour faire valoir les droits dynastiques de son épouse Béatrice de Portugal face au maître d'Avis, proclamé roi sous le nom de Jean Iᵉʳ de Portugal. Parmi les plus hauts dignitaires accompagnant l'armée castillane figure Don Pero López de Ayala (1332–1407), grand homme d'État, diplomate chevronné, futur grand chancelier de Castille (Canciller mayor) et premier historien des quatre règnes trastamares.\n\nLe 14 août 1385, les deux armées s'affrontent sur le plateau d'Aljubarrota (en Estremadure portugaise). En dépit de la supériorité numérique de la chevalerie lourde castillane et de ses alliés français, la charge frontale se brise sur le dispositif défensif conçu par le connétable portugais Nuno Álvares Pereira et les archers anglais : l'ost de Castille est anéanti en moins d'une heure.\n\nCombattant au premier rang à pied aux côtés de l'étendard royal, Pero López de Ayala reçoit plusieurs blessures graves à la tête et aux membres, voit ses dents fracassées par un coup de masse d'armes et est fait prisonnier dans la mêlée avant d'être livré aux geôliers du roi d'Avis.\n\nRefusant d'accorder une libération sur parole à un conseiller d'État aussi redoutable, le pouvoir portugais fait transférer Ayala dans la puissante forteresse royale d'Óbidos, au nord de Lisbonne, où il est enfermé aux fers dans une cage de bois (jaula de hierro y madera) durant plus de deux ans (1385–1388), dans l'attente d'une rançon astronomique de trente mille doublons d'or que sa famille et le roi de Castille peinent à réunir.\n\nC'est au fond de ce cachot humide d'Óbidos, brisé physiquement et méditant sur la vanité des grandeurs terrestres, qu'Ayala opère une conversion morale radicale et compose la partie la plus poignante de son grand poème encyclopédique en vers : le Libro rimado de Palacio (connu sous le nom de Rimado de Palacio). Dans le mètre solennel de la cuaderna vía (strophes monorimes de quatre alexandrins), le prisonnier alterne des prières bouleversantes adressées à la Vierge et à Dieu pour implorer sa délivrance, une confession publique sans concession de ses propres péchés de courtisan, et une satire implacable de la corruption de son siècle : la cupidité des prélats du Grand Schisme d'Occident, la vénalité des juges et des avocats, l'extorsion fiscale exercée par les financiers royaux et l'aveuglement des princes.\nSur le plan de l'histoire littéraire castillane, la captivité d'Óbidos représente un tournant esthétique majeur : le crépuscule du mester de clerecía médiéval et l'éveil d'une subjectivité autobiographique pré-humaniste. Alors que la poésie savante antérieure (comme celle de Gonzalo de Berceo ou de l'archiprêtre de Hita dans le Libro de buen amor) privilégiait l'allégorie collective ou l'exemplum moral impersonnel, Pero López de Ayala introduit un « je » lyrique déchiré, ancré dans une épreuve physique et carcérale concrète. Le Rimado de Palacio fusionne le traité de gouvernement (le « miroir des princes »), le testament spirituel inspiré des Moralia in Job de saint Grégoire le Grand (qu'Ayala traduit lui-même en captivité) et la chronique critique des mœurs politiques.\n\nSur le plan géopolitique et sociologique, le désastre d'Aljubarrota et l'emprisonnement du chancelier marquent la consolidation définitive de l'indépendance du Portugal sous la dynastie d'Avis et la crise morale de la nouvelle dynastie des Trastamare en Castille.\n\nAyala, qui avait jadis abandonné le roi légitime Pierre Iᵉʳ le Cruel en 1366 pour rallier l'usurpateur Henri de Trastamare en échange d'immenses prébendes seigneuriales, interprète sa captivité au Portugal comme un châtiment providentiel frappant l'ambition et l'opportunisme politique de l'aristocratie castillane.\n\nDevenu à sa libération en 1388 le conseiller le plus écouté d'Henri III et le grand chancelier de Castille, il mettra cette sagesse durement acquise dans les fers d'Óbidos au service d'une politique de paix européenne et de réforme morale de l'État.\n\nLa genèse carcérale du Rimado de Palacio et la capture d'Ayala sont établies par la convergence de ses propres œuvres historiques et des traditions manuscrites :\n\nLa sobriété objective des Crónicas d'Ayala : Dans sa propre Crónica del Rey Don Juan Primero, Pero López de Ayala relate la bataille d'Aljubarrota avec un détachement stylistique inspiré de Tite-Live (qu'il fut le premier à traduire en castillan). L'auteur mentionne sa propre capture à la troisième personne parmi les captifs de marque sans aucune emphase héroïque, soulignant les erreurs tactiques fatales commises par la jeune noblesse castillane qui refusa d'écouter les conseils de prudence des vétérans expérimentés.\n\nL'authenticité des chants de captivité dans les manuscrits de l'Escorial : Les deux témoins manuscrits fondamentaux du Rimado de Palacio (conservés à la Bibliothèque royale de l'Escorial, ms. h.III.19, et à la Bibliothèque nationale d'Espagne, ms. 4055) contiennent les célèbres « Cantares de la prisión » (strophes 706 à 825 de l'édition critique de Germán Orduna). Le poète y décrit explicitement le poids des chaînes en fer qui meurtrissent ses chevilles (« con fierros muy pesados en los pies »), l'obscurité de sa geôle portugaise et les vœux de pèlerinage aux sanctuaires de Guadalupe et de Montserrat qu'il formule dans l'angoisse de finir ses jours en exil.\n\nLe témoignage parallèle de Fernão Lopes : Le grand chroniqueur portugais Fernão Lopes, dans sa Crónica de D. João I, confirme l'importance stratégique accordée par la cour de Lisbonne à la capture de Pero López de Ayala. Lopes atteste que le conseil royal portugais refusa de le libérer lors des premiers échanges de prisonniers, considérant son génie diplomatique et son ascendant sur Jean Iᵉʳ de Castille comme plus dangereux pour le Portugal qu'un corps d'armée entier.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Castelo_Obidos.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "litterature"
+    ],
+    "legende": "hautes courtines en pierre taillée et les puissantes tours cylindriques et carrées du Château médiéval d'Óbidos au Portugal, forteresse royale où fut incarcéré Pero López de Ayala entre 1385 et 1388.  Cette citadelle fortifiée matérialise le lieu même de la genèse du Rimado de Palacio : c'est derrière ces murailles crénelées, dans une cellule étroite de l'enceinte, que le chancelier de Castille enchaîné composa ses méditations sur la vanité du pouvoir et la réforme morale de la chrétienté.",
+    "lat": 39.362,
+    "lng": -9.1572
+  },
+  {
     "id": 1940,
     "titre": "Des représentants du canton de Lucerne arrivent à Sempach",
     "date": 1386,
@@ -38478,6 +38928,46 @@
     ],
     "lat": 39.056,
     "lng": -7.8897
+  },
+  {
+    "id": 3155,
+    "titre": "L'Arbre des batailles par Honoré Bovet",
+    "date": 1387,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "Né vers 1345 en Haute-Provence, moine bénédictin à l'abbaye de l'Île-Barbe près de Lyon, prieur de Selonnet (dans le diocèse d'Embrun) et docteur en droit canonique (decretorum doctor) formé à la prestigieuse Université d'Avignon sous l'égide du pape clémentin Clément VII, Honoré Bovet (longtemps orthographié Bonet par erreur de lecture paléographique avant les travaux décisifs d'Ivor Arnold et de Gilbert Ouy) est le témoin direct des déchirements de l'Europe de la fin du XIVᵉ siècle : les ravages impitoyables de la guerre de Cent Ans, les exactions des routiers et des Grandes Compagnies dans le Midi de la France, et la déchirure spirituelle du Grand Schisme d'Occident ouvert en 1378.\n\nEn 1387, résolu à offrir aux princes chrétiens et aux hommes de guerre un manuel pratique capable de borner la barbarie des conflits, Honoré Bovet achève la rédaction de son chef-d'œuvre : L'Arbre des batailles.\n\nRédigé non pas en latin universitaire mais dans un moyen français limpide, pédagogique et accessible aux laïcs de la noblesse d'épée, le livre s'ouvre sur l'allégorie visuelle spectaculaire d'un immense arbre dont les branches figurent les guerres incessantes déchirant l'Église (le Schisme) et les royaumes temporels (Empire, France, Angleterre, Espagne), dominées au sommet par la roue instable de la Fortune.\n\nS'appuyant sur le traité latin De bello, de represaliis et de duello du juriste bolonais Giovanni da Legnano (1360) et sur le Décret de Gratien, Honoré Bovet structure son ouvrage en quatre livres abordant la légitimité de la guerre juste (ius ad bellum) et, surtout, les règles concrètes régissant la conduite des hostilités (ius in bello) :\n\nL'immunité absolue des non-combattants : Bovet pose le principe révolutionnaire que la guerre ne doit opposer que les combattants armés. Il interdit formellement de tuer, de rançonner ou de piller les clercs, les pèlerins, les marchands, les femmes, les enfants, les vieillards et, par-dessus tout, les pauvres laboureurs travaillant aux champs, ainsi que leurs bœufs et leurs instruments aratoires, déclarant infâme tout chevalier qui s'en prend au peuple désarmé.\n\nLe statut humanitaire des prisonniers de guerre : Le traité proscrit l'exécution des ennemis qui ont rendu les armes, fixe les règles juridiques régissant la fixation de la rançon (finance) afin qu'elle ne ruine pas définitivement la lignée du captif, et garantit la validité inviolable des sauf-conduits (asegurance) et des trêves.\n\nLa discipline militaire et la solde : Bovet condamne les guerres privées seigneuriales et les pillages des mercenaires non soldés, affirmant que nul ne peut lever une armée ni exercer le droit de représailles sans l'autorisation expresse du souverain légitime.\n\nSur le plan de l'histoire du droit international public et de la philosophie morale, L'Arbre des batailles représente le chaînon décisif entre la théologie scolastique de la « guerre juste » (saint Augustin et saint Thomas d'Aquin) et la naissance du droit international moderne (qui s'épanouira au XVIᵉ siècle avec Francisco de Vitoria et au XVIIᵉ siècle avec Hugo Grotius dans le De iure belli ac pacis). En traduisant et en adaptant les concepts savants du droit romano-canonique à l'usage concret des capitaines, des hérauts d'armes et des tribunaux de la Connétablie, Honoré Bovet accomplit une œuvre de vulgarisation juridique sans précédent : il transforme des préceptes moraux abstraits en un code positif de déontologie militaire.\n\nSur le plan de l'histoire culturelle et politique européenne, le succès fulgurant de l'ouvrage — attesté par la survie de plus de quatre-vingt-dix manuscrits médiévaux — témoigne d'une prise de conscience profonde des élites chevaleresques face aux excès de la guerre totale. Dès la fin du XIVᵉ siècle, L'Arbre des batailles devient le livre de chevet de toutes les cours d'Europe :\n\nEn France, Christine de Pizan s'en inspire directement pour composer son Livre des faits d'armes et de chevalerie (1410).\n\nDans la Couronne d'Aragon et en Castille, l'œuvre est traduite dès le début du XVᵉ siècle en catalan (L'Arbre de batalles) et en castillan (El Árbol de las batallas, notamment sous le patronage du marquis de Santillana et de Don Álvaro de Luna), irriguant la littérature chevaleresque ibérique.\n\nEn Écosse, Sir Gilbert Hay en réalise une adaptation en moyen écossais en 1456 (The Buke of the Law of Armys).\n\nL'établissement du nom authentique et de la chronologie par la philologie moderne : Pendant des siècles, les éditions imprimées anciennes (dès l'incunable lyonnais de Barthélemy Buyer en 1477) attribuèrent l'ouvrage à un certain « Honoré Bonet ». Les recherches archivistiques décisives menées au XXᵉ siècle par Ivor Arnold, Gilbert Ouy et Hélène Millet dans les registres pontificaux d'Avignon et les manuscrits autographes ont démontré que la graphie exacte est Honoré Bovet (du provençal Bovet, « petit bœuf »), confirmant son doctorat avignonnais en 1386 et sa présence active comme ambassadeur de Charles VI auprès du pape Benoît XIII à Avignon et du roi d'Aragon Martin Iᵉʳ l'Humain à Barcelone.\n\nL'analyse des emprunts canoniques et de leur dépassement : Comme l'a démontré G. W. Coopland dans son édition critique de référence, les livres III et IV de L'Arbre des batailles suivent de près l'architecture du Tractatus de bello du juriste italien Giovanni da Legnano (1360). Toutefois, Bovet ne se borne nullement à une simple traduction : il y insère des réflexions originales empreintes d'une profonde compassion sociale envers les paysans opprimés par les gens d'armes, ainsi que des développements incisifs sur l'actualité brûlante du Grand Schisme (prenant résolument parti pour le pape d'Avignon Clément VII contre l'obédience romaine d'Urbain VI).\n\nLa richesse iconographique des manuscrits enluminés : Les plus somptueux exemplaires de présentation (tels que le manuscrit français 1266 de la Bibliothèque nationale de France ou le manuscrit 346 du Musée Condé à Chantilly) s'ouvrent sur une miniature pleine page représentant l'Arbre des batailles : au pied du tronc, les anges et les démons s'affrontent autour de l'abîme infernal ; sur les branches intermédiaires, des chevaliers en armure de plates s'entre-tuent à la lance ; et au sommet trône la déesse Fortune faisant tourner sa roue au-dessus des papes et des rois rivaux, offrant une synthèse visuelle saisissante de la condition humaine au XIVᵉ siècle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Houghton_MS_Typ_61_-_Bonet%2C_71.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "themes": [
+      "guerre",
+      "litterature",
+      "idees"
+    ],
+    "legende": "L'Arbre des batailles , ca. 14h00-14h50",
+    "lat": 44.3726,
+    "lng": 6.3129,
+    "serie": "Guerre de Cent ans"
+  },
+  {
+    "id": 3164,
+    "titre": "Ralliement de Jean Iᵉʳ d'Aragon au pape d'Avignon Clément VII",
+    "date": 1387,
+    "mois": 2,
+    "zones": [
+      "Aragon",
+      "Papaute"
+    ],
+    "type": 4,
+    "description": "Pendant près de neuf ans (1378–1387), le roi Pierre IV le Cérémonieux avait maintenu avec une fermeté inflexible sa politique d'« indifférence » (indiferència) face au Grand Schisme d'Occident, refusant de choisir entre le pape romain Urbain VI et le pape d'Avignon Clément VII afin de préserver son autonomie diplomatique en Méditerranée et d'encaisser au profit du Trésor royal les revenus des bénéfices vacants et des décimes pontificales. Cependant, au sein même de la famille royale, son fils héritier et lieutenant général, l'infant Jean, duc de Gérone, préparait activement le renversement de cette ligne politique.\n\nDès que Pierre IV rend le dernier soupir à Barcelone le 5 janvier 1387, le nouveau roi Jean Iᵉʳ d'Aragon (âgé de trente-six ans) opère une révolution diplomatique et ecclésiastique immédiate. Moins d'un mois après la mort de son père, le 4 février 1387, à Barcelone, en présence du cardinal légat aragonais Pedro de Luna (le futur antipape Benoît XIII) et des prélats de la cour, Jean Iᵉʳ proclame solennellement la reconnaissance officielle de Clément VII comme unique et légitime vicaire du Christ.\n\nCette décision capitale résulte de la convergence de trois facteurs politiques et culturels décisifs :\n\nL'ascendant personnel et culturel de la reine Violante de Bar : Épouse passionnément aimée de Jean Iᵉʳ, nièce du roi de France Charles V et cousine germaine du roi régnant Charles VI, Violante de Bar avait introduit à Barcelone le raffinement de la cour des Valois et militait sans relâche pour aligner l'Aragon sur la papauté d'Avignon soutenue par Paris.\n\nL'action diplomatique acharnée du cardinal Pedro de Luna : Issu de la plus haute noblesse aragonaise, légat a latere de Clément VII dans la péninsule Ibérique depuis 1379, Pedro de Luna avait déjà rallié la Castille de Jean Iᵉʳ (en 1381) et la Navarre de Charles II ; il concentra tous ses efforts sur l'héritier d'Aragon pour achever l'unification de toute l'Espagne chrétienne (à l'exception du Portugal anglophile) sous la bannière clémentine.\n\nLe rétablissement des relations fiscales avec la Chambre apostolique : En contrepartie de ce ralliement qui privait Rome de l'un des plus puissants royaumes méditerranéens, Clément VII accorde à Jean Iᵉʳ l'absolution rétroactive pour les séquestres financiers opérés sous Pierre IV, lui concède d'importantes décimes ecclésiastiques pour financer la défense de la Sardaigne et rattache définitivement la hiérarchie épiscopale catalano-aragonaise aux réseaux bénéficials d'Avignon.\nSur le plan de la géopolitique européenne de la fin du XIVᵉ siècle, l'acte du 4 février 1387 parachève la constitution d'un bloc diplomatique et religieux homogène unissant la France des Valois, la Castille des Trastamare, la Navarre et la Couronne d'Aragon autour de la curie d'Avignon. En abandonnant la neutralité prudente de Pierre IV, Jean Iᵉʳ renonce à l'équilibre traditionnel entre les puissances continentales et l'Italie pour ancrer résolument la Couronne d'Aragon dans l'alliance française. Cette orientation se traduit immédiatement par une francisation spectaculaire de la vie de cour à Barcelone et à Saragosse (rayonnement de la poésie lyrique française, de la musique de Guillaume de Machaut et des romans arthuriens) et par une détente durable avec le roi Jean Iᵉʳ de Castille.\n\nSur le plan de l'histoire ecclésiastique, ce ralliement modifie durablement le centre de gravité du Grand Schisme d'Occident. En intégrant l'obédience avignonnaise, la Couronne d'Aragon apporte à Clément VII le soutien de ses élites théologiques et juridiques (au premier rang desquelles le dominicain valencien Vincent Ferrier, confesseur de la reine Violante de Bar, et le cardinal Pedro de Luna).\n\nCe basculement de 1387 explique pourquoi, lorsque la France elle-même soustraira son obédience à Avignon en 1398, la Couronne d'Aragon demeurera l'ultime et indéfectible bastion de la papauté avignonnaise, offrant à Pedro de Luna — devenu le pape Benoît XIII en 1394 — le refuge inexpugnable du château de Peñíscola jusqu'à sa mort en 1423.\n\nL'acte solennel de déclaration d'obédience (ACA et AAV) : Conservé aux Archives de la Couronne d'Aragon à Barcelone (Cancillería Real, registres de Jean Iᵉʳ, reg. 1952) et dans les registres vaticans de Clément VII (Registra Avenionensia), le diplôme du 4 février 1387 revêt la forme d'un manifeste théologico-juridique. Jean Iᵉʳ y déclare avoir examiné avec les docteurs en théologie et en décret de ses royaumes les preuves irréfutables de l'irrégularité du conclave romain d'avril 1378 (entaché par les émeutes du peuple de Rome exigeant un pape italien) et la validité canonique de l'élection de Clément VII à Fondi, ordonnant que tous les clercs récalcitrants soient déchus de leurs bénéfices.\n\nLa purge politique immédiate accompagnant le ralliement : Les chroniques catalanes et les travaux biographiques monumentaux de Josep Maria Roca et de Jaume Riera i Sans ont souligné que le ralliement à Avignon s'accompagna d'un règlement de comptes violent au sein de l'appareil d'État : dès janvier–février 1387, Jean Iᵉʳ et Violante de Bar firent arrêter et juger la reine douairière Sibylle de Fortià (dernière épouse de Pierre IV, qui avait soutenu l'« indifférence » et résisté aux pressions de Pedro de Luna), confisquant ses biens et écartant les anciens conseillers neutralistes de Pierre IV.\n\nLa jubilation d'Avignon relatée par les chroniqueurs contemporains : Les correspondances des ambassadeurs avignonnais et les Vitae Paparum Avenionensium (éditées par Étienne Baluze et Guillaume Mollat) décrivent les fêtes grandioses et les processions d'action de grâce célébrées au Palais des Papes d'Avignon à l'annonce de la soumission de l'Aragon, saluée par Clément VII comme le triomphe définitif de sa légitimité sur la chrétienté occidentale.",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Cath%C3%A9drale_Stes_Croix_Eulalie_fa%C3%A7ade_principale_Barcelone_6.jpg/960px-Cath%C3%A9drale_Stes_Croix_Eulalie_fa%C3%A7ade_principale_Barcelone_6.jpg?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "themes": [
+      "religion",
+      "politique"
+    ],
+    "legende": "façade gothique monumentale de la Cathédrale Sainte-Croix et Sainte-Eulalie de Barcelone, sanctuaire métropolitain de la capitale catalane où fut proclamé solennellement devant le clergé et le peuple l'abandon de la neutralité royale et l'adhésion à l'obédience de Clément VII en février 1387.  Cet édifice gothique illustre le cadre liturgique et civique du tournant de 1387 : sous ces voûtes fut levée l'interdiction pesant depuis 1378 sur la publication des bulles pontificales et rétablie la communion canonique directe entre les églises de la Couronne d'Aragon et la curie d'Avignon.",
+    "lat": 41.3826,
+    "lng": 2.1771
   },
   {
     "id": 1312,
@@ -40995,7 +41485,7 @@
   },
   {
     "id": 2206,
-    "titre": "Manuel II Paléologue succède à sonson père, Jean V Paléologue",
+    "titre": "Manuel II Paléologue succède à son père, Jean V Paléologue",
     "date": 1391,
     "mois": 2,
     "zones": [
@@ -41518,7 +42008,8 @@
     "legende": "Charles VI saisi de folie non loin du Mans, enluminure du XVe siècle réalisée pour les Chroniques de Jean Froissart.",
     "lat": 48.0074,
     "lng": 0.1968,
-    "sources": "https://fr.wikipedia.org/wiki/Crise_de_d%C3%A9mence_de_Charles_VI_en_la_for%C3%AAt_du_Mans"
+    "sources": "https://fr.wikipedia.org/wiki/Crise_de_d%C3%A9mence_de_Charles_VI_en_la_for%C3%AAt_du_Mans",
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 2237,
@@ -43096,7 +43587,7 @@
     "titre": "Retable du Saint-Esprit par Pere Serra cathédrale de Manresa",
     "date": 1394,
     "zones": [
-      "Italie"
+      "Aragon"
     ],
     "type": 4,
     "description": "Pere Serra était un peintre catalan de style italo-gothique qui a été actif entre 1357 et 1406.\n\nIl était le fils de Berenguer Serra i Constança. Malgré les origines artisanales de son père, tailleur de profession, les quatre ou cinq frères de la famille étaient des peintres actifs en Catalogne au XIVe siècle. Jaume, Francesc et Joan se distinguent particulièrement : tous cultivaient le style italo-gothique, fortement influencé par le style siennois, caractéristique de la Catalogne du XIVe siècle. Ils peignaient de petites figures stylisées, aux yeux en amande et à la bouche menue.\n\nDes quatre frères, Pere Serra était le plus doué et celui qui a eu la plus longue carrière. Il entra dans l'atelier de Ramon Destorrents en 1357. Il s'intéressait davantage à la couleur qu'aux concepts spatiaux et développa un travail d'atelier, comme en témoigne la répétition des mêmes modèles picturaux.\n\nLes frères Serra travaillèrent pour la Cour d'Aragon et dominèrent le marché de la peinture barcelonaise durant la seconde moitié du XIVe siècle. Bien que le style de leur atelier soit italianisant, inspiré de la peinture siennoise, nombre de leurs disciples devinrent des initiateurs du gothique international en Principauté. Jaume Cabrera, Pere Vall, Joan Mates et Jaubert Gaucelm furent formés dans l'atelier de Pere Serrà.\n\nPère travailla à partir de 1363 avec son frère Jaume, avec lequel il créa la Vierge de Tobed et le retable du Saint-Sépulcre à Saragosse dédié à Sainte Lucie et à Saint Guillaume.\n\non style est plus élaboré et raffiné que celui de ses frères. Il accorde une plus grande attention aux détails secondaires, à la représentation de l'environnement, et applique une esthétique plus rationnelle. Dans les scènes narratives, d'une qualité lyrique indéniable, le calme et la justesse dominent, avec des solutions résolument bidimensionnelles. Il ne manifeste aucun souci de saisir la profondeur ou la perspective, une caractéristique qui se développera avec l'avènement du gothique international.\n\nSon chef-d'œuvre est le Retable du Saint-Esprit, conservé dans la cathédrale de Manresa, peint vers 1394. Le panneau central du banc est l'œuvre de Lluís Borrassà (1411). Ce retable, de grande taille et d'une iconographie remarquable, présente 22 scènes différentes (sans compter les 36 figures de saints peintes sur les six montants). Il fut commandé à Pere Serra par la Confrérie du Saint-Esprit de Manresa.\n\nOutre le retable du Saint-Esprit de Manresa, les œuvres suivantes sont attribuées à Pere Serra (liste non exhaustive) :\n\nRetable du Saint-Esprit de l'église paroissiale de Sant Llorenç de Morunys.\n\nRetable de la Toussaint du monastère de Sant Cugat.\n\nRetable des Joies de la Vierge d' Abella de la Conca.\n\nRetable de la Vierge de Sixena du monastère de Sixena (Huesca), aujourd'hui au Musée national d'art de Catalogne à Barcelone.\n\nPanneau central du retable dédié aux saints Barthélemy et Bernard de Clairvaux pour le couvent de Sant Domènec (1395), actuellement conservé au musée épiscopal de Vic.\n\nPanneau latéral d'un retable représentant Jésus devant Pilate, actuellement conservé au musée épiscopal de Vic.\n\nNotre-Dame des Anges, trois panneaux de Tortosa, conservés au Musée national d'art de Catalogne. Elle s'inspire de la Madone angélique.\n\nTable de la Cène, Galerie régionale de Palerme.\n\nAnnonciation, à la Pinacothèque de Brera, Milan.\n\nCrucifixion de saint Pierre, provenant de l'église Saint-Pierre de Cubells.",
@@ -43939,7 +44430,7 @@
     "titre": "Portail de la chartreuse de Champmol",
     "date": 1395,
     "zones": [
-      "Italie"
+      "France"
     ],
     "type": 3,
     "description": "Le sculpteur Claus Sluter est employé par le duc de Bourgogne Philippe II le Hardi à Dijon. Il réalise le portail de la chartreuse de Champmol près de Dijon (fin en 1395)\n\n1378 Début de la construction de la Chartreuse de Champmol. Philippe le Hardi acquiert pour 800 francs un domaine qui appartient à Hugues Aubriot, ancien bailli de Dijon, au lieu-dit La Motte de Champmol. La première pierre de l'église est posée par la duchesse Marguerite et son fils Jean, le 20 août 1383. Le duc souhaite créer une nécropole rivale de celle des rois de France, à Saint-Denis ; il en choisit l'emplacement à proximité de sa capitale Dijon.\n\nLes peintures de Simone Martini ont sans doute influencé le programme iconographique de la chartreuse.\n\nLorsque le duc Philippe meurt d'une violente fièvre, le 27 avril 1404, son tombeau n'est pas encore achevé. Son ami et conseiller, le banquier Dino Rapondi, se charge du transport funèbre depuis le château de Hal, non loin de Bruxelles, jusqu'à la Chartreuse de Champmol. Pour son ami, il orna de drap de Lucques noir, brodé d’or toutes les églises qui étaient le long du parcours. Le long cortège de près de 150 personnes en livrée noire a ramené le corps embaumé du duc à Dijon, où il est enterré le 15 juin.\n\nLe nouveau duc, Jean sans peur, en confie l'achèvement à Claus Sluter puis à son neveu Claus de Werve. Il commande également un monument funéraire sur le modèle de celui de son père, qui ne sera qu'ébauché à sa mort soudaine en 1419. Le monument de Jean sans Peur et Marguerite de Bavière se trouve aujourd'hui au musée des beaux-arts de Dijon.\n\nLes deux grands ensembles conservés à la Chartreuse sont le « Puits de Moïse » vestige d'un calvaire situé au milieu d'un puits autrefois au centre du grand cloître de la chartreuse chef-d'œuvre de la sculpture du gothique international et un précurseur de l'art de la Renaissance.., le portail de la chapelle qui contenait autrefois les tombeaux monumentaux des ducs Philippe le Hardi et Jean sans Peur, reconstitués aujourd'hui au musée des beaux-arts de Dijon, la tourelle de l'oratoire du duc, autrefois attenante à la chapelle, le puits dit de Jacob et le portail d'entrée.",
@@ -44501,6 +44992,23 @@
     "legende": "26 août 1395 – Rencontre de l'icône de Vladimir de la Mère de Dieu à Moscou et départ inattendu des troupes de Timour du sol russe",
     "lat": 55.6256,
     "lng": 37.6064
+  },
+  {
+    "id": 3156,
+    "titre": "Épître au roi Richard par Philippe de Mézières",
+    "date": 1395,
+    "zones": [
+      "France"
+    ],
+    "type": 4,
+    "description": "Ancien chancelier du royaume de Chypre sous Pierre Iᵉʳ de Lusignan, chevalier croisé ayant combattu à Alexandrie en 1365, puis conseiller intime et précepteur du dauphin sous le roi de France Charles V le Sage, Philippe de Mézières (vers 1327–1405) s'était retiré en 1380 au couvent des Célestins de Paris. De sa cellule monastique, ce « vieil solitaire » (le Vieil Solitaire des Célestins) consacre la fin de son existence à deux obsessions indissociables : le rétablissement de la paix universelle entre les princes chrétiens (déchirés par la guerre de Cent Ans et le Grand Schisme d'Occident) et la reconquête de Jérusalem face à l'expansion fulgurante des Ottomans du sultan Bayezid Iᵉʳ dans les Balkans.\n\nAu printemps et à l'été 1395, alors que s'amorcent des pourparlers diplomatiques décisifs entre la cour de Charles VI de France et celle de Richard II d'Angleterre (récemment veuf d'Anne de Bohême), Philippe de Mézières rédige en moyen français son célèbre traité politique : l'Épître au roi Richard (Epistre au roi Richart).\n\nConçu comme un « miroir des princes » pacifiste et allégorique, l'ouvrage exhorte le souverain Plantagenêt à sceller une paix définitive avec le roi de France et développe un programme diplomatique et spirituel structuré autour de trois axes majeurs :\n\nL'alliance matrimoniale comme gage de concorde perpétuelle : Mézières supplie Richard II d'épouser la jeune princesse Isabelle de France (fille aînée de Charles VI, alors âgée de six ans), démontrant par de nombreuses allégories bibliques et médicales que ce mariage royal guérira la « plaie mortelle » qui fait saigner la chrétienté depuis près de soixante ans.\n\nLa dénonciation des maux de la guerre fratricide et l'extinction du Grand Schisme : L'auteur décrit avec réalisme la ruine des campagnes, la misère des laboureurs et la perversion de la chevalerie occidentale, affirmant que seule l'union sincère des rois de France et d'Angleterre permettra de contraindre les deux papes rivaux (Benoît XIII à Avignon et Boniface IX à Rome) à abdiquer pour restaurer l'unité de l'Église.\n\nL'enrôlement dans la nouvelle milice de la Passion de Jésus-Christ (Nova Religio Passionis) : Pour absorber l'énergie belliqueuse de la noblesse franco-anglaise rendue disponible par la paix, Mézières invite Richard II et Charles VI à fonder conjointement un ordre chevaleresque supranational destiné à marcher vers l'Orient pour endiguer la menace ottomane sur Constantinople et délivrer les Lieux saints.\n\nPorté à Londres par l'ambassadeur Robert l'Ermite, l'ouvrage exerce une influence profonde sur l'esprit de Richard II : dès l'automne 1396, les deux monarques se rencontrent solennellement près de Calais, célèbrent le mariage royal et signent une trêve de vingt-huit ans, tandis que des milliers de chevaliers français et anglais désœuvrés répondent à l'appel de la croisade en rejoignant l'armée du roi Sigismond de Hongrie sur le Danube, s'acheminant vers le tragique désastre de Nicopolis (septembre 1396).\n\nSur le plan de l'histoire des idées politiques et de la pensée irénique européenne, l'Épître au roi Richard constitue l'un des textes fondateurs du pacifisme chrétien pré-humaniste. S'inscrivant dans la lignée de son monumental Songe du Vieil Pèlerin (1389), Philippe de Mézières opère un renversement axiologique radical des valeurs de la noblesse féodale : la guerre entre chrétiens n'est plus exaltée comme le champ d'honneur naturel de la chevalerie, mais condamnée comme un crime contre nature et un obstacle direct au salut collectif de la Respublica Christiana. Mézières anticipe ainsi les grands projets d'organisation fédérale et de paix perpétuelle de l'Europe moderne (de Georges de Poděbrady à Érasme et à l'abbé de Saint-Pierre).\n\nSur le plan géopolitique et militaire, le traité met en lumière l'interdépendance structurelle entre la paix occidentale et le front oriental danubien à la fin du XIVᵉ siècle. Les historiens des croisades tardives (notamment Aziz Suryal Atiya et Norman Housley) ont souligné que l'expédition de Nicopolis en 1396 fut la conséquence directe de l'accalmie franco-anglaise théorisée par Mézières : la trêve entre Paris et Londres libéra subitement une masse considérable de nobles et de mercenaires habitués au métier des armes (conduits par Jean de Nevers, le maréchal Boucicaut et Enguerrand de Coucy), qui trouvèrent dans la défense de la Hongrie face à Bayezid Iᵉʳ un exutoire idéal pour leur prestige chevaleresque.\n\nL'exemplaire original de présentation conservé à la British Library (ms. Royal 20 B VI) : Le manuscrit authentique calligraphié à Paris en 1395 et offert à Richard II nous est parvenu intact à Londres. Il s'ouvre sur une célèbre miniature de dédicace représentant Philippe de Mézières agenouillé en robe de Célestin, remettant son livre au jeune roi d'Angleterre trônant en majesté, suivi d'une seconde peinture allégorique figurant les deux couronnes de France et d'Angleterre surmontées de la couronne d'épines du Christ, preuve matérielle de l'impact visuel recherché par la diplomatie culturelle française auprès de la cour raffinée de Westminster.\n\nL'inscription dans les archives officielles anglaises (Foedera de Rymer) : L'impact politique concret de l'épître est corroboré par les actes diplomatiques anglais conservés au Public Record Office : dès la fin de l'année 1395, Richard II accorde à Philippe de Mézières une pension viagère sur le Trésor anglais et s'inscrit officiellement parmi les grands protecteurs de l'Ordre de la Passion de Jésus-Christ aux côtés des ducs de Lancastre, d'York et de Gloucester, attestant que les idéaux du solitaire des Célestins furent relayés au plus haut sommet de l'État Plantagenêt.\n\nLes limites idéalistes face aux réalités politiques : L'historiographie moderne (notamment Nicolas Jorga et Philippe Contamine) a toutefois relevé le caractère utopique de la construction intellectuelle de Mézières. En Angleterre même, l'orientation francophile et pacifiste de Richard II suscita une vive opposition parmi les grands barons bellicistes menés par Thomas de Woodstock (duc de Gloucester) et Henri Bolingbroke (futur Henri IV), contribuant directement à la révolution dynastique de 1399 qui coûta à Richard II son trône et sa vie, et fit s'effondrer le rêve de paix perpétuelle du vieux conseiller de Charles V.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Richard2_Philippe_de_M%C3%A9zi%C3%A8res.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "themes": [
+      "litterature"
+    ],
+    "legende": "Philippe de Mézières présente son livre à Richard II",
+    "lat": 48.8535,
+    "lng": 2.3484
   },
   {
     "id": 14,
@@ -45234,7 +45742,7 @@
     "date": 1397,
     "mois": 12,
     "zones": [
-      "Italie",
+      "Naples",
       "Aragon"
     ],
     "type": 4,
@@ -45883,7 +46391,6 @@
     "date": 1398,
     "mois": 9,
     "zones": [
-      "Italie",
       "Byzance"
     ],
     "type": 4,
@@ -46639,7 +47146,8 @@
     ],
     "legende": "Enluminure contemporaine peinte vers 1401–1405 illustrant l'ouvrage de Jean Créton (Histoire du roy d'Angleterre Richard, British Library, manuscrit Harley 1319, folio 19v). La scène figure la rencontre et la reddition solennelle du roi Richard II (au centre, en manteau rouge) devant son cousin Henri de Bolingbroke (à gauche, fléchissant le genou tout en tenant son épée) dans l'enceinte fortifiée du château de Flint le 19 août 1399, premier acte de la chute de la dynastie Plantagenêt directe et de l'avènement de la maison de Lancastre.",
     "lat": 53.2493,
-    "lng": -3.1345
+    "lng": -3.1345,
+    "serie": "Guerre de Cent ans"
   },
   {
     "id": 2480,
