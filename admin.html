@@ -121,8 +121,8 @@
     #open-reminder-box code { background: var(--parchment-dk); padding: 0 4px; border-radius: 3px; font-size: 0.9em; }
     #open-reminder-box .r-actions { display: flex; justify-content: flex-end; margin-top: 1.1rem; }
     #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-    .list-search { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-    .list-search input { flex: 1; }
+    .list-search { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .list-search input { flex: 1; min-width: 140px; }
     .event-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: calc(100vh - 280px); overflow-y: auto; padding-right: 4px; }
     .event-list::-webkit-scrollbar { width: 5px; }
     .event-list::-webkit-scrollbar-track { background: var(--parchment-dk); border-radius: 3px; }
@@ -285,16 +285,21 @@
 
       <div class="field-row">
         <div class="field">
-          <label>Image <small>(chemin relatif ou URL)</small></label>
-          <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://...">
-          <div style="display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
-            <input type="text" id="f-img-search" placeholder="Mots-cl&eacute;s pour Commons" style="flex:1;min-width:180px;" onfocus="cmPrefill()" onkeydown="if(event.key==='Enter'){event.preventDefault();cmSearch(false);}">
-            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(false)">&#128506; Chercher une illustration</button>
-            <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(true)" title="Utilise la cat&eacute;gorie Commons de l'&eacute;l&eacute;ment Wikidata li&eacute;">&#128193; Par cat&eacute;gorie</button>
+          <div id="img-box" style="background:#fdf5e6;border:2px solid #8C4A1B;border-radius:8px;padding:0.65rem;transition:background .15s,border-color .15s;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:0.4rem;margin-bottom:0.25rem;">
+              <label style="font-weight:700;color:#8C4A1B;font-style:normal;">&#128444; Image <small style="font-weight:400;color:#7A6A52;">(chemin relatif ou URL)</small></label>
+              <span id="img-status-badge" style="font-size:0.72rem;font-weight:600;padding:0.1rem 0.5rem;border-radius:10px;background:#F3DEC0;color:#7A3E12;">Sans image</span>
+            </div>
+            <input type="text" id="f-image" placeholder="images/mon-image.jpg ou https://..." oninput="updateImageColorCode()">
+            <div style="display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;margin-top:0.4rem;">
+              <input type="text" id="f-img-search" placeholder="Mots-cl&eacute;s pour Commons" style="flex:1;min-width:180px;" onfocus="cmPrefill()" onkeydown="if(event.key==='Enter'){event.preventDefault();cmSearch(false);}">
+              <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(false)">&#128506; Chercher une illustration</button>
+              <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.7rem;font-size:0.78rem;white-space:nowrap;" onclick="cmSearch(true)" title="Utilise la cat&eacute;gorie Commons de l'&eacute;l&eacute;ment Wikidata li&eacute;">&#128193; Par cat&eacute;gorie</button>
+            </div>
+            <div id="img-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;margin-top:0.25rem;"></div>
+            <div id="img-results" style="display:none;border:1px solid #c9b896;border-radius:6px;background:#FBF6E9;margin-top:0.35rem;max-height:260px;overflow-y:auto;"></div>
+            <div id="img-picked" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
           </div>
-          <div id="img-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;margin-top:0.25rem;"></div>
-          <div id="img-results" style="display:none;border:1px solid #c9b896;border-radius:6px;background:#FBF6E9;margin-top:0.35rem;max-height:260px;overflow-y:auto;"></div>
-          <div id="img-picked" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
         <div class="field">
           <label>Légende de l'image</label>
@@ -303,7 +308,7 @@
             <button type="button" class="btn btn-secondary" style="padding:0.25rem 0.8rem;font-size:0.8rem;white-space:nowrap;" onclick="trField('f-legende','tr-leg-status','tr-leg-result')">&#127760; Traduire EN&rarr;FR</button>
             <span id="tr-leg-status" style="font-size:0.74rem;font-style:italic;color:#7A6A52;"></span>
           </div>
-       <div id="tr-leg-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
+          <div id="tr-leg-result" style="display:none;border:1px solid #c9d6c2;border-radius:6px;background:#FBFDF9;margin-top:0.35rem;"></div>
         </div>
       </div>
       <div class="field-row single">
@@ -364,10 +369,6 @@
         </div>
       </div>
       <!-- ================= FIN NOUVEL EMPLACEMENT ================= -->
-
-      <div class="field-row single">
-        <div class="field">
-          <label>&#128205; Localisation pr&eacute;cise ...
 
       <div class="field-row single">
         <div class="field">
@@ -450,6 +451,11 @@
     <div class="panel-title">Événements <span id="list-count" style="font-size:0.8rem;color:var(--ink-muted);font-weight:normal;font-style:italic;"></span></div>
     <div class="list-search">
       <input type="text" id="search-input" placeholder="Rechercher..." oninput="renderList()">
+      <select id="sort-select" onchange="renderList()" title="Trier les événements" style="width:auto;min-width:155px;">
+        <option value="default">Tri : chronologique</option>
+        <option value="id-asc">N° de fiche ↑ (croissant)</option>
+        <option value="id-desc">N° de fiche ↓ (décroissant)</option>
+      </select>
     </div>
     <div id="event-list" class="event-list"></div>
   </div>
